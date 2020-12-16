@@ -4,7 +4,7 @@ when not defined(js) and not defined(nimdoc):
 when defined(js) and not defined(nodejs):
   {.warning: "Module NodeJS is designed to be used with the NodeJS.".}
 
-include
+import
   nodejs/jsassert,
   nodejs/jsasynchooks,
   nodejs/jsdns,
@@ -19,3 +19,19 @@ include
   nodejs/jsquerystring,
   nodejs/jsutils,
   nodejs/jszlib
+
+export
+  jsassert,
+  jsasynchooks,
+  jsdns,
+  jsfs,
+  jsinspector,
+  jsv8,
+  jsos,
+  jspath,
+  jsperfhooks,
+  jsprocess,
+  jspunycode,
+  jsquerystring,
+  jsutils,
+  jszlib

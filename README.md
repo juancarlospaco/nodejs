@@ -30,6 +30,7 @@ import nodejs
 # Dependencies
 
 - **None**
+- It does NOT use Nim standard library.
 
 
 # Stars
