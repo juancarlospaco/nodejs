@@ -1,0 +1,79 @@
+name: Build
+on:
+  push:
+    paths:
+      - 'src/nodejs/**.nim'
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+      - '.gitignore'
+
+jobs:
+  build:
+    if: |
+      !contains(format('{0} {1} {2}', github.event.head_commit.message, github.event.pull_request.title, github.event.pull_request.body), '[skip ci]')
+    strategy:
+      fail-fast: true
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    name: ${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - uses: actions/checkout@v1
+
+
+    - name: Get Git Commit Short Hash
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+        echo "::set-output name=semver_date::$(date +"%y.%m.%d")"
+
+
+    - name: Set Environment Variables
+      uses: allenevans/set-env@v1.0.0
+      with:
+        NIM_VERSION:           "devel"  # "1.2.6"
+        MAIN_MODULE:           "src/faster_than_csv.nim"
+        PACKAGE_NAME:          "faster_than_csv"
+        TWINE_USERNAME:        ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD:        ${{ secrets.PYPI_PASSWORD }}
+        TWINE_NON_INTERACTIVE: 1
+        NIM_COMMON_OPTIONS:    >-
+          compileToC --compileOnly:on --colors:off --threads:off
+          -d:release -d:danger -d:lto -d:strip -d:ssl --app:lib --sinkInference:on
+          -d:nimBinaryStdFiles -d:noSignalHandler -d:nimDisableCertificateValidation
+          --opt:speed --cpu:amd64 --forceBuild --gc:arc --panics:on
+          --stackTrace:off --excessiveStackTrace:off --experimental:parallel
+
+          
+    # - name: Generate Documentation (Linux)
+    #   if: runner.os == 'Linux'
+    #   run: |
+    #     nim doc --out:docs/index.html ${{ env.MAIN_MODULE }}
+    #     nim rst2tex --out:docs/${{ env.PACKAGE_NAME }}.tex ${{ env.MAIN_MODULE }}
+
+
+    - name: Compress to ZIP (Unix)  # Make Python package
+      if: runner.os == 'Linux' || runner.os == 'macOS'
+      shell: bash
+      run: |
+        cd dist
+        rm -f *.zip
+        zip -9 -T -v -r $PACKAGE_NAME-${{ steps.vars.outputs.sha_short }}.zip *
+
+
+    - name: Commit Code
+      uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
+      with:
+        add: 'dist'
+        force: true
+        message: 'Fully Automated Luxury Python'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        
+    - name: Cache Nim
+      uses: actions/cache@v1
+      with:
+        path: $PWD/Nim/
+        key: ${{ runner.os }}-nim
