@@ -1,5 +1,5 @@
 
-let pathDelimiter* {.importjs: "path.delimiter".}: cstring ## https://nodejs.org/api/path.html#path_path_delimiter
+let delimiter* {.importjs: "path.delimiter".}: cstring ## https://nodejs.org/api/path.html#path_path_delimiter
 
 func importPath*() {.importjs: "import * as path from 'path'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**

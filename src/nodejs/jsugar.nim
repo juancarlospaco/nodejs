@@ -26,7 +26,7 @@ func base64encode*(strng: cstring; encoding = "utf-8".cstring): cstring {.import
 func base64decode*(strng: cstring; encoding = "utf-8".cstring): cstring {.importjs: "Buffer.from(#, 'base64').toString(#)".}
   ## Convenience func to Base64 decode a string.
 
-func deduplicate*(arrai: openArray[any]): seq[any] {.importjs: "[...new Set(#)]".}
+func deduplicate*[T](arrai: openArray[T]): seq[T] {.importjs: "[...new Set(#)]".}
   ## Convenience func to Deduplicate an array.
 
 func shuffle*(arrai: openArray[any]): seq[any] {.importjs: "#.sort(() => { return Math.random() - 0.5})".}
@@ -40,18 +40,3 @@ func nextDays*(days = 7.cint): seq[any] {.importjs: "[...Array(#).keys()].map(da
 
 func pastDays*(days = 7.cint): seq[any] {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() - 86400000 * days))".}
   ## Convenience func to create an seq of the past days, inclusive.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

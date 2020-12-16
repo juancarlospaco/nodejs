@@ -23,5 +23,5 @@ func measure*(name: cstring; ) {.importjs: "perf_hooks.$1(#)".}
 func measure*(name, startMark, endMark: cstring) {.importjs: "perf_hooks.$1(#, #, #)".}
   ## https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_measure_name_startmark_endmark
 
-func now*(): cint {.importjs: "perf_hooks.$1()".}
-  ## https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now
+# func now*(): cint {.importjs: "perf_hooks.$1()".}
+#   ## https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_now
