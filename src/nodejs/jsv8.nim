@@ -19,3 +19,11 @@ func stopCoverage*() {.importjs: "v8.$1()".}
 
 func writeHeapSnapshot*(filename: cstring): cstring {.importjs: "v8.$1(#)".}
   ## https://nodejs.org/api/v8.html#v8_v8_writeheapsnapshot_filename
+
+
+runnableExamples:
+  requireV8()
+  doAssert cachedDataVersionTag() is cint
+  takeCoverage()
+  stopCoverage()
+  echo writeHeapSnapshot(r"file.txt")

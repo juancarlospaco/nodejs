@@ -5,11 +5,11 @@ func importUtil*() {.importjs: "import * as util from 'util'@".}
 func requireUtil*() {.importjs: "const util = require('util')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func callbackify*(original: proc): any {.importjs: "util.$1(#)".}
-  ## https://nodejs.org/api/util.html#util_util_callbackify_original
+# proc callbackify*[T: proc](original: T ): any {.importjs: "util.$1(#)".}
+#  https://nodejs.org/api/util.html#util_util_callbackify_original
 
-func deprecate*(fn: proc; msg: cstring; code = "".cstring): any {.importjs: "util.$1(#, #, #)".}
-  ## https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
+# func deprecate*(fn: proc; msg: cstring; code = "".cstring): any {.importjs: "util.$1(#, #, #)".}
+#  https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
 
 func format*(format: cstring; args: cstring): cstring {.importjs: "util.$1(#, @)", varargs.}
   ## https://nodejs.org/api/util.html#util_util_format_format_args
@@ -17,8 +17,8 @@ func format*(format: cstring; args: cstring): cstring {.importjs: "util.$1(#, @)
 func getSystemErrorName*(err: cint): cstring {.importjs: "util.$1(#)".}
   ## https://nodejs.org/api/util.html#util_util_getsystemerrorname_err
 
-func inherits*(constructor, superConstructor: proc) {.importjs: "util.$1(#, #)".}
-  ## https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor
+# func inherits*(constructor, superConstructor: proc) {.importjs: "util.$1(#, #)".}
+#  ## https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor
 
 func inspect*(objec: any; showHidden = false; depth = 2.cint; colors = false) {.importjs: "util.$1(#, #, #, #)".}
   ## https://nodejs.org/api/util.html#util_util_inspect_object_showhidden_depth_colors
@@ -172,3 +172,60 @@ func isSymbol*(value: any): bool {.importjs: "(typeof # === 'symbol')".}
 
 func isUndefined*(value: any): bool {.importjs: "(# === undefined)".}
   ## https://nodejs.org/api/util.html#util_util_isundefined_object
+
+
+runnableExamples:
+  requireUtil()
+  doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
+  doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
+  inspect("nim".cstring)
+  doAssert isDeepStrictEqual(42.cint, 42.cint)
+  doAssert not isAnyArrayBuffer(false)
+  doAssert not isArrayBufferView(false)
+  doAssert not isArgumentsObject(false)
+  doAssert not isArrayBuffer(false)
+  doAssert not isBigInt64Array(false)
+  doAssert not isBigUint64Array(false)
+  doAssert not isBooleanObject(false)
+  doAssert not isBoxedPrimitive(false)
+  doAssert not isDataView(false)
+  doAssert not isDate(false)
+  doAssert not isExternal(false)
+  doAssert not isFloat32Array(false)
+  doAssert not isFloat64Array(false)
+  doAssert not isGeneratorFunction(false)
+  doAssert not isBigInt64Array(false)
+  doAssert not isGeneratorObject(false)
+  doAssert not isInt8Array(false)
+  doAssert not isInt16Array(false)
+  doAssert not isInt32Array(false)
+  doAssert not isMap(false)
+  doAssert not isMapIterator(false)
+  doAssert not isModuleNamespaceObject(false)
+  doAssert not isNativeError(false)
+  doAssert not isNumberObject(false)
+  doAssert not isPromise(false)
+  doAssert not isProxy(false)
+  doAssert not isRegExp(false)
+  doAssert not isSet(false)
+  doAssert not isSetIterator(false)
+  doAssert not isSharedArrayBuffer(false)
+  doAssert not isStringObject("string".cstring)
+  doAssert not isSymbolObject(false)
+  doAssert not isTypedArray(false)
+  doAssert not isUint8Array(false)
+  doAssert not isUint8ClampedArray(false)
+  doAssert not isUint16Array(false)
+  doAssert not isUint32Array(false)
+  doAssert not isWeakMap(false)
+  doAssert not isWeakSet(false)
+  doAssert not isWebAssemblyCompiledModule(false)
+  doAssert isArray([1, 2, 3])
+  doAssert isBoolean(false)
+  doAssert not isBuffer(false)
+  doAssert not isFunction(false)
+  doAssert isNull(nil)
+  doAssert not isNumber(false)
+  doAssert isString("string".cstring)
+  doAssert not isSymbol(false)
+  doAssert not isUndefined(false)

@@ -22,3 +22,14 @@ func ucs2Decode*(str: cstring): seq[cint] {.importjs: "punycode.ucs2.decode(#)".
 
 func ucs2Encode*(codePoints: openArray[cint]): cstring {.importjs: "punycode.ucs2.encode(#)".}
   ## https://nodejs.org/api/punycode.html#punycode_punycode_ucs2_encode_codepoints
+
+
+runnableExamples:
+  requirePunycode()
+  const str = "hello".cstring
+  echo decode(str)
+  echo encode(str)
+  echo toASCII(str)
+  echo toUnicode(str)
+  echo ucs2Decode(str)
+  echo ucs2Encode([0.cint, 1, 2, 3, 4, 5, 6, 7, 8, 9])

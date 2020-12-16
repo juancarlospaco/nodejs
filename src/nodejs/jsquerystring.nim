@@ -10,3 +10,9 @@ func escape*(str: cstring): cstring {.importjs: "querystring.$1(#)".}
 
 func unescape*(str: cstring): cstring {.importjs: "querystring.$1(#)".}
   ## https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str
+
+
+runnableExamples:
+  requireQuerystring()
+  echo unescape("".cstring)
+  echo escape("".cstring)
