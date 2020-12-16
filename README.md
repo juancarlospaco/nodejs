@@ -12,10 +12,10 @@ Code [NodeJS](https://nodejs.org) apps using [Nim](http://nim-lang.org),
 test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
 use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org).
 
-[Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents),
-[run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly).
+[Replace TypeScript with Nim on your company](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents),
+[run Nim generated WebAssembly using V8](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly).
 
-- ES6 `import` or `require()` supported, you choose.
+
 - Future Proof: `0` Dependencies, does NOT use Nim standard library.
 
 
@@ -35,6 +35,8 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org).
 - :heavy_check_mark: `util` https://nodejs.org/api/util.html
 - :heavy_check_mark: `v8` https://nodejs.org/api/v8.html
 - :heavy_check_mark: `zlib` https://nodejs.org/api/zlib.html
+- :heavy_check_mark: ES6 `import`
+- :heavy_check_mark: `require()`
 - :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
 
 
