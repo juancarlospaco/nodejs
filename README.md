@@ -13,10 +13,7 @@ test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](http
 use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org).
 
 [Replace TypeScript with Nim on your company](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents),
-[run Nim generated WebAssembly using V8](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly).
-
-
-- Future Proof: `0` Dependencies, does NOT use Nim standard library.
+[run Nim generated WebAssembly using V8](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly), etc.
 
 
 # Modules supported
