@@ -8,11 +8,12 @@
 ![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/nodejs?style=for-the-badge "PRs")
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
 
-- Code [NodeJS](https://nodejs.org) Apps using [Nim](http://nim-lang.org)
-- Test [Nim](http://nim-lang.org) [Frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org)
-- Use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org)
-- [Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents)
-- [Run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly)
+Code [NodeJS](https://nodejs.org) Apps using [Nim](http://nim-lang.org),
+Test [Nim](http://nim-lang.org) [Frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
+Use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org),
+[Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents),
+[Run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly).
+
 - ES6 `import` or `require()` supported, you choose.
 - Future Proof: `0` Dependencies, does NOT use Nim standard library.
 
