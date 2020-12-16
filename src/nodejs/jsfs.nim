@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/zlib.html#zlib_convenience_methods
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeFs*() {.importjs: "import * as node_fs from 'fs'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -258,16 +255,16 @@ func unlink*(path: cstring; callback: proc) {.importjs: "node_fs.$1(#, #)".}
 func unlinkSync*(path: cstring) {.importjs: "node_fs.$1(#)".}
   ## https://nodejs.org/api/fs.html#fs_fs_unlinksync_path
 
-func utimes*(path: cstring, atime: cstring, mtime: cstring, callback: proc) {.importjs: "node_fs.$1(#, #, #, #)".}
+func utimes*(path: cstring; atime: cstring; mtime: cstring; callback: proc) {.importjs: "node_fs.$1(#, #, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback
 
-func utimes*(path: cstring, atime: cint, mtime: cint, callback: proc) {.importjs: "node_fs.$1(#, #, #, #)".}
+func utimes*(path: cstring; atime: cint; mtime: cint; callback: proc) {.importjs: "node_fs.$1(#, #, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback
 
-func utimesSync*(path: cstring, atime: cint, mtime: cint) {.importjs: "node_fs.$1(#, #, #)".}
+func utimesSync*(path: cstring; atime: cint; mtime: cint) {.importjs: "node_fs.$1(#, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback
 
-func utimesSync*(path: cstring, atime: cstring, mtime: cstring) {.importjs: "node_fs.$1(#, #, #)".}
+func utimesSync*(path: cstring; atime: cstring; mtime: cstring) {.importjs: "node_fs.$1(#, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback
 
 func watch*(filename: cstring; listener: proc) {.importjs: "node_fs.$1(#, #)".}

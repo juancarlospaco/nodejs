@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/zlib.html#zlib_convenience_methods
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeZlib*() {.importjs: "import * as node_zlib from 'v8'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**

@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/inspector.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeInspector*() {.importjs: "import * as node_inspector from 'inspector'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**

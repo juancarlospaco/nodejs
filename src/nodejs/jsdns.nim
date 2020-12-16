@@ -1,17 +1,14 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/dns.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
-func importNodeV8*() {.importjs: "import * as node_dns from 'dns'@".}
+func importNodeDns*() {.importjs: "import * as node_dns from 'dns'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
 
-func requireNodeV8*() {.importjs: "const node_dns = require('dns')@".}
+func requireNodeDns*() {.importjs: "const node_dns = require('dns')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
 func lookup*(hostname: cstring; callback: proc) {.importjs: "node_dns.$1(#, #)".}
   ## https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback
 
-func lookupService*(address: cstring, port: cint, callback: proc) {.importjs: "node_dns.$1(#, #, #)".}
+func lookupService*(address: cstring; port: cint; callback: proc) {.importjs: "node_dns.$1(#, #, #)".}
   ## https://nodejs.org/api/dns.html#dns_dns_lookupservice_address_port_callback
 
 func resolve*(hostname: cstring; rrtype: cstring; callback: proc) {.importjs: "node_dns.$1(#, #, #)".}
@@ -22,9 +19,6 @@ func resolve*(hostname: cstring; callback: proc) {.importjs: "node_dns.$1(#, #)"
 
 func resolve4*(hostname: cstring; callback: proc) {.importjs: "node_dns.$1(#, #)".}
   ## https://nodejs.org/api/dns.html#dns_dns_resolve4_hostname_options_callback
-
-func resolve6*(hostname: cstring; callback: proc) {.importjs: "node_dns.$1(#, #)".}
-  ## https://nodejs.org/api/dns.html#dns_dns_resolve6_hostname_options_callback
 
 func resolve6*(hostname: cstring; callback: proc) {.importjs: "node_dns.$1(#, #)".}
   ## https://nodejs.org/api/dns.html#dns_dns_resolve6_hostname_options_callback

@@ -1,7 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/url.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
-
 from jsre import RegExp
 
 func importNodeAssert*() {.importjs: "import * as node_assert from 'assert'@".}

@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/util.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeUtil*() {.importjs: "import * as node_util from 'util'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**

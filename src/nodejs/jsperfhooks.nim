@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/vm.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodePerfhooks*() {.importjs: "import * as perf_hooks from 'perf_hooks'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -20,7 +17,7 @@ func mark*() {.importjs: "perf_hooks.$1()".}
 func mark*(name: cstring) {.importjs: "perf_hooks.$1(#)".}
   ## https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_mark_name
 
-func measure*(name: cstring;) {.importjs: "perf_hooks.$1(#)".}
+func measure*(name: cstring; ) {.importjs: "perf_hooks.$1(#)".}
   ## https://nodejs.org/api/perf_hooks.html#perf_hooks_performance_measure_name_startmark_endmark
 
 func measure*(name, startMark, endMark: cstring) {.importjs: "perf_hooks.$1(#, #, #)".}

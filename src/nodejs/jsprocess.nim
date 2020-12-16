@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/url.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeProcess*() {.importjs: "import * as node_process from 'process'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -122,5 +119,5 @@ func umask*(mask: cstring): any {.importjs: "node_process.$1(#)".}
 func umask*(mask: cint): any {.importjs: "node_process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
-func uptime*(): cint {.importjs: "node_process.$1()".}
+func uptimeProcess*(): cint {.importjs: "node_process.uptime()".}
   ## https://nodejs.org/api/process.html#process_process_uptime

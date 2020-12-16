@@ -1,6 +1,3 @@
-## NodeJS Standard Library for Nim for JavaScript Target https://nodejs.org/api/os.html
-when not defined(js) and not defined(nimdoc): 
-  {.fatal: "Module is designed to be used with the JavaScript backend.".}
 
 func importNodeOs*() {.importjs: "import * as node_os from 'os'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -47,7 +44,7 @@ func totalmem*(): cint {.importjs: "node_os.$1()".}
 func ostype*(): cstring {.importjs: "node_os.type()".}
   ## https://nodejs.org/api/os.html#os_os_type
 
-func uptime*(): cint {.importjs: "node_os.$1()".}
+func uptimeOs*(): cint {.importjs: "node_os.uptime()".}
   ## https://nodejs.org/api/os.html#os_os_uptime
 
 func version*(): cstring {.importjs: "node_os.$1()".}
