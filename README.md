@@ -13,6 +13,7 @@
 - Use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org)
 - [Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents)
 - [Run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly)
+- Future Proof: `0` Dependencies, does NOT use Nim standard library.
 
 
 # Install
@@ -25,12 +26,6 @@
 ```nim
 import nodejs
 ```
-
-
-# Dependencies
-
-- **None**
-- It does NOT use Nim standard library.
 
 
 # Stars

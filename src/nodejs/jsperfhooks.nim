@@ -1,8 +1,8 @@
 
-func importNodePerfhooks*() {.importjs: "import * as perf_hooks from 'perf_hooks'@".}
+func importPerfhooks*() {.importjs: "import * as perf_hooks from 'perf_hooks'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
 
-func requireNodePerfhooks*() {.importjs: "const perf_hooks = require('perf_hooks')@".}
+func requirePerfhooks*() {.importjs: "const perf_hooks = require('perf_hooks')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
 func clearMarks*() {.importjs: "perf_hooks.$1()".}
