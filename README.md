@@ -32,8 +32,8 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org).
 - :heavy_check_mark: `util` https://nodejs.org/api/util.html
 - :heavy_check_mark: `v8` https://nodejs.org/api/v8.html
 - :heavy_check_mark: `zlib` https://nodejs.org/api/zlib.html
-- :heavy_check_mark: `import`    (Dynamic,  Async, Non-Lexical, run-time errors)
-- :heavy_check_mark: `require()` ("Static", Sync,  Lexical,     parse errors)
+- :heavy_check_mark: `import`    ("Static", Async,  Lexical,     parse errors,    ES6+)
+- :heavy_check_mark: `require()` (Dynamic,  Sync,   Non-Lexical, run-time errors, CommonJS)
 - :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
 
 
