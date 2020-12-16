@@ -13,7 +13,27 @@
 - Use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org)
 - [Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents)
 - [Run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly)
+- ES6 `import` or `require()` supported, you choose.
 - Future Proof: `0` Dependencies, does NOT use Nim standard library.
+
+
+# Modules supported
+
+- :heavy_check_mark: `assert` https://nodejs.org/api/assert.html
+- :heavy_check_mark: `async_hooks` https://nodejs.org/api/async_hooks.html
+- :heavy_check_mark: `process` https://nodejs.org/api/process.html
+- :heavy_check_mark: `dns` https://nodejs.org/api/dns.html
+- :heavy_check_mark: `fs` https://nodejs.org/api/fs.html
+- :heavy_check_mark: `inspector` https://nodejs.org/api/inspector.html
+- :heavy_check_mark: `os` https://nodejs.org/api/os.html
+- :heavy_check_mark: `path` https://nodejs.org/api/path.html
+- :heavy_check_mark: `perf_hooks` https://nodejs.org/api/perf_hooks.html
+- :heavy_check_mark: `punycode` https://nodejs.org/api/punycode.html
+- :heavy_check_mark: `querystring` https://nodejs.org/api/querystring.html
+- :heavy_check_mark: `util` https://nodejs.org/api/util.html
+- :heavy_check_mark: `v8` https://nodejs.org/api/v8.html
+- :heavy_check_mark: `zlib` https://nodejs.org/api/zlib.html
+- :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
 
 
 # Install
@@ -26,6 +46,7 @@
 ```nim
 import nodejs
 ```
+
 
 # Efficiency
 
@@ -471,25 +492,6 @@ console.log(deduplicate_369098757([9, 2, 3, 9, 4, 5, 6, 9], false));
 ```
 
 </details>
-
-
-# Modules supported
-
-- :heavy_check_mark: `assert` https://nodejs.org/api/assert.html
-- :heavy_check_mark: `async_hooks` https://nodejs.org/api/async_hooks.html
-- :heavy_check_mark: `process` https://nodejs.org/api/process.html
-- :heavy_check_mark: `dns` https://nodejs.org/api/dns.html
-- :heavy_check_mark: `fs` https://nodejs.org/api/fs.html
-- :heavy_check_mark: `inspector` https://nodejs.org/api/inspector.html
-- :heavy_check_mark: `os` https://nodejs.org/api/os.html
-- :heavy_check_mark: `path` https://nodejs.org/api/path.html
-- :heavy_check_mark: `perf_hooks` https://nodejs.org/api/perf_hooks.html
-- :heavy_check_mark: `punycode` https://nodejs.org/api/punycode.html
-- :heavy_check_mark: `querystring` https://nodejs.org/api/querystring.html
-- :heavy_check_mark: `util` https://nodejs.org/api/util.html
-- :heavy_check_mark: `v8` https://nodejs.org/api/v8.html
-- :heavy_check_mark: `zlib` https://nodejs.org/api/zlib.html
-- :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
 
 
 # Stars
