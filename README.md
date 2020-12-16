@@ -5,3 +5,15 @@
 - Use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org)
 - [Replace TypeScript with Nim on your company.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents)
 - [Run Nim generated WebAssembly using V8.](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly)
+
+
+# Install
+
+- `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
+
+
+# Examples
+
+```nim
+import nodejs
+```
