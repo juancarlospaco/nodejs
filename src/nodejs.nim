@@ -18,7 +18,8 @@ import
   nodejs/jspunycode,
   nodejs/jsquerystring,
   nodejs/jsutils,
-  nodejs/jszlib
+  nodejs/jszlib,
+  nodejs/jsugar
 
 export
   jsassert,
@@ -34,4 +35,5 @@ export
   jspunycode,
   jsquerystring,
   jsutils,
-  jszlib
+  jszlib,
+  jsugar
