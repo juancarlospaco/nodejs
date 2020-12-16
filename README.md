@@ -51,7 +51,9 @@ console.log base64encode("example")
 
 <details>
   <summary>Standard Library Generated JavaScript</summary>
+
 ```javascript
+
 function mnewString(len_33558512) {
     return new Array(len_33558512);
 }
@@ -218,7 +220,9 @@ function newSeq_33558393(len_33558396) {
 }
 
 console.log(toJSStr(encode_469762156(makeNimstrLit("example"), false)));
+
 ```
+
 </details>
 
 
