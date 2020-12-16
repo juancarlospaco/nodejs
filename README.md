@@ -8,9 +8,9 @@
 ![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/nodejs?style=for-the-badge "PRs")
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
 
-Code [NodeJS](https://nodejs.org) apps using [Nim](http://nim-lang.org),
+Code [NodeJS](https://nodejs.org) using [Nim](http://nim-lang.org),
 test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
-use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org).
+use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 [Replace TypeScript with Nim on your company](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents),
 [run Nim generated WebAssembly using V8](https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#WebAssembly), etc.
