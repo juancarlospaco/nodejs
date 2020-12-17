@@ -49,7 +49,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 import nodejs
 requireFs()  # CommonJS
 # importFs() # ES6+
-writeFileSync(r"file.txt", r"Hello from NodeJS")
+writeFileSync(r"file.txt", r"Hello from NodeJS") # Use NodeJS API
 ```
 
 
