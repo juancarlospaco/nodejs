@@ -20,7 +20,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 - :heavy_check_mark: [assert](https://nodejs.org/api/assert.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsassert.html
 - :heavy_check_mark: [async_hooks](https://nodejs.org/api/async_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchooks.html
-- :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right:
+- :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsprocess.html
 - :heavy_check_mark: [dns](https://nodejs.org/api/dns.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdns.html
 - :heavy_check_mark: [fs](https://nodejs.org/api/fs.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfs.html
 - :heavy_check_mark: [inspector](https://nodejs.org/api/inspector.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsinspector.html
