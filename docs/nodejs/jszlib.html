@@ -108,8 +108,6 @@ window.addEventListener('DOMContentLoaded', main);
     title="Z_FINISH: cint">Z_FINISH</a></li>
   <li><a class="reference" href="#Z_BLOCK"
     title="Z_BLOCK: cint">Z_BLOCK</a></li>
-  <li><a class="reference" href="#Z_TREES"
-    title="Z_TREES: cint">Z_TREES</a></li>
   <li><a class="reference" href="#Z_OK"
     title="Z_OK: cint">Z_OK</a></li>
   <li><a class="reference" href="#Z_STREAM_END"
@@ -146,6 +144,50 @@ window.addEventListener('DOMContentLoaded', main);
     title="Z_FIXED: cint">Z_FIXED</a></li>
   <li><a class="reference" href="#Z_DEFAULT_STRATEGY"
     title="Z_DEFAULT_STRATEGY: cint">Z_DEFAULT_STRATEGY</a></li>
+  <li><a class="reference" href="#ZLIB_VERNUM"
+    title="ZLIB_VERNUM: cint">ZLIB_VERNUM</a></li>
+  <li><a class="reference" href="#DEFLATE"
+    title="DEFLATE: cint">DEFLATE</a></li>
+  <li><a class="reference" href="#INFLATE"
+    title="INFLATE: cint">INFLATE</a></li>
+  <li><a class="reference" href="#GZIP"
+    title="GZIP: cint">GZIP</a></li>
+  <li><a class="reference" href="#GUNZIP"
+    title="GUNZIP: cint">GUNZIP</a></li>
+  <li><a class="reference" href="#DEFLATERAW"
+    title="DEFLATERAW: cint">DEFLATERAW</a></li>
+  <li><a class="reference" href="#INFLATERAW"
+    title="INFLATERAW: cint">INFLATERAW</a></li>
+  <li><a class="reference" href="#UNZIP"
+    title="UNZIP: cint">UNZIP</a></li>
+  <li><a class="reference" href="#BROTLI_DECODE"
+    title="BROTLI_DECODE: cint">BROTLI_DECODE</a></li>
+  <li><a class="reference" href="#BROTLI_ENCODE"
+    title="BROTLI_ENCODE: cint">BROTLI_ENCODE</a></li>
+  <li><a class="reference" href="#Z_MIN_WINDOWBITS"
+    title="Z_MIN_WINDOWBITS: cint">Z_MIN_WINDOWBITS</a></li>
+  <li><a class="reference" href="#Z_MAX_WINDOWBITS"
+    title="Z_MAX_WINDOWBITS: cint">Z_MAX_WINDOWBITS</a></li>
+  <li><a class="reference" href="#Z_DEFAULT_WINDOWBITS"
+    title="Z_DEFAULT_WINDOWBITS: cint">Z_DEFAULT_WINDOWBITS</a></li>
+  <li><a class="reference" href="#Z_MIN_CHUNK"
+    title="Z_MIN_CHUNK: cint">Z_MIN_CHUNK</a></li>
+  <li><a class="reference" href="#Z_MAX_CHUNK"
+    title="Z_MAX_CHUNK: cint">Z_MAX_CHUNK</a></li>
+  <li><a class="reference" href="#Z_DEFAULT_CHUNK"
+    title="Z_DEFAULT_CHUNK: cint">Z_DEFAULT_CHUNK</a></li>
+  <li><a class="reference" href="#Z_MIN_MEMLEVEL"
+    title="Z_MIN_MEMLEVEL: cint">Z_MIN_MEMLEVEL</a></li>
+  <li><a class="reference" href="#Z_MAX_MEMLEVEL"
+    title="Z_MAX_MEMLEVEL: cint">Z_MAX_MEMLEVEL</a></li>
+  <li><a class="reference" href="#Z_DEFAULT_MEMLEVEL"
+    title="Z_DEFAULT_MEMLEVEL: cint">Z_DEFAULT_MEMLEVEL</a></li>
+  <li><a class="reference" href="#Z_MIN_LEVEL"
+    title="Z_MIN_LEVEL: cint">Z_MIN_LEVEL</a></li>
+  <li><a class="reference" href="#Z_MAX_LEVEL"
+    title="Z_MAX_LEVEL: cint">Z_MAX_LEVEL</a></li>
+  <li><a class="reference" href="#Z_DEFAULT_LEVEL"
+    title="Z_DEFAULT_LEVEL: cint">Z_DEFAULT_LEVEL</a></li>
   <li><a class="reference" href="#BROTLI_OPERATION_PROCESS"
     title="BROTLI_OPERATION_PROCESS: cint">BROTLI_OPERATION_PROCESS</a></li>
   <li><a class="reference" href="#BROTLI_OPERATION_FLUSH"
@@ -154,6 +196,120 @@ window.addEventListener('DOMContentLoaded', main);
     title="BROTLI_OPERATION_FINISH: cint">BROTLI_OPERATION_FINISH</a></li>
   <li><a class="reference" href="#BROTLI_OPERATION_EMIT_METADATA"
     title="BROTLI_OPERATION_EMIT_METADATA: cint">BROTLI_OPERATION_EMIT_METADATA</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_MODE"
+    title="BROTLI_PARAM_MODE: cint">BROTLI_PARAM_MODE</a></li>
+  <li><a class="reference" href="#BROTLI_MODE_GENERIC"
+    title="BROTLI_MODE_GENERIC: cint">BROTLI_MODE_GENERIC</a></li>
+  <li><a class="reference" href="#BROTLI_MODE_TEXT"
+    title="BROTLI_MODE_TEXT: cint">BROTLI_MODE_TEXT</a></li>
+  <li><a class="reference" href="#BROTLI_MODE_FONT"
+    title="BROTLI_MODE_FONT: cint">BROTLI_MODE_FONT</a></li>
+  <li><a class="reference" href="#BROTLI_DEFAULT_MODE"
+    title="BROTLI_DEFAULT_MODE: cint">BROTLI_DEFAULT_MODE</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_QUALITY"
+    title="BROTLI_PARAM_QUALITY: cint">BROTLI_PARAM_QUALITY</a></li>
+  <li><a class="reference" href="#BROTLI_MIN_QUALITY"
+    title="BROTLI_MIN_QUALITY: cint">BROTLI_MIN_QUALITY</a></li>
+  <li><a class="reference" href="#BROTLI_MAX_QUALITY"
+    title="BROTLI_MAX_QUALITY: cint">BROTLI_MAX_QUALITY</a></li>
+  <li><a class="reference" href="#BROTLI_DEFAULT_QUALITY"
+    title="BROTLI_DEFAULT_QUALITY: cint">BROTLI_DEFAULT_QUALITY</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_LGWIN"
+    title="BROTLI_PARAM_LGWIN: cint">BROTLI_PARAM_LGWIN</a></li>
+  <li><a class="reference" href="#BROTLI_MIN_WINDOW_BITS"
+    title="BROTLI_MIN_WINDOW_BITS: cint">BROTLI_MIN_WINDOW_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_MAX_WINDOW_BITS"
+    title="BROTLI_MAX_WINDOW_BITS: cint">BROTLI_MAX_WINDOW_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_LARGE_MAX_WINDOW_BITS"
+    title="BROTLI_LARGE_MAX_WINDOW_BITS: cint">BROTLI_LARGE_MAX_WINDOW_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_DEFAULT_WINDOW"
+    title="BROTLI_DEFAULT_WINDOW: cint">BROTLI_DEFAULT_WINDOW</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_LGBLOCK"
+    title="BROTLI_PARAM_LGBLOCK: cint">BROTLI_PARAM_LGBLOCK</a></li>
+  <li><a class="reference" href="#BROTLI_MIN_INPUT_BLOCK_BITS"
+    title="BROTLI_MIN_INPUT_BLOCK_BITS: cint">BROTLI_MIN_INPUT_BLOCK_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_MAX_INPUT_BLOCK_BITS"
+    title="BROTLI_MAX_INPUT_BLOCK_BITS: cint">BROTLI_MAX_INPUT_BLOCK_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING"
+    title="BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING: cint">BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_SIZE_HINT"
+    title="BROTLI_PARAM_SIZE_HINT: cint">BROTLI_PARAM_SIZE_HINT</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_LARGE_WINDOW"
+    title="BROTLI_PARAM_LARGE_WINDOW: cint">BROTLI_PARAM_LARGE_WINDOW</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_NPOSTFIX"
+    title="BROTLI_PARAM_NPOSTFIX: cint">BROTLI_PARAM_NPOSTFIX</a></li>
+  <li><a class="reference" href="#BROTLI_PARAM_NDIRECT"
+    title="BROTLI_PARAM_NDIRECT: cint">BROTLI_PARAM_NDIRECT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_RESULT_ERROR"
+    title="BROTLI_DECODER_RESULT_ERROR: cint">BROTLI_DECODER_RESULT_ERROR</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_RESULT_SUCCESS"
+    title="BROTLI_DECODER_RESULT_SUCCESS: cint">BROTLI_DECODER_RESULT_SUCCESS</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT"
+    title="BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT: cint">BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT"
+    title="BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT: cint">BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION"
+    title="BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION: cint">BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_PARAM_LARGE_WINDOW"
+    title="BROTLI_DECODER_PARAM_LARGE_WINDOW: cint">BROTLI_DECODER_PARAM_LARGE_WINDOW</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_NO_ERROR"
+    title="BROTLI_DECODER_NO_ERROR: cint">BROTLI_DECODER_NO_ERROR</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_SUCCESS"
+    title="BROTLI_DECODER_SUCCESS: cint">BROTLI_DECODER_SUCCESS</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_NEEDS_MORE_INPUT"
+    title="BROTLI_DECODER_NEEDS_MORE_INPUT: cint">BROTLI_DECODER_NEEDS_MORE_INPUT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_NEEDS_MORE_OUTPUT"
+    title="BROTLI_DECODER_NEEDS_MORE_OUTPUT: cint">BROTLI_DECODER_NEEDS_MORE_OUTPUT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE"
+    title="BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE: cint">BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_RESERVED"
+    title="BROTLI_DECODER_ERROR_FORMAT_RESERVED: cint">BROTLI_DECODER_ERROR_FORMAT_RESERVED</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE"
+    title="BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE: cint">BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET"
+    title="BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET: cint">BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME"
+    title="BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME: cint">BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_CL_SPACE"
+    title="BROTLI_DECODER_ERROR_FORMAT_CL_SPACE: cint">BROTLI_DECODER_ERROR_FORMAT_CL_SPACE</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE"
+    title="BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE: cint">BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT"
+    title="BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT: cint">BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1"
+    title="BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1: cint">BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2"
+    title="BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2: cint">BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_TRANSFORM"
+    title="BROTLI_DECODER_ERROR_FORMAT_TRANSFORM: cint">BROTLI_DECODER_ERROR_FORMAT_TRANSFORM</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_DICTIONARY"
+    title="BROTLI_DECODER_ERROR_FORMAT_DICTIONARY: cint">BROTLI_DECODER_ERROR_FORMAT_DICTIONARY</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS"
+    title="BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS: cint">BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_PADDING_1"
+    title="BROTLI_DECODER_ERROR_FORMAT_PADDING_1: cint">BROTLI_DECODER_ERROR_FORMAT_PADDING_1</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_PADDING_2"
+    title="BROTLI_DECODER_ERROR_FORMAT_PADDING_2: cint">BROTLI_DECODER_ERROR_FORMAT_PADDING_2</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_FORMAT_DISTANCE"
+    title="BROTLI_DECODER_ERROR_FORMAT_DISTANCE: cint">BROTLI_DECODER_ERROR_FORMAT_DISTANCE</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET"
+    title="BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET: cint">BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_INVALID_ARGUMENTS"
+    title="BROTLI_DECODER_ERROR_INVALID_ARGUMENTS: cint">BROTLI_DECODER_ERROR_INVALID_ARGUMENTS</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES"
+    title="BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES: cint">BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS"
+    title="BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS: cint">BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP"
+    title="BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP: cint">BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1"
+    title="BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1: cint">BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2"
+    title="BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2: cint">BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES"
+    title="BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES: cint">BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES</a></li>
+  <li><a class="reference" href="#BROTLI_DECODER_ERROR_UNREACHABLE"
+    title="BROTLI_DECODER_ERROR_UNREACHABLE: cint">BROTLI_DECODER_ERROR_UNREACHABLE</a></li>
 
   </ul>
 </li>
@@ -275,13 +431,6 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 <a id="Z_BLOCK"></a>
 <dt><pre><a href="jszlib.html#Z_BLOCK"><span class="Identifier">Z_BLOCK</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="Z_TREES"></a>
-<dt><pre><a href="jszlib.html#Z_TREES"><span class="Identifier">Z_TREES</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
 <dd>
 
 
@@ -413,6 +562,160 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="ZLIB_VERNUM"></a>
+<dt><pre><a href="jszlib.html#ZLIB_VERNUM"><span class="Identifier">ZLIB_VERNUM</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="DEFLATE"></a>
+<dt><pre><a href="jszlib.html#DEFLATE"><span class="Identifier">DEFLATE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="INFLATE"></a>
+<dt><pre><a href="jszlib.html#INFLATE"><span class="Identifier">INFLATE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="GZIP"></a>
+<dt><pre><a href="jszlib.html#GZIP"><span class="Identifier">GZIP</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="GUNZIP"></a>
+<dt><pre><a href="jszlib.html#GUNZIP"><span class="Identifier">GUNZIP</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="DEFLATERAW"></a>
+<dt><pre><a href="jszlib.html#DEFLATERAW"><span class="Identifier">DEFLATERAW</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="INFLATERAW"></a>
+<dt><pre><a href="jszlib.html#INFLATERAW"><span class="Identifier">INFLATERAW</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="UNZIP"></a>
+<dt><pre><a href="jszlib.html#UNZIP"><span class="Identifier">UNZIP</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODE"><span class="Identifier">BROTLI_DECODE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_ENCODE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_ENCODE"><span class="Identifier">BROTLI_ENCODE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MIN_WINDOWBITS"></a>
+<dt><pre><a href="jszlib.html#Z_MIN_WINDOWBITS"><span class="Identifier">Z_MIN_WINDOWBITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MAX_WINDOWBITS"></a>
+<dt><pre><a href="jszlib.html#Z_MAX_WINDOWBITS"><span class="Identifier">Z_MAX_WINDOWBITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_DEFAULT_WINDOWBITS"></a>
+<dt><pre><a href="jszlib.html#Z_DEFAULT_WINDOWBITS"><span class="Identifier">Z_DEFAULT_WINDOWBITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MIN_CHUNK"></a>
+<dt><pre><a href="jszlib.html#Z_MIN_CHUNK"><span class="Identifier">Z_MIN_CHUNK</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MAX_CHUNK"></a>
+<dt><pre><a href="jszlib.html#Z_MAX_CHUNK"><span class="Identifier">Z_MAX_CHUNK</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_DEFAULT_CHUNK"></a>
+<dt><pre><a href="jszlib.html#Z_DEFAULT_CHUNK"><span class="Identifier">Z_DEFAULT_CHUNK</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MIN_MEMLEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_MIN_MEMLEVEL"><span class="Identifier">Z_MIN_MEMLEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MAX_MEMLEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_MAX_MEMLEVEL"><span class="Identifier">Z_MAX_MEMLEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_DEFAULT_MEMLEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_DEFAULT_MEMLEVEL"><span class="Identifier">Z_DEFAULT_MEMLEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MIN_LEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_MIN_LEVEL"><span class="Identifier">Z_MIN_LEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_MAX_LEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_MAX_LEVEL"><span class="Identifier">Z_MAX_LEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="Z_DEFAULT_LEVEL"></a>
+<dt><pre><a href="jszlib.html#Z_DEFAULT_LEVEL"><span class="Identifier">Z_DEFAULT_LEVEL</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="BROTLI_OPERATION_PROCESS"></a>
 <dt><pre><a href="jszlib.html#BROTLI_OPERATION_PROCESS"><span class="Identifier">BROTLI_OPERATION_PROCESS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
 <dd>
@@ -436,6 +739,405 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 <a id="BROTLI_OPERATION_EMIT_METADATA"></a>
 <dt><pre><a href="jszlib.html#BROTLI_OPERATION_EMIT_METADATA"><span class="Identifier">BROTLI_OPERATION_EMIT_METADATA</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_MODE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_MODE"><span class="Identifier">BROTLI_PARAM_MODE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MODE_GENERIC"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MODE_GENERIC"><span class="Identifier">BROTLI_MODE_GENERIC</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MODE_TEXT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MODE_TEXT"><span class="Identifier">BROTLI_MODE_TEXT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MODE_FONT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MODE_FONT"><span class="Identifier">BROTLI_MODE_FONT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DEFAULT_MODE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DEFAULT_MODE"><span class="Identifier">BROTLI_DEFAULT_MODE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_QUALITY"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_QUALITY"><span class="Identifier">BROTLI_PARAM_QUALITY</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MIN_QUALITY"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MIN_QUALITY"><span class="Identifier">BROTLI_MIN_QUALITY</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MAX_QUALITY"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MAX_QUALITY"><span class="Identifier">BROTLI_MAX_QUALITY</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DEFAULT_QUALITY"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DEFAULT_QUALITY"><span class="Identifier">BROTLI_DEFAULT_QUALITY</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_LGWIN"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_LGWIN"><span class="Identifier">BROTLI_PARAM_LGWIN</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MIN_WINDOW_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MIN_WINDOW_BITS"><span class="Identifier">BROTLI_MIN_WINDOW_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MAX_WINDOW_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MAX_WINDOW_BITS"><span class="Identifier">BROTLI_MAX_WINDOW_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_LARGE_MAX_WINDOW_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_LARGE_MAX_WINDOW_BITS"><span class="Identifier">BROTLI_LARGE_MAX_WINDOW_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DEFAULT_WINDOW"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DEFAULT_WINDOW"><span class="Identifier">BROTLI_DEFAULT_WINDOW</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_LGBLOCK"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_LGBLOCK"><span class="Identifier">BROTLI_PARAM_LGBLOCK</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MIN_INPUT_BLOCK_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MIN_INPUT_BLOCK_BITS"><span class="Identifier">BROTLI_MIN_INPUT_BLOCK_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_MAX_INPUT_BLOCK_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_MAX_INPUT_BLOCK_BITS"><span class="Identifier">BROTLI_MAX_INPUT_BLOCK_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING"><span class="Identifier">BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_SIZE_HINT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_SIZE_HINT"><span class="Identifier">BROTLI_PARAM_SIZE_HINT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_LARGE_WINDOW"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_LARGE_WINDOW"><span class="Identifier">BROTLI_PARAM_LARGE_WINDOW</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_NPOSTFIX"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_NPOSTFIX"><span class="Identifier">BROTLI_PARAM_NPOSTFIX</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_PARAM_NDIRECT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_PARAM_NDIRECT"><span class="Identifier">BROTLI_PARAM_NDIRECT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_RESULT_ERROR"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_RESULT_ERROR"><span class="Identifier">BROTLI_DECODER_RESULT_ERROR</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_RESULT_SUCCESS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_RESULT_SUCCESS"><span class="Identifier">BROTLI_DECODER_RESULT_SUCCESS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT"><span class="Identifier">BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT"><span class="Identifier">BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION"><span class="Identifier">BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_PARAM_LARGE_WINDOW"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_PARAM_LARGE_WINDOW"><span class="Identifier">BROTLI_DECODER_PARAM_LARGE_WINDOW</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_NO_ERROR"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_NO_ERROR"><span class="Identifier">BROTLI_DECODER_NO_ERROR</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_SUCCESS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_SUCCESS"><span class="Identifier">BROTLI_DECODER_SUCCESS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_NEEDS_MORE_INPUT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_NEEDS_MORE_INPUT"><span class="Identifier">BROTLI_DECODER_NEEDS_MORE_INPUT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_NEEDS_MORE_OUTPUT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_NEEDS_MORE_OUTPUT"><span class="Identifier">BROTLI_DECODER_NEEDS_MORE_OUTPUT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_RESERVED"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_RESERVED"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_RESERVED</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_CL_SPACE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_CL_SPACE"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_CL_SPACE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_TRANSFORM"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_TRANSFORM"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_TRANSFORM</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_DICTIONARY"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_DICTIONARY"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_DICTIONARY</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_PADDING_1"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_PADDING_1"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_PADDING_1</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_PADDING_2"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_PADDING_2"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_PADDING_2</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_FORMAT_DISTANCE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_FORMAT_DISTANCE"><span class="Identifier">BROTLI_DECODER_ERROR_FORMAT_DISTANCE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET"><span class="Identifier">BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_INVALID_ARGUMENTS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_INVALID_ARGUMENTS"><span class="Identifier">BROTLI_DECODER_ERROR_INVALID_ARGUMENTS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES"><span class="Identifier">BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="BROTLI_DECODER_ERROR_UNREACHABLE"></a>
+<dt><pre><a href="jszlib.html#BROTLI_DECODER_ERROR_UNREACHABLE"><span class="Identifier">BROTLI_DECODER_ERROR_UNREACHABLE</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
 <dd>
 
 
@@ -534,7 +1236,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 09:41:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 20:15:23 UTC</small>
       </div>
     </div>
   </div>
