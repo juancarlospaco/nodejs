@@ -43,6 +43,16 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
 
 
+# Use
+
+```nim
+import nodejs
+requireFs()  # CommonJS
+# importFs() # ES6+
+writeFileSync(r"file.txt", r"Hello from NodeJS")
+```
+
+
 # Efficiency
 
 - is it any good ?, improves something ?.
