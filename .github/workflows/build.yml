@@ -33,7 +33,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         nim doc -b:js -d:nodejs --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
-        cp --verbose docs/nodejs.html docs/index.html
+        mv --verbose docs/nodejs.html docs/index.html
 
     - name: Commit Docs
       uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
