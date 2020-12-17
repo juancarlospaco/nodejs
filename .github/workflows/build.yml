@@ -25,7 +25,7 @@ jobs:
         nim-version: 'devel'
         no-color: true  # --noColor
 
-    - uses: juancarlospaco/nimpretty-action@main
+    # - uses: juancarlospaco/nimpretty-action@main
       # with:
       #   folders: "src"
 
