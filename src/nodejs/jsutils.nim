@@ -8,7 +8,13 @@ func requireUtil*() {.importjs: "const util = require('util')@".}
 proc callbackify*[T](function: T): T {.importjs: "util.$1(#)".}
   ## https://nodejs.org/api/util.html#util_util_callbackify_original
 
-func deprecate*[T](function: T; msg: cstring; code = "".cstring): T {.importjs: "util.$1(#, #, #)".}
+func deprecate*[T](function: T): T {.importjs: "util.$1(#, '')".}
+  ## https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
+
+func deprecate*[T](function: T; msg: cstring): T {.importjs: "util.$1(#, #)".}
+  ## https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
+
+func deprecate*[T](function: T; msg, code: cstring): T {.importjs: "util.$1(#, #, #)".}
   ## https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
 
 func format*(format: cstring; args: cstring): cstring {.importjs: "util.$1(#, @)", varargs.}
