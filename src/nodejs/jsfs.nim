@@ -44,6 +44,19 @@ let
   S_IROTH* {.importjs: "fs.constants.S_IROTH".}: cint
   S_IWOTH* {.importjs: "fs.constants.S_IWOTH".}: cint
   S_IXOTH* {.importjs: "fs.constants.S_IXOTH".}: cint
+  UV_FS_SYMLINK_DIR* {.importjs: "fs.constants.UV_FS_SYMLINK_DIR".}: cint
+  UV_FS_SYMLINK_JUNCTION* {.importjs: "fs.constants.UV_FS_SYMLINK_JUNCTION".}: cint
+  UV_DIRENT_UNKNOWN* {.importjs: "fs.constants.UV_DIRENT_UNKNOWN".}: cint
+  UV_DIRENT_FILE* {.importjs: "fs.constants.UV_DIRENT_FILE".}: cint
+  UV_DIRENT_DIR* {.importjs: "fs.constants.UV_DIRENT_DIR".}: cint
+  UV_DIRENT_LINK* {.importjs: "fs.constants.UV_DIRENT_LINK".}: cint
+  UV_DIRENT_FIFO* {.importjs: "fs.constants.UV_DIRENT_FIFO".}: cint
+  UV_DIRENT_SOCKET* {.importjs: "fs.constants.UV_DIRENT_SOCKET".}: cint
+  UV_DIRENT_CHAR* {.importjs: "fs.constants.UV_DIRENT_CHAR".}: cint
+  UV_DIRENT_BLOCK* {.importjs: "fs.constants.UV_DIRENT_BLOCK".}: cint
+  UV_FS_COPYFILE_EXCL* {.importjs: "fs.constants.UV_FS_COPYFILE_EXCL".}: cint
+  UV_FS_COPYFILE_FICLONE* {.importjs: "fs.constants.UV_FS_COPYFILE_FICLONE".}: cint
+  UV_FS_COPYFILE_FICLONE_FORCE* {.importjs: "fs.constants.UV_FS_COPYFILE_FICLONE_FORCE".}: cint
 
 when defined(osx):
   func lchmod*[T](path: cstring; mode: cint; callback: T) {.importjs: "fs.$1(#, #, #)".}
