@@ -226,7 +226,15 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"></p>
+  <p class="module-desc">
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">requireZlib</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Keyword">const</span><span class="Whitespace"> </span><span class="Identifier">s</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;My Imagination Is Very Limited. It Usually Involves Inflicting Pain In Ways That May Not Have Occurred To Most.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Keyword">proc</span><span class="Whitespace"> </span><span class="Identifier">foo</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;callback called&quot;</span><span class="Whitespace">
+</span><span class="Identifier">brotliCompress</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">foo</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">gzip</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">foo</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">deflate</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">foo</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">deflateRaw</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">foo</span><span class="Punctuation">)</span></pre></p>
   <div class="section" id="9">
 <h1><a class="toc-backref" href="#9">Lets</a></h1>
 <dl class="item">
@@ -526,7 +534,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 07:40:23 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 09:16:13 UTC</small>
       </div>
     </div>
   </div>
