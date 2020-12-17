@@ -57,4 +57,3 @@ runnableExamples:
   doAssert uuid4validate("854fc25b-02f3-45cc-b521-516991b9bb99".cstring)
   doAssert nextDays() is seq[JsObject]
   doAssert pastDays() is seq[JsObject]
-  echo stripAnsi("e64cb2a6-3ff6-11eb-b378-0242ac130002".cstring)
