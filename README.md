@@ -34,7 +34,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: [zlib](https://nodejs.org/api/zlib.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jszlib.html
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+
 - :heavy_check_mark: `require()` Dynamic,  sync,   non-lexical, run-time errors, CommonJS
-- :heavy_check_mark: Custom NodeJS-optimized syntax sugar module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
+- :heavy_check_mark: Custom NodeJS-optimized syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
 - :trollface: More supported modules soon...
 
 
