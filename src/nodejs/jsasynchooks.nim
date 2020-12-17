@@ -10,3 +10,9 @@ func executionAsyncId*(): cint {.importjs: "async_hooks.$1()".}
 
 func triggerAsyncId*(): cint {.importjs: "async_hooks.$1()".}
   ## https://nodejs.org/api/async_hooks.html#async_hooks_async_hooks_triggerasyncid
+
+
+runnableExamples:
+  requireAsynchooks()
+  echo triggerAsyncId()
+  echo executionAsyncId()
