@@ -31,7 +31,7 @@ jobs:
 
     - name: Generate Documentation (Linux)
       if: runner.os == 'Linux'
-      run: nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:error --outdir:docs src/nodejs.nim
+      run: nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
 
     - name: Commit Docs
       uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
