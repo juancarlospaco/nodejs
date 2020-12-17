@@ -58,16 +58,16 @@ import jsconsole, nodejs
 console.log base64encode("example")
 ```
 
-Generated JavaScript:
+This module generated JavaScript:
 
 ```javascript
 console.log(Buffer.from("example", "utf-8").toString("base64"));
 ```
 
----
+Standard Library generated JavaScript:
 
 ```nim
-import jsconsole, base64  # Standard Library
+import jsconsole, base64  #
 console.log base64encode("example")
 ```
 
@@ -247,19 +247,20 @@ console.log(toJSStr(encode_469762156(makeNimstrLit("example"), false)));
 
 </details>
 
+---
 
 ```nim
 import jsconsole, nodejs
 console.log deduplicate([9, 2, 3, 9, 4, 5, 6, 9])
 ```
 
-Generated JavaScript:
+This module generated JavaScript:
 
 ```javascript
 console.log([...new Set([9, 2, 3, 9, 4, 5, 6, 9])]);
 ```
 
----
+Standard Library generated JavaScript:
 
 ```nim
 import jsconsole, sequtils # Standard Library
