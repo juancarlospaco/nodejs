@@ -54,6 +54,7 @@ import nodejs
 - is it any good ?, improves something ?.
 
 It does NOT use anything from Nim standard library, very future-proof,
+
 just imports some types to be compatible with it, like `RegExp`, etc.
 
 ```nim

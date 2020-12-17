@@ -45,6 +45,10 @@ let
   S_IWOTH* {.importjs: "fs.constants.S_IWOTH".}: cint
   S_IXOTH* {.importjs: "fs.constants.S_IXOTH".}: cint
 
+when defined(osx):
+  func lchmod*[T](path: cstring; mode: cint; callback: T) {.importjs: "fs.$1(#, #, #)".}
+    ## https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback Only available on OSX?.
+
 func importFs*() {.importjs: "import * as fs from 'fs'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
 
@@ -157,12 +161,6 @@ func futimesSync*(fd: cint; atime: cstring; mtime: cstring) {.importjs: "fs.$1(#
 func futimesSync*(fd: cint; atime: cint; mtime: cint) {.importjs: "fs.$1(#, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_futimessync_fd_atime_mtime
 
-func lchmod*[T](path: cstring; mode: cint; callback: T) {.importjs: "fs.$1(#, #, #)".}
-  ## https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback
-
-func lchmodSync*(path: cstring; mode: cint) {.importjs: "fs.$1(#, #)".}
-  ## https://nodejs.org/api/fs.html#fs_fs_lchmodsync_path_mode
-
 func lchown*[T](path: cstring; uid: cint; gid: cint; callback: T) {.importjs: "fs.$1(#, #, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_lchown_path_uid_gid_callback
 
@@ -193,7 +191,7 @@ func lstat*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
 func mkdir*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback
 
-func mkdirSync*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func mkdirSync*(path: cstring; recursive = false) {.importjs: "fs.$1(#, {recursive: #})".}
   ## https://nodejs.org/api/fs.html#fs_fs_mkdirsync_path_options
 
 func mkdtemp*[T](prefix: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
@@ -352,24 +350,6 @@ func writeSync*(fd: cint; buffer: cstring; offset: cint): cint {.importjs: "fs.$
 func writeSync*(fd: cint; buffer: cstring): cint {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position
 
-func touchFile*(filename: cstring) {.importjs: """
-  (() => {
-    const path = #;
-    const time = new Date();
-    fs.utimes(path, time, time, err => {
-      if (err) {
-        return fs.open(path, 'w', (err, fd) => {
-          if (err) {
-            throw err;
-          } else {
-             fs.close(fd);
-          };
-        });
-      }
-    });
-  };)()""".}
-  ## Convenience func to touch a file.
-
 func touchFileSync*(filename: cstring) {.importjs: """
   (() => {
     const path = #;
@@ -379,5 +359,19 @@ func touchFileSync*(filename: cstring) {.importjs: """
     } catch(err) {
       fs.closeSync(fs.openSync(path, 'w'));
     }
-  };)()""".}
+  })()""".}
   ## Convenience func to touch a file.
+
+
+runnableExamples:
+  requireFs()
+  touchFileSync("touched.txt")
+  writeFileSync("touched.txt".cstring, "data".cstring)
+  appendFileSync("touched.txt".cstring, "\nmore data".cstring)
+  renameSync("touched.txt".cstring, "renamed.txt".cstring)
+  chmodSync("renamed.txt".cstring, 0o777)
+  copyFileSync("renamed.txt".cstring, "copied.txt".cstring)
+  rmSync("renamed.txt".cstring)
+  rmSync("copied.txt".cstring)
+  echo mkdtempSync("test".cstring)
+  # mkdirSync("/tmp/somerandomame".cstring, recursive = true)
