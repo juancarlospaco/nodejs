@@ -1,0 +1,142 @@
+EOL	nodejs/jsos.html#EOL	jsos: EOL	
+SIGHUP	nodejs/jsos.html#SIGHUP	jsos: SIGHUP	
+SIGINT	nodejs/jsos.html#SIGINT	jsos: SIGINT	
+SIGQUIT	nodejs/jsos.html#SIGQUIT	jsos: SIGQUIT	
+SIGILL	nodejs/jsos.html#SIGILL	jsos: SIGILL	
+SIGTRAP	nodejs/jsos.html#SIGTRAP	jsos: SIGTRAP	
+SIGABRT	nodejs/jsos.html#SIGABRT	jsos: SIGABRT	
+SIGIOT	nodejs/jsos.html#SIGIOT	jsos: SIGIOT	
+SIGBUS	nodejs/jsos.html#SIGBUS	jsos: SIGBUS	
+SIGFPE	nodejs/jsos.html#SIGFPE	jsos: SIGFPE	
+SIGKILL	nodejs/jsos.html#SIGKILL	jsos: SIGKILL	
+SIGUSR1	nodejs/jsos.html#SIGUSR1	jsos: SIGUSR1	
+SIGSEGV	nodejs/jsos.html#SIGSEGV	jsos: SIGSEGV	
+SIGUSR2	nodejs/jsos.html#SIGUSR2	jsos: SIGUSR2	
+SIGPIPE	nodejs/jsos.html#SIGPIPE	jsos: SIGPIPE	
+SIGALRM	nodejs/jsos.html#SIGALRM	jsos: SIGALRM	
+SIGTERM	nodejs/jsos.html#SIGTERM	jsos: SIGTERM	
+SIGCHLD	nodejs/jsos.html#SIGCHLD	jsos: SIGCHLD	
+SIGSTKFLT	nodejs/jsos.html#SIGSTKFLT	jsos: SIGSTKFLT	
+SIGCONT	nodejs/jsos.html#SIGCONT	jsos: SIGCONT	
+SIGSTOP	nodejs/jsos.html#SIGSTOP	jsos: SIGSTOP	
+SIGTSTP	nodejs/jsos.html#SIGTSTP	jsos: SIGTSTP	
+SIGTTIN	nodejs/jsos.html#SIGTTIN	jsos: SIGTTIN	
+SIGTTOU	nodejs/jsos.html#SIGTTOU	jsos: SIGTTOU	
+SIGURG	nodejs/jsos.html#SIGURG	jsos: SIGURG	
+SIGXCPU	nodejs/jsos.html#SIGXCPU	jsos: SIGXCPU	
+SIGXFSZ	nodejs/jsos.html#SIGXFSZ	jsos: SIGXFSZ	
+SIGVTALRM	nodejs/jsos.html#SIGVTALRM	jsos: SIGVTALRM	
+SIGPROF	nodejs/jsos.html#SIGPROF	jsos: SIGPROF	
+SIGWINCH	nodejs/jsos.html#SIGWINCH	jsos: SIGWINCH	
+SIGIO	nodejs/jsos.html#SIGIO	jsos: SIGIO	
+SIGPOLL	nodejs/jsos.html#SIGPOLL	jsos: SIGPOLL	
+SIGPWR	nodejs/jsos.html#SIGPWR	jsos: SIGPWR	
+SIGSYS	nodejs/jsos.html#SIGSYS	jsos: SIGSYS	
+E2BIG	nodejs/jsos.html#E2BIG	jsos: E2BIG	
+EACCES	nodejs/jsos.html#EACCES	jsos: EACCES	
+EADDRINUSE	nodejs/jsos.html#EADDRINUSE	jsos: EADDRINUSE	
+EADDRNOTAVAIL	nodejs/jsos.html#EADDRNOTAVAIL	jsos: EADDRNOTAVAIL	
+EAFNOSUPPORT	nodejs/jsos.html#EAFNOSUPPORT	jsos: EAFNOSUPPORT	
+EAGAIN	nodejs/jsos.html#EAGAIN	jsos: EAGAIN	
+EALREADY	nodejs/jsos.html#EALREADY	jsos: EALREADY	
+EBADF	nodejs/jsos.html#EBADF	jsos: EBADF	
+EBADMSG	nodejs/jsos.html#EBADMSG	jsos: EBADMSG	
+EBUSY	nodejs/jsos.html#EBUSY	jsos: EBUSY	
+ECANCELED	nodejs/jsos.html#ECANCELED	jsos: ECANCELED	
+ECHILD	nodejs/jsos.html#ECHILD	jsos: ECHILD	
+ECONNABORTED	nodejs/jsos.html#ECONNABORTED	jsos: ECONNABORTED	
+ECONNREFUSED	nodejs/jsos.html#ECONNREFUSED	jsos: ECONNREFUSED	
+ECONNRESET	nodejs/jsos.html#ECONNRESET	jsos: ECONNRESET	
+EDEADLK	nodejs/jsos.html#EDEADLK	jsos: EDEADLK	
+EDESTADDRREQ	nodejs/jsos.html#EDESTADDRREQ	jsos: EDESTADDRREQ	
+EDOM	nodejs/jsos.html#EDOM	jsos: EDOM	
+EDQUOT	nodejs/jsos.html#EDQUOT	jsos: EDQUOT	
+EEXIST	nodejs/jsos.html#EEXIST	jsos: EEXIST	
+EFAULT	nodejs/jsos.html#EFAULT	jsos: EFAULT	
+EFBIG	nodejs/jsos.html#EFBIG	jsos: EFBIG	
+EHOSTUNREACH	nodejs/jsos.html#EHOSTUNREACH	jsos: EHOSTUNREACH	
+EIDRM	nodejs/jsos.html#EIDRM	jsos: EIDRM	
+EILSEQ	nodejs/jsos.html#EILSEQ	jsos: EILSEQ	
+EINPROGRESS	nodejs/jsos.html#EINPROGRESS	jsos: EINPROGRESS	
+EINTR	nodejs/jsos.html#EINTR	jsos: EINTR	
+EINVAL	nodejs/jsos.html#EINVAL	jsos: EINVAL	
+EIO	nodejs/jsos.html#EIO	jsos: EIO	
+EISCONN	nodejs/jsos.html#EISCONN	jsos: EISCONN	
+EISDIR	nodejs/jsos.html#EISDIR	jsos: EISDIR	
+ELOOP	nodejs/jsos.html#ELOOP	jsos: ELOOP	
+EMFILE	nodejs/jsos.html#EMFILE	jsos: EMFILE	
+EMLINK	nodejs/jsos.html#EMLINK	jsos: EMLINK	
+EMSGSIZE	nodejs/jsos.html#EMSGSIZE	jsos: EMSGSIZE	
+EMULTIHOP	nodejs/jsos.html#EMULTIHOP	jsos: EMULTIHOP	
+ENAMETOOLONG	nodejs/jsos.html#ENAMETOOLONG	jsos: ENAMETOOLONG	
+ENETDOWN	nodejs/jsos.html#ENETDOWN	jsos: ENETDOWN	
+ENETRESET	nodejs/jsos.html#ENETRESET	jsos: ENETRESET	
+ENETUNREACH	nodejs/jsos.html#ENETUNREACH	jsos: ENETUNREACH	
+ENFILE	nodejs/jsos.html#ENFILE	jsos: ENFILE	
+ENOBUFS	nodejs/jsos.html#ENOBUFS	jsos: ENOBUFS	
+ENODATA	nodejs/jsos.html#ENODATA	jsos: ENODATA	
+ENODEV	nodejs/jsos.html#ENODEV	jsos: ENODEV	
+ENOENT	nodejs/jsos.html#ENOENT	jsos: ENOENT	
+ENOEXEC	nodejs/jsos.html#ENOEXEC	jsos: ENOEXEC	
+ENOLCK	nodejs/jsos.html#ENOLCK	jsos: ENOLCK	
+ENOLINK	nodejs/jsos.html#ENOLINK	jsos: ENOLINK	
+ENOMEM	nodejs/jsos.html#ENOMEM	jsos: ENOMEM	
+ENOMSG	nodejs/jsos.html#ENOMSG	jsos: ENOMSG	
+ENOPROTOOPT	nodejs/jsos.html#ENOPROTOOPT	jsos: ENOPROTOOPT	
+ENOSPC	nodejs/jsos.html#ENOSPC	jsos: ENOSPC	
+ENOSR	nodejs/jsos.html#ENOSR	jsos: ENOSR	
+ENOSTR	nodejs/jsos.html#ENOSTR	jsos: ENOSTR	
+ENOSYS	nodejs/jsos.html#ENOSYS	jsos: ENOSYS	
+ENOTCONN	nodejs/jsos.html#ENOTCONN	jsos: ENOTCONN	
+ENOTDIR	nodejs/jsos.html#ENOTDIR	jsos: ENOTDIR	
+ENOTEMPTY	nodejs/jsos.html#ENOTEMPTY	jsos: ENOTEMPTY	
+ENOTSOCK	nodejs/jsos.html#ENOTSOCK	jsos: ENOTSOCK	
+ENOTSUP	nodejs/jsos.html#ENOTSUP	jsos: ENOTSUP	
+ENOTTY	nodejs/jsos.html#ENOTTY	jsos: ENOTTY	
+ENXIO	nodejs/jsos.html#ENXIO	jsos: ENXIO	
+EOPNOTSUPP	nodejs/jsos.html#EOPNOTSUPP	jsos: EOPNOTSUPP	
+EOVERFLOW	nodejs/jsos.html#EOVERFLOW	jsos: EOVERFLOW	
+EPERM	nodejs/jsos.html#EPERM	jsos: EPERM	
+EPIPE	nodejs/jsos.html#EPIPE	jsos: EPIPE	
+EPROTO	nodejs/jsos.html#EPROTO	jsos: EPROTO	
+EPROTONOSUPPORT	nodejs/jsos.html#EPROTONOSUPPORT	jsos: EPROTONOSUPPORT	
+EPROTOTYPE	nodejs/jsos.html#EPROTOTYPE	jsos: EPROTOTYPE	
+ERANGE	nodejs/jsos.html#ERANGE	jsos: ERANGE	
+EROFS	nodejs/jsos.html#EROFS	jsos: EROFS	
+ESPIPE	nodejs/jsos.html#ESPIPE	jsos: ESPIPE	
+ESRCH	nodejs/jsos.html#ESRCH	jsos: ESRCH	
+ESTALE	nodejs/jsos.html#ESTALE	jsos: ESTALE	
+ETIME	nodejs/jsos.html#ETIME	jsos: ETIME	
+ETIMEDOUT	nodejs/jsos.html#ETIMEDOUT	jsos: ETIMEDOUT	
+ETXTBSY	nodejs/jsos.html#ETXTBSY	jsos: ETXTBSY	
+EWOULDBLOCK	nodejs/jsos.html#EWOULDBLOCK	jsos: EWOULDBLOCK	
+EXDEV	nodejs/jsos.html#EXDEV	jsos: EXDEV	
+RTLD_LAZY	nodejs/jsos.html#RTLD_LAZY	jsos: RTLD_LAZY	
+RTLD_NOW	nodejs/jsos.html#RTLD_NOW	jsos: RTLD_NOW	
+RTLD_GLOBAL	nodejs/jsos.html#RTLD_GLOBAL	jsos: RTLD_GLOBAL	
+RTLD_LOCAL	nodejs/jsos.html#RTLD_LOCAL	jsos: RTLD_LOCAL	
+RTLD_DEEPBIND	nodejs/jsos.html#RTLD_DEEPBIND	jsos: RTLD_DEEPBIND	
+PRIORITY_LOW	nodejs/jsos.html#PRIORITY_LOW	jsos: PRIORITY_LOW	
+PRIORITY_BELOW_NORMAL	nodejs/jsos.html#PRIORITY_BELOW_NORMAL	jsos: PRIORITY_BELOW_NORMAL	
+PRIORITY_NORMAL	nodejs/jsos.html#PRIORITY_NORMAL	jsos: PRIORITY_NORMAL	
+PRIORITY_ABOVE_NORMAL	nodejs/jsos.html#PRIORITY_ABOVE_NORMAL	jsos: PRIORITY_ABOVE_NORMAL	
+PRIORITY_HIGH	nodejs/jsos.html#PRIORITY_HIGH	jsos: PRIORITY_HIGH	
+PRIORITY_HIGHEST	nodejs/jsos.html#PRIORITY_HIGHEST	jsos: PRIORITY_HIGHEST	
+UV_UDP_REUSEADDR	nodejs/jsos.html#UV_UDP_REUSEADDR	jsos: UV_UDP_REUSEADDR	
+importOs	nodejs/jsos.html#importOs	jsos: importOs()	
+requireOs	nodejs/jsos.html#requireOs	jsos: requireOs()	
+arch	nodejs/jsos.html#arch	jsos: arch(): cstring	
+endianness	nodejs/jsos.html#endianness	jsos: endianness(): cstring	
+freemem	nodejs/jsos.html#freemem	jsos: freemem(): cint	
+getPriority	nodejs/jsos.html#getPriority	jsos: getPriority(pid = 0.cint): cint	
+homedir	nodejs/jsos.html#homedir	jsos: homedir(): cstring	
+loadavg	nodejs/jsos.html#loadavg	jsos: loadavg(): seq[cint]	
+platform	nodejs/jsos.html#platform	jsos: platform(): cstring	
+release	nodejs/jsos.html#release	jsos: release(): cstring	
+setPriority	nodejs/jsos.html#setPriority,cint	jsos: setPriority(priority: cint)	
+setPriority	nodejs/jsos.html#setPriority,cint,cint	jsos: setPriority(pid, priority: cint)	
+tmpdir	nodejs/jsos.html#tmpdir	jsos: tmpdir(): cstring	
+totalmem	nodejs/jsos.html#totalmem	jsos: totalmem(): cint	
+ostype	nodejs/jsos.html#ostype	jsos: ostype(): cstring	
+uptimeOs	nodejs/jsos.html#uptimeOs	jsos: uptimeOs(): cint	
+version	nodejs/jsos.html#version	jsos: version(): cstring	

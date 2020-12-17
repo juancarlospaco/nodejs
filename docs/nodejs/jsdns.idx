@@ -1,0 +1,43 @@
+NODATA	nodejs/jsdns.html#NODATA	jsdns: NODATA	
+FORMERR	nodejs/jsdns.html#FORMERR	jsdns: FORMERR	
+SERVFAIL	nodejs/jsdns.html#SERVFAIL	jsdns: SERVFAIL	
+NOTFOUND	nodejs/jsdns.html#NOTFOUND	jsdns: NOTFOUND	
+NOTIMP	nodejs/jsdns.html#NOTIMP	jsdns: NOTIMP	
+REFUSED	nodejs/jsdns.html#REFUSED	jsdns: REFUSED	
+BADQUERY	nodejs/jsdns.html#BADQUERY	jsdns: BADQUERY	
+BADNAME	nodejs/jsdns.html#BADNAME	jsdns: BADNAME	
+BADFAMILY	nodejs/jsdns.html#BADFAMILY	jsdns: BADFAMILY	
+BADRESP	nodejs/jsdns.html#BADRESP	jsdns: BADRESP	
+CONNREFUSED	nodejs/jsdns.html#CONNREFUSED	jsdns: CONNREFUSED	
+TIMEOUT	nodejs/jsdns.html#TIMEOUT	jsdns: TIMEOUT	
+FILE	nodejs/jsdns.html#FILE	jsdns: FILE	
+NOMEM	nodejs/jsdns.html#NOMEM	jsdns: NOMEM	
+DESTRUCTION	nodejs/jsdns.html#DESTRUCTION	jsdns: DESTRUCTION	
+BADSTR	nodejs/jsdns.html#BADSTR	jsdns: BADSTR	
+BADFLAGS	nodejs/jsdns.html#BADFLAGS	jsdns: BADFLAGS	
+NONAME	nodejs/jsdns.html#NONAME	jsdns: NONAME	
+BADHINTS	nodejs/jsdns.html#BADHINTS	jsdns: BADHINTS	
+NOTINITIALIZED	nodejs/jsdns.html#NOTINITIALIZED	jsdns: NOTINITIALIZED	
+LOADIPHLPAPI	nodejs/jsdns.html#LOADIPHLPAPI	jsdns: LOADIPHLPAPI	
+ADDRGETNETWORKPARAMS	nodejs/jsdns.html#ADDRGETNETWORKPARAMS	jsdns: ADDRGETNETWORKPARAMS	
+CANCELLED	nodejs/jsdns.html#CANCELLED	jsdns: CANCELLED	
+importDns	nodejs/jsdns.html#importDns	jsdns: importDns()	
+requireDns	nodejs/jsdns.html#requireDns	jsdns: requireDns()	
+lookup	nodejs/jsdns.html#lookup,cstring,T	jsdns: lookup[T](hostname: cstring; callback: T)	
+lookupService	nodejs/jsdns.html#lookupService,cstring,cint,T	jsdns: lookupService[T](address: cstring; port: cint; callback: T)	
+resolve	nodejs/jsdns.html#resolve,cstring,cstring,T	jsdns: resolve[T](hostname: cstring; rrtype: cstring; callback: T)	
+resolve	nodejs/jsdns.html#resolve,cstring,T	jsdns: resolve[T](hostname: cstring; callback: T)	
+resolve4	nodejs/jsdns.html#resolve4,cstring,T	jsdns: resolve4[T](hostname: cstring; callback: T)	
+resolve6	nodejs/jsdns.html#resolve6,cstring,T	jsdns: resolve6[T](hostname: cstring; callback: T)	
+resolveAny	nodejs/jsdns.html#resolveAny,cstring,T	jsdns: resolveAny[T](hostname: cstring; callback: T)	
+resolveCname	nodejs/jsdns.html#resolveCname,cstring,T	jsdns: resolveCname[T](hostname: cstring; callback: T)	
+resolveCaa	nodejs/jsdns.html#resolveCaa,cstring,T	jsdns: resolveCaa[T](hostname: cstring; callback: T)	
+resolveMx	nodejs/jsdns.html#resolveMx,cstring,T	jsdns: resolveMx[T](hostname: cstring; callback: T)	
+resolveNaptr	nodejs/jsdns.html#resolveNaptr,cstring,T	jsdns: resolveNaptr[T](hostname: cstring; callback: T)	
+resolveNs	nodejs/jsdns.html#resolveNs,cstring,T	jsdns: resolveNs[T](hostname: cstring; callback: T)	
+resolvePtr	nodejs/jsdns.html#resolvePtr,cstring,T	jsdns: resolvePtr[T](hostname: cstring; callback: T)	
+resolveSoa	nodejs/jsdns.html#resolveSoa,cstring,T	jsdns: resolveSoa[T](hostname: cstring; callback: T)	
+resolveSrv	nodejs/jsdns.html#resolveSrv,cstring,T	jsdns: resolveSrv[T](hostname: cstring; callback: T)	
+resolveTxt	nodejs/jsdns.html#resolveTxt,cstring,T	jsdns: resolveTxt[T](hostname: cstring; callback: T)	
+reverse	nodejs/jsdns.html#reverse,cstring,T	jsdns: reverse[T](ip: cstring; callback: T)	
+setServers	nodejs/jsdns.html#setServers,openArray[cstring]	jsdns: setServers(servers: openArray[cstring])	

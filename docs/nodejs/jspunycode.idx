@@ -1,0 +1,8 @@
+importPunycode	nodejs/jspunycode.html#importPunycode	jspunycode: importPunycode()	
+requirePunycode	nodejs/jspunycode.html#requirePunycode	jspunycode: requirePunycode()	
+decode	nodejs/jspunycode.html#decode,cstring	jspunycode: decode(stringy: cstring): cstring	
+encode	nodejs/jspunycode.html#encode,cstring	jspunycode: encode(stringy: cstring): cstring	
+toASCII	nodejs/jspunycode.html#toASCII,cstring	jspunycode: toASCII(stringy: cstring): cstring	
+toUnicode	nodejs/jspunycode.html#toUnicode,cstring	jspunycode: toUnicode(stringy: cstring): cstring	
+ucs2Decode	nodejs/jspunycode.html#ucs2Decode,cstring	jspunycode: ucs2Decode(stringy: cstring): seq[cint]	
+ucs2Encode	nodejs/jspunycode.html#ucs2Encode,openArray[cint]	jspunycode: ucs2Encode(codePoints: openArray[cint]): cstring	

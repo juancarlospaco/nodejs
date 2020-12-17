@@ -1,0 +1,145 @@
+F_OK	nodejs/jsfs.html#F_OK	jsfs: F_OK	
+R_OK	nodejs/jsfs.html#R_OK	jsfs: R_OK	
+W_OK	nodejs/jsfs.html#W_OK	jsfs: W_OK	
+X_OK	nodejs/jsfs.html#X_OK	jsfs: X_OK	
+COPYFILE_EXCL	nodejs/jsfs.html#COPYFILE_EXCL	jsfs: COPYFILE_EXCL	
+COPYFILE_FICLONE	nodejs/jsfs.html#COPYFILE_FICLONE	jsfs: COPYFILE_FICLONE	
+COPYFILE_FICLONE_FORCE	nodejs/jsfs.html#COPYFILE_FICLONE_FORCE	jsfs: COPYFILE_FICLONE_FORCE	
+O_RDONLY	nodejs/jsfs.html#O_RDONLY	jsfs: O_RDONLY	
+O_WRONLY	nodejs/jsfs.html#O_WRONLY	jsfs: O_WRONLY	
+O_RDWR	nodejs/jsfs.html#O_RDWR	jsfs: O_RDWR	
+O_CREAT	nodejs/jsfs.html#O_CREAT	jsfs: O_CREAT	
+O_EXCL	nodejs/jsfs.html#O_EXCL	jsfs: O_EXCL	
+O_NOCTTY	nodejs/jsfs.html#O_NOCTTY	jsfs: O_NOCTTY	
+O_TRUNC	nodejs/jsfs.html#O_TRUNC	jsfs: O_TRUNC	
+O_APPEND	nodejs/jsfs.html#O_APPEND	jsfs: O_APPEND	
+O_DIRECTORY	nodejs/jsfs.html#O_DIRECTORY	jsfs: O_DIRECTORY	
+O_NOATIME	nodejs/jsfs.html#O_NOATIME	jsfs: O_NOATIME	
+O_NOFOLLOW	nodejs/jsfs.html#O_NOFOLLOW	jsfs: O_NOFOLLOW	
+O_SYNC	nodejs/jsfs.html#O_SYNC	jsfs: O_SYNC	
+O_DSYNC	nodejs/jsfs.html#O_DSYNC	jsfs: O_DSYNC	
+O_SYMLINK	nodejs/jsfs.html#O_SYMLINK	jsfs: O_SYMLINK	
+O_DIRECT	nodejs/jsfs.html#O_DIRECT	jsfs: O_DIRECT	
+O_NONBLOCK	nodejs/jsfs.html#O_NONBLOCK	jsfs: O_NONBLOCK	
+UV_FS_O_FILEMAP	nodejs/jsfs.html#UV_FS_O_FILEMAP	jsfs: UV_FS_O_FILEMAP	
+S_IFMT	nodejs/jsfs.html#S_IFMT	jsfs: S_IFMT	
+S_IFREG	nodejs/jsfs.html#S_IFREG	jsfs: S_IFREG	
+S_IFDIR	nodejs/jsfs.html#S_IFDIR	jsfs: S_IFDIR	
+S_IFCHR	nodejs/jsfs.html#S_IFCHR	jsfs: S_IFCHR	
+S_IFBLK	nodejs/jsfs.html#S_IFBLK	jsfs: S_IFBLK	
+S_IFIFO	nodejs/jsfs.html#S_IFIFO	jsfs: S_IFIFO	
+S_IFLNK	nodejs/jsfs.html#S_IFLNK	jsfs: S_IFLNK	
+S_IFSOCK	nodejs/jsfs.html#S_IFSOCK	jsfs: S_IFSOCK	
+S_IRWXU	nodejs/jsfs.html#S_IRWXU	jsfs: S_IRWXU	
+S_IRUSR	nodejs/jsfs.html#S_IRUSR	jsfs: S_IRUSR	
+S_IWUSR	nodejs/jsfs.html#S_IWUSR	jsfs: S_IWUSR	
+S_IXUSR	nodejs/jsfs.html#S_IXUSR	jsfs: S_IXUSR	
+S_IRWXG	nodejs/jsfs.html#S_IRWXG	jsfs: S_IRWXG	
+S_IRGRP	nodejs/jsfs.html#S_IRGRP	jsfs: S_IRGRP	
+S_IWGRP	nodejs/jsfs.html#S_IWGRP	jsfs: S_IWGRP	
+S_IXGRP	nodejs/jsfs.html#S_IXGRP	jsfs: S_IXGRP	
+S_IRWXO	nodejs/jsfs.html#S_IRWXO	jsfs: S_IRWXO	
+S_IROTH	nodejs/jsfs.html#S_IROTH	jsfs: S_IROTH	
+S_IWOTH	nodejs/jsfs.html#S_IWOTH	jsfs: S_IWOTH	
+S_IXOTH	nodejs/jsfs.html#S_IXOTH	jsfs: S_IXOTH	
+importFs	nodejs/jsfs.html#importFs	jsfs: importFs()	
+requireFs	nodejs/jsfs.html#requireFs	jsfs: requireFs()	
+dirRead	nodejs/jsfs.html#dirRead,cstring,T	jsfs: dirRead[T](path: cstring; callback: T)	
+access	nodejs/jsfs.html#access,cstring,cint,T	jsfs: access[T](path: cstring; mode: cint; callback: T)	
+accessSync	nodejs/jsfs.html#accessSync,cstring,cint	jsfs: accessSync(path: cstring; mode: cint)	
+appendFile	nodejs/jsfs.html#appendFile,cstring,cstring,T	jsfs: appendFile[T](path, data: cstring; callback: T)	
+appendFileSync	nodejs/jsfs.html#appendFileSync,cstring,cstring	jsfs: appendFileSync(path, data: cstring)	
+chmod	nodejs/jsfs.html#chmod,cstring,cstring,T	jsfs: chmod[T](path: cstring; mode: cstring; callback: T)	
+chmod	nodejs/jsfs.html#chmod,cstring,cint,T	jsfs: chmod[T](path: cstring; mode: cint; callback: T)	
+chmodSync	nodejs/jsfs.html#chmodSync,cstring,cint	jsfs: chmodSync(path: cstring; mode: cint)	
+chmodSync	nodejs/jsfs.html#chmodSync,cstring,cstring	jsfs: chmodSync(path: cstring; mode: cstring)	
+chown	nodejs/jsfs.html#chown,cstring,cint,cint,T	jsfs: chown[T](path: cstring; uid: cint; gid: cint; callback: T)	
+chownSync	nodejs/jsfs.html#chownSync,cstring,cint,cint	jsfs: chownSync(path: cstring; uid: cint; gid: cint)	
+close	nodejs/jsfs.html#close,cint,T	jsfs: close[T](fd: cint; callback: T)	
+closeSync	nodejs/jsfs.html#closeSync,cint	jsfs: closeSync(fd: cint)	
+copyFile	nodejs/jsfs.html#copyFile,cstring,cstring,cint,T	jsfs: copyFile[T](src, dest: cstring; mode: cint; callback: T)	
+copyFile	nodejs/jsfs.html#copyFile,cstring,cstring,T	jsfs: copyFile[T](src, dest: cstring; callback: T)	
+copyFileSync	nodejs/jsfs.html#copyFileSync,cstring,cstring	jsfs: copyFileSync(src, dest: cstring)	
+copyFileSync	nodejs/jsfs.html#copyFileSync,cstring,cstring,cint	jsfs: copyFileSync(src, dest: cstring; mode: cint)	
+existsSync	nodejs/jsfs.html#existsSync,cstring	jsfs: existsSync(path: cstring): bool	
+fchmod	nodejs/jsfs.html#fchmod,cint,cstring,T	jsfs: fchmod[T](fd: cint; mode: cstring; callback: T)	
+fchmod	nodejs/jsfs.html#fchmod,cint,cint,T	jsfs: fchmod[T](fd: cint; mode: cint; callback: T)	
+fchmodSync	nodejs/jsfs.html#fchmodSync,cint,cint	jsfs: fchmodSync(fd: cint; mode: cint)	
+fchmodSync	nodejs/jsfs.html#fchmodSync,cint,cstring	jsfs: fchmodSync(fd: cint; mode: cstring)	
+fchown	nodejs/jsfs.html#fchown,cint,cint,cint,T	jsfs: fchown[T](fd, uid, gid: cint; callback: T)	
+fchownSync	nodejs/jsfs.html#fchownSync,cint,cint,cint	jsfs: fchownSync(fd, uid, gid: cint)	
+fdatasync	nodejs/jsfs.html#fdatasync,cint,T	jsfs: fdatasync[T](fd: cint; callback: T)	
+fdatasyncSync	nodejs/jsfs.html#fdatasyncSync,cint	jsfs: fdatasyncSync(fd: cint)	
+fstat	nodejs/jsfs.html#fstat,cint,T	jsfs: fstat[T](fd: cint; callback: T)	
+fsync	nodejs/jsfs.html#fsync,cint,T	jsfs: fsync[T](fd: cint; callback: T)	
+ftruncate	nodejs/jsfs.html#ftruncate,cint,cint,T	jsfs: ftruncate[T](fd: cint; len: cint; callback: T)	
+ftruncate	nodejs/jsfs.html#ftruncate,cint,T	jsfs: ftruncate[T](fd: cint; callback: T)	
+ftruncateSync	nodejs/jsfs.html#ftruncateSync,cint,cint	jsfs: ftruncateSync(fd: cint; len: cint)	
+futimes	nodejs/jsfs.html#futimes,cint,cint,cint,T	jsfs: futimes[T](fd: cint; atime: cint; mtime: cint; callback: T)	
+futimes	nodejs/jsfs.html#futimes,cint,cstring,cstring,T	jsfs: futimes[T](fd: cint; atime: cstring; mtime: cstring; callback: T)	
+futimesSync	nodejs/jsfs.html#futimesSync,cint,cstring,cstring	jsfs: futimesSync(fd: cint; atime: cstring; mtime: cstring)	
+futimesSync	nodejs/jsfs.html#futimesSync,cint,cint,cint	jsfs: futimesSync(fd: cint; atime: cint; mtime: cint)	
+lchown	nodejs/jsfs.html#lchown,cstring,cint,cint,T	jsfs: lchown[T](path: cstring; uid: cint; gid: cint; callback: T)	
+lchownSync	nodejs/jsfs.html#lchownSync,cstring,cint,cint	jsfs: lchownSync(path: cstring; uid: cint; gid: cint)	
+lutimes	nodejs/jsfs.html#lutimes,cstring,cint,cint,T	jsfs: lutimes[T](path: cstring; atime: cint; mtime: cint; callback: T)	
+lutimes	nodejs/jsfs.html#lutimes,cstring,cstring,cstring,T	jsfs: lutimes[T](path: cstring; atime: cstring; mtime: cstring; callback: T)	
+lutimesSync	nodejs/jsfs.html#lutimesSync,cstring,cstring,cstring	jsfs: lutimesSync(path: cstring; atime: cstring; mtime: cstring)	
+lutimesSync	nodejs/jsfs.html#lutimesSync,cstring,cint,cint	jsfs: lutimesSync(path: cstring; atime: cint; mtime: cint)	
+link	nodejs/jsfs.html#link,cstring,cstring,T	jsfs: link[T](existingPath: cstring; newPath: cstring; callback: T)	
+linkSync	nodejs/jsfs.html#linkSync,cstring,cstring	jsfs: linkSync(existingPath: cstring; newPath: cstring)	
+lstat	nodejs/jsfs.html#lstat,cstring,T	jsfs: lstat[T](path: cstring; callback: T)	
+mkdir	nodejs/jsfs.html#mkdir,cstring,T	jsfs: mkdir[T](path: cstring; callback: T)	
+mkdirSync	nodejs/jsfs.html#mkdirSync,cstring	jsfs: mkdirSync(path: cstring; recursive = false)	
+mkdtemp	nodejs/jsfs.html#mkdtemp,cstring,T	jsfs: mkdtemp[T](prefix: cstring; callback: T)	
+mkdtempSync	nodejs/jsfs.html#mkdtempSync,cstring	jsfs: mkdtempSync(prefix: cstring): cstring	
+open	nodejs/jsfs.html#open,cstring,cstring,cstring,T	jsfs: open[T](path: cstring; flags: cstring; mode: cstring; callback: T)	
+open	nodejs/jsfs.html#open,cstring,cint,cint,T	jsfs: open[T](path: cstring; flags: cint; mode: cint; callback: T)	
+open	nodejs/jsfs.html#open,cstring,T	jsfs: open[T](path: cstring; callback: T)	
+opendir	nodejs/jsfs.html#opendir,cstring,T	jsfs: opendir[T](path: cstring; callback: T)	
+openSync	nodejs/jsfs.html#openSync,cstring,cint,cint	jsfs: openSync(path: cstring; flags: cint; mode: cint): cint	
+openSync	nodejs/jsfs.html#openSync,cstring,cstring,cstring	jsfs: openSync(path: cstring; flags: cstring; mode: cstring): cint	
+read	nodejs/jsfs.html#read,cint,T	jsfs: read[T](fd: cint; callback: T)	
+readdir	nodejs/jsfs.html#readdir,cstring,T	jsfs: readdir[T](path: cstring; callback: T)	
+readFile	nodejs/jsfs.html#readFile,cstring,T	jsfs: readFile[T](path: cstring; callback: T)	
+readFileSync	nodejs/jsfs.html#readFileSync,cstring	jsfs: readFileSync(path: cstring): cstring	
+readlink	nodejs/jsfs.html#readlink,cstring,T	jsfs: readlink[T](path: cstring; callback: T)	
+readlink	nodejs/jsfs.html#readlink,cstring	jsfs: readlink(path: cstring): cstring	
+readlinkSync	nodejs/jsfs.html#readlinkSync,cstring	jsfs: readlinkSync(path: cstring): cstring	
+realpath	nodejs/jsfs.html#realpath,cstring,T	jsfs: realpath[T](path: cstring; callback: T)	
+realpathNative	nodejs/jsfs.html#realpathNative,cstring,T	jsfs: realpathNative[T](path: cstring; callback: T)	
+realpathSync	nodejs/jsfs.html#realpathSync,cstring	jsfs: realpathSync(path: cstring): cstring	
+realpathSyncNative	nodejs/jsfs.html#realpathSyncNative,cstring	jsfs: realpathSyncNative(path: cstring): cstring	
+rename	nodejs/jsfs.html#rename,cstring,cstring,T	jsfs: rename[T](oldPath, newPath: cstring; callback: T)	
+renameSync	nodejs/jsfs.html#renameSync,cstring,cstring	jsfs: renameSync(oldPath, newPath: cstring)	
+rmdir	nodejs/jsfs.html#rmdir,cstring,T	jsfs: rmdir[T](path: cstring; callback: T)	
+rmdir	nodejs/jsfs.html#rmdir,cstring	jsfs: rmdir(path: cstring)	
+rm	nodejs/jsfs.html#rm,cstring,T	jsfs: rm[T](path: cstring; callback: T)	
+rmSync	nodejs/jsfs.html#rmSync,cstring	jsfs: rmSync(path: cstring)	
+stat	nodejs/jsfs.html#stat,cstring,T	jsfs: stat[T](path: cstring; callback: T)	
+symlink	nodejs/jsfs.html#symlink,cstring,cstring,cstring,T	jsfs: symlink[T](target, path, tipe: cstring; callback: T)	
+symlink	nodejs/jsfs.html#symlink,cstring,cstring,T	jsfs: symlink[T](target, path: cstring; callback: T)	
+symlinkSync	nodejs/jsfs.html#symlinkSync,cstring,cstring,cstring	jsfs: symlinkSync(target, path, tipe: cstring)	
+symlinkSync	nodejs/jsfs.html#symlinkSync,cstring,cstring	jsfs: symlinkSync(target, path: cstring)	
+truncate	nodejs/jsfs.html#truncate,cstring,cint,T	jsfs: truncate[T](path: cstring; len: cint; callback: T)	
+truncate	nodejs/jsfs.html#truncate,cstring,T	jsfs: truncate[T](path: cstring; callback: T)	
+truncateSync	nodejs/jsfs.html#truncateSync,cstring,cint	jsfs: truncateSync(path: cstring; len: cint)	
+unlink	nodejs/jsfs.html#unlink,cstring,T	jsfs: unlink[T](path: cstring; callback: T)	
+unlinkSync	nodejs/jsfs.html#unlinkSync,cstring	jsfs: unlinkSync(path: cstring)	
+utimes	nodejs/jsfs.html#utimes,cstring,cstring,cstring,T	jsfs: utimes[T](path: cstring; atime: cstring; mtime: cstring; callback: T)	
+utimes	nodejs/jsfs.html#utimes,cstring,cint,cint,T	jsfs: utimes[T](path: cstring; atime: cint; mtime: cint; callback: T)	
+utimesSync	nodejs/jsfs.html#utimesSync,cstring,cint,cint	jsfs: utimesSync(path: cstring; atime: cint; mtime: cint)	
+utimesSync	nodejs/jsfs.html#utimesSync,cstring,cstring,cstring	jsfs: utimesSync(path: cstring; atime: cstring; mtime: cstring)	
+watch	nodejs/jsfs.html#watch,cstring,T	jsfs: watch[T](filename: cstring; listener: T)	
+unwatchFile	nodejs/jsfs.html#unwatchFile,cstring,T	jsfs: unwatchFile[T](filename: cstring; listener: T)	
+unwatchFile	nodejs/jsfs.html#unwatchFile,cstring	jsfs: unwatchFile(filename: cstring)	
+unwatchFile	nodejs/jsfs.html#unwatchFile,cint,cstring,cint,T	jsfs: unwatchFile[T](fd: cint; stryng: cstring; position: cint; callback: T)	
+unwatchFile	nodejs/jsfs.html#unwatchFile,cint,cstring,T	jsfs: unwatchFile[T](fd: cint; stryng: cstring; callback: T)	
+writeFile	nodejs/jsfs.html#writeFile,cint,cstring,T	jsfs: writeFile[T](fd: cint; data: cstring; callback: T)	
+writeFile	nodejs/jsfs.html#writeFile,cstring,cstring,T	jsfs: writeFile[T](fd: cstring; data: cstring; callback: T)	
+writeFileSync	nodejs/jsfs.html#writeFileSync,cstring,cstring	jsfs: writeFileSync(file: cstring; data: cstring)	
+writeFileSync	nodejs/jsfs.html#writeFileSync,cint,cstring	jsfs: writeFileSync(file: cint; data: cstring)	
+writeSync	nodejs/jsfs.html#writeSync,cint,cstring,cint,cint,cint	jsfs: writeSync(fd: cint; buffer: cstring; offset: cint; length: cint; position: cint): cint	
+writeSync	nodejs/jsfs.html#writeSync,cint,cstring,cint,cint	jsfs: writeSync(fd: cint; buffer: cstring; offset: cint; length: cint): cint	
+writeSync	nodejs/jsfs.html#writeSync,cint,cstring,cint	jsfs: writeSync(fd: cint; buffer: cstring; offset: cint): cint	
+writeSync	nodejs/jsfs.html#writeSync,cint,cstring	jsfs: writeSync(fd: cint; buffer: cstring): cint	
+touchFileSync	nodejs/jsfs.html#touchFileSync,cstring	jsfs: touchFileSync(filename: cstring)	

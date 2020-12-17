@@ -1,0 +1,35 @@
+importProcess	nodejs/jsprocess.html#importProcess	jsprocess: importProcess()	
+requireProcess	nodejs/jsprocess.html#requireProcess	jsprocess: requireProcess()	
+abort	nodejs/jsprocess.html#abort	jsprocess: abort()	
+chdir	nodejs/jsprocess.html#chdir,cstring	jsprocess: chdir(directory: cstring)	
+cwd	nodejs/jsprocess.html#cwd	jsprocess: cwd(): cstring	
+disconnect	nodejs/jsprocess.html#disconnect	jsprocess: disconnect()	
+emitWarning	nodejs/jsprocess.html#emitWarning,cstring	jsprocess: emitWarning(warning: cstring)	
+emitWarning	nodejs/jsprocess.html#emitWarning,cstring,cstring,cstring	jsprocess: emitWarning(warning: cstring; tipe: cstring; code: cstring)	
+emitWarning	nodejs/jsprocess.html#emitWarning,cstring,cstring	jsprocess: emitWarning(warning: cstring; tipe: cstring)	
+exit	nodejs/jsprocess.html#exit	jsprocess: exit(code = 0.cint)	
+getegid	nodejs/jsprocess.html#getegid	jsprocess: getegid(): cint	
+getgroups	nodejs/jsprocess.html#getgroups	jsprocess: getgroups(): seq[cint]	
+getuid	nodejs/jsprocess.html#getuid	jsprocess: getuid(): cint	
+hasUncaughtExceptionCaptureCallback	nodejs/jsprocess.html#hasUncaughtExceptionCaptureCallback	jsprocess: hasUncaughtExceptionCaptureCallback(): bool	
+hrtime	nodejs/jsprocess.html#hrtime,openArray[cint]	jsprocess: hrtime(time: openArray[cint]): seq[cint]	
+hrtime	nodejs/jsprocess.html#hrtime	jsprocess: hrtime(): seq[cint]	
+hrtimeBigint	nodejs/jsprocess.html#hrtimeBigint	jsprocess: hrtimeBigint(): cint	
+initgroups	nodejs/jsprocess.html#initgroups,cstring,cstring	jsprocess: initgroups(user: cstring; extraGroup: cstring)	
+initgroups	nodejs/jsprocess.html#initgroups,cint,cint	jsprocess: initgroups(user: cint; extraGroup: cint)	
+kill	nodejs/jsprocess.html#kill,cint,cint	jsprocess: kill(pid: cint; signal: cint)	
+kill	nodejs/jsprocess.html#kill,cint,cstring	jsprocess: kill(pid: cint; signal: cstring)	
+reportWriteReport	nodejs/jsprocess.html#reportWriteReport,cstring	jsprocess: reportWriteReport(filename: cstring): cstring	
+reportWriteReport	nodejs/jsprocess.html#reportWriteReport	jsprocess: reportWriteReport(): cstring	
+setegid	nodejs/jsprocess.html#setegid,cstring	jsprocess: setegid(id: cstring)	
+setegid	nodejs/jsprocess.html#setegid,cint	jsprocess: setegid(id: cint)	
+seteuid	nodejs/jsprocess.html#seteuid,cstring	jsprocess: seteuid(id: cstring)	
+seteuid	nodejs/jsprocess.html#seteuid,cint	jsprocess: seteuid(id: cint)	
+setgid	nodejs/jsprocess.html#setgid,cint	jsprocess: setgid(id: cint)	
+setgid	nodejs/jsprocess.html#setgid,cstring	jsprocess: setgid(id: cstring)	
+setgroups	nodejs/jsprocess.html#setgroups,openArray[cint]	jsprocess: setgroups(groups: openArray[cint])	
+setuid	nodejs/jsprocess.html#setuid,cint	jsprocess: setuid(id: cint)	
+setuid	nodejs/jsprocess.html#setuid,cstring	jsprocess: setuid(id: cstring)	
+umask	nodejs/jsprocess.html#umask,cstring	jsprocess: umask(mask: cstring): any	
+umask	nodejs/jsprocess.html#umask,cint	jsprocess: umask(mask: cint): any	
+uptimeProcess	nodejs/jsprocess.html#uptimeProcess	jsprocess: uptimeProcess(): cint	

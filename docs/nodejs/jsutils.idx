@@ -1,0 +1,60 @@
+importUtil	nodejs/jsutils.html#importUtil	jsutils: importUtil()	
+requireUtil	nodejs/jsutils.html#requireUtil	jsutils: requireUtil()	
+callbackify	nodejs/jsutils.html#callbackify,T	jsutils: callbackify[T](function: T): T	
+deprecate	nodejs/jsutils.html#deprecate,T	jsutils: deprecate[T](function: T): T	
+deprecate	nodejs/jsutils.html#deprecate,T,cstring	jsutils: deprecate[T](function: T; msg: cstring): T	
+deprecate	nodejs/jsutils.html#deprecate,T,cstring,cstring	jsutils: deprecate[T](function: T; msg, code: cstring): T	
+format	nodejs/jsutils.html#format,cstring,cstring	jsutils: format(format: cstring; args: cstring): cstring	
+getSystemErrorName	nodejs/jsutils.html#getSystemErrorName,cint	jsutils: getSystemErrorName(err: cint): cstring	
+inherits	nodejs/jsutils.html#inherits,T,T	jsutils: inherits[T](constructor, superConstructor: T)	
+inspect	nodejs/jsutils.html#inspect,any	jsutils: inspect(objec: any; showHidden = false; depth = 2.cint; colors = false)	
+isDeepStrictEqual	nodejs/jsutils.html#isDeepStrictEqual,any,any	jsutils: isDeepStrictEqual(val1, val2: any): bool	
+isAnyArrayBuffer	nodejs/jsutils.html#isAnyArrayBuffer,any	jsutils: isAnyArrayBuffer(value: any): bool	
+isArrayBufferView	nodejs/jsutils.html#isArrayBufferView,any	jsutils: isArrayBufferView(value: any): bool	
+isArgumentsObject	nodejs/jsutils.html#isArgumentsObject,any	jsutils: isArgumentsObject(value: any): bool	
+isArrayBuffer	nodejs/jsutils.html#isArrayBuffer,any	jsutils: isArrayBuffer(value: any): bool	
+isAsyncFunction	nodejs/jsutils.html#isAsyncFunction,any	jsutils: isAsyncFunction(value: any): bool	
+isBigInt64Array	nodejs/jsutils.html#isBigInt64Array,any	jsutils: isBigInt64Array(value: any): bool	
+isBigUint64Array	nodejs/jsutils.html#isBigUint64Array,any	jsutils: isBigUint64Array(value: any): bool	
+isBooleanObject	nodejs/jsutils.html#isBooleanObject,any	jsutils: isBooleanObject(value: any): bool	
+isBoxedPrimitive	nodejs/jsutils.html#isBoxedPrimitive,any	jsutils: isBoxedPrimitive(value: any): bool	
+isDataView	nodejs/jsutils.html#isDataView,any	jsutils: isDataView(value: any): bool	
+isDate	nodejs/jsutils.html#isDate,any	jsutils: isDate(value: any): bool	
+isExternal	nodejs/jsutils.html#isExternal,any	jsutils: isExternal(value: any): bool	
+isFloat32Array	nodejs/jsutils.html#isFloat32Array,any	jsutils: isFloat32Array(value: any): bool	
+isFloat64Array	nodejs/jsutils.html#isFloat64Array,any	jsutils: isFloat64Array(value: any): bool	
+isGeneratorFunction	nodejs/jsutils.html#isGeneratorFunction,any	jsutils: isGeneratorFunction(value: any): bool	
+isGeneratorObject	nodejs/jsutils.html#isGeneratorObject,any	jsutils: isGeneratorObject(value: any): bool	
+isInt8Array	nodejs/jsutils.html#isInt8Array,any	jsutils: isInt8Array(value: any): bool	
+isInt16Array	nodejs/jsutils.html#isInt16Array,any	jsutils: isInt16Array(value: any): bool	
+isInt32Array	nodejs/jsutils.html#isInt32Array,any	jsutils: isInt32Array(value: any): bool	
+isMap	nodejs/jsutils.html#isMap,any	jsutils: isMap(value: any): bool	
+isMapIterator	nodejs/jsutils.html#isMapIterator,any	jsutils: isMapIterator(value: any): bool	
+isModuleNamespaceObject	nodejs/jsutils.html#isModuleNamespaceObject,any	jsutils: isModuleNamespaceObject(value: any): bool	
+isNativeError	nodejs/jsutils.html#isNativeError,any	jsutils: isNativeError(value: any): bool	
+isNumberObject	nodejs/jsutils.html#isNumberObject,any	jsutils: isNumberObject(value: any): bool	
+isPromise	nodejs/jsutils.html#isPromise,any	jsutils: isPromise(value: any): bool	
+isProxy	nodejs/jsutils.html#isProxy,any	jsutils: isProxy(value: any): bool	
+isRegExp	nodejs/jsutils.html#isRegExp,any	jsutils: isRegExp(value: any): bool	
+isSet	nodejs/jsutils.html#isSet,any	jsutils: isSet(value: any): bool	
+isSetIterator	nodejs/jsutils.html#isSetIterator,any	jsutils: isSetIterator(value: any): bool	
+isSharedArrayBuffer	nodejs/jsutils.html#isSharedArrayBuffer,any	jsutils: isSharedArrayBuffer(value: any): bool	
+isStringObject	nodejs/jsutils.html#isStringObject,any	jsutils: isStringObject(value: any): bool	
+isSymbolObject	nodejs/jsutils.html#isSymbolObject,any	jsutils: isSymbolObject(value: any): bool	
+isTypedArray	nodejs/jsutils.html#isTypedArray,any	jsutils: isTypedArray(value: any): bool	
+isUint8Array	nodejs/jsutils.html#isUint8Array,any	jsutils: isUint8Array(value: any): bool	
+isUint8ClampedArray	nodejs/jsutils.html#isUint8ClampedArray,any	jsutils: isUint8ClampedArray(value: any): bool	
+isUint16Array	nodejs/jsutils.html#isUint16Array,any	jsutils: isUint16Array(value: any): bool	
+isUint32Array	nodejs/jsutils.html#isUint32Array,any	jsutils: isUint32Array(value: any): bool	
+isWeakMap	nodejs/jsutils.html#isWeakMap,any	jsutils: isWeakMap(value: any): bool	
+isWeakSet	nodejs/jsutils.html#isWeakSet,any	jsutils: isWeakSet(value: any): bool	
+isWebAssemblyCompiledModule	nodejs/jsutils.html#isWebAssemblyCompiledModule,any	jsutils: isWebAssemblyCompiledModule(value: any): bool	
+isArray	nodejs/jsutils.html#isArray,any	jsutils: isArray(value: any): bool	
+isBoolean	nodejs/jsutils.html#isBoolean,any	jsutils: isBoolean(value: any): bool	
+isBuffer	nodejs/jsutils.html#isBuffer,any	jsutils: isBuffer(value: any): bool	
+isFunction	nodejs/jsutils.html#isFunction,any	jsutils: isFunction(value: any): bool	
+isNull	nodejs/jsutils.html#isNull,any	jsutils: isNull(value: any): bool	
+isNumber	nodejs/jsutils.html#isNumber,any	jsutils: isNumber(value: any): bool	
+isString	nodejs/jsutils.html#isString,any	jsutils: isString(value: any): bool	
+isSymbol	nodejs/jsutils.html#isSymbol,any	jsutils: isSymbol(value: any): bool	
+isUndefined	nodejs/jsutils.html#isUndefined,any	jsutils: isUndefined(value: any): bool	

@@ -1,0 +1,10 @@
+uuid1validate	nodejs/jsugar.html#uuid1validate,cstring	jsugar: uuid1validate(uuidv1: cstring): bool	
+uuid4validate	nodejs/jsugar.html#uuid4validate,cstring	jsugar: uuid4validate(uuidv4: cstring): bool	
+uuid5validate	nodejs/jsugar.html#uuid5validate,cstring	jsugar: uuid5validate(uuidv5: cstring): bool	
+base64encode	nodejs/jsugar.html#base64encode,cstring	jsugar: base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring	
+base64decode	nodejs/jsugar.html#base64decode,cstring	jsugar: base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring	
+deduplicate	nodejs/jsugar.html#deduplicate,openArray[T]	jsugar: deduplicate[T](arrai: openArray[T]): seq[T]	
+shuffle	nodejs/jsugar.html#shuffle,openArray[any]	jsugar: shuffle(arrai: openArray[any]): seq[any]	
+generate2FAcode	nodejs/jsugar.html#generate2FAcode	jsugar: generate2FAcode(): cint	
+nextDays	nodejs/jsugar.html#nextDays	jsugar: nextDays(days = 7.cint): seq[JsObject]	
+pastDays	nodejs/jsugar.html#pastDays	jsugar: pastDays(days = 7.cint): seq[JsObject]	

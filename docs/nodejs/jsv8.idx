@@ -1,0 +1,7 @@
+importV8	nodejs/jsv8.html#importV8	jsv8: importV8()	
+requireV8	nodejs/jsv8.html#requireV8	jsv8: requireV8()	
+cachedDataVersionTag	nodejs/jsv8.html#cachedDataVersionTag	jsv8: cachedDataVersionTag(): cint	
+setFlagsFromString	nodejs/jsv8.html#setFlagsFromString,cstring	jsv8: setFlagsFromString(flags: cstring)	
+takeCoverage	nodejs/jsv8.html#takeCoverage	jsv8: takeCoverage()	
+stopCoverage	nodejs/jsv8.html#stopCoverage	jsv8: stopCoverage()	
+writeHeapSnapshot	nodejs/jsv8.html#writeHeapSnapshot,cstring	jsv8: writeHeapSnapshot(filename: cstring): cstring	
