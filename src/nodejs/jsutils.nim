@@ -187,7 +187,7 @@ runnableExamples:
   inspect("nim".cstring)
   proc foo() = echo 42
   discard callbackify(foo)
-  deprecate(foo)
+  discard deprecate(foo)
   doAssert isDeepStrictEqual(42.cint, 42.cint)
   doAssert not isAnyArrayBuffer(false)
   doAssert not isArrayBufferView(false)
