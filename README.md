@@ -18,20 +18,20 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 # Modules supported
 
-- :heavy_check_mark: `assert` https://nodejs.org/api/assert.html
-- :heavy_check_mark: `async_hooks` https://nodejs.org/api/async_hooks.html
-- :heavy_check_mark: `process` https://nodejs.org/api/process.html
-- :heavy_check_mark: `dns` https://nodejs.org/api/dns.html
-- :heavy_check_mark: `fs` https://nodejs.org/api/fs.html
-- :heavy_check_mark: `inspector` https://nodejs.org/api/inspector.html
-- :heavy_check_mark: `os` https://nodejs.org/api/os.html
-- :heavy_check_mark: `path` https://nodejs.org/api/path.html
-- :heavy_check_mark: `perf_hooks` https://nodejs.org/api/perf_hooks.html
-- :heavy_check_mark: `punycode` https://nodejs.org/api/punycode.html
-- :heavy_check_mark: `querystring` https://nodejs.org/api/querystring.html
-- :heavy_check_mark: `util` https://nodejs.org/api/util.html
-- :heavy_check_mark: `v8` https://nodejs.org/api/v8.html
-- :heavy_check_mark: `zlib` https://nodejs.org/api/zlib.html
+- :heavy_check_mark: [assert](https://nodejs.org/api/assert.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsassert.html
+- :heavy_check_mark: [async_hooks](https://nodejs.org/api/async_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchooks.html
+- :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right:
+- :heavy_check_mark: [dns](https://nodejs.org/api/dns.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdns.html
+- :heavy_check_mark: [fs](https://nodejs.org/api/fs.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfs.html
+- :heavy_check_mark: [inspector](https://nodejs.org/api/inspector.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsinspector.html
+- :heavy_check_mark: [os](https://nodejs.org/api/os.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsos.html
+- :heavy_check_mark: [path](https://nodejs.org/api/path.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspath.html
+- :heavy_check_mark: [perf_hooks](https://nodejs.org/api/perf_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsperfhooks.html
+- :heavy_check_mark: [punycode](https://nodejs.org/api/punycode.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspunycode.html
+- :heavy_check_mark: [querystring](https://nodejs.org/api/querystring.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsquerystring.html
+- :heavy_check_mark: [util](https://nodejs.org/api/util.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsutils.html
+- :heavy_check_mark: [v8](https://nodejs.org/api/v8.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsv8.html
+- :heavy_check_mark: [zlib](https://nodejs.org/api/zlib.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jszlib.html
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+
 - :heavy_check_mark: `require()` Dynamic,  sync,   non-lexical, run-time errors, CommonJS
 - :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
