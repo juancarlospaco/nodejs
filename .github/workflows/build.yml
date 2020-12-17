@@ -26,8 +26,8 @@ jobs:
         no-color: true  # --noColor
 
     - uses: juancarlospaco/nimpretty-action@main
-      with:
-        folders: "src"
+      # with:
+      #   folders: "src"
 
     - name: Generate Documentation (Linux)
       if: runner.os == 'Linux'
