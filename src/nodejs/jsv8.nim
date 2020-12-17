@@ -24,6 +24,6 @@ func writeHeapSnapshot*(filename: cstring): cstring {.importjs: "v8.$1(#)".}
 runnableExamples:
   requireV8()
   doAssert cachedDataVersionTag() is cint
-  takeCoverage()
-  stopCoverage()
+  # takeCoverage()
+  # stopCoverage()
   echo writeHeapSnapshot("file.txt".cstring)
