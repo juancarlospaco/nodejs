@@ -72,10 +72,10 @@ This module generated JavaScript:
 console.log(Buffer.from("example", "utf-8").toString("base64"));
 ```
 
-Standard Library generated JavaScript:
+Standard Library:
 
 ```nim
-import jsconsole, base64  #
+import jsconsole, base64  # Standard Library
 console.log base64encode("example")
 ```
 
@@ -268,7 +268,7 @@ This module generated JavaScript:
 console.log([...new Set([9, 2, 3, 9, 4, 5, 6, 9])]);
 ```
 
-Standard Library generated JavaScript:
+Standard Library:
 
 ```nim
 import jsconsole, sequtils # Standard Library
