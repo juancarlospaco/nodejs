@@ -32,7 +32,8 @@ jobs:
     - name: Generate Documentation (Linux)
       if: runner.os == 'Linux'
       run: |
-        nim doc -b:js -d:nodejs --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
+        nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
+        rm --verbose docs/nodejs/*.idx
         mv --verbose docs/nodejs.html docs/index.html
 
     - name: Commit Docs
