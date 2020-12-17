@@ -5,8 +5,8 @@ func importUtil*() {.importjs: "import * as util from 'util'@".}
 func requireUtil*() {.importjs: "const util = require('util')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-# proc callbackify*[T: proc](original: T ): any {.importjs: "util.$1(#)".}
-#  https://nodejs.org/api/util.html#util_util_callbackify_original
+# proc callbackify*(original: proc {.closure.} ): any {.importjs: "util.$1(#)".}
+#  # https://nodejs.org/api/util.html#util_util_callbackify_original
 
 # func deprecate*(fn: proc; msg: cstring; code = "".cstring): any {.importjs: "util.$1(#, #, #)".}
 #  https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code

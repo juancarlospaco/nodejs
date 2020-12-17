@@ -19,29 +19,29 @@ func doesNotMatch*(stryng: cstring; regexp: RegExp; message: cstring) {.importjs
 func doesNotMatch*(stryng: cstring; regexp: RegExp) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message
 
-func doesNotReject*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
+# func doesNotReject*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
 
-func doesNotReject*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
+# func doesNotReject*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
 
-func doesNotReject*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
+# func doesNotReject*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
 
-func doesNotReject*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
+# func doesNotReject*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message
 
-func doesNotThrow*(function: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
+# func doesNotThrow*(function: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
 
-func doesNotThrow*(function: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
+# func doesNotThrow*(function: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
 
-func doesNotThrow*(function: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
+# func doesNotThrow*(function: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
 
-func doesNotThrow*(function: proc; error: proc) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
+# func doesNotThrow*(function: proc; error: proc) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
 
 func strictEqual*(actual, expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message
@@ -76,26 +76,26 @@ func ok*(value: any; message: cstring) {.importjs: "assert.$1(#, #)".}
 func ok*(value: any) {.importjs: "assert.$1(#)".}
   ## https://nodejs.org/api/assert.html#assert_assert_ok_value_message
 
-func rejects*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
+# func rejects*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
 
-func rejects*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
+# func rejects*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
 
-func rejects*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
+# func rejects*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
 
-func rejects*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
+# func rejects*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message
 
-func throws*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+# func throws*(asyncFunction: proc; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
 
-func throws*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+# func throws*(asyncFunction: proc; error: RegExp) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
 
-func throws*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+# func throws*(asyncFunction: proc; error: proc; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
 
-func throws*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
-  ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+# func throws*(asyncFunction: proc; error: proc) {.importjs: "assert.$1(#, #)".}
+#   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
