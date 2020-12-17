@@ -504,6 +504,7 @@ console.log(deduplicate_369098757([9, 2, 3, 9, 4, 5, 6, 9], false));
 </details>
 
 See also:
+- https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers#table-of-contents
 - https://github.com/nim-lang/Nim/issues/7505#issue-311496454
 - https://github.com/nim-lang/Nim/issues/3124#issue-95352255
 
