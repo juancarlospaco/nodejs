@@ -5,11 +5,11 @@ func importUtil*() {.importjs: "import * as util from 'util'@".}
 func requireUtil*() {.importjs: "const util = require('util')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-# proc callbackify*(original: proc {.closure.} ): any {.importjs: "util.$1(#)".}
-#  # https://nodejs.org/api/util.html#util_util_callbackify_original
+proc callbackify*[T](function: T): T {.importjs: "util.$1(#)".}
+  ## https://nodejs.org/api/util.html#util_util_callbackify_original
 
-# func deprecate*(fn: proc; msg: cstring; code = "".cstring): any {.importjs: "util.$1(#, #, #)".}
-#  https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
+func deprecate*[T](function: T; msg: cstring; code = "".cstring): T {.importjs: "util.$1(#, #, #)".}
+  ## https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code
 
 func format*(format: cstring; args: cstring): cstring {.importjs: "util.$1(#, @)", varargs.}
   ## https://nodejs.org/api/util.html#util_util_format_format_args
@@ -17,8 +17,8 @@ func format*(format: cstring; args: cstring): cstring {.importjs: "util.$1(#, @)
 func getSystemErrorName*(err: cint): cstring {.importjs: "util.$1(#)".}
   ## https://nodejs.org/api/util.html#util_util_getsystemerrorname_err
 
-# func inherits*(constructor, superConstructor: proc) {.importjs: "util.$1(#, #)".}
-#  ## https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor
+func inherits*[T](constructor, superConstructor: T) {.importjs: "util.$1(#, #)".}
+  ## https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor
 
 func inspect*(objec: any; showHidden = false; depth = 2.cint; colors = false) {.importjs: "util.$1(#, #, #, #)".}
   ## https://nodejs.org/api/util.html#util_util_inspect_object_showhidden_depth_colors
@@ -229,3 +229,6 @@ runnableExamples:
   doAssert isString("string".cstring)
   doAssert not isSymbol(false)
   doAssert not isUndefined(false)
+  func foo() = echo 42
+  callbackify(foo)
+  deprecate(foo)

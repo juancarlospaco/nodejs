@@ -1,3 +1,5 @@
+import jsffi
+export jsffi
 
 func uuid1validate*(uuidv1: cstring): bool {.importjs: """
   (() => {
@@ -35,11 +37,11 @@ func shuffle*(arrai: openArray[any]): seq[any] {.importjs: "#.sort(() => { retur
 func generate2FAcode*(): cint {.importjs: "parseInt(Math.floor(Math.random() * 1000000).toString().padStart(6, '0'))".}
   ## Convenience func to generate a valid 2 Factor Authentication code integer.
 
-# func nextDays*(days = 7.cint): any {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() + 86400000 * days))".}
-#   ## Convenience func to create an seq of the next days, inclusive.
+func nextDays*(days = 7.cint): seq[JSObject] {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() + 86400000 * days))".}
+  ## Convenience func to create an seq of the next days, inclusive.
 
-# func pastDays*(days = 7.cint): any {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() - 86400000 * days))".}
-#   ## Convenience func to create an seq of the past days, inclusive.
+func pastDays*(days = 7.cint): seq[JSObject] {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() - 86400000 * days))".}
+  ## Convenience func to create an seq of the past days, inclusive.
 
 
 runnableExamples:
@@ -53,4 +55,5 @@ runnableExamples:
   doAssert not uuid5validate("".cstring)
   doAssert uuid1validate("e64cb2a6-3ff6-11eb-b378-0242ac130002".cstring)
   doAssert uuid4validate("854fc25b-02f3-45cc-b521-516991b9bb99".cstring)
-
+  doAssert nextDays() is seq[JSObject]
+  doAssert pastDays() is seq[JSObject]

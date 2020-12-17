@@ -28,7 +28,7 @@ func join*(paths: cstring): cstring {.importjs: "path.$1(@)", varargs.}
 func normalize*(path: cstring): cstring {.importjs: "path.$1(#)".}
   ## https://nodejs.org/api/path.html#path_path_normalize_path
 
-func relative*(to, frm: cstring): cstring {.importjs: "path.$1(#, #)".}
+func relative*(to, froom: cstring): cstring {.importjs: "path.$1(#, #)".}
   ## https://nodejs.org/api/path.html#path_path_relative_from_to
 
 func resolve*(paths: cstring): cstring {.importjs: "path.$1(@)", varargs.}
