@@ -180,7 +180,7 @@ runnableExamples:
   doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
   inspect("nim".cstring)
   proc foo() = echo 42
-  callbackify(foo)
+  discard callbackify(foo)
   deprecate(foo)
   doAssert isDeepStrictEqual(42.cint, 42.cint)
   doAssert not isAnyArrayBuffer(false)
