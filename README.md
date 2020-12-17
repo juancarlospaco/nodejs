@@ -9,6 +9,8 @@
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
 ![](https://github.com/juancarlospaco/nodejs/workflows/Build/badge.svg?branch=main)
 
+![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)
+
 Code [NodeJS](https://nodejs.org) using [Nim](http://nim-lang.org),
 test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
 use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
