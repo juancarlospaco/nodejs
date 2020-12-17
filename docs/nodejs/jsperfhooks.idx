@@ -1,9 +1,0 @@
-importPerfhooks	nodejs/jsperfhooks.html#importPerfhooks	jsperfhooks: importPerfhooks()	
-requirePerfhooks	nodejs/jsperfhooks.html#requirePerfhooks	jsperfhooks: requirePerfhooks()	
-clearMarks	nodejs/jsperfhooks.html#clearMarks	jsperfhooks: clearMarks()	
-clearMarks	nodejs/jsperfhooks.html#clearMarks,cstring	jsperfhooks: clearMarks(name: cstring)	
-mark	nodejs/jsperfhooks.html#mark	jsperfhooks: mark()	
-mark	nodejs/jsperfhooks.html#mark,cstring	jsperfhooks: mark(name: cstring)	
-measure	nodejs/jsperfhooks.html#measure,cstring	jsperfhooks: measure(name: cstring)	
-measure	nodejs/jsperfhooks.html#measure,cstring,cstring,cstring	jsperfhooks: measure(name, startMark, endMark: cstring)	
-jsnow	nodejs/jsperfhooks.html#jsnow	jsperfhooks: jsnow(): cint	

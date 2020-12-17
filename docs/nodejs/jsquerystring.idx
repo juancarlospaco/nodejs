@@ -1,4 +1,0 @@
-importQuerystring	nodejs/jsquerystring.html#importQuerystring	jsquerystring: importQuerystring()	
-requireQuerystring	nodejs/jsquerystring.html#requireQuerystring	jsquerystring: requireQuerystring()	
-escape	nodejs/jsquerystring.html#escape,cstring	jsquerystring: escape(stringy: cstring): cstring	
-unescape	nodejs/jsquerystring.html#unescape,cstring	jsquerystring: unescape(stringy: cstring): cstring	
