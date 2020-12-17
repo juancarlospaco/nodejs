@@ -55,7 +55,7 @@ writeFileSync(r"file.txt", r"Hello from NodeJS") # Use NodeJS API
 
 # Design
 
-- It does NOT use anything from Nim standard library, very future-proof,
+- It does not use anything from Nim standard library, very future-proof,
   just imports some types to be compatible with it, like `RegExp`, etc.
 - We do not deprecate stuff, even if NodeJS deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/demoved before year 2020 will not be supported.
