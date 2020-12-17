@@ -7,6 +7,7 @@
 ![](https://img.shields.io/github/issues-raw/juancarlospaco/nodejs?style=for-the-badge "Bugs")
 ![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/nodejs?style=for-the-badge "PRs")
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
+![](https://github.com/juancarlospaco/nodejs/workflows/Build/badge.svg?branch=main)
 
 Code [NodeJS](https://nodejs.org) using [Nim](http://nim-lang.org),
 test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
