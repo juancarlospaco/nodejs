@@ -105,7 +105,7 @@ func uptimeProcess*(): cint {.importjs: "process.uptime()".}
   ## https://nodejs.org/api/process.html#process_process_uptime
 
 
-runnableExamples:
+runnableExamples: # These are computer specific can not assert them much.
   requireProcess()
   doAssert not hasUncaughtExceptionCaptureCallback()
   echo cwd()

@@ -179,6 +179,9 @@ runnableExamples:
   doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
   doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
   inspect("nim".cstring)
+  func foo() = echo 42
+  callbackify(foo)
+  deprecate(foo)
   doAssert isDeepStrictEqual(42.cint, 42.cint)
   doAssert not isAnyArrayBuffer(false)
   doAssert not isArrayBufferView(false)
@@ -229,6 +232,3 @@ runnableExamples:
   doAssert isString("string".cstring)
   doAssert not isSymbol(false)
   doAssert not isUndefined(false)
-  func foo() = echo 42
-  callbackify(foo)
-  deprecate(foo)

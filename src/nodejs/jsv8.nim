@@ -26,4 +26,4 @@ runnableExamples:
   doAssert cachedDataVersionTag() is cint
   takeCoverage()
   stopCoverage()
-  echo writeHeapSnapshot(r"file.txt")
+  echo writeHeapSnapshot("file.txt".cstring)
