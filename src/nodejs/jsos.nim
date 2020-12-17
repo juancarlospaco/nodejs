@@ -126,7 +126,6 @@ let
   EIO* {.importjs: "os.constants.errno.EIO".}: cint
   EISCONN* {.importjs: "os.constants.errno.EISCONN".}: cint
   EISDIR* {.importjs: "os.constants.errno.EISDIR".}: cint
-  EISDIR* {.importjs: "os.constants.errno.EISDIR".}: cint
   ELOOP* {.importjs: "os.constants.errno.ELOOP".}: cint
   EMFILE* {.importjs: "os.constants.errno.EMFILE".}: cint
   EMLINK* {.importjs: "os.constants.errno.EMLINK".}: cint
@@ -238,3 +237,20 @@ func uptimeOs*(): cint {.importjs: "os.uptime()".}
 
 func version*(): cstring {.importjs: "os.$1()".}
   ## https://nodejs.org/api/os.html#os_os_version
+
+
+runnableExamples:  # These are computer specific can not assert them much.
+  requireOs()
+  echo arch()
+  echo endianness()
+  echo freemem()
+  echo getPriority(pid = 0.cint)
+  echo homedir()
+  echo $loadavg()
+  echo platform()
+  echo release()
+  echo tmpdir()
+  echo totalmem()
+  echo ostype()
+  echo uptimeOs()
+  echo version()

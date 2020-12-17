@@ -20,9 +20,6 @@ func disconnect*() {.importjs: "process.$1()".}
 func emitWarning*(warning: cstring) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_emitwarning_warning_options
 
-func emitWarning*(warning: cstring; tipe: cstring; code: cstring; ctor: proc) {.importjs: "process.$1(#, #, #, #)".}
-  ## https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor
-
 func emitWarning*(warning: cstring; tipe: cstring; code: cstring) {.importjs: "process.$1(#, #, #)".}
   ## https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor
 
@@ -50,7 +47,7 @@ func hrtime*(time: openArray[cint]): seq[cint] {.importjs: "process.$1(#)".}
 func hrtime*(): seq[cint] {.importjs: "process.$1()".}
   ## https://nodejs.org/api/process.html#process_process_hrtime_time
 
-func hrtimeBigint*(): cstring {.importjs: "process.hrtime.bigint()".}
+func hrtimeBigint*(): cint {.importjs: "parseInt(process.hrtime.bigint())".}
   ## https://nodejs.org/api/process.html#process_process_hrtime_bigint
 
 func initgroups*(user: cstring; extraGroup: cstring) {.importjs: "process.$1(#, #)".}
@@ -65,23 +62,11 @@ func kill*(pid: cint; signal: cint) {.importjs: "process.$1(#, #)".}
 func kill*(pid: cint; signal: cstring) {.importjs: "process.$1(#, #)".}
   ## https://nodejs.org/api/process.html#process_process_kill_pid_signal
 
-func nextTick*(callback: proc; args: any) {.importjs: "process.$1(#, @)", varargs.}
-  ## https://nodejs.org/api/process.html#process_process_nexttick_callback_args
-
-func nextTick*(callback: proc) {.importjs: "process.$1(#)".}
-  ## https://nodejs.org/api/process.html#process_process_nexttick_callback_args
-
 func reportWriteReport*(filename: cstring): cstring {.importjs: "process.report.writeReport(#)".}
   ## https://nodejs.org/api/process.html#process_process_report_writereport_filename_err
 
 func reportWriteReport*(): cstring {.importjs: "process.report.writeReport()".}
   ## https://nodejs.org/api/process.html#process_process_report_writereport_filename_err
-
-func send*(message: cstring; callback: proc): bool {.importjs: "process.$1(#, #)".}
-  ## https://nodejs.org/api/process.html#process_process_send_message_sendhandle_options_callback
-
-func send*(message: cstring): bool {.importjs: "process.$1(#)".}
-  ## https://nodejs.org/api/process.html#process_process_send_message_sendhandle_options_callback
 
 func setegid*(id: cstring) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_setegid_id
@@ -110,9 +95,6 @@ func setuid*(id: cint) {.importjs: "process.$1(#)".}
 func setuid*(id: cstring) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_setuid_id
 
-func setUncaughtExceptionCaptureCallback*(function: proc) {.importjs: "process.$1(#)".}
-  ## https://nodejs.org/api/process.html#process_process_setuncaughtexceptioncapturecallback_fn
-
 func umask*(mask: cstring): any {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
@@ -121,3 +103,22 @@ func umask*(mask: cint): any {.importjs: "process.$1(#)".}
 
 func uptimeProcess*(): cint {.importjs: "process.uptime()".}
   ## https://nodejs.org/api/process.html#process_process_uptime
+
+
+runnableExamples:
+  requireProcess()
+  doAssert not hasUncaughtExceptionCaptureCallback()
+  echo cwd()
+  emitWarning("Information is power. But like all power, there are those who want to keep it for themselves".cstring)
+  echo getegid()
+  echo getgroups()
+  echo getuid()
+  echo hrtime()
+  echo hrtimeBigint()
+  echo reportWriteReport()
+  echo uptimeProcess()
+  chdir("/tmp".cstring)
+  if false:
+    abort()
+    disconnect()
+    exit(code = 0.cint)
