@@ -33,7 +33,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+
 - :heavy_check_mark: `require()` Dynamic,  sync,   non-lexical, run-time errors, CommonJS
 - :heavy_check_mark: Custom NodeJS-optimized syntax sugar module.
-- More support soon...
+- :trollface: More support soon...
 
 
 # Install
