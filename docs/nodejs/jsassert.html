@@ -167,6 +167,14 @@ window.addEventListener('DOMContentLoaded', main);
     title="rejects[T](asyncFunction: T; error: T)">rejects,<wbr>T,<wbr>T</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">newAssertionError
+      <li><a class="reference" href="#newAssertionError"
+    title="newAssertionError(): cstring">newAssertionError</a></li>
+  <li><a class="reference" href="#newAssertionError%2Ccstring%2Cany%2Cany%2Ccstring"
+    title="newAssertionError(message: cstring; actual: any; expected: any;
+                  operator: cstring): cstring">newAssertionError,<wbr>cstring,<wbr>any,<wbr>any,<wbr>cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">ok
       <li><a class="reference" href="#ok%2Cany%2Ccstring"
     title="ok(value: any; message: cstring)">ok,<wbr>any,<wbr>cstring</a></li>
@@ -204,6 +212,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="doesNotThrow[T](function: T; error: T)">doesNotThrow,<wbr>T,<wbr>T</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">requireAssertStrict
+      <li><a class="reference" href="#requireAssertStrict"
+    title="requireAssertStrict()">requireAssertStrict</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -231,6 +244,28 @@ Alias for <tt class="docutils literal"><span class="pre">import * as module_name
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+<a id="requireAssertStrict"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#requireAssertStrict"><span class="Identifier">requireAssertStrict</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\').strict@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+<a id="newAssertionError"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({}))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
+
+</dd>
+<a id="newAssertionError,cstring,any,any,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError%2Ccstring%2Cany%2Cany%2Ccstring"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">;</span>
+                       <span class="Identifier">operator</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
 
 </dd>
 <a id="deepStrictEqual,any,any,cstring"></a>
@@ -475,7 +510,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 20:15:20 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-18 09:05:30 UTC</small>
       </div>
     </div>
   </div>

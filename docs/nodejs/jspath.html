@@ -124,6 +124,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="join(paths: cstring): cstring">join,<wbr>cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">requirePathPosix
+      <li><a class="reference" href="#requirePathPosix"
+    title="requirePathPosix()">requirePathPosix</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">extname
       <li><a class="reference" href="#extname%2Ccstring"
     title="extname(path: cstring): cstring">extname,<wbr>cstring</a></li>
@@ -159,6 +164,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">importPath
       <li><a class="reference" href="#importPath"
     title="importPath()">importPath</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">parse
+      <li><a class="reference" href="#parse%2Ccstring"
+    title="parse(path: cstring): JsObject">parse,<wbr>cstring</a></li>
 
   </ul>
 
@@ -285,6 +295,20 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 <a class="reference external" href="https://nodejs.org/api/path.html#path_path_tonamespacedpath_path">https://nodejs.org/api/path.html#path_path_tonamespacedpath_path</a>
 
 </dd>
+<a id="parse,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#parse%2Ccstring"><span class="Identifier">parse</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/path.html#path_path_parse_path">https://nodejs.org/api/path.html#path_path_parse_path</a>
+
+</dd>
+<a id="requirePathPosix"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#requirePathPosix"><span class="Identifier">requirePathPosix</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const path = require(\'path\').posix@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/path.html#path_windows_vs_posix">https://nodejs.org/api/path.html#path_windows_vs_posix</a>
+
+</dd>
 
 </dl></div>
 
@@ -295,7 +319,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-17 20:15:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-18 09:05:32 UTC</small>
       </div>
     </div>
   </div>
