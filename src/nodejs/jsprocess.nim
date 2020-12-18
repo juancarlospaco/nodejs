@@ -1,3 +1,26 @@
+import jsffi
+export jsffi
+
+let
+  allowedNodeEnvironmentFlags* {.importjs: "Array.from(process.allowedNodeEnvironmentFlags)".}: seq[cstring]
+  argv* {.importjs: "process.argv".}: seq[cstring]
+  argv0* {.importjs: "process.argv0".}: cstring
+  debugPort* {.importjs: "process.debugPort".}: cint
+  execArgv* {.importjs: "process.execArgv".}: seq[cstring]
+  execPath* {.importjs: "process.execPath".}: cstring
+  reportCompact* {.importjs: "process.report.compact".}: bool
+  reportDirectory* {.importjs: "process.report.directory".}: cstring
+  reportFilename* {.importjs: "process.report.filename".}: cstring
+  reportOnFatalError* {.importjs: "process.report.reportOnFatalError".}: bool
+  reportOnSignal* {.importjs: "process.report.reportOnSignal".}: bool
+  reportOnUncaughtException* {.importjs: "process.report.reportOnUncaughtException".}: bool
+  platform* {.importjs: "process.platform".}: cstring
+  ppid* {.importjs: "process.ppid".}: cint
+  processVersion* {.importjs: "process.version".}: cstring
+  processVersions* {.importjs: "process.versions".}: JsObject
+  config* {.importjs: "process.config".}: JsObject
+  release* {.importjs: "process.release".}: JsObject
+  # pid* {.importjs: "process.pid".}: cint
 
 func importProcess*() {.importjs: "import * as process from 'process'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -102,6 +125,9 @@ func umask*(mask: cint): any {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
 func uptimeProcess*(): cint {.importjs: "process.uptime()".}
+  ## https://nodejs.org/api/process.html#process_process_uptime
+
+func uptimeProcess*(): JsObject {.importjs: "process.resourceUsage()".}
   ## https://nodejs.org/api/process.html#process_process_uptime
 
 

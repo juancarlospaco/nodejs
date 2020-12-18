@@ -238,6 +238,9 @@ func uptimeOs*(): cint {.importjs: "os.uptime()".}
 func version*(): cstring {.importjs: "os.$1()".}
   ## https://nodejs.org/api/os.html#os_os_version
 
+func userInfo*(): cstring {.importjs: "JSON.stringify(os.$1())".}
+  ## https://nodejs.org/api/os.html#os_os_userinfo_options
+
 
 runnableExamples:  # These are computer specific can not assert them much.
   requireOs()

@@ -7,6 +7,16 @@ func importAssert*() {.importjs: "import * as assert from 'assert'@".}
 func requireAssert*() {.importjs: "const assert = require('assert')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
+func requireAssertStrict*() {.importjs: "const assert = require('assert').strict@".}
+  ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
+
+func newAssertionError*(): cstring {.importjs: "JSON.stringify(new assert.AssertionError({}))".}
+  ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
+
+func newAssertionError*(message: cstring; actual: any; expected: any; operator: cstring): cstring {.importjs:
+  "JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))".}
+  ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
+
 func deepStrictEqual*(actual: any; expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 

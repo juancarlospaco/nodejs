@@ -1,3 +1,5 @@
+import jsffi
+export jsffi
 
 let delimiter* {.importjs: "path.delimiter".}: cstring ## https://nodejs.org/api/path.html#path_path_delimiter
 
@@ -36,6 +38,17 @@ func resolve*(paths: cstring): cstring {.importjs: "path.$1(@)", varargs.}
 
 func toNamespacedPath*(path: cstring): cstring {.importjs: "path.$1(#)".}
   ## https://nodejs.org/api/path.html#path_path_tonamespacedpath_path
+
+func parse*(path: cstring): JsObject {.importjs: "path.$1(#)".}
+  ## https://nodejs.org/api/path.html#path_path_parse_path
+
+when defined(windows):
+  func requirePathWin32*() {.importjs: "const path = require('path').win32@".}
+    ## https://nodejs.org/api/path.html#path_windows_vs_posix
+
+when defined(linux) or defined(posix):
+  func requirePathPosix*() {.importjs: "const path = require('path').posix@".}
+    ## https://nodejs.org/api/path.html#path_windows_vs_posix
 
 
 runnableExamples:
