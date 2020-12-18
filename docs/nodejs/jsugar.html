@@ -136,6 +136,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="deduplicate[T](arrai: openArray[T]): seq[T]">deduplicate,<wbr>openArray[T]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">sparkline
+      <li><a class="reference" href="#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint"
+    title="sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring">sparkline,<wbr>openArray[cint],<wbr>cint,<wbr>cint</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">base64decode
       <li><a class="reference" href="#base64decode%2Ccstring"
     title="base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring">base64decode,<wbr>cstring</a></li>
@@ -176,6 +181,8 @@ window.addEventListener('DOMContentLoaded', main);
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">uuid4validate</span><span class="Punctuation">(</span><span class="StringLit">&quot;854fc25b-02f3-45cc-b521-516991b9bb99&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nextDays</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Keyword">is</span><span class="Whitespace"> </span><span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">JsObject</span><span class="Punctuation">]</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">pastDays</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Keyword">is</span><span class="Whitespace"> </span><span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">JsObject</span><span class="Punctuation">]</span><span class="Whitespace">
+
+</span><span class="Keyword">discard</span><span class="Whitespace"> </span><span class="Identifier">sparkline</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="FloatNumber">1.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">5</span><span class="Punctuation">]</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">minimum</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="FloatNumber">0.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">maximum</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="FloatNumber">10.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace">
 
 </span><span class="Keyword">for</span><span class="Whitespace"> </span><span class="Identifier">okis</span><span class="Whitespace"> </span><span class="Keyword">in</span><span class="Whitespace"> </span><span class="Punctuation">[</span><span class="StringLit">&quot;y&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;Y&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;1&quot;</span><span class="Punctuation">,</span><span class="Whitespace">  </span><span class="StringLit">&quot;ON&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;On&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;oN&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;on&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;yes&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;YES&quot;</span><span class="Punctuation">,</span><span class="Whitespace">
     </span><span class="StringLit">&quot;YEs&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;YeS&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;Yes&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;yES&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;yEs&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;yeS&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;TRUE&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;TRUe&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;TRuE&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;TRue&quot;</span><span class="Punctuation">,</span><span class="Whitespace">
@@ -281,6 +288,14 @@ Convenience func to create an seq of the past days, inclusive.
 Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parseBool</span></tt> but optimized for NodeJS.
 
 </dd>
+<a id="sparkline,openArray[cint],cint,cint"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint"><span class="Identifier">sparkline</span></a><span class="Other">(</span><span class="Identifier">numbers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">minimum</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">maximum</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">asmnostackframe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convenience func to generate &quot;Sparklines&quot; loading spinners from numbers.
+
+</dd>
 
 </dl></div>
 
@@ -291,7 +306,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-18 10:38:09 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-18 11:07:31 UTC</small>
       </div>
     </div>
   </div>
