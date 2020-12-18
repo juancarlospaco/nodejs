@@ -127,8 +127,7 @@ func umask*(mask: cint): any {.importjs: "process.$1(#)".}
 func uptimeProcess*(): cint {.importjs: "process.uptime()".}
   ## https://nodejs.org/api/process.html#process_process_uptime
 
-func uptimeProcess*(): JsObject {.importjs: "process.resourceUsage()".}
-  ## https://nodejs.org/api/process.html#process_process_uptime
+func resourceUsage*(): JsObject {.importjs: "process.$1()".}
 
 
 runnableExamples: # These are computer specific can not assert them much.
