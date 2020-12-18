@@ -43,6 +43,17 @@ func nextDays*(days = 7.cint): seq[JsObject] {.importjs: "[...Array(#).keys()].m
 func pastDays*(days = 7.cint): seq[JsObject] {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() - 86400000 * days))".}
   ## Convenience func to create an seq of the past days, inclusive.
 
+func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
+  const value = String(`s`).trim();
+  if (/^(?:y|Y|1| ON|On|oN|on|yes|YES|YEs|YeS|Yes|yES|yEs|yeS|TRUE|TRUe|TRuE|TRue|TrUE|TrUe|TruE|True|tRUE|tRUe|tRuE|tRue|trUE|trUe|truE|true)$/i.test(value)) {
+    return true;
+  };
+  if (/^(?:n|N|0|NO|No|nO|no|OFF|OFf|OfF|Off|oFF|oFf|ofF|off|FALSE|FALSe|FALsE|FALse|FAlSE|FAlSe|FAlsE|FAlse|FaLSE|FaLSe|FaLsE|FaLse|FalSE|FalSe|FalsE|False|fALSE|fALSe|fALsE|fALse|fAlSE|fAlSe|fAlsE|fAlse|faLSE|faLSe|faLsE|faLse|falSE|falSe|falsE|false)$/i.test(value)) {
+    return false;
+  };
+  assert(false, "Cannot interpret as a bool");""".}
+  ## Convenience func mimics Nim `parseBool` but optimized for NodeJS.
+
 
 runnableExamples:
   doAssert base64encode("Como siempre: lo urgente no deja tiempo para lo importante".cstring) == "Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==".cstring
@@ -57,3 +68,16 @@ runnableExamples:
   doAssert uuid4validate("854fc25b-02f3-45cc-b521-516991b9bb99".cstring)
   doAssert nextDays() is seq[JsObject]
   doAssert pastDays() is seq[JsObject]
+
+  for okis in ["y".cstring, "Y", "1",  "ON", "On", "oN", "on", "yes", "YES",
+      "YEs", "YeS", "Yes", "yES", "yEs", "yeS", "TRUE", "TRUe", "TRuE", "TRue",
+      "TrUE", "TrUe", "TruE", "True", "tRUE", "tRUe", "tRuE", "tRue", "trUE",
+      "trUe", "truE", "true"]:
+      doAssert parseBool(okis)
+  for nope in ["n".cstring, "N", "0", "NO", "No", "nO", "no", "OFF", "OFf",
+    "OfF", "Off", "oFF", "oFf", "ofF", "off", "FALSE", "FALSe", "FALsE",
+    "FALse", "FAlSE", "FAlSe", "FAlsE", "FAlse", "FaLSE", "FaLSe", "FaLsE",
+    "FaLse", "FalSE", "FalSe", "FalsE", "False", "fALSE", "fALSe", "fALsE",
+    "fALse", "fAlSE", "fAlSe", "fAlsE", "fAlse", "faLSE", "faLSe", "faLsE",
+    "faLse", "falSE", "falSe", "falsE", "false"]:
+    doAssert not parseBool(nope)
