@@ -54,6 +54,12 @@ requireFs()  # CommonJS
 writeFileSync(r"file.txt", r"Hello from NodeJS") # Use NodeJS API
 ```
 
+```nim
+import nodejs
+iife:
+  echo "Hello Immediately Invoked Function Expressions"
+```
+
 
 # Design
 
