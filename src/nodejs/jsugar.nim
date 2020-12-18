@@ -71,6 +71,16 @@ func sparkline*(numbers: openarray[cint]; minimum: cint; maximum: cint): cstring
   }).join('');""".}
   ## Convenience func to generate "Sparklines" loading spinners from numbers.
 
+template iife*(code: untyped): untyped =
+  ## Convenience template for Anonymous Immediately Invoked Function Expressions.
+  {.emit: "(() => {".}
+  code
+  {.emit: "})();".}
+
+template c0nst*(name: untyped; value: any): untyped =
+  ## Convenience template for a JavaScript `const` (Nim `var`).
+  var name {.codegenDecl: "const $2", exportc: astToStr(name).} = value
+
 
 runnableExamples:
   doAssert base64encode("Como siempre: lo urgente no deja tiempo para lo importante".cstring) == "Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==".cstring
@@ -100,3 +110,11 @@ runnableExamples:
     "fALse", "fAlSE", "fAlSe", "fAlsE", "fAlse", "faLSE", "faLSe", "faLsE",
     "faLse", "falSE", "falSe", "falsE", "false"]:
     doAssert not parseBool(nope)
+
+  iife:
+    # (() => {
+    echo "Hello Immediately Invoked Function Expressions"
+    # })();
+
+  c0nst constant, "This is a JavaScript 'const'!.".cstring
+  # const constant = "This is a JavaScript 'const'!.";
