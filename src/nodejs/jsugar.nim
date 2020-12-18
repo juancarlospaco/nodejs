@@ -54,6 +54,23 @@ func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
   assert(false, "Cannot interpret as a bool");""".}
   ## Convenience func mimics Nim `parseBool` but optimized for NodeJS.
 
+func sparkline*(numbers: openarray[cint]; minimum: cint; maximum: cint): cstring {.asmnostackframe.} = {.emit: """
+  const ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
+  if (`minimum` === `maximum` && `maximum` !== 0) {
+    ticks = [ticks[4]];
+  };
+  return `numbers`.map(number => {
+    if (!Number.isFinite(number)) {
+      return ' ';
+    };
+    let tickIndex = Math.ceil((number / `maximum`) * ticks.length) - 1;
+    if (`maximum` === 0 || tickIndex < 0) {
+      tickIndex = 0;
+    };
+    return ticks[tickIndex];
+  }).join('');""".}
+  ## Convenience func to generate "Sparklines" loading spinners from numbers.
+
 
 runnableExamples:
   doAssert base64encode("Como siempre: lo urgente no deja tiempo para lo importante".cstring) == "Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==".cstring
@@ -68,6 +85,8 @@ runnableExamples:
   doAssert uuid4validate("854fc25b-02f3-45cc-b521-516991b9bb99".cstring)
   doAssert nextDays() is seq[JsObject]
   doAssert pastDays() is seq[JsObject]
+
+  discard sparkline([1.cint, 2, 3, 4, 5], minimum = 0.cint, maximum = 10.cint)
 
   for okis in ["y".cstring, "Y", "1",  "ON", "On", "oN", "on", "yes", "YES",
       "YEs", "YeS", "Yes", "yES", "yEs", "yeS", "TRUE", "TRUe", "TRuE", "TRue",
