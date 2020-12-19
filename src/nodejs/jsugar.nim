@@ -85,6 +85,7 @@ template c0nst*(name: untyped; value: any): untyped =
 
 
 runnableExamples:
+  import sugar  # =>
   doAssert base64encode("Como siempre: lo urgente no deja tiempo para lo importante".cstring) == "Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==".cstring
   doAssert base64decode("Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==".cstring) == "Como siempre: lo urgente no deja tiempo para lo importante".cstring
   doAssert generate2FAcode() is cint
@@ -125,3 +126,6 @@ runnableExamples:
     # const example = (argument0, argument1) => {
     echo "JavaScript Arrow Function for Nim functions"
     # }
+
+  example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim functions"
+  # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
