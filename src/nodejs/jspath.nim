@@ -27,6 +27,9 @@ func isAbsolute*(path: cstring): bool {.importjs: "path.$1(#)".}
 func join*(paths: cstring): cstring {.importjs: "path.$1(@)", varargs.}
   ## https://nodejs.org/api/path.html#path_path_join_paths
 
+func `/`*(path0: cstring; path1: cstring): cstring {.importjs: "path.join(#, #)".}
+  ## Syntax sugar for `path.join()` that mimics Nim `path0 / path1`.
+
 func normalize*(path: cstring): cstring {.importjs: "path.$1(#)".}
   ## https://nodejs.org/api/path.html#path_path_normalize_path
 
