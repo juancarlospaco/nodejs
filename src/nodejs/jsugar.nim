@@ -79,9 +79,12 @@ template iife*(code: untyped): untyped =
   code
   {.emit: "})();".}
 
-template c0nst*(name: untyped; value: any): untyped =
+template jsconst*(name: untyped; value: any): untyped =
   ## Convenience template for a JavaScript `const` (Nim `var`).
   var name {.codegenDecl: "const $2", exportc: astToStr(name).} = value
+
+func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
+  ## Convenience alias for `export { symbol, symbol, symbol };`
 
 
 runnableExamples:
@@ -119,7 +122,7 @@ runnableExamples:
     echo "Hello Immediately Invoked Function Expressions"
     # })();
 
-  c0nst constant, "This is a JavaScript 'const'!.".cstring
+  jsconst constant, "This is a JavaScript 'const'!.".cstring
   # const constant = "This is a JavaScript 'const'!.";
 
   proc example(argument0, argument1: int) {.codegenDecl: arrow.} =
@@ -129,3 +132,6 @@ runnableExamples:
 
   example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
   # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
+
+  jsexport constant, example, example2
+  # export { constant, example, example2 };
