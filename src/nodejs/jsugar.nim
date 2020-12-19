@@ -121,7 +121,7 @@ runnableExamples:
   c0nst constant, "This is a JavaScript 'const'!.".cstring
   # const constant = "This is a JavaScript 'const'!.";
 
-  proc example(argument0, argument1) {.codegenDecl: arrow.} =
+  proc example(argument0, argument1: int) {.codegenDecl: arrow.} =
     # const example = (argument0, argument1) => {
     echo "JavaScript Arrow Function for Nim functions"
     # }
