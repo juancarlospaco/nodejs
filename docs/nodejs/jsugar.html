@@ -124,6 +124,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="pastDays(days = 7.cint): seq[JsObject]">pastDays</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">jsexport
+      <li><a class="reference" href="#jsexport%2Cany"
+    title="jsexport(symbols: any)">jsexport,<wbr>any</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">shuffle
       <li><a class="reference" href="#shuffle%2CopenArray%5Bany%5D"
     title="shuffle(arrai: openArray[any]): seq[any]">shuffle,<wbr>openArray[any]</a></li>
@@ -172,8 +177,8 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#iife.t%2Cuntyped"
     title="iife(code: untyped): untyped">iife</a></li>
-  <li><a class="reference" href="#c0nst.t%2Cuntyped%2Cany"
-    title="c0nst(name: untyped; value: any): untyped">c0nst</a></li>
+  <li><a class="reference" href="#jsconst.t%2Cuntyped%2Cany"
+    title="jsconst(name: untyped; value: any): untyped">jsconst</a></li>
 
   </ul>
 </li>
@@ -221,7 +226,7 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;Hello Immediately Invoked Function Expressions&quot;</span><span class="Whitespace">
   </span><span class="Comment"># })();</span><span class="Whitespace">
 
-</span><span class="Identifier">c0nst</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;This is a JavaScript &apos;const&apos;!.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">jsconst</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;This is a JavaScript &apos;const&apos;!.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Comment"># const constant = &quot;This is a JavaScript &apos;const&apos;!.&quot;;</span><span class="Whitespace">
 
 </span><span class="Keyword">proc</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">(</span><span class="Identifier">argument0</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">argument1</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">int</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">codegenDecl</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">arrow</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace">
@@ -230,7 +235,11 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Comment"># }</span><span class="Whitespace">
 
 </span><span class="Identifier">example2</span><span class="Punctuation">(</span><span class="Identifier">arg0</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">arg1</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">int</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">codegenDecl</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">arrow</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Whitespace"> </span><span class="Operator">=&gt;</span><span class="Whitespace"> </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;JavaScript Arrow Function for Nim Arrow Functions&quot;</span><span class="Whitespace">
-</span><span class="Comment"># const example2 = (arg0, arg01) =&gt; { echo(&quot;JavaScript Arrow Function for Nim functions&quot;) };</span></pre></p>
+</span><span class="Comment"># const example2 = (arg0, arg01) =&gt; { echo(&quot;JavaScript Arrow Function for Nim functions&quot;) };</span><span class="Whitespace">
+
+</span><span class="Keyword">when</span><span class="Whitespace"> </span><span class="Identifier">off</span><span class="Punctuation">:</span><span class="Whitespace">
+  </span><span class="Identifier">jsexport</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example2</span><span class="Whitespace">
+  </span><span class="Comment"># export { constant, example, example2 };</span></pre></p>
   <div class="section" id="10">
 <h1><a class="toc-backref" href="#10">Consts</a></h1>
 <dl class="item">
@@ -343,6 +352,13 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
 Convenience func to generate &quot;Sparklines&quot; loading spinners from numbers.
 
 </dd>
+<a id="jsexport,any"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#jsexport%2Cany"><span class="Identifier">jsexport</span></a><span class="Other">(</span><span class="Identifier">symbols</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;export { @ }&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convenience alias for <tt class="docutils literal"><span class="pre">export { symbol, symbol, symbol };</span></tt>
+
+</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -355,8 +371,8 @@ Convenience func to generate &quot;Sparklines&quot; loading spinners from number
 Convenience template for Anonymous Immediately Invoked Function Expressions.
 
 </dd>
-<a id="c0nst.t,untyped,any"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#c0nst.t%2Cuntyped%2Cany"><span class="Identifier">c0nst</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<a id="jsconst.t,untyped,any"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#jsconst.t%2Cuntyped%2Cany"><span class="Identifier">jsconst</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
 Convenience template for a JavaScript <tt class="docutils literal"><span class="pre">const</span></tt> (Nim <tt class="docutils literal"><span class="pre">var</span></tt>).
@@ -372,7 +388,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 10:19:16 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 10:47:52 UTC</small>
       </div>
     </div>
   </div>
