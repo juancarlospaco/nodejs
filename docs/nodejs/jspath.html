@@ -114,6 +114,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="resolve(paths: cstring): cstring">resolve,<wbr>cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">/
+      <li><a class="reference" href="#%2F%2Ccstring%2Ccstring"
+    title="`/`(path0: cstring; path1: cstring): cstring">/,<wbr>cstring,<wbr>cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">dirname
       <li><a class="reference" href="#dirname%2Ccstring"
     title="dirname(path: cstring): cstring">dirname,<wbr>cstring</a></li>
@@ -267,6 +272,13 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 <a class="reference external" href="https://nodejs.org/api/path.html#path_path_join_paths">https://nodejs.org/api/path.html#path_path_join_paths</a>
 
 </dd>
+<a id="/,cstring,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%2F%2Ccstring%2Ccstring"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">path0</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">path1</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.join(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Syntax sugar for <tt class="docutils literal"><span class="pre">path.join()</span></tt> that mimics Nim <tt class="docutils literal"><span class="pre">path0 / path1</span></tt>.
+
+</dd>
 <a id="normalize,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -319,7 +331,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 10:47:51 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 11:14:23 UTC</small>
       </div>
     </div>
   </div>
