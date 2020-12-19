@@ -133,5 +133,6 @@ runnableExamples:
   example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
   # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
 
-  jsexport constant, example, example2
-  # export { constant, example, example2 };
+  if off:
+    jsexport constant, example, example2
+    # export { constant, example, example2 };
