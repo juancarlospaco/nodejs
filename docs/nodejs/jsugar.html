@@ -94,6 +94,14 @@ window.addEventListener('DOMContentLoaded', main);
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
+  <a class="reference reference-toplevel" href="#10" id="60">Consts</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#arrow"
+    title="arrow = &quot;const $2 = ($3) =&gt;&quot;">arrow</a></li>
+
+  </ul>
+</li>
+<li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">uuid4validate
@@ -213,8 +221,25 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Comment"># })();</span><span class="Whitespace">
 
 </span><span class="Identifier">c0nst</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;This is a JavaScript &apos;const&apos;!.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
-</span><span class="Comment"># const constant = &quot;This is a JavaScript &apos;const&apos;!.&quot;;</span></pre></p>
-  <div class="section" id="12">
+</span><span class="Comment"># const constant = &quot;This is a JavaScript &apos;const&apos;!.&quot;;</span><span class="Whitespace">
+
+</span><span class="Keyword">proc</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">(</span><span class="Identifier">argument0</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">argument1</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">int</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">codegenDecl</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">arrow</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace">
+  </span><span class="Comment"># const example = (argument0, argument1) =&gt; {</span><span class="Whitespace">
+  </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;JavaScript Arrow Function for Nim functions&quot;</span><span class="Whitespace">
+  </span><span class="Comment"># }</span></pre></p>
+  <div class="section" id="10">
+<h1><a class="toc-backref" href="#10">Consts</a></h1>
+<dl class="item">
+<a id="arrow"></a>
+<dt><pre><a href="jsugar.html#arrow"><span class="Identifier">arrow</span></a> <span class="Other">=</span> <span class="StringLit">&quot;const $2 = ($3) =&gt;&quot;</span></pre></dt>
+<dd>
+
+Arrow Function for Nim functions, use <tt class="docutils literal"><span class="pre">{.codegenDecl: arrow.}</span></tt>.
+
+</dd>
+
+</dl></div>
+<div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="uuid1validate,cstring"></a>
@@ -343,7 +368,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-18 14:25:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 10:09:59 UTC</small>
       </div>
     </div>
   </div>
