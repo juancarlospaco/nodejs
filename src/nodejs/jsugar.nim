@@ -1,6 +1,8 @@
 import jsffi
 export jsffi
 
+const arrow* = "const $2 = ($3) =>" ## Arrow Function for Nim functions, use `{.codegenDecl: arrow.}`.
+
 func uuid1validate*(uuidv1: cstring): bool {.importjs: """
   (() => {
     const UUID_RE1 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$", "i");
@@ -118,3 +120,8 @@ runnableExamples:
 
   c0nst constant, "This is a JavaScript 'const'!.".cstring
   # const constant = "This is a JavaScript 'const'!.";
+
+  proc example(argument0, argument1) {.codegenDecl: arrow.} =
+    # const example = (argument0, argument1) => {
+    echo "JavaScript Arrow Function for Nim functions"
+    # }
