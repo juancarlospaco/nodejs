@@ -127,5 +127,5 @@ runnableExamples:
     echo "JavaScript Arrow Function for Nim functions"
     # }
 
-  example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim functions"
+  example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
   # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
