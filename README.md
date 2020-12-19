@@ -67,6 +67,7 @@ iife:
   just imports some types to be compatible with it, like `RegExp`, etc.
 - We do not deprecate stuff, even if NodeJS deprecate/remove it, it will keep working for Nim.
 - Stuff deprecated/demoved before year 2020 will not be supported.
+- Package version == NodeJS version.
 
 
 # Efficiency
