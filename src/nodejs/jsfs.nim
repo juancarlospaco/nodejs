@@ -376,13 +376,10 @@ func touchFileSync*(filename: cstring) {.importjs: """
   ## Convenience func to touch a file.
 
 template withDir*(dir: cstring, body: untyped): untyped =
-  ## Same as Fusion `withDir` but for JavaScript.
-  {.emit: "{const current_directory = __dirname;".}
-  try:
-    {.emit: "require('process').chdir('" & $dir & "');".}
-    body
-  finally:
-    {.emit: "require('process').chdir(current_directory)}".}
+  ## Same as Fusion `withDir` but for NodeJS.
+  {.emit: "{\nconst current_directory = __dirname;\ntry {\n  require('process').chdir('" & $dir & "');".}
+  body
+  {.emit: "} finally {\n  require('process').chdir(current_directory)\n}\n}".}
 
 
 runnableExamples:
