@@ -101,14 +101,6 @@ func nth*(someOrdinalInteger: cint): cstring {.importjs: """
     return n + suffix;
   })()""".}
   ## Convenience func to get string ordinal suffixes from integers (`"1st"`, `"2nd"`, `"3rd"`, etc).
-  runnableExamples:
-    doAssert nth(-9.cint) == "-9th".cstring
-    doAssert nth(0.cint) == "0th".cstring
-    doAssert nth(9.cint) == "9th".cstring
-    doAssert nth(1.cint) == "1st".cstring
-    doAssert nth(42.cint) == "42nd".cstring
-    doAssert nth(420.cint) == "420th".cstring
-    doAssert nth(666.cint) == "666th".cstring
 
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
@@ -162,6 +154,14 @@ runnableExamples:
 
   example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
   # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
+
+  doAssert nth(-9.cint) == "-9th".cstring
+  doAssert nth(0.cint) == "0th".cstring
+  doAssert nth(9.cint) == "9th".cstring
+  doAssert nth(1.cint) == "1st".cstring
+  doAssert nth(42.cint) == "42nd".cstring
+  doAssert nth(420.cint) == "420th".cstring
+  doAssert nth(666.cint) == "666th".cstring
 
   when off:
     jsexport constant, example, example2
