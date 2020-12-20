@@ -258,14 +258,14 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 <dt><pre><a href="jsugar.html#maxValidDate"><span class="Identifier">maxValidDate</span></a> <span class="Other">=</span> <span class="StringLit">&quot;8640000000000000&quot;</span></pre></dt>
 <dd>
 
-<tt class="docutils literal"><span class="pre">new Date(8640000000000001)</span></tt>  &quot;Invalid Date&quot;.
+<tt class="docutils literal"><span class="pre">new Date(8640000000000001)</span></tt>  &quot;Invalid Date&quot;. (Same as <tt class="docutils literal"><span class="pre">Math.pow(10, 8) * 24 * 60 * 60 * 1000</span></tt>)
 
 </dd>
 <a id="minValidDate"></a>
 <dt><pre><a href="jsugar.html#minValidDate"><span class="Identifier">minValidDate</span></a> <span class="Other">=</span> <span class="StringLit">&quot;-8640000000000000&quot;</span></pre></dt>
 <dd>
 
-<tt class="docutils literal"><span class="pre">new Date(-8640000000000001)</span></tt> &quot;Invalid Date&quot;.
+<tt class="docutils literal"><span class="pre">new Date(-8640000000000001)</span></tt> &quot;Invalid Date&quot;. (Same as <tt class="docutils literal"><span class="pre">-maxValidDate</span></tt>)
 
 </dd>
 
@@ -406,7 +406,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 22:37:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 22:50:08 UTC</small>
       </div>
     </div>
   </div>
