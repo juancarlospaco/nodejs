@@ -87,10 +87,10 @@ template jsconst*(name: untyped; value: any): untyped =
 func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
   ## Convenience alias for `export { symbol, symbol, symbol };`
 
-func `|>`*(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
+func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
-func `?.`*(leftSide: any, rightSide: any) {.importjs: "#?.#".} 
+func `?.`(leftSide: any, rightSide: any) {.importjs: "#?.#".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 
