@@ -3,8 +3,8 @@ export jsffi
 
 const
   arrow* = "const $2 = ($3) =>".cstring      ## Arrow Function for Nim functions, use `{.codegenDecl: arrow.}`.
-  maxValidDate* = "8640000000000000".cstring  ## `new Date(8640000000000001)`  "Invalid Date".
-  minValidDate* = "-8640000000000000".cstring ## `new Date(-8640000000000001)` "Invalid Date".
+  maxValidDate* = "8640000000000000".cstring  ## `new Date(8640000000000001)`  "Invalid Date". (Same as `Math.pow(10, 8) * 24 * 60 * 60 * 1000`)
+  minValidDate* = "-8640000000000000".cstring ## `new Date(-8640000000000001)` "Invalid Date". (Same as `-maxValidDate`)
 
 func uuid1validate*(uuidv1: cstring): bool {.importjs: """
   (() => {
