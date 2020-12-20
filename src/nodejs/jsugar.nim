@@ -90,6 +90,26 @@ template jsconst*(name: untyped; value: any): untyped =
 func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
   ## Convenience alias for `export { symbol, symbol, symbol };`
 
+func nth*(someOrdinalInteger: cint): cstring {.importjs: """
+  (() => {
+    const n = #;
+    if (/^(string|number)$$/.test(typeof n) === false) { return n; }
+    let suffixes = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'], match = n.toString().match(/\d$$/), suffix;
+    if (!match) { return n; }
+    suffix = suffixes[match[0]];
+    if (/1[123]$$/.test(n)) { suffix = 'th'; }
+    return n + suffix;
+  })()""".}
+  ## Convenience func to get string ordinal suffixes from integers (`"1st"`, `"2nd"`, `"3rd"`, etc).
+  runnableExamples:
+    doAssert nth(-9.cint) == "-9th".cstring
+    doAssert nth(0.cint) == "0th".cstring
+    doAssert nth(9.cint) == "9th".cstring
+    doAssert nth(1.cint) == "1st".cstring
+    doAssert nth(42.cint) == "42nd".cstring
+    doAssert nth(420.cint) == "420th".cstring
+    doAssert nth(666.cint) == "666th".cstring
+
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
