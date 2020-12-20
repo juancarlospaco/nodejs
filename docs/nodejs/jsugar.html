@@ -98,6 +98,10 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#arrow"
     title="arrow = &quot;const $2 = ($3) =&gt;&quot;">arrow</a></li>
+  <li><a class="reference" href="#maxValidDate"
+    title="maxValidDate = &quot;8640000000000000&quot;">maxValidDate</a></li>
+  <li><a class="reference" href="#minValidDate"
+    title="minValidDate = &quot;-8640000000000000&quot;">minValidDate</a></li>
 
   </ul>
 </li>
@@ -250,6 +254,20 @@ window.addEventListener('DOMContentLoaded', main);
 Arrow Function for Nim functions, use <tt class="docutils literal"><span class="pre">{.codegenDecl: arrow.}</span></tt>.
 
 </dd>
+<a id="maxValidDate"></a>
+<dt><pre><a href="jsugar.html#maxValidDate"><span class="Identifier">maxValidDate</span></a> <span class="Other">=</span> <span class="StringLit">&quot;8640000000000000&quot;</span></pre></dt>
+<dd>
+
+<tt class="docutils literal"><span class="pre">new Date(8640000000000001)</span></tt>  &quot;Invalid Date&quot;.
+
+</dd>
+<a id="minValidDate"></a>
+<dt><pre><a href="jsugar.html#minValidDate"><span class="Identifier">minValidDate</span></a> <span class="Other">=</span> <span class="StringLit">&quot;-8640000000000000&quot;</span></pre></dt>
+<dd>
+
+<tt class="docutils literal"><span class="pre">new Date(-8640000000000001)</span></tt> &quot;Invalid Date&quot;.
+
+</dd>
 
 </dl></div>
 <div class="section" id="12">
@@ -388,7 +406,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 22:33:54 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 22:37:00 UTC</small>
       </div>
     </div>
   </div>
