@@ -129,6 +129,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="jsexport(symbols: any)">jsexport,<wbr>any</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">|>
+      <li><a class="reference" href="#%7C%3E%2Cany%2Cany"
+    title="`|&gt;`(leftSide: any; rightSide: any)">|>,<wbr>any,<wbr>any</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">shuffle
       <li><a class="reference" href="#shuffle%2CopenArray%5Bany%5D"
     title="shuffle(arrai: openArray[any]): seq[any]">shuffle,<wbr>openArray[any]</a></li>
@@ -341,7 +346,7 @@ Convenience func to create an seq of the past days, inclusive.
 <dt><pre><span class="Keyword">func</span> <a href="#parseBool%2Ccstring"><span class="Identifier">parseBool</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">asmnostackframe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parseBool</span></tt> but optimized for NodeJS.
+Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parseBool</span></tt> but optimized for NodeJS. Does NOT ignore <tt class="docutils literal"><span class="pre">'_'</span></tt>, if you need to ignore <tt class="docutils literal"><span class="pre">'_'</span></tt> use stdlib or remove the <tt class="docutils literal"><span class="pre">'_'</span></tt>.
 
 </dd>
 <a id="sparkline,openArray[cint],cint,cint"></a>
@@ -357,6 +362,13 @@ Convenience func to generate &quot;Sparklines&quot; loading spinners from number
 <dd>
 
 Convenience alias for <tt class="docutils literal"><span class="pre">export { symbol, symbol, symbol };</span></tt>
+
+</dd>
+<a id="|>,any,any"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%7C%3E%2Cany%2Cany"><span class="Identifier">`|&gt;`</span></a><span class="Other">(</span><span class="Identifier">leftSide</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">;</span> <span class="Identifier">rightSide</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# |&gt; #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator</a>
 
 </dd>
 
@@ -388,7 +400,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-19 12:15:17 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 08:23:29 UTC</small>
       </div>
     </div>
   </div>
