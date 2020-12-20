@@ -55,6 +55,7 @@ func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
   };
   assert(false, "Cannot interpret as a bool");""".}
   ## Convenience func mimics Nim `parseBool` but optimized for NodeJS.
+  ## Does NOT ignore `'_'`, if you need to ignore `'_'` use stdlib or remove the `'_'`.
 
 func sparkline*(numbers: openarray[cint]; minimum: cint; maximum: cint): cstring {.asmnostackframe.} = {.emit: """
   const ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
@@ -85,6 +86,9 @@ template jsconst*(name: untyped; value: any): untyped =
 
 func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
   ## Convenience alias for `export { symbol, symbol, symbol };`
+
+proc `|>`*(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
+  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
 
 runnableExamples:
