@@ -42,6 +42,15 @@ func repeat*(s: cstring; n: Natural): cstring {.importjs: """
 func repeat*(s: char; n: Natural): cstring {.importjs: """
   (() => { const s = String.fromCharCode(#); const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
 
+func indentation*(s: cstring): cint {.importjs: """
+  (() => {
+    const m = #.match(/^[\s\\t]*/gm);
+    let result = m[0].length;
+    for (var i = 1; i < m.length; i++) { result = Math.min(m[i].length, result) }
+    return result;
+  })()""".}
+  ## Returns the amount of indentation all lines of `s` have in common, ignoring lines that consist only of whitespace.
+
 func uuid1validate*(uuidv1: cstring): bool {.importjs: """
   (() => {
     const UUID_RE1 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$", "i");
@@ -146,7 +155,7 @@ func toHex*(color: array[3, cint]): cstring {.importjs: """
   (() => { const n = #; return ((n[2] | n[1] << 8 | n[0] << 16) | 1 << 24).toString(16).slice(1); })()""".}
   ## Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
 
-func replaceAccents*(s: cstring): cstring {.importjs: """(#
+func removeAccents*(s: cstring): cstring {.importjs: """(#
   .replace(/[\xC0-\xC5]/g, "A").replace(/[\xC6]/g, "AE").replace(/[\xC7]/g, "C")
   .replace(/[\xC8-\xCB]/g, "E").replace(/[\xCC-\xCF]/g, "I").replace(/[\xD0]/g, "D")
   .replace(/[\xD1]/g, "N").replace(/[\xD2-\xD6\xD8]/g, "O").replace(/[\xD9-\xDC]/g, "U")
@@ -154,7 +163,7 @@ func replaceAccents*(s: cstring): cstring {.importjs: """(#
   .replace(/[\xE6]/g, "ae").replace(/[\xE7]/g, "c").replace(/[\xE8-\xEB]/g, "e")
   .replace(/[\xEC-\xEF]/g, "i").replace(/[\xF1]/g, "n").replace(/[\xF2-\xF6\xF8]/g, "o")
   .replace(/[\xF9-\xFC]/g, "u").replace(/[\xFE]/g, "p").replace(/[\xFD\xFF]/g, "y"))""".}
-  ## Convenience func to replace "Accented" chars with normal chars (ASCII).
+  ## Convenience func to replace accented chars (Diacritics) with normal chars (ASCII).
 
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
@@ -220,8 +229,8 @@ runnableExamples:
   doAssert toRGB("c0ffee".cstring) == [192.cint, 255, 238]
   doAssert toHex([192.cint, 255, 238]) == "c0ffee".cstring
 
-  doAssert replaceAccents("ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ".cstring) == "CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO".cstring
-  doAssert replaceAccents("È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ".cstring) == "E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o".cstring
+  doAssert removeAccents("ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ".cstring) == "CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO".cstring
+  doAssert removeAccents("È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ".cstring) == "E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o".cstring
 
   when off:
     jsexport constant, example, example2
