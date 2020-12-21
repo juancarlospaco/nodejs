@@ -145,6 +145,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="nth(someOrdinalInteger: cint): cstring">nth,<wbr>cint</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">editDistanceAscii
+      <li><a class="reference" href="#editDistanceAscii%2Ccstring%2Ccstring"
+    title="editDistanceAscii(a, b: cstring): cint">editDistanceAscii,<wbr>cstring,<wbr>cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">startsWith
       <li><a class="reference" href="#startsWith%2Ccstring%2Ccstring"
     title="startsWith(a, b: cstring): bool">startsWith,<wbr>cstring,<wbr>cstring</a></li>
@@ -162,6 +167,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">parseFloat
       <li><a class="reference" href="#parseFloat%2Ccstring"
     title="parseFloat(s: cstring): BiggestFloat">parseFloat,<wbr>cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">indentation
+      <li><a class="reference" href="#indentation%2Ccstring"
+    title="indentation(s: cstring): cint">indentation,<wbr>cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">parseBool
@@ -184,6 +194,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">toHex
       <li><a class="reference" href="#toHex%2Carray%5B%2Ccint%5D"
     title="toHex(color: array[3, cint]): cstring">toHex,<wbr>array[,<wbr>cint]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">removeAccents
+      <li><a class="reference" href="#removeAccents%2Ccstring"
+    title="removeAccents(s: cstring): cstring">removeAccents,<wbr>cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">jsexport
@@ -231,11 +246,6 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">sparkline
       <li><a class="reference" href="#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint"
     title="sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring">sparkline,<wbr>openArray[cint],<wbr>cint,<wbr>cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">replaceAccents
-      <li><a class="reference" href="#replaceAccents%2Ccstring"
-    title="replaceAccents(s: cstring): cstring">replaceAccents,<wbr>cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">base64decode
@@ -339,8 +349,10 @@ window.addEventListener('DOMContentLoaded', main);
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">toRGB</span><span class="Punctuation">(</span><span class="StringLit">&quot;c0ffee&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="Punctuation">[</span><span class="FloatNumber">192.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">255</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">238</span><span class="Punctuation">]</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">toHex</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="FloatNumber">192.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">255</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">238</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;c0ffee&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 
-</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">replaceAccents</span><span class="Punctuation">(</span><span class="StringLit">&quot;ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
-</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">replaceAccents</span><span class="Punctuation">(</span><span class="StringLit">&quot;È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">removeAccents</span><span class="Punctuation">(</span><span class="StringLit">&quot;ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">removeAccents</span><span class="Punctuation">(</span><span class="StringLit">&quot;È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">editDistanceAscii</span><span class="Punctuation">(</span><span class="StringLit">&quot;Kitten&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;Bitten&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="FloatNumber">1.</span><span class="Identifier">cint</span><span class="Whitespace"> </span><span class="Comment">## Levenshtein distance</span><span class="Whitespace">
 
 </span><span class="Keyword">when</span><span class="Whitespace"> </span><span class="Identifier">off</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Identifier">jsexport</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example2</span><span class="Whitespace">
@@ -489,6 +501,18 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 
 </dd>
+<a id="indentation,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+    const m = #.match(/^[\s\\t]*/gm);
+    let result = m[0].length;
+    for (var i = 1; i &lt; m.length; i++) { result = Math.min(m[i].length, result) }
+    return result;
+  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns the amount of indentation all lines of <tt class="docutils literal"><span class="pre">s</span></tt> have in common, ignoring lines that consist only of whitespace.
+
+</dd>
 <a id="uuid1validate,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#uuid1validate%2Ccstring"><span class="Identifier">uuid1validate</span></a><span class="Other">(</span><span class="Identifier">uuidv1</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const UUID_RE1 = new RegExp(&quot;^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$&quot;, &quot;i&quot;);
@@ -622,8 +646,8 @@ Convenience func to convert a 6 digit Hexadecimal string value to an RGB integer
 Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
 
 </dd>
-<a id="replaceAccents,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replaceAccents%2Ccstring"><span class="Identifier">replaceAccents</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;(#
+<a id="removeAccents,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#removeAccents%2Ccstring"><span class="Identifier">removeAccents</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;(#
   .replace(/[\xC0-\xC5]/g, &quot;A&quot;).replace(/[\xC6]/g, &quot;AE&quot;).replace(/[\xC7]/g, &quot;C&quot;)
   .replace(/[\xC8-\xCB]/g, &quot;E&quot;).replace(/[\xCC-\xCF]/g, &quot;I&quot;).replace(/[\xD0]/g, &quot;D&quot;)
   .replace(/[\xD1]/g, &quot;N&quot;).replace(/[\xD2-\xD6\xD8]/g, &quot;O&quot;).replace(/[\xD9-\xDC]/g, &quot;U&quot;)
@@ -633,7 +657,43 @@ Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
   .replace(/[\xF9-\xFC]/g, &quot;u&quot;).replace(/[\xFE]/g, &quot;p&quot;).replace(/[\xFD\xFF]/g, &quot;y&quot;))&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Convenience func to replace &quot;Accented&quot; chars with normal chars (ASCII).
+Convenience func to replace accented chars (Diacritics) with normal chars (ASCII).
+
+</dd>
+<a id="editDistanceAscii,cstring,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#editDistanceAscii%2Ccstring%2Ccstring"><span class="Identifier">editDistanceAscii</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+    const s0 = #;
+    const s1 = #;
+    if (s0 === s1)  return 0;
+    if (!s0 || !s1) return Math.max(s0.length, s1.length);
+
+    var prevRow = new Array(s1.length + 1);
+    for (var i = 0; i &lt; prevRow.length; ++i) {
+      prevRow[i] = i;
+    }
+
+    for (i = 0; i &lt; s0.length; ++i) {
+      var result = i + 1;
+      for (var j = 0; j &lt; s1.length; ++j) {
+        var curCol = result;
+        result = prevRow[j] + ( (s0.charAt(i) === s1.charAt(j)) ? 0 : 1 );
+        var tmp = curCol + 1;
+        if (result &gt; tmp) {
+          result = tmp;
+        }
+        tmp = prevRow[j + 1] + 1;
+        if (result &gt; tmp) {
+          result = tmp;
+        }
+        prevRow[j] = curCol;
+      }
+      prevRow[j] = result;
+    }
+    return result;
+  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://github.com/hiddentao/fast-levenshtein">https://github.com/hiddentao/fast-levenshtein</a>
 
 </dd>
 
@@ -665,7 +725,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 03:16:13 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 04:02:51 UTC</small>
       </div>
     </div>
   </div>
