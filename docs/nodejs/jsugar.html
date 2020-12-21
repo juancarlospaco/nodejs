@@ -120,6 +120,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="contains(a: cstring; b: char): bool">contains,<wbr>cstring,<wbr>char</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">isDigit
+      <li><a class="reference" href="#isDigit%2Cchar"
+    title="isDigit(c: char): bool">isDigit,<wbr>char</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">uuid4validate
       <li><a class="reference" href="#uuid4validate%2Ccstring"
     title="uuid4validate(uuidv4: cstring): bool">uuid4validate,<wbr>cstring</a></li>
@@ -446,6 +451,13 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 
 </dd>
+<a id="isDigit,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isDigit%2Cchar"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { const c = #; return (c &gt;= \'0\' &amp;&amp; c &lt;= \'9\') })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="capitalizeAscii,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#capitalizeAscii%2Ccstring"><span class="Identifier">capitalizeAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -629,7 +641,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 02:34:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 02:51:18 UTC</small>
       </div>
     </div>
   </div>
