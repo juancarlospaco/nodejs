@@ -6,6 +6,39 @@ const
   maxValidDate* = "8640000000000000".cstring  ## `new Date(8640000000000001)`  "Invalid Date". (Same as `Math.pow(10, 8) * 24 * 60 * 60 * 1000`)
   minValidDate* = "-8640000000000000".cstring ## `new Date(-8640000000000001)` "Invalid Date". (Same as `-maxValidDate`)
 
+func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
+
+func `&`*(a: cstring, b: char): cstring {.importjs: "(# + String.fromCharCode(#))".}
+
+func `&`*(a: char, b: cstring): cstring {.importjs: "(String.fromCharCode(#) + #)".}
+
+func strip*(s: cstring): cstring {.importjs: "#.trim()".}
+
+func startsWith*(a, b: cstring): bool {.importjs: "#.startsWith(#)".}
+
+func endsWith*(a, b: cstring): bool {.importjs: "#.endsWith(#)".}
+
+proc parseInt*(s: cstring): cint {.importjs: "parseInt(#, 10)".}
+
+proc parseInt*(s: char): cint {.importjs: "parseInt(String.fromCharCode(#), 10)".}
+
+proc parseUInt*(s: cstring): uint {.importjs: "parseInt(#, 10)".}
+
+proc parseFloat*(s: cstring): BiggestFloat {.importjs: "parseFloat(#)".}
+
+func contains*(a, b: cstring): bool {.importjs: "(#.indexOf(#) >= 0)".}
+
+func contains*(a: cstring, b: char): bool {.importjs: "(#.indexOf(String.fromCharCode(#)) >= 0)".}
+
+func capitalizeAscii*(s: cstring): cstring {.importjs: """
+  (() => { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()""".}
+
+func repeat*(s: cstring; n: Natural): cstring {.importjs: """
+  (() => { const s = #; const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
+
+func repeat*(s: char; n: Natural): cstring {.importjs: """
+  (() => { const s = String.fromCharCode(#); const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
+
 func uuid1validate*(uuidv1: cstring): bool {.importjs: """
   (() => {
     const UUID_RE1 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$", "i");
