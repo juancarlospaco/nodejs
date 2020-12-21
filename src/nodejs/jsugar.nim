@@ -102,6 +102,14 @@ func nth*(someOrdinalInteger: cint): cstring {.importjs: """
   })()""".}
   ## Convenience func to get string ordinal suffixes from integers (`"1st"`, `"2nd"`, `"3rd"`, etc).
 
+func toRGB*(color: cstring): array[3, cint] {.importjs: """
+  (() => { const n = parseInt(#, 16); return [n >> 16, n >> 8 & 255, n & 255] })()""".}
+  ## Convenience func to convert a 6 digit Hexadecimal string value to an RGB integer array.
+
+func toHex*(color: array[3, cint]): cstring {.importjs: """
+  (() => { const n = #; return ((n[2] | n[1] << 8 | n[0] << 16) | 1 << 24).toString(16).slice(1); })()""".}
+  ## Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
+
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
@@ -162,6 +170,9 @@ runnableExamples:
   doAssert nth(42.cint) == "42nd".cstring
   doAssert nth(420.cint) == "420th".cstring
   doAssert nth(666.cint) == "666th".cstring
+
+  doAssert toRGB("c0ffee".cstring) == [192.cint, 255, 238]
+  doAssert toHex([192.cint, 255, 238]) == "c0ffee".cstring
 
   when off:
     jsexport constant, example, example2
