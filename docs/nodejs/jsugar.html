@@ -133,6 +133,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="pastDays(days = 7.cint): seq[JsObject]">pastDays</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">toHex
+      <li><a class="reference" href="#toHex%2Carray%5B%2Ccint%5D"
+    title="toHex(color: array[3, cint]): cstring">toHex,<wbr>array[,<wbr>cint]</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">jsexport
       <li><a class="reference" href="#jsexport%2Cany"
     title="jsexport(symbols: any)">jsexport,<wbr>any</a></li>
@@ -176,6 +181,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">uuid1validate
       <li><a class="reference" href="#uuid1validate%2Ccstring"
     title="uuid1validate(uuidv1: cstring): bool">uuid1validate,<wbr>cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">toRGB
+      <li><a class="reference" href="#toRGB%2Ccstring"
+    title="toRGB(color: cstring): array[3, cint]">toRGB,<wbr>cstring</a></li>
 
   </ul>
 
@@ -253,6 +263,9 @@ window.addEventListener('DOMContentLoaded', main);
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">42.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;42nd&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">420.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;420th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">666.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;666th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">toRGB</span><span class="Punctuation">(</span><span class="StringLit">&quot;c0ffee&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="Punctuation">[</span><span class="FloatNumber">192.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">255</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">238</span><span class="Punctuation">]</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">toHex</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="FloatNumber">192.</span><span class="Identifier">cint</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">255</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">238</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;c0ffee&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 
 </span><span class="Keyword">when</span><span class="Whitespace"> </span><span class="Identifier">off</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Identifier">jsexport</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example2</span><span class="Whitespace">
@@ -405,6 +418,20 @@ Convenience alias for <tt class="docutils literal"><span class="pre">export { sy
 Convenience func to get string ordinal suffixes from integers (<tt class="docutils literal"><span class="pre">&quot;1st&quot;</span></tt>, <tt class="docutils literal"><span class="pre">&quot;2nd&quot;</span></tt>, <tt class="docutils literal"><span class="pre">&quot;3rd&quot;</span></tt>, etc).
 
 </dd>
+<a id="toRGB,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toRGB%2Ccstring"><span class="Identifier">toRGB</span></a><span class="Other">(</span><span class="Identifier">color</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">cint</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const n = parseInt(#, 16); return [n &gt;&gt; 16, n &gt;&gt; 8 &amp; 255, n &amp; 255] })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convenience func to convert a 6 digit Hexadecimal string value to an RGB integer array.
+
+</dd>
+<a id="toHex,array[,cint]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toHex%2Carray%5B%2Ccint%5D"><span class="Identifier">toHex</span></a><span class="Other">(</span><span class="Identifier">color</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const n = #; return ((n[2] | n[1] &lt;&lt; 8 | n[0] &lt;&lt; 16) | 1 &lt;&lt; 24).toString(16).slice(1); })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
+
+</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -434,7 +461,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 23:32:24 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 01:02:56 UTC</small>
       </div>
     </div>
   </div>
