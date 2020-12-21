@@ -1,3 +1,4 @@
+## * Syntax sugar and convenience functions for JavaScript.
 import jsffi
 export jsffi
 
