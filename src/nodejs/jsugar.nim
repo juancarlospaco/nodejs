@@ -165,6 +165,39 @@ func removeAccents*(s: cstring): cstring {.importjs: """(#
   .replace(/[\xF9-\xFC]/g, "u").replace(/[\xFE]/g, "p").replace(/[\xFD\xFF]/g, "y"))""".}
   ## Convenience func to replace accented chars (Diacritics) with normal chars (ASCII).
 
+func editDistanceAscii*(a, b: cstring): cint {.importjs: """
+  (() => {
+    const s0 = #;
+    const s1 = #;
+    if (s0 === s1)  return 0;
+    if (!s0 || !s1) return Math.max(s0.length, s1.length);
+
+    var prevRow = new Array(s1.length + 1);
+    for (var i = 0; i < prevRow.length; ++i) {
+      prevRow[i] = i;
+    }
+
+    for (i = 0; i < s0.length; ++i) {
+      var result = i + 1;
+      for (var j = 0; j < s1.length; ++j) {
+        var curCol = result;
+        result = prevRow[j] + ( (s0.charAt(i) === s1.charAt(j)) ? 0 : 1 );
+        var tmp = curCol + 1;
+        if (result > tmp) {
+          result = tmp;
+        }
+        tmp = prevRow[j + 1] + 1;
+        if (result > tmp) {
+          result = tmp;
+        }
+        prevRow[j] = curCol;
+      }
+      prevRow[j] = result;
+    }
+    return result;
+  })()""".}
+  ## https://github.com/hiddentao/fast-levenshtein
+
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
@@ -231,6 +264,8 @@ runnableExamples:
 
   doAssert removeAccents("ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ".cstring) == "CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO".cstring
   doAssert removeAccents("È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ".cstring) == "E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o".cstring
+
+  doAssert editDistanceAscii("Kitten".cstring, "Bitten".cstring) == 1.cint ## Levenshtein distance
 
   when off:
     jsexport constant, example, example2
