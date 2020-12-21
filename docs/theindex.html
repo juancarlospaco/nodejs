@@ -66,7 +66,15 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="container">
     <h1 class="title">Index</h1>
     Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
-<dl><dt><a name="%60/%60" href="#%60/%60"><span>`/`:</span></a></dt><dd><ul class="simple">
+<dl><dt><a name="%60%26amp%3B%60" href="#%60%26amp%3B%60"><span>`&amp;`:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: `&amp;`(a: char; b: cstring): cstring" href="nodejs/jsugar.html#%26%2Cchar%2Ccstring">jsugar: `&amp;`(a: char; b: cstring): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: `&amp;`(a: cstring; b: char): cstring" href="nodejs/jsugar.html#%26%2Ccstring%2Cchar">jsugar: `&amp;`(a: cstring; b: char): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: `&amp;`(a, b: cstring): cstring" href="nodejs/jsugar.html#%26%2Ccstring%2Ccstring">jsugar: `&amp;`(a, b: cstring): cstring</a></li>
+          </ul></dd>
+<dt><a name="%60/%60" href="#%60/%60"><span>`/`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jspath: `/`(path0: cstring; path1: cstring): cstring" href="nodejs/jspath.html#/%2Ccstring%2Ccstring">jspath: `/`(path0: cstring; path1: cstring): cstring</a></li>
           </ul></dd>
@@ -428,6 +436,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsdns: CANCELLED" href="nodejs/jsdns.html#CANCELLED">jsdns: CANCELLED</a></li>
           </ul></dd>
+<dt><a name="capitalizeAscii" href="#capitalizeAscii"><span>capitalizeAscii:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: capitalizeAscii(s: cstring): cstring" href="nodejs/jsugar.html#capitalizeAscii%2Ccstring">jsugar: capitalizeAscii(s: cstring): cstring</a></li>
+          </ul></dd>
 <dt><a name="chdir" href="#chdir"><span>chdir:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: chdir(directory: cstring)" href="nodejs/jsprocess.html#chdir%2Ccstring">jsprocess: chdir(directory: cstring)</a></li>
@@ -475,6 +487,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="CONNREFUSED" href="#CONNREFUSED"><span>CONNREFUSED:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: CONNREFUSED" href="nodejs/jsdns.html#CONNREFUSED">jsdns: CONNREFUSED</a></li>
+          </ul></dd>
+<dt><a name="contains" href="#contains"><span>contains:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: contains(a: cstring; b: char): bool" href="nodejs/jsugar.html#contains%2Ccstring%2Cchar">jsugar: contains(a: cstring; b: char): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: contains(a, b: cstring): bool" href="nodejs/jsugar.html#contains%2Ccstring%2Ccstring">jsugar: contains(a, b: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="copyFile" href="#copyFile"><span>copyFile:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -755,6 +773,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="endianness" href="#endianness"><span>endianness:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: endianness(): cstring" href="nodejs/jsos.html#endianness">jsos: endianness(): cstring</a></li>
+          </ul></dd>
+<dt><a name="endsWith" href="#endsWith"><span>endsWith:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: endsWith(a, b: cstring): bool" href="nodejs/jsugar.html#endsWith%2Ccstring%2Ccstring">jsugar: endsWith(a, b: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="ENETDOWN" href="#ENETDOWN"><span>ENETDOWN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1760,6 +1782,20 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsugar: parseBool(s: cstring): bool" href="nodejs/jsugar.html#parseBool%2Ccstring">jsugar: parseBool(s: cstring): bool</a></li>
           </ul></dd>
+<dt><a name="parseFloat" href="#parseFloat"><span>parseFloat:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: parseFloat(s: cstring): BiggestFloat" href="nodejs/jsugar.html#parseFloat%2Ccstring">jsugar: parseFloat(s: cstring): BiggestFloat</a></li>
+          </ul></dd>
+<dt><a name="parseInt" href="#parseInt"><span>parseInt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: parseInt(s: char): cint" href="nodejs/jsugar.html#parseInt%2Cchar">jsugar: parseInt(s: char): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: parseInt(s: cstring): cint" href="nodejs/jsugar.html#parseInt%2Ccstring">jsugar: parseInt(s: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="parseUInt" href="#parseUInt"><span>parseUInt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: parseUInt(s: cstring): uint" href="nodejs/jsugar.html#parseUInt%2Ccstring">jsugar: parseUInt(s: cstring): uint</a></li>
+          </ul></dd>
 <dt><a name="pastDays" href="#pastDays"><span>pastDays:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: pastDays(days = 7.cint): seq[JsObject]" href="nodejs/jsugar.html#pastDays">jsugar: pastDays(days = 7.cint): seq[JsObject]</a></li>
@@ -1879,6 +1915,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="renameSync" href="#renameSync"><span>renameSync:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: renameSync(oldPath, newPath: cstring)" href="nodejs/jsfs.html#renameSync%2Ccstring%2Ccstring">jsfs: renameSync(oldPath, newPath: cstring)</a></li>
+          </ul></dd>
+<dt><a name="repeat" href="#repeat"><span>repeat:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: repeat(s: char; n: Natural): cstring" href="nodejs/jsugar.html#repeat%2Cchar%2CNatural">jsugar: repeat(s: char; n: Natural): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: repeat(s: cstring; n: Natural): cstring" href="nodejs/jsugar.html#repeat%2Ccstring%2CNatural">jsugar: repeat(s: cstring; n: Natural): cstring</a></li>
           </ul></dd>
 <dt><a name="reportCompact" href="#reportCompact"><span>reportCompact:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2342,6 +2384,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring" href="nodejs/jsugar.html#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint">jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring</a></li>
           </ul></dd>
+<dt><a name="startsWith" href="#startsWith"><span>startsWith:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: startsWith(a, b: cstring): bool" href="nodejs/jsugar.html#startsWith%2Ccstring%2Ccstring">jsugar: startsWith(a, b: cstring): bool</a></li>
+          </ul></dd>
 <dt><a name="stat" href="#stat"><span>stat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: stat[T](path: cstring; callback: T)" href="nodejs/jsfs.html#stat%2Ccstring%2CT">jsfs: stat[T](path: cstring; callback: T)</a></li>
@@ -2355,6 +2401,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsassert: strictEqual(actual, expected: any)" href="nodejs/jsassert.html#strictEqual%2Cany%2Cany">jsassert: strictEqual(actual, expected: any)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsassert: strictEqual(actual, expected: any; message: cstring)" href="nodejs/jsassert.html#strictEqual%2Cany%2Cany%2Ccstring">jsassert: strictEqual(actual, expected: any; message: cstring)</a></li>
+          </ul></dd>
+<dt><a name="strip" href="#strip"><span>strip:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: strip(s: cstring): cstring" href="nodejs/jsugar.html#strip%2Ccstring">jsugar: strip(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="symlink" href="#symlink"><span>symlink:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2779,7 +2829,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 01:02:56 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 02:34:44 UTC</small>
       </div>
     </div>
   </div>
