@@ -30,6 +30,8 @@ func contains*(a, b: cstring): bool {.importjs: "(#.indexOf(#) >= 0)".}
 
 func contains*(a: cstring, b: char): bool {.importjs: "(#.indexOf(String.fromCharCode(#)) >= 0)".}
 
+func isDigit*(c: char): bool {.importjs: "(() => { const c = #; return (c >= '0' && c <= '9') })()".}
+
 func capitalizeAscii*(s: cstring): cstring {.importjs: """
   (() => { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()""".}
 
