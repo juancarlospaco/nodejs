@@ -118,6 +118,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="nextDays(days = 7.cint): seq[JsObject]">nextDays</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">nth
+      <li><a class="reference" href="#nth%2Ccint"
+    title="nth(someOrdinalInteger: cint): cstring">nth,<wbr>cint</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">parseBool
       <li><a class="reference" href="#parseBool%2Ccstring"
     title="parseBool(s: cstring): bool">parseBool,<wbr>cstring</a></li>
@@ -240,6 +245,14 @@ window.addEventListener('DOMContentLoaded', main);
 
 </span><span class="Identifier">example2</span><span class="Punctuation">(</span><span class="Identifier">arg0</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">arg1</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">int</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">codegenDecl</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">arrow</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Whitespace"> </span><span class="Operator">=&gt;</span><span class="Whitespace"> </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;JavaScript Arrow Function for Nim Arrow Functions&quot;</span><span class="Whitespace">
 </span><span class="Comment"># const example2 = (arg0, arg01) =&gt; { echo(&quot;JavaScript Arrow Function for Nim functions&quot;) };</span><span class="Whitespace">
+
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="Operator">-</span><span class="FloatNumber">9.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;-9th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">0.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;0th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">9.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;9th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">1.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;1st&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">42.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;42nd&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">420.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;420th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">nth</span><span class="Punctuation">(</span><span class="FloatNumber">666.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;666th&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 
 </span><span class="Keyword">when</span><span class="Whitespace"> </span><span class="Identifier">off</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Identifier">jsexport</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">example2</span><span class="Whitespace">
@@ -377,6 +390,21 @@ Convenience func to generate &quot;Sparklines&quot; loading spinners from number
 Convenience alias for <tt class="docutils literal"><span class="pre">export { symbol, symbol, symbol };</span></tt>
 
 </dd>
+<a id="nth,cint"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nth%2Ccint"><span class="Identifier">nth</span></a><span class="Other">(</span><span class="Identifier">someOrdinalInteger</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+    const n = #;
+    if (/^(string|number)$$/.test(typeof n) === false) { return n; }
+    let suffixes = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'], match = n.toString().match(/\d$$/), suffix;
+    if (!match) { return n; }
+    suffix = suffixes[match[0]];
+    if (/1[123]$$/.test(n)) { suffix = 'th'; }
+    return n + suffix;
+  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convenience func to get string ordinal suffixes from integers (<tt class="docutils literal"><span class="pre">&quot;1st&quot;</span></tt>, <tt class="docutils literal"><span class="pre">&quot;2nd&quot;</span></tt>, <tt class="docutils literal"><span class="pre">&quot;3rd&quot;</span></tt>, etc).
+
+</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -406,7 +434,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 22:50:08 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-20 23:32:24 UTC</small>
       </div>
     </div>
   </div>
