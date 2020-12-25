@@ -128,8 +128,9 @@ template iife*(code: untyped): untyped =
   code
   {.emit: "})();".}
 
-template jsconst*(name: untyped; value: any): untyped =
+template `::=`*(name: untyped; value: any): untyped =
   ## Convenience template for a JavaScript `const` (Nim `var`).
+  ## Other libs already use `:=` then we use `::=`, because `:==` looks like a comparison.
   var name {.codegenDecl: "const $2", exportc: astToStr(name).} = value
 
 func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
@@ -198,6 +199,17 @@ func editDistanceAscii*(a, b: cstring): cint {.importjs: """
   })()""".}
   ## https://github.com/hiddentao/fast-levenshtein
 
+func daysBetweenYears*(fromYear, toYear: Positive): int =
+  ## Get the number of days between `fromYear-01-01` and `toYear-01-01`.
+  runnableExamples:
+    doAssert daysBetweenYears(1970, 2020) == 18262
+    doAssert daysBetweenYears(2000, 2020) == 7305
+    doAssert daysBetweenYears(1970, 1970) == 0
+    doAssert daysBetweenYears(2020, 2020) == 0
+    doAssert daysBetweenYears(1999, 2000) == 365
+  template daysBetweenYearsImpl(a): int = a * 365 + a div 4 - a div 100 + a div 400
+  result = daysBetweenYearsImpl(toYear - 1) - daysBetweenYearsImpl(fromYear - 1)
+
 func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
@@ -240,7 +252,7 @@ runnableExamples:
     echo "Hello Immediately Invoked Function Expressions"
     # })();
 
-  jsconst constant, "This is a JavaScript 'const'!.".cstring
+  constant ::= "This is a JavaScript 'const'!.".cstring
   # const constant = "This is a JavaScript 'const'!.";
 
   proc example(argument0, argument1: int) {.codegenDecl: arrow.} =
