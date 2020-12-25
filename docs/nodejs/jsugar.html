@@ -134,6 +134,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="replace(s: cstring; sub: char; by: char): cstring">replace,<wbr>cstring,<wbr>char,<wbr>char</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">toRGB
+      <li><a class="reference" href="#toRGB%2Ccstring"
+    title="toRGB(color: cstring): array[3, cint]">toRGB,<wbr>cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">split
       <li><a class="reference" href="#split%2Ccstring%2Ccstring"
     title="split(a: cstring; b: cstring): seq[cstring]">split,<wbr>cstring,<wbr>cstring</a></li>
@@ -293,9 +298,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring">base64encode,<wbr>cstring</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">uuid1validate
-      <li><a class="reference" href="#uuid1validate%2Ccstring"
-    title="uuid1validate(uuidv1: cstring): bool">uuid1validate,<wbr>cstring</a></li>
+  <ul class="simple nested-toc-section">slice
+      <li><a class="reference" href="#slice%2Ccstring%2Ccint%2Ccint"
+    title="slice(s: cstring; start: cint; ends: cint): cstring">slice,<wbr>cstring,<wbr>cint,<wbr>cint</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">toLowerAscii
@@ -305,9 +310,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="toLowerAscii(c: char): cstring">toLowerAscii,<wbr>char</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">toRGB
-      <li><a class="reference" href="#toRGB%2Ccstring"
-    title="toRGB(color: cstring): array[3, cint]">toRGB,<wbr>cstring</a></li>
+  <ul class="simple nested-toc-section">uuid1validate
+      <li><a class="reference" href="#uuid1validate%2Ccstring"
+    title="uuid1validate(uuidv1: cstring): bool">uuid1validate,<wbr>cstring</a></li>
 
   </ul>
 
@@ -624,6 +629,14 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 
 </dd>
+<a id="slice,cstring,cint,cint"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#slice%2Ccstring%2Ccint%2Ccint"><span class="Identifier">slice</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">start</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">ends</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.slice(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="indentation,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const m = #.match(/^[\s\\t]*/gm);
@@ -861,7 +874,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:28:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:35:03 UTC</small>
       </div>
     </div>
   </div>
