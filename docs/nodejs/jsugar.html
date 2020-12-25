@@ -243,6 +243,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="endsWith(a, b: cstring): bool">endsWith,<wbr>cstring,<wbr>cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">daysBetweenYears
+      <li><a class="reference" href="#daysBetweenYears%2CPositive%2CPositive"
+    title="daysBetweenYears(fromYear, toYear: Positive): int">daysBetweenYears,<wbr>Positive,<wbr>Positive</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">sparkline
       <li><a class="reference" href="#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint"
     title="sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring">sparkline,<wbr>openArray[cint],<wbr>cint,<wbr>cint</a></li>
@@ -276,8 +281,8 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#iife.t%2Cuntyped"
     title="iife(code: untyped): untyped">iife</a></li>
-  <li><a class="reference" href="#jsconst.t%2Cuntyped%2Cany"
-    title="jsconst(name: untyped; value: any): untyped">jsconst</a></li>
+  <li><a class="reference" href="#%3A%3A%3D.t%2Cuntyped%2Cany"
+    title="`::=`(name: untyped; value: any): untyped">`::=`</a></li>
 
   </ul>
 </li>
@@ -327,7 +332,7 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="StringLit">&quot;Hello Immediately Invoked Function Expressions&quot;</span><span class="Whitespace">
   </span><span class="Comment"># })();</span><span class="Whitespace">
 
-</span><span class="Identifier">jsconst</span><span class="Whitespace"> </span><span class="Identifier">constant</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="StringLit">&quot;This is a JavaScript &apos;const&apos;!.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Identifier">constant</span><span class="Whitespace"> </span><span class="Punctuation">:</span><span class="Punctuation">:</span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;This is a JavaScript &apos;const&apos;!.&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Comment"># const constant = &quot;This is a JavaScript &apos;const&apos;!.&quot;;</span><span class="Whitespace">
 
 </span><span class="Keyword">proc</span><span class="Whitespace"> </span><span class="Identifier">example</span><span class="Punctuation">(</span><span class="Identifier">argument0</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">argument1</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">int</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">codegenDecl</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">arrow</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace">
@@ -696,6 +701,19 @@ Convenience func to replace accented chars (Diacritics) with normal chars (ASCII
 <a class="reference external" href="https://github.com/hiddentao/fast-levenshtein">https://github.com/hiddentao/fast-levenshtein</a>
 
 </dd>
+<a id="daysBetweenYears,Positive,Positive"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#daysBetweenYears%2CPositive%2CPositive"><span class="Identifier">daysBetweenYears</span></a><span class="Other">(</span><span class="Identifier">fromYear</span><span class="Other">,</span> <span class="Identifier">toYear</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Get the number of days between <tt class="docutils literal"><span class="pre">fromYear-01-01</span></tt> and <tt class="docutils literal"><span class="pre">toYear-01-01</span></tt>.
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">daysBetweenYears</span><span class="Punctuation">(</span><span class="DecNumber">1970</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2020</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="DecNumber">18262</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">daysBetweenYears</span><span class="Punctuation">(</span><span class="DecNumber">2000</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2020</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="DecNumber">7305</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">daysBetweenYears</span><span class="Punctuation">(</span><span class="DecNumber">1970</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">1970</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="DecNumber">0</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">daysBetweenYears</span><span class="Punctuation">(</span><span class="DecNumber">2020</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2020</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="DecNumber">0</span><span class="Whitespace">
+</span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">daysBetweenYears</span><span class="Punctuation">(</span><span class="DecNumber">1999</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2000</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="DecNumber">365</span></pre>
+
+</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -708,11 +726,11 @@ Convenience func to replace accented chars (Diacritics) with normal chars (ASCII
 Convenience template for Anonymous Immediately Invoked Function Expressions.
 
 </dd>
-<a id="jsconst.t,untyped,any"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#jsconst.t%2Cuntyped%2Cany"><span class="Identifier">jsconst</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
+<a id="::=.t,untyped,any"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#%3A%3A%3D.t%2Cuntyped%2Cany"><span class="Identifier">`::=`</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">any</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
 
-Convenience template for a JavaScript <tt class="docutils literal"><span class="pre">const</span></tt> (Nim <tt class="docutils literal"><span class="pre">var</span></tt>).
+Convenience template for a JavaScript <tt class="docutils literal"><span class="pre">const</span></tt> (Nim <tt class="docutils literal"><span class="pre">var</span></tt>). Other libs already use <tt class="docutils literal"><span class="pre">:=</span></tt> then we use <tt class="docutils literal"><span class="pre">::=</span></tt>, because <tt class="docutils literal"><span class="pre">:==</span></tt> looks like a comparison.
 
 </dd>
 
@@ -725,7 +743,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-21 04:02:51 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 10:59:51 UTC</small>
       </div>
     </div>
   </div>
