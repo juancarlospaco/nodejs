@@ -64,6 +64,8 @@ func replace*(s: cstring, sub: char, by = "".cstring): cstring {.importjs: "#.re
 
 func replace*(s: cstring, sub: char, by: char): cstring {.importjs: "#.replace(String.fromCharCode(#), String.fromCharCode(#))".}
 
+func slice*(s: cstring; start: cint, ends: cint): cstring {.importjs: "#.slice(#, #)".}
+
 func indentation*(s: cstring): cint {.importjs: """
   (() => {
     const m = #.match(/^[\s\\t]*/gm);
