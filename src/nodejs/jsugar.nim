@@ -42,6 +42,10 @@ func repeat*(s: cstring; n: Natural): cstring {.importjs: """
 func repeat*(s: char; n: Natural): cstring {.importjs: """
   (() => { const s = String.fromCharCode(#); const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
 
+func find*(s: cstring; ss: cstring): int {.importjs: "#.indexOf(#)".}
+
+func find*(s: cstring; ss: char): int {.importjs: "#.indexOf(String.fromCharCode(#))".}
+
 func indentation*(s: cstring): cint {.importjs: """
   (() => {
     const m = #.match(/^[\s\\t]*/gm);
