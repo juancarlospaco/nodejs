@@ -125,6 +125,22 @@ window.addEventListener('DOMContentLoaded', main);
     title="isDigit(c: char): bool">isDigit,<wbr>char</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">replace
+      <li><a class="reference" href="#replace%2Ccstring%2Ccstring"
+    title="replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring">replace,<wbr>cstring,<wbr>cstring</a></li>
+  <li><a class="reference" href="#replace%2Ccstring%2Cchar"
+    title="replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring">replace,<wbr>cstring,<wbr>char</a></li>
+  <li><a class="reference" href="#replace%2Ccstring%2Cchar%2Cchar"
+    title="replace(s: cstring; sub: char; by: char): cstring">replace,<wbr>cstring,<wbr>char,<wbr>char</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">split
+      <li><a class="reference" href="#split%2Ccstring%2Ccstring"
+    title="split(a: cstring; b: cstring): seq[cstring]">split,<wbr>cstring,<wbr>cstring</a></li>
+  <li><a class="reference" href="#split%2Ccstring%2Cchar"
+    title="split(a: cstring; b: char): seq[cstring]">split,<wbr>cstring,<wbr>char</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">uuid4validate
       <li><a class="reference" href="#uuid4validate%2Ccstring"
     title="uuid4validate(uuidv4: cstring): bool">uuid4validate,<wbr>cstring</a></li>
@@ -248,6 +264,13 @@ window.addEventListener('DOMContentLoaded', main);
     title="daysBetweenYears(fromYear, toYear: Positive): int">daysBetweenYears,<wbr>Positive,<wbr>Positive</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">toUpperAscii
+      <li><a class="reference" href="#toUpperAscii%2Ccstring"
+    title="toUpperAscii(s: cstring): cstring">toUpperAscii,<wbr>cstring</a></li>
+  <li><a class="reference" href="#toUpperAscii%2Cchar"
+    title="toUpperAscii(c: char): cstring">toUpperAscii,<wbr>char</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">find
       <li><a class="reference" href="#find%2Ccstring%2Ccstring"
     title="find(s: cstring; ss: cstring): int">find,<wbr>cstring,<wbr>cstring</a></li>
@@ -273,6 +296,13 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">uuid1validate
       <li><a class="reference" href="#uuid1validate%2Ccstring"
     title="uuid1validate(uuidv1: cstring): bool">uuid1validate,<wbr>cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">toLowerAscii
+      <li><a class="reference" href="#toLowerAscii%2Ccstring"
+    title="toLowerAscii(s: cstring): cstring">toLowerAscii,<wbr>cstring</a></li>
+  <li><a class="reference" href="#toLowerAscii%2Cchar"
+    title="toLowerAscii(c: char): cstring">toLowerAscii,<wbr>char</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">toRGB
@@ -527,6 +557,73 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 
 </dd>
+<a id="split,cstring,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Ccstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="split,cstring,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Cchar"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toLowerAscii,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Ccstring"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toLowerCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toLowerAscii,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Cchar"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toLowerCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toUpperAscii,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Ccstring"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toUpperCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toUpperAscii,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Cchar"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toUpperCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="replace,cstring,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Ccstring"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">,</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="replace,cstring,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="replace,cstring,char,char"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="indentation,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const m = #.match(/^[\s\\t]*/gm);
@@ -764,7 +861,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:19:02 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:28:35 UTC</small>
       </div>
     </div>
   </div>

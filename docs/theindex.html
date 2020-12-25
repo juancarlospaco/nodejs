@@ -1948,6 +1948,14 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsugar: repeat(s: cstring; n: Natural): cstring" href="nodejs/jsugar.html#repeat%2Ccstring%2CNatural">jsugar: repeat(s: cstring; n: Natural): cstring</a></li>
           </ul></dd>
+<dt><a name="replace" href="#replace"><span>replace:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Cchar">jsugar: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: replace(s: cstring; sub: char; by: char): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Cchar%2Cchar">jsugar: replace(s: cstring; sub: char; by: char): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Ccstring">jsugar: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring</a></li>
+          </ul></dd>
 <dt><a name="reportCompact" href="#reportCompact"><span>reportCompact:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: reportCompact" href="nodejs/jsprocess.html#reportCompact">jsprocess: reportCompact</a></li>
@@ -2410,6 +2418,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring" href="nodejs/jsugar.html#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint">jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring</a></li>
           </ul></dd>
+<dt><a name="split" href="#split"><span>split:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: split(a: cstring; b: char): seq[cstring]" href="nodejs/jsugar.html#split%2Ccstring%2Cchar">jsugar: split(a: cstring; b: char): seq[cstring]</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: split(a: cstring; b: cstring): seq[cstring]" href="nodejs/jsugar.html#split%2Ccstring%2Ccstring">jsugar: split(a: cstring; b: cstring): seq[cstring]</a></li>
+          </ul></dd>
 <dt><a name="startsWith" href="#startsWith"><span>startsWith:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: startsWith(a, b: cstring): bool" href="nodejs/jsugar.html#startsWith%2Ccstring%2Ccstring">jsugar: startsWith(a, b: cstring): bool</a></li>
@@ -2474,6 +2488,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsugar: toHex(color: array[3, cint]): cstring" href="nodejs/jsugar.html#toHex%2Carray%5B%2Ccint%5D">jsugar: toHex(color: array[3, cint]): cstring</a></li>
           </ul></dd>
+<dt><a name="toLowerAscii" href="#toLowerAscii"><span>toLowerAscii:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: toLowerAscii(c: char): cstring" href="nodejs/jsugar.html#toLowerAscii%2Cchar">jsugar: toLowerAscii(c: char): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: toLowerAscii(s: cstring): cstring" href="nodejs/jsugar.html#toLowerAscii%2Ccstring">jsugar: toLowerAscii(s: cstring): cstring</a></li>
+          </ul></dd>
 <dt><a name="toNamespacedPath" href="#toNamespacedPath"><span>toNamespacedPath:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jspath: toNamespacedPath(path: cstring): cstring" href="nodejs/jspath.html#toNamespacedPath%2Ccstring">jspath: toNamespacedPath(path: cstring): cstring</a></li>
@@ -2493,6 +2513,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="toUnicode" href="#toUnicode"><span>toUnicode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jspunycode: toUnicode(stringy: cstring): cstring" href="nodejs/jspunycode.html#toUnicode%2Ccstring">jspunycode: toUnicode(stringy: cstring): cstring</a></li>
+          </ul></dd>
+<dt><a name="toUpperAscii" href="#toUpperAscii"><span>toUpperAscii:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsugar: toUpperAscii(c: char): cstring" href="nodejs/jsugar.html#toUpperAscii%2Cchar">jsugar: toUpperAscii(c: char): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsugar: toUpperAscii(s: cstring): cstring" href="nodejs/jsugar.html#toUpperAscii%2Ccstring">jsugar: toUpperAscii(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="triggerAsyncId" href="#triggerAsyncId"><span>triggerAsyncId:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2855,7 +2881,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:19:02 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:28:35 UTC</small>
       </div>
     </div>
   </div>
