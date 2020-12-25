@@ -46,6 +46,24 @@ func find*(s: cstring; ss: cstring): int {.importjs: "#.indexOf(#)".}
 
 func find*(s: cstring; ss: char): int {.importjs: "#.indexOf(String.fromCharCode(#))".}
 
+func split*(a: cstring, b: cstring): seq[cstring] {.importjs: "#.split(#)".}
+
+func split*(a: cstring, b: char): seq[cstring] {.importjs: "#.split(String.fromCharCode(#))".}
+
+func toLowerAscii*(s: cstring): cstring {.importjs: "#.toLowerCase()".}
+
+func toLowerAscii*(c: char): cstring {.importjs: "String.fromCharCode(#).toLowerCase()".}
+
+func toUpperAscii*(s: cstring): cstring {.importjs: "#.toUpperCase()".}
+
+func toUpperAscii*(c: char): cstring {.importjs: "String.fromCharCode(#).toUpperCase()".}
+
+func replace*(s, sub: cstring, by = "".cstring): cstring {.importjs: "#.replace(#, #)".}
+
+func replace*(s: cstring, sub: char, by = "".cstring): cstring {.importjs: "#.replace(String.fromCharCode(#), #)".}
+
+func replace*(s: cstring, sub: char, by: char): cstring {.importjs: "#.replace(String.fromCharCode(#), String.fromCharCode(#))".}
+
 func indentation*(s: cstring): cint {.importjs: """
   (() => {
     const m = #.match(/^[\s\\t]*/gm);
