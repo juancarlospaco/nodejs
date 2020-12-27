@@ -20,6 +20,8 @@ proc parseInt*(s: char): cint {.importjs: "parseInt(String.fromCharCode(#), 10)"
 
 proc parseUInt*(s: cstring): uint {.importjs: "parseInt(#, 10)".}
 
+proc parseUInt*(s: char): uint {.importjs: "parseInt(String.fromCharCode(#), 10)".}
+
 proc parseFloat*(s: cstring): BiggestFloat {.importjs: "parseFloat(#)".}
 
 func contains*(a, b: cstring): bool {.importjs: "(#.indexOf(#) >= 0)".}
