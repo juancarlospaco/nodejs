@@ -72,6 +72,18 @@ func indentation*(s: cstring): cint {.importjs: """
   })()""".}
   ## Returns the amount of indentation all lines of `s` have in common, ignoring lines that consist only of whitespace.
 
+proc `[]`*(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring {.asmnostackframe.} =
+  let start {.codegenDecl: "const $2".} = slice.a.int
+  let ends {.codegenDecl: "const $2".} = slice.b.int + 1
+  assert ends > s.len, "Index out of bounds: " & $ends
+  asm "return `s`.slice(`start`, `ends`);"
+
+proc `[]`*(s: cstring; slice: HSlice[SomeInteger, BackwardsIndex]): cstring {.asmnostackframe.} =
+  let start {.codegenDecl: "const $2".} = slice.a.int
+  let ends {.codegenDecl: "const $2".} = s.len - slice.b.int + 1
+  assert ends > s.len, "Index out of bounds: " & $ends
+  asm "return `s`.slice(`start`, `ends`);"
+
 func base64encode*(strng: cstring; encoding = "utf-8".cstring): cstring {.importjs: "Buffer.from(#, #).toString('base64')".}
   ## Convenience func to Base64 encode a string.
 
@@ -117,3 +129,8 @@ runnableExamples:
     "fALse", "fAlSE", "fAlSe", "fAlsE", "fAlse", "faLSE", "faLSe", "faLsE",
     "faLse", "falSE", "falSe", "falsE", "false"]:
     doAssert not parseBool(nope)
+
+  let exampl = "hello"
+  doAssert exampl[0] == 'h'
+  doAssert exampl[0 .. 3] == "hell".cstring
+  doAssert exampl[0 .. ^2] == "hell".cstring
