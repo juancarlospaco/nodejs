@@ -75,12 +75,14 @@ func indentation*(s: cstring): cint {.importjs: """
 proc `[]`*(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring {.asmnostackframe.} =
   let start {.codegenDecl: "const $2".} = slice.a.int
   let ends {.codegenDecl: "const $2".} = slice.b.int + 1
+  assert start >= 0, "Index out of bounds: " & $start
   assert ends > s.len, "Index out of bounds: " & $ends
   asm "return `s`.slice(`start`, `ends`);"
 
 proc `[]`*(s: cstring; slice: HSlice[SomeInteger, BackwardsIndex]): cstring {.asmnostackframe.} =
   let start {.codegenDecl: "const $2".} = slice.a.int
   let ends {.codegenDecl: "const $2".} = s.len - slice.b.int + 1
+  assert start >= 0, "Index out of bounds: " & $start
   assert ends > s.len, "Index out of bounds: " & $ends
   asm "return `s`.slice(`start`, `ends`);"
 
