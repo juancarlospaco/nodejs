@@ -5,6 +5,7 @@ when defined(js) and not defined(nodejs):
   {.warning: "Module NodeJS is designed to be used with the NodeJS.".}
 
 import
+  nodejs/jscore,
   nodejs/jsassert,
   nodejs/jsasynchooks,
   nodejs/jsdns,
@@ -22,6 +23,7 @@ import
   nodejs/jsugar
 
 export
+  jscore,
   jsassert,
   jsasynchooks,
   jsdns,
