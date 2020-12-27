@@ -180,6 +180,8 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">parseUInt
       <li><a class="reference" href="#parseUInt%2Ccstring"
     title="parseUInt(s: cstring): uint">parseUInt,<wbr>cstring</a></li>
+  <li><a class="reference" href="#parseUInt%2Cchar"
+    title="parseUInt(s: char): uint">parseUInt,<wbr>char</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">shuffle
@@ -330,6 +332,13 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 <a id="parseUInt,cstring"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Ccstring"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="parseUInt,char"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Cchar"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -534,7 +543,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 15:49:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 17:29:20 UTC</small>
       </div>
     </div>
   </div>
