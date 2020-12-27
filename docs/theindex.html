@@ -65,14 +65,14 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%26amp%3B%60" href="#%60%26amp%3B%60"><span>`&amp;`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: `&amp;`(a: char; b: cstring): cstring" href="nodejs/jsugar.html#%26%2Cchar%2Ccstring">jsugar: `&amp;`(a: char; b: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: `&amp;`(a: char; b: cstring): cstring" href="nodejs/jscore.html#%26%2Cchar%2Ccstring">jscore: `&amp;`(a: char; b: cstring): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: `&amp;`(a: cstring; b: char): cstring" href="nodejs/jsugar.html#%26%2Ccstring%2Cchar">jsugar: `&amp;`(a: cstring; b: char): cstring</a></li>
+          data-doc-search-tag="jscore: `&amp;`(a: cstring; b: char): cstring" href="nodejs/jscore.html#%26%2Ccstring%2Cchar">jscore: `&amp;`(a: cstring; b: char): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: `&amp;`(a, b: cstring): cstring" href="nodejs/jsugar.html#%26%2Ccstring%2Ccstring">jsugar: `&amp;`(a, b: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: `&amp;`(a, b: cstring): cstring" href="nodejs/jscore.html#%26%2Ccstring%2Ccstring">jscore: `&amp;`(a, b: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="%60/%60" href="#%60/%60"><span>`/`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -156,11 +156,11 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="base64decode" href="#base64decode"><span>base64decode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring" href="nodejs/jsugar.html#base64decode%2Ccstring">jsugar: base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring</a></li>
+          data-doc-search-tag="jscore: base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring" href="nodejs/jscore.html#base64decode%2Ccstring">jscore: base64decode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="base64encode" href="#base64encode"><span>base64encode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring" href="nodejs/jsugar.html#base64encode%2Ccstring">jsugar: base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring</a></li>
+          data-doc-search-tag="jscore: base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring" href="nodejs/jscore.html#base64encode%2Ccstring">jscore: base64encode(strng: cstring; encoding = &quot;utf-8&quot;.cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="basename" href="#basename"><span>basename:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -442,7 +442,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="capitalizeAscii" href="#capitalizeAscii"><span>capitalizeAscii:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: capitalizeAscii(s: cstring): cstring" href="nodejs/jsugar.html#capitalizeAscii%2Ccstring">jsugar: capitalizeAscii(s: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: capitalizeAscii(s: cstring): cstring" href="nodejs/jscore.html#capitalizeAscii%2Ccstring">jscore: capitalizeAscii(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="chdir" href="#chdir"><span>chdir:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -494,9 +494,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="contains" href="#contains"><span>contains:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: contains(a: cstring; b: char): bool" href="nodejs/jsugar.html#contains%2Ccstring%2Cchar">jsugar: contains(a: cstring; b: char): bool</a></li>
+          data-doc-search-tag="jscore: contains(a: cstring; b: char): bool" href="nodejs/jscore.html#contains%2Ccstring%2Cchar">jscore: contains(a: cstring; b: char): bool</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: contains(a, b: cstring): bool" href="nodejs/jsugar.html#contains%2Ccstring%2Ccstring">jsugar: contains(a, b: cstring): bool</a></li>
+          data-doc-search-tag="jscore: contains(a, b: cstring): bool" href="nodejs/jscore.html#contains%2Ccstring%2Ccstring">jscore: contains(a, b: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="copyFile" href="#copyFile"><span>copyFile:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -540,7 +540,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="deduplicate" href="#deduplicate"><span>deduplicate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: deduplicate[T](arrai: openArray[T]): seq[T]" href="nodejs/jsugar.html#deduplicate%2CopenArray%5BT%5D">jsugar: deduplicate[T](arrai: openArray[T]): seq[T]</a></li>
+          data-doc-search-tag="jscore: deduplicate[T](arrai: openArray[T]): seq[T]" href="nodejs/jscore.html#deduplicate%2CopenArray%5BT%5D">jscore: deduplicate[T](arrai: openArray[T]): seq[T]</a></li>
           </ul></dd>
 <dt><a name="deepStrictEqual" href="#deepStrictEqual"><span>deepStrictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -788,7 +788,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="endsWith" href="#endsWith"><span>endsWith:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: endsWith(a, b: cstring): bool" href="nodejs/jsugar.html#endsWith%2Ccstring%2Ccstring">jsugar: endsWith(a, b: cstring): bool</a></li>
+          data-doc-search-tag="jscore: endsWith(a, b: cstring): bool" href="nodejs/jscore.html#endsWith%2Ccstring%2Ccstring">jscore: endsWith(a, b: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="ENETDOWN" href="#ENETDOWN"><span>ENETDOWN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1024,9 +1024,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="find" href="#find"><span>find:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: find(s: cstring; ss: char): int" href="nodejs/jsugar.html#find%2Ccstring%2Cchar">jsugar: find(s: cstring; ss: char): int</a></li>
+          data-doc-search-tag="jscore: find(s: cstring; ss: char): int" href="nodejs/jscore.html#find%2Ccstring%2Cchar">jscore: find(s: cstring; ss: char): int</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: find(s: cstring; ss: cstring): int" href="nodejs/jsugar.html#find%2Ccstring%2Ccstring">jsugar: find(s: cstring; ss: cstring): int</a></li>
+          data-doc-search-tag="jscore: find(s: cstring; ss: cstring): int" href="nodejs/jscore.html#find%2Ccstring%2Ccstring">jscore: find(s: cstring; ss: cstring): int</a></li>
           </ul></dd>
 <dt><a name="F_OK" href="#F_OK"><span>F_OK:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1198,7 +1198,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="indentation" href="#indentation"><span>indentation:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: indentation(s: cstring): cint" href="nodejs/jsugar.html#indentation%2Ccstring">jsugar: indentation(s: cstring): cint</a></li>
+          data-doc-search-tag="jscore: indentation(s: cstring): cint" href="nodejs/jscore.html#indentation%2Ccstring">jscore: indentation(s: cstring): cint</a></li>
           </ul></dd>
 <dt><a name="INFLATE" href="#INFLATE"><span>INFLATE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1348,7 +1348,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isDigit" href="#isDigit"><span>isDigit:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: isDigit(c: char): bool" href="nodejs/jsugar.html#isDigit%2Cchar">jsugar: isDigit(c: char): bool</a></li>
+          data-doc-search-tag="jscore: isDigit(c: char): bool" href="nodejs/jscore.html#isDigit%2Cchar">jscore: isDigit(c: char): bool</a></li>
           </ul></dd>
 <dt><a name="isExternal" href="#isExternal"><span>isExternal:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1802,21 +1802,21 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="parseBool" href="#parseBool"><span>parseBool:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: parseBool(s: cstring): bool" href="nodejs/jsugar.html#parseBool%2Ccstring">jsugar: parseBool(s: cstring): bool</a></li>
+          data-doc-search-tag="jscore: parseBool(s: cstring): bool" href="nodejs/jscore.html#parseBool%2Ccstring">jscore: parseBool(s: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="parseFloat" href="#parseFloat"><span>parseFloat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: parseFloat(s: cstring): BiggestFloat" href="nodejs/jsugar.html#parseFloat%2Ccstring">jsugar: parseFloat(s: cstring): BiggestFloat</a></li>
+          data-doc-search-tag="jscore: parseFloat(s: cstring): BiggestFloat" href="nodejs/jscore.html#parseFloat%2Ccstring">jscore: parseFloat(s: cstring): BiggestFloat</a></li>
           </ul></dd>
 <dt><a name="parseInt" href="#parseInt"><span>parseInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: parseInt(s: char): cint" href="nodejs/jsugar.html#parseInt%2Cchar">jsugar: parseInt(s: char): cint</a></li>
+          data-doc-search-tag="jscore: parseInt(s: char): cint" href="nodejs/jscore.html#parseInt%2Cchar">jscore: parseInt(s: char): cint</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: parseInt(s: cstring): cint" href="nodejs/jsugar.html#parseInt%2Ccstring">jsugar: parseInt(s: cstring): cint</a></li>
+          data-doc-search-tag="jscore: parseInt(s: cstring): cint" href="nodejs/jscore.html#parseInt%2Ccstring">jscore: parseInt(s: cstring): cint</a></li>
           </ul></dd>
 <dt><a name="parseUInt" href="#parseUInt"><span>parseUInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: parseUInt(s: cstring): uint" href="nodejs/jsugar.html#parseUInt%2Ccstring">jsugar: parseUInt(s: cstring): uint</a></li>
+          data-doc-search-tag="jscore: parseUInt(s: cstring): uint" href="nodejs/jscore.html#parseUInt%2Ccstring">jscore: parseUInt(s: cstring): uint</a></li>
           </ul></dd>
 <dt><a name="pastDays" href="#pastDays"><span>pastDays:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1944,17 +1944,17 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="repeat" href="#repeat"><span>repeat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: repeat(s: char; n: Natural): cstring" href="nodejs/jsugar.html#repeat%2Cchar%2CNatural">jsugar: repeat(s: char; n: Natural): cstring</a></li>
+          data-doc-search-tag="jscore: repeat(s: char; n: Natural): cstring" href="nodejs/jscore.html#repeat%2Cchar%2CNatural">jscore: repeat(s: char; n: Natural): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: repeat(s: cstring; n: Natural): cstring" href="nodejs/jsugar.html#repeat%2Ccstring%2CNatural">jsugar: repeat(s: cstring; n: Natural): cstring</a></li>
+          data-doc-search-tag="jscore: repeat(s: cstring; n: Natural): cstring" href="nodejs/jscore.html#repeat%2Ccstring%2CNatural">jscore: repeat(s: cstring; n: Natural): cstring</a></li>
           </ul></dd>
 <dt><a name="replace" href="#replace"><span>replace:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Cchar">jsugar: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring</a></li>
+          data-doc-search-tag="jscore: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring" href="nodejs/jscore.html#replace%2Ccstring%2Cchar">jscore: replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: replace(s: cstring; sub: char; by: char): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Cchar%2Cchar">jsugar: replace(s: cstring; sub: char; by: char): cstring</a></li>
+          data-doc-search-tag="jscore: replace(s: cstring; sub: char; by: char): cstring" href="nodejs/jscore.html#replace%2Ccstring%2Cchar%2Cchar">jscore: replace(s: cstring; sub: char; by: char): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring" href="nodejs/jsugar.html#replace%2Ccstring%2Ccstring">jsugar: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring</a></li>
+          data-doc-search-tag="jscore: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring" href="nodejs/jscore.html#replace%2Ccstring%2Ccstring">jscore: replace(s, sub: cstring; by = &quot;&quot;.cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="reportCompact" href="#reportCompact"><span>reportCompact:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2200,7 +2200,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="shuffle" href="#shuffle"><span>shuffle:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: shuffle(arrai: openArray[any]): seq[any]" href="nodejs/jsugar.html#shuffle%2CopenArray%5Bany%5D">jsugar: shuffle(arrai: openArray[any]): seq[any]</a></li>
+          data-doc-search-tag="jscore: shuffle(arrai: openArray[any]): seq[any]" href="nodejs/jscore.html#shuffle%2CopenArray%5Bany%5D">jscore: shuffle(arrai: openArray[any]): seq[any]</a></li>
           </ul></dd>
 <dt><a name="S_IFBLK" href="#S_IFBLK"><span>S_IFBLK:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2416,7 +2416,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="slice" href="#slice"><span>slice:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: slice(s: cstring; start: cint; ends: cint): cstring" href="nodejs/jsugar.html#slice%2Ccstring%2Ccint%2Ccint">jsugar: slice(s: cstring; start: cint; ends: cint): cstring</a></li>
+          data-doc-search-tag="jscore: slice(s: cstring; start: cint; ends: cint): cstring" href="nodejs/jscore.html#slice%2Ccstring%2Ccint%2Ccint">jscore: slice(s: cstring; start: cint; ends: cint): cstring</a></li>
           </ul></dd>
 <dt><a name="sparkline" href="#sparkline"><span>sparkline:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2424,13 +2424,13 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="split" href="#split"><span>split:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: split(a: cstring; b: char): seq[cstring]" href="nodejs/jsugar.html#split%2Ccstring%2Cchar">jsugar: split(a: cstring; b: char): seq[cstring]</a></li>
+          data-doc-search-tag="jscore: split(a: cstring; b: char): seq[cstring]" href="nodejs/jscore.html#split%2Ccstring%2Cchar">jscore: split(a: cstring; b: char): seq[cstring]</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: split(a: cstring; b: cstring): seq[cstring]" href="nodejs/jsugar.html#split%2Ccstring%2Ccstring">jsugar: split(a: cstring; b: cstring): seq[cstring]</a></li>
+          data-doc-search-tag="jscore: split(a: cstring; b: cstring): seq[cstring]" href="nodejs/jscore.html#split%2Ccstring%2Ccstring">jscore: split(a: cstring; b: cstring): seq[cstring]</a></li>
           </ul></dd>
 <dt><a name="startsWith" href="#startsWith"><span>startsWith:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: startsWith(a, b: cstring): bool" href="nodejs/jsugar.html#startsWith%2Ccstring%2Ccstring">jsugar: startsWith(a, b: cstring): bool</a></li>
+          data-doc-search-tag="jscore: startsWith(a, b: cstring): bool" href="nodejs/jscore.html#startsWith%2Ccstring%2Ccstring">jscore: startsWith(a, b: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="stat" href="#stat"><span>stat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2448,7 +2448,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="strip" href="#strip"><span>strip:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: strip(s: cstring): cstring" href="nodejs/jsugar.html#strip%2Ccstring">jsugar: strip(s: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: strip(s: cstring): cstring" href="nodejs/jscore.html#strip%2Ccstring">jscore: strip(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="symlink" href="#symlink"><span>symlink:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2494,9 +2494,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="toLowerAscii" href="#toLowerAscii"><span>toLowerAscii:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: toLowerAscii(c: char): cstring" href="nodejs/jsugar.html#toLowerAscii%2Cchar">jsugar: toLowerAscii(c: char): cstring</a></li>
+          data-doc-search-tag="jscore: toLowerAscii(c: char): cstring" href="nodejs/jscore.html#toLowerAscii%2Cchar">jscore: toLowerAscii(c: char): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: toLowerAscii(s: cstring): cstring" href="nodejs/jsugar.html#toLowerAscii%2Ccstring">jsugar: toLowerAscii(s: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: toLowerAscii(s: cstring): cstring" href="nodejs/jscore.html#toLowerAscii%2Ccstring">jscore: toLowerAscii(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="toNamespacedPath" href="#toNamespacedPath"><span>toNamespacedPath:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2520,9 +2520,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="toUpperAscii" href="#toUpperAscii"><span>toUpperAscii:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: toUpperAscii(c: char): cstring" href="nodejs/jsugar.html#toUpperAscii%2Cchar">jsugar: toUpperAscii(c: char): cstring</a></li>
+          data-doc-search-tag="jscore: toUpperAscii(c: char): cstring" href="nodejs/jscore.html#toUpperAscii%2Cchar">jscore: toUpperAscii(c: char): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsugar: toUpperAscii(s: cstring): cstring" href="nodejs/jsugar.html#toUpperAscii%2Ccstring">jsugar: toUpperAscii(s: cstring): cstring</a></li>
+          data-doc-search-tag="jscore: toUpperAscii(s: cstring): cstring" href="nodejs/jscore.html#toUpperAscii%2Ccstring">jscore: toUpperAscii(s: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="triggerAsyncId" href="#triggerAsyncId"><span>triggerAsyncId:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2885,7 +2885,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-25 11:35:03 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 15:49:48 UTC</small>
       </div>
     </div>
   </div>
