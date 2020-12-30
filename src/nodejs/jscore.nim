@@ -1,6 +1,7 @@
 ## * Core, primitives, basic proc, string basics, for JavaScript.
+from jsre import RegExp
 import jsffi
-export jsffi
+export jsffi, RegExp
 
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
 
@@ -9,6 +10,14 @@ func `&`*(a: cstring, b: char): cstring {.importjs: "(# + String.fromCharCode(#)
 func `&`*(a: char, b: cstring): cstring {.importjs: "(String.fromCharCode(#) + #)".}
 
 func strip*(s: cstring): cstring {.importjs: "#.trim()".}
+
+func strip*(s: cstring; leading: bool; trailing: bool): cstring {.importjs: """
+  (() => {
+    let result = #;
+    if (#) { result = result.trimStart() }
+    if (#) { result = result.trimEnd()   }
+    return result;
+  })()""".}
 
 func startsWith*(a, b: cstring): bool {.importjs: "#.startsWith(#)".}
 
@@ -33,11 +42,7 @@ func isDigit*(c: char): bool {.importjs: "(() => { const c = #; return (c >= '0'
 func capitalizeAscii*(s: cstring): cstring {.importjs: """
   (() => { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()""".}
 
-func repeat*(s: cstring; n: Natural): cstring {.importjs: """
-  (() => { const s = #; const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
-
-func repeat*(s: char; n: Natural): cstring {.importjs: """
-  (() => { const s = String.fromCharCode(#); const n = #; return n < 1 ? '' : new Array(n + 1).join(s) })()""".}
+func repeat*(s: cstring; n: Natural): cstring {.importjs: "#.repeat(#)".}
 
 func find*(s: cstring; ss: cstring): int {.importjs: "#.indexOf(#)".}
 
@@ -85,6 +90,20 @@ proc `[]`*(s: cstring; slice: HSlice[SomeInteger, BackwardsIndex]): cstring {.as
   assert start >= 0, "Index out of bounds: " & $start
   assert ends > s.len, "Index out of bounds: " & $ends
   asm "return `s`.slice(`start`, `ends`);"
+
+func normalize*(strng: cstring; form = "NFC".cstring): cstring {.importjs: "#.normalize(#)".}
+
+func replace*(strng: cstring; regex: RegExp; by = "".cstring): cstring {.importjs: "#.replace(#, #)".}
+
+func replaceAll*(strng: cstring; regex: RegExp; by = "".cstring): cstring {.importjs: "#.replaceAll(#, #)".}
+
+func split*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "#.split(#)".}
+
+func match*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "#.match(#)".}
+
+func matchAll*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "Array.from(#.matchAll(#))".}
+
+func find*(strng: cstring; regex: RegExp): cint {.importjs: "#.search(#)".}
 
 func base64encode*(strng: cstring; encoding = "utf-8".cstring): cstring {.importjs: "Buffer.from(#, #).toString('base64')".}
   ## Convenience func to Base64 encode a string.
