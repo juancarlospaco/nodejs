@@ -99,6 +99,8 @@ window.addEventListener('DOMContentLoaded', main);
       <ul class="simple nested-toc-section">strip
       <li><a class="reference" href="#strip%2Ccstring"
     title="strip(s: cstring): cstring">strip,<wbr>cstring</a></li>
+  <li><a class="reference" href="#strip%2Ccstring%2Cbool%2Cbool"
+    title="strip(s: cstring; leading: bool; trailing: bool): cstring">strip,<wbr>cstring,<wbr>bool,<wbr>bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">contains
@@ -120,6 +122,8 @@ window.addEventListener('DOMContentLoaded', main);
     title="replace(s: cstring; sub: char; by = &quot;&quot;.cstring): cstring">replace,<wbr>cstring,<wbr>char</a></li>
   <li><a class="reference" href="#replace%2Ccstring%2Cchar%2Cchar"
     title="replace(s: cstring; sub: char; by: char): cstring">replace,<wbr>cstring,<wbr>char,<wbr>char</a></li>
+  <li><a class="reference" href="#replace%2Ccstring%2CRegExp"
+    title="replace(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring">replace,<wbr>cstring,<wbr>RegExp</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">split
@@ -127,6 +131,8 @@ window.addEventListener('DOMContentLoaded', main);
     title="split(a: cstring; b: cstring): seq[cstring]">split,<wbr>cstring,<wbr>cstring</a></li>
   <li><a class="reference" href="#split%2Ccstring%2Cchar"
     title="split(a: cstring; b: char): seq[cstring]">split,<wbr>cstring,<wbr>char</a></li>
+  <li><a class="reference" href="#split%2Ccstring%2CRegExp"
+    title="split(strng: cstring; regex: RegExp): seq[cstring]">split,<wbr>cstring,<wbr>RegExp</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">capitalizeAscii
@@ -170,11 +176,19 @@ window.addEventListener('DOMContentLoaded', main);
     title="parseInt(s: char): cint">parseInt,<wbr>char</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">match
+      <li><a class="reference" href="#match%2Ccstring%2CRegExp"
+    title="match(strng: cstring; regex: RegExp): seq[cstring]">match,<wbr>cstring,<wbr>RegExp</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">replaceAll
+      <li><a class="reference" href="#replaceAll%2Ccstring%2CRegExp"
+    title="replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring">replaceAll,<wbr>cstring,<wbr>RegExp</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">repeat
       <li><a class="reference" href="#repeat%2Ccstring%2CNatural"
     title="repeat(s: cstring; n: Natural): cstring">repeat,<wbr>cstring,<wbr>Natural</a></li>
-  <li><a class="reference" href="#repeat%2Cchar%2CNatural"
-    title="repeat(s: char; n: Natural): cstring">repeat,<wbr>char,<wbr>Natural</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">parseUInt
@@ -199,6 +213,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="endsWith(a, b: cstring): bool">endsWith,<wbr>cstring,<wbr>cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">normalize
+      <li><a class="reference" href="#normalize%2Ccstring"
+    title="normalize(strng: cstring; form = &quot;NFC&quot;.cstring): cstring">normalize,<wbr>cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">toUpperAscii
       <li><a class="reference" href="#toUpperAscii%2Ccstring"
     title="toUpperAscii(s: cstring): cstring">toUpperAscii,<wbr>cstring</a></li>
@@ -211,6 +230,13 @@ window.addEventListener('DOMContentLoaded', main);
     title="find(s: cstring; ss: cstring): int">find,<wbr>cstring,<wbr>cstring</a></li>
   <li><a class="reference" href="#find%2Ccstring%2Cchar"
     title="find(s: cstring; ss: char): int">find,<wbr>cstring,<wbr>char</a></li>
+  <li><a class="reference" href="#find%2Ccstring%2CRegExp"
+    title="find(strng: cstring; regex: RegExp): cint">find,<wbr>cstring,<wbr>RegExp</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">matchAll
+      <li><a class="reference" href="#matchAll%2Ccstring%2CRegExp"
+    title="matchAll(strng: cstring; regex: RegExp): seq[cstring]">matchAll,<wbr>cstring,<wbr>RegExp</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">base64decode
@@ -314,6 +340,18 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="strip,cstring,bool,bool"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring%2Cbool%2Cbool"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">leading</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">trailing</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+    let result = #;
+    if (#) { result = result.trimStart() }
+    if (#) { result = result.trimEnd()   }
+    return result;
+  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="startsWith,cstring,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#startsWith%2Ccstring%2Ccstring"><span class="Identifier">startsWith</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.startsWith(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -393,14 +431,7 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 <a id="repeat,cstring,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; const n = #; return n &lt; 1 ? '' : new Array(n + 1).join(s) })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="repeat,char,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Cchar%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = String.fromCharCode(#); const n = #; return n &lt; 1 ? '' : new Array(n + 1).join(s) })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.repeat(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -523,6 +554,59 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 
 
 </dd>
+<a id="normalize,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">form</span> <span class="Other">=</span> <span class="StringLit">&quot;NFC&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.normalize(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="replace,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2CRegExp"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="replaceAll,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#replaceAll%2Ccstring%2CRegExp"><span class="Identifier">replaceAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replaceAll(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="split,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2CRegExp"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="match,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.match(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="matchAll,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#matchAll%2Ccstring%2CRegExp"><span class="Identifier">matchAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.matchAll(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="find,cstring,RegExp"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2CRegExp"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.search(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="base64encode,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#base64encode%2Ccstring"><span class="Identifier">base64encode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, #).toString(\'base64\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
@@ -571,7 +655,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-27 19:02:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-12-30 13:19:41 UTC</small>
       </div>
     </div>
   </div>
