@@ -1,6 +1,6 @@
 ## * Core, primitives, basic proc, string basics, for JavaScript.
-from jsre import RegExp
-import jsffi
+from std/jsre import RegExp
+import std/jsffi
 export jsffi, RegExp
 
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
@@ -18,10 +18,6 @@ func strip*(s: cstring; leading: bool; trailing: bool): cstring {.importjs: """
     if (#) { result = result.trimEnd()   }
     return result;
   })()""".}
-
-func startsWith*(a, b: cstring): bool {.importjs: "#.startsWith(#)".}
-
-func endsWith*(a, b: cstring): bool {.importjs: "#.endsWith(#)".}
 
 proc parseInt*(s: cstring): cint {.importjs: "parseInt(#, 10)".}
 
@@ -104,6 +100,7 @@ func match*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "#.match(#)
 func matchAll*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "Array.from(#.matchAll(#))".}
 
 func find*(strng: cstring; regex: RegExp): cint {.importjs: "#.search(#)".}
+
 
 func base64encode*(strng: cstring; encoding = "utf-8".cstring): cstring {.importjs: "Buffer.from(#, #).toString('base64')".}
   ## Convenience func to Base64 encode a string.
