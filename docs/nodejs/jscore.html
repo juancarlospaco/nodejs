@@ -135,9 +135,19 @@ window.addEventListener('DOMContentLoaded', main);
     title="split(strng: cstring; regex: RegExp): seq[cstring]">split,<wbr>cstring,<wbr>RegExp</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">toPrecision
+      <li><a class="reference" href="#toPrecision%2CSomeFloat%2CPositive"
+    title="toPrecision(n: SomeFloat; fractionDigits: Positive): cstring">toPrecision,<wbr>SomeFloat,<wbr>Positive</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">capitalizeAscii
       <li><a class="reference" href="#capitalizeAscii%2Ccstring"
     title="capitalizeAscii(s: cstring): cstring">capitalizeAscii,<wbr>cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isSafeInteger
+      <li><a class="reference" href="#isSafeInteger%2CSomeNumber"
+    title="isSafeInteger(n: SomeNumber): bool">isSafeInteger,<wbr>SomeNumber</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">&
@@ -181,6 +191,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring">replaceAll,<wbr>cstring,<wbr>RegExp</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">isFinite
+      <li><a class="reference" href="#isFinite%2CSomeNumber"
+    title="isFinite(n: SomeNumber): bool">isFinite,<wbr>SomeNumber</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">repeat
       <li><a class="reference" href="#repeat%2Ccstring%2CNatural"
     title="repeat(s: cstring; n: Natural): cstring">repeat,<wbr>cstring,<wbr>Natural</a></li>
@@ -215,6 +230,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="toUpperAscii(c: char): cstring">toUpperAscii,<wbr>char</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">toExponential
+      <li><a class="reference" href="#toExponential%2CSomeFloat%2CPositive"
+    title="toExponential(n: SomeFloat; fractionDigits: Positive): cstring">toExponential,<wbr>SomeFloat,<wbr>Positive</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">find
       <li><a class="reference" href="#find%2Ccstring%2Ccstring"
     title="find(s: cstring; ss: cstring): int">find,<wbr>cstring,<wbr>cstring</a></li>
@@ -222,6 +242,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="find(s: cstring; ss: char): int">find,<wbr>cstring,<wbr>char</a></li>
   <li><a class="reference" href="#find%2Ccstring%2CRegExp"
     title="find(strng: cstring; regex: RegExp): cint">find,<wbr>cstring,<wbr>RegExp</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">toFixed
+      <li><a class="reference" href="#toFixed%2CSomeFloat%2C"
+    title="toFixed(n: SomeFloat; digits: 0 .. 20): cstring">toFixed,<wbr>SomeFloat,<wbr></a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">isInteger
+      <li><a class="reference" href="#isInteger%2CSomeNumber"
+    title="isInteger(n: SomeNumber): bool">isInteger,<wbr>SomeNumber</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">matchAll
@@ -502,6 +532,50 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="isFinite,SomeNumber"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isFinite%2CSomeNumber"><span class="Identifier">isFinite</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isInteger,SomeNumber"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isInteger%2CSomeNumber"><span class="Identifier">isInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="isSafeInteger,SomeNumber"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#isSafeInteger%2CSomeNumber"><span class="Identifier">isSafeInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toFixed,SomeFloat,"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toFixed%2CSomeFloat%2C"><span class="Identifier">toFixed</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">digits</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">20</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toExponential,SomeFloat,Positive"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toExponential%2CSomeFloat%2CPositive"><span class="Identifier">toExponential</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="toPrecision,SomeFloat,Positive"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toPrecision%2CSomeFloat%2CPositive"><span class="Identifier">toPrecision</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="indentation,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const m = #.match(/^[\s\\t]*/gm);
@@ -631,7 +705,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-01 12:24:56 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-07 05:33:40 UTC</small>
       </div>
     </div>
   </div>
