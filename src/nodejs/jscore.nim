@@ -64,6 +64,18 @@ func replace*(s: cstring, sub: char, by: char): cstring {.importjs: "#.replace(S
 
 func slice*(s: cstring; start: cint, ends: cint): cstring {.importjs: "#.slice(#, #)".}
 
+func isFinite*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+
+func isInteger*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+
+func isSafeInteger*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+
+func toFixed*(n: SomeFloat; digits: 0..20): cstring {.importjs: "#.$1(#)".}
+
+func toExponential*(n: SomeFloat; fractionDigits: Positive): cstring {.importjs: "#.$1(#)".}
+
+func toPrecision*(n: SomeFloat; fractionDigits: Positive): cstring {.importjs: "#.$1(#)".}
+
 func indentation*(s: cstring): cint {.importjs: """
   (() => {
     const m = #.match(/^[\s\\t]*/gm);
