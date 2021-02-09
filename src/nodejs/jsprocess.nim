@@ -118,10 +118,10 @@ func setuid*(id: cint) {.importjs: "process.$1(#)".}
 func setuid*(id: cstring) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_setuid_id
 
-func umask*(mask: cstring): auto {.importjs: "process.$1(#)".}
+func umask*(mask: cstring): any {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
-func umask*(mask: cint): auto {.importjs: "process.$1(#)".}
+func umask*(mask: cint): any {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
 func uptimeProcess*(): cint {.importjs: "process.uptime()".}
