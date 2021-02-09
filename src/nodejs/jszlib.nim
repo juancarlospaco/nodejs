@@ -149,4 +149,4 @@ runnableExamples:
   # brotliCompress(s, foo)
   # gzip(s, foo)
   # deflate(s, foo)
-  # deflateRaw(s, foo)
+  deflateRaw(s, foo)
