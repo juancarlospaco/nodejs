@@ -37,7 +37,7 @@ func nextDays*(days = 7.cint): seq[JsObject] {.importjs: "[...Array(#).keys()].m
 func pastDays*(days = 7.cint): seq[JsObject] {.importjs: "[...Array(#).keys()].map(days => new Date(Date.now() - 86400000 * days))".}
   ## Convenience func to create an seq of the past days, inclusive.
 
-func sparkline*(numbers: openarray[cint]; minimum: cint; maximum: cint): cstring {.asmnostackframe.} = {.emit: """
+func sparkline*(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring {.asmNoStackFrame.} = {.emit: """
   const ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
   if (`minimum` === `maximum` && `maximum` !== 0) {
     ticks = [ticks[4]];
@@ -142,11 +142,11 @@ func daysBetweenYears*(fromYear, toYear: Positive): int =
   template daysBetweenYearsImpl(a): int = a * 365 + a div 4 - a div 100 + a div 400
   result = daysBetweenYearsImpl(toYear - 1) - daysBetweenYearsImpl(fromYear - 1)
 
-func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
-  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+# func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
+#   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
-func `?.`(leftSide: auto, rightSide: auto) {.importjs: "#?.#".}
-  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+# func `?.`(leftSide: auto, rightSide: auto) {.importjs: "#?.#".}
+#   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 
 runnableExamples:
