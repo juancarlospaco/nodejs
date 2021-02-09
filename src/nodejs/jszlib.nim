@@ -147,6 +147,6 @@ runnableExamples:
   const s = "My Imagination Is Very Limited. It Usually Involves Inflicting Pain In Ways That May Not Have Occurred To Most.".cstring
   proc foo() = echo "callback called"
   # brotliCompress(s, foo)
-  gzip(s, foo)
-  deflate(s, foo)
-  deflateRaw(s, foo)
+  # gzip(s, foo)
+  # deflate(s, foo)
+  # deflateRaw(s, foo)
