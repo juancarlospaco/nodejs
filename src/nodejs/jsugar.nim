@@ -60,12 +60,12 @@ template iife*(code: untyped): untyped =
   code
   {.emit: "})();".}
 
-template `::=`*(name: untyped; value: any): untyped =
+template `::=`*(name: untyped; value: auto): untyped =
   ## Convenience template for a JavaScript `const` (Nim `var`).
   ## Other libs already use `:=` then we use `::=`, because `:==` looks like a comparison.
   var name {.codegenDecl: "const $2", exportc: astToStr(name).} = value
 
-func jsexport*(symbols: any) {.importjs: "export { @ }", varargs.}
+func jsexport*(symbols: auto) {.importjs: "export { @ }", varargs.}
   ## Convenience alias for `export { symbol, symbol, symbol };`
 
 func nth*(someOrdinalInteger: cint): cstring {.importjs: """
@@ -142,10 +142,10 @@ func daysBetweenYears*(fromYear, toYear: Positive): int =
   template daysBetweenYearsImpl(a): int = a * 365 + a div 4 - a div 100 + a div 400
   result = daysBetweenYearsImpl(toYear - 1) - daysBetweenYearsImpl(fromYear - 1)
 
-func `|>`(leftSide: any, rightSide: any) {.importjs: "(# |> #)".}
+func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
-func `?.`(leftSide: any, rightSide: any) {.importjs: "#?.#".}
+func `?.`(leftSide: auto, rightSide: auto) {.importjs: "#?.#".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 

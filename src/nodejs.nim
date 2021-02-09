@@ -20,6 +20,7 @@ import
   nodejs/jsquerystring,
   nodejs/jsutils,
   nodejs/jszlib,
+  nodejs/jsreadline,
   nodejs/jsugar
 
 export
@@ -38,4 +39,5 @@ export
   jsquerystring,
   jsutils,
   jszlib,
+  jsreadline,
   jsugar

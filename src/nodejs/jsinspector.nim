@@ -8,22 +8,22 @@ func requireInspector*() {.importjs: "const inspector = require('inspector')@".}
 func close*(): cstring {.importjs: "inspector.$1()".}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_close
 
-func inspectorConsoleLog*(args: any): cstring {.importjs: "inspector.console.log(@)", varargs.}
+func inspectorConsoleLog*(args: auto): cstring {.importjs: "inspector.console.log(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
-func inspectorConsoleInfo*(args: any): cstring {.importjs: "inspector.console.info(@)", varargs.}
+func inspectorConsoleInfo*(args: auto): cstring {.importjs: "inspector.console.info(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
-func inspectorConsoleWarn*(args: any): cstring {.importjs: "inspector.console.warn(@)", varargs.}
+func inspectorConsoleWarn*(args: auto): cstring {.importjs: "inspector.console.warn(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
-func inspectorConsoleDebug*(args: any): cstring {.importjs: "inspector.console.debug(@)", varargs.}
+func inspectorConsoleDebug*(args: auto): cstring {.importjs: "inspector.console.debug(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
-func inspectorConsoleError*(args: any): cstring {.importjs: "inspector.console.error(@)", varargs.}
+func inspectorConsoleError*(args: auto): cstring {.importjs: "inspector.console.error(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
-func inspectorConsoleTrace*(args: any): cstring {.importjs: "inspector.console.trace(@)", varargs.}
+func inspectorConsoleTrace*(args: auto): cstring {.importjs: "inspector.console.trace(@)", varargs.}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_console
 
 func inspectorConsoleClear*(): cstring {.importjs: "inspector.console.clear()".}

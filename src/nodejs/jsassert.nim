@@ -13,14 +13,14 @@ func requireAssertStrict*() {.importjs: "const assert = require('assert').strict
 func newAssertionError*(): cstring {.importjs: "JSON.stringify(new assert.AssertionError({}))".}
   ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
 
-func newAssertionError*(message: cstring; actual: any; expected: any; operator: cstring): cstring {.importjs:
+func newAssertionError*(message: cstring; actual: auto; expected: auto; operator: cstring): cstring {.importjs:
   "JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))".}
   ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
 
-func deepStrictEqual*(actual: any; expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+func deepStrictEqual*(actual: auto; expected: auto; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
-func deepStrictEqual*(actual: any; expected: any) {.importjs: "assert.$1(#, #)".}
+func deepStrictEqual*(actual: auto; expected: auto) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message
 
 func doesNotMatch*(stryng: cstring; regexp: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
@@ -53,13 +53,13 @@ func doesNotThrow*[T](function: T; error: RegExp) {.importjs: "assert.$1(#, #)".
 func doesNotThrow*[T](function: T; error: T) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message
 
-func strictEqual*(actual, expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+func strictEqual*(actual, expected: auto; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message
 
-func strictEqual*(actual, expected: any) {.importjs: "assert.$1(#, #)".}
+func strictEqual*(actual, expected: auto) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message
 
-func ifError*(value: any) {.importjs: "assert.$1(#)".}
+func ifError*(value: auto) {.importjs: "assert.$1(#)".}
   ## https://nodejs.org/api/assert.html#assert_assert_iferror_value
 
 func match*(stryng: cstring; regexp: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
@@ -68,22 +68,22 @@ func match*(stryng: cstring; regexp: RegExp; message: cstring) {.importjs: "asse
 func match*(stryng: cstring; regexp: RegExp) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message
 
-func notDeepStrictEqual*(actual, expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+func notDeepStrictEqual*(actual, expected: auto; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message
 
-func notDeepStrictEqual*(actual, expected: any) {.importjs: "assert.$1(#, #)".}
+func notDeepStrictEqual*(actual, expected: auto) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message
 
-func notStrictEqual*(actual, expected: any; message: cstring) {.importjs: "assert.$1(#, #, #)".}
+func notStrictEqual*(actual, expected: auto; message: cstring) {.importjs: "assert.$1(#, #, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message
 
-func notStrictEqual*(actual, expected: any) {.importjs: "assert.$1(#, #)".}
+func notStrictEqual*(actual, expected: auto) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message
 
-func ok*(value: any; message: cstring) {.importjs: "assert.$1(#, #)".}
+func ok*(value: auto; message: cstring) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_ok_value_message
 
-func ok*(value: any) {.importjs: "assert.$1(#)".}
+func ok*(value: auto) {.importjs: "assert.$1(#)".}
   ## https://nodejs.org/api/assert.html#assert_assert_ok_value_message
 
 func rejects*[T](asyncFunction: T; error: RegExp; message: cstring) {.importjs: "assert.$1(#, #, #)".}
