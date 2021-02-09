@@ -148,5 +148,5 @@ runnableExamples:
   proc foo() = echo "callback called"
   # brotliCompress(s, foo)
   # gzip(s, foo)
-  # deflate(s, foo)
-  deflateRaw(s, foo)
+  deflate(s, foo)
+  # deflateRaw(s, foo)
