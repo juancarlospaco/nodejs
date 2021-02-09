@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%26amp%3B%60" href="#%60%26amp%3B%60"><span>`&amp;`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jscore: `&amp;`(a: char; b: cstring): cstring" href="nodejs/jscore.html#%26%2Cchar%2Ccstring">jscore: `&amp;`(a: char; b: cstring): cstring</a></li>
@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="%60%3A%3A%3D%60" href="#%60%3A%3A%3D%60"><span>`::=`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: `::=`(name: untyped; value: any): untyped" href="nodejs/jsugar.html#%3A%3A%3D.t%2Cuntyped%2Cany">jsugar: `::=`(name: untyped; value: any): untyped</a></li>
+          data-doc-search-tag="jsugar: `::=`(name: untyped; value: auto): untyped" href="nodejs/jsugar.html#%3A%3A%3D.t%2Cuntyped%2Cauto">jsugar: `::=`(name: untyped; value: auto): untyped</a></li>
           </ul></dd>
 <dt><a name="%60%5B%5D%60" href="#%60%5B%5D%60"><span>`[]`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -474,11 +474,19 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: chownSync(path: cstring; uid: cint; gid: cint)" href="nodejs/jsfs.html#chownSync%2Ccstring%2Ccint%2Ccint">jsfs: chownSync(path: cstring; uid: cint; gid: cint)</a></li>
           </ul></dd>
+<dt><a name="clearLine" href="#clearLine"><span>clearLine:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: clearLine(s = &quot;process.stout&quot;.cstring; dir = 0.cint): bool" href="nodejs/jsreadline.html#clearLine">jsreadline: clearLine(s = &quot;process.stout&quot;.cstring; dir = 0.cint): bool</a></li>
+          </ul></dd>
 <dt><a name="clearMarks" href="#clearMarks"><span>clearMarks:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsperfhooks: clearMarks()" href="nodejs/jsperfhooks.html#clearMarks">jsperfhooks: clearMarks()</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsperfhooks: clearMarks(name: cstring)" href="nodejs/jsperfhooks.html#clearMarks%2Ccstring">jsperfhooks: clearMarks(name: cstring)</a></li>
+          </ul></dd>
+<dt><a name="clearScreenDown" href="#clearScreenDown"><span>clearScreenDown:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: clearScreenDown(s = &quot;process.stout&quot;.cstring): bool" href="nodejs/jsreadline.html#clearScreenDown">jsreadline: clearScreenDown(s = &quot;process.stout&quot;.cstring): bool</a></li>
           </ul></dd>
 <dt><a name="close" href="#close"><span>close:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -528,6 +536,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsfs: copyFileSync(src, dest: cstring; mode: cint)" href="nodejs/jsfs.html#copyFileSync%2Ccstring%2Ccstring%2Ccint">jsfs: copyFileSync(src, dest: cstring; mode: cint)</a></li>
           </ul></dd>
+<dt><a name="cursorTo" href="#cursorTo"><span>cursorTo:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: cursorTo(s = &quot;process.stout&quot;.cstring; x = 0.cint; y = 0.cint): bool" href="nodejs/jsreadline.html#cursorTo">jsreadline: cursorTo(s = &quot;process.stout&quot;.cstring; x = 0.cint; y = 0.cint): bool</a></li>
+          </ul></dd>
 <dt><a name="cwd" href="#cwd"><span>cwd:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: cwd(): cstring" href="nodejs/jsprocess.html#cwd">jsprocess: cwd(): cstring</a></li>
@@ -550,9 +562,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="deepStrictEqual" href="#deepStrictEqual"><span>deepStrictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: deepStrictEqual(actual: any; expected: any)" href="nodejs/jsassert.html#deepStrictEqual%2Cany%2Cany">jsassert: deepStrictEqual(actual: any; expected: any)</a></li>
+          data-doc-search-tag="jsassert: deepStrictEqual(actual: auto; expected: auto)" href="nodejs/jsassert.html#deepStrictEqual%2Cauto%2Cauto">jsassert: deepStrictEqual(actual: auto; expected: auto)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: deepStrictEqual(actual: any; expected: any; message: cstring)" href="nodejs/jsassert.html#deepStrictEqual%2Cany%2Cany%2Ccstring">jsassert: deepStrictEqual(actual: any; expected: any; message: cstring)</a></li>
+          data-doc-search-tag="jsassert: deepStrictEqual(actual: auto; expected: auto; message: cstring)" href="nodejs/jsassert.html#deepStrictEqual%2Cauto%2Cauto%2Ccstring">jsassert: deepStrictEqual(actual: auto; expected: auto; message: cstring)</a></li>
           </ul></dd>
 <dt><a name="DEFLATE" href="#DEFLATE"><span>DEFLATE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1138,7 +1150,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="ifError" href="#ifError"><span>ifError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: ifError(value: any)" href="nodejs/jsassert.html#ifError%2Cany">jsassert: ifError(value: any)</a></li>
+          data-doc-search-tag="jsassert: ifError(value: auto)" href="nodejs/jsassert.html#ifError%2Cauto">jsassert: ifError(value: auto)</a></li>
           </ul></dd>
 <dt><a name="iife" href="#iife"><span>iife:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1188,6 +1200,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsquerystring: importQuerystring()" href="nodejs/jsquerystring.html#importQuerystring">jsquerystring: importQuerystring()</a></li>
           </ul></dd>
+<dt><a name="importReadline" href="#importReadline"><span>importReadline:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: importReadline()" href="nodejs/jsreadline.html#importReadline">jsreadline: importReadline()</a></li>
+          </ul></dd>
 <dt><a name="importUtil" href="#importUtil"><span>importUtil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsutils: importUtil()" href="nodejs/jsutils.html#importUtil">jsutils: importUtil()</a></li>
@@ -1232,7 +1248,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="inspect" href="#inspect"><span>inspect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: inspect(objec: any; showHidden = false; depth = 2.cint; colors = false)" href="nodejs/jsutils.html#inspect%2Cany">jsutils: inspect(objec: any; showHidden = false; depth = 2.cint; colors = false)</a></li>
+          data-doc-search-tag="jsutils: inspect(objec: auto; showHidden = false; depth = 2.cint; colors = false)" href="nodejs/jsutils.html#inspect%2Cauto">jsutils: inspect(objec: auto; showHidden = false; depth = 2.cint; colors = false)</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleClear" href="#inspectorConsoleClear"><span>inspectorConsoleClear:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1248,11 +1264,11 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="inspectorConsoleDebug" href="#inspectorConsoleDebug"><span>inspectorConsoleDebug:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleDebug(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleDebug%2Cany">jsinspector: inspectorConsoleDebug(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleDebug(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleDebug%2Cauto">jsinspector: inspectorConsoleDebug(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleError" href="#inspectorConsoleError"><span>inspectorConsoleError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleError(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleError%2Cany">jsinspector: inspectorConsoleError(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleError(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleError%2Cauto">jsinspector: inspectorConsoleError(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleGroup" href="#inspectorConsoleGroup"><span>inspectorConsoleGroup:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1268,11 +1284,11 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="inspectorConsoleInfo" href="#inspectorConsoleInfo"><span>inspectorConsoleInfo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleInfo(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleInfo%2Cany">jsinspector: inspectorConsoleInfo(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleInfo(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleInfo%2Cauto">jsinspector: inspectorConsoleInfo(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleLog" href="#inspectorConsoleLog"><span>inspectorConsoleLog:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleLog(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleLog%2Cany">jsinspector: inspectorConsoleLog(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleLog(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleLog%2Cauto">jsinspector: inspectorConsoleLog(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleTable" href="#inspectorConsoleTable"><span>inspectorConsoleTable:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1280,11 +1296,11 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="inspectorConsoleTrace" href="#inspectorConsoleTrace"><span>inspectorConsoleTrace:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleTrace(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleTrace%2Cany">jsinspector: inspectorConsoleTrace(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleTrace(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleTrace%2Cauto">jsinspector: inspectorConsoleTrace(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="inspectorConsoleWarn" href="#inspectorConsoleWarn"><span>inspectorConsoleWarn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsinspector: inspectorConsoleWarn(args: any): cstring" href="nodejs/jsinspector.html#inspectorConsoleWarn%2Cany">jsinspector: inspectorConsoleWarn(args: any): cstring</a></li>
+          data-doc-search-tag="jsinspector: inspectorConsoleWarn(args: auto): cstring" href="nodejs/jsinspector.html#inspectorConsoleWarn%2Cauto">jsinspector: inspectorConsoleWarn(args: auto): cstring</a></li>
           </ul></dd>
 <dt><a name="isAbsolute" href="#isAbsolute"><span>isAbsolute:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1292,63 +1308,63 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isAnyArrayBuffer" href="#isAnyArrayBuffer"><span>isAnyArrayBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isAnyArrayBuffer(value: any): bool" href="nodejs/jsutils.html#isAnyArrayBuffer%2Cany">jsutils: isAnyArrayBuffer(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isAnyArrayBuffer(value: auto): bool" href="nodejs/jsutils.html#isAnyArrayBuffer%2Cauto">jsutils: isAnyArrayBuffer(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isArgumentsObject" href="#isArgumentsObject"><span>isArgumentsObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isArgumentsObject(value: any): bool" href="nodejs/jsutils.html#isArgumentsObject%2Cany">jsutils: isArgumentsObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isArgumentsObject(value: auto): bool" href="nodejs/jsutils.html#isArgumentsObject%2Cauto">jsutils: isArgumentsObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isArray" href="#isArray"><span>isArray:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isArray(value: any): bool" href="nodejs/jsutils.html#isArray%2Cany">jsutils: isArray(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isArray(value: auto): bool" href="nodejs/jsutils.html#isArray%2Cauto">jsutils: isArray(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isArrayBuffer" href="#isArrayBuffer"><span>isArrayBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isArrayBuffer(value: any): bool" href="nodejs/jsutils.html#isArrayBuffer%2Cany">jsutils: isArrayBuffer(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isArrayBuffer(value: auto): bool" href="nodejs/jsutils.html#isArrayBuffer%2Cauto">jsutils: isArrayBuffer(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isArrayBufferView" href="#isArrayBufferView"><span>isArrayBufferView:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isArrayBufferView(value: any): bool" href="nodejs/jsutils.html#isArrayBufferView%2Cany">jsutils: isArrayBufferView(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isArrayBufferView(value: auto): bool" href="nodejs/jsutils.html#isArrayBufferView%2Cauto">jsutils: isArrayBufferView(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isAsyncFunction" href="#isAsyncFunction"><span>isAsyncFunction:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isAsyncFunction(value: any): bool" href="nodejs/jsutils.html#isAsyncFunction%2Cany">jsutils: isAsyncFunction(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isAsyncFunction(value: auto): bool" href="nodejs/jsutils.html#isAsyncFunction%2Cauto">jsutils: isAsyncFunction(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBigInt64Array" href="#isBigInt64Array"><span>isBigInt64Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBigInt64Array(value: any): bool" href="nodejs/jsutils.html#isBigInt64Array%2Cany">jsutils: isBigInt64Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBigInt64Array(value: auto): bool" href="nodejs/jsutils.html#isBigInt64Array%2Cauto">jsutils: isBigInt64Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBigUint64Array" href="#isBigUint64Array"><span>isBigUint64Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBigUint64Array(value: any): bool" href="nodejs/jsutils.html#isBigUint64Array%2Cany">jsutils: isBigUint64Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBigUint64Array(value: auto): bool" href="nodejs/jsutils.html#isBigUint64Array%2Cauto">jsutils: isBigUint64Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBoolean" href="#isBoolean"><span>isBoolean:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBoolean(value: any): bool" href="nodejs/jsutils.html#isBoolean%2Cany">jsutils: isBoolean(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBoolean(value: auto): bool" href="nodejs/jsutils.html#isBoolean%2Cauto">jsutils: isBoolean(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBooleanObject" href="#isBooleanObject"><span>isBooleanObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBooleanObject(value: any): bool" href="nodejs/jsutils.html#isBooleanObject%2Cany">jsutils: isBooleanObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBooleanObject(value: auto): bool" href="nodejs/jsutils.html#isBooleanObject%2Cauto">jsutils: isBooleanObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBoxedPrimitive" href="#isBoxedPrimitive"><span>isBoxedPrimitive:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBoxedPrimitive(value: any): bool" href="nodejs/jsutils.html#isBoxedPrimitive%2Cany">jsutils: isBoxedPrimitive(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBoxedPrimitive(value: auto): bool" href="nodejs/jsutils.html#isBoxedPrimitive%2Cauto">jsutils: isBoxedPrimitive(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isBuffer" href="#isBuffer"><span>isBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isBuffer(value: any): bool" href="nodejs/jsutils.html#isBuffer%2Cany">jsutils: isBuffer(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isBuffer(value: auto): bool" href="nodejs/jsutils.html#isBuffer%2Cauto">jsutils: isBuffer(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isDataView" href="#isDataView"><span>isDataView:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isDataView(value: any): bool" href="nodejs/jsutils.html#isDataView%2Cany">jsutils: isDataView(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isDataView(value: auto): bool" href="nodejs/jsutils.html#isDataView%2Cauto">jsutils: isDataView(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isDate" href="#isDate"><span>isDate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isDate(value: any): bool" href="nodejs/jsutils.html#isDate%2Cany">jsutils: isDate(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isDate(value: auto): bool" href="nodejs/jsutils.html#isDate%2Cauto">jsutils: isDate(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isDeepStrictEqual" href="#isDeepStrictEqual"><span>isDeepStrictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isDeepStrictEqual(val1, val2: any): bool" href="nodejs/jsutils.html#isDeepStrictEqual%2Cany%2Cany">jsutils: isDeepStrictEqual(val1, val2: any): bool</a></li>
+          data-doc-search-tag="jsutils: isDeepStrictEqual(val1, val2: auto): bool" href="nodejs/jsutils.html#isDeepStrictEqual%2Cauto%2Cauto">jsutils: isDeepStrictEqual(val1, val2: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isDigit" href="#isDigit"><span>isDigit:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1356,7 +1372,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isExternal" href="#isExternal"><span>isExternal:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isExternal(value: any): bool" href="nodejs/jsutils.html#isExternal%2Cany">jsutils: isExternal(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isExternal(value: auto): bool" href="nodejs/jsutils.html#isExternal%2Cauto">jsutils: isExternal(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isFinite" href="#isFinite"><span>isFinite:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1364,35 +1380,35 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isFloat32Array" href="#isFloat32Array"><span>isFloat32Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isFloat32Array(value: any): bool" href="nodejs/jsutils.html#isFloat32Array%2Cany">jsutils: isFloat32Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isFloat32Array(value: auto): bool" href="nodejs/jsutils.html#isFloat32Array%2Cauto">jsutils: isFloat32Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isFloat64Array" href="#isFloat64Array"><span>isFloat64Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isFloat64Array(value: any): bool" href="nodejs/jsutils.html#isFloat64Array%2Cany">jsutils: isFloat64Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isFloat64Array(value: auto): bool" href="nodejs/jsutils.html#isFloat64Array%2Cauto">jsutils: isFloat64Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isFunction" href="#isFunction"><span>isFunction:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isFunction(value: any): bool" href="nodejs/jsutils.html#isFunction%2Cany">jsutils: isFunction(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isFunction(value: auto): bool" href="nodejs/jsutils.html#isFunction%2Cauto">jsutils: isFunction(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isGeneratorFunction" href="#isGeneratorFunction"><span>isGeneratorFunction:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isGeneratorFunction(value: any): bool" href="nodejs/jsutils.html#isGeneratorFunction%2Cany">jsutils: isGeneratorFunction(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isGeneratorFunction(value: auto): bool" href="nodejs/jsutils.html#isGeneratorFunction%2Cauto">jsutils: isGeneratorFunction(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isGeneratorObject" href="#isGeneratorObject"><span>isGeneratorObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isGeneratorObject(value: any): bool" href="nodejs/jsutils.html#isGeneratorObject%2Cany">jsutils: isGeneratorObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isGeneratorObject(value: auto): bool" href="nodejs/jsutils.html#isGeneratorObject%2Cauto">jsutils: isGeneratorObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isInt16Array" href="#isInt16Array"><span>isInt16Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isInt16Array(value: any): bool" href="nodejs/jsutils.html#isInt16Array%2Cany">jsutils: isInt16Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isInt16Array(value: auto): bool" href="nodejs/jsutils.html#isInt16Array%2Cauto">jsutils: isInt16Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isInt32Array" href="#isInt32Array"><span>isInt32Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isInt32Array(value: any): bool" href="nodejs/jsutils.html#isInt32Array%2Cany">jsutils: isInt32Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isInt32Array(value: auto): bool" href="nodejs/jsutils.html#isInt32Array%2Cauto">jsutils: isInt32Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isInt8Array" href="#isInt8Array"><span>isInt8Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isInt8Array(value: any): bool" href="nodejs/jsutils.html#isInt8Array%2Cany">jsutils: isInt8Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isInt8Array(value: auto): bool" href="nodejs/jsutils.html#isInt8Array%2Cauto">jsutils: isInt8Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isInteger" href="#isInteger"><span>isInteger:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1400,43 +1416,43 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isMap" href="#isMap"><span>isMap:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isMap(value: any): bool" href="nodejs/jsutils.html#isMap%2Cany">jsutils: isMap(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isMap(value: auto): bool" href="nodejs/jsutils.html#isMap%2Cauto">jsutils: isMap(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isMapIterator" href="#isMapIterator"><span>isMapIterator:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isMapIterator(value: any): bool" href="nodejs/jsutils.html#isMapIterator%2Cany">jsutils: isMapIterator(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isMapIterator(value: auto): bool" href="nodejs/jsutils.html#isMapIterator%2Cauto">jsutils: isMapIterator(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isModuleNamespaceObject" href="#isModuleNamespaceObject"><span>isModuleNamespaceObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isModuleNamespaceObject(value: any): bool" href="nodejs/jsutils.html#isModuleNamespaceObject%2Cany">jsutils: isModuleNamespaceObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isModuleNamespaceObject(value: auto): bool" href="nodejs/jsutils.html#isModuleNamespaceObject%2Cauto">jsutils: isModuleNamespaceObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isNativeError" href="#isNativeError"><span>isNativeError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isNativeError(value: any): bool" href="nodejs/jsutils.html#isNativeError%2Cany">jsutils: isNativeError(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isNativeError(value: auto): bool" href="nodejs/jsutils.html#isNativeError%2Cauto">jsutils: isNativeError(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isNull" href="#isNull"><span>isNull:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isNull(value: any): bool" href="nodejs/jsutils.html#isNull%2Cany">jsutils: isNull(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isNull(value: auto): bool" href="nodejs/jsutils.html#isNull%2Cauto">jsutils: isNull(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isNumber" href="#isNumber"><span>isNumber:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isNumber(value: any): bool" href="nodejs/jsutils.html#isNumber%2Cany">jsutils: isNumber(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isNumber(value: auto): bool" href="nodejs/jsutils.html#isNumber%2Cauto">jsutils: isNumber(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isNumberObject" href="#isNumberObject"><span>isNumberObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isNumberObject(value: any): bool" href="nodejs/jsutils.html#isNumberObject%2Cany">jsutils: isNumberObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isNumberObject(value: auto): bool" href="nodejs/jsutils.html#isNumberObject%2Cauto">jsutils: isNumberObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isPromise" href="#isPromise"><span>isPromise:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isPromise(value: any): bool" href="nodejs/jsutils.html#isPromise%2Cany">jsutils: isPromise(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isPromise(value: auto): bool" href="nodejs/jsutils.html#isPromise%2Cauto">jsutils: isPromise(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isProxy" href="#isProxy"><span>isProxy:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isProxy(value: any): bool" href="nodejs/jsutils.html#isProxy%2Cany">jsutils: isProxy(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isProxy(value: auto): bool" href="nodejs/jsutils.html#isProxy%2Cauto">jsutils: isProxy(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isRegExp" href="#isRegExp"><span>isRegExp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isRegExp(value: any): bool" href="nodejs/jsutils.html#isRegExp%2Cany">jsutils: isRegExp(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isRegExp(value: auto): bool" href="nodejs/jsutils.html#isRegExp%2Cauto">jsutils: isRegExp(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isSafeInteger" href="#isSafeInteger"><span>isSafeInteger:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1444,67 +1460,67 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="isSet" href="#isSet"><span>isSet:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isSet(value: any): bool" href="nodejs/jsutils.html#isSet%2Cany">jsutils: isSet(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isSet(value: auto): bool" href="nodejs/jsutils.html#isSet%2Cauto">jsutils: isSet(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isSetIterator" href="#isSetIterator"><span>isSetIterator:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isSetIterator(value: any): bool" href="nodejs/jsutils.html#isSetIterator%2Cany">jsutils: isSetIterator(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isSetIterator(value: auto): bool" href="nodejs/jsutils.html#isSetIterator%2Cauto">jsutils: isSetIterator(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isSharedArrayBuffer" href="#isSharedArrayBuffer"><span>isSharedArrayBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isSharedArrayBuffer(value: any): bool" href="nodejs/jsutils.html#isSharedArrayBuffer%2Cany">jsutils: isSharedArrayBuffer(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isSharedArrayBuffer(value: auto): bool" href="nodejs/jsutils.html#isSharedArrayBuffer%2Cauto">jsutils: isSharedArrayBuffer(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isString" href="#isString"><span>isString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isString(value: any): bool" href="nodejs/jsutils.html#isString%2Cany">jsutils: isString(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isString(value: auto): bool" href="nodejs/jsutils.html#isString%2Cauto">jsutils: isString(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isStringObject" href="#isStringObject"><span>isStringObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isStringObject(value: any): bool" href="nodejs/jsutils.html#isStringObject%2Cany">jsutils: isStringObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isStringObject(value: auto): bool" href="nodejs/jsutils.html#isStringObject%2Cauto">jsutils: isStringObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isSymbol" href="#isSymbol"><span>isSymbol:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isSymbol(value: any): bool" href="nodejs/jsutils.html#isSymbol%2Cany">jsutils: isSymbol(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isSymbol(value: auto): bool" href="nodejs/jsutils.html#isSymbol%2Cauto">jsutils: isSymbol(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isSymbolObject" href="#isSymbolObject"><span>isSymbolObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isSymbolObject(value: any): bool" href="nodejs/jsutils.html#isSymbolObject%2Cany">jsutils: isSymbolObject(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isSymbolObject(value: auto): bool" href="nodejs/jsutils.html#isSymbolObject%2Cauto">jsutils: isSymbolObject(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isTypedArray" href="#isTypedArray"><span>isTypedArray:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isTypedArray(value: any): bool" href="nodejs/jsutils.html#isTypedArray%2Cany">jsutils: isTypedArray(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isTypedArray(value: auto): bool" href="nodejs/jsutils.html#isTypedArray%2Cauto">jsutils: isTypedArray(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isUint16Array" href="#isUint16Array"><span>isUint16Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isUint16Array(value: any): bool" href="nodejs/jsutils.html#isUint16Array%2Cany">jsutils: isUint16Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isUint16Array(value: auto): bool" href="nodejs/jsutils.html#isUint16Array%2Cauto">jsutils: isUint16Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isUint32Array" href="#isUint32Array"><span>isUint32Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isUint32Array(value: any): bool" href="nodejs/jsutils.html#isUint32Array%2Cany">jsutils: isUint32Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isUint32Array(value: auto): bool" href="nodejs/jsutils.html#isUint32Array%2Cauto">jsutils: isUint32Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isUint8Array" href="#isUint8Array"><span>isUint8Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isUint8Array(value: any): bool" href="nodejs/jsutils.html#isUint8Array%2Cany">jsutils: isUint8Array(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isUint8Array(value: auto): bool" href="nodejs/jsutils.html#isUint8Array%2Cauto">jsutils: isUint8Array(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isUint8ClampedArray" href="#isUint8ClampedArray"><span>isUint8ClampedArray:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isUint8ClampedArray(value: any): bool" href="nodejs/jsutils.html#isUint8ClampedArray%2Cany">jsutils: isUint8ClampedArray(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isUint8ClampedArray(value: auto): bool" href="nodejs/jsutils.html#isUint8ClampedArray%2Cauto">jsutils: isUint8ClampedArray(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isUndefined" href="#isUndefined"><span>isUndefined:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isUndefined(value: any): bool" href="nodejs/jsutils.html#isUndefined%2Cany">jsutils: isUndefined(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isUndefined(value: auto): bool" href="nodejs/jsutils.html#isUndefined%2Cauto">jsutils: isUndefined(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isWeakMap" href="#isWeakMap"><span>isWeakMap:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isWeakMap(value: any): bool" href="nodejs/jsutils.html#isWeakMap%2Cany">jsutils: isWeakMap(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isWeakMap(value: auto): bool" href="nodejs/jsutils.html#isWeakMap%2Cauto">jsutils: isWeakMap(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isWeakSet" href="#isWeakSet"><span>isWeakSet:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isWeakSet(value: any): bool" href="nodejs/jsutils.html#isWeakSet%2Cany">jsutils: isWeakSet(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isWeakSet(value: auto): bool" href="nodejs/jsutils.html#isWeakSet%2Cauto">jsutils: isWeakSet(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="isWebAssemblyCompiledModule" href="#isWebAssemblyCompiledModule"><span>isWebAssemblyCompiledModule:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsutils: isWebAssemblyCompiledModule(value: any): bool" href="nodejs/jsutils.html#isWebAssemblyCompiledModule%2Cany">jsutils: isWebAssemblyCompiledModule(value: any): bool</a></li>
+          data-doc-search-tag="jsutils: isWebAssemblyCompiledModule(value: auto): bool" href="nodejs/jsutils.html#isWebAssemblyCompiledModule%2Cauto">jsutils: isWebAssemblyCompiledModule(value: auto): bool</a></li>
           </ul></dd>
 <dt><a name="join" href="#join"><span>join:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1512,7 +1528,7 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="jsexport" href="#jsexport"><span>jsexport:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsugar: jsexport(symbols: any)" href="nodejs/jsugar.html#jsexport%2Cany">jsugar: jsexport(symbols: any)</a></li>
+          data-doc-search-tag="jsugar: jsexport(symbols: auto)" href="nodejs/jsugar.html#jsexport%2Cauto">jsugar: jsexport(symbols: auto)</a></li>
           </ul></dd>
 <dt><a name="jsnow" href="#jsnow"><span>jsnow:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1620,12 +1636,16 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: mkdtempSync(prefix: cstring): cstring" href="nodejs/jsfs.html#mkdtempSync%2Ccstring">jsfs: mkdtempSync(prefix: cstring): cstring</a></li>
           </ul></dd>
+<dt><a name="moveCursor" href="#moveCursor"><span>moveCursor:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: moveCursor(s = &quot;process.stout&quot;.cstring; dx = 0.cint; dy = 0.cint): bool" href="nodejs/jsreadline.html#moveCursor">jsreadline: moveCursor(s = &quot;process.stout&quot;.cstring; dx = 0.cint; dy = 0.cint): bool</a></li>
+          </ul></dd>
 <dt><a name="newAssertionError" href="#newAssertionError"><span>newAssertionError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: newAssertionError(): cstring" href="nodejs/jsassert.html#newAssertionError">jsassert: newAssertionError(): cstring</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: newAssertionError(message: cstring; actual: any; expected: any;
-                  operator: cstring): cstring" href="nodejs/jsassert.html#newAssertionError%2Ccstring%2Cany%2Cany%2Ccstring">jsassert: newAssertionError(message: cstring; actual: any; expected: any;
+          data-doc-search-tag="jsassert: newAssertionError(message: cstring; actual: auto; expected: auto;
+                  operator: cstring): cstring" href="nodejs/jsassert.html#newAssertionError%2Ccstring%2Cauto%2Cauto%2Ccstring">jsassert: newAssertionError(message: cstring; actual: auto; expected: auto;
                   operator: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="nextDays" href="#nextDays"><span>nextDays:</span></a></dt><dd><ul class="simple">
@@ -1696,9 +1716,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="notDeepStrictEqual" href="#notDeepStrictEqual"><span>notDeepStrictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: notDeepStrictEqual(actual, expected: any)" href="nodejs/jsassert.html#notDeepStrictEqual%2Cany%2Cany">jsassert: notDeepStrictEqual(actual, expected: any)</a></li>
+          data-doc-search-tag="jsassert: notDeepStrictEqual(actual, expected: auto)" href="nodejs/jsassert.html#notDeepStrictEqual%2Cauto%2Cauto">jsassert: notDeepStrictEqual(actual, expected: auto)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: notDeepStrictEqual(actual, expected: any; message: cstring)" href="nodejs/jsassert.html#notDeepStrictEqual%2Cany%2Cany%2Ccstring">jsassert: notDeepStrictEqual(actual, expected: any; message: cstring)</a></li>
+          data-doc-search-tag="jsassert: notDeepStrictEqual(actual, expected: auto; message: cstring)" href="nodejs/jsassert.html#notDeepStrictEqual%2Cauto%2Cauto%2Ccstring">jsassert: notDeepStrictEqual(actual, expected: auto; message: cstring)</a></li>
           </ul></dd>
 <dt><a name="NOTFOUND" href="#NOTFOUND"><span>NOTFOUND:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1714,9 +1734,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="notStrictEqual" href="#notStrictEqual"><span>notStrictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: notStrictEqual(actual, expected: any)" href="nodejs/jsassert.html#notStrictEqual%2Cany%2Cany">jsassert: notStrictEqual(actual, expected: any)</a></li>
+          data-doc-search-tag="jsassert: notStrictEqual(actual, expected: auto)" href="nodejs/jsassert.html#notStrictEqual%2Cauto%2Cauto">jsassert: notStrictEqual(actual, expected: auto)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: notStrictEqual(actual, expected: any; message: cstring)" href="nodejs/jsassert.html#notStrictEqual%2Cany%2Cany%2Ccstring">jsassert: notStrictEqual(actual, expected: any; message: cstring)</a></li>
+          data-doc-search-tag="jsassert: notStrictEqual(actual, expected: auto; message: cstring)" href="nodejs/jsassert.html#notStrictEqual%2Cauto%2Cauto%2Ccstring">jsassert: notStrictEqual(actual, expected: auto; message: cstring)</a></li>
           </ul></dd>
 <dt><a name="nth" href="#nth"><span>nth:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1748,9 +1768,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="ok" href="#ok"><span>ok:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: ok(value: any)" href="nodejs/jsassert.html#ok%2Cany">jsassert: ok(value: any)</a></li>
+          data-doc-search-tag="jsassert: ok(value: auto)" href="nodejs/jsassert.html#ok%2Cauto">jsassert: ok(value: auto)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: ok(value: any; message: cstring)" href="nodejs/jsassert.html#ok%2Cany%2Ccstring">jsassert: ok(value: any; message: cstring)</a></li>
+          data-doc-search-tag="jsassert: ok(value: auto; message: cstring)" href="nodejs/jsassert.html#ok%2Cauto%2Ccstring">jsassert: ok(value: auto; message: cstring)</a></li>
           </ul></dd>
 <dt><a name="O_NOATIME" href="#O_NOATIME"><span>O_NOATIME:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2067,6 +2087,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="requireQuerystring" href="#requireQuerystring"><span>requireQuerystring:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsquerystring: requireQuerystring()" href="nodejs/jsquerystring.html#requireQuerystring">jsquerystring: requireQuerystring()</a></li>
+          </ul></dd>
+<dt><a name="requireReadline" href="#requireReadline"><span>requireReadline:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsreadline: requireReadline()" href="nodejs/jsreadline.html#requireReadline">jsreadline: requireReadline()</a></li>
           </ul></dd>
 <dt><a name="requireUtil" href="#requireUtil"><span>requireUtil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2470,9 +2494,9 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="strictEqual" href="#strictEqual"><span>strictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsassert: strictEqual(actual, expected: any)" href="nodejs/jsassert.html#strictEqual%2Cany%2Cany">jsassert: strictEqual(actual, expected: any)</a></li>
+          data-doc-search-tag="jsassert: strictEqual(actual, expected: auto)" href="nodejs/jsassert.html#strictEqual%2Cauto%2Cauto">jsassert: strictEqual(actual, expected: auto)</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsassert: strictEqual(actual, expected: any; message: cstring)" href="nodejs/jsassert.html#strictEqual%2Cany%2Cany%2Ccstring">jsassert: strictEqual(actual, expected: any; message: cstring)</a></li>
+          data-doc-search-tag="jsassert: strictEqual(actual, expected: auto; message: cstring)" href="nodejs/jsassert.html#strictEqual%2Cauto%2Cauto%2Ccstring">jsassert: strictEqual(actual, expected: auto; message: cstring)</a></li>
           </ul></dd>
 <dt><a name="strip" href="#strip"><span>strip:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2927,7 +2951,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-07 05:33:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-09 22:19:55 UTC</small>
       </div>
     </div>
   </div>
