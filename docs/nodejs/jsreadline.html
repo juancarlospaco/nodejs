@@ -102,8 +102,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">moveCursor
-      <li><a class="reference" href="#moveCursor"
-    title="moveCursor(s = &quot;process.stout&quot;.cstring; dx = 0.cint; dy = 0.cint): bool">moveCursor(s = &quot;process.stout&quot;.cstring; dx = 0.cint; dy = 0.cint): bool</a></li>
+      <li><a class="reference" href="#moveCursor%2Ccint%2Ccint"
+    title="moveCursor(dx, dy: cint): bool">moveCursor(dx, dy: cint): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">importReadline
@@ -113,17 +113,17 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">clearLine
       <li><a class="reference" href="#clearLine"
-    title="clearLine(s = &quot;process.stout&quot;.cstring; dir = 0.cint): bool">clearLine(s = &quot;process.stout&quot;.cstring; dir = 0.cint): bool</a></li>
+    title="clearLine(dir = 0.cint): bool">clearLine(dir = 0.cint): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">clearScreenDown
       <li><a class="reference" href="#clearScreenDown"
-    title="clearScreenDown(s = &quot;process.stout&quot;.cstring): bool">clearScreenDown(s = &quot;process.stout&quot;.cstring): bool</a></li>
+    title="clearScreenDown(): bool">clearScreenDown(): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">cursorTo
-      <li><a class="reference" href="#cursorTo"
-    title="cursorTo(s = &quot;process.stout&quot;.cstring; x = 0.cint; y = 0.cint): bool">cursorTo(s = &quot;process.stout&quot;.cstring; x = 0.cint; y = 0.cint): bool</a></li>
+      <li><a class="reference" href="#cursorTo%2Ccint%2Ccint"
+    title="cursorTo(x, y: cint): bool">cursorTo(x, y: cint): bool</a></li>
 
   </ul>
 
@@ -138,7 +138,7 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="tocRoot"></div>
   
   <p class="module-desc"><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-You MUST import <tt class="docutils literal"><span class="pre">process</span></tt> before importing this module.</div>
+You MUST import <tt class="docutils literal"><span class="pre">process</span></tt> before importing this module. Uses <tt class="docutils literal"><span class="pre">stdout</span></tt> by default.</div>
 </p>
   <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
@@ -158,32 +158,28 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 
 </dd>
 <a id="clearLine"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#clearLine"><span class="Identifier">clearLine</span></a><span class="Other">(</span><span class="Identifier">s</span> <span class="Other">=</span> <span class="StringLit">&quot;process.stout&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">dir</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#clearLine"><span class="Identifier">clearLine</span></a><span class="Other">(</span><span class="Identifier">dir</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearline_stream_dir_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearline_stream_dir_callback</a>
 
 </dd>
 <a id="clearScreenDown"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#clearScreenDown"><span class="Identifier">clearScreenDown</span></a><span class="Other">(</span><span class="Identifier">s</span> <span class="Other">=</span> <span class="StringLit">&quot;process.stout&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#clearScreenDown"><span class="Identifier">clearScreenDown</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearscreendown_stream_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearscreendown_stream_callback</a>
 
 </dd>
-<a id="cursorTo"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#cursorTo"><span class="Identifier">cursorTo</span></a><span class="Other">(</span><span class="Identifier">s</span> <span class="Other">=</span> <span class="StringLit">&quot;process.stout&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">x</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">y</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(#, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="cursorTo,cint,cint"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#cursorTo%2Ccint%2Ccint"><span class="Identifier">cursorTo</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_cursorto_stream_x_y_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_cursorto_stream_x_y_callback</a>
 
 </dd>
-<a id="moveCursor"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#moveCursor"><span class="Identifier">moveCursor</span></a><span class="Other">(</span><span class="Identifier">s</span> <span class="Other">=</span> <span class="StringLit">&quot;process.stout&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">dx</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">dy</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(#, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="moveCursor,cint,cint"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#moveCursor%2Ccint%2Ccint"><span class="Identifier">moveCursor</span></a><span class="Other">(</span><span class="Identifier">dx</span><span class="Other">,</span> <span class="Identifier">dy</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback</a>
@@ -199,7 +195,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-10 00:56:25 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-10 01:05:12 UTC</small>
       </div>
     </div>
   </div>
