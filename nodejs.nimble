@@ -4,4 +4,4 @@ description = "NodeJS Standard Library for Nim"
 license     = "MIT"
 srcDir      = "src"
 
-requires "nim >= 1.5.0"
+requires "nim >= 1.4.4"
