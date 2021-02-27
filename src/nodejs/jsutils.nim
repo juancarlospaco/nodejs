@@ -180,7 +180,7 @@ func isUndefined*(value: auto): bool {.importjs: "(# === undefined)".}
   ## https://nodejs.org/api/util.html#util_util_isundefined_object
 
 
-runnableExamples:
+runnableExamples("--unhandled-rejections=warn"):
   requireUtil()
   doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
   doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
