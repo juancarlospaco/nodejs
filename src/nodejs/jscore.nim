@@ -128,15 +128,16 @@ func shuffle*(arrai: openArray[any]): seq[any] {.importjs: "#.sort(() => { retur
 
 func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
   const value = String(`s`).trim();
-  if (/^(?:y|Y|1| ON|On|oN|on|yes|YES|YEs|YeS|Yes|yES|yEs|yeS|TRUE|TRUe|TRuE|TRue|TrUE|TrUe|TruE|True|tRUE|tRUe|tRuE|tRue|trUE|trUe|truE|true)$/i.test(value)) {
+  if (/^(?:y|1|on|yes|true)$/i.test(value)) {
     return true;
   };
-  if (/^(?:n|N|0|NO|No|nO|no|OFF|OFf|OfF|Off|oFF|oFf|ofF|off|FALSE|FALSe|FALsE|FALse|FAlSE|FAlSe|FAlsE|FAlse|FaLSE|FaLSe|FaLsE|FaLse|FalSE|FalSe|FalsE|False|fALSE|fALSe|fALsE|fALse|fAlSE|fAlSe|fAlsE|fAlse|faLSE|faLSe|faLsE|faLse|falSE|falSe|falsE|false)$/i.test(value)) {
+  if (/^(?:n|0|no|off|false)$/i.test(value)) {
     return false;
   };
   assert(false, "Cannot interpret as a bool");""".}
   ## Convenience func mimics Nim `parseBool` but optimized for NodeJS.
   ## Does NOT ignore `'_'`, if you need to ignore `'_'` use stdlib or remove the `'_'`.
+  ## The reason is that it is more strict than stdlib, because does not allow `'_'`, is not the same as stdlib one.
 
 
 runnableExamples:
