@@ -62,6 +62,9 @@ iife:
   echo "Hello Immediately Invoked Function Expressions"
 ```
 
+- Before reporting bugs, [please read about unhandled-rejections](https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog),
+  and use `--unhandled-rejections=warn`.
+
 
 # Design
 
