@@ -29,9 +29,11 @@ jobs:
     #   with:
     #     folders: "src"
 
+    # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
     - name: Generate Documentation (Linux)
       if: runner.os == 'Linux'
       run: |
+        export NODE_OPTIONS=--unhandled-rejections=warn
         nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
         rm --verbose docs/nodejs/*.idx
         mv --verbose docs/nodejs.html docs/index.html
