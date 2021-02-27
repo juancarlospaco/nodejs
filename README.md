@@ -526,6 +526,7 @@ See also:
 - https://nim-lang.github.io/Nim/jsre.html
 - https://nim-lang.github.io/Nim/jsbigints.html
 - [`Promise.then()` and `Promise.catch()` work in Nim.](https://github.com/nim-lang/Nim/pull/16871#issue-564361569)
+- [HTTPS Requests for JavaScript target in Nim.](https://nim-lang.github.io/fusion/src/fusion/js/jsxmlhttprequest.html)
 - https://github.com/nim-lang/Nim/issues/7505#issue-311496454
 - https://github.com/nim-lang/Nim/issues/3124#issue-95352255
 
