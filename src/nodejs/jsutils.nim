@@ -229,7 +229,6 @@ runnableExamples:
   doAssert not isWeakMap(false)
   doAssert not isWeakSet(false)
   doAssert not isWebAssemblyCompiledModule(false)
-  doAssert isArray([1, 2, 3])
   doAssert isBoolean(false)
   doAssert not isBuffer(false)
   doAssert not isFunction(false)
@@ -238,3 +237,4 @@ runnableExamples:
   doAssert isString("string".cstring)
   doAssert not isSymbol(false)
   doAssert not isUndefined(false)
+  # doAssert isArray([1, 2, 3])
