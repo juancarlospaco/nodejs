@@ -152,9 +152,6 @@ func isWeakSet*(value: auto): bool {.importjs: "util.types.$1(#)".}
 func isWebAssemblyCompiledModule*(value: auto): bool {.importjs: "(# instanceof WebAssembly.Module)".}
   ## https://nodejs.org/api/util.html#util_util_types_iswebassemblycompiledmodule_value
 
-func isArray*(value: auto): bool {.importjs: "Array.isArray(#)".}
-  ## https://nodejs.org/api/util.html#util_util_isarray_object
-
 func isBoolean*(value: auto): bool {.importjs: "(typeof # === 'boolean')".}
   ## https://nodejs.org/api/util.html#util_util_isboolean_object
 
@@ -237,4 +234,3 @@ runnableExamples:
   doAssert isString("string".cstring)
   doAssert not isSymbol(false)
   doAssert not isUndefined(false)
-  # doAssert isArray([1, 2, 3])
