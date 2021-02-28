@@ -14,8 +14,8 @@ func newTextEncoder*(): TextEncoder {.importjs: "(new util.TextEncoder(@))".}
 
 func newTextDecoder*(encoding = "utf-8".cstring; fatal = false; ignoreBOM = false): TextDecoder {.importjs: "(new util.TextDecoder(#, {fatal: #, ignoreBOM: #}))".}
 
-#func decode*(self: TextDecoder; input: openArray[auto]): cstring {.importcpp.}
-#  ## TODO: https://nodejs.org/api/util.html#util_textdecoder_decode_input_options
+func decode*(self: TextDecoder; input: ArrayBuffer): cstring {.importcpp.}
+  ## https://nodejs.org/api/util.html#util_textdecoder_decode_input_options
 
 func encode*(self: TextEncoder; input: cstring): seq[uint8] {.importcpp.}
   ## https://nodejs.org/api/util.html#util_textencoder_encode_input
@@ -217,6 +217,8 @@ runnableExamples:
     doAssert deco.encoding == "utf-8".cstring
     doAssert not(deco.fatal)
     doAssert not(deco.ignoreBOM)
+    let data: ArrayBuffer = newArrayBuffer(9.Natural)
+    doAssert deco.decode(input = data) is cstring
   block:
     doAssert not isAnyArrayBuffer(false)
     doAssert not isArrayBufferView(false)
