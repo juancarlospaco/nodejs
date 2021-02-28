@@ -1,3 +1,4 @@
+## - https://nodejs.org/api/util.html
 import std/jsffi
 include jscore
 
