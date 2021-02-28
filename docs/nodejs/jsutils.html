@@ -146,6 +146,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="isFloat32Array(value: auto): bool">isFloat32Array(value: auto): bool</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">len
+      <li><a class="reference" href="#len%2CUint8Array"
+    title="len(self: Uint8Array): int">len(self: Uint8Array): int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">isInt16Array
       <li><a class="reference" href="#isInt16Array%2Cauto"
     title="isInt16Array(value: auto): bool">isInt16Array(value: auto): bool</a></li>
@@ -473,6 +478,8 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">toArray
       <li><a class="reference" href="#toArray%2CUint8Array"
     title="toArray(self: Uint8Array): seq[uint8]">toArray(self: Uint8Array): seq[uint8]</a></li>
+  <li><a class="reference" href="#toArray%2CArrayBuffer"
+    title="toArray(self: ArrayBuffer): seq[int]">toArray(self: ArrayBuffer): seq[int]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">isUint16Array
@@ -838,6 +845,14 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="toArray,ArrayBuffer"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CArrayBuffer"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="toCstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
@@ -848,6 +863,13 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 <a id="$"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#%24"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="len,Uint8Array"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -1668,7 +1690,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 07:30:24 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 07:50:53 UTC</small>
       </div>
     </div>
   </div>

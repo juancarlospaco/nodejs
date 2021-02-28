@@ -186,6 +186,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="`&amp;`(a: char; b: cstring): cstring">`&amp;`(a: char; b: cstring): cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">len
+      <li><a class="reference" href="#len%2CUint8Array"
+    title="len(self: Uint8Array): int">len(self: Uint8Array): int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">parseFloat
       <li><a class="reference" href="#parseFloat%2Ccstring"
     title="parseFloat(s: cstring): BiggestFloat">parseFloat(s: cstring): BiggestFloat</a></li>
@@ -194,11 +199,6 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">indentation
       <li><a class="reference" href="#indentation%2Ccstring"
     title="indentation(s: cstring): cint">indentation(s: cstring): cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">parseBool
-      <li><a class="reference" href="#parseBool%2Ccstring"
-    title="parseBool(s: cstring): bool">parseBool(s: cstring): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">parseInt
@@ -216,6 +216,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">match
       <li><a class="reference" href="#match%2Ccstring%2CRegExp"
     title="match(strng: cstring; regex: RegExp): seq[cstring]">match(strng: cstring; regex: RegExp): seq[cstring]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">parseBool
+      <li><a class="reference" href="#parseBool%2Ccstring"
+    title="parseBool(s: cstring): bool">parseBool(s: cstring): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newArrayBuffer
@@ -263,6 +268,8 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">toArray
       <li><a class="reference" href="#toArray%2CUint8Array"
     title="toArray(self: Uint8Array): seq[uint8]">toArray(self: Uint8Array): seq[uint8]</a></li>
+  <li><a class="reference" href="#toArray%2CArrayBuffer"
+    title="toArray(self: ArrayBuffer): seq[int]">toArray(self: ArrayBuffer): seq[int]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">toUpperAscii
@@ -435,6 +442,14 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+<a id="toArray,ArrayBuffer"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CArrayBuffer"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="toCstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
@@ -445,6 +460,13 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 <a id="$"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#%24"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="len,Uint8Array"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -825,7 +847,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 07:30:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 07:50:50 UTC</small>
       </div>
     </div>
   </div>
