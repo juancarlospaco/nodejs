@@ -20,12 +20,13 @@ func `[]=`*(self: Uint8Array or ArrayBuffer; index: Natural; value: uint8) {.imp
 
 func toArray*(self: Uint8Array): seq[uint8] {.importjs: "Array.from(#)".}
 
-# TODO: Sometimes return is empty ?.
-# func toArray*(self: ArrayBuffer): seq[int] {.importjs: "Array.from(new Uint8Array(#))".}
+func toArray*(self: ArrayBuffer): seq[int] {.importjs: "Array.from(new Uint8Array(#))".}
 
 func toCstring*(self: Uint8Array or ArrayBuffer): cstring {.importjs: "JSON.stringify(#)".}
 
 func `$`*(self: Uint8Array or ArrayBuffer): string = $toCstring(self)
+
+func len*(self: Uint8Array): int {.importjs: "(#.length)".}
 
 
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
