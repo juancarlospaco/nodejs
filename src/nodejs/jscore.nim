@@ -3,6 +3,21 @@ from std/jsre import RegExp
 import std/jsffi
 export jsffi, RegExp
 
+type Uint8Array* = ref object of JsRoot
+
+func newUint8Array*(number: Natural): Uint8Array {.importjs: "new Uint8Array(#)".}
+
+func `[]`*(self: Uint8Array; index: Natural): uint8 {.importjs: "#[#]".}
+
+func `[]=`*(self: Uint8Array; index: Natural; value: uint8) {.importjs: "#[#] = #".}
+
+func toArray*(self: Uint8Array): seq[uint8] {.importjs: "Array.from(#)".}
+
+func toCstring*(self: Uint8Array): cstring {.importjs: "JSON.stringify(#)".}
+
+func `$`*(self: Uint8Array): string = $toCstring(self)
+
+
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
 
 func `&`*(a: cstring, b: char): cstring {.importjs: "(# + String.fromCharCode(#))".}

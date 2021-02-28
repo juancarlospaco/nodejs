@@ -1,3 +1,16 @@
+import std/jsffi
+include jscore
+
+type TextEncoder* = ref object of JsRoot ## https://nodejs.org/api/util.html#util_class_util_textencoder
+  encoding*: cstring  ## https://nodejs.org/api/util.html#util_textencoder_encoding
+
+func newTextEncoder*(): TextEncoder {.importjs: "(new util.TextEncoder(@))".}
+
+func encode*(self: TextEncoder; input: cstring): seq[uint8] {.importcpp.}
+  ## https://nodejs.org/api/util.html#util_textencoder_encode_input
+
+func encodeInto*(self: TextEncoder; src: cstring; dest: Uint8Array): JsObject {.importcpp, discardable.}
+  ## https://nodejs.org/api/util.html#util_textencoder_encodeinto_src_dest
 
 func importUtil*() {.importjs: "import * as util from 'util'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -161,9 +174,6 @@ func isBuffer*(value: auto): bool {.importjs: "Buffer.isBuffer(#)".}
 func isFunction*(value: auto): bool {.importjs: "(typeof # === 'function')".}
   ## https://nodejs.org/api/util.html#util_util_isfunction_object
 
-func isNull*(value: auto): bool {.importjs: "(# === null)".}
-  ## https://nodejs.org/api/util.html#util_util_isnull_object
-
 func isNumber*(value: auto): bool {.importjs: "(typeof # === 'number')".}
   ## https://nodejs.org/api/util.html#util_util_isnumber_object
 
@@ -173,64 +183,69 @@ func isString*(value: auto): bool {.importjs: "(typeof # === 'string')".}
 func isSymbol*(value: auto): bool {.importjs: "(typeof # === 'symbol')".}
   ## https://nodejs.org/api/util.html#util_util_issymbol_object
 
-func isUndefined*(value: auto): bool {.importjs: "(# === undefined)".}
-  ## https://nodejs.org/api/util.html#util_util_isundefined_object
-
 
 runnableExamples:
   requireUtil()
-  doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
-  doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
-  inspect("nim".cstring)
-  proc foo() = echo 42
-  discard callbackify(foo)
-  discard deprecate(foo)
-  doAssert isDeepStrictEqual(42.cint, 42.cint)
-  doAssert not isAnyArrayBuffer(false)
-  doAssert not isArrayBufferView(false)
-  doAssert not isArgumentsObject(false)
-  doAssert not isArrayBuffer(false)
-  doAssert not isBigInt64Array(false)
-  doAssert not isBigUint64Array(false)
-  doAssert not isBooleanObject(false)
-  doAssert not isBoxedPrimitive(false)
-  doAssert not isDataView(false)
-  doAssert not isDate(false)
-  doAssert not isExternal(false)
-  doAssert not isFloat32Array(false)
-  doAssert not isFloat64Array(false)
-  doAssert not isGeneratorFunction(false)
-  doAssert not isBigInt64Array(false)
-  doAssert not isGeneratorObject(false)
-  doAssert not isInt8Array(false)
-  doAssert not isInt16Array(false)
-  doAssert not isInt32Array(false)
-  doAssert not isMap(false)
-  doAssert not isMapIterator(false)
-  doAssert not isModuleNamespaceObject(false)
-  doAssert not isNativeError(false)
-  doAssert not isNumberObject(false)
-  doAssert not isPromise(false)
-  doAssert not isProxy(false)
-  doAssert not isRegExp(false)
-  doAssert not isSet(false)
-  doAssert not isSetIterator(false)
-  doAssert not isSharedArrayBuffer(false)
-  doAssert not isStringObject("string".cstring)
-  doAssert not isSymbolObject(false)
-  doAssert not isTypedArray(false)
-  doAssert not isUint8Array(false)
-  doAssert not isUint8ClampedArray(false)
-  doAssert not isUint16Array(false)
-  doAssert not isUint32Array(false)
-  doAssert not isWeakMap(false)
-  doAssert not isWeakSet(false)
-  doAssert not isWebAssemblyCompiledModule(false)
-  doAssert isBoolean(false)
-  doAssert not isBuffer(false)
-  doAssert not isFunction(false)
-  doAssert isNull(nil)
-  doAssert not isNumber(false)
-  doAssert isString("string".cstring)
-  doAssert not isSymbol(false)
-  doAssert not isUndefined(false)
+  block:
+    doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
+    doAssert getSystemErrorName(-1.cint) == "EPERM".cstring
+    inspect("nim".cstring)
+    proc foo() = echo 42
+    discard callbackify(foo)
+    discard deprecate(foo)
+    doAssert isDeepStrictEqual(42.cint, 42.cint)
+  block:
+    let enco: TextEncoder = newTextEncoder()
+    doAssert enco.encoding == "utf-8".cstring
+    doAssert enco.encode(input = "example".cstring) == @[101.uint8, 120, 97, 109, 112, 108, 101]
+    var buffe: Uint8Array = newUint8Array(9.Natural)
+    enco.encodeInto(src = "example".cstring, dest = buffe)
+    doAssert buffe.toCstring is cstring
+    doAssert $buffe == """{"0":101,"1":120,"2":97,"3":109,"4":112,"5":108,"6":101,"7":0,"8":0}"""
+  block:
+    doAssert not isAnyArrayBuffer(false)
+    doAssert not isArrayBufferView(false)
+    doAssert not isArgumentsObject(false)
+    doAssert not isArrayBuffer(false)
+    doAssert not isBigInt64Array(false)
+    doAssert not isBigUint64Array(false)
+    doAssert not isBooleanObject(false)
+    doAssert not isBoxedPrimitive(false)
+    doAssert not isDataView(false)
+    doAssert not isDate(false)
+    doAssert not isExternal(false)
+    doAssert not isFloat32Array(false)
+    doAssert not isFloat64Array(false)
+    doAssert not isGeneratorFunction(false)
+    doAssert not isBigInt64Array(false)
+    doAssert not isGeneratorObject(false)
+    doAssert not isInt8Array(false)
+    doAssert not isInt16Array(false)
+    doAssert not isInt32Array(false)
+    doAssert not isMap(false)
+    doAssert not isMapIterator(false)
+    doAssert not isModuleNamespaceObject(false)
+    doAssert not isNativeError(false)
+    doAssert not isNumberObject(false)
+    doAssert not isPromise(false)
+    doAssert not isProxy(false)
+    doAssert not isRegExp(false)
+    doAssert not isSet(false)
+    doAssert not isSetIterator(false)
+    doAssert not isSharedArrayBuffer(false)
+    doAssert not isStringObject("string".cstring)
+    doAssert not isSymbolObject(false)
+    doAssert not isTypedArray(false)
+    doAssert not isUint8Array(false)
+    doAssert not isUint8ClampedArray(false)
+    doAssert not isUint16Array(false)
+    doAssert not isUint32Array(false)
+    doAssert not isWeakMap(false)
+    doAssert not isWeakSet(false)
+    doAssert not isWebAssemblyCompiledModule(false)
+    doAssert isBoolean(false)
+    doAssert not isBuffer(false)
+    doAssert not isFunction(false)
+    doAssert not isNumber(false)
+    doAssert isString("string".cstring)
+    doAssert not isSymbol(false)
