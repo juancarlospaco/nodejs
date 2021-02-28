@@ -101,6 +101,11 @@ window.addEventListener('DOMContentLoaded', main);
   <li><a class="reference" href="#TextEncoder"
     title="TextEncoder = ref object of JsRoot
   encoding*: cstring         ## https://nodejs.org/api/util.html#util_textencoder_encoding">TextEncoder</a></li>
+  <li><a class="reference" href="#TextDecoder"
+    title="TextDecoder = ref object of JsRoot
+  encoding*: cstring         ## https://nodejs.org/api/util.html#util_textdecoder_encoding
+  fatal*: bool               ## https://nodejs.org/api/util.html#util_textdecoder_fatal
+  ignoreBOM*: bool           ## https://nodejs.org/api/util.html#util_textdecoder_ignorebom">TextDecoder</a></li>
 
   </ul>
 </li>
@@ -392,6 +397,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="split(strng: cstring; regex: RegExp): seq[cstring]">split(strng: cstring; regex: RegExp): seq[cstring]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">newTextDecoder
+      <li><a class="reference" href="#newTextDecoder"
+    title="newTextDecoder(encoding = &quot;utf-8&quot;.cstring; fatal = false; ignoreBOM = false): TextDecoder">newTextDecoder(encoding = &quot;utf-8&quot;.cstring; fatal = false; ignoreBOM = false): TextDecoder</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">importUtil
       <li><a class="reference" href="#importUtil"
     title="importUtil()">importUtil()</a></li>
@@ -437,8 +447,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">shuffle
-      <li><a class="reference" href="#shuffle%2CopenArray%5Bany%5D"
-    title="shuffle(arrai: openArray[any]): seq[any]">shuffle(arrai: openArray[any]): seq[any]</a></li>
+      <li><a class="reference" href="#shuffle%2CopenArray%5Bauto%5D"
+    title="shuffle(arrai: openArray[auto]): seq[auto]">shuffle(arrai: openArray[auto]): seq[auto]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">isBoolean
@@ -674,9 +684,13 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">enco</span><span class="Operator">.</span><span class="Identifier">encoding</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;utf-8&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">enco</span><span class="Operator">.</span><span class="Identifier">encode</span><span class="Punctuation">(</span><span class="Identifier">input</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;example&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="Operator">@</span><span class="Punctuation">[</span><span class="FloatNumber">101.</span><span class="Identifier">uint8</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">120</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">97</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">109</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">112</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">108</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">101</span><span class="Punctuation">]</span><span class="Whitespace">
   </span><span class="Keyword">var</span><span class="Whitespace"> </span><span class="Identifier">buffe</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">Uint8Array</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newUint8Array</span><span class="Punctuation">(</span><span class="FloatNumber">9.</span><span class="Identifier">Natural</span><span class="Punctuation">)</span><span class="Whitespace">
-  </span><span class="Identifier">enco</span><span class="Operator">.</span><span class="Identifier">encodeInto</span><span class="Punctuation">(</span><span class="Identifier">src</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;example&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">dest</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">buffe</span><span class="Punctuation">)</span><span class="Whitespace">
+  </span><span class="Identifier">enco</span><span class="Operator">.</span><span class="Identifier">encodeInto</span><span class="Punctuation">(</span><span class="Identifier">src</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;example&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">dest</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">buffe</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Comment">## encodeInto is {.discardable.} for convenience.</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">buffe</span><span class="Operator">.</span><span class="Identifier">toCstring</span><span class="Whitespace"> </span><span class="Keyword">is</span><span class="Whitespace"> </span><span class="Identifier">cstring</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Operator">$</span><span class="Identifier">buffe</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="LongStringLit">&quot;&quot;&quot;{&quot;0&quot;:101,&quot;1&quot;:120,&quot;2&quot;:97,&quot;3&quot;:109,&quot;4&quot;:112,&quot;5&quot;:108,&quot;6&quot;:101,&quot;7&quot;:0,&quot;8&quot;:0}&quot;&quot;&quot;</span><span class="Whitespace">
+  </span><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">deco</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">TextDecoder</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newTextDecoder</span><span class="Punctuation">(</span><span class="Identifier">encoding</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;utf-8&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">fatal</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">false</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">ignoreBOM</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">false</span><span class="Punctuation">)</span><span class="Whitespace">
+  </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">deco</span><span class="Operator">.</span><span class="Identifier">encoding</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;utf-8&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+  </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Keyword">not</span><span class="Punctuation">(</span><span class="Identifier">deco</span><span class="Operator">.</span><span class="Identifier">fatal</span><span class="Punctuation">)</span><span class="Whitespace">
+  </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Keyword">not</span><span class="Punctuation">(</span><span class="Identifier">deco</span><span class="Operator">.</span><span class="Identifier">ignoreBOM</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Keyword">block</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Keyword">not</span><span class="Whitespace"> </span><span class="Identifier">isAnyArrayBuffer</span><span class="Punctuation">(</span><span class="Identifier">false</span><span class="Punctuation">)</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Keyword">not</span><span class="Whitespace"> </span><span class="Identifier">isArrayBufferView</span><span class="Punctuation">(</span><span class="Identifier">false</span><span class="Punctuation">)</span><span class="Whitespace">
@@ -741,6 +755,17 @@ window.addEventListener('DOMContentLoaded', main);
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_class_util_textencoder">https://nodejs.org/api/util.html#util_class_util_textencoder</a>
+
+</dd>
+<a id="TextDecoder"></a>
+<dt><pre><a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">encoding</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>         <span class="Comment">## https://nodejs.org/api/util.html#util_textdecoder_encoding</span>
+  <span class="Identifier">fatal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>               <span class="Comment">## https://nodejs.org/api/util.html#util_textdecoder_fatal</span>
+  <span class="Identifier">ignoreBOM</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>           <span class="Comment">## https://nodejs.org/api/util.html#util_textdecoder_ignorebom</span>
+  </pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/util.html#util_class_util_textdecoder">https://nodejs.org/api/util.html#util_class_util_textdecoder</a>
 
 </dd>
 
@@ -1141,8 +1166,8 @@ Convenience func to Base64 decode a string.
 Convenience func to Deduplicate an array.
 
 </dd>
-<a id="shuffle,openArray[any]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bany%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">any</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">any</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="shuffle,openArray[auto]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bauto%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.sort(() =&gt; { return Math.random() - 0.5})&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
@@ -1158,6 +1183,14 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
 </dd>
 <a id="newTextEncoder"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#newTextEncoder"><span class="Identifier">newTextEncoder</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextEncoder(@))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="newTextDecoder"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newTextDecoder"><span class="Identifier">newTextDecoder</span></a><span class="Other">(</span><span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">fatal</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">ignoreBOM</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextDecoder(#, {fatal: #, ignoreBOM: #}))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -1591,7 +1624,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 05:55:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 06:55:00 UTC</small>
       </div>
     </div>
   </div>
