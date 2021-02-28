@@ -1,10 +1,21 @@
 import std/jsffi
 include jscore
 
-type TextEncoder* = ref object of JsRoot ## https://nodejs.org/api/util.html#util_class_util_textencoder
-  encoding*: cstring  ## https://nodejs.org/api/util.html#util_textencoder_encoding
+type
+  TextEncoder* = ref object of JsRoot ## https://nodejs.org/api/util.html#util_class_util_textencoder
+    encoding*: cstring  ## https://nodejs.org/api/util.html#util_textencoder_encoding
+
+  TextDecoder* = ref object of JsRoot ## https://nodejs.org/api/util.html#util_class_util_textdecoder
+    encoding*: cstring ## https://nodejs.org/api/util.html#util_textdecoder_encoding
+    fatal*: bool       ## https://nodejs.org/api/util.html#util_textdecoder_fatal
+    ignoreBOM*: bool   ## https://nodejs.org/api/util.html#util_textdecoder_ignorebom
 
 func newTextEncoder*(): TextEncoder {.importjs: "(new util.TextEncoder(@))".}
+
+func newTextDecoder*(encoding = "utf-8".cstring; fatal = false; ignoreBOM = false): TextDecoder {.importjs: "(new util.TextDecoder(#, {fatal: #, ignoreBOM: #}))".}
+
+#func decode*(self: TextDecoder; input: openArray[auto]): cstring {.importcpp.}
+#  ## TODO: https://nodejs.org/api/util.html#util_textdecoder_decode_input_options
 
 func encode*(self: TextEncoder; input: cstring): seq[uint8] {.importcpp.}
   ## https://nodejs.org/api/util.html#util_textencoder_encode_input
@@ -199,9 +210,13 @@ runnableExamples:
     doAssert enco.encoding == "utf-8".cstring
     doAssert enco.encode(input = "example".cstring) == @[101.uint8, 120, 97, 109, 112, 108, 101]
     var buffe: Uint8Array = newUint8Array(9.Natural)
-    enco.encodeInto(src = "example".cstring, dest = buffe)
+    enco.encodeInto(src = "example".cstring, dest = buffe) ## encodeInto is {.discardable.} for convenience.
     doAssert buffe.toCstring is cstring
     doAssert $buffe == """{"0":101,"1":120,"2":97,"3":109,"4":112,"5":108,"6":101,"7":0,"8":0}"""
+    let deco: TextDecoder = newTextDecoder(encoding = "utf-8".cstring, fatal = false, ignoreBOM = false)
+    doAssert deco.encoding == "utf-8".cstring
+    doAssert not(deco.fatal)
+    doAssert not(deco.ignoreBOM)
   block:
     doAssert not isAnyArrayBuffer(false)
     doAssert not isArrayBufferView(false)

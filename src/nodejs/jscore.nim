@@ -138,7 +138,7 @@ func base64decode*(strng: cstring; encoding = "utf-8".cstring): cstring {.import
 func deduplicate*[T](arrai: openArray[T]): seq[T] {.importjs: "[...new Set(#)]".}
   ## Convenience func to Deduplicate an array.
 
-func shuffle*(arrai: openArray[any]): seq[any] {.importjs: "#.sort(() => { return Math.random() - 0.5})".}
+func shuffle*(arrai: openArray[auto]): seq[auto] {.importjs: "#.sort(() => { return Math.random() - 0.5})".}
   ## Convenience func to Random shuffle an array.
 
 func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
