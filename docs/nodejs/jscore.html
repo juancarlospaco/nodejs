@@ -97,7 +97,11 @@ window.addEventListener('DOMContentLoaded', main);
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#Uint8Array"
-    title="Uint8Array = ref object of JsRoot">Uint8Array</a></li>
+    title="Uint8Array = ref object of JsRoot
+  BYTES_PER_ELEMENT*: cint">Uint8Array</a></li>
+  <li><a class="reference" href="#ArrayBuffer"
+    title="ArrayBuffer = ref object of JsRoot
+  byteLength*: cint">ArrayBuffer</a></li>
 
   </ul>
 </li>
@@ -135,8 +139,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">$
-      <li><a class="reference" href="#%24%2CUint8Array"
-    title="`$`(self: Uint8Array): string">`$`(self: Uint8Array): string</a></li>
+      <li><a class="reference" href="#%24"
+    title="`$`(self: Uint8Array or ArrayBuffer): string">`$`(self: Uint8Array or ArrayBuffer): string</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">split
@@ -164,13 +168,13 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">toCstring
-      <li><a class="reference" href="#toCstring%2CUint8Array"
-    title="toCstring(self: Uint8Array): cstring">toCstring(self: Uint8Array): cstring</a></li>
+      <li><a class="reference" href="#toCstring"
+    title="toCstring(self: Uint8Array or ArrayBuffer): cstring">toCstring(self: Uint8Array or ArrayBuffer): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">[]=
-      <li><a class="reference" href="#%5B%5D%3D%2CUint8Array%2CNatural%2Cuint8"
-    title="`[]=`(self: Uint8Array; index: Natural; value: uint8)">`[]=`(self: Uint8Array; index: Natural; value: uint8)</a></li>
+      <li><a class="reference" href="#%5B%5D%3D%2C%2CNatural%2Cuint8"
+    title="`[]=`(self: Uint8Array or ArrayBuffer; index: Natural; value: uint8)">`[]=`(self: Uint8Array or ArrayBuffer; index: Natural; value: uint8)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">&
@@ -212,6 +216,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">match
       <li><a class="reference" href="#match%2Ccstring%2CRegExp"
     title="match(strng: cstring; regex: RegExp): seq[cstring]">match(strng: cstring; regex: RegExp): seq[cstring]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">newArrayBuffer
+      <li><a class="reference" href="#newArrayBuffer%2CNatural"
+    title="newArrayBuffer(number: Natural): ArrayBuffer">newArrayBuffer(number: Natural): ArrayBuffer</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">replaceAll
@@ -303,8 +312,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">[]
-      <li><a class="reference" href="#%5B%5D%2CUint8Array%2CNatural"
-    title="`[]`(self: Uint8Array; index: Natural): uint8">`[]`(self: Uint8Array; index: Natural): uint8</a></li>
+      <li><a class="reference" href="#%5B%5D%2C%2CNatural"
+    title="`[]`(self: Uint8Array or ArrayBuffer; index: Natural): uint8">`[]`(self: Uint8Array or ArrayBuffer; index: Natural): uint8</a></li>
   <li><a class="reference" href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CSomeInteger%5D"
     title="`[]`(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring">`[]`(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring</a></li>
   <li><a class="reference" href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CBackwardsIndex%5D"
@@ -366,7 +375,18 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
 <a id="Uint8Array"></a>
-<dt><pre><a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span></pre></dt>
+<dt><pre><a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">BYTES_PER_ELEMENT</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="ArrayBuffer"></a>
+<dt><pre><a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">byteLength</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+</pre></dt>
 <dd>
 
 
@@ -384,15 +404,24 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
-<a id="[],Uint8Array,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%2CUint8Array%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint8</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="newArrayBuffer,Natural"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newArrayBuffer%2CNatural"><span class="Identifier">newArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new ArrayBuffer(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="[]=,Uint8Array,Natural,uint8"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%3D%2CUint8Array%2CNatural%2Cuint8"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="[],,Natural"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%2C%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint8</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="[]=,,Natural,uint8"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%3D%2C%2CNatural%2Cuint8"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#] = #&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
@@ -406,15 +435,16 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
-<a id="toCstring,Uint8Array"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toCstring%2CUint8Array"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="toCstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="$,Uint8Array"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%24%2CUint8Array"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="$"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%24"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
 
@@ -795,7 +825,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parse
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 06:54:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-28 07:30:21 UTC</small>
       </div>
     </div>
   </div>
