@@ -3,19 +3,29 @@ from std/jsre import RegExp
 import std/jsffi
 export jsffi, RegExp
 
-type Uint8Array* = ref object of JsRoot
+type
+  Uint8Array* = ref object of JsRoot
+    BYTES_PER_ELEMENT*: cint
+
+  ArrayBuffer* = ref object of JsRoot
+    byteLength*: cint
 
 func newUint8Array*(number: Natural): Uint8Array {.importjs: "new Uint8Array(#)".}
 
-func `[]`*(self: Uint8Array; index: Natural): uint8 {.importjs: "#[#]".}
+func newArrayBuffer*(number: Natural): ArrayBuffer {.importjs: "new ArrayBuffer(#)".}
 
-func `[]=`*(self: Uint8Array; index: Natural; value: uint8) {.importjs: "#[#] = #".}
+func `[]`*(self: Uint8Array or ArrayBuffer; index: Natural): uint8 {.importjs: "#[#]".}
+
+func `[]=`*(self: Uint8Array or ArrayBuffer; index: Natural; value: uint8) {.importjs: "#[#] = #".}
 
 func toArray*(self: Uint8Array): seq[uint8] {.importjs: "Array.from(#)".}
 
-func toCstring*(self: Uint8Array): cstring {.importjs: "JSON.stringify(#)".}
+# TODO: Sometimes return is empty ?.
+# func toArray*(self: ArrayBuffer): seq[int] {.importjs: "Array.from(new Uint8Array(#))".}
 
-func `$`*(self: Uint8Array): string = $toCstring(self)
+func toCstring*(self: Uint8Array or ArrayBuffer): cstring {.importjs: "JSON.stringify(#)".}
+
+func `$`*(self: Uint8Array or ArrayBuffer): string = $toCstring(self)
 
 
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
