@@ -131,6 +131,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="newREPLServer(options: JsObject): REPLServer">newREPLServer(options: JsObject): REPLServer</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">onReset
+      <li><a class="reference" href="#onReset%2CREPLServer%2Cauto"
+    title="onReset(self: REPLServer; item: auto)">onReset(self: REPLServer; item: auto)</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">importRepl
       <li><a class="reference" href="#importRepl"
     title="importRepl()">importRepl()</a></li>
@@ -247,6 +252,13 @@ Alias for <tt class="docutils literal"><span class="pre">repl.start(options)</sp
 Alias for <tt class="docutils literal"><span class="pre">repl.on('exit', callback)</span></tt>.
 
 </dd>
+<a id="onReset,REPLServer,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#onReset%2CREPLServer%2Cauto"><span class="Identifier">onReset</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsrepl.html#REPLServer"><span class="Identifier">REPLServer</span></a><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.on(\'reset\', #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre">repl.on('reset', item)</span></tt>.
+
+</dd>
 
 </dl></div>
 
@@ -257,7 +269,7 @@ Alias for <tt class="docutils literal"><span class="pre">repl.on('exit', callbac
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 23:06:17 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 23:15:57 UTC</small>
       </div>
     </div>
   </div>
