@@ -1,10 +1,9 @@
 ## Read-Eval-Print-Loop (REPL) implementation that is available both as a standalone program or includible in other applications.
 import std/jsffi
 
-type
-  REPLServer* = ref object of JsRoot ## https://nodejs.org/api/repl.html#repl_class_replserver
-    options*: JsObject
-    builtinModules*: seq[cstring]
+type REPLServer* = ref object of JsRoot ## https://nodejs.org/api/repl.html#repl_class_replserver
+  options*: JsObject
+  builtinModules*: seq[cstring]
 
 func importRepl*() {.importjs: "import * as repl from 'repl'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
