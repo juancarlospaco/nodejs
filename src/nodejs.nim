@@ -21,6 +21,7 @@ import
   nodejs/jsutils,
   nodejs/jszlib,
   nodejs/jsreadline,
+  nodejs/timers,
   nodejs/jsugar
 
 export
@@ -40,4 +41,5 @@ export
   jsutils,
   jszlib,
   jsreadline,
+  timers,
   jsugar
