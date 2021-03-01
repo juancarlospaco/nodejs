@@ -127,3 +127,11 @@ func throws*[T](asyncFunction: T; error: T; message: cstring) {.importjs: "asser
 
 func throws*[T](asyncFunction: T; error: T) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+
+
+runnableExamples:
+  import std/jsffi
+  requireAssert()
+  let tracker: CallTracker = newCallTracker()
+  doAssert tracker.report() is JsObject
+  tracker.verify()
