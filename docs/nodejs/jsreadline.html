@@ -102,16 +102,6 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#9" id="59">Lets</a>
-  <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#line"
-    title="line: cstring">line</a></li>
-  <li><a class="reference" href="#cursor"
-    title="cursor: cint">cursor</a></li>
-
-  </ul>
-</li>
-<li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">requireReadline
@@ -198,6 +188,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="cursorTo(x, y: cint): bool">cursorTo(x, y: cint): bool</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">line
+      <li><a class="reference" href="#line%2CReadline"
+    title="line(self: Readline): cstring">line(self: Readline): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">cursor
+      <li><a class="reference" href="#cursor%2CReadline"
+    title="cursor(self: Readline): int">cursor(self: Readline): int</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -230,7 +230,8 @@ You MUST import <tt class="docutils literal"><span class="pre">process</span></t
   </span><span class="Identifier">rl</span><span class="Operator">.</span><span class="Identifier">resume</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
   </span><span class="Identifier">rl</span><span class="Operator">.</span><span class="Identifier">write</span><span class="Punctuation">(</span><span class="StringLit">&quot;data&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace">
   </span><span class="Identifier">rl</span><span class="Operator">.</span><span class="Identifier">close</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
-  </span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">cursor</span></pre></p>
+  </span><span class="Comment"># echo rl.line()</span><span class="Whitespace">
+  </span><span class="Comment"># echo rl.cursor()</span></pre></p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
@@ -239,25 +240,6 @@ You MUST import <tt class="docutils literal"><span class="pre">process</span></t
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_readline">https://nodejs.org/api/readline.html#readline_readline</a>
-
-</dd>
-
-</dl></div>
-<div class="section" id="9">
-<h1><a class="toc-backref" href="#9">Lets</a></h1>
-<dl class="item">
-<a id="line"></a>
-<dt><pre><a href="jsreadline.html#line"><span class="Identifier">line</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_line">https://nodejs.org/api/readline.html#readline_rl_line</a>
-
-</dd>
-<a id="cursor"></a>
-<dt><pre><a href="jsreadline.html#cursor"><span class="Identifier">cursor</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_cursor">https://nodejs.org/api/readline.html#readline_rl_cursor</a>
 
 </dd>
 
@@ -344,6 +326,20 @@ You MUST import <tt class="docutils literal"><span class="pre">process</span></t
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_getcursorpos">https://nodejs.org/api/readline.html#readline_rl_getcursorpos</a>
 
 </dd>
+<a id="line,Readline"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#line%2CReadline"><span class="Identifier">line</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.line })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_line">https://nodejs.org/api/readline.html#readline_rl_line</a>
+
+</dd>
+<a id="cursor,Readline"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#cursor%2CReadline"><span class="Identifier">cursor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.cursor })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_cursor">https://nodejs.org/api/readline.html#readline_rl_cursor</a>
+
+</dd>
 <a id="importReadline"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#importReadline"><span class="Identifier">importReadline</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as readline from \'readline\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -396,7 +392,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 06:10:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 06:20:26 UTC</small>
       </div>
     </div>
   </div>
