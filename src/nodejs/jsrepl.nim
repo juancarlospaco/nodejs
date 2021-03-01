@@ -32,3 +32,6 @@ func setupHistory*[T](self: REPLServer; historyPath: cstring; callback: T) {.imp
 
 func onExit*[T](self: REPLServer; callback: T) {.importjs: "#.on('exit', #)".}
   ## Alias for `repl.on('exit', callback)`.
+
+func onReset*(self: REPLServer; item: auto) {.importjs: "#.on('reset', #)".}
+  ## Alias for `repl.on('reset', item)`.
