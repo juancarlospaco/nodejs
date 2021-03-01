@@ -43,8 +43,10 @@ func setTimeoutPromise*(delay: cint; value: auto): Future[Timeout] {.importjs: "
 
 func setImmediatePromise*(value: auto): Future[Immediate] {.importjs: "timersPromises.setImmediate(#)".}
   ## https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options
+  ##
   ## .. Note:: You MUST import `timersPromises` before using this func.
 
 func setIntervalPromise*(delay: cint; value: auto): Future[Timeout] {.importjs: "timersPromises.setInterval(#, #)".}
   ## https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options
+  ##
   ## .. Note:: You MUST import `timersPromises` before using this func.
