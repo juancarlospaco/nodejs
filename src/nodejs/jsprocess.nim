@@ -1,4 +1,4 @@
-import jsffi
+import std/jsffi
 export jsffi
 
 let
