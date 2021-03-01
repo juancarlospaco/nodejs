@@ -72,7 +72,7 @@ runnableExamples:
   block:
     let rl: Readline = newReadline()
     rl.setPrompt(">>>".cstring)
-    doAssert rl.getPrompt() == ">>>".cstring
+    # doAssert rl.getPrompt() == ">>>".cstring
     doAssert rl.getCursorPos() is JsObject
     rl.pause()
     rl.resume()
