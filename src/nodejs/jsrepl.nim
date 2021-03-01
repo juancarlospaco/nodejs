@@ -1,3 +1,4 @@
+## Read-Eval-Print-Loop (REPL) implementation that is available both as a standalone program or includible in other applications.
 import std/jsffi
 
 type
