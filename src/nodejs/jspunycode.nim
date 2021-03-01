@@ -27,9 +27,9 @@ func ucs2Encode*(codePoints: openArray[cint]): cstring {.importjs: "punycode.ucs
 runnableExamples:
   requirePunycode()
   const str = "hello".cstring
-  echo decode(str)
-  echo encode(str)
-  echo toASCII(str)
-  echo toUnicode(str)
-  echo ucs2Decode(str)
-  echo ucs2Encode([0.cint, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  doAssert decode(str) == "㗁㖼㖶".cstring
+  doAssert encode(str) == "hello-".cstring
+  doAssert toASCII(str) == "hello".cstring
+  doAssert toUnicode(str) == "hello".cstring
+  doAssert ucs2Decode(str) == @[104.cint, 101, 108, 108, 111]
+  doAssert ucs2Encode(@[104.cint, 101, 108, 108, 111]) == "hello".cstring
