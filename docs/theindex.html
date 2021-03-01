@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jscore: `$`(self: Uint8Array or ArrayBuffer): string" href="nodejs/jscore.html#%24">jscore: `$`(self: Uint8Array or ArrayBuffer): string</a></li>
@@ -520,6 +520,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: chownSync(path: cstring; uid: cint; gid: cint)" href="nodejs/jsfs.html#chownSync%2Ccstring%2Ccint%2Ccint">jsfs: chownSync(path: cstring; uid: cint; gid: cint)</a></li>
           </ul></dd>
+<dt><a name="clearBufferedCommand" href="#clearBufferedCommand"><span>clearBufferedCommand:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: clearBufferedCommand(self: REPLServer)" href="nodejs/jsrepl.html#clearBufferedCommand%2CREPLServer">jsrepl: clearBufferedCommand(self: REPLServer)</a></li>
+          </ul></dd>
 <dt><a name="clearLine" href="#clearLine"><span>clearLine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: clearLine(dir = 0.cint): bool" href="nodejs/jsreadline.html#clearLine">jsreadline: clearLine(dir = 0.cint): bool</a></li>
@@ -634,6 +638,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsassert: deepStrictEqual(actual: auto; expected: auto; message: cstring)" href="nodejs/jsassert.html#deepStrictEqual%2Cauto%2Cauto%2Ccstring">jsassert: deepStrictEqual(actual: auto; expected: auto; message: cstring)</a></li>
           </ul></dd>
+<dt><a name="defineCommand" href="#defineCommand"><span>defineCommand:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: defineCommand(self: REPLServer; keyword: cstring; cmd: JsObject)" href="nodejs/jsrepl.html#defineCommand%2CREPLServer%2Ccstring%2CJsObject">jsrepl: defineCommand(self: REPLServer; keyword: cstring; cmd: JsObject)</a></li>
+          </ul></dd>
 <dt><a name="DEFLATE" href="#DEFLATE"><span>DEFLATE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jszlib: DEFLATE" href="nodejs/jszlib.html#DEFLATE">jszlib: DEFLATE</a></li>
@@ -679,6 +687,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsinspector: disconnect(self: InspectorSession)" href="nodejs/jsinspector.html#disconnect%2CInspectorSession">jsinspector: disconnect(self: InspectorSession)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsprocess: disconnect()" href="nodejs/jsprocess.html#disconnect">jsprocess: disconnect()</a></li>
+          </ul></dd>
+<dt><a name="displayPrompt" href="#displayPrompt"><span>displayPrompt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: displayPrompt(self: REPLServer; preserveCursor: bool)" href="nodejs/jsrepl.html#displayPrompt%2CREPLServer%2Cbool">jsrepl: displayPrompt(self: REPLServer; preserveCursor: bool)</a></li>
           </ul></dd>
 <dt><a name="doesNotMatch" href="#doesNotMatch"><span>doesNotMatch:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1314,6 +1326,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: importReadline()" href="nodejs/jsreadline.html#importReadline">jsreadline: importReadline()</a></li>
           </ul></dd>
+<dt><a name="importRepl" href="#importRepl"><span>importRepl:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: importRepl()" href="nodejs/jsrepl.html#importRepl">jsrepl: importRepl()</a></li>
+          </ul></dd>
 <dt><a name="importTimers" href="#importTimers"><span>importTimers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: importTimers()" href="nodejs/jstimers.html#importTimers">jstimers: importTimers()</a></li>
@@ -1800,6 +1816,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: newReadline(): Readline" href="nodejs/jsreadline.html#newReadline">jsreadline: newReadline(): Readline</a></li>
           </ul></dd>
+<dt><a name="newREPLServer" href="#newREPLServer"><span>newREPLServer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: newREPLServer(options: JsObject): REPLServer" href="nodejs/jsrepl.html#newREPLServer%2CJsObject">jsrepl: newREPLServer(options: JsObject): REPLServer</a></li>
+          </ul></dd>
 <dt><a name="newSession" href="#newSession"><span>newSession:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: newSession(): InspectorSession" href="nodejs/jsinspector.html#newSession">jsinspector: newSession(): InspectorSession</a></li>
@@ -1948,6 +1968,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsassert: ok(value: auto; message: cstring)" href="nodejs/jsassert.html#ok%2Cauto%2Ccstring">jsassert: ok(value: auto; message: cstring)</a></li>
           </ul></dd>
+<dt><a name="onExit" href="#onExit"><span>onExit:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: onExit[T](self: REPLServer; callback: T)" href="nodejs/jsrepl.html#onExit%2CREPLServer%2CT">jsrepl: onExit[T](self: REPLServer; callback: T)</a></li>
+          </ul></dd>
 <dt><a name="O_NOATIME" href="#O_NOATIME"><span>O_NOATIME:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: O_NOATIME" href="nodejs/jsfs.html#O_NOATIME">jsfs: O_NOATIME</a></li>
@@ -2043,6 +2067,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsutils: parseInt(s: char): cint" href="nodejs/jsutils.html#parseInt%2Cchar">jsutils: parseInt(s: char): cint</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: parseInt(s: cstring): cint" href="nodejs/jsutils.html#parseInt%2Ccstring">jsutils: parseInt(s: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="parseREPLKeyword" href="#parseREPLKeyword"><span>parseREPLKeyword:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: parseREPLKeyword(self: REPLServer; keyword: cstring; rest: auto): bool" href="nodejs/jsrepl.html#parseREPLKeyword%2CREPLServer%2Ccstring%2Cauto">jsrepl: parseREPLKeyword(self: REPLServer; keyword: cstring; rest: auto): bool</a></li>
           </ul></dd>
 <dt><a name="parseUInt" href="#parseUInt"><span>parseUInt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2232,6 +2260,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsutils: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring" href="nodejs/jsutils.html#replaceAll%2Ccstring%2CRegExp">jsutils: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring</a></li>
           </ul></dd>
+<dt><a name="REPLServer" href="#REPLServer"><span>REPLServer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: REPLServer" href="nodejs/jsrepl.html#REPLServer">jsrepl: REPLServer</a></li>
+          </ul></dd>
 <dt><a name="report" href="#report"><span>report:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: report(self: CallTracker): JsObject" href="nodejs/jsassert.html#report%2CCallTracker">jsassert: report(self: CallTracker): JsObject</a></li>
@@ -2321,6 +2353,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="requireReadline" href="#requireReadline"><span>requireReadline:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: requireReadline()" href="nodejs/jsreadline.html#requireReadline">jsreadline: requireReadline()</a></li>
+          </ul></dd>
+<dt><a name="requireRepl" href="#requireRepl"><span>requireRepl:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: requireRepl()" href="nodejs/jsrepl.html#requireRepl">jsrepl: requireRepl()</a></li>
           </ul></dd>
 <dt><a name="requireTimers" href="#requireTimers"><span>requireTimers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2521,6 +2557,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsprocess: setuid(id: cint)" href="nodejs/jsprocess.html#setuid%2Ccint">jsprocess: setuid(id: cint)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsprocess: setuid(id: cstring)" href="nodejs/jsprocess.html#setuid%2Ccstring">jsprocess: setuid(id: cstring)</a></li>
+          </ul></dd>
+<dt><a name="setupHistory" href="#setupHistory"><span>setupHistory:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsrepl: setupHistory[T](self: REPLServer; historyPath: cstring; callback: T)" href="nodejs/jsrepl.html#setupHistory%2CREPLServer%2Ccstring%2CT">jsrepl: setupHistory[T](self: REPLServer; historyPath: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="shuffle" href="#shuffle"><span>shuffle:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3303,7 +3343,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 22:38:48 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 23:03:37 UTC</small>
       </div>
     </div>
   </div>
