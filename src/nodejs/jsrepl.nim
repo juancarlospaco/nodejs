@@ -29,8 +29,5 @@ func parseREPLKeyword*(self: REPLServer; keyword: cstring; rest: auto): bool {.i
 func setupHistory*[T](self: REPLServer; historyPath: cstring; callback: T) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/repl.html#repl_replserver_setuphistory_historypath_callback
 
-func setupHistory*[T](self: REPLServer; historyPath: cstring; callback: T) {.importjs: "#.$1(#, #)".}
-  ## https://nodejs.org/api/repl.html#repl_replserver_setuphistory_historypath_callback
-
 func onExit*[T](self: REPLServer; callback: T) {.importjs: "#.on('exit', #)".}
   ## Alias for `repl.on('exit', callback)`.
