@@ -1,3 +1,21 @@
+import std/jsffi
+
+type Session* = ref object of JsRoot ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
+
+func newSession*(): Session {.importjs: "new inspector.Session()".}
+  ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
+
+func connect*(self: Session) {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/inspector.html#inspector_session_connect
+
+func connectToMainThread*(self: Session) {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/inspector.html#inspector_session_connecttomainthread
+
+func disconnect*(self: Session) {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/inspector.html#inspector_session_disconnect
+
+func post*(self: Session; metod: cstring; params: JsObject) {.importjs: "#.$1(#, #)".}
+  ## https://nodejs.org/api/inspector.html#inspector_session_post_method_params_callback
 
 func importInspector*() {.importjs: "import * as inspector from 'inspector'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
