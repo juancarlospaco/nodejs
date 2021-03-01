@@ -96,9 +96,19 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">takeCoverage
+      <ul class="simple nested-toc-section">getHeapSpaceStatistics
+      <li><a class="reference" href="#getHeapSpaceStatistics"
+    title="getHeapSpaceStatistics(): JsObject">getHeapSpaceStatistics(): JsObject</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">takeCoverage
       <li><a class="reference" href="#takeCoverage"
     title="takeCoverage()">takeCoverage()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getHeapStatistics
+      <li><a class="reference" href="#getHeapStatistics"
+    title="getHeapStatistics(): JsObject">getHeapStatistics(): JsObject</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">setFlagsFromString
@@ -109,6 +119,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">writeHeapSnapshot
       <li><a class="reference" href="#writeHeapSnapshot%2Ccstring"
     title="writeHeapSnapshot(filename: cstring): cstring">writeHeapSnapshot(filename: cstring): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getHeapCodeStatistics
+      <li><a class="reference" href="#getHeapCodeStatistics"
+    title="getHeapCodeStatistics(): JsObject">getHeapCodeStatistics(): JsObject</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">cachedDataVersionTag
@@ -173,6 +188,27 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 <a class="reference external" href="https://nodejs.org/api/v8.html#v8_v8_cacheddataversiontag">https://nodejs.org/api/v8.html#v8_v8_cacheddataversiontag</a>
 
 </dd>
+<a id="getHeapCodeStatistics"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#getHeapCodeStatistics"><span class="Identifier">getHeapCodeStatistics</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;v8.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/v8.html#v8_v8_getheapcodestatistics">https://nodejs.org/api/v8.html#v8_v8_getheapcodestatistics</a>
+
+</dd>
+<a id="getHeapSpaceStatistics"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#getHeapSpaceStatistics"><span class="Identifier">getHeapSpaceStatistics</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;v8.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/v8.html#v8_v8_getheapspacestatistics">https://nodejs.org/api/v8.html#v8_v8_getheapspacestatistics</a>
+
+</dd>
+<a id="getHeapStatistics"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#getHeapStatistics"><span class="Identifier">getHeapStatistics</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;v8.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/v8.html#v8_v8_getheapstatistics">https://nodejs.org/api/v8.html#v8_v8_getheapstatistics</a>
+
+</dd>
 <a id="setFlagsFromString,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#setFlagsFromString%2Ccstring"><span class="Identifier">setFlagsFromString</span></a><span class="Other">(</span><span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;v8.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -211,7 +247,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 06:48:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 08:45:13 UTC</small>
       </div>
     </div>
   </div>
