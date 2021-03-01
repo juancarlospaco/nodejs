@@ -478,6 +478,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsutils: callbackify[T](function: T): T" href="nodejs/jsutils.html#callbackify%2CT">jsutils: callbackify[T](function: T): T</a></li>
           </ul></dd>
+<dt><a name="calls" href="#calls"><span>calls:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsassert: calls[T](self: CallTracker; fn: T; exact = 1.cint): T" href="nodejs/jsassert.html#calls%2CCallTracker%2CT">jsassert: calls[T](self: CallTracker; fn: T; exact = 1.cint): T</a></li>
+          </ul></dd>
+<dt><a name="CallTracker" href="#CallTracker"><span>CallTracker:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsassert: CallTracker" href="nodejs/jsassert.html#CallTracker">jsassert: CallTracker</a></li>
+          </ul></dd>
 <dt><a name="CANCELLED" href="#CANCELLED"><span>CANCELLED:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: CANCELLED" href="nodejs/jsdns.html#CANCELLED">jsdns: CANCELLED</a></li>
@@ -1720,6 +1728,10 @@ window.addEventListener('DOMContentLoaded', main);
                   operator: cstring): cstring" href="nodejs/jsassert.html#newAssertionError%2Ccstring%2Cauto%2Cauto%2Ccstring">jsassert: newAssertionError(message: cstring; actual: auto; expected: auto;
                   operator: cstring): cstring</a></li>
           </ul></dd>
+<dt><a name="newCallTracker" href="#newCallTracker"><span>newCallTracker:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsassert: newCallTracker(): CallTracker" href="nodejs/jsassert.html#newCallTracker">jsassert: newCallTracker(): CallTracker</a></li>
+          </ul></dd>
 <dt><a name="newTextDecoder" href="#newTextDecoder"><span>newTextDecoder:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsutils: newTextDecoder(encoding = &quot;utf-8&quot;.cstring; fatal = false; ignoreBOM = false): TextDecoder" href="nodejs/jsutils.html#newTextDecoder">jsutils: newTextDecoder(encoding = &quot;utf-8&quot;.cstring; fatal = false; ignoreBOM = false): TextDecoder</a></li>
@@ -2119,6 +2131,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jscore: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring" href="nodejs/jscore.html#replaceAll%2Ccstring%2CRegExp">jscore: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring" href="nodejs/jsutils.html#replaceAll%2Ccstring%2CRegExp">jsutils: replaceAll(strng: cstring; regex: RegExp; by = &quot;&quot;.cstring): cstring</a></li>
+          </ul></dd>
+<dt><a name="report" href="#report"><span>report:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsassert: report(self: CallTracker): JsObject" href="nodejs/jsassert.html#report%2CCallTracker">jsassert: report(self: CallTracker): JsObject</a></li>
           </ul></dd>
 <dt><a name="reportCompact" href="#reportCompact"><span>reportCompact:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2924,6 +2940,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsos: UV_UDP_REUSEADDR" href="nodejs/jsos.html#UV_UDP_REUSEADDR">jsos: UV_UDP_REUSEADDR</a></li>
           </ul></dd>
+<dt><a name="verify" href="#verify"><span>verify:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsassert: verify(self: CallTracker)" href="nodejs/jsassert.html#verify%2CCallTracker">jsassert: verify(self: CallTracker)</a></li>
+          </ul></dd>
 <dt><a name="version" href="#version"><span>version:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: version(): cstring" href="nodejs/jsos.html#version">jsos: version(): cstring</a></li>
@@ -3127,7 +3147,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 03:20:29 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 03:43:23 UTC</small>
       </div>
     </div>
   </div>

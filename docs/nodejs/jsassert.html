@@ -94,6 +94,14 @@ window.addEventListener('DOMContentLoaded', main);
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
+  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#CallTracker"
+    title="CallTracker = ref object of JsRoot">CallTracker</a></li>
+
+  </ul>
+</li>
+<li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">strictEqual
@@ -101,6 +109,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="strictEqual(actual, expected: auto; message: cstring)">strictEqual(actual, expected: auto; message: cstring)</a></li>
   <li><a class="reference" href="#strictEqual%2Cauto%2Cauto"
     title="strictEqual(actual, expected: auto)">strictEqual(actual, expected: auto)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">report
+      <li><a class="reference" href="#report%2CCallTracker"
+    title="report(self: CallTracker): JsObject">report(self: CallTracker): JsObject</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">deepStrictEqual
@@ -120,6 +133,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="notStrictEqual(actual, expected: auto; message: cstring)">notStrictEqual(actual, expected: auto; message: cstring)</a></li>
   <li><a class="reference" href="#notStrictEqual%2Cauto%2Cauto"
     title="notStrictEqual(actual, expected: auto)">notStrictEqual(actual, expected: auto)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">calls
+      <li><a class="reference" href="#calls%2CCallTracker%2CT"
+    title="calls[T](self: CallTracker; fn: T; exact = 1.cint): T">calls[T](self: CallTracker; fn: T; exact = 1.cint): T</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">newCallTracker
+      <li><a class="reference" href="#newCallTracker"
+    title="newCallTracker(): CallTracker">newCallTracker(): CallTracker</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">importAssert
@@ -218,6 +241,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="requireAssertStrict()">requireAssertStrict()</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">verify
+      <li><a class="reference" href="#verify%2CCallTracker"
+    title="verify(self: CallTracker)">verify(self: CallTracker)</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -230,9 +258,50 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="tocRoot"></div>
   
   <p class="module-desc"></p>
-  <div class="section" id="12">
+  <div class="section" id="7">
+<h1><a class="toc-backref" href="#7">Types</a></h1>
+<dl class="item">
+<a id="CallTracker"></a>
+<dt><pre><a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_class_assert_calltracker">https://nodejs.org/api/assert.html#assert_class_assert_calltracker</a>
+
+</dd>
+
+</dl></div>
+<div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+<a id="newCallTracker"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newCallTracker"><span class="Identifier">newCallTracker</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new assert.CallTracker())&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_calltracker">https://nodejs.org/api/assert.html#assert_new_assert_calltracker</a>
+
+</dd>
+<a id="calls,CallTracker,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#calls%2CCallTracker%2CT"><span class="Identifier">calls</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">;</span> <span class="Identifier">fn</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">exact</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact">https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact</a>
+
+</dd>
+<a id="report,CallTracker"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#report%2CCallTracker"><span class="Identifier">report</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_report">https://nodejs.org/api/assert.html#assert_tracker_report</a>
+
+</dd>
+<a id="verify,CallTracker"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#verify%2CCallTracker"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_verify">https://nodejs.org/api/assert.html#assert_tracker_verify</a>
+
+</dd>
 <a id="importAssert"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#importAssert"><span class="Identifier">importAssert</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as assert from \'assert\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -511,7 +580,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 03:20:25 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 03:43:19 UTC</small>
       </div>
     </div>
   </div>
