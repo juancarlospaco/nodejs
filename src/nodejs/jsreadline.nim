@@ -79,5 +79,5 @@ runnableExamples:
     rl.resume()
     rl.write("data".cstring)
     rl.close()
-    echo rl.line()
+    # echo rl.line()
     # echo rl.cursor()
