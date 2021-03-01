@@ -3,10 +3,6 @@ import std/jsffi
 
 type Readline* = ref object of JsRoot ## https://nodejs.org/api/readline.html#readline_readline
 
-let
-  line* {.importjs: "readline.line".}: cstring  ## https://nodejs.org/api/readline.html#readline_rl_line
-  cursor* {.importjs: "readline.cursor".}: cint ## https://nodejs.org/api/readline.html#readline_rl_cursor
-
 func newReadline*(): Readline {.importjs: "readline.createInterface({input: process.stdin, output: process.stdout})".}
   ## https://nodejs.org/api/readline.html#readline_readline
 
@@ -39,6 +35,12 @@ func write*(self: Readline; data: cstring; ctrl: bool; meta: bool; shift: bool; 
 
 func getCursorPos*(self: Readline): JsObject {.importjs: "#.$1()".}
   ## https://nodejs.org/api/readline.html#readline_rl_getcursorpos
+
+func line*(self: Readline): cstring {.importjs: "(() => { return #.line })()".}
+  ## https://nodejs.org/api/readline.html#readline_rl_line
+
+func cursor*(self: Readline): int {.importjs: "(() => { return #.cursor })()".}
+  ## https://nodejs.org/api/readline.html#readline_rl_cursor
 
 func importReadline*() {.importjs: "import * as readline from 'readline'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -77,4 +79,5 @@ runnableExamples:
     rl.resume()
     rl.write("data".cstring)
     rl.close()
-    echo cursor
+    echo rl.line()
+    echo rl.cursor()
