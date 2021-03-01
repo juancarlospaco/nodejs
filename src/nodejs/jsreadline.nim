@@ -80,4 +80,4 @@ runnableExamples:
     rl.write("data".cstring)
     rl.close()
     echo rl.line()
-    echo rl.cursor()
+    # echo rl.cursor()
