@@ -35,7 +35,7 @@ Documentation Index 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
 - :heavy_check_mark: [v8](https://nodejs.org/api/v8.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsv8.html
 - :heavy_check_mark: [zlib](https://nodejs.org/api/zlib.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jszlib.html
 - :heavy_check_mark: [readline](https://nodejs.org/api/readline.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreadline.html
-:heavy_check_mark: [timers](https://nodejs.org/api/timers.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/timers.html
+- :heavy_check_mark: [timers](https://nodejs.org/api/timers.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/timers.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+    , needs `--experimental-modules`
