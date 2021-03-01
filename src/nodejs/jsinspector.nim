@@ -1,20 +1,20 @@
 import std/jsffi
 
-type Session* = ref object of JsRoot ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
+type InspectorSession* = ref object of JsRoot ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
 
-func newSession*(): Session {.importjs: "new inspector.Session()".}
+func newSession*(): InspectorSession {.importjs: "new inspector.Session()".}
   ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
 
-func connect*(self: Session) {.importjs: "#.$1()".}
+func connect*(self: InspectorSession) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/inspector.html#inspector_session_connect
 
-func connectToMainThread*(self: Session) {.importjs: "#.$1()".}
+func connectToMainThread*(self: InspectorSession) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/inspector.html#inspector_session_connecttomainthread
 
-func disconnect*(self: Session) {.importjs: "#.$1()".}
+func disconnect*(self: InspectorSession) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/inspector.html#inspector_session_disconnect
 
-func post*(self: Session; metod: cstring; params: JsObject) {.importjs: "#.$1(#, #)".}
+func post*(self: InspectorSession; metod: cstring; params: JsObject) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/inspector.html#inspector_session_post_method_params_callback
 
 func importInspector*() {.importjs: "import * as inspector from 'inspector'@".}
