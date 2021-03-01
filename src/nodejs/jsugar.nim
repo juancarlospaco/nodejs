@@ -1,5 +1,5 @@
 ## * Syntax sugar and convenience functions for JavaScript.
-import jsffi
+import std/jsffi
 export jsffi
 
 const
