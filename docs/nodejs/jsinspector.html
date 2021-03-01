@@ -94,6 +94,14 @@ window.addEventListener('DOMContentLoaded', main);
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
+  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#Session"
+    title="Session = ref object of JsRoot">Session</a></li>
+
+  </ul>
+</li>
+<li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">requireInspector
@@ -135,9 +143,24 @@ window.addEventListener('DOMContentLoaded', main);
     title="inspectorConsoleGroupEnd(): cstring">inspectorConsoleGroupEnd(): cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">post
+      <li><a class="reference" href="#post%2CSession%2Ccstring%2CJsObject"
+    title="post(self: Session; metod: cstring; params: JsObject)">post(self: Session; metod: cstring; params: JsObject)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">disconnect
+      <li><a class="reference" href="#disconnect%2CSession"
+    title="disconnect(self: Session)">disconnect(self: Session)</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">url
       <li><a class="reference" href="#url"
     title="url(): cstring">url(): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">connectToMainThread
+      <li><a class="reference" href="#connectToMainThread%2CSession"
+    title="connectToMainThread(self: Session)">connectToMainThread(self: Session)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">inspectorConsoleGroupCollapsed
@@ -158,6 +181,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">inspectorConsoleWarn
       <li><a class="reference" href="#inspectorConsoleWarn%2Cauto"
     title="inspectorConsoleWarn(args: auto): cstring">inspectorConsoleWarn(args: auto): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">connect
+      <li><a class="reference" href="#connect%2CSession"
+    title="connect(self: Session)">connect(self: Session)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">inspectorConsoleCountReset
@@ -185,6 +213,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="inspectorConsoleCount(label = &quot;&quot;.cstring): cstring">inspectorConsoleCount(label = &quot;&quot;.cstring): cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">newSession
+      <li><a class="reference" href="#newSession"
+    title="newSession(): Session">newSession(): Session</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">importInspector
       <li><a class="reference" href="#importInspector"
     title="importInspector()">importInspector()</a></li>
@@ -207,9 +240,57 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="tocRoot"></div>
   
   <p class="module-desc"></p>
-  <div class="section" id="12">
+  <div class="section" id="7">
+<h1><a class="toc-backref" href="#7">Types</a></h1>
+<dl class="item">
+<a id="Session"></a>
+<dt><pre><a href="jsinspector.html#Session"><span class="Identifier">Session</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_class_inspector_session">https://nodejs.org/api/inspector.html#inspector_class_inspector_session</a>
+
+</dd>
+
+</dl></div>
+<div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+<a id="newSession"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newSession"><span class="Identifier">newSession</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsinspector.html#Session"><span class="Identifier">Session</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new inspector.Session()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_class_inspector_session">https://nodejs.org/api/inspector.html#inspector_class_inspector_session</a>
+
+</dd>
+<a id="connect,Session"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#connect%2CSession"><span class="Identifier">connect</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#Session"><span class="Identifier">Session</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_session_connect">https://nodejs.org/api/inspector.html#inspector_session_connect</a>
+
+</dd>
+<a id="connectToMainThread,Session"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#connectToMainThread%2CSession"><span class="Identifier">connectToMainThread</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#Session"><span class="Identifier">Session</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_session_connecttomainthread">https://nodejs.org/api/inspector.html#inspector_session_connecttomainthread</a>
+
+</dd>
+<a id="disconnect,Session"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#disconnect%2CSession"><span class="Identifier">disconnect</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#Session"><span class="Identifier">Session</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_session_disconnect">https://nodejs.org/api/inspector.html#inspector_session_disconnect</a>
+
+</dd>
+<a id="post,Session,cstring,JsObject"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#post%2CSession%2Ccstring%2CJsObject"><span class="Identifier">post</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#Session"><span class="Identifier">Session</span></a><span class="Other">;</span> <span class="Identifier">metod</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">params</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_session_post_method_params_callback">https://nodejs.org/api/inspector.html#inspector_session_post_method_params_callback</a>
+
+</dd>
 <a id="importInspector"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#importInspector"><span class="Identifier">importInspector</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as inspector from \'inspector\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -379,7 +460,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 06:20:22 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 06:40:31 UTC</small>
       </div>
     </div>
   </div>
