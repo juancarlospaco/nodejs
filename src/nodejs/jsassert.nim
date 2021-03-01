@@ -1,5 +1,23 @@
-from jsre import RegExp
+from std/jsre import RegExp
+import std/jsffi
 export RegExp
+
+
+type
+  CallTracker* = ref object of JsRoot  ## https://nodejs.org/api/assert.html#assert_class_assert_calltracker
+
+
+func newCallTracker*(): CallTracker {.importjs: "(new assert.CallTracker())".}
+  ## https://nodejs.org/api/assert.html#assert_new_assert_calltracker
+
+func calls*[T](self: CallTracker; fn: T; exact = 1.cint): T {.importjs: "#.$1(#, #)".}
+  ## https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact
+
+func report*(self: CallTracker): JsObject {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/assert.html#assert_tracker_report
+
+func verify*(self: CallTracker) {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/assert.html#assert_tracker_verify
 
 func importAssert*() {.importjs: "import * as assert from 'assert'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
