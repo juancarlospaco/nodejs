@@ -17,3 +17,13 @@ func cursorTo*(x, y: cint): bool {.importjs: "readline.$1(process.stout, #, #)".
 
 func moveCursor*(dx, dy: cint): bool {.importjs: "readline.$1(process.stout, #, #)".}
   ## https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback
+
+
+runnableExamples:
+  import nodejs/jsprocess
+  requireProcess()
+  requireReadline()
+  doAssert clearLine()
+  doAssert clearScreenDown()
+  doAssert cursorTo(x = 0.cint, y = 0.cint)
+  doAssert moveCursor(dx = 0.cint, dy = 0.cint)
