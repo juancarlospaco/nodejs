@@ -1,3 +1,4 @@
+import std/jsffi
 
 func importV8*() {.importjs: "import * as v8 from 'v8'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -7,6 +8,15 @@ func requireV8*() {.importjs: "const v8 = require('v8')@".}
 
 func cachedDataVersionTag*(): cint {.importjs: "v8.$1()".}
   ## https://nodejs.org/api/v8.html#v8_v8_cacheddataversiontag
+
+func getHeapCodeStatistics*(): JsObject {.importjs: "v8.$1()".}
+  ## https://nodejs.org/api/v8.html#v8_v8_getheapcodestatistics
+
+func getHeapSpaceStatistics*(): JsObject {.importjs: "v8.$1()".}
+  ## https://nodejs.org/api/v8.html#v8_v8_getheapspacestatistics
+
+func getHeapStatistics*(): JsObject {.importjs: "v8.$1()".}
+  ## https://nodejs.org/api/v8.html#v8_v8_getheapstatistics
 
 func setFlagsFromString*(flags: cstring) {.importjs: "v8.$1()".}
   ## https://nodejs.org/api/v8.html#v8_v8_setflagsfromstring_flags
