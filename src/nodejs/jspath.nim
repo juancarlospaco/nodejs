@@ -67,3 +67,4 @@ runnableExamples:
   doAssert resolve("/foo/bar/baz/file.ext".cstring) == "/foo/bar/baz/file.ext".cstring
   doAssert toNamespacedPath("/foo/bar/baz/file.ext".cstring) == "/foo/bar/baz/file.ext".cstring
   doAssert join("foo".cstring, "bar".cstring, "file.ext".cstring) == "foo/bar/file.ext".cstring
+  doAssert "folder".cstring / "file.ext".cstring == "folder/file.ext".cstring
