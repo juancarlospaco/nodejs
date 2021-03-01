@@ -5,3 +5,8 @@ htmldocs/
 *.txt
 *.log
 *.json
+*.nims
+*.c
+*.h
+*.hpp
+*.cpp
