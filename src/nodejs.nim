@@ -27,6 +27,7 @@ import
   nodejs/jstracing,
   nodejs/jsmodule,
   nodejs/jsdomain,
+  nodejs/jsdiagnostics_channel,
   nodejs/jsugar
 
 export
@@ -52,4 +53,5 @@ export
   jstracing,
   jsmodule,
   jsdomain,
+  jsdiagnostics_channel,
   jsugar
