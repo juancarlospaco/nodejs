@@ -109,6 +109,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="requireInspector()">requireInspector()</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">$
+      <li><a class="reference" href="#%24%2CInspectorSession"
+    title="`$`(self: InspectorSession): string">`$`(self: InspectorSession): string</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">close
       <li><a class="reference" href="#close"
     title="close(): cstring">close(): cstring</a></li>
@@ -136,6 +141,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">inspectorConsoleClear
       <li><a class="reference" href="#inspectorConsoleClear"
     title="inspectorConsoleClear(): cstring">inspectorConsoleClear(): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">toCstring
+      <li><a class="reference" href="#toCstring%2CInspectorSession"
+    title="toCstring(self: InspectorSession): cstring">toCstring(self: InspectorSession): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">inspectorConsoleGroupEnd
@@ -450,6 +460,20 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 <a class="reference external" href="https://nodejs.org/api/inspector.html#inspector_inspector_waitfordebugger">https://nodejs.org/api/inspector.html#inspector_inspector_waitfordebugger</a>
 
 </dd>
+<a id="toCstring,InspectorSession"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#toCstring%2CInspectorSession"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#InspectorSession"><span class="Identifier">InspectorSession</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="$,InspectorSession"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%24%2CInspectorSession"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsinspector.html#InspectorSession"><span class="Identifier">InspectorSession</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 
 </dl></div>
 
@@ -460,7 +484,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-01 23:18:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 00:25:30 UTC</small>
       </div>
     </div>
   </div>
