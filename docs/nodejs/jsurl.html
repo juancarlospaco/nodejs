@@ -135,9 +135,19 @@ window.addEventListener('DOMContentLoaded', main);
     title="values(self: URLSearchParams): seq[cstring]">values(self: URLSearchParams): seq[cstring]</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">domainToUnicode
+      <li><a class="reference" href="#domainToUnicode%2Ccstring"
+    title="domainToUnicode(domain: cstring): cstring">domainToUnicode(domain: cstring): cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">toJSON
       <li><a class="reference" href="#toJSON%2CURL"
     title="toJSON(self: URL): cstring">toJSON(self: URL): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">format
+      <li><a class="reference" href="#format%2CURL%2CJsObject"
+    title="format(self: URL; options: JsObject): cstring">format(self: URL; options: JsObject): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">toCstring
@@ -148,6 +158,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">len
       <li><a class="reference" href="#len%2CURL"
     title="len(self: URL): int">len(self: URL): int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">urlToHttpOptions
+      <li><a class="reference" href="#urlToHttpOptions%2CURL"
+    title="urlToHttpOptions(self: URL): JsObject">urlToHttpOptions(self: URL): JsObject</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">sets
@@ -175,6 +190,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="get(self: URLSearchParams; name: cstring): cstring">get(self: URLSearchParams; name: cstring): cstring</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">domainToASCII
+      <li><a class="reference" href="#domainToASCII%2Ccstring"
+    title="domainToASCII(domain: cstring): cstring">domainToASCII(domain: cstring): cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">delete
       <li><a class="reference" href="#delete%2CURLSearchParams%2Ccstring"
     title="delete(self: URLSearchParams; name: cstring)">delete(self: URLSearchParams; name: cstring)</a></li>
@@ -193,6 +213,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">importUrl
       <li><a class="reference" href="#importUrl"
     title="importUrl()">importUrl()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">fileURLToPath
+      <li><a class="reference" href="#fileURLToPath"
+    title="fileURLToPath(domain: cstring or URL): cstring">fileURLToPath(domain: cstring or URL): cstring</a></li>
 
   </ul>
 
@@ -225,7 +250,12 @@ window.addEventListener('DOMContentLoaded', main);
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">para</span><span class="Operator">.</span><span class="Identifier">get</span><span class="Punctuation">(</span><span class="StringLit">&quot;key&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;value&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">para</span><span class="Operator">.</span><span class="Identifier">getAll</span><span class="Punctuation">(</span><span class="StringLit">&quot;key&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">&quot;value&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">]</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Operator">$</span><span class="Identifier">para</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;key=value&amp;query=xyz&amp;user=abc&quot;</span><span class="Whitespace">
-  </span><span class="Identifier">para</span><span class="Operator">.</span><span class="Identifier">delete</span><span class="Whitespace"> </span><span class="StringLit">&quot;key&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span></pre></p>
+  </span><span class="Identifier">para</span><span class="Operator">.</span><span class="Identifier">delete</span><span class="Whitespace"> </span><span class="StringLit">&quot;key&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+</span><span class="Keyword">block</span><span class="Punctuation">:</span><span class="Whitespace">
+  </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">domainToASCII</span><span class="Punctuation">(</span><span class="StringLit">&quot;中文.com&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;xn--fiq228c.com&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+  </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">domainToUnicode</span><span class="Punctuation">(</span><span class="StringLit">&quot;xn--fiq228c.com&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;中文.com&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+  </span><span class="Keyword">when</span><span class="Whitespace"> </span><span class="Identifier">defined</span><span class="Punctuation">(</span><span class="Identifier">linux</span><span class="Punctuation">)</span><span class="Punctuation">:</span><span class="Whitespace">
+    </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">fileURLToPath</span><span class="Punctuation">(</span><span class="StringLit">&quot;file:///C:/path/&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;/C:/path/&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span></pre></p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
@@ -293,6 +323,20 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_tojson">https://nodejs.org/api/url.html#url_url_tojson</a>
+
+</dd>
+<a id="format,URL,JsObject"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#format%2CURL%2CJsObject"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/url.html#url_url_format_url_options">https://nodejs.org/api/url.html#url_url_format_url_options</a>
+
+</dd>
+<a id="urlToHttpOptions,URL"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#urlToHttpOptions%2CURL"><span class="Identifier">urlToHttpOptions</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/url.html#url_url_urltohttpoptions_url">https://nodejs.org/api/url.html#url_url_urltohttpoptions_url</a>
 
 </dd>
 <a id="add,URLSearchParams,cstring,cstring"></a>
@@ -383,6 +427,27 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 
 
 </dd>
+<a id="domainToASCII,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#domainToASCII%2Ccstring"><span class="Identifier">domainToASCII</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/url.html#url_url_domaintoascii_domain">https://nodejs.org/api/url.html#url_url_domaintoascii_domain</a>
+
+</dd>
+<a id="domainToUnicode,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#domainToUnicode%2Ccstring"><span class="Identifier">domainToUnicode</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/url.html#url_url_domaintounicode_domain">https://nodejs.org/api/url.html#url_url_domaintounicode_domain</a>
+
+</dd>
+<a id="fileURLToPath"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#fileURLToPath"><span class="Identifier">fileURLToPath</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/url.html#url_url_fileurltopath_url">https://nodejs.org/api/url.html#url_url_fileurltopath_url</a>
+
+</dd>
 
 </dl></div>
 
@@ -393,7 +458,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 05:38:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 05:56:50 UTC</small>
       </div>
     </div>
   </div>
