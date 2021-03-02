@@ -26,6 +26,7 @@ import
   nodejs/jsurl,
   nodejs/jstracing,
   nodejs/jsmodule,
+  nodejs/jsdomain,
   nodejs/jsugar
 
 export
@@ -50,4 +51,5 @@ export
   jsurl,
   jstracing,
   jsmodule,
+  jsdomain,
   jsugar
