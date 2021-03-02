@@ -23,6 +23,7 @@ import
   nodejs/jsreadline,
   nodejs/jstimers,
   nodejs/jsrepl,
+  nodejs/jsurl,
   nodejs/jsugar
 
 export
@@ -44,4 +45,5 @@ export
   jsreadline,
   jstimers,
   jsrepl,
+  jsurl,
   jsugar
