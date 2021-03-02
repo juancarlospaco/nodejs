@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -73,6 +73,8 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jscore: `$`(self: Uint8Array or ArrayBuffer): string" href="nodejs/jscore.html#%24">jscore: `$`(self: Uint8Array or ArrayBuffer): string</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsinspector: `$`(self: InspectorSession): string" href="nodejs/jsinspector.html#%24%2CInspectorSession">jsinspector: `$`(self: InspectorSession): string</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsurl: `$`(self: URL or URLSearchParams): string" href="nodejs/jsurl.html#%24">jsurl: `$`(self: URL or URLSearchParams): string</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: `$`(self: Uint8Array or ArrayBuffer): string" href="nodejs/jsutils.html#%24">jsutils: `$`(self: Uint8Array or ArrayBuffer): string</a></li>
           </ul></dd>
@@ -129,6 +131,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="accessSync" href="#accessSync"><span>accessSync:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: accessSync(path: cstring; mode: cint)" href="nodejs/jsfs.html#accessSync%2Ccstring%2Ccint">jsfs: accessSync(path: cstring; mode: cint)</a></li>
+          </ul></dd>
+<dt><a name="add" href="#add"><span>add:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: add(self: URLSearchParams; name: cstring; value: cstring)" href="nodejs/jsurl.html#add%2CURLSearchParams%2Ccstring%2Ccstring">jsurl: add(self: URLSearchParams; name: cstring; value: cstring)</a></li>
           </ul></dd>
 <dt><a name="ADDRGETNETWORKPARAMS" href="#ADDRGETNETWORKPARAMS"><span>ADDRGETNETWORKPARAMS:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -662,6 +668,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jszlib: deflateRaw[T](buffer: cstring; callback: T)" href="nodejs/jszlib.html#deflateRaw%2Ccstring%2CT">jszlib: deflateRaw[T](buffer: cstring; callback: T)</a></li>
           </ul></dd>
+<dt><a name="delete" href="#delete"><span>delete:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: delete(self: URLSearchParams; name: cstring)" href="nodejs/jsurl.html#delete%2CURLSearchParams%2Ccstring">jsurl: delete(self: URLSearchParams; name: cstring)</a></li>
+          </ul></dd>
 <dt><a name="delimiter" href="#delimiter"><span>delimiter:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jspath: delimiter" href="nodejs/jspath.html#delimiter">jspath: delimiter</a></li>
@@ -1192,6 +1202,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsugar: generate2FAcode(): cint" href="nodejs/jsugar.html#generate2FAcode">jsugar: generate2FAcode(): cint</a></li>
           </ul></dd>
+<dt><a name="get" href="#get"><span>get:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: get(self: URLSearchParams; name: cstring): cstring" href="nodejs/jsurl.html#get%2CURLSearchParams%2Ccstring">jsurl: get(self: URLSearchParams; name: cstring): cstring</a></li>
+          </ul></dd>
+<dt><a name="getAll" href="#getAll"><span>getAll:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]" href="nodejs/jsurl.html#getAll%2CURLSearchParams%2Ccstring">jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]</a></li>
+          </ul></dd>
 <dt><a name="getCursorPos" href="#getCursorPos"><span>getCursorPos:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: getCursorPos(self: Readline): JsObject" href="nodejs/jsreadline.html#getCursorPos%2CReadline">jsreadline: getCursorPos(self: Readline): JsObject</a></li>
@@ -1247,6 +1265,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="gzip" href="#gzip"><span>gzip:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jszlib: gzip[T](buffer: cstring; callback: T)" href="nodejs/jszlib.html#gzip%2Ccstring%2CT">jszlib: gzip[T](buffer: cstring; callback: T)</a></li>
+          </ul></dd>
+<dt><a name="hasKey" href="#hasKey"><span>hasKey:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: hasKey(self: URLSearchParams; name: cstring): bool" href="nodejs/jsurl.html#hasKey%2CURLSearchParams%2Ccstring">jsurl: hasKey(self: URLSearchParams; name: cstring): bool</a></li>
           </ul></dd>
 <dt><a name="hasRef" href="#hasRef"><span>hasRef:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1341,6 +1363,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="importTimersPromises" href="#importTimersPromises"><span>importTimersPromises:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: importTimersPromises()" href="nodejs/jstimers.html#importTimersPromises">jstimers: importTimersPromises()</a></li>
+          </ul></dd>
+<dt><a name="importUrl" href="#importUrl"><span>importUrl:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: importUrl()" href="nodejs/jsurl.html#importUrl">jsurl: importUrl()</a></li>
           </ul></dd>
 <dt><a name="importUtil" href="#importUtil"><span>importUtil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1674,6 +1700,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsperfhooks: jsnow(): cint" href="nodejs/jsperfhooks.html#jsnow">jsperfhooks: jsnow(): cint</a></li>
           </ul></dd>
+<dt><a name="keys" href="#keys"><span>keys:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: keys(self: URLSearchParams): seq[cstring]" href="nodejs/jsurl.html#keys%2CURLSearchParams">jsurl: keys(self: URLSearchParams): seq[cstring]</a></li>
+          </ul></dd>
 <dt><a name="kill" href="#kill"><span>kill:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: kill(pid: cint; signal: cint)" href="nodejs/jsprocess.html#kill%2Ccint%2Ccint">jsprocess: kill(pid: cint; signal: cint)</a></li>
@@ -1691,6 +1721,8 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="len" href="#len"><span>len:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jscore: len(self: Uint8Array): int" href="nodejs/jscore.html#len%2CUint8Array">jscore: len(self: Uint8Array): int</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsurl: len(self: URL): int" href="nodejs/jsurl.html#len%2CURL">jsurl: len(self: URL): int</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: len(self: Uint8Array): int" href="nodejs/jsutils.html#len%2CUint8Array">jsutils: len(self: Uint8Array): int</a></li>
           </ul></dd>
@@ -1845,6 +1877,16 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jscore: newUint8Array(number: Natural): Uint8Array" href="nodejs/jscore.html#newUint8Array%2CNatural">jscore: newUint8Array(number: Natural): Uint8Array</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: newUint8Array(number: Natural): Uint8Array" href="nodejs/jsutils.html#newUint8Array%2CNatural">jsutils: newUint8Array(number: Natural): Uint8Array</a></li>
+          </ul></dd>
+<dt><a name="newURL" href="#newURL"><span>newURL:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: newURL(input: cstring): URL" href="nodejs/jsurl.html#newURL%2Ccstring">jsurl: newURL(input: cstring): URL</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsurl: newURL(input: cstring; base: cstring or URL): URL" href="nodejs/jsurl.html#newURL%2Ccstring%2C">jsurl: newURL(input: cstring; base: cstring or URL): URL</a></li>
+          </ul></dd>
+<dt><a name="newURLSearchParams" href="#newURLSearchParams"><span>newURLSearchParams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: newURLSearchParams(input: cstring or JsObject or openArray[cstring]): URLSearchParams" href="nodejs/jsurl.html#newURLSearchParams">jsurl: newURLSearchParams(input: cstring or JsObject or openArray[cstring]): URLSearchParams</a></li>
           </ul></dd>
 <dt><a name="nextDays" href="#nextDays"><span>nextDays:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2374,6 +2416,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jstimers: requireTimersPromises()" href="nodejs/jstimers.html#requireTimersPromises">jstimers: requireTimersPromises()</a></li>
           </ul></dd>
+<dt><a name="requireUrl" href="#requireUrl"><span>requireUrl:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: requireUrl()" href="nodejs/jsurl.html#requireUrl">jsurl: requireUrl()</a></li>
+          </ul></dd>
 <dt><a name="requireUtil" href="#requireUtil"><span>requireUtil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsutils: requireUtil()" href="nodejs/jsutils.html#requireUtil">jsutils: requireUtil()</a></li>
@@ -2547,6 +2593,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="setPrompt" href="#setPrompt"><span>setPrompt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: setPrompt(self: Readline; prompt: cstring)" href="nodejs/jsreadline.html#setPrompt%2CReadline%2Ccstring">jsreadline: setPrompt(self: Readline; prompt: cstring)</a></li>
+          </ul></dd>
+<dt><a name="sets" href="#sets"><span>sets:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: sets(self: URLSearchParams; name: cstring; value: cstring)" href="nodejs/jsurl.html#sets%2CURLSearchParams%2Ccstring%2Ccstring">jsurl: sets(self: URLSearchParams; name: cstring; value: cstring)</a></li>
           </ul></dd>
 <dt><a name="setServers" href="#setServers"><span>setServers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2794,6 +2844,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsutils: slice(s: cstring; start: cint; ends: cint): cstring" href="nodejs/jsutils.html#slice%2Ccstring%2Ccint%2Ccint">jsutils: slice(s: cstring; start: cint; ends: cint): cstring</a></li>
           </ul></dd>
+<dt><a name="sort" href="#sort"><span>sort:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: sort(self: URLSearchParams)" href="nodejs/jsurl.html#sort%2CURLSearchParams">jsurl: sort(self: URLSearchParams)</a></li>
+          </ul></dd>
 <dt><a name="sparkline" href="#sparkline"><span>sparkline:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring" href="nodejs/jsugar.html#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint">jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring</a></li>
@@ -2908,6 +2962,8 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsinspector: toCstring(self: InspectorSession): cstring" href="nodejs/jsinspector.html#toCstring%2CInspectorSession">jsinspector: toCstring(self: InspectorSession): cstring</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="jsurl: toCstring(self: URL or URLSearchParams): cstring" href="nodejs/jsurl.html#toCstring">jsurl: toCstring(self: URL or URLSearchParams): cstring</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jsutils: toCstring(self: Uint8Array or ArrayBuffer): cstring" href="nodejs/jsutils.html#toCstring">jsutils: toCstring(self: Uint8Array or ArrayBuffer): cstring</a></li>
           </ul></dd>
 <dt><a name="toExponential" href="#toExponential"><span>toExponential:</span></a></dt><dd><ul class="simple">
@@ -2925,6 +2981,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="toHex" href="#toHex"><span>toHex:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: toHex(color: array[3, cint]): cstring" href="nodejs/jsugar.html#toHex%2Carray%5B%2Ccint%5D">jsugar: toHex(color: array[3, cint]): cstring</a></li>
+          </ul></dd>
+<dt><a name="toJSON" href="#toJSON"><span>toJSON:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: toJSON(self: URL): cstring" href="nodejs/jsurl.html#toJSON%2CURL">jsurl: toJSON(self: URL): cstring</a></li>
           </ul></dd>
 <dt><a name="toLowerAscii" href="#toLowerAscii"><span>toLowerAscii:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3052,6 +3112,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: url(): cstring" href="nodejs/jsinspector.html#url">jsinspector: url(): cstring</a></li>
           </ul></dd>
+<dt><a name="URL" href="#URL"><span>URL:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: URL" href="nodejs/jsurl.html#URL">jsurl: URL</a></li>
+          </ul></dd>
+<dt><a name="URLSearchParams" href="#URLSearchParams"><span>URLSearchParams:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: URLSearchParams" href="nodejs/jsurl.html#URLSearchParams">jsurl: URLSearchParams</a></li>
+          </ul></dd>
 <dt><a name="userInfo" href="#userInfo"><span>userInfo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: userInfo(): cstring" href="nodejs/jsos.html#userInfo">jsos: userInfo(): cstring</a></li>
@@ -3139,6 +3207,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="UV_UDP_REUSEADDR" href="#UV_UDP_REUSEADDR"><span>UV_UDP_REUSEADDR:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: UV_UDP_REUSEADDR" href="nodejs/jsos.html#UV_UDP_REUSEADDR">jsos: UV_UDP_REUSEADDR</a></li>
+          </ul></dd>
+<dt><a name="values" href="#values"><span>values:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsurl: values(self: URLSearchParams): seq[cstring]" href="nodejs/jsurl.html#values%2CURLSearchParams">jsurl: values(self: URLSearchParams): seq[cstring]</a></li>
           </ul></dd>
 <dt><a name="verify" href="#verify"><span>verify:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3355,7 +3427,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 00:25:33 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 05:38:22 UTC</small>
       </div>
     </div>
   </div>
