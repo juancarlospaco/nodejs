@@ -94,6 +94,14 @@ window.addEventListener('DOMContentLoaded', main);
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
+  <a class="reference reference-toplevel" href="#7" id="57">Types</a>
+  <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#Resolver"
+    title="Resolver = ref object of JsRoot">Resolver</a></li>
+
+  </ul>
+</li>
+<li>
   <a class="reference reference-toplevel" href="#9" id="59">Lets</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#NODATA"
@@ -149,12 +157,16 @@ window.addEventListener('DOMContentLoaded', main);
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">resolveSoa
-      <li><a class="reference" href="#resolveSoa%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveSoa%2CResolver%2Ccstring%2CT"
+    title="resolveSoa[T](self: Resolver; hostname: cstring; callback: T)">resolveSoa[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveSoa%2Ccstring%2CT"
     title="resolveSoa[T](hostname: cstring; callback: T)">resolveSoa[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolvePtr
-      <li><a class="reference" href="#resolvePtr%2Ccstring%2CT"
+      <li><a class="reference" href="#resolvePtr%2CResolver%2Ccstring%2CT"
+    title="resolvePtr[T](self: Resolver; hostname: cstring; callback: T)">resolvePtr[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolvePtr%2Ccstring%2CT"
     title="resolvePtr[T](hostname: cstring; callback: T)">resolvePtr[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
@@ -163,19 +175,33 @@ window.addEventListener('DOMContentLoaded', main);
     title="lookup[T](hostname: cstring; callback: T)">lookup[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">newResolver
+      <li><a class="reference" href="#newResolver"
+    title="newResolver(timeout = -cint(1)): Resolver">newResolver(timeout = -cint(1)): Resolver</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">resolveAny
+      <li><a class="reference" href="#resolveAny%2CResolver%2Ccstring%2CT"
+    title="resolveAny[T](self: Resolver; hostname: cstring; callback: T)">resolveAny[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveAny%2Ccstring%2CT"
+    title="resolveAny[T](hostname: cstring; callback: T)">resolveAny[T](hostname: cstring; callback: T)</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">lookupService
       <li><a class="reference" href="#lookupService%2Ccstring%2Ccint%2CT"
     title="lookupService[T](address: cstring; port: cint; callback: T)">lookupService[T](address: cstring; port: cint; callback: T)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">resolveAny
-      <li><a class="reference" href="#resolveAny%2Ccstring%2CT"
-    title="resolveAny[T](hostname: cstring; callback: T)">resolveAny[T](hostname: cstring; callback: T)</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">requireDns
       <li><a class="reference" href="#requireDns"
     title="requireDns()">requireDns()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">setLocalAddress
+      <li><a class="reference" href="#setLocalAddress%2CResolver%2Ccstring"
+    title="setLocalAddress(self: Resolver; ipv4: cstring)">setLocalAddress(self: Resolver; ipv4: cstring)</a></li>
+  <li><a class="reference" href="#setLocalAddress%2CResolver%2Ccstring%2Ccstring"
+    title="setLocalAddress(self: Resolver; ipv4: cstring; ipv6: cstring)">setLocalAddress(self: Resolver; ipv4: cstring; ipv6: cstring)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">importDns
@@ -184,65 +210,105 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">resolveCaa
-      <li><a class="reference" href="#resolveCaa%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveCaa%2CResolver%2Ccstring%2CT"
+    title="resolveCaa[T](self: Resolver; hostname: cstring; callback: T)">resolveCaa[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveCaa%2Ccstring%2CT"
     title="resolveCaa[T](hostname: cstring; callback: T)">resolveCaa[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolve
-      <li><a class="reference" href="#resolve%2Ccstring%2Ccstring%2CT"
+      <li><a class="reference" href="#resolve%2CResolver%2Ccstring%2CT"
+    title="resolve[T](self: Resolver; hostname: cstring; callback: T)">resolve[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolve%2CResolver%2Ccstring%2Ccstring%2CT"
+    title="resolve[T](self: Resolver; hostname: cstring; rrtype: cstring; callback: T)">resolve[T](self: Resolver; hostname: cstring; rrtype: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolve%2Ccstring%2Ccstring%2CT"
     title="resolve[T](hostname: cstring; rrtype: cstring; callback: T)">resolve[T](hostname: cstring; rrtype: cstring; callback: T)</a></li>
   <li><a class="reference" href="#resolve%2Ccstring%2CT"
     title="resolve[T](hostname: cstring; callback: T)">resolve[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveCname
-      <li><a class="reference" href="#resolveCname%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveCname%2CResolver%2Ccstring%2CT"
+    title="resolveCname[T](self: Resolver; hostname: cstring; callback: T)">resolveCname[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveCname%2Ccstring%2CT"
     title="resolveCname[T](hostname: cstring; callback: T)">resolveCname[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">setServers
-      <li><a class="reference" href="#setServers%2CopenArray%5Bcstring%5D"
+      <li><a class="reference" href="#setServers%2CResolver%2CopenArray%5Bcstring%5D"
+    title="setServers[T](self: Resolver; servers: openArray[cstring])">setServers[T](self: Resolver; servers: openArray[cstring])</a></li>
+  <li><a class="reference" href="#setServers%2CopenArray%5Bcstring%5D"
     title="setServers(servers: openArray[cstring])">setServers(servers: openArray[cstring])</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveNs
-      <li><a class="reference" href="#resolveNs%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveNs%2CResolver%2Ccstring%2CT"
+    title="resolveNs[T](self: Resolver; hostname: cstring; callback: T)">resolveNs[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveNs%2Ccstring%2CT"
     title="resolveNs[T](hostname: cstring; callback: T)">resolveNs[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveTxt
-      <li><a class="reference" href="#resolveTxt%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveTxt%2CResolver%2Ccstring%2CT"
+    title="resolveTxt[T](self: Resolver; hostname: cstring; callback: T)">resolveTxt[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveTxt%2Ccstring%2CT"
     title="resolveTxt[T](hostname: cstring; callback: T)">resolveTxt[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveNaptr
-      <li><a class="reference" href="#resolveNaptr%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveNaptr%2CResolver%2Ccstring%2CT"
+    title="resolveNaptr[T](self: Resolver; hostname: cstring; callback: T)">resolveNaptr[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveNaptr%2Ccstring%2CT"
     title="resolveNaptr[T](hostname: cstring; callback: T)">resolveNaptr[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">cancel
+      <li><a class="reference" href="#cancel%2CResolver"
+    title="cancel(self: Resolver)">cancel(self: Resolver)</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">resolve6
-      <li><a class="reference" href="#resolve6%2Ccstring%2CT"
+      <li><a class="reference" href="#resolve6%2CResolver%2Ccstring%2CT"
+    title="resolve6[T](self: Resolver; hostname: cstring; callback: T)">resolve6[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolve6%2CResolver%2Ccstring%2Cbool%2CT"
+    title="resolve6[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)">resolve6[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)</a></li>
+  <li><a class="reference" href="#resolve6%2Ccstring%2CT"
     title="resolve6[T](hostname: cstring; callback: T)">resolve6[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolve4
-      <li><a class="reference" href="#resolve4%2Ccstring%2CT"
+      <li><a class="reference" href="#resolve4%2CResolver%2Ccstring%2CT"
+    title="resolve4[T](self: Resolver; hostname: cstring; callback: T)">resolve4[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolve4%2CResolver%2Ccstring%2Cbool%2CT"
+    title="resolve4[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)">resolve4[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)</a></li>
+  <li><a class="reference" href="#resolve4%2Ccstring%2CT"
     title="resolve4[T](hostname: cstring; callback: T)">resolve4[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveMx
-      <li><a class="reference" href="#resolveMx%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveMx%2CResolver%2Ccstring%2CT"
+    title="resolveMx[T](self: Resolver; hostname: cstring; callback: T)">resolveMx[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveMx%2Ccstring%2CT"
     title="resolveMx[T](hostname: cstring; callback: T)">resolveMx[T](hostname: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">reverse
-      <li><a class="reference" href="#reverse%2Ccstring%2CT"
+      <li><a class="reference" href="#reverse%2CResolver%2Ccstring%2CT"
+    title="reverse[T](self: Resolver; ip: cstring; callback: T)">reverse[T](self: Resolver; ip: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#reverse%2Ccstring%2CT"
     title="reverse[T](ip: cstring; callback: T)">reverse[T](ip: cstring; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">resolveSrv
-      <li><a class="reference" href="#resolveSrv%2Ccstring%2CT"
+      <li><a class="reference" href="#resolveSrv%2CResolver%2Ccstring%2CT"
+    title="resolveSrv[T](self: Resolver; hostname: cstring; callback: T)">resolveSrv[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#resolveSrv%2Ccstring%2CT"
     title="resolveSrv[T](hostname: cstring; callback: T)">resolveSrv[T](hostname: cstring; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getServers
+      <li><a class="reference" href="#getServers%2CResolver"
+    title="getServers(self: Resolver): seq[cstring]">getServers(self: Resolver): seq[cstring]</a></li>
 
   </ul>
 
@@ -257,7 +323,19 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="tocRoot"></div>
   
   <p class="module-desc"></p>
-  <div class="section" id="9">
+  <div class="section" id="7">
+<h1><a class="toc-backref" href="#7">Types</a></h1>
+<dl class="item">
+<a id="Resolver"></a>
+<dt><pre><a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/dns.html#dns_class_dns_resolver">https://nodejs.org/api/dns.html#dns_class_dns_resolver</a>
+
+</dd>
+
+</dl></div>
+<div class="section" id="9">
 <h1><a class="toc-backref" href="#9">Lets</a></h1>
 <dl class="item">
 <a id="NODATA"></a>
@@ -440,6 +518,187 @@ Alias for <tt class="docutils literal"><span class="pre">import * as module_name
 Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
+<a id="newResolver"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#newResolver"><span class="Identifier">newResolver</span></a><span class="Other">(</span><span class="Identifier">timeout</span> <span class="Other">=</span> <span class="Operator">-</span><span class="Identifier">cint</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new Resolver({timeout: #}))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="cancel,Resolver"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#cancel%2CResolver"><span class="Identifier">cancel</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/dns.html#dns_resolver_cancel">https://nodejs.org/api/dns.html#dns_resolver_cancel</a>
+
+</dd>
+<a id="setLocalAddress,Resolver,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#setLocalAddress%2CResolver%2Ccstring"><span class="Identifier">setLocalAddress</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">ipv4</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6">https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6</a>
+
+</dd>
+<a id="setLocalAddress,Resolver,cstring,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#setLocalAddress%2CResolver%2Ccstring%2Ccstring"><span class="Identifier">setLocalAddress</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">ipv4</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ipv6</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6">https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6</a>
+
+</dd>
+<a id="getServers,Resolver"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#getServers%2CResolver"><span class="Identifier">getServers</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve%2CResolver%2Ccstring%2CT"><span class="Identifier">resolve</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve,Resolver,cstring,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve%2CResolver%2Ccstring%2Ccstring%2CT"><span class="Identifier">resolve</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">rrtype</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve4,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve4%2CResolver%2Ccstring%2CT"><span class="Identifier">resolve4</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve4,Resolver,cstring,bool,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve4%2CResolver%2Ccstring%2Cbool%2CT"><span class="Identifier">resolve4</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ttl</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {ttl: #}, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve6,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve6%2CResolver%2Ccstring%2CT"><span class="Identifier">resolve6</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolve6,Resolver,cstring,bool,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolve6%2CResolver%2Ccstring%2Cbool%2CT"><span class="Identifier">resolve6</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ttl</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {ttl: #}, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveAny,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveAny%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveAny</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveCname,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveCname%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveCname</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveCaa,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveCaa%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveCaa</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveMx,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveMx%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveMx</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveNaptr,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveNaptr%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveNaptr</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveNs,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveNs%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveNs</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolvePtr,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolvePtr%2CResolver%2Ccstring%2CT"><span class="Identifier">resolvePtr</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveSoa,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveSoa%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveSoa</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveSrv,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveSrv%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveSrv</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="resolveTxt,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#resolveTxt%2CResolver%2Ccstring%2CT"><span class="Identifier">resolveTxt</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="reverse,Resolver,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#reverse%2CResolver%2Ccstring%2CT"><span class="Identifier">reverse</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">ip</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="setServers,Resolver,openArray[cstring]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#setServers%2CResolver%2CopenArray%5Bcstring%5D"><span class="Identifier">setServers</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsdns.html#Resolver"><span class="Identifier">Resolver</span></a><span class="Other">;</span> <span class="Identifier">servers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="lookup,cstring,T"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#lookup%2Ccstring%2CT"><span class="Identifier">lookup</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">hostname</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;dns.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -578,7 +837,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 07:11:33 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 07:39:53 UTC</small>
       </div>
     </div>
   </div>
