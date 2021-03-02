@@ -94,5 +94,5 @@ runnableExamples:
   block:
     doAssert domainToASCII("中文.com".cstring) == "xn--fiq228c.com".cstring
     doAssert domainToUnicode("xn--fiq228c.com".cstring) == "中文.com".cstring
-    when defined(linux):
+    when defined(linux):  ## May or may not be OS and platform dependent.
       doAssert fileURLToPath("file:///C:/path/".cstring) == "/C:/path/".cstring
