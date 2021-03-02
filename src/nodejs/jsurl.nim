@@ -21,6 +21,12 @@ func newURLSearchParams*(input: cstring or JsObject or openArray[cstring]): URLS
 func toJSON*(self: URL): cstring {.importjs: "#.toJSON()".}
   ## https://nodejs.org/api/url.html#url_url_tojson
 
+func format*(self: URL; options: JsObject): cstring {.importjs: "url.$1(#)".}
+  ## https://nodejs.org/api/url.html#url_url_format_url_options
+
+func urlToHttpOptions*(self: URL): JsObject {.importjs: "url.$1(#)".}
+  ## https://nodejs.org/api/url.html#url_url_urltohttpoptions_url
+
 func add*(self: URLSearchParams; name: cstring, value: cstring) {.importjs: "#.append(#, #)".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_append_name_value
 
@@ -56,6 +62,15 @@ func `$`*(self: URL or URLSearchParams): string = $toCstring(self)
 
 func len*(self: URL): int = len($toCstring(self))
 
+func domainToASCII*(domain: cstring): cstring {.importjs: "url.$1(#)".}
+  ## https://nodejs.org/api/url.html#url_url_domaintoascii_domain
+
+func domainToUnicode*(domain: cstring): cstring {.importjs: "url.$1(#)".}
+  ## https://nodejs.org/api/url.html#url_url_domaintounicode_domain
+
+func fileURLToPath*(domain: cstring or URL): cstring {.importjs: "url.$1(#)".}
+  ## https://nodejs.org/api/url.html#url_url_fileurltopath_url
+
 
 runnableExamples:
   requireUrl()
@@ -76,3 +91,8 @@ runnableExamples:
     doAssert para.getAll("key".cstring) == @["value".cstring]
     doAssert $para == "key=value&query=xyz&user=abc"
     para.delete "key".cstring
+  block:
+    doAssert domainToASCII("中文.com".cstring) == "xn--fiq228c.com".cstring
+    doAssert domainToUnicode("xn--fiq228c.com".cstring) == "中文.com".cstring
+    when defined(linux):
+      doAssert fileURLToPath("file:///C:/path/".cstring) == "/C:/path/".cstring
