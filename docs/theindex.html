@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -1172,6 +1172,14 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsutils: find(strng: cstring; regex: RegExp): cint" href="nodejs/jsutils.html#find%2Ccstring%2CRegExp">jsutils: find(strng: cstring; regex: RegExp): cint</a></li>
           </ul></dd>
+<dt><a name="findEntry" href="#findEntry"><span>findEntry:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: findEntry(self: SourceMap; lineNumber: cint; columnNumber: cint): JsObject" href="nodejs/jsmodule.html#findEntry%2CSourceMap%2Ccint%2Ccint">jsmodule: findEntry(self: SourceMap; lineNumber: cint; columnNumber: cint): JsObject</a></li>
+          </ul></dd>
+<dt><a name="findSourceMap" href="#findSourceMap"><span>findSourceMap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: findSourceMap(path: cstring): SourceMap" href="nodejs/jsmodule.html#findSourceMap%2Ccstring">jsmodule: findSourceMap(path: cstring): SourceMap</a></li>
+          </ul></dd>
 <dt><a name="F_OK" href="#F_OK"><span>F_OK:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: F_OK" href="nodejs/jsfs.html#F_OK">jsfs: F_OK</a></li>
@@ -1349,6 +1357,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="importInspector" href="#importInspector"><span>importInspector:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: importInspector()" href="nodejs/jsinspector.html#importInspector">jsinspector: importInspector()</a></li>
+          </ul></dd>
+<dt><a name="importModule" href="#importModule"><span>importModule:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: importModule()" href="nodejs/jsmodule.html#importModule">jsmodule: importModule()</a></li>
           </ul></dd>
 <dt><a name="importOs" href="#importOs"><span>importOs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1852,6 +1864,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: mkdtempSync(prefix: cstring): cstring" href="nodejs/jsfs.html#mkdtempSync%2Ccstring">jsfs: mkdtempSync(prefix: cstring): cstring</a></li>
           </ul></dd>
+<dt><a name="Module" href="#Module"><span>Module:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: Module" href="nodejs/jsmodule.html#Module">jsmodule: Module</a></li>
+          </ul></dd>
 <dt><a name="moveCursor" href="#moveCursor"><span>moveCursor:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: moveCursor(dx, dy: cint): bool" href="nodejs/jsreadline.html#moveCursor%2Ccint%2Ccint">jsreadline: moveCursor(dx, dy: cint): bool</a></li>
@@ -1889,6 +1905,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="newSession" href="#newSession"><span>newSession:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: newSession(): InspectorSession" href="nodejs/jsinspector.html#newSession">jsinspector: newSession(): InspectorSession</a></li>
+          </ul></dd>
+<dt><a name="newSourceMap" href="#newSourceMap"><span>newSourceMap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: newSourceMap(payload: JsObject): SourceMap" href="nodejs/jsmodule.html#newSourceMap%2CJsObject">jsmodule: newSourceMap(payload: JsObject): SourceMap</a></li>
           </ul></dd>
 <dt><a name="newTextDecoder" href="#newTextDecoder"><span>newTextDecoder:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2406,6 +2426,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: requireInspector()" href="nodejs/jsinspector.html#requireInspector">jsinspector: requireInspector()</a></li>
           </ul></dd>
+<dt><a name="requireModule" href="#requireModule"><span>requireModule:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: requireModule()" href="nodejs/jsmodule.html#requireModule">jsmodule: requireModule()</a></li>
+          </ul></dd>
 <dt><a name="requireOs" href="#requireOs"><span>requireOs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: requireOs()" href="nodejs/jsos.html#requireOs">jsos: requireOs()</a></li>
@@ -2886,6 +2910,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsurl: sort(self: URLSearchParams)" href="nodejs/jsurl.html#sort%2CURLSearchParams">jsurl: sort(self: URLSearchParams)</a></li>
           </ul></dd>
+<dt><a name="SourceMap" href="#SourceMap"><span>SourceMap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: SourceMap" href="nodejs/jsmodule.html#SourceMap">jsmodule: SourceMap</a></li>
+          </ul></dd>
 <dt><a name="sparkline" href="#sparkline"><span>sparkline:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring" href="nodejs/jsugar.html#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint">jsugar: sparkline(numbers: openArray[cint]; minimum: cint; maximum: cint): cstring</a></li>
@@ -2943,6 +2971,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsfs: symlinkSync(target, path: cstring)" href="nodejs/jsfs.html#symlinkSync%2Ccstring%2Ccstring">jsfs: symlinkSync(target, path: cstring)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsfs: symlinkSync(target, path, tipe: cstring)" href="nodejs/jsfs.html#symlinkSync%2Ccstring%2Ccstring%2Ccstring">jsfs: symlinkSync(target, path, tipe: cstring)</a></li>
+          </ul></dd>
+<dt><a name="syncBuiltinESMExports" href="#syncBuiltinESMExports"><span>syncBuiltinESMExports:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsmodule: syncBuiltinESMExports()" href="nodejs/jsmodule.html#syncBuiltinESMExports">jsmodule: syncBuiltinESMExports()</a></li>
           </ul></dd>
 <dt><a name="takeCoverage" href="#takeCoverage"><span>takeCoverage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3473,7 +3505,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 06:29:02 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 06:49:46 UTC</small>
       </div>
     </div>
   </div>
