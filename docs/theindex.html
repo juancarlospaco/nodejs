@@ -502,6 +502,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsassert: CallTracker" href="nodejs/jsassert.html#CallTracker">jsassert: CallTracker</a></li>
           </ul></dd>
+<dt><a name="cancel" href="#cancel"><span>cancel:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsdns: cancel(self: Resolver)" href="nodejs/jsdns.html#cancel%2CResolver">jsdns: cancel(self: Resolver)</a></li>
+          </ul></dd>
 <dt><a name="CANCELLED" href="#CANCELLED"><span>CANCELLED:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: CANCELLED" href="nodejs/jsdns.html#CANCELLED">jsdns: CANCELLED</a></li>
@@ -1292,6 +1296,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: getPrompt(self: Readline): cstring" href="nodejs/jsreadline.html#getPrompt%2CReadline">jsreadline: getPrompt(self: Readline): cstring</a></li>
           </ul></dd>
+<dt><a name="getServers" href="#getServers"><span>getServers:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsdns: getServers(self: Resolver): seq[cstring]" href="nodejs/jsdns.html#getServers%2CResolver">jsdns: getServers(self: Resolver): seq[cstring]</a></li>
+          </ul></dd>
 <dt><a name="getSystemErrorName" href="#getSystemErrorName"><span>getSystemErrorName:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsutils: getSystemErrorName(err: cint): cstring" href="nodejs/jsutils.html#getSystemErrorName%2Ccint">jsutils: getSystemErrorName(err: cint): cstring</a></li>
@@ -1930,6 +1938,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsrepl: newREPLServer(options: JsObject): REPLServer" href="nodejs/jsrepl.html#newREPLServer%2CJsObject">jsrepl: newREPLServer(options: JsObject): REPLServer</a></li>
           </ul></dd>
+<dt><a name="newResolver" href="#newResolver"><span>newResolver:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsdns: newResolver(timeout = -cint(1)): Resolver" href="nodejs/jsdns.html#newResolver">jsdns: newResolver(timeout = -cint(1)): Resolver</a></li>
+          </ul></dd>
 <dt><a name="newSession" href="#newSession"><span>newSession:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: newSession(): InspectorSession" href="nodejs/jsinspector.html#newSession">jsinspector: newSession(): InspectorSession</a></li>
@@ -2536,55 +2548,91 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsdns: resolve[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve%2Ccstring%2CT">jsdns: resolve[T](hostname: cstring; callback: T)</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve[T](self: Resolver; hostname: cstring; rrtype: cstring; callback: T)" href="nodejs/jsdns.html#resolve%2CResolver%2Ccstring%2Ccstring%2CT">jsdns: resolve[T](self: Resolver; hostname: cstring; rrtype: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve%2CResolver%2Ccstring%2CT">jsdns: resolve[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jspath: resolve(paths: cstring): cstring" href="nodejs/jspath.html#resolve%2Ccstring">jspath: resolve(paths: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="resolve4" href="#resolve4"><span>resolve4:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolve4[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve4%2Ccstring%2CT">jsdns: resolve4[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve4[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)" href="nodejs/jsdns.html#resolve4%2CResolver%2Ccstring%2Cbool%2CT">jsdns: resolve4[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve4[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve4%2CResolver%2Ccstring%2CT">jsdns: resolve4[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolve6" href="#resolve6"><span>resolve6:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolve6[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve6%2Ccstring%2CT">jsdns: resolve6[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve6[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)" href="nodejs/jsdns.html#resolve6%2CResolver%2Ccstring%2Cbool%2CT">jsdns: resolve6[T](self: Resolver; hostname: cstring; ttl: bool; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolve6[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolve6%2CResolver%2Ccstring%2CT">jsdns: resolve6[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveAny" href="#resolveAny"><span>resolveAny:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveAny[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveAny%2Ccstring%2CT">jsdns: resolveAny[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveAny[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveAny%2CResolver%2Ccstring%2CT">jsdns: resolveAny[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveCaa" href="#resolveCaa"><span>resolveCaa:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveCaa[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveCaa%2Ccstring%2CT">jsdns: resolveCaa[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveCaa[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveCaa%2CResolver%2Ccstring%2CT">jsdns: resolveCaa[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveCname" href="#resolveCname"><span>resolveCname:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveCname[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveCname%2Ccstring%2CT">jsdns: resolveCname[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveCname[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveCname%2CResolver%2Ccstring%2CT">jsdns: resolveCname[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveMx" href="#resolveMx"><span>resolveMx:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveMx[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveMx%2Ccstring%2CT">jsdns: resolveMx[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveMx[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveMx%2CResolver%2Ccstring%2CT">jsdns: resolveMx[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveNaptr" href="#resolveNaptr"><span>resolveNaptr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveNaptr[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveNaptr%2Ccstring%2CT">jsdns: resolveNaptr[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveNaptr[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveNaptr%2CResolver%2Ccstring%2CT">jsdns: resolveNaptr[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveNs" href="#resolveNs"><span>resolveNs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveNs[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveNs%2Ccstring%2CT">jsdns: resolveNs[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveNs[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveNs%2CResolver%2Ccstring%2CT">jsdns: resolveNs[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolvePtr" href="#resolvePtr"><span>resolvePtr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolvePtr[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolvePtr%2Ccstring%2CT">jsdns: resolvePtr[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolvePtr[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolvePtr%2CResolver%2Ccstring%2CT">jsdns: resolvePtr[T](self: Resolver; hostname: cstring; callback: T)</a></li>
+          </ul></dd>
+<dt><a name="Resolver" href="#Resolver"><span>Resolver:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsdns: Resolver" href="nodejs/jsdns.html#Resolver">jsdns: Resolver</a></li>
           </ul></dd>
 <dt><a name="resolveSoa" href="#resolveSoa"><span>resolveSoa:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveSoa[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveSoa%2Ccstring%2CT">jsdns: resolveSoa[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveSoa[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveSoa%2CResolver%2Ccstring%2CT">jsdns: resolveSoa[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveSrv" href="#resolveSrv"><span>resolveSrv:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveSrv[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveSrv%2Ccstring%2CT">jsdns: resolveSrv[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveSrv[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveSrv%2CResolver%2Ccstring%2CT">jsdns: resolveSrv[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resolveTxt" href="#resolveTxt"><span>resolveTxt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: resolveTxt[T](hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveTxt%2Ccstring%2CT">jsdns: resolveTxt[T](hostname: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: resolveTxt[T](self: Resolver; hostname: cstring; callback: T)" href="nodejs/jsdns.html#resolveTxt%2CResolver%2Ccstring%2CT">jsdns: resolveTxt[T](self: Resolver; hostname: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="resourceUsage" href="#resourceUsage"><span>resourceUsage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2597,6 +2645,8 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="reverse" href="#reverse"><span>reverse:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: reverse[T](ip: cstring; callback: T)" href="nodejs/jsdns.html#reverse%2Ccstring%2CT">jsdns: reverse[T](ip: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: reverse[T](self: Resolver; ip: cstring; callback: T)" href="nodejs/jsdns.html#reverse%2CResolver%2Ccstring%2CT">jsdns: reverse[T](self: Resolver; ip: cstring; callback: T)</a></li>
           </ul></dd>
 <dt><a name="rm" href="#rm"><span>rm:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2686,6 +2736,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jstimers: setIntervalPromise(delay: cint; value: auto): Future[Timeout]" href="nodejs/jstimers.html#setIntervalPromise%2Ccint%2Cauto">jstimers: setIntervalPromise(delay: cint; value: auto): Future[Timeout]</a></li>
           </ul></dd>
+<dt><a name="setLocalAddress" href="#setLocalAddress"><span>setLocalAddress:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsdns: setLocalAddress(self: Resolver; ipv4: cstring)" href="nodejs/jsdns.html#setLocalAddress%2CResolver%2Ccstring">jsdns: setLocalAddress(self: Resolver; ipv4: cstring)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: setLocalAddress(self: Resolver; ipv4: cstring; ipv6: cstring)" href="nodejs/jsdns.html#setLocalAddress%2CResolver%2Ccstring%2Ccstring">jsdns: setLocalAddress(self: Resolver; ipv4: cstring; ipv6: cstring)</a></li>
+          </ul></dd>
 <dt><a name="setPriority" href="#setPriority"><span>setPriority:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: setPriority(priority: cint)" href="nodejs/jsos.html#setPriority%2Ccint">jsos: setPriority(priority: cint)</a></li>
@@ -2703,6 +2759,8 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="setServers" href="#setServers"><span>setServers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsdns: setServers(servers: openArray[cstring])" href="nodejs/jsdns.html#setServers%2CopenArray%5Bcstring%5D">jsdns: setServers(servers: openArray[cstring])</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsdns: setServers[T](self: Resolver; servers: openArray[cstring])" href="nodejs/jsdns.html#setServers%2CResolver%2CopenArray%5Bcstring%5D">jsdns: setServers[T](self: Resolver; servers: openArray[cstring])</a></li>
           </ul></dd>
 <dt><a name="setTimeout" href="#setTimeout"><span>setTimeout:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3545,7 +3603,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 07:11:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 07:39:56 UTC</small>
       </div>
     </div>
   </div>
