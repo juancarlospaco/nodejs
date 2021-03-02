@@ -2,10 +2,7 @@ from std/jsre import RegExp
 import std/jsffi
 export RegExp
 
-
-type
-  CallTracker* = ref object of JsRoot  ## https://nodejs.org/api/assert.html#assert_class_assert_calltracker
-
+type CallTracker* = ref object of JsRoot  ## https://nodejs.org/api/assert.html#assert_class_assert_calltracker
 
 func newCallTracker*(): CallTracker {.importjs: "(new assert.CallTracker())".}
   ## https://nodejs.org/api/assert.html#assert_new_assert_calltracker
@@ -127,6 +124,10 @@ func throws*[T](asyncFunction: T; error: T; message: cstring) {.importjs: "asser
 
 func throws*[T](asyncFunction: T; error: T) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
+
+func toCstring*(self: CallTracker): cstring {.importjs: "JSON.stringify(#)".}
+
+func `$`*(self: CallTracker): string = $toCstring(self)
 
 
 runnableExamples:
