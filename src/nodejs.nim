@@ -24,6 +24,7 @@ import
   nodejs/jstimers,
   nodejs/jsrepl,
   nodejs/jsurl,
+  nodejs/jstracing,
   nodejs/jsugar
 
 export
@@ -46,4 +47,5 @@ export
   jstimers,
   jsrepl,
   jsurl,
+  jstracing,
   jsugar
