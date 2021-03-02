@@ -79,3 +79,7 @@ func url*(): cstring {.importjs: "inspector.$1()".}
 
 func waitForDebugger*() {.importjs: "inspector.$1()".}
   ## https://nodejs.org/api/inspector.html#inspector_inspector_waitfordebugger
+
+func toCstring*(self: InspectorSession): cstring {.importjs: "JSON.stringify(#)".}
+
+func `$`*(self: InspectorSession): string = $toCstring(self)
