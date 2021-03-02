@@ -13,6 +13,7 @@ func requireUrl*() {.importjs: "const url = require('url')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
 func newURL*(input: cstring): URL {.importjs: "(new URL(#))".}
+
 func newURL*(input: cstring; base: cstring or URL): URL {.importjs: "(new URL(#, #))".}
 
 func newURLSearchParams*(input: cstring or JsObject or openArray[cstring]): URLSearchParams {.importjs: "(new URLSearchParams(#))".}
