@@ -25,6 +25,7 @@ import
   nodejs/jsrepl,
   nodejs/jsurl,
   nodejs/jstracing,
+  nodejs/jsmodule,
   nodejs/jsugar
 
 export
@@ -48,4 +49,5 @@ export
   jsrepl,
   jsurl,
   jstracing,
+  jsmodule,
   jsugar
