@@ -1,3 +1,4 @@
+type Resolver* = ref object of JsRoot ## https://nodejs.org/api/dns.html#dns_class_dns_resolver
 
 let
   NODATA* {.importjs: "dns.NODATA".}: cstring
@@ -29,6 +30,55 @@ func importDns*() {.importjs: "import * as dns from 'dns'@".}
 
 func requireDns*() {.importjs: "const dns = require('dns')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
+
+func newResolver*(timeout = -1.cint): Resolver {.importjs: "(new Resolver({timeout: #}))".}
+
+func cancel*(self: Resolver) {.importjs: "#.$1()".}
+  ## https://nodejs.org/api/dns.html#dns_resolver_cancel
+
+func setLocalAddress*(self: Resolver; ipv4: cstring) {.importjs: "#.$1(#)".}
+  ## https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6
+
+func setLocalAddress*(self: Resolver; ipv4: cstring; ipv6: cstring) {.importjs: "#.$1(#, #)".}
+  ## https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6
+
+func getServers*(self: Resolver): seq[cstring] {.importjs: "#.$1()".}
+
+func resolve*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolve*[T](self: Resolver; hostname: cstring; rrtype: cstring; callback: T) {.importjs: "#.$1(#, #, #)".}
+
+func resolve4*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolve4*[T](self: Resolver; hostname: cstring; ttl: bool; callback: T) {.importjs: "#.$1(#, {ttl: #}, #)".}
+
+func resolve6*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolve6*[T](self: Resolver; hostname: cstring; ttl: bool; callback: T) {.importjs: "#.$1(#, {ttl: #}, #)".}
+
+func resolveAny*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveCname*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveCaa*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveMx*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveNaptr*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveNs*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolvePtr*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveSoa*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveSrv*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func resolveTxt*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func reverse*[T](self: Resolver; ip: cstring; callback: T) {.importjs: "#.$1(#, #)".}
+
+func setServers*[T](self: Resolver; servers: openArray[cstring]) {.importjs: "#.$1(#)".}
 
 func lookup*[T](hostname: cstring; callback: T) {.importjs: "dns.$1(#, #)".}
   ## https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback
