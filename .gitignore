@@ -10,3 +10,4 @@ htmldocs/
 *.h
 *.hpp
 *.cpp
+temp*.nim
