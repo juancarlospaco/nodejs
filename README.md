@@ -39,6 +39,7 @@ Documentation Index 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
 - :heavy_check_mark: [repl](https://nodejs.org/api/repl.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsrepl.html
 - :heavy_check_mark: [url](https://nodejs.org/api/url.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsurl.html
 - :heavy_check_mark: [tracing](https://nodejs.org/api/tracing.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstracing.html
+- :heavy_check_mark: [module](https://nodejs.org/api/module.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsmodule.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+    , needs `--experimental-modules`
