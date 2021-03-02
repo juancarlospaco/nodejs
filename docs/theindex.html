@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -696,6 +696,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: dirRead[T](path: cstring; callback: T)" href="nodejs/jsfs.html#dirRead%2Ccstring%2CT">jsfs: dirRead[T](path: cstring; callback: T)</a></li>
           </ul></dd>
+<dt><a name="disable" href="#disable"><span>disable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: disable(self: Tracing)" href="nodejs/jstracing.html#disable%2CTracing">jstracing: disable(self: Tracing)</a></li>
+          </ul></dd>
 <dt><a name="disconnect" href="#disconnect"><span>disconnect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: disconnect(self: InspectorSession)" href="nodejs/jsinspector.html#disconnect%2CInspectorSession">jsinspector: disconnect(self: InspectorSession)</a></li>
@@ -895,6 +899,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="EMULTIHOP" href="#EMULTIHOP"><span>EMULTIHOP:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: EMULTIHOP" href="nodejs/jsos.html#EMULTIHOP">jsos: EMULTIHOP</a></li>
+          </ul></dd>
+<dt><a name="enable" href="#enable"><span>enable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: enable(self: Tracing)" href="nodejs/jstracing.html#enable%2CTracing">jstracing: enable(self: Tracing)</a></li>
           </ul></dd>
 <dt><a name="ENAMETOOLONG" href="#ENAMETOOLONG"><span>ENAMETOOLONG:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1232,6 +1240,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: getegid(): cint" href="nodejs/jsprocess.html#getegid">jsprocess: getegid(): cint</a></li>
           </ul></dd>
+<dt><a name="getEnabledCategories" href="#getEnabledCategories"><span>getEnabledCategories:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: getEnabledCategories(): cstring" href="nodejs/jstracing.html#getEnabledCategories">jstracing: getEnabledCategories(): cstring</a></li>
+          </ul></dd>
 <dt><a name="getgroups" href="#getgroups"><span>getgroups:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: getgroups(): seq[cint]" href="nodejs/jsprocess.html#getgroups">jsprocess: getgroups(): seq[cint]</a></li>
@@ -1377,6 +1389,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="importTimersPromises" href="#importTimersPromises"><span>importTimersPromises:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: importTimersPromises()" href="nodejs/jstimers.html#importTimersPromises">jstimers: importTimersPromises()</a></li>
+          </ul></dd>
+<dt><a name="importTracing" href="#importTracing"><span>importTracing:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: importTracing()" href="nodejs/jstracing.html#importTracing">jstracing: importTracing()</a></li>
           </ul></dd>
 <dt><a name="importUrl" href="#importUrl"><span>importUrl:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1885,6 +1901,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="newTimeout" href="#newTimeout"><span>newTimeout:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: newTimeout(): Timeout" href="nodejs/jstimers.html#newTimeout">jstimers: newTimeout(): Timeout</a></li>
+          </ul></dd>
+<dt><a name="newTracing" href="#newTracing"><span>newTracing:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: newTracing(options: JsObject): Tracing" href="nodejs/jstracing.html#newTracing%2CJsObject">jstracing: newTracing(options: JsObject): Tracing</a></li>
           </ul></dd>
 <dt><a name="newUint8Array" href="#newUint8Array"><span>newUint8Array:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2429,6 +2449,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="requireTimersPromises" href="#requireTimersPromises"><span>requireTimersPromises:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: requireTimersPromises()" href="nodejs/jstimers.html#requireTimersPromises">jstimers: requireTimersPromises()</a></li>
+          </ul></dd>
+<dt><a name="requireTracing" href="#requireTracing"><span>requireTracing:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: requireTracing()" href="nodejs/jstracing.html#requireTracing">jstracing: requireTracing()</a></li>
           </ul></dd>
 <dt><a name="requireUrl" href="#requireUrl"><span>requireUrl:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3046,6 +3070,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsutils: toUpperAscii(s: cstring): cstring" href="nodejs/jsutils.html#toUpperAscii%2Ccstring">jsutils: toUpperAscii(s: cstring): cstring</a></li>
           </ul></dd>
+<dt><a name="Tracing" href="#Tracing"><span>Tracing:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstracing: Tracing" href="nodejs/jstracing.html#Tracing">jstracing: Tracing</a></li>
+          </ul></dd>
 <dt><a name="triggerAsyncId" href="#triggerAsyncId"><span>triggerAsyncId:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsasynchooks: triggerAsyncId(): cint" href="nodejs/jsasynchooks.html#triggerAsyncId">jsasynchooks: triggerAsyncId(): cint</a></li>
@@ -3445,7 +3473,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 06:13:46 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 06:29:02 UTC</small>
       </div>
     </div>
   </div>
