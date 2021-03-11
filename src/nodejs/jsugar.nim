@@ -66,7 +66,7 @@ template `::=`*(name: untyped; value: auto): untyped =
   var name {.codegenDecl: "const $2", exportc: astToStr(name).} = value
 
 func jsexport*(symbols: auto) {.importjs: "export { @ }", varargs.}
-  ## Convenience alias for `export { symbol, symbol, symbol };`
+  ## Convenience alias for `export { symbol0, symbol1, symbol2 };`
 
 func nth*(someOrdinalInteger: cint): cstring {.importjs: """
   (() => {
@@ -175,7 +175,7 @@ runnableExamples:
     echo "JavaScript Arrow Function for Nim functions"
     # }
 
-  example2(arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
+  let example2 = (arg0, arg1: int) {.codegenDecl: arrow.} => echo "JavaScript Arrow Function for Nim Arrow Functions"
   # const example2 = (arg0, arg01) => { echo("JavaScript Arrow Function for Nim functions") };
 
   doAssert nth(-9.cint) == "-9th".cstring
