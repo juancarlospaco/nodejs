@@ -300,6 +300,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="isDeepStrictEqual(val1, val2: auto): bool">isDeepStrictEqual(val1, val2: auto): bool</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">&&=
+      <li><a class="reference" href="#%26%26%3D%2Cauto%2Cauto"
+    title="`&amp;&amp;=`(lhs, rhs: auto): any">`&amp;&amp;=`(lhs, rhs: auto): any</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">isDataView
       <li><a class="reference" href="#isDataView%2Cauto"
     title="isDataView(value: auto): bool">isDataView(value: auto): bool</a></li>
@@ -601,6 +606,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="isNativeError(value: auto): bool">isNativeError(value: auto): bool</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">||=
+      <li><a class="reference" href="#%7C%7C%3D%2Cauto%2Cauto"
+    title="`||=`(lhs, rhs: auto): any">`||=`(lhs, rhs: auto): any</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">encodeInto
       <li><a class="reference" href="#encodeInto%2CTextEncoder%2Ccstring%2CUint8Array"
     title="encodeInto(self: TextEncoder; src: cstring; dest: Uint8Array): JsObject">encodeInto(self: TextEncoder; src: cstring; dest: Uint8Array): JsObject</a></li>
@@ -629,6 +639,11 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">isBoxedPrimitive
       <li><a class="reference" href="#isBoxedPrimitive%2Cauto"
     title="isBoxedPrimitive(value: auto): bool">isBoxedPrimitive(value: auto): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">??=
+      <li><a class="reference" href="#%3F%3F%3D%2Cauto%2Cauto"
+    title="`??=`(lhs, rhs: auto): any">`??=`(lhs, rhs: auto): any</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">matchAll
@@ -1121,6 +1136,27 @@ window.addEventListener('DOMContentLoaded', main);
 <dd>
 
 
+
+</dd>
+<a id="&&=,auto,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%26%3D%2Cauto%2Cauto"><span class="Identifier">`&amp;&amp;=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# &amp;&amp;= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment</a>
+
+</dd>
+<a id="||=,auto,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%7C%7C%3D%2Cauto%2Cauto"><span class="Identifier">`||=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ||= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment</a>
+
+</dd>
+<a id="??=,auto,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#%3F%3F%3D%2Cauto%2Cauto"><span class="Identifier">`??=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ??= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment</a>
 
 </dd>
 <a id="indentation,cstring"></a>
@@ -1692,7 +1728,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-02 08:06:52 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-11 15:16:42 UTC</small>
       </div>
     </div>
   </div>
