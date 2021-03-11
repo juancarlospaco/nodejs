@@ -102,6 +102,15 @@ func toExponential*(n: SomeFloat; fractionDigits: Positive): cstring {.importjs:
 
 func toPrecision*(n: SomeFloat; fractionDigits: Positive): cstring {.importjs: "#.$1(#)".}
 
+func `&&=`*(lhs, rhs: auto): auto {.importjs: "(# &&= #)", discardable.}
+  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment
+
+func `||=`*(lhs, rhs: auto): auto {.importjs: "(# ||= #)", discardable.}
+  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment
+
+func `??=`*(lhs, rhs: auto): auto {.importjs: "(# ??= #)", discardable.}
+  ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+
 func indentation*(s: cstring): cint {.importjs: """
   (() => {
     const m = #.match(/^[\s\\t]*/gm);
