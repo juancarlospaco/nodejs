@@ -157,7 +157,7 @@ template jsFmt*(code: untyped) =
     func jsFmtInjectFmt {.importjs: """
       function fmt(strings, ...values) {
         return values.reduce((finalString, value, index) => {
-          return `$${finalString} $${value} $${strings[index + 1]}`}, strings[0])
+          return `$${finalString}$${value}$${strings[index + 1]}`}, strings[0])
       } """.}
     jsFmtInjectFmt()
     code
