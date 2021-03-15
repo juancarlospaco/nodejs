@@ -188,6 +188,8 @@ window.addEventListener('DOMContentLoaded', main);
     title="iife(code: untyped): untyped">iife</a></li>
   <li><a class="reference" href="#%3A%3A%3D.t%2Cuntyped%2Cauto"
     title="`::=`(name: untyped; value: auto): untyped">`::=`</a></li>
+  <li><a class="reference" href="#jsFmt.t%2Cuntyped"
+    title="jsFmt(code: untyped)">jsFmt</a></li>
 
   </ul>
 </li>
@@ -456,6 +458,19 @@ Convenience template for Anonymous Immediately Invoked Function Expressions.
 Convenience template for a JavaScript <tt class="docutils literal"><span class="pre">const</span></tt> (Nim <tt class="docutils literal"><span class="pre">var</span></tt>). Other libs already use <tt class="docutils literal"><span class="pre">:=</span></tt> then we use <tt class="docutils literal"><span class="pre">::=</span></tt>, because <tt class="docutils literal"><span class="pre">:==</span></tt> looks like a comparison.
 
 </dd>
+<a id="jsFmt.t,untyped"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#jsFmt.t%2Cuntyped"><span class="Identifier">jsFmt</span></a><span class="Other">(</span><span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Nim <tt class="docutils literal"><span class="pre">strformat</span></tt> implemented using JavaScript string literal functions.
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsconsole</span><span class="Whitespace">
+</span><span class="Identifier">jsFmt</span><span class="Punctuation">:</span><span class="Whitespace">
+  </span><span class="Identifier">foo</span><span class="Whitespace"> </span><span class="Punctuation">:</span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;platypus&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+  </span><span class="Identifier">bar</span><span class="Whitespace"> </span><span class="Punctuation">:</span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;capybara&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
+  </span><span class="Identifier">console</span><span class="Operator">.</span><span class="Identifier">log</span><span class="Whitespace"> </span><span class="Identifier">fmt</span><span class="Punctuation">(</span><span class="StringLit">&quot;foo ${foo} bar ${bar} baz ${8 + 1} !?&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span></pre>
+
+</dd>
 
 </dl></div>
 
@@ -466,7 +481,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-11 15:16:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-15 14:34:04 UTC</small>
       </div>
     </div>
   </div>
