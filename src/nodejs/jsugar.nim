@@ -142,6 +142,26 @@ func daysBetweenYears*(fromYear, toYear: Positive): int =
   template daysBetweenYearsImpl(a): int = a * 365 + a div 4 - a div 100 + a div 400
   result = daysBetweenYearsImpl(toYear - 1) - daysBetweenYearsImpl(fromYear - 1)
 
+template jsFmt*(code: untyped) =
+  ## Nim `strformat` implemented using JavaScript string literal functions.
+  runnableExamples:
+    import std/jsconsole
+    jsFmt:
+      foo := "platypus".cstring
+      bar := "capybara".cstring
+      console.log fmt("foo ${foo} bar ${bar} baz ${8 + 1} !?".cstring)
+  block:
+    func fmt(s: cstring): cstring {.importjs: "fmt`#`".}
+    template `:=`(name, value) =
+      var name {.exportc: astToStr(name).} = value
+    func jsFmtInjectFmt {.importjs: """
+      function fmt(strings, ...values) {
+        return values.reduce((finalString, value, index) => {
+          return `$${finalString} $${value} $${strings[index + 1]}`}, strings[0])
+      } """.}
+    jsFmtInjectFmt()
+    code
+
 # func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
 #   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
