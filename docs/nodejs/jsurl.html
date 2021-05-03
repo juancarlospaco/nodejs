@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>nodejs/jsurl</title>
+<title>src/nodejs/jsurl</title>
 <link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
 
 <script type="text/javascript" src="../dochack.js"></script>
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', main);
 <body>
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">nodejs/jsurl</h1>
+    <h1 class="title">src/nodejs/jsurl</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -233,7 +233,8 @@ window.addEventListener('DOMContentLoaded', main);
   
   <p class="module-desc">
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Identifier">requireUrl</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsurl</span><span class="Whitespace">
+</span><span class="Identifier">requireUrl</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Keyword">block</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">u</span><span class="Punctuation">:</span><span class="Whitespace"> </span><span class="Identifier">URL</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newURL</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">u</span><span class="Operator">.</span><span class="Identifier">toCstring</span><span class="Whitespace"> </span><span class="Keyword">is</span><span class="Whitespace"> </span><span class="Identifier">cstring</span><span class="Whitespace">
@@ -282,132 +283,132 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="importUrl"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importUrl"><span class="Identifier">importUrl</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as url from \'url\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importUrl"><span class="Identifier">importUrl</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as url from \'url\'@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">import * as module_name from 'module_name';</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="requireUrl"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireUrl"><span class="Identifier">requireUrl</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const url = require(\'url\')@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireUrl"><span class="Identifier">requireUrl</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const url = require(\'url\')@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="newURL,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newURL%2Ccstring"><span class="Identifier">newURL</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URL(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newURL%2Ccstring"><span class="Identifier">newURL</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URL(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="newURL,cstring,"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newURL%2Ccstring%2C"><span class="Identifier">newURL</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">base</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URL(#, #))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newURL%2Ccstring%2C"><span class="Identifier">newURL</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">base</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URL(#, #))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="newURLSearchParams"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newURLSearchParams"><span class="Identifier">newURLSearchParams</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <span class="Identifier">JsObject</span> <span class="Keyword">or</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URLSearchParams(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newURLSearchParams"><span class="Identifier">newURLSearchParams</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <span class="Identifier">JsObject</span> <span class="Keyword">or</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URLSearchParams(#))&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_new_urlsearchparams">https://nodejs.org/api/url.html#url_new_urlsearchparams</a>
 
 </dd>
 <a id="toJSON,URL"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toJSON%2CURL"><span class="Identifier">toJSON</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toJSON()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toJSON%2CURL"><span class="Identifier">toJSON</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toJSON()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_tojson">https://nodejs.org/api/url.html#url_url_tojson</a>
 
 </dd>
 <a id="format,URL,JsObject"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#format%2CURL%2CJsObject"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#format%2CURL%2CJsObject"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_format_url_options">https://nodejs.org/api/url.html#url_url_format_url_options</a>
 
 </dd>
 <a id="urlToHttpOptions,URL"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#urlToHttpOptions%2CURL"><span class="Identifier">urlToHttpOptions</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#urlToHttpOptions%2CURL"><span class="Identifier">urlToHttpOptions</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_urltohttpoptions_url">https://nodejs.org/api/url.html#url_url_urltohttpoptions_url</a>
 
 </dd>
 <a id="add,URLSearchParams,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#add%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.append(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#add%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.append(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_append_name_value">https://nodejs.org/api/url.html#url_urlsearchparams_append_name_value</a>
 
 </dd>
 <a id="delete,URLSearchParams,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#delete%2CURLSearchParams%2Ccstring"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#delete%2CURLSearchParams%2Ccstring"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_delete_name">https://nodejs.org/api/url.html#url_urlsearchparams_delete_name</a>
 
 </dd>
 <a id="get,URLSearchParams,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#get%2CURLSearchParams%2Ccstring"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#get%2CURLSearchParams%2Ccstring"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_get_name">https://nodejs.org/api/url.html#url_urlsearchparams_get_name</a>
 
 </dd>
 <a id="getAll,URLSearchParams,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#getAll%2CURLSearchParams%2Ccstring"><span class="Identifier">getAll</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#getAll%2CURLSearchParams%2Ccstring"><span class="Identifier">getAll</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_getall_name">https://nodejs.org/api/url.html#url_urlsearchparams_getall_name</a>
 
 </dd>
 <a id="hasKey,URLSearchParams,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#hasKey%2CURLSearchParams%2Ccstring"><span class="Identifier">hasKey</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.has(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#hasKey%2CURLSearchParams%2Ccstring"><span class="Identifier">hasKey</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.has(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_has_name">https://nodejs.org/api/url.html#url_urlsearchparams_has_name</a>
 
 </dd>
 <a id="keys,URLSearchParams"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#keys%2CURLSearchParams"><span class="Identifier">keys</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#keys%2CURLSearchParams"><span class="Identifier">keys</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_keys">https://nodejs.org/api/url.html#url_urlsearchparams_keys</a>
 
 </dd>
 <a id="values,URLSearchParams"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#values%2CURLSearchParams"><span class="Identifier">values</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#values%2CURLSearchParams"><span class="Identifier">values</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_values">https://nodejs.org/api/url.html#url_urlsearchparams_values</a>
 
 </dd>
 <a id="sets,URLSearchParams,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#sets%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">sets</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.set(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#sets%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">sets</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.set(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_set_name_value">https://nodejs.org/api/url.html#url_urlsearchparams_set_name_value</a>
 
 </dd>
 <a id="sort,URLSearchParams"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#sort%2CURLSearchParams"><span class="Identifier">sort</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#sort%2CURLSearchParams"><span class="Identifier">sort</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_sort">https://nodejs.org/api/url.html#url_urlsearchparams_sort</a>
 
 </dd>
 <a id="toCstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span class="Keyword">or</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toString()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span class="Keyword">or</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toString()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_tostring">https://nodejs.org/api/url.html#url_url_tostring</a> <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_tostring">https://nodejs.org/api/url.html#url_urlsearchparams_tostring</a>
@@ -421,28 +422,28 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
 
 </dd>
 <a id="len,URL"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#len%2CURL"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#len%2CURL"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="domainToASCII,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#domainToASCII%2Ccstring"><span class="Identifier">domainToASCII</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#domainToASCII%2Ccstring"><span class="Identifier">domainToASCII</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_domaintoascii_domain">https://nodejs.org/api/url.html#url_url_domaintoascii_domain</a>
 
 </dd>
 <a id="domainToUnicode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#domainToUnicode%2Ccstring"><span class="Identifier">domainToUnicode</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#domainToUnicode%2Ccstring"><span class="Identifier">domainToUnicode</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_domaintounicode_domain">https://nodejs.org/api/url.html#url_url_domaintounicode_domain</a>
 
 </dd>
 <a id="fileURLToPath"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#fileURLToPath"><span class="Identifier">fileURLToPath</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fileURLToPath"><span class="Identifier">fileURLToPath</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/url.html#url_url_fileurltopath_url">https://nodejs.org/api/url.html#url_url_fileurltopath_url</a>
@@ -458,7 +459,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-15 14:35:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-03 15:38:21 UTC</small>
       </div>
     </div>
   </div>

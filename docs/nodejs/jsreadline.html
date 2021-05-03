@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>nodejs/jsreadline</title>
+<title>src/nodejs/jsreadline</title>
 <link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
 
 <script type="text/javascript" src="../dochack.js"></script>
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', main);
 <body>
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">nodejs/jsreadline</h1>
+    <h1 class="title">src/nodejs/jsreadline</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -210,10 +210,11 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="tocRoot"></div>
   
   <p class="module-desc"><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-You MUST import <tt class="docutils literal"><span class="pre">process</span></tt> before importing this module. Uses <tt class="docutils literal"><span class="pre">stdout</span></tt> by default.</div>
+You MUST import <tt class="docutils literal"><span class="pre"><span class="Identifier">process</span></span></tt> before importing this module. Uses <tt class="docutils literal"><span class="pre"><span class="Identifier">stdout</span></span></tt> by default.</div>
 
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsffi</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsprocess</span><span class="Whitespace">
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsreadline</span><span class="Whitespace">
+</span><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsffi</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsprocess</span><span class="Whitespace">
 </span><span class="Identifier">requireProcess</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Identifier">requireReadline</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Keyword">block</span><span class="Punctuation">:</span><span class="Whitespace">
@@ -248,64 +249,64 @@ You MUST import <tt class="docutils literal"><span class="pre">process</span></t
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="newReadline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newReadline"><span class="Identifier">newReadline</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.createInterface({input: process.stdin, output: process.stdout})&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newReadline"><span class="Identifier">newReadline</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.createInterface({input: process.stdin, output: process.stdout})&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_readline">https://nodejs.org/api/readline.html#readline_readline</a>
 
 </dd>
 <a id="close,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#close%2CReadline"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#close%2CReadline"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_close">https://nodejs.org/api/readline.html#readline_rl_close</a>
 
 </dd>
 <a id="pause,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#pause%2CReadline"><span class="Identifier">pause</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#pause%2CReadline"><span class="Identifier">pause</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_pause">https://nodejs.org/api/readline.html#readline_rl_pause</a>
 
 </dd>
 <a id="prompt,Readline,bool"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#prompt%2CReadline%2Cbool"><span class="Identifier">prompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">preserveCursor</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#prompt%2CReadline%2Cbool"><span class="Identifier">prompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">preserveCursor</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_prompt_preservecursor">https://nodejs.org/api/readline.html#readline_rl_prompt_preservecursor</a>
 
 </dd>
 <a id="question,Readline,cstring,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#question%2CReadline%2Ccstring%2CT"><span class="Identifier">question</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">query</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#question%2CReadline%2Ccstring%2CT"><span class="Identifier">question</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">query</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_question_query_options_callback">https://nodejs.org/api/readline.html#readline_rl_question_query_options_callback</a>
 
 </dd>
 <a id="resume,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#resume%2CReadline"><span class="Identifier">resume</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#resume%2CReadline"><span class="Identifier">resume</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_resume">https://nodejs.org/api/readline.html#readline_rl_resume</a>
 
 </dd>
 <a id="setPrompt,Readline,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setPrompt%2CReadline%2Ccstring"><span class="Identifier">setPrompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">prompt</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#setPrompt%2CReadline%2Ccstring"><span class="Identifier">setPrompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">prompt</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_setprompt_prompt">https://nodejs.org/api/readline.html#readline_rl_setprompt_prompt</a>
 
 </dd>
 <a id="getPrompt,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#getPrompt%2CReadline"><span class="Identifier">getPrompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#getPrompt%2CReadline"><span class="Identifier">getPrompt</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_getprompt">https://nodejs.org/api/readline.html#readline_rl_getprompt</a>
 
 </dd>
 <a id="write,Readline,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#write%2CReadline%2Ccstring"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#write%2CReadline%2Ccstring"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_write_data_key">https://nodejs.org/api/readline.html#readline_rl_write_data_key</a>
@@ -313,70 +314,70 @@ You MUST import <tt class="docutils literal"><span class="pre">process</span></t
 </dd>
 <a id="write,Readline,cstring,bool,bool,bool,cstring"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#write%2CReadline%2Ccstring%2Cbool%2Cbool%2Cbool%2Ccstring"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ctrl</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">meta</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">shift</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span>
-           <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {ctrl: #, meta: #, shift: #, name: #})&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+           <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {ctrl: #, meta: #, shift: #, name: #})&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_write_data_key">https://nodejs.org/api/readline.html#readline_rl_write_data_key</a>
 
 </dd>
 <a id="getCursorPos,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#getCursorPos%2CReadline"><span class="Identifier">getCursorPos</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#getCursorPos%2CReadline"><span class="Identifier">getCursorPos</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_getcursorpos">https://nodejs.org/api/readline.html#readline_rl_getcursorpos</a>
 
 </dd>
 <a id="line,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#line%2CReadline"><span class="Identifier">line</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.line })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#line%2CReadline"><span class="Identifier">line</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.line })()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_line">https://nodejs.org/api/readline.html#readline_rl_line</a>
 
 </dd>
 <a id="cursor,Readline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#cursor%2CReadline"><span class="Identifier">cursor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.cursor })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#cursor%2CReadline"><span class="Identifier">cursor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsreadline.html#Readline"><span class="Identifier">Readline</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { return #.cursor })()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/readline.html#readline_rl_cursor">https://nodejs.org/api/readline.html#readline_rl_cursor</a>
 
 </dd>
 <a id="importReadline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importReadline"><span class="Identifier">importReadline</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as readline from \'readline\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importReadline"><span class="Identifier">importReadline</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as readline from \'readline\'@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">import * as module_name from 'module_name';</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="requireReadline"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireReadline"><span class="Identifier">requireReadline</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const readline = require(\'readline\')@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireReadline"><span class="Identifier">requireReadline</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const readline = require(\'readline\')@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="clearLine"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#clearLine"><span class="Identifier">clearLine</span></a><span class="Other">(</span><span class="Identifier">dir</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#clearLine"><span class="Identifier">clearLine</span></a><span class="Other">(</span><span class="Identifier">dir</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearline_stream_dir_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearline_stream_dir_callback</a>
 
 </dd>
 <a id="clearScreenDown"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#clearScreenDown"><span class="Identifier">clearScreenDown</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#clearScreenDown"><span class="Identifier">clearScreenDown</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearscreendown_stream_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearscreendown_stream_callback</a>
 
 </dd>
 <a id="cursorTo,cint,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#cursorTo%2Ccint%2Ccint"><span class="Identifier">cursorTo</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#cursorTo%2Ccint%2Ccint"><span class="Identifier">cursorTo</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_cursorto_stream_x_y_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_cursorto_stream_x_y_callback</a>
 
 </dd>
 <a id="moveCursor,cint,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#moveCursor%2Ccint%2Ccint"><span class="Identifier">moveCursor</span></a><span class="Other">(</span><span class="Identifier">dx</span><span class="Other">,</span> <span class="Identifier">dy</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#moveCursor%2Ccint%2Ccint"><span class="Identifier">moveCursor</span></a><span class="Other">(</span><span class="Identifier">dx</span><span class="Other">,</span> <span class="Identifier">dy</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;readline.$1(process.stout, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback">https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback</a>
@@ -392,7 +393,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-15 14:35:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-03 15:38:20 UTC</small>
       </div>
     </div>
   </div>
