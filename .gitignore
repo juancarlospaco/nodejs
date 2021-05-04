@@ -1,6 +1,7 @@
 nimcache/
 nimblecache/
 htmldocs/
+docs/nimcache/
 *.js
 *.txt
 *.log
