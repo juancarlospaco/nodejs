@@ -142,6 +142,24 @@ func daysBetweenYears*(fromYear, toYear: Positive): int =
   template daysBetweenYearsImpl(a): int = a * 365 + a div 4 - a div 100 + a div 400
   result = daysBetweenYearsImpl(toYear - 1) - daysBetweenYearsImpl(fromYear - 1)
 
+func suffixAmPm*(s: SomeInteger): cstring {.importjs: """
+  ((h = Math.abs(#)) => `$${h % 12 === 0 ? 12 : h % 12}$${h < 12 ? 'am' : 'pm'}`)()""".} =
+  runnableExamples:
+    doAssert suffixAmPm(0) == "12am".cstring
+    doAssert suffixAmPm(5) == "5am".cstring
+    doAssert suffixAmPm(12) == "12pm".cstring
+    doAssert suffixAmPm(15) == "3pm".cstring
+    doAssert suffixAmPm(23) == "11pm".cstring
+    doAssert suffixAmPm(-23) == "11pm".cstring
+
+func shuffle*(arrai: openArray[auto]) {.importjs: """#.sort(() => .5 - Math.random())""".} =
+  runnableExamples:
+    var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    shuffle(x)
+    doAssert x != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+func currentTimestamp*(): int {.importjs: """Math.floor(new Date().getTime() / 1000)""".}
+
 template jsFmt*(code: untyped) =
   ## Nim `strformat` implemented using JavaScript string literal functions.
   runnableExamples:
