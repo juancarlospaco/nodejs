@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jswasi.html">nodejs/jswasi</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -1480,6 +1480,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsv8: importV8()" href="nodejs/jsv8.html#importV8">jsv8: importV8()</a></li>
           </ul></dd>
+<dt><a name="importWasi" href="#importWasi"><span>importWasi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: importWasi()" href="nodejs/jswasi.html#importWasi">jswasi: importWasi()</a></li>
+          </ul></dd>
 <dt><a name="importZlib" href="#importZlib"><span>importZlib:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jszlib: importZlib()" href="nodejs/jszlib.html#importZlib">jszlib: importZlib()</a></li>
@@ -1515,6 +1519,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsprocess: initgroups(user: cint; extraGroup: cint)" href="nodejs/jsprocess.html#initgroups%2Ccint%2Ccint">jsprocess: initgroups(user: cint; extraGroup: cint)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsprocess: initgroups(user: cstring; extraGroup: cstring)" href="nodejs/jsprocess.html#initgroups%2Ccstring%2Ccstring">jsprocess: initgroups(user: cstring; extraGroup: cstring)</a></li>
+          </ul></dd>
+<dt><a name="initialize" href="#initialize"><span>initialize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: initialize(self: WASI)" href="nodejs/jswasi.html#initialize%2CWASI">jswasi: initialize(self: WASI)</a></li>
           </ul></dd>
 <dt><a name="inspect" href="#inspect"><span>inspect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2023,6 +2031,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="newURLSearchParams" href="#newURLSearchParams"><span>newURLSearchParams:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsurl: newURLSearchParams(input: cstring or JsObject or openArray[cstring]): URLSearchParams" href="nodejs/jsurl.html#newURLSearchParams">jsurl: newURLSearchParams(input: cstring or JsObject or openArray[cstring]): URLSearchParams</a></li>
+          </ul></dd>
+<dt><a name="newWasi" href="#newWasi"><span>newWasi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: newWasi(options: JsObject): WASI" href="nodejs/jswasi.html#newWasi%2CJsObject">jswasi: newWasi(options: JsObject): WASI</a></li>
           </ul></dd>
 <dt><a name="nextDays" href="#nextDays"><span>nextDays:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2588,6 +2600,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsv8: requireV8()" href="nodejs/jsv8.html#requireV8">jsv8: requireV8()</a></li>
           </ul></dd>
+<dt><a name="requireWasi" href="#requireWasi"><span>requireWasi:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: requireWasi()" href="nodejs/jswasi.html#requireWasi">jswasi: requireWasi()</a></li>
+          </ul></dd>
 <dt><a name="requireZlib" href="#requireZlib"><span>requireZlib:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jszlib: requireZlib()" href="nodejs/jszlib.html#requireZlib">jszlib: requireZlib()</a></li>
@@ -3082,6 +3098,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsutils: split(strng: cstring; regex: RegExp): seq[cstring]" href="nodejs/jsutils.html#split%2Ccstring%2CRegExp">jsutils: split(strng: cstring; regex: RegExp): seq[cstring]</a></li>
           </ul></dd>
+<dt><a name="start" href="#start"><span>start:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: start(self: WASI)" href="nodejs/jswasi.html#start%2CWASI">jswasi: start(self: WASI)</a></li>
+          </ul></dd>
 <dt><a name="stat" href="#stat"><span>stat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: stat[T](path: cstring; callback: T)" href="nodejs/jsfs.html#stat%2Ccstring%2CT">jsfs: stat[T](path: cstring; callback: T)</a></li>
@@ -3464,6 +3484,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsinspector: waitForDebugger()" href="nodejs/jsinspector.html#waitForDebugger">jsinspector: waitForDebugger()</a></li>
           </ul></dd>
+<dt><a name="WASI" href="#WASI"><span>WASI:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: WASI" href="nodejs/jswasi.html#WASI">jswasi: WASI</a></li>
+          </ul></dd>
+<dt><a name="wasiImport" href="#wasiImport"><span>wasiImport:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswasi: wasiImport" href="nodejs/jswasi.html#wasiImport">jswasi: wasiImport</a></li>
+          </ul></dd>
 <dt><a name="watch" href="#watch"><span>watch:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: watch[T](filename: cstring; listener: T)" href="nodejs/jsfs.html#watch%2Ccstring%2CT">jsfs: watch[T](filename: cstring; listener: T)</a></li>
@@ -3667,7 +3695,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-17 20:55:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-17 21:01:12 UTC</small>
       </div>
     </div>
   </div>
