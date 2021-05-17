@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>nodejs/jsutils</title>
+<title>src/nodejs/jsutils</title>
 <link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
 
 <script type="text/javascript" src="../dochack.js"></script>
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', main);
 <body>
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">nodejs/jsutils</h1>
+    <h1 class="title">src/nodejs/jsutils</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -683,7 +683,8 @@ window.addEventListener('DOMContentLoaded', main);
 </ul>
 
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">sugar</span><span class="Whitespace">  </span><span class="Comment"># =&gt;</span><span class="Whitespace">
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsutils</span><span class="Whitespace">
+</span><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">sugar</span><span class="Whitespace">  </span><span class="Comment"># =&gt;</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">base64encode</span><span class="Punctuation">(</span><span class="StringLit">&quot;Como siempre: lo urgente no deja tiempo para lo importante&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">base64decode</span><span class="Punctuation">(</span><span class="StringLit">&quot;Q29tbyBzaWVtcHJlOiBsbyB1cmdlbnRlIG5vIGRlamEgdGllbXBvIHBhcmEgbG8gaW1wb3J0YW50ZQ==&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;Como siempre: lo urgente no deja tiempo para lo importante&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">deduplicate</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="DecNumber">9</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">9</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">9</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">9</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">0</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">9</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="DecNumber">0</span><span class="Punctuation">]</span><span class="Whitespace">
@@ -708,7 +709,8 @@ window.addEventListener('DOMContentLoaded', main);
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">exampl</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Whitespace"> </span><span class="Operator">..</span><span class="Whitespace"> </span><span class="DecNumber">3</span><span class="Punctuation">]</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;hell&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">exampl</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Whitespace"> </span><span class="Operator">..</span><span class="Whitespace"> </span><span class="Operator">^</span><span class="DecNumber">2</span><span class="Punctuation">]</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;hell&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span></pre>
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Identifier">requireUtil</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsutils</span><span class="Whitespace">
+</span><span class="Identifier">requireUtil</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Keyword">block</span><span class="Punctuation">:</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="RawData">cstring&quot;%s:%s&quot;</span><span class="Operator">.</span><span class="Identifier">format</span><span class="Punctuation">(</span><span class="StringLit">&quot;example&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;example:%s&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
   </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">getSystemErrorName</span><span class="Punctuation">(</span><span class="Operator">-</span><span class="FloatNumber">1.</span><span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;EPERM&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
@@ -825,54 +827,54 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="newUint8Array,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newUint8Array%2CNatural"><span class="Identifier">newUint8Array</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new Uint8Array(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newUint8Array%2CNatural"><span class="Identifier">newUint8Array</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new Uint8Array(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="newArrayBuffer,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newArrayBuffer%2CNatural"><span class="Identifier">newArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new ArrayBuffer(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newArrayBuffer%2CNatural"><span class="Identifier">newArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new ArrayBuffer(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="[],,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%2C%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint8</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%2C%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint8</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="[]=,,Natural,uint8"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%3D%2C%2CNatural%2Cuint8"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#] = #&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%3D%2C%2CNatural%2Cuint8"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#] = #&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toArray,Uint8Array"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CUint8Array"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CUint8Array"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toArray,ArrayBuffer"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CArrayBuffer"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CArrayBuffer"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toCstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
@@ -886,833 +888,833 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 <a id="len,Uint8Array"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="&,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="&,cstring,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Cchar"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Cchar"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + String.fromCharCode(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="&,char,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%26%2Cchar%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(String.fromCharCode(#) + #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%2Cchar%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(String.fromCharCode(#) + #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="strip,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.trim()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.trim()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="strip,cstring,bool,bool"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring%2Cbool%2Cbool"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">leading</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">trailing</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring%2Cbool%2Cbool"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">leading</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span> <span class="Identifier">trailing</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     let result = #;
     if (#) { result = result.trimStart() }
     if (#) { result = result.trimEnd()   }
     return result;
-  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+  })()&quot;&quot;&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="parseInt,cstring"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Ccstring"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Ccstring"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="parseInt,char"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Cchar"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Cchar"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="parseUInt,cstring"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Ccstring"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Ccstring"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="parseUInt,char"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Cchar"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Cchar"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="parseFloat,cstring"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#parseFloat%2Ccstring"><span class="Identifier">parseFloat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">BiggestFloat</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseFloat(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseFloat%2Ccstring"><span class="Identifier">parseFloat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">BiggestFloat</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseFloat(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="contains,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Ccstring"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(#) &gt;= 0)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Ccstring"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(#) &gt;= 0)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="contains,cstring,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Cchar"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(String.fromCharCode(#)) &gt;= 0)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Cchar"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(String.fromCharCode(#)) &gt;= 0)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="isDigit,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isDigit%2Cchar"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { const c = #; return (c &gt;= \'0\' &amp;&amp; c &lt;= \'9\') })()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isDigit%2Cchar"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { const c = #; return (c &gt;= \'0\' &amp;&amp; c &lt;= \'9\') })()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="capitalizeAscii,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#capitalizeAscii%2Ccstring"><span class="Identifier">capitalizeAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#capitalizeAscii%2Ccstring"><span class="Identifier">capitalizeAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()&quot;&quot;&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="repeat,cstring,Natural"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.repeat(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.repeat(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="find,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Ccstring"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Ccstring"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="find,cstring,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Cchar"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Cchar"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(String.fromCharCode(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="split,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Ccstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Ccstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="split,cstring,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Cchar"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Cchar"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(String.fromCharCode(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toLowerAscii,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Ccstring"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toLowerCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Ccstring"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toLowerCase()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toLowerAscii,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Cchar"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toLowerCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Cchar"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toLowerCase()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toUpperAscii,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Ccstring"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toUpperCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Ccstring"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toUpperCase()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toUpperAscii,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Cchar"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toUpperCase()&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Cchar"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toUpperCase()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="replace,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Ccstring"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">,</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Ccstring"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">,</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="replace,cstring,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="replace,cstring,char,char"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), String.fromCharCode(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), String.fromCharCode(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="slice,cstring,cint,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#slice%2Ccstring%2Ccint%2Ccint"><span class="Identifier">slice</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">start</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">ends</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.slice(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#slice%2Ccstring%2Ccint%2Ccint"><span class="Identifier">slice</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">start</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">ends</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.slice(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="isFinite,SomeNumber"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isFinite%2CSomeNumber"><span class="Identifier">isFinite</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isFinite%2CSomeNumber"><span class="Identifier">isFinite</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="isInteger,SomeNumber"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isInteger%2CSomeNumber"><span class="Identifier">isInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isInteger%2CSomeNumber"><span class="Identifier">isInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="isSafeInteger,SomeNumber"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSafeInteger%2CSomeNumber"><span class="Identifier">isSafeInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSafeInteger%2CSomeNumber"><span class="Identifier">isSafeInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toFixed,SomeFloat,"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toFixed%2CSomeFloat%2C"><span class="Identifier">toFixed</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">digits</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">20</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toFixed%2CSomeFloat%2C"><span class="Identifier">toFixed</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">digits</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">20</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toExponential,SomeFloat,Positive"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toExponential%2CSomeFloat%2CPositive"><span class="Identifier">toExponential</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toExponential%2CSomeFloat%2CPositive"><span class="Identifier">toExponential</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="toPrecision,SomeFloat,Positive"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toPrecision%2CSomeFloat%2CPositive"><span class="Identifier">toPrecision</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toPrecision%2CSomeFloat%2CPositive"><span class="Identifier">toPrecision</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="&&=,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%26%26%3D%2Cauto%2Cauto"><span class="Identifier">`&amp;&amp;=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# &amp;&amp;= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%26%3D%2Cauto%2Cauto"><span class="Identifier">`&amp;&amp;=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# &amp;&amp;= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment</a>
 
 </dd>
 <a id="||=,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%7C%7C%3D%2Cauto%2Cauto"><span class="Identifier">`||=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ||= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%7C%7C%3D%2Cauto%2Cauto"><span class="Identifier">`||=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ||= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment</a>
 
 </dd>
 <a id="??=,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%3F%3F%3D%2Cauto%2Cauto"><span class="Identifier">`??=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ??= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%3F%3F%3D%2Cauto%2Cauto"><span class="Identifier">`??=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ??= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment</a>
 
 </dd>
 <a id="indentation,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
+<dt><pre><span class="Keyword">func</span> <a href="#indentation%2Ccstring"><span class="Identifier">indentation</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const m = #.match(/^[\s\\t]*/gm);
     let result = m[0].length;
     for (var i = 1; i &lt; m.length; i++) { result = Math.min(m[i].length, result) }
     return result;
-  })()&quot;&quot;&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+  })()&quot;&quot;&quot;</span>.}</pre></dt>
 <dd>
 
-Returns the amount of indentation all lines of <tt class="docutils literal"><span class="pre">s</span></tt> have in common, ignoring lines that consist only of whitespace.
+Returns the amount of indentation all lines of <tt class="docutils literal"><span class="pre"><span class="Identifier">s</span></span></tt> have in common, ignoring lines that consist only of whitespace.
 
 </dd>
 <a id="[],cstring,HSlice[SomeInteger,SomeInteger]"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CSomeInteger%5D"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">slice</span><span class="Other">:</span> <span class="Identifier">HSlice</span><span class="Other">[</span><span class="Identifier">SomeInteger</span><span class="Other">,</span> <span class="Identifier">SomeInteger</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">asmnostackframe</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CSomeInteger%5D"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">slice</span><span class="Other">:</span> <span class="Identifier">HSlice</span><span class="Other">[</span><span class="Identifier">SomeInteger</span><span class="Other">,</span> <span class="Identifier">SomeInteger</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">asmnostackframe</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="[],cstring,HSlice[SomeInteger,BackwardsIndex]"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CBackwardsIndex%5D"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">slice</span><span class="Other">:</span> <span class="Identifier">HSlice</span><span class="Other">[</span><span class="Identifier">SomeInteger</span><span class="Other">,</span> <span class="Identifier">BackwardsIndex</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">asmnostackframe</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2Ccstring%2CHSlice%5BSomeInteger%2CBackwardsIndex%5D"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">slice</span><span class="Other">:</span> <span class="Identifier">HSlice</span><span class="Other">[</span><span class="Identifier">SomeInteger</span><span class="Other">,</span> <span class="Identifier">BackwardsIndex</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">asmnostackframe</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="normalize,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">form</span> <span class="Other">=</span> <span class="StringLit">&quot;NFC&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.normalize(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">form</span> <span class="Other">=</span> <span class="StringLit">&quot;NFC&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.normalize(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="replace,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2CRegExp"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2CRegExp"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="replaceAll,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#replaceAll%2Ccstring%2CRegExp"><span class="Identifier">replaceAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replaceAll(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#replaceAll%2Ccstring%2CRegExp"><span class="Identifier">replaceAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replaceAll(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="split,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2CRegExp"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2CRegExp"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="match,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.match(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.match(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="matchAll,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#matchAll%2Ccstring%2CRegExp"><span class="Identifier">matchAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.matchAll(#))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#matchAll%2Ccstring%2CRegExp"><span class="Identifier">matchAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.matchAll(#))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="find,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2CRegExp"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.search(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2CRegExp"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.search(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="base64encode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#base64encode%2Ccstring"><span class="Identifier">base64encode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, #).toString(\'base64\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#base64encode%2Ccstring"><span class="Identifier">base64encode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, #).toString(\'base64\')&quot;</span>.}</pre></dt>
 <dd>
 
 Convenience func to Base64 encode a string.
 
 </dd>
 <a id="base64decode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#base64decode%2Ccstring"><span class="Identifier">base64decode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, \'base64\').toString(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#base64decode%2Ccstring"><span class="Identifier">base64decode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, \'base64\').toString(#)&quot;</span>.}</pre></dt>
 <dd>
 
 Convenience func to Base64 decode a string.
 
 </dd>
 <a id="deduplicate,openArray[T]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#deduplicate%2CopenArray%5BT%5D"><span class="Identifier">deduplicate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...new Set(#)]&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#deduplicate%2CopenArray%5BT%5D"><span class="Identifier">deduplicate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...new Set(#)]&quot;</span>.}</pre></dt>
 <dd>
 
 Convenience func to Deduplicate an array.
 
 </dd>
 <a id="shuffle,openArray[auto]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bauto%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.sort(() =&gt; { return Math.random() - 0.5})&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bauto%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.sort(() =&gt; { return Math.random() - 0.5})&quot;</span>.}</pre></dt>
 <dd>
 
 Convenience func to Random shuffle an array.
 
 </dd>
 <a id="parseBool,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#parseBool%2Ccstring"><span class="Identifier">parseBool</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">asmnostackframe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#parseBool%2Ccstring"><span class="Identifier">parseBool</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">asmnostackframe</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
-Convenience func mimics Nim <tt class="docutils literal"><span class="pre">parseBool</span></tt> but optimized for NodeJS. Does NOT ignore <tt class="docutils literal"><span class="pre">'_'</span></tt>, if you need to ignore <tt class="docutils literal"><span class="pre">'_'</span></tt> use stdlib or remove the <tt class="docutils literal"><span class="pre">'_'</span></tt>. The reason is that it is more strict than stdlib, because does not allow <tt class="docutils literal"><span class="pre">'_'</span></tt>, is not the same as stdlib one.
+Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span class="Identifier">parseBool</span></span></tt> but optimized for NodeJS. Does NOT ignore <tt class="docutils literal"><span class="pre"><span class="CharLit">'_'</span></span></tt>, if you need to ignore <tt class="docutils literal"><span class="pre"><span class="CharLit">'_'</span></span></tt> use stdlib or remove the <tt class="docutils literal"><span class="pre"><span class="CharLit">'_'</span></span></tt>. The reason is that it is more strict than stdlib, because does not allow <tt class="docutils literal"><span class="pre"><span class="CharLit">'_'</span></span></tt>, is not the same as stdlib one.
 
 </dd>
 <a id="newTextEncoder"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newTextEncoder"><span class="Identifier">newTextEncoder</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextEncoder(@))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newTextEncoder"><span class="Identifier">newTextEncoder</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextEncoder(@))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="newTextDecoder"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newTextDecoder"><span class="Identifier">newTextDecoder</span></a><span class="Other">(</span><span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">fatal</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">ignoreBOM</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextDecoder(#, {fatal: #, ignoreBOM: #}))&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newTextDecoder"><span class="Identifier">newTextDecoder</span></a><span class="Other">(</span><span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">fatal</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">ignoreBOM</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new util.TextDecoder(#, {fatal: #, ignoreBOM: #}))&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 <a id="decode,TextDecoder,ArrayBuffer"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#decode%2CTextDecoder%2CArrayBuffer"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a><span class="Other">;</span> <span class="Identifier">input</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#decode%2CTextDecoder%2CArrayBuffer"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextDecoder"><span class="Identifier">TextDecoder</span></a><span class="Other">;</span> <span class="Identifier">input</span><span class="Other">:</span> <a href="jsutils.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importcpp</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_textdecoder_decode_input_options">https://nodejs.org/api/util.html#util_textdecoder_decode_input_options</a>
 
 </dd>
 <a id="encode,TextEncoder,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#encode%2CTextEncoder%2Ccstring"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a><span class="Other">;</span> <span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#encode%2CTextEncoder%2Ccstring"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a><span class="Other">;</span> <span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> {.<span class="Identifier">importcpp</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_textencoder_encode_input">https://nodejs.org/api/util.html#util_textencoder_encode_input</a>
 
 </dd>
 <a id="encodeInto,TextEncoder,cstring,Uint8Array"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#encodeInto%2CTextEncoder%2Ccstring%2CUint8Array"><span class="Identifier">encodeInto</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a><span class="Other">;</span> <span class="Identifier">src</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">dest</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importcpp</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#encodeInto%2CTextEncoder%2Ccstring%2CUint8Array"><span class="Identifier">encodeInto</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsutils.html#TextEncoder"><span class="Identifier">TextEncoder</span></a><span class="Other">;</span> <span class="Identifier">src</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">dest</span><span class="Other">:</span> <a href="jsutils.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.
+    <span class="Identifier">importcpp</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_textencoder_encodeinto_src_dest">https://nodejs.org/api/util.html#util_textencoder_encodeinto_src_dest</a>
 
 </dd>
 <a id="importUtil"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importUtil"><span class="Identifier">importUtil</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as util from \'util\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importUtil"><span class="Identifier">importUtil</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as util from \'util\'@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">import * as module_name from 'module_name';</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="requireUtil"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireUtil"><span class="Identifier">requireUtil</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const util = require(\'util\')@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireUtil"><span class="Identifier">requireUtil</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const util = require(\'util\')@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="callbackify,T"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#callbackify%2CT"><span class="Identifier">callbackify</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#callbackify%2CT"><span class="Identifier">callbackify</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_callbackify_original">https://nodejs.org/api/util.html#util_util_callbackify_original</a>
 
 </dd>
 <a id="deprecate,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, \'\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, \'\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code">https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code</a>
 
 </dd>
 <a id="deprecate,T,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT%2Ccstring"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT%2Ccstring"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code">https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code</a>
 
 </dd>
 <a id="deprecate,T,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT%2Ccstring%2Ccstring"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">,</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#deprecate%2CT%2Ccstring%2Ccstring"><span class="Identifier">deprecate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">msg</span><span class="Other">,</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code">https://nodejs.org/api/util.html#util_util_deprecate_fn_msg_code</a>
 
 </dd>
 <a id="format,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#format%2Ccstring%2Ccstring"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, @)&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#format%2Ccstring%2Ccstring"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, @)&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_format_format_args">https://nodejs.org/api/util.html#util_util_format_format_args</a>
 
 </dd>
 <a id="getSystemErrorName,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#getSystemErrorName%2Ccint"><span class="Identifier">getSystemErrorName</span></a><span class="Other">(</span><span class="Identifier">err</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#getSystemErrorName%2Ccint"><span class="Identifier">getSystemErrorName</span></a><span class="Other">(</span><span class="Identifier">err</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_getsystemerrorname_err">https://nodejs.org/api/util.html#util_util_getsystemerrorname_err</a>
 
 </dd>
 <a id="inherits,T,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#inherits%2CT%2CT"><span class="Identifier">inherits</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">constructor</span><span class="Other">,</span> <span class="Identifier">superConstructor</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#inherits%2CT%2CT"><span class="Identifier">inherits</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">constructor</span><span class="Other">,</span> <span class="Identifier">superConstructor</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor">https://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor</a>
 
 </dd>
 <a id="inspect,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#inspect%2Cauto"><span class="Identifier">inspect</span></a><span class="Other">(</span><span class="Identifier">objec</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">showHidden</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">depth</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">colors</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #, #, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#inspect%2Cauto"><span class="Identifier">inspect</span></a><span class="Other">(</span><span class="Identifier">objec</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">showHidden</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">;</span> <span class="Identifier">depth</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">colors</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_inspect_object_showhidden_depth_colors">https://nodejs.org/api/util.html#util_util_inspect_object_showhidden_depth_colors</a>
 
 </dd>
 <a id="isDeepStrictEqual,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isDeepStrictEqual%2Cauto%2Cauto"><span class="Identifier">isDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">val1</span><span class="Other">,</span> <span class="Identifier">val2</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isDeepStrictEqual%2Cauto%2Cauto"><span class="Identifier">isDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">val1</span><span class="Other">,</span> <span class="Identifier">val2</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isdeepstrictequal_val1_val2">https://nodejs.org/api/util.html#util_util_isdeepstrictequal_val1_val2</a>
 
 </dd>
 <a id="isAnyArrayBuffer,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isAnyArrayBuffer%2Cauto"><span class="Identifier">isAnyArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isAnyArrayBuffer%2Cauto"><span class="Identifier">isAnyArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isanyarraybuffer_value">https://nodejs.org/api/util.html#util_util_types_isanyarraybuffer_value</a>
 
 </dd>
 <a id="isArrayBufferView,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isArrayBufferView%2Cauto"><span class="Identifier">isArrayBufferView</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isArrayBufferView%2Cauto"><span class="Identifier">isArrayBufferView</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isarraybufferview_value">https://nodejs.org/api/util.html#util_util_types_isarraybufferview_value</a>
 
 </dd>
 <a id="isArgumentsObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isArgumentsObject%2Cauto"><span class="Identifier">isArgumentsObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isArgumentsObject%2Cauto"><span class="Identifier">isArgumentsObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isargumentsobject_value">https://nodejs.org/api/util.html#util_util_types_isargumentsobject_value</a>
 
 </dd>
 <a id="isArrayBuffer,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isArrayBuffer%2Cauto"><span class="Identifier">isArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isArrayBuffer%2Cauto"><span class="Identifier">isArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isarraybuffer_value">https://nodejs.org/api/util.html#util_util_types_isarraybuffer_value</a>
 
 </dd>
 <a id="isAsyncFunction,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isAsyncFunction%2Cauto"><span class="Identifier">isAsyncFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isAsyncFunction%2Cauto"><span class="Identifier">isAsyncFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isasyncfunction_value">https://nodejs.org/api/util.html#util_util_types_isasyncfunction_value</a>
 
 </dd>
 <a id="isBigInt64Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBigInt64Array%2Cauto"><span class="Identifier">isBigInt64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBigInt64Array%2Cauto"><span class="Identifier">isBigInt64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isbigint64array_value">https://nodejs.org/api/util.html#util_util_types_isbigint64array_value</a>
 
 </dd>
 <a id="isBigUint64Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBigUint64Array%2Cauto"><span class="Identifier">isBigUint64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBigUint64Array%2Cauto"><span class="Identifier">isBigUint64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isbiguint64array_value">https://nodejs.org/api/util.html#util_util_types_isbiguint64array_value</a>
 
 </dd>
 <a id="isBooleanObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBooleanObject%2Cauto"><span class="Identifier">isBooleanObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBooleanObject%2Cauto"><span class="Identifier">isBooleanObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isbooleanobject_value">https://nodejs.org/api/util.html#util_util_types_isbooleanobject_value</a>
 
 </dd>
 <a id="isBoxedPrimitive,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBoxedPrimitive%2Cauto"><span class="Identifier">isBoxedPrimitive</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBoxedPrimitive%2Cauto"><span class="Identifier">isBoxedPrimitive</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isboxedprimitive_value">https://nodejs.org/api/util.html#util_util_types_isboxedprimitive_value</a>
 
 </dd>
 <a id="isDataView,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isDataView%2Cauto"><span class="Identifier">isDataView</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isDataView%2Cauto"><span class="Identifier">isDataView</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isdataview_value">https://nodejs.org/api/util.html#util_util_types_isdataview_value</a>
 
 </dd>
 <a id="isDate,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isDate%2Cauto"><span class="Identifier">isDate</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isDate%2Cauto"><span class="Identifier">isDate</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isdate_value">https://nodejs.org/api/util.html#util_util_types_isdate_value</a>
 
 </dd>
 <a id="isExternal,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isExternal%2Cauto"><span class="Identifier">isExternal</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isExternal%2Cauto"><span class="Identifier">isExternal</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isexternal_value">https://nodejs.org/api/util.html#util_util_types_isexternal_value</a>
 
 </dd>
 <a id="isFloat32Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isFloat32Array%2Cauto"><span class="Identifier">isFloat32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isFloat32Array%2Cauto"><span class="Identifier">isFloat32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isfloat32array_value">https://nodejs.org/api/util.html#util_util_types_isfloat32array_value</a>
 
 </dd>
 <a id="isFloat64Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isFloat64Array%2Cauto"><span class="Identifier">isFloat64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isFloat64Array%2Cauto"><span class="Identifier">isFloat64Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isfloat64array_value">https://nodejs.org/api/util.html#util_util_types_isfloat64array_value</a>
 
 </dd>
 <a id="isGeneratorFunction,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isGeneratorFunction%2Cauto"><span class="Identifier">isGeneratorFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isGeneratorFunction%2Cauto"><span class="Identifier">isGeneratorFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isgeneratorfunction_value">https://nodejs.org/api/util.html#util_util_types_isgeneratorfunction_value</a>
 
 </dd>
 <a id="isGeneratorObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isGeneratorObject%2Cauto"><span class="Identifier">isGeneratorObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isGeneratorObject%2Cauto"><span class="Identifier">isGeneratorObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isgeneratorobject_value">https://nodejs.org/api/util.html#util_util_types_isgeneratorobject_value</a>
 
 </dd>
 <a id="isInt8Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isInt8Array%2Cauto"><span class="Identifier">isInt8Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isInt8Array%2Cauto"><span class="Identifier">isInt8Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isint8array_value">https://nodejs.org/api/util.html#util_util_types_isint8array_value</a>
 
 </dd>
 <a id="isInt16Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isInt16Array%2Cauto"><span class="Identifier">isInt16Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isInt16Array%2Cauto"><span class="Identifier">isInt16Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isint16array_value">https://nodejs.org/api/util.html#util_util_types_isint16array_value</a>
 
 </dd>
 <a id="isInt32Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isInt32Array%2Cauto"><span class="Identifier">isInt32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isInt32Array%2Cauto"><span class="Identifier">isInt32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isint32array_value">https://nodejs.org/api/util.html#util_util_types_isint32array_value</a>
 
 </dd>
 <a id="isMap,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isMap%2Cauto"><span class="Identifier">isMap</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isMap%2Cauto"><span class="Identifier">isMap</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_ismap_value">https://nodejs.org/api/util.html#util_util_types_ismap_value</a>
 
 </dd>
 <a id="isMapIterator,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isMapIterator%2Cauto"><span class="Identifier">isMapIterator</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isMapIterator%2Cauto"><span class="Identifier">isMapIterator</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_ismapiterator_value">https://nodejs.org/api/util.html#util_util_types_ismapiterator_value</a>
 
 </dd>
 <a id="isModuleNamespaceObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isModuleNamespaceObject%2Cauto"><span class="Identifier">isModuleNamespaceObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isModuleNamespaceObject%2Cauto"><span class="Identifier">isModuleNamespaceObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_ismodulenamespaceobject_value">https://nodejs.org/api/util.html#util_util_types_ismodulenamespaceobject_value</a>
 
 </dd>
 <a id="isNativeError,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isNativeError%2Cauto"><span class="Identifier">isNativeError</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isNativeError%2Cauto"><span class="Identifier">isNativeError</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isnativeerror_value">https://nodejs.org/api/util.html#util_util_types_isnativeerror_value</a>
 
 </dd>
 <a id="isNumberObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isNumberObject%2Cauto"><span class="Identifier">isNumberObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isNumberObject%2Cauto"><span class="Identifier">isNumberObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isnumberobject_value">https://nodejs.org/api/util.html#util_util_types_isnumberobject_value</a>
 
 </dd>
 <a id="isPromise,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isPromise%2Cauto"><span class="Identifier">isPromise</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isPromise%2Cauto"><span class="Identifier">isPromise</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_ispromise_value">https://nodejs.org/api/util.html#util_util_types_ispromise_value</a>
 
 </dd>
 <a id="isProxy,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isProxy%2Cauto"><span class="Identifier">isProxy</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isProxy%2Cauto"><span class="Identifier">isProxy</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isproxy_value">https://nodejs.org/api/util.html#util_util_types_isproxy_value</a>
 
 </dd>
 <a id="isRegExp,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isRegExp%2Cauto"><span class="Identifier">isRegExp</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isRegExp%2Cauto"><span class="Identifier">isRegExp</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isregexp_value">https://nodejs.org/api/util.html#util_util_types_isregexp_value</a>
 
 </dd>
 <a id="isSet,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSet%2Cauto"><span class="Identifier">isSet</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSet%2Cauto"><span class="Identifier">isSet</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isset_value">https://nodejs.org/api/util.html#util_util_types_isset_value</a>
 
 </dd>
 <a id="isSetIterator,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSetIterator%2Cauto"><span class="Identifier">isSetIterator</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSetIterator%2Cauto"><span class="Identifier">isSetIterator</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_issetiterator_value">https://nodejs.org/api/util.html#util_util_types_issetiterator_value</a>
 
 </dd>
 <a id="isSharedArrayBuffer,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSharedArrayBuffer%2Cauto"><span class="Identifier">isSharedArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSharedArrayBuffer%2Cauto"><span class="Identifier">isSharedArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_issharedarraybuffer_value">https://nodejs.org/api/util.html#util_util_types_issharedarraybuffer_value</a>
 
 </dd>
 <a id="isStringObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isStringObject%2Cauto"><span class="Identifier">isStringObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isStringObject%2Cauto"><span class="Identifier">isStringObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isstringobject_value">https://nodejs.org/api/util.html#util_util_types_isstringobject_value</a>
 
 </dd>
 <a id="isSymbolObject,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSymbolObject%2Cauto"><span class="Identifier">isSymbolObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSymbolObject%2Cauto"><span class="Identifier">isSymbolObject</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_issymbolobject_value">https://nodejs.org/api/util.html#util_util_types_issymbolobject_value</a>
 
 </dd>
 <a id="isTypedArray,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isTypedArray%2Cauto"><span class="Identifier">isTypedArray</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isTypedArray%2Cauto"><span class="Identifier">isTypedArray</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_istypedarray_value">https://nodejs.org/api/util.html#util_util_types_istypedarray_value</a>
 
 </dd>
 <a id="isUint8Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isUint8Array%2Cauto"><span class="Identifier">isUint8Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isUint8Array%2Cauto"><span class="Identifier">isUint8Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isuint8array_value">https://nodejs.org/api/util.html#util_util_types_isuint8array_value</a>
 
 </dd>
 <a id="isUint8ClampedArray,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isUint8ClampedArray%2Cauto"><span class="Identifier">isUint8ClampedArray</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isUint8ClampedArray%2Cauto"><span class="Identifier">isUint8ClampedArray</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isuint8clampedarray_value">https://nodejs.org/api/util.html#util_util_types_isuint8clampedarray_value</a>
 
 </dd>
 <a id="isUint16Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isUint16Array%2Cauto"><span class="Identifier">isUint16Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isUint16Array%2Cauto"><span class="Identifier">isUint16Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isuint16array_value">https://nodejs.org/api/util.html#util_util_types_isuint16array_value</a>
 
 </dd>
 <a id="isUint32Array,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isUint32Array%2Cauto"><span class="Identifier">isUint32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isUint32Array%2Cauto"><span class="Identifier">isUint32Array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isuint32array_value">https://nodejs.org/api/util.html#util_util_types_isuint32array_value</a>
 
 </dd>
 <a id="isWeakMap,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isWeakMap%2Cauto"><span class="Identifier">isWeakMap</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isWeakMap%2Cauto"><span class="Identifier">isWeakMap</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isweakmap_value">https://nodejs.org/api/util.html#util_util_types_isweakmap_value</a>
 
 </dd>
 <a id="isWeakSet,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isWeakSet%2Cauto"><span class="Identifier">isWeakSet</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isWeakSet%2Cauto"><span class="Identifier">isWeakSet</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;util.types.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_isweakset_value">https://nodejs.org/api/util.html#util_util_types_isweakset_value</a>
 
 </dd>
 <a id="isWebAssemblyCompiledModule,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isWebAssemblyCompiledModule%2Cauto"><span class="Identifier">isWebAssemblyCompiledModule</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# instanceof WebAssembly.Module)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isWebAssemblyCompiledModule%2Cauto"><span class="Identifier">isWebAssemblyCompiledModule</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# instanceof WebAssembly.Module)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_types_iswebassemblycompiledmodule_value">https://nodejs.org/api/util.html#util_util_types_iswebassemblycompiledmodule_value</a>
 
 </dd>
 <a id="isBoolean,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBoolean%2Cauto"><span class="Identifier">isBoolean</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'boolean\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBoolean%2Cauto"><span class="Identifier">isBoolean</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'boolean\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isboolean_object">https://nodejs.org/api/util.html#util_util_isboolean_object</a>
 
 </dd>
 <a id="isBuffer,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isBuffer%2Cauto"><span class="Identifier">isBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.isBuffer(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isBuffer%2Cauto"><span class="Identifier">isBuffer</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.isBuffer(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isbuffer_object">https://nodejs.org/api/util.html#util_util_isbuffer_object</a>
 
 </dd>
 <a id="isFunction,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isFunction%2Cauto"><span class="Identifier">isFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'function\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isFunction%2Cauto"><span class="Identifier">isFunction</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'function\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isfunction_object">https://nodejs.org/api/util.html#util_util_isfunction_object</a>
 
 </dd>
 <a id="isNumber,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isNumber%2Cauto"><span class="Identifier">isNumber</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'number\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isNumber%2Cauto"><span class="Identifier">isNumber</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'number\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isnumber_object">https://nodejs.org/api/util.html#util_util_isnumber_object</a>
 
 </dd>
 <a id="isString,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isString%2Cauto"><span class="Identifier">isString</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'string\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isString%2Cauto"><span class="Identifier">isString</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'string\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_isstring_object">https://nodejs.org/api/util.html#util_util_isstring_object</a>
 
 </dd>
 <a id="isSymbol,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#isSymbol%2Cauto"><span class="Identifier">isSymbol</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'symbol\')&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSymbol%2Cauto"><span class="Identifier">isSymbol</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(typeof # === \'symbol\')&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/util.html#util_util_issymbol_object">https://nodejs.org/api/util.html#util_util_issymbol_object</a>
@@ -1728,7 +1730,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-15 14:34:03 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-04 15:11:22 UTC</small>
       </div>
     </div>
   </div>

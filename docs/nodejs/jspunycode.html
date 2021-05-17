@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>nodejs/jspunycode</title>
+<title>src/nodejs/jspunycode</title>
 <link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
 
 <script type="text/javascript" src="../dochack.js"></script>
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', main);
 <body>
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">nodejs/jspunycode</h1>
+    <h1 class="title">src/nodejs/jspunycode</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -149,7 +149,8 @@ window.addEventListener('DOMContentLoaded', main);
   
   <p class="module-desc">
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Identifier">requirePunycode</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+<pre class="listing"><span class="Keyword">import</span><span class="Whitespace"> </span><span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jspunycode</span><span class="Whitespace">
+</span><span class="Identifier">requirePunycode</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
 </span><span class="Keyword">const</span><span class="Whitespace"> </span><span class="Identifier">str</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="StringLit">&quot;hello&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">decode</span><span class="Punctuation">(</span><span class="Identifier">str</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;㗁㖼㖶&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
 </span><span class="Identifier">doAssert</span><span class="Whitespace"> </span><span class="Identifier">encode</span><span class="Punctuation">(</span><span class="Identifier">str</span><span class="Punctuation">)</span><span class="Whitespace"> </span><span class="Operator">==</span><span class="Whitespace"> </span><span class="StringLit">&quot;hello-&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Whitespace">
@@ -161,58 +162,58 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="importPunycode"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importPunycode"><span class="Identifier">importPunycode</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as punycode from \'punycode\'@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importPunycode"><span class="Identifier">importPunycode</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as punycode from \'punycode\'@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">import * as module_name from 'module_name';</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="requirePunycode"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requirePunycode"><span class="Identifier">requirePunycode</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const punycode = require(\'punycode\')@&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requirePunycode"><span class="Identifier">requirePunycode</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const punycode = require(\'punycode\')@&quot;</span>.}</pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre">const module_name = require('module_name');</span></tt>. <strong>Must be called once before using the module</strong>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
 <a id="decode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#decode%2Ccstring"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#decode%2Ccstring"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_decode_string">https://nodejs.org/api/punycode.html#punycode_punycode_decode_string</a>
 
 </dd>
 <a id="encode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#encode%2Ccstring"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#encode%2Ccstring"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_encode_string">https://nodejs.org/api/punycode.html#punycode_punycode_encode_string</a>
 
 </dd>
 <a id="toASCII,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toASCII%2Ccstring"><span class="Identifier">toASCII</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toASCII%2Ccstring"><span class="Identifier">toASCII</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_toascii_domain">https://nodejs.org/api/punycode.html#punycode_punycode_toascii_domain</a>
 
 </dd>
 <a id="toUnicode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#toUnicode%2Ccstring"><span class="Identifier">toUnicode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toUnicode%2Ccstring"><span class="Identifier">toUnicode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_tounicode_domain">https://nodejs.org/api/punycode.html#punycode_punycode_tounicode_domain</a>
 
 </dd>
 <a id="ucs2Decode,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#ucs2Decode%2Ccstring"><span class="Identifier">ucs2Decode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.ucs2.decode(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#ucs2Decode%2Ccstring"><span class="Identifier">ucs2Decode</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.ucs2.decode(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_ucs2_decode_string">https://nodejs.org/api/punycode.html#punycode_punycode_ucs2_decode_string</a>
 
 </dd>
 <a id="ucs2Encode,openArray[cint]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#ucs2Encode%2CopenArray%5Bcint%5D"><span class="Identifier">ucs2Encode</span></a><span class="Other">(</span><span class="Identifier">codePoints</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.ucs2.encode(#)&quot;</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#ucs2Encode%2CopenArray%5Bcint%5D"><span class="Identifier">ucs2Encode</span></a><span class="Other">(</span><span class="Identifier">codePoints</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;punycode.ucs2.encode(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/punycode.html#punycode_punycode_ucs2_encode_codepoints">https://nodejs.org/api/punycode.html#punycode_punycode_ucs2_encode_codepoints</a>
@@ -228,7 +229,7 @@ Alias for <tt class="docutils literal"><span class="pre">const module_name = req
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-03-15 14:34:02 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-04 15:11:21 UTC</small>
       </div>
     </div>
   </div>

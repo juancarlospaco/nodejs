@@ -240,7 +240,7 @@ func readdir*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
 func readFile*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
 
-func readFileSync*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func readFileSync*(path: cstring): cstring {.importjs: "fs.$1(#).toString()".}
   ## https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options
 
 func readlink*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
@@ -343,7 +343,7 @@ func writeFile*[T](fd: cint; data: cstring; callback: T) {.importjs: "fs.$1(#, #
   ## https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
 
 func writeFile*[T](fd: cstring; data: cstring; callback: T) {.importjs: "fs.$1(#, #, #)".}
- # https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+  # https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
 
 func writeFileSync*(file: cstring; data: cstring) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options
@@ -390,6 +390,7 @@ runnableExamples:
   renameSync("touched.txt".cstring, "renamed.txt".cstring)
   chmodSync("renamed.txt".cstring, 0o777)
   copyFileSync("renamed.txt".cstring, "copied.txt".cstring)
+  let data: cstring = readFileSync("renamed.txt")
   rmSync("renamed.txt".cstring)
   rmSync("copied.txt".cstring)
   echo mkdtempSync("test".cstring)
