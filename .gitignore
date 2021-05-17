@@ -2,6 +2,7 @@ nimcache/
 nimblecache/
 htmldocs/
 docs/nimcache/
+docs/nimcache/runnableExamples/
 *.js
 *.txt
 *.log
