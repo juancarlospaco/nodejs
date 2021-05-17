@@ -28,6 +28,7 @@ import
   nodejs/jsmodule,
   nodejs/jsdomain,
   nodejs/jsdiagnostics_channel,
+  nodejs/jswasi,
   nodejs/jsugar
 
 export
@@ -54,4 +55,5 @@ export
   jsmodule,
   jsdomain,
   jsdiagnostics_channel,
+  jswasi,
   jsugar
