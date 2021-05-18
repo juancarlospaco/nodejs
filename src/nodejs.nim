@@ -7,6 +7,7 @@ when defined(js) and not defined(nodejs):
 import
   nodejs/jscore,
   nodejs/jsbuffer,
+  nodejs/jstream,
   nodejs/jsassert,
   nodejs/jsasynchooks,
   nodejs/jsdns,
@@ -35,6 +36,7 @@ import
 export
   jscore,
   jsbuffer,
+  jstream,
   jsassert,
   jsasynchooks,
   jsdns,
