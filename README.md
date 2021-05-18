@@ -1,5 +1,7 @@
 # NodeJS Standard Library for Nim
 
+![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)
+
 ![](https://img.shields.io/github/languages/top/juancarlospaco/nodejs?style=for-the-badge)
 ![](https://img.shields.io/github/stars/juancarlospaco/nodejs?style=for-the-badge)
 ![](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
@@ -9,17 +11,14 @@
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
 ![](https://github.com/juancarlospaco/nodejs/workflows/Build/badge.svg?branch=main)
 
-![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)
-
 Code [NodeJS](https://nodejs.org) using [Nim](http://nim-lang.org),
 test [frontend projects](https://github.com/pragmagic/karax) using [NodeJS](https://nodejs.org),
 use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 
-# Modules supported
+# Documentation
 
-Documentation Index 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
-
+- :heavy_check_mark: Index, all in 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
 - :heavy_check_mark: [assert](https://nodejs.org/api/assert.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsassert.html
 - :heavy_check_mark: [async_hooks](https://nodejs.org/api/async_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchooks.html
 - :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsprocess.html
@@ -47,33 +46,12 @@ Documentation Index 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
 - :heavy_check_mark: [stream](https://nodejs.org/api/stream.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstream.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
-- :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+    , needs `--experimental-modules`
-- :heavy_check_mark: `require()` Dynamic,  sync,   non-lexical, run-time errors, CommonJS, Default
 - :trollface: More supported modules soon...
 
 
 # Install
 
 - `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
-
-
-# Use
-
-```nim
-import nodejs
-requireFs()  # CommonJS
-# importFs() # ES6+
-writeFileSync(r"file.txt", r"Hello from NodeJS") # Use NodeJS API
-```
-
-```nim
-import nodejs
-iife:
-  echo "Hello Immediately Invoked Function Expressions"
-```
-
-- Before reporting bugs, [please read about unhandled-rejections](https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog),
-  must use `--unhandled-rejections=warn`.
 
 
 # Design
