@@ -150,4 +150,4 @@ runnableExamples: # These are computer specific can not assert them much.
 
 runnableExamples("-r:off"):
   requireProcess()
-  echo argv
+  echo argv ## Read Command Line Arguments as seq[cstring]
