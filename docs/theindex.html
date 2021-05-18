@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsbuffer.html">nodejs/jsbuffer</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jswasi.html">nodejs/jswasi</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsbuffer.html">nodejs/jsbuffer</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jstream.html">nodejs/jstream</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jswasi.html">nodejs/jswasi</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -692,6 +692,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsfs: copyFileSync(src, dest: cstring; mode: cint)" href="nodejs/jsfs.html#copyFileSync%2Ccstring%2Ccstring%2Ccint">jsfs: copyFileSync(src, dest: cstring; mode: cint)</a></li>
           </ul></dd>
+<dt><a name="cork" href="#cork"><span>cork:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: cork(self: StreamWritable)" href="nodejs/jstream.html#cork%2CStreamWritable">jstream: cork(self: StreamWritable)</a></li>
+          </ul></dd>
 <dt><a name="currentTimestamp" href="#currentTimestamp"><span>currentTimestamp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: currentTimestamp(): int" href="nodejs/jsugar.html#currentTimestamp">jsugar: currentTimestamp(): int</a></li>
@@ -769,6 +773,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsutils: deprecate[T](function: T; msg: cstring): T" href="nodejs/jsutils.html#deprecate%2CT%2Ccstring">jsutils: deprecate[T](function: T; msg: cstring): T</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: deprecate[T](function: T; msg, code: cstring): T" href="nodejs/jsutils.html#deprecate%2CT%2Ccstring%2Ccstring">jsutils: deprecate[T](function: T; msg, code: cstring): T</a></li>
+          </ul></dd>
+<dt><a name="destroy" href="#destroy"><span>destroy:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: destroy(self: StreamWritable or StreamReadable): StreamWritable" href="nodejs/jstream.html#destroy">jstream: destroy(self: StreamWritable or StreamReadable): StreamWritable</a></li>
           </ul></dd>
 <dt><a name="DESTRUCTION" href="#DESTRUCTION"><span>DESTRUCTION:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1011,6 +1019,12 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="endianness" href="#endianness"><span>endianness:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsos: endianness(): cstring" href="nodejs/jsos.html#endianness">jsos: endianness(): cstring</a></li>
+          </ul></dd>
+<dt><a name="ends" href="#ends"><span>ends:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: ends(self: StreamWritable; chunk: auto; encoding = &quot;utf-8&quot;.cstring): StreamWritable" href="nodejs/jstream.html#ends%2CStreamWritable%2Cauto">jstream: ends(self: StreamWritable; chunk: auto; encoding = &quot;utf-8&quot;.cstring): StreamWritable</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: ends[T](self: StreamWritable; callback: T): StreamWritable" href="nodejs/jstream.html#ends%2CStreamWritable%2CT">jstream: ends[T](self: StreamWritable; callback: T): StreamWritable</a></li>
           </ul></dd>
 <dt><a name="ENETDOWN" href="#ENETDOWN"><span>ENETDOWN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1290,6 +1304,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsmodule: findSourceMap(path: cstring): SourceMap" href="nodejs/jsmodule.html#findSourceMap%2Ccstring">jsmodule: findSourceMap(path: cstring): SourceMap</a></li>
           </ul></dd>
+<dt><a name="finished" href="#finished"><span>finished:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: finished(self: StreamReadable or StreamWritable): auto" href="nodejs/jstream.html#finished">jstream: finished(self: StreamReadable or StreamWritable): auto</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: finished[T](self: StreamReadable or StreamWritable; callback: T): auto" href="nodejs/jstream.html#finished%2C%2CT">jstream: finished[T](self: StreamReadable or StreamWritable; callback: T): auto</a></li>
+          </ul></dd>
 <dt><a name="F_OK" href="#F_OK"><span>F_OK:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: F_OK" href="nodejs/jsfs.html#F_OK">jsfs: F_OK</a></li>
@@ -1523,6 +1543,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="importRepl" href="#importRepl"><span>importRepl:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsrepl: importRepl()" href="nodejs/jsrepl.html#importRepl">jsrepl: importRepl()</a></li>
+          </ul></dd>
+<dt><a name="importStream" href="#importStream"><span>importStream:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: importStream()" href="nodejs/jstream.html#importStream">jstream: importStream()</a></li>
           </ul></dd>
 <dt><a name="importTimers" href="#importTimers"><span>importTimers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1803,6 +1827,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="isNumberObject" href="#isNumberObject"><span>isNumberObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsutils: isNumberObject(value: auto): bool" href="nodejs/jsutils.html#isNumberObject%2Cauto">jsutils: isNumberObject(value: auto): bool</a></li>
+          </ul></dd>
+<dt><a name="isPaused" href="#isPaused"><span>isPaused:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: isPaused(self: StreamReadable): bool" href="nodejs/jstream.html#isPaused%2CStreamReadable">jstream: isPaused(self: StreamReadable): bool</a></li>
           </ul></dd>
 <dt><a name="isPromise" href="#isPromise"><span>isPromise:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2391,6 +2419,18 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="pause" href="#pause"><span>pause:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: pause(self: Readline)" href="nodejs/jsreadline.html#pause%2CReadline">jsreadline: pause(self: Readline)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: pause(self: StreamReadable): StreamReadable" href="nodejs/jstream.html#pause%2CStreamReadable">jstream: pause(self: StreamReadable): StreamReadable</a></li>
+          </ul></dd>
+<dt><a name="pipe" href="#pipe"><span>pipe:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: pipe(self: StreamReadable; destination: StreamWritable; ends = true): StreamWritable" href="nodejs/jstream.html#pipe%2CStreamReadable%2CStreamWritable">jstream: pipe(self: StreamReadable; destination: StreamWritable; ends = true): StreamWritable</a></li>
+          </ul></dd>
+<dt><a name="pipeline" href="#pipeline"><span>pipeline:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: pipeline(self: StreamReadable; destination: StreamWritable): auto" href="nodejs/jstream.html#pipeline%2CStreamReadable%2CStreamWritable">jstream: pipeline(self: StreamReadable; destination: StreamWritable): auto</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: pipeline[T](self: StreamReadable; destination: StreamWritable; callback: T): auto" href="nodejs/jstream.html#pipeline%2CStreamReadable%2CStreamWritable%2CT">jstream: pipeline[T](self: StreamReadable; destination: StreamWritable; callback: T): auto</a></li>
           </ul></dd>
 <dt><a name="platform" href="#platform"><span>platform:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2453,6 +2493,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="read" href="#read"><span>read:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: read[T](fd: cint; callback: T)" href="nodejs/jsfs.html#read%2Ccint%2CT">jsfs: read[T](fd: cint; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: read(self: StreamReadable): auto" href="nodejs/jstream.html#read%2CStreamReadable">jstream: read(self: StreamReadable): auto</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: read(self: StreamReadable; size: int): auto" href="nodejs/jstream.html#read%2CStreamReadable%2Cint">jstream: read(self: StreamReadable; size: int): auto</a></li>
           </ul></dd>
 <dt><a name="readBigInt64BE" href="#readBigInt64BE"><span>readBigInt64BE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2583,6 +2627,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="realpathSyncNative" href="#realpathSyncNative"><span>realpathSyncNative:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: realpathSyncNative(path: cstring): cstring" href="nodejs/jsfs.html#realpathSyncNative%2Ccstring">jsfs: realpathSyncNative(path: cstring): cstring</a></li>
+          </ul></dd>
+<dt><a name="refresh" href="#refresh"><span>refresh:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: refresh(self: StreamReadable)" href="nodejs/jstream.html#refresh%2CStreamReadable">jstream: refresh(self: StreamReadable)</a></li>
           </ul></dd>
 <dt><a name="refs" href="#refs"><span>refs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2772,6 +2820,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsrepl: requireRepl()" href="nodejs/jsrepl.html#requireRepl">jsrepl: requireRepl()</a></li>
           </ul></dd>
+<dt><a name="requireStream" href="#requireStream"><span>requireStream:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: requireStream()" href="nodejs/jstream.html#requireStream">jstream: requireStream()</a></li>
+          </ul></dd>
 <dt><a name="requireTimers" href="#requireTimers"><span>requireTimers:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: requireTimers()" href="nodejs/jstimers.html#requireTimers">jstimers: requireTimers()</a></li>
@@ -2903,6 +2955,8 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="resume" href="#resume"><span>resume:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: resume(self: Readline)" href="nodejs/jsreadline.html#resume%2CReadline">jsreadline: resume(self: Readline)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: resume(self: StreamReadable): StreamReadable" href="nodejs/jstream.html#resume%2CStreamReadable">jstream: resume(self: StreamReadable): StreamReadable</a></li>
           </ul></dd>
 <dt><a name="reverse" href="#reverse"><span>reverse:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2956,11 +3010,19 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsdns: SERVFAIL" href="nodejs/jsdns.html#SERVFAIL">jsdns: SERVFAIL</a></li>
           </ul></dd>
+<dt><a name="setDefaultEncoding" href="#setDefaultEncoding"><span>setDefaultEncoding:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: setDefaultEncoding(self: StreamWritable; encoding: cstring): StreamWritable" href="nodejs/jstream.html#setDefaultEncoding%2CStreamWritable%2Ccstring">jstream: setDefaultEncoding(self: StreamWritable; encoding: cstring): StreamWritable</a></li>
+          </ul></dd>
 <dt><a name="setegid" href="#setegid"><span>setegid:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsprocess: setegid(id: cint)" href="nodejs/jsprocess.html#setegid%2Ccint">jsprocess: setegid(id: cint)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsprocess: setegid(id: cstring)" href="nodejs/jsprocess.html#setegid%2Ccstring">jsprocess: setegid(id: cstring)</a></li>
+          </ul></dd>
+<dt><a name="setEncoding" href="#setEncoding"><span>setEncoding:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: setEncoding(self: StreamReadable; encoding: cstring): StreamReadable" href="nodejs/jstream.html#setEncoding%2CStreamReadable%2Ccstring">jstream: setEncoding(self: StreamReadable; encoding: cstring): StreamReadable</a></li>
           </ul></dd>
 <dt><a name="seteuid" href="#seteuid"><span>seteuid:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3308,6 +3370,14 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsv8: stopCoverage()" href="nodejs/jsv8.html#stopCoverage">jsv8: stopCoverage()</a></li>
           </ul></dd>
+<dt><a name="StreamReadable" href="#StreamReadable"><span>StreamReadable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: StreamReadable" href="nodejs/jstream.html#StreamReadable">jstream: StreamReadable</a></li>
+          </ul></dd>
+<dt><a name="StreamWritable" href="#StreamWritable"><span>StreamWritable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: StreamWritable" href="nodejs/jstream.html#StreamWritable">jstream: StreamWritable</a></li>
+          </ul></dd>
 <dt><a name="strictEqual" href="#strictEqual"><span>strictEqual:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: strictEqual(actual, expected: auto)" href="nodejs/jsassert.html#strictEqual%2Cauto%2Cauto">jsassert: strictEqual(actual, expected: auto)</a></li>
@@ -3540,6 +3610,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsprocess: umask(mask: cstring): any" href="nodejs/jsprocess.html#umask%2Ccstring">jsprocess: umask(mask: cstring): any</a></li>
           </ul></dd>
+<dt><a name="uncork" href="#uncork"><span>uncork:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: uncork(self: StreamWritable)" href="nodejs/jstream.html#uncork%2CStreamWritable">jstream: uncork(self: StreamWritable)</a></li>
+          </ul></dd>
 <dt><a name="unescape" href="#unescape"><span>unescape:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsquerystring: unescape(stringy: cstring): cstring" href="nodejs/jsquerystring.html#unescape%2Ccstring">jsquerystring: unescape(stringy: cstring): cstring</a></li>
@@ -3552,6 +3626,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: unlinkSync(path: cstring)" href="nodejs/jsfs.html#unlinkSync%2Ccstring">jsfs: unlinkSync(path: cstring)</a></li>
           </ul></dd>
+<dt><a name="unpipe" href="#unpipe"><span>unpipe:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: unpipe(self: StreamReadable; destination: StreamWritable): StreamReadable" href="nodejs/jstream.html#unpipe%2CStreamReadable%2CStreamWritable">jstream: unpipe(self: StreamReadable; destination: StreamWritable): StreamReadable</a></li>
+          </ul></dd>
 <dt><a name="unrefs" href="#unrefs"><span>unrefs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jstimers: unrefs(self: Immediate): Immediate" href="nodejs/jstimers.html#unrefs%2CImmediate">jstimers: unrefs(self: Immediate): Immediate</a></li>
@@ -3563,6 +3641,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="unsafeSlowNewBuffer" href="#unsafeSlowNewBuffer"><span>unsafeSlowNewBuffer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsbuffer: unsafeSlowNewBuffer(size: int): Buffer" href="nodejs/jsbuffer.html#unsafeSlowNewBuffer%2Cint">jsbuffer: unsafeSlowNewBuffer(size: int): Buffer</a></li>
+          </ul></dd>
+<dt><a name="unshift" href="#unshift"><span>unshift:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jstream: unshift(self: StreamReadable; chunk: auto; encoding = &quot;utf-8&quot;.cstring)" href="nodejs/jstream.html#unshift%2CStreamReadable%2Cauto">jstream: unshift(self: StreamReadable; chunk: auto; encoding = &quot;utf-8&quot;.cstring)</a></li>
           </ul></dd>
 <dt><a name="unsubscribe" href="#unsubscribe"><span>unsubscribe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3745,6 +3827,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsreadline: write(self: Readline; data: cstring; ctrl: bool; meta: bool; shift: bool;
       name: cstring)" href="nodejs/jsreadline.html#write%2CReadline%2Ccstring%2Cbool%2Cbool%2Cbool%2Ccstring">jsreadline: write(self: Readline; data: cstring; ctrl: bool; meta: bool; shift: bool;
       name: cstring)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: write(self: StreamWritable; chunk: auto; encoding = &quot;utf-8&quot;.cstring): bool" href="nodejs/jstream.html#write%2CStreamWritable%2Cauto">jstream: write(self: StreamWritable; chunk: auto; encoding = &quot;utf-8&quot;.cstring): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jstream: write[T](self: StreamWritable; callback: T): bool" href="nodejs/jstream.html#write%2CStreamWritable%2CT">jstream: write[T](self: StreamWritable; callback: T): bool</a></li>
           </ul></dd>
 <dt><a name="writeBigInt64BE" href="#writeBigInt64BE"><span>writeBigInt64BE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4017,7 +4103,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-18 01:57:34 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-18 03:47:11 UTC</small>
       </div>
     </div>
   </div>
