@@ -31,6 +31,7 @@ import
   nodejs/jsdomain,
   nodejs/jsdiagnostics_channel,
   nodejs/jswasi,
+  nodejs/jscluster,
   nodejs/jsugar
 
 export
@@ -60,4 +61,5 @@ export
   jsdomain,
   jsdiagnostics_channel,
   jswasi,
+  jscluster,
   jsugar
