@@ -397,7 +397,7 @@ runnableExamples:
   # mkdirSync("/tmp/somerandomame".cstring, recursive = true)
 
 runnableExamples("-r:off"):
-  import nodejs/[jsfs, jsbuffer]
+  import nodejs/jsbuffer
   requireFs()
   requireBuffer()
   proc example(error: int; data: Buffer) = echo data
