@@ -395,3 +395,10 @@ runnableExamples:
   rmSync("copied.txt".cstring)
   echo mkdtempSync("test".cstring)
   # mkdirSync("/tmp/somerandomame".cstring, recursive = true)
+
+runnableExamples("-r:off"):
+  import nodejs/[jsfs, jsbuffer]
+  requireFs()
+  requireBuffer()
+  proc example(error: int; data: Buffer) = echo data
+  readFile("somefile.ext", example)
