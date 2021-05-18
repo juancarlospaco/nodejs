@@ -81,3 +81,10 @@ runnableExamples:
     rl.close()
     # echo rl.line()
     # echo rl.cursor()
+
+runnableExamples("-r:off"):
+  import nodejs/jsprocess
+  requireProcess()
+  requireReadline()
+  let rl = newReadline()
+  echo rl.line()
