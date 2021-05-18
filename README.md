@@ -44,6 +44,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: [wasi](https://nodejs.org/api/wasi.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswasi.html
 - :heavy_check_mark: [buffer](https://nodejs.org/api/buffer.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbuffer.html
 - :heavy_check_mark: [stream](https://nodejs.org/api/stream.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstream.html
+- :heavy_check_mark: [cluster](https://nodejs.org/api/cluster.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscluster.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
 - :trollface: More supported modules soon...
