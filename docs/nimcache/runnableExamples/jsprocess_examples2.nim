@@ -5,4 +5,4 @@ rdoccmd: -r:off
 ]#
 import "/home/runner/work/nodejs/nodejs/src/nodejs/jsprocess.nim"
 requireProcess()
-echo argv
+echo argv ## Read Command Line Arguments as seq[cstring]
