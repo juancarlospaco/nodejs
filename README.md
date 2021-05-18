@@ -43,6 +43,7 @@ Documentation Index 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
 - :heavy_check_mark: [domain](https://nodejs.org/api/domain.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdomain.html
 - :heavy_check_mark: [diagnostics_channel](https://nodejs.org/api/diagnostics_channel.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdiagnostics_channel.html
 - :heavy_check_mark: [wasi](https://nodejs.org/api/wasi.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswasi.html
+- :heavy_check_mark: [buffer](https://nodejs.org/api/buffer.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbuffer.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
 - :heavy_check_mark: `import`    "Static", async,  lexical,     parse errors,    ES6+    , needs `--experimental-modules`
