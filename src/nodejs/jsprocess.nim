@@ -147,3 +147,7 @@ runnableExamples: # These are computer specific can not assert them much.
     abort()
     disconnect()
     exit(code = 0.cint)
+
+runnableExamples("-r:off"):
+  requireProcess()
+  echo argv
