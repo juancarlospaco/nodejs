@@ -36,6 +36,8 @@ jobs:
         export NODE_OPTIONS=--unhandled-rejections=warn
         nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
         rm --verbose docs/nodejs/*.idx
+        rm --verbose docs/nimcache/runnableExamples/*.*
+        rm --verbose docs/nimcache/*.*
         mv --verbose docs/nodejs.html docs/index.html
 
     - name: Commit Docs
