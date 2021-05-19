@@ -29,13 +29,13 @@ func refs*(self: Immediate): Immediate {.importjs: "#.ref()".}
 func unrefs*(self: Immediate): Immediate {.importjs: "#.unref()".}
   ## https://nodejs.org/api/timers.html#timers_immediate_unref
 
-func setTimeout*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#, #)".}
+func setTimeout*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#, #)", discardable.}
   ## https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args
 
-func setImmediate*[T](callback: T): Immediate {.importjs: "timers.$1(#)".}
+func setImmediate*[T](callback: T): Immediate {.importjs: "timers.$1(#)", discardable.}
   ## https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options
 
-func setInterval*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#, #)".}
+func setInterval*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#, #)", discardable.}
   ## https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args
 
 func setTimeoutPromise*(delay: cint; value: auto): Future[Timeout] {.importjs: "timersPromises.setTimeout(#, #)".}
