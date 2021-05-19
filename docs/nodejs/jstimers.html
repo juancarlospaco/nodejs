@@ -280,14 +280,15 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 <a id="setTimeout,T,cint"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#setTimeout%2CT%2Ccint"><span class="Identifier">setTimeout</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">delay</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <a href="jstimers.html#Timeout"><span class="Identifier">Timeout</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args">https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args</a>
 
 </dd>
 <a id="setImmediate,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setImmediate%2CT"><span class="Identifier">setImmediate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jstimers.html#Immediate"><span class="Identifier">Immediate</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#setImmediate%2CT"><span class="Identifier">setImmediate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jstimers.html#Immediate"><span class="Identifier">Immediate</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#)&quot;</span><span class="Other">,</span>
+    <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options">https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options</a>
@@ -295,7 +296,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 <a id="setInterval,T,cint"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#setInterval%2CT%2Ccint"><span class="Identifier">setInterval</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">delay</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <a href="jstimers.html#Timeout"><span class="Identifier">Timeout</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timers.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args">https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args</a>
@@ -341,7 +342,7 @@ You MUST import <tt class="docutils literal"><span class="pre"><span class="Iden
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 02:59:16 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 04:56:21 UTC</small>
       </div>
     </div>
   </div>
