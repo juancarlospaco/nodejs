@@ -116,8 +116,9 @@ window.addEventListener('DOMContentLoaded', main);
   <li><a class="reference" href="#HttpServer"
     title="HttpServer {.importjs: &quot;http.Server&quot;.} = ref object of JsRoot
   headersTimeout*, maxHeadersCount*, requestTimeout*, timeout*,
-  keepAliveTimeout*: cint
-  listening*: bool">HttpServer</a></li>
+  keepAliveTimeout*, defaultMaxListeners*, maxConnections*: cint
+  listening*, captureRejections*: bool
+  errorMonitor*: cstring">HttpServer</a></li>
   <li><a class="reference" href="#HttpServerResponse"
     title="HttpServerResponse {.importjs: &quot;http.ServerResponse&quot;.} = ref object of JsRoot
   finished*, headersSent*, sendDate*, writableEnded*, writableFinished*: bool
@@ -160,28 +161,14 @@ window.addEventListener('DOMContentLoaded', main);
     title="setNoDelay(self: HttpClientRequest; noDelay: bool)">setNoDelay(self: HttpClientRequest; noDelay: bool)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">destroy
-      <li><a class="reference" href="#destroy"
-    title="destroy(self: HttpAgent or HttpIncomingMessage or HttpOutgoingMessage or
-    HttpClientRequest): auto">destroy(self: HttpAgent or HttpIncomingMessage or HttpOutgoingMessage or
-    HttpClientRequest): auto</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">addTrailers
       <li><a class="reference" href="#addTrailers%2C%2CJsObject"
     title="addTrailers(self: HttpServerResponse or HttpOutgoingMessage; headers: JsObject)">addTrailers(self: HttpServerResponse or HttpOutgoingMessage; headers: JsObject)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">close
-      <li><a class="reference" href="#close%2CHttpServer"
-    title="close(self: HttpServer)">close(self: HttpServer)</a></li>
-  <li><a class="reference" href="#close%2CHttpServer%2CT"
-    title="close[T](self: HttpServer; callback: T)">close[T](self: HttpServer; callback: T)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">uncork
-      <li><a class="reference" href="#uncork"
-    title="uncork(self: HttpServerResponse or HttpOutgoingMessage)">uncork(self: HttpServerResponse or HttpOutgoingMessage)</a></li>
+  <ul class="simple nested-toc-section">listenerCount
+      <li><a class="reference" href="#listenerCount%2CHttpServer%2Ccstring"
+    title="listenerCount(self: HttpServer; eventName: cstring): cint">listenerCount(self: HttpServer; eventName: cstring): cint</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getHeaderNames
@@ -189,26 +176,19 @@ window.addEventListener('DOMContentLoaded', main);
     title="getHeaderNames(self: HttpServerResponse or HttpOutgoingMessage): seq[cstring]">getHeaderNames(self: HttpServerResponse or HttpOutgoingMessage): seq[cstring]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">createServer
-      <li><a class="reference" href="#createServer%2CJsObject%2CT"
-    title="createServer[T](options: JsObject; requestListener: T): HttpServer">createServer[T](options: JsObject; requestListener: T): HttpServer</a></li>
-  <li><a class="reference" href="#createServer%2CJsObject"
-    title="createServer(options: JsObject): HttpServer">createServer(options: JsObject): HttpServer</a></li>
-  <li><a class="reference" href="#createServer%2CT"
-    title="createServer[T](requestListener: T): HttpServer">createServer[T](requestListener: T): HttpServer</a></li>
-  <li><a class="reference" href="#createServer"
-    title="createServer(): HttpServer">createServer(): HttpServer</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">write
       <li><a class="reference" href="#write%2C%2CT"
     title="write[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
          callback: T): bool">write[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
          callback: T): bool</a></li>
-  <li><a class="reference" href="#write%2C%2C"
+  <li><a class="reference" href="#write%2C%2Ccstring"
     title="write(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-      data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): bool">write(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-      data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): bool</a></li>
+      data: cstring; encoding = &quot;utf-8&quot;.cstring): bool">write(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+      data: cstring; encoding = &quot;utf-8&quot;.cstring): bool</a></li>
+  <li><a class="reference" href="#write%2C%2CBuffer"
+    title="write(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+      data: Buffer): bool">write(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+      data: Buffer): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">validateHeaderValue
@@ -223,14 +203,14 @@ window.addEventListener('DOMContentLoaded', main);
     HttpOutgoingMessage)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">listeners
+      <li><a class="reference" href="#listeners%2CHttpServer%2Ccstring"
+    title="listeners(self: HttpServer; eventName: cstring): seq[auto]">listeners(self: HttpServer; eventName: cstring): seq[auto]</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">abort
       <li><a class="reference" href="#abort%2CHttpClientRequest"
     title="abort(self: HttpClientRequest)">abort(self: HttpClientRequest)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">requireHttp
-      <li><a class="reference" href="#requireHttp"
-    title="requireHttp()">requireHttp()</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">validateHeaderName
@@ -243,35 +223,14 @@ window.addEventListener('DOMContentLoaded', main);
     title="importHttp()">importHttp()</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">setTimeout
-      <li><a class="reference" href="#setTimeout%2C%2Ccint%2CT"
-    title="setTimeout[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or
-    HttpOutgoingMessage; timeout: cint; callback: T): auto">setTimeout[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or
-    HttpOutgoingMessage; timeout: cint; callback: T): auto</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">hasHeader
-      <li><a class="reference" href="#hasHeader%2C%2Ccstring"
-    title="hasHeader(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool">hasHeader(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">writeContinue
       <li><a class="reference" href="#writeContinue%2CHttpServerResponse"
     title="writeContinue(self: HttpServerResponse)">writeContinue(self: HttpServerResponse)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">writeHead
-      <li><a class="reference" href="#writeHead%2CHttpServerResponse%2Ccint%2Ccstring"
-    title="writeHead(self: HttpServerResponse; statusCode: cint; statusMessage: cstring): HttpServerResponse">writeHead(self: HttpServerResponse; statusCode: cint; statusMessage: cstring): HttpServerResponse</a></li>
-  <li><a class="reference" href="#writeHead%2CHttpServerResponse%2C"
-    title="writeHead(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse">writeHead(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">setHeader
-      <li><a class="reference" href="#setHeader%2C%2Ccstring%2Cauto"
-    title="setHeader(self: HttpClientRequest or HttpServerResponse; name: cstring;
-          value: auto): auto">setHeader(self: HttpClientRequest or HttpServerResponse; name: cstring;
-          value: auto): auto</a></li>
+  <ul class="simple nested-toc-section">off
+      <li><a class="reference" href="#off%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"
+    title="off[T](self: HttpServer; event: static[cstring]; callback: T)">off[T](self: HttpServer; event: static[cstring]; callback: T)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">writeProcessing
@@ -286,6 +245,155 @@ window.addEventListener('DOMContentLoaded', main);
     title="get[T](url: cstring; options: JsObject; callback: T): HttpClientRequest">get[T](url: cstring; options: JsObject; callback: T): HttpClientRequest</a></li>
   <li><a class="reference" href="#get%2Ccstring"
     title="get(url: cstring): HttpClientRequest">get(url: cstring): HttpClientRequest</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">prependListener
+      <li><a class="reference" href="#prependListener%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"
+    title="prependListener[T](self: HttpServer; event: static[cstring]; callback: T)">prependListener[T](self: HttpServer; event: static[cstring]; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">listen
+      <li><a class="reference" href="#listen%2CHttpServer"
+    title="listen(self: HttpServer)">listen(self: HttpServer)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2CJsObject%2Ccint"
+    title="listen(self: HttpServer; handle: JsObject; backlog: cint)">listen(self: HttpServer; handle: JsObject; backlog: cint)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2CT"
+    title="listen[T](self: HttpServer; callback: T)">listen[T](self: HttpServer; callback: T)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2CJsObject%2CT"
+    title="listen[T](self: HttpServer; options: JsObject; callback: T)">listen[T](self: HttpServer; options: JsObject; callback: T)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2Ccstring%2Ccint%2CT"
+    title="listen[T](self: HttpServer; path: cstring; backlog: cint; callback: T)">listen[T](self: HttpServer; path: cstring; backlog: cint; callback: T)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2Cint%2Ccstring%2CT"
+    title="listen[T](self: HttpServer; port: int; host: cstring; callback: T)">listen[T](self: HttpServer; port: int; host: cstring; callback: T)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2Cint%2Ccstring"
+    title="listen(self: HttpServer; port: int; host: cstring)">listen(self: HttpServer; port: int; host: cstring)</a></li>
+  <li><a class="reference" href="#listen%2CHttpServer%2Cint"
+    title="listen(self: HttpServer; port: int)">listen(self: HttpServer; port: int)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">ends
+      <li><a class="reference" href="#ends%2C%2C"
+    title="ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+     data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): auto">ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+     data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): auto</a></li>
+  <li><a class="reference" href="#ends%2C%2CT"
+    title="ends[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+        callback: T): auto">ends[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
+        callback: T): auto</a></li>
+  <li><a class="reference" href="#ends"
+    title="ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage): auto">ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">removeAllListeners
+      <li><a class="reference" href="#removeAllListeners%2CHttpServer%2Ccstring"
+    title="removeAllListeners(self: HttpServer; event: cstring)">removeAllListeners(self: HttpServer; event: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getHeader
+      <li><a class="reference" href="#getHeader%2C%2Ccstring"
+    title="getHeader(self: HttpClientRequest or HttpServerResponse; name: cstring): auto">getHeader(self: HttpClientRequest or HttpServerResponse; name: cstring): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">removeHeader
+      <li><a class="reference" href="#removeHeader%2C%2Ccstring"
+    title="removeHeader(self: HttpClientRequest or HttpServerResponse or
+    HttpOutgoingMessage; name: cstring): bool">removeHeader(self: HttpClientRequest or HttpServerResponse or
+    HttpOutgoingMessage; name: cstring): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">rawListeners
+      <li><a class="reference" href="#rawListeners%2CHttpServer%2Ccstring"
+    title="rawListeners(self: HttpServer; event: cstring): seq[auto]">rawListeners(self: HttpServer; event: cstring): seq[auto]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">once
+      <li><a class="reference" href="#once%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"
+    title="once[T](self: HttpServer; event: static[cstring]; callback: T)">once[T](self: HttpServer; event: static[cstring]; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">destroy
+      <li><a class="reference" href="#destroy"
+    title="destroy(self: HttpAgent or HttpIncomingMessage or HttpOutgoingMessage or
+    HttpClientRequest): auto">destroy(self: HttpAgent or HttpIncomingMessage or HttpOutgoingMessage or
+    HttpClientRequest): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">close
+      <li><a class="reference" href="#close%2CHttpServer"
+    title="close(self: HttpServer)">close(self: HttpServer)</a></li>
+  <li><a class="reference" href="#close%2CHttpServer%2CT"
+    title="close[T](self: HttpServer; callback: T)">close[T](self: HttpServer; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">uncork
+      <li><a class="reference" href="#uncork"
+    title="uncork(self: HttpServerResponse or HttpOutgoingMessage)">uncork(self: HttpServerResponse or HttpOutgoingMessage)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">createServer
+      <li><a class="reference" href="#createServer%2CJsObject%2CT"
+    title="createServer[T](options: JsObject; requestListener: T): HttpServer">createServer[T](options: JsObject; requestListener: T): HttpServer</a></li>
+  <li><a class="reference" href="#createServer%2CJsObject"
+    title="createServer(options: JsObject): HttpServer">createServer(options: JsObject): HttpServer</a></li>
+  <li><a class="reference" href="#createServer%2CT"
+    title="createServer[T](requestListener: T): HttpServer">createServer[T](requestListener: T): HttpServer</a></li>
+  <li><a class="reference" href="#createServer"
+    title="createServer(): HttpServer">createServer(): HttpServer</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getMaxListeners
+      <li><a class="reference" href="#getMaxListeners%2CHttpServer"
+    title="getMaxListeners(self: HttpServer): cint">getMaxListeners(self: HttpServer): cint</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">on
+      <li><a class="reference" href="#on%2CHttpServer%2Ccstring%2CT"
+    title="on[T](self: HttpServer; event: cstring; callback: T)">on[T](self: HttpServer; event: cstring; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">requireHttp
+      <li><a class="reference" href="#requireHttp"
+    title="requireHttp()">requireHttp()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">setTimeout
+      <li><a class="reference" href="#setTimeout%2C%2Ccint%2CT"
+    title="setTimeout[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or
+    HttpOutgoingMessage; timeout: cint; callback: T): auto">setTimeout[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or
+    HttpOutgoingMessage; timeout: cint; callback: T): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">hasHeader
+      <li><a class="reference" href="#hasHeader%2C%2Ccstring"
+    title="hasHeader(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool">hasHeader(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">prependOnceListener
+      <li><a class="reference" href="#prependOnceListener%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"
+    title="prependOnceListener[T](self: HttpServer; event: static[cstring]; callback: T)">prependOnceListener[T](self: HttpServer; event: static[cstring]; callback: T)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">writeHead
+      <li><a class="reference" href="#writeHead%2CHttpServerResponse%2Cint%2Ccstring"
+    title="writeHead(self: HttpServerResponse; statusCode: int; statusMessage: cstring): HttpServerResponse">writeHead(self: HttpServerResponse; statusCode: int; statusMessage: cstring): HttpServerResponse</a></li>
+  <li><a class="reference" href="#writeHead%2CHttpServerResponse%2C"
+    title="writeHead(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse">writeHead(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse</a></li>
+  <li><a class="reference" href="#writeHead%2CHttpServerResponse%2Cint%2Ccstring%2CopenArray%5B%5D"
+    title="writeHead(self: HttpServerResponse; statusCode: int; statusMessage: cstring;
+          headers: openArray[(cstring, cstring)]): HttpServerResponse">writeHead(self: HttpServerResponse; statusCode: int; statusMessage: cstring;
+          headers: openArray[(cstring, cstring)]): HttpServerResponse</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">setHeader
+      <li><a class="reference" href="#setHeader%2C%2Ccstring%2Cauto"
+    title="setHeader(self: HttpClientRequest or HttpServerResponse; name: cstring;
+          value: auto): auto">setHeader(self: HttpClientRequest or HttpServerResponse; name: cstring;
+          value: auto): auto</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">address
+      <li><a class="reference" href="#address%2CHttpServer"
+    title="address(self: HttpServer): cstring">address(self: HttpServer): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newHttpAgent
@@ -310,23 +418,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="getRawHeaderNames(self: HttpClientRequest): seq[cstring]">getRawHeaderNames(self: HttpClientRequest): seq[cstring]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">listen
-      <li><a class="reference" href="#listen%2CHttpServer"
-    title="listen(self: HttpServer)">listen(self: HttpServer)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2CJsObject%2Ccint"
-    title="listen(self: HttpServer; handle: JsObject; backlog: cint)">listen(self: HttpServer; handle: JsObject; backlog: cint)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2CT"
-    title="listen[T](self: HttpServer; callback: T)">listen[T](self: HttpServer; callback: T)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2CJsObject%2CT"
-    title="listen[T](self: HttpServer; options: JsObject; callback: T)">listen[T](self: HttpServer; options: JsObject; callback: T)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2Ccstring%2Ccint%2CT"
-    title="listen[T](self: HttpServer; path: cstring; backlog: cint; callback: T)">listen[T](self: HttpServer; path: cstring; backlog: cint; callback: T)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2Cint%2Ccstring%2CT"
-    title="listen[T](self: HttpServer; port: int; host: cstring; callback: T)">listen[T](self: HttpServer; port: int; host: cstring; callback: T)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2Cint%2Ccstring"
-    title="listen(self: HttpServer; port: int; host: cstring)">listen(self: HttpServer; port: int; host: cstring)</a></li>
-  <li><a class="reference" href="#listen%2CHttpServer%2Cint"
-    title="listen(self: HttpServer; port: int)">listen(self: HttpServer; port: int)</a></li>
+  <ul class="simple nested-toc-section">emit
+      <li><a class="reference" href="#emit%2CHttpServer%2Ccstring%2Cauto"
+    title="emit(self: HttpServer; eventName: cstring; args: auto)">emit(self: HttpServer; eventName: cstring; args: auto)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">request
@@ -338,34 +432,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="request(url: cstring): HttpClientRequest">request(url: cstring): HttpClientRequest</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">ends
-      <li><a class="reference" href="#ends%2C%2C"
-    title="ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-     data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): auto">ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-     data: cstring or Buffer; encoding = &quot;utf-8&quot;.cstring): auto</a></li>
-  <li><a class="reference" href="#ends%2C%2CT"
-    title="ends[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-        callback: T): auto">ends[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage;
-        callback: T): auto</a></li>
-  <li><a class="reference" href="#ends"
-    title="ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage): auto">ends(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage): auto</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">getHeaders
       <li><a class="reference" href="#getHeaders"
     title="getHeaders(self: HttpServerResponse or HttpOutgoingMessage): JsObject">getHeaders(self: HttpServerResponse or HttpOutgoingMessage): JsObject</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">getHeader
-      <li><a class="reference" href="#getHeader%2C%2Ccstring"
-    title="getHeader(self: HttpClientRequest or HttpServerResponse; name: cstring): auto">getHeader(self: HttpClientRequest or HttpServerResponse; name: cstring): auto</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">removeHeader
-      <li><a class="reference" href="#removeHeader%2C%2Ccstring"
-    title="removeHeader(self: HttpClientRequest or HttpServerResponse or
-    HttpOutgoingMessage; name: cstring): bool">removeHeader(self: HttpClientRequest or HttpServerResponse or
-    HttpOutgoingMessage; name: cstring): bool</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">pipe
@@ -383,6 +452,72 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
 </li>
+<li>
+  <a class="reference reference-toplevel" href="#18" id="68">Templates</a>
+  <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">onListening
+      <li><a class="reference" href="#onListening.t%2CHttpServer%2C"
+    title="onListening(self: HttpServer; callback)">onListening(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onClientError
+      <li><a class="reference" href="#onClientError.t%2CHttpServer%2C"
+    title="onClientError(self: HttpServer; callback)">onClientError(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onError
+      <li><a class="reference" href="#onError.t%2CHttpServer%2C"
+    title="onError(self: HttpServer; callback)">onError(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onUpgrade
+      <li><a class="reference" href="#onUpgrade.t%2CHttpServer%2C"
+    title="onUpgrade(self: HttpServer; callback)">onUpgrade(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onCheckContinue
+      <li><a class="reference" href="#onCheckContinue.t%2CHttpServer%2C"
+    title="onCheckContinue(self: HttpServer; callback)">onCheckContinue(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onClose
+      <li><a class="reference" href="#onClose.t%2CHttpServer%2C"
+    title="onClose(self: HttpServer; callback)">onClose(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onRemoveListener
+      <li><a class="reference" href="#onRemoveListener.t%2CHttpServer%2C"
+    title="onRemoveListener(self: HttpServer; callback)">onRemoveListener(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onConnect
+      <li><a class="reference" href="#onConnect.t%2CHttpServer%2C"
+    title="onConnect(self: HttpServer; callback)">onConnect(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onNewListener
+      <li><a class="reference" href="#onNewListener.t%2CHttpServer%2C"
+    title="onNewListener(self: HttpServer; callback)">onNewListener(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onConnection
+      <li><a class="reference" href="#onConnection.t%2CHttpServer%2C"
+    title="onConnection(self: HttpServer; callback)">onConnection(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onCheckExpectation
+      <li><a class="reference" href="#onCheckExpectation.t%2CHttpServer%2C"
+    title="onCheckExpectation(self: HttpServer; callback)">onCheckExpectation(self: HttpServer; callback)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onRequest
+      <li><a class="reference" href="#onRequest.t%2CHttpServer%2C"
+    title="onRequest(self: HttpServer; callback)">onRequest(self: HttpServer; callback)</a></li>
+
+  </ul>
+
+  </ul>
+</li>
 
 </ul>
 
@@ -395,15 +530,19 @@ window.addEventListener('DOMContentLoaded', main);
 <p><strong class="examples_text">Example: cmd: -r:off -b:js --experimental:strictFuncs</strong></p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jshttp</span>
 <span class="Keyword">import</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsconsole</span>
-<span class="Identifier">requireHttp</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
+<span class="Identifier">requireHttp</span><span class="Punctuation">(</span><span class="Punctuation">)</span>  <span class="Comment">## Example is &quot;Verbose on Purpose&quot; to show types, names, etc.</span>
 
 <span class="Keyword">func</span> <span class="Identifier">listener</span><span class="Punctuation">(</span><span class="Identifier">request</span><span class="Punctuation">:</span> <span class="Identifier">HttpClientRequest</span><span class="Punctuation">;</span> <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">HttpServerResponse</span><span class="Punctuation">)</span> <span class="Operator">=</span>
+  <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">writeHead</span><span class="Punctuation">(</span><span class="Identifier">statusCode</span> <span class="Operator">=</span> <span class="DecNumber">200</span><span class="Punctuation">,</span> <span class="Identifier">statusMessage</span> <span class="Operator">=</span> <span class="StringLit">&quot;OK&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span>
+    <span class="Identifier">headers</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">&quot;Content-Type&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">:</span> <span class="StringLit">&quot;text/html&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span> <span class="StringLit">&quot;DNT&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">:</span> <span class="StringLit">&quot;1&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">}</span><span class="Punctuation">)</span>
+  <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">write</span><span class="Punctuation">(</span><span class="StringLit">&quot;&lt;h1&gt; Hello World &lt;/h1&gt;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
   <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">ends</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">example</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Identifier">console</span><span class="Operator">.</span><span class="Identifier">log</span> <span class="StringLit">&quot;This is an example&quot;</span>
 
 <span class="Keyword">let</span> <span class="Identifier">server</span><span class="Punctuation">:</span> <span class="Identifier">HttpServer</span> <span class="Operator">=</span> <span class="Identifier">createServer</span><span class="Punctuation">(</span><span class="Identifier">requestListener</span> <span class="Operator">=</span> <span class="Identifier">listener</span><span class="Punctuation">)</span>
+<span class="Identifier">server</span><span class="Operator">.</span><span class="Identifier">onRequest</span><span class="Punctuation">(</span><span class="Punctuation">(</span><span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">console</span><span class="Operator">.</span><span class="Identifier">log</span> <span class="StringLit">&quot;Hello&quot;</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
 <span class="Identifier">server</span><span class="Operator">.</span><span class="Identifier">listen</span><span class="Punctuation">(</span><span class="Identifier">port</span> <span class="Operator">=</span> <span class="DecNumber">8000</span><span class="Punctuation">,</span> <span class="Identifier">host</span> <span class="Operator">=</span> <span class="StringLit">&quot;127.0.0.1&quot;</span><span class="Punctuation">,</span> <span class="Identifier">callback</span> <span class="Operator">=</span> <span class="Identifier">example</span><span class="Punctuation">)</span></pre></p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
@@ -439,8 +578,9 @@ window.addEventListener('DOMContentLoaded', main);
 <a id="HttpServer"></a>
 <dt><pre><a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http.Server&quot;</span>.} <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
   <span class="Identifier">headersTimeout</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">maxHeadersCount</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">requestTimeout</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">timeout</span><span class="Operator">*</span><span class="Other">,</span>
-  <span class="Identifier">keepAliveTimeout</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
-  <span class="Identifier">listening</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
+  <span class="Identifier">keepAliveTimeout</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">defaultMaxListeners</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">maxConnections</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+  <span class="Identifier">listening</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">captureRejections</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
+  <span class="Identifier">errorMonitor</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
 </pre></dt>
 <dd>
 
@@ -668,16 +808,26 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 <a id="write,,T"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#write%2C%2CT"><span class="Identifier">write</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpClientRequest"><span class="Identifier">HttpClientRequest</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> <span class="Keyword">or</span>
-    <a href="jshttp.html#HttpOutgoingMessage"><span class="Identifier">HttpOutgoingMessage</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <a href="jshttp.html#HttpOutgoingMessage"><span class="Identifier">HttpOutgoingMessage</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a>
 
 </dd>
-<a id="write,,"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#write%2C%2C"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpClientRequest"><span class="Identifier">HttpClientRequest</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpOutgoingMessage"><span class="Identifier">HttpOutgoingMessage</span></a><span class="Other">;</span>
-           <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsbuffer.html#Buffer"><span class="Identifier">Buffer</span></a><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
+<a id="write,,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#write%2C%2Ccstring"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpClientRequest"><span class="Identifier">HttpClientRequest</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpOutgoingMessage"><span class="Identifier">HttpOutgoingMessage</span></a><span class="Other">;</span>
+           <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(# + \'\\n\', #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="CharLit">'\n'</span></span></tt> is automatically inserted at the end of <tt class="docutils literal"><span class="pre"><span class="Identifier">data</span></span></tt> string.</li>
+</ul>
+
+
+</dd>
+<a id="write,,Buffer"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#write%2C%2CBuffer"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpClientRequest"><span class="Identifier">HttpClientRequest</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> <span class="Keyword">or</span> <a href="jshttp.html#HttpOutgoingMessage"><span class="Identifier">HttpOutgoingMessage</span></a><span class="Other">;</span>
+           <span class="Identifier">data</span><span class="Other">:</span> <a href="jsbuffer.html#Buffer"><span class="Identifier">Buffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a>
@@ -811,10 +961,9 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/http.html#http_response_hasheader_name">https://nodejs.org/api/http.html#http_response_hasheader_name</a>
 
 </dd>
-<a id="writeHead,HttpServerResponse,cint,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#writeHead%2CHttpServerResponse%2Ccint%2Ccstring"><span class="Identifier">writeHead</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a><span class="Other">;</span> <span class="Identifier">statusCode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span>
-               <span class="Identifier">statusMessage</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
+<a id="writeHead,HttpServerResponse,int,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#writeHead%2CHttpServerResponse%2Cint%2Ccstring"><span class="Identifier">writeHead</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a><span class="Other">;</span> <span class="Identifier">statusCode</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span> <span class="Identifier">statusMessage</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
@@ -822,7 +971,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 <a id="writeHead,HttpServerResponse,"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#writeHead%2CHttpServerResponse%2C"><span class="Identifier">writeHead</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">JsObject</span> <span class="Keyword">or</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
+
+</dd>
+<a id="writeHead,HttpServerResponse,int,cstring,openArray[]"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#writeHead%2CHttpServerResponse%2Cint%2Ccstring%2CopenArray%5B%5D"><span class="Identifier">writeHead</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a><span class="Other">;</span> <span class="Identifier">statusCode</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span>
+               <span class="Identifier">statusMessage</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Other">(</span><span class="Identifier">cstring</span><span class="Other">,</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp.html#HttpServerResponse"><span class="Identifier">HttpServerResponse</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
@@ -921,14 +1079,197 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <dt><pre><span class="Keyword">proc</span> <a href="#validateHeaderName%2Ccstring"><span class="Identifier">validateHeaderName</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadername_name">https://nodejs.org/api/http.html#http_http_validateheadername_name</a>
+<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadername_name">https://nodejs.org/api/http.html#http_http_validateheadername_name</a> .. warning:: May or may not raise a foreign Error, use <tt class="docutils literal"><span class="pre"><span class="Keyword">try</span></span></tt> ... <tt class="docutils literal"><span class="pre"><span class="Keyword">except</span></span></tt>
 
 </dd>
 <a id="validateHeaderValue,cstring,auto"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#validateHeaderValue%2Ccstring%2Cauto"><span class="Identifier">validateHeaderValue</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value">https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value</a>
+<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value">https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value</a> .. warning:: May or may not raise a foreign Error, use <tt class="docutils literal"><span class="pre"><span class="Keyword">try</span></span></tt> ... <tt class="docutils literal"><span class="pre"><span class="Keyword">except</span></span></tt>
+
+</dd>
+<a id="address,HttpServer"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#address%2CHttpServer"><span class="Identifier">address</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="rawListeners,HttpServer,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#rawListeners%2CHttpServer%2Ccstring"><span class="Identifier">rawListeners</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="removeAllListeners,HttpServer,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#removeAllListeners%2CHttpServer%2Ccstring"><span class="Identifier">removeAllListeners</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
+    <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="listeners,HttpServer,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#listeners%2CHttpServer%2Ccstring"><span class="Identifier">listeners</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">eventName</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="listenerCount,HttpServer,cstring"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#listenerCount%2CHttpServer%2Ccstring"><span class="Identifier">listenerCount</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">eventName</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getMaxListeners,HttpServer"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#getMaxListeners%2CHttpServer"><span class="Identifier">getMaxListeners</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="prependListener,HttpServer,static[cstring],T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#prependListener%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"><span class="Identifier">prependListener</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="prependOnceListener,HttpServer,static[cstring],T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#prependOnceListener%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"><span class="Identifier">prependOnceListener</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">;</span>
+                            <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="emit,HttpServer,cstring,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#emit%2CHttpServer%2Ccstring%2Cauto"><span class="Identifier">emit</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">eventName</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">args</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.emit(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="off,HttpServer,static[cstring],T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#off%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"><span class="Identifier">off</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.off(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="once,HttpServer,static[cstring],T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#once%2CHttpServer%2Cstatic%5Bcstring%5D%2CT"><span class="Identifier">once</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.once(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="on,HttpServer,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#on%2CHttpServer%2Ccstring%2CT"><span class="Identifier">on</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.on(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+
+</dl></div>
+<div class="section" id="18">
+<h1><a class="toc-backref" href="#18">Templates</a></h1>
+<dl class="item">
+<a id="onCheckContinue.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onCheckContinue.t%2CHttpServer%2C"><span class="Identifier">onCheckContinue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkContinue&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onCheckExpectation.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onCheckExpectation.t%2CHttpServer%2C"><span class="Identifier">onCheckExpectation</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkExpectation&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onClientError.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onClientError.t%2CHttpServer%2C"><span class="Identifier">onClientError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;clientError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onClose.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onClose.t%2CHttpServer%2C"><span class="Identifier">onClose</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;close&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onConnect.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onConnect.t%2CHttpServer%2C"><span class="Identifier">onConnect</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connect&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onConnection.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onConnection.t%2CHttpServer%2C"><span class="Identifier">onConnection</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connection&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onRequest.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onRequest.t%2CHttpServer%2C"><span class="Identifier">onRequest</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;request&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onUpgrade.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onUpgrade.t%2CHttpServer%2C"><span class="Identifier">onUpgrade</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;upgrade&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onError.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onError.t%2CHttpServer%2C"><span class="Identifier">onError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;error&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onListening.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onListening.t%2CHttpServer%2C"><span class="Identifier">onListening</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;listening&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onNewListener.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onNewListener.t%2CHttpServer%2C"><span class="Identifier">onNewListener</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;newListener&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+
+</dd>
+<a id="onRemoveListener.t,HttpServer,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onRemoveListener.t%2CHttpServer%2C"><span class="Identifier">onRemoveListener</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp.html#HttpServer"><span class="Identifier">HttpServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">httpServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;removeListener&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 
@@ -941,7 +1282,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-18 23:20:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 02:28:46 UTC</small>
       </div>
     </div>
   </div>
