@@ -206,10 +206,12 @@ func request*(url: cstring): HttpClientRequest {.importjs: "http.$1(#)".}
 
 proc validateHeaderName*(name: cstring) {.importjs: "http.$1(#)".}
   ## https://nodejs.org/api/http.html#http_http_validateheadername_name
+  ##
   ## .. warning:: May or may not raise a foreign Error, use `try` ... `except`
 
 proc validateHeaderValue*(name: cstring; value: auto) {.importjs: "http.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value
+  ##
   ## .. warning:: May or may not raise a foreign Error, use `try` ... `except`
 
 func address*(self: HttpServer): cstring {.importjs: "#.$1()".}
