@@ -13,8 +13,9 @@ type
     maxHeadersCount*: cint
 
   HttpServer* {.importjs: "http.Server".} = ref object of JsRoot                ## https://nodejs.org/api/http.html#http_class_http_server
-    headersTimeout*, maxHeadersCount*, requestTimeout*, timeout*, keepAliveTimeout*: cint
-    listening*: bool
+    headersTimeout*, maxHeadersCount*, requestTimeout*, timeout*, keepAliveTimeout*, defaultMaxListeners*, maxConnections*: cint
+    listening*, captureRejections*: bool
+    errorMonitor*: cstring
 
   HttpServerResponse* {.importjs: "http.ServerResponse".} = ref object of JsRoot
     finished*, headersSent*, sendDate*, writableEnded*, writableFinished*: bool
@@ -203,6 +204,78 @@ proc validateHeaderValue*(name: cstring; value: auto) {.importjs: "http.$1(#, #)
   ## https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value
   ## .. warning:: May or may not raise a foreign Error, use `try` ... `except`
 
+func address*(self: HttpServer): cstring {.importjs: "#.$1()".}
+
+func rawListeners*(self: HttpServer; event: cstring): seq[auto] {.importjs: "#.$1(#)".}
+
+func removeAllListeners*(self: HttpServer; event: cstring) {.importjs: "#.$1(#)", discardable.}
+
+func listeners*(self: HttpServer; eventName: cstring): seq[auto] {.importjs: "#.$1(#)".}
+
+func listenerCount*(self: HttpServer; eventName: cstring): cint {.importjs: "#.$1(#)".}
+
+func getMaxListeners*(self: HttpServer): cint {.importjs: "#.$1()".}
+
+func prependListener*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+
+func prependOnceListener*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+
+func `emit`*(self: HttpServer; eventName: cstring; args: auto) {.importjs: "#.emit(#, #)", varargs, discardable.}
+
+func `off`*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.off(#, #)", discardable.}
+
+func `once`*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.once(#, #)", discardable.}
+
+func `on`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.on(#, #)", discardable.}
+
+template onCheckContinue*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("checkContinue"), callback)`.
+  self.`on`("checkContinue".cstring, callback)
+
+template onCheckExpectation*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("checkExpectation"), callback)`.
+  self.`on`("checkExpectation".cstring, callback)
+
+template onClientError*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("clientError"), callback)`.
+  self.`on`("clientError".cstring, callback)
+
+template onClose*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("close"), callback)`.
+  self.`on`("close".cstring, callback)
+
+template onConnect*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("connect"), callback)`.
+  self.`on`("connect".cstring, callback)
+
+template onConnection*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("connection"), callback)`.
+  self.`on`("connection".cstring, callback)
+
+template onRequest*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("request"), callback)`.
+  self.`on`("request".cstring, callback)
+
+template onUpgrade*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("upgrade"), callback)`.
+  self.`on`("upgrade".cstring, callback)
+
+template onError*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("error"), callback)`.
+  self.`on`("error".cstring, callback)
+
+template onListening*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("listening"), callback)`.
+  self.`on`("listening".cstring, callback)
+
+template onNewListener*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("newListener"), callback)`.
+  self.`on`("newListener".cstring, callback)
+
+template onRemoveListener*(self: HttpServer; callback) =
+  ## Alias for `httpServer.on(event = cstring("removeListener"), callback)`.
+  self.`on`("removeListener".cstring, callback)
+
 
 runnableExamples("-r:off -b:js --experimental:strictFuncs"):
   import std/jsconsole
@@ -215,4 +288,5 @@ runnableExamples("-r:off -b:js --experimental:strictFuncs"):
     console.log "This is an example"
 
   let server: HttpServer = createServer(requestListener = listener)
+  server.onRequest((proc () = console.log "Hello"))
   server.listen(port = 8000, host = "127.0.0.1", callback = example)
