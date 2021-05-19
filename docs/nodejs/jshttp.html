@@ -526,7 +526,9 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">
+  <p class="module-desc"><ul class="simple"><li>Async HTTP Web Server.</li>
+</ul>
+
 <p><strong class="examples_text">Example: cmd: -r:off -b:js --experimental:strictFuncs</strong></p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jshttp</span>
 <span class="Keyword">import</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsconsole</span>
@@ -536,7 +538,7 @@ window.addEventListener('DOMContentLoaded', main);
   <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">writeHead</span><span class="Punctuation">(</span><span class="Identifier">statusCode</span> <span class="Operator">=</span> <span class="DecNumber">200</span><span class="Punctuation">,</span> <span class="Identifier">statusMessage</span> <span class="Operator">=</span> <span class="StringLit">&quot;OK&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span>
     <span class="Identifier">headers</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">&quot;Content-Type&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">:</span> <span class="StringLit">&quot;text/html&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span> <span class="StringLit">&quot;DNT&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">:</span> <span class="StringLit">&quot;1&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">}</span><span class="Punctuation">)</span>
   <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">write</span><span class="Punctuation">(</span><span class="StringLit">&quot;&lt;h1&gt; Hello World &lt;/h1&gt;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
-  <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">ends</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
+  <span class="Identifier">response</span><span class="Operator">.</span><span class="Identifier">ends</span><span class="Punctuation">(</span><span class="StringLit">&quot;&lt;hr&gt;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">example</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Identifier">console</span><span class="Operator">.</span><span class="Identifier">log</span> <span class="StringLit">&quot;This is an example&quot;</span>
@@ -1282,7 +1284,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 02:28:46 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 02:45:21 UTC</small>
       </div>
     </div>
   </div>
