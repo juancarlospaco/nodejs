@@ -102,6 +102,7 @@ func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMess
 
 func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "#.$1(# + '\\n', #)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
+  ## * `'\n'` is automatically inserted at the end of `data` string.
 
 func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: Buffer): bool {.importjs: "#.$1(#)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
