@@ -290,8 +290,8 @@ runnableExamples("-r:off -b:js --experimental:strictFuncs"):
 
   func listener(request: HttpClientRequest; response: HttpServerResponse) =
     response.writeHead(statusCode = 200, statusMessage = "OK".cstring,
-      headers = {"Content-Type".cstring: "text/text".cstring, "DNT".cstring: "1".cstring})
-    response.write("Hello World".cstring)
+      headers = {"Content-Type".cstring: "text/html".cstring, "DNT".cstring: "1".cstring})
+    response.write("<h1> Hello World </h1>".cstring)
     response.ends()
 
   proc example() =
