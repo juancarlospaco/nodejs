@@ -97,10 +97,13 @@ func setSocketKeepAlive*(self: HttpClientRequest) {.importjs: "#.$1()".}
 func setTimeout*[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or HttpOutgoingMessage; timeout: cint; callback: T): auto {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_request_settimeout_timeout_callback
 
-func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; callback: T): bool {.importjs: "#.$1(#)".}
+func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; callback: T): bool {.importjs: "#.$1(#)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
 
-func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: cstring or Buffer; encoding = "utf-8".cstring): bool {.importjs: "#.$1(#, #)".}
+func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "#.$1(# + '\\n', #)", discardable.}
+  ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
+
+func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: Buffer): bool {.importjs: "#.$1(#)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
 
 func close*(self: HttpServer) {.importjs: "#.$1()".}
@@ -154,10 +157,13 @@ func hasHeader*(self: HttpServerResponse or HttpOutgoingMessage; name: cstring):
 func writeContinue*(self: HttpServerResponse) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http.html#http_response_hasheader_name
 
-func writeHead*(self: HttpServerResponse; statusCode: cint; statusMessage: cstring): HttpServerResponse {.importjs: "#.$1(#, #)".}
+func writeHead*(self: HttpServerResponse; statusCode: int; statusMessage: cstring): HttpServerResponse {.importjs: "#.$1(#, #)", discardable.}
   ## https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers
 
-func writeHead*(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse {.importjs: "#.$1(#)".}
+func writeHead*(self: HttpServerResponse; headers: JsObject or openArray[auto]): HttpServerResponse {.importjs: "#.$1(#)", discardable.}
+  ## https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers
+
+func writeHead*(self: HttpServerResponse; statusCode: int; statusMessage: cstring; headers: openArray[(cstring, cstring)]): HttpServerResponse {.importjs: "#.$1(#, #)", discardable.}
   ## https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers
 
 func writeProcessing*(self: HttpServerResponse) {.importjs: "#.$1()".}
@@ -279,9 +285,12 @@ template onRemoveListener*(self: HttpServer; callback) =
 
 runnableExamples("-r:off -b:js --experimental:strictFuncs"):
   import std/jsconsole
-  requireHttp()
+  requireHttp()  ## Example is "Verbose on Purpose" to show types, names, etc.
 
   func listener(request: HttpClientRequest; response: HttpServerResponse) =
+    response.writeHead(statusCode = 200, statusMessage = "OK".cstring,
+      headers = {"Content-Type".cstring: "text/text".cstring, "DNT".cstring: "1".cstring})
+    response.write("Hello World".cstring)
     response.ends()
 
   proc example() =
