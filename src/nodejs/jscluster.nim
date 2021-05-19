@@ -1,3 +1,4 @@
+## .. warning:: Module currently not working, Pull Requests welcome.
 import std/jsffi
 
 type
