@@ -226,15 +226,15 @@ func listenerCount*(self: HttpServer; eventName: cstring): cint {.importjs: "#.$
 
 func getMaxListeners*(self: HttpServer): cint {.importjs: "#.$1()".}
 
-func prependListener*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+func prependListener*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
-func prependOnceListener*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+func prependOnceListener*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
 func `emit`*(self: HttpServer; eventName: cstring; args: auto) {.importjs: "#.emit(#, #)", varargs, discardable.}
 
-func `off`*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.off(#, #)", discardable.}
+func `off`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.off(#, #)", discardable.}
 
-func `once`*[T](self: HttpServer; event: static[cstring]; callback: T) {.importjs: "#.once(#, #)", discardable.}
+func `once`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.once(#, #)", discardable.}
 
 func `on`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.on(#, #)", discardable.}
 
