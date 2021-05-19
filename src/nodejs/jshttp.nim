@@ -292,7 +292,7 @@ runnableExamples("-r:off -b:js --experimental:strictFuncs"):
     response.writeHead(statusCode = 200, statusMessage = "OK".cstring,
       headers = {"Content-Type".cstring: "text/html".cstring, "DNT".cstring: "1".cstring})
     response.write("<h1> Hello World </h1>".cstring)
-    response.ends()
+    response.ends("<hr>".cstring)
 
   proc example() =
     console.log "This is an example"
