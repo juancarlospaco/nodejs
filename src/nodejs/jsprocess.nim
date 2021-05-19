@@ -20,7 +20,6 @@ let
   processVersions* {.importjs: "process.versions".}: JsObject
   config* {.importjs: "process.config".}: JsObject
   release* {.importjs: "process.release".}: JsObject
-  # pid* {.importjs: "process.pid".}: cint
 
 func importProcess*() {.importjs: "import * as process from 'process'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
@@ -128,6 +127,16 @@ func uptimeProcess*(): cint {.importjs: "process.uptime()".}
   ## https://nodejs.org/api/process.html#process_process_uptime
 
 func resourceUsage*(): JsObject {.importjs: "process.$1()".}
+
+func getPid*(): cint {.importjs: "process.pid@".}
+
+# TODO: "If Node was not spawned with an IPC channel, process.send will be undefined." ???
+#
+# func send*(message: JsObject): bool {.importjs: "if (process.$1 != undefined) { process.$1(#) } else { console.log('process.send is undefined')}", discardable.}
+#   ## https://nodejs.org/api/process.html#process_process_send_message_sendhandle_options_callback
+
+# func send*[T](message: JsObject; callback: T): bool {.importjs: "if (process.$1 != undefined) { process.$1(#, #) } else { console.log('process.send is undefined')}", discardable.}
+#   ## https://nodejs.org/api/process.html#process_process_send_message_sendhandle_options_callback
 
 
 runnableExamples: # These are computer specific can not assert them much.
