@@ -1,3 +1,4 @@
+import std/asyncjs
 
 type
   Immediate* = ref object of JsRoot ## https://nodejs.org/api/timers.html#timers_class_immediate
