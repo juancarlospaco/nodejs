@@ -67,6 +67,11 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - Package version == NodeJS version.
 
 
+# Client Side
+
+- Backend in Frontend https://blog.stackblitz.com/posts/introducing-webcontainers
+
+
 # Efficiency
 
 - is it any good ?, improves something ?.
