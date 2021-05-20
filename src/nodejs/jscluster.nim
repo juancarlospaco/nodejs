@@ -1,5 +1,5 @@
 ## .. warning:: Module currently not working, Pull Requests welcome.
-import std/jsffi
+from std/jsffi import JsObject
 
 type
   Cluster* = ref object of JsRoot ## https://nodejs.org/api/cluster.html#cluster_cluster
