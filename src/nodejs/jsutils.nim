@@ -1,4 +1,4 @@
-## - https://nodejs.org/api/util.html
+from std/jsre import RegExp
 import std/jsffi
 include jscore
 
