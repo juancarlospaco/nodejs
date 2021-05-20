@@ -1,5 +1,5 @@
 from std/jsre import RegExp
-import std/jsffi
+from std/jsffi import JsObject
 include jscore
 
 type
