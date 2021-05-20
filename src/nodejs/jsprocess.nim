@@ -1,5 +1,4 @@
-import std/jsffi
-export jsffi
+from std/jsffi import JsObject
 
 let
   allowedNodeEnvironmentFlags* {.importjs: "Array.from(process.allowedNodeEnvironmentFlags)".}: seq[cstring]
