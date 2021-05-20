@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type Tracing* = ref object of JsRoot ## https://nodejs.org/api/tracing.html#tracing_tracing_object
   categories*: cstring  ## https://nodejs.org/api/tracing.html#tracing_tracing_categories
