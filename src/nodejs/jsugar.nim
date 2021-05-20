@@ -1,6 +1,5 @@
 ## * Syntax sugar and convenience functions for JavaScript.
-import std/jsffi
-export jsffi
+from std/jsffi import JsObject
 
 const
   arrow* = "const $2 = ($3) =>".cstring      ## Arrow Function for Nim functions, use `{.codegenDecl: arrow.}`.
