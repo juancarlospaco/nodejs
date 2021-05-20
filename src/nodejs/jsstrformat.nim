@@ -1,3 +1,4 @@
+## * `strformat` for JavaScript targets, uses string template literal interpolation, x100 faster than `std/strformat`.
 
 template jsFmt*(code: untyped) =
   ## JavaScript string template literal interpolation for `cstring`.
