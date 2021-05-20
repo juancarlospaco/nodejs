@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 func importV8*() {.importjs: "import * as v8 from 'v8'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
