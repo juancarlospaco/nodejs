@@ -1,5 +1,3 @@
-import std/asyncjs
-
 type
   Immediate* = ref object of JsRoot ## https://nodejs.org/api/timers.html#timers_class_immediate
   Timeout* = ref object of JsRoot   ## https://nodejs.org/api/timers.html#timers_class_timeout
@@ -38,17 +36,20 @@ func setImmediate*[T](callback: T): Immediate {.importjs: "timers.$1(#)", discar
 func setInterval*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#, #)", discardable.}
   ## https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args
 
-func setTimeoutPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setTimeout(#, #)".}
-  ## https://nodejs.org/api/timers.html#timers_timerspromises_settimeout_delay_value_options
-  ##
-  ## .. Note:: You MUST import `timersPromises` before importing this func.
 
-func setImmediatePromise*[T](value: T): Future[Immediate] {.importjs: "timersPromises.setImmediate(#)".}
-  ## https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options
-  ##
-  ## .. Note:: You MUST import `timersPromises` before using this func.
+# TODO: https://github.com/timotheecour/Nim/issues/740#issue-897519440
+#
+# func setTimeoutPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setTimeout(#, #)".}
+#   ## https://nodejs.org/api/timers.html#timers_timerspromises_settimeout_delay_value_options
+#   ##
+#   ## .. Note:: You MUST import `timersPromises` before importing this func.
 
-func setIntervalPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setInterval(#, #)".}
-  ## https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options
-  ##
-  ## .. Note:: You MUST import `timersPromises` before using this func.
+# func setImmediatePromise*[T](value: T): Future[Immediate] {.importjs: "timersPromises.setImmediate(#)".}
+#   ## https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options
+#   ##
+#   ## .. Note:: You MUST import `timersPromises` before using this func.
+
+# func setIntervalPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setInterval(#, #)".}
+#   ## https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options
+#   ##
+#   ## .. Note:: You MUST import `timersPromises` before using this func.
