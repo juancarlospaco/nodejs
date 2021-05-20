@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type
   URL* = ref object of JsRoot ## https://nodejs.org/api/url.html#url_class_url
