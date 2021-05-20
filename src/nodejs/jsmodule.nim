@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type
   Module* = ref object of JsRoot ## https://nodejs.org/api/module.html#module_the_module_object
