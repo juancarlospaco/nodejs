@@ -1,5 +1,5 @@
 ## * Async HTTP / HTTPS Web Server.
-import std/jsffi
+from std/jsffi import JsObject
 from jsbuffer import Buffer
 
 type
