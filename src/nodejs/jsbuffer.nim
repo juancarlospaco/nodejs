@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 from std/jsbigints import JsBigInt
 
 type Buffer* = ref object of JsRoot  ## https://nodejs.org/api/buffer.html#buffer_buffer
