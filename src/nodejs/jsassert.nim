@@ -1,5 +1,5 @@
 from std/jsre import RegExp
-import std/jsffi
+from std/jsffi import JsObject
 export RegExp
 
 type CallTracker* = ref object of JsRoot  ## https://nodejs.org/api/assert.html#assert_class_assert_calltracker
