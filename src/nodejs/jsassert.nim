@@ -1,6 +1,5 @@
 from std/jsre import RegExp
 from std/jsffi import JsObject
-export RegExp
 
 type CallTracker* = ref object of JsRoot  ## https://nodejs.org/api/assert.html#assert_class_assert_calltracker
 
@@ -131,7 +130,7 @@ func `$`*(self: CallTracker): string = $toCstring(self)
 
 
 runnableExamples:
-  import std/jsffi, std/jsre
+  import std/[jsffi, jsre]
   requireAssert()
   block:
     let tracker: CallTracker = newCallTracker()
