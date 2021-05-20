@@ -1,5 +1,5 @@
 ## Read-Eval-Print-Loop (REPL) implementation that is available both as a standalone program or includible in other applications.
-import std/jsffi
+from std/jsffi import JsObject
 
 type REPLServer* = ref object of JsRoot ## https://nodejs.org/api/repl.html#repl_class_replserver
   options*: JsObject
