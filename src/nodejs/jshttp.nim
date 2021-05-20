@@ -1,4 +1,4 @@
-## * Async HTTP Web Server.
+## * Async HTTP / HTTPS Web Server.
 import std/jsffi
 from jsbuffer import Buffer
 
@@ -14,6 +14,11 @@ type
     maxHeadersCount*: cint
 
   HttpServer* {.importjs: "http.Server".} = ref object of JsRoot                ## https://nodejs.org/api/http.html#http_class_http_server
+    headersTimeout*, maxHeadersCount*, requestTimeout*, timeout*, keepAliveTimeout*, defaultMaxListeners*, maxConnections*: cint
+    listening*, captureRejections*: bool
+    errorMonitor*: cstring
+
+  HttpsServer* {.importjs: "https.Server".} = ref object of JsRoot                ## https://nodejs.org/api/http.html#http_class_http_server
     headersTimeout*, maxHeadersCount*, requestTimeout*, timeout*, keepAliveTimeout*, defaultMaxListeners*, maxConnections*: cint
     listening*, captureRejections*: bool
     errorMonitor*: cstring
@@ -95,7 +100,7 @@ func setSocketKeepAlive*(self: HttpClientRequest; enable: bool; initialDelay: ci
 func setSocketKeepAlive*(self: HttpClientRequest) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http.html#http_request_setsocketkeepalive_enable_initialdelay
 
-func setTimeout*[T](self: HttpClientRequest or HttpServer or HttpIncomingMessage or HttpOutgoingMessage; timeout: cint; callback: T): auto {.importjs: "#.$1(#, #)".}
+func setTimeout*[T](self: HttpClientRequest or HttpServer or HttpsServer or HttpIncomingMessage or HttpOutgoingMessage; timeout: cint; callback: T): auto {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_request_settimeout_timeout_callback
 
 func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; callback: T): bool {.importjs: "#.$1(#)", discardable.}
@@ -108,34 +113,34 @@ func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage
 func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: Buffer): bool {.importjs: "#.$1(#)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
 
-func close*(self: HttpServer) {.importjs: "#.$1()".}
+func close*(self: HttpServer or HttpsServer) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http.html#http_server_close_callback
 
-func close*[T](self: HttpServer; callback: T) {.importjs: "#.$1(#)".}
+func close*[T](self: HttpServer or HttpsServer; callback: T) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http.html#http_server_close_callback
 
-func listen*(self: HttpServer) {.importjs: "#.$1()".}
+func listen*(self: HttpServer or HttpsServer) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*(self: HttpServer; handle: JsObject; backlog: cint) {.importjs: "#.$1(#, #)".}
+func listen*(self: HttpServer or HttpsServer; handle: JsObject; backlog: cint) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*[T](self: HttpServer; callback: T) {.importjs: "#.$1(#)".}
+func listen*[T](self: HttpServer or HttpsServer; callback: T) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*[T](self: HttpServer; options: JsObject; callback: T) {.importjs: "#.$1(#, #)".}
+func listen*[T](self: HttpServer or HttpsServer; options: JsObject; callback: T) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*[T](self: HttpServer; path: cstring; backlog: cint; callback: T) {.importjs: "#.$1(#, #, #)".}
+func listen*[T](self: HttpServer or HttpsServer; path: cstring; backlog: cint; callback: T) {.importjs: "#.$1(#, #, #)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*[T](self: HttpServer; port: int; host: cstring; callback: T) {.importjs: "#.$1(#, #, #)".}
+func listen*[T](self: HttpServer or HttpsServer; port: int; host: cstring; callback: T) {.importjs: "#.$1(#, #, #)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*(self: HttpServer; port: int; host: cstring) {.importjs: "#.$1(#, #)".}
+func listen*(self: HttpServer or HttpsServer; port: int; host: cstring) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
-func listen*(self: HttpServer; port: int) {.importjs: "#.$1(#)".}
+func listen*(self: HttpServer or HttpsServer; port: int) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http.html#http_server_listen
 
 func addTrailers*(self: HttpServerResponse or HttpOutgoingMessage; headers: JsObject) {.importjs: "#.$1(#)".}
@@ -214,77 +219,114 @@ proc validateHeaderValue*(name: cstring; value: auto) {.importjs: "http.$1(#, #)
   ##
   ## .. warning:: May or may not raise a foreign Error, use `try` ... `except`
 
-func address*(self: HttpServer): cstring {.importjs: "#.$1()".}
+func address*(self: HttpServer or HttpsServer): cstring {.importjs: "#.$1()".}
 
-func rawListeners*(self: HttpServer; event: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func rawListeners*(self: HttpServer or HttpsServer; event: cstring): seq[auto] {.importjs: "#.$1(#)".}
 
-func removeAllListeners*(self: HttpServer; event: cstring) {.importjs: "#.$1(#)", discardable.}
+func removeAllListeners*(self: HttpServer or HttpsServer; event: cstring) {.importjs: "#.$1(#)", discardable.}
 
-func listeners*(self: HttpServer; eventName: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func listeners*(self: HttpServer or HttpsServer; eventName: cstring): seq[auto] {.importjs: "#.$1(#)".}
 
-func listenerCount*(self: HttpServer; eventName: cstring): cint {.importjs: "#.$1(#)".}
+func listenerCount*(self: HttpServer or HttpsServer; eventName: cstring): cint {.importjs: "#.$1(#)".}
 
-func getMaxListeners*(self: HttpServer): cint {.importjs: "#.$1()".}
+func getMaxListeners*(self: HttpServer or HttpsServer): cint {.importjs: "#.$1()".}
 
-func prependListener*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+func prependListener*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
-func prependOnceListener*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
+func prependOnceListener*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
-func `emit`*(self: HttpServer; eventName: cstring; args: auto) {.importjs: "#.emit(#, #)", varargs, discardable.}
+func `emit`*(self: HttpServer or HttpsServer; eventName: cstring; args: auto) {.importjs: "#.emit(#, #)", varargs, discardable.}
 
-func `off`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.off(#, #)", discardable.}
+func `off`*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.off(#, #)", discardable.}
 
-func `once`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.once(#, #)", discardable.}
+func `once`*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.once(#, #)", discardable.}
 
-func `on`*[T](self: HttpServer; event: cstring; callback: T) {.importjs: "#.on(#, #)", discardable.}
+func `on`*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.on(#, #)", discardable.}
 
-template onCheckContinue*(self: HttpServer; callback) =
+template onCheckContinue*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("checkContinue"), callback)`.
   self.`on`("checkContinue".cstring, callback)
 
-template onCheckExpectation*(self: HttpServer; callback) =
+template onCheckExpectation*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("checkExpectation"), callback)`.
   self.`on`("checkExpectation".cstring, callback)
 
-template onClientError*(self: HttpServer; callback) =
+template onClientError*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("clientError"), callback)`.
   self.`on`("clientError".cstring, callback)
 
-template onClose*(self: HttpServer; callback) =
+template onClose*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("close"), callback)`.
   self.`on`("close".cstring, callback)
 
-template onConnect*(self: HttpServer; callback) =
+template onConnect*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("connect"), callback)`.
   self.`on`("connect".cstring, callback)
 
-template onConnection*(self: HttpServer; callback) =
+template onConnection*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("connection"), callback)`.
   self.`on`("connection".cstring, callback)
 
-template onRequest*(self: HttpServer; callback) =
+template onRequest*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("request"), callback)`.
   self.`on`("request".cstring, callback)
 
-template onUpgrade*(self: HttpServer; callback) =
+template onUpgrade*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("upgrade"), callback)`.
   self.`on`("upgrade".cstring, callback)
 
-template onError*(self: HttpServer; callback) =
+template onError*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("error"), callback)`.
   self.`on`("error".cstring, callback)
 
-template onListening*(self: HttpServer; callback) =
+template onListening*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("listening"), callback)`.
   self.`on`("listening".cstring, callback)
 
-template onNewListener*(self: HttpServer; callback) =
+template onNewListener*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("newListener"), callback)`.
   self.`on`("newListener".cstring, callback)
 
-template onRemoveListener*(self: HttpServer; callback) =
+template onRemoveListener*(self: HttpServer or HttpsServer; callback) =
   ## Alias for `httpServer.on(event = cstring("removeListener"), callback)`.
   self.`on`("removeListener".cstring, callback)
+
+
+func importHttps*() {.importjs: "import * as https from 'https'@".}
+  ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
+
+func requireHttps*() {.importjs: "const https = require('https')@".}
+  ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
+
+func createServerHttps*[T](options: JsObject; requestListener: T): HttpsServer {.importjs: "https.createServer(#, #)".}
+  ## https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener
+
+func createServerHttps*(options: JsObject): HttpsServer {.importjs: "https.createServer(#)".}
+  ## https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener
+
+func createServerHttps*[T](requestListener: T): HttpsServer {.importjs: "https.createServer(#)".}
+  ## https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener
+
+func createServerHttps*(): HttpsServer {.importjs: "https.createServer()".}
+  ## https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener
+
+func getHttps*[T](options: JsObject; callback: T): HttpClientRequest {.importjs: "https.get(#, #)".}
+  ## https://nodejs.org/api/http.html#http_http_get_options_callback
+
+func getHttps*[T](url: cstring; options: JsObject; callback: T): HttpClientRequest {.importjs: "https.get(#, #, #)".}
+  ## https://nodejs.org/api/http.html#http_http_get_options_callback
+
+func getHttps*(url: cstring): HttpClientRequest {.importjs: "https.get(#)".}
+  ## https://nodejs.org/api/http.html#http_http_get_options_callback
+
+func requestHttps*[T](options: JsObject; callback: T): HttpClientRequest {.importjs: "https.get(#, #)".}
+  ## https://nodejs.org/api/http.html#http_http_request_options_callback
+
+func requestHttps*[T](url: cstring; options: JsObject; callback: T): HttpClientRequest {.importjs: "https.get(#, #, #)".}
+  ## https://nodejs.org/api/http.html#http_http_request_options_callback
+
+func requestHttps*(url: cstring): HttpClientRequest {.importjs: "https.get(#)".}
+  ## https://nodejs.org/api/http.html#http_http_request_options_callback
 
 
 runnableExamples("-r:off -b:js --experimental:strictFuncs"):
@@ -301,5 +343,23 @@ runnableExamples("-r:off -b:js --experimental:strictFuncs"):
     console.log "This is an example"
 
   let server: HttpServer = createServer(requestListener = listener)
+  server.onRequest((proc () = console.log "Hello"))
+  server.listen(port = 8000, host = "127.0.0.1", callback = example)
+
+runnableExamples("-r:off -b:js --experimental:strictFuncs"):
+  import std/jsconsole # "HTTPS" example.
+  requireHttp()   ## Has all methods for both HTTP and HTTPS, DRY.
+  requireHttps()  ## Has the HTTPS web server type only.
+
+  func listener(request: HttpClientRequest; response: HttpServerResponse) =
+    response.writeHead(statusCode = 200, statusMessage = "OK".cstring,
+      headers = {"Content-Type".cstring: "text/html".cstring, "DNT".cstring: "1".cstring})
+    response.write("<h1> Hello World </h1>".cstring)
+    response.ends("<hr>".cstring)
+
+  proc example() =
+    console.log "This is an example"
+
+  let server: HttpsServer = createServerHttps(requestListener = listener)  # See "HTTPS" in name.
   server.onRequest((proc () = console.log "Hello"))
   server.listen(port = 8000, host = "127.0.0.1", callback = example)
