@@ -159,26 +159,6 @@ func shuffle*(arrai: openArray[auto]) {.importjs: """#.sort(() => .5 - Math.rand
 
 func currentTimestamp*(): int {.importjs: """Math.floor(new Date().getTime() / 1000)""".}
 
-template jsFmt*(code: untyped) =
-  ## Nim `strformat` implemented using JavaScript string literal functions.
-  runnableExamples:
-    import std/jsconsole
-    jsFmt:
-      foo := "platypus".cstring
-      bar := "capybara".cstring
-      console.log fmt("foo ${foo} bar ${bar} baz ${8 + 1} !?".cstring)
-  block:
-    func fmt(s: cstring): cstring {.importjs: "fmt`#`".}
-    template `:=`(name, value) =
-      var name {.exportc: astToStr(name).} = value
-    func jsFmtInjectFmt {.importjs: """
-      function fmt(strings, ...values) {
-        return values.reduce((finalString, value, index) => {
-          return `$${finalString}$${value}$${strings[index + 1]}`}, strings[0])
-      } """.}
-    jsFmtInjectFmt()
-    code
-
 # func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
 #   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
 
@@ -187,7 +167,9 @@ template jsFmt*(code: untyped) =
 
 
 runnableExamples:
-  import sugar  # =>
+  from std/jsffi import JsObject
+  from std/sugar import `=>`
+
   doAssert generate2FAcode() is cint
   doAssert not uuid1validate("".cstring)
   doAssert not uuid4validate("".cstring)
