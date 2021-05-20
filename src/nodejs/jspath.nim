@@ -1,5 +1,4 @@
-import std/jsffi
-export jsffi
+from std/jsffi import JsObject
 
 let delimiter* {.importjs: "path.delimiter".}: cstring ## https://nodejs.org/api/path.html#path_path_delimiter
 
