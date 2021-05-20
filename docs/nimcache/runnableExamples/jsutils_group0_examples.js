@@ -3420,7 +3420,7 @@ function HEX24_838860890(self_838860892) {
 
   var F={procname:"$.$",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jscore.nim",line:0};
   framePtr = F;
-    F.line = 27;
+    F.line = 26;
     result_838860893 = nimCopy(null, cstrToNimstr(JSON.stringify(self_838860892)), NTI33554439);
   framePtr = F.prev;
 

@@ -126,11 +126,6 @@ window.addEventListener('DOMContentLoaded', main);
     title="refs(self: Immediate): Immediate">refs(self: Immediate): Immediate</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">setTimeoutPromise
-      <li><a class="reference" href="#setTimeoutPromise%2Ccint%2Cauto"
-    title="setTimeoutPromise(delay: cint; value: auto): Future[Timeout]">setTimeoutPromise(delay: cint; value: auto): Future[Timeout]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">hasRef
       <li><a class="reference" href="#hasRef%2CImmediate"
     title="hasRef(self: Immediate): bool">hasRef(self: Immediate): bool</a></li>
@@ -141,19 +136,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="setTimeout[T](callback: T; delay: cint): Timeout">setTimeout[T](callback: T; delay: cint): Timeout</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">setIntervalPromise
-      <li><a class="reference" href="#setIntervalPromise%2Ccint%2Cauto"
-    title="setIntervalPromise(delay: cint; value: auto): Future[Timeout]">setIntervalPromise(delay: cint; value: auto): Future[Timeout]</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">newImmediate
       <li><a class="reference" href="#newImmediate"
     title="newImmediate(): Immediate">newImmediate(): Immediate</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">setImmediatePromise
-      <li><a class="reference" href="#setImmediatePromise%2Cauto"
-    title="setImmediatePromise(value: auto): Future[Immediate]">setImmediatePromise(value: auto): Future[Immediate]</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">setInterval
@@ -302,36 +287,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args">https://nodejs.org/api/timers.html#timers_setinterval_callback_delay_args</a>
 
 </dd>
-<a id="setTimeoutPromise,cint,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setTimeoutPromise%2Ccint%2Cauto"><span class="Identifier">setTimeoutPromise</span></a><span class="Other">(</span><span class="Identifier">delay</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jstimers.html#Timeout"><span class="Identifier">Timeout</span></a><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timersPromises.setTimeout(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/timers.html#timers_timerspromises_settimeout_delay_value_options">https://nodejs.org/api/timers.html#timers_timerspromises_settimeout_delay_value_options</a><div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
-You MUST import <tt class="docutils literal"><span class="pre"><span class="Identifier">timersPromises</span></span></tt> before importing this func.</div>
-
-
-</dd>
-<a id="setImmediatePromise,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setImmediatePromise%2Cauto"><span class="Identifier">setImmediatePromise</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jstimers.html#Immediate"><span class="Identifier">Immediate</span></a><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timersPromises.setImmediate(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options">https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options</a><div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
-You MUST import <tt class="docutils literal"><span class="pre"><span class="Identifier">timersPromises</span></span></tt> before using this func.</div>
-
-
-</dd>
-<a id="setIntervalPromise,cint,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setIntervalPromise%2Ccint%2Cauto"><span class="Identifier">setIntervalPromise</span></a><span class="Other">(</span><span class="Identifier">delay</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jstimers.html#Timeout"><span class="Identifier">Timeout</span></a><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;timersPromises.setInterval(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options">https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options</a><div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
-You MUST import <tt class="docutils literal"><span class="pre"><span class="Identifier">timersPromises</span></span></tt> before using this func.</div>
-
-
-</dd>
 
 </dl></div>
 
@@ -342,7 +297,7 @@ You MUST import <tt class="docutils literal"><span class="pre"><span class="Iden
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-20 21:58:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-20 22:41:23 UTC</small>
       </div>
     </div>
   </div>
