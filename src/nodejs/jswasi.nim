@@ -1,6 +1,5 @@
 ## * WebAssembly for Nim.
-import std/jsffi
-export jsffi
+from std/jsffi import JsObject
 
 type WASI* = ref object of JsRoot  ## https://nodejs.org/api/wasi.html#wasi_class_wasi
 
