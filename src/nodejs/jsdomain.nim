@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type
   Domain* = ref object of JsRoot ## https://nodejs.org/api/domain.html#domain_class_domain
