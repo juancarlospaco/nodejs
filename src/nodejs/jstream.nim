@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type
   StreamWritable* {.importjs: "stream.Writable".} = ref object of JsRoot  ## https://nodejs.org/api/stream.html#stream_class_stream_writable
