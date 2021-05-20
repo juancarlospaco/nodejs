@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 func importQuerystring*() {.importjs: "import * as querystring from 'querystring'@".}
   ## Alias for `import * as module_name from 'module_name';`. **Must be called once before using the module**
