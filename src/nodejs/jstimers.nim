@@ -39,9 +39,11 @@ func setInterval*[T](callback: T; delay: cint): Timeout {.importjs: "timers.$1(#
 
 # TODO: https://github.com/timotheecour/Nim/issues/740#issue-897519440
 #
-# func setTimeoutPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setTimeout(#, #)".}
+# func setTimeoutPromise*(delay: cint; value: auto): Future[Timeout] {.importjs: "timersPromises.setTimeout(#, #)".}
 #   ## https://nodejs.org/api/timers.html#timers_timerspromises_settimeout_delay_value_options
-# func setImmediatePromise*[T](value: T): Future[Immediate] {.importjs: "timersPromises.setImmediate(#)".}
+#
+# func setImmediatePromise*(value: auto): Future[Immediate] {.importjs: "timersPromises.setImmediate(#)".}
 #   ## https://nodejs.org/api/timers.html#timers_timerspromises_setimmediate_value_options
-# func setIntervalPromise*[T](delay: cint; value: T): Future[Timeout] {.importjs: "timersPromises.setInterval(#, #)".}
+#
+# func setIntervalPromise*(delay: cint; value: auto): Future[Timeout] {.importjs: "timersPromises.setInterval(#, #)".}
 #   ## https://nodejs.org/api/timers.html#timers_timerspromises_setinterval_delay_value_options
