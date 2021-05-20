@@ -1,5 +1,5 @@
 ## .. warning:: You MUST import `process` before importing this module. Uses `stdout` by default.
-import std/jsffi
+from std/jsffi import JsObject
 
 type Readline* = ref object of JsRoot ## https://nodejs.org/api/readline.html#readline_readline
 
