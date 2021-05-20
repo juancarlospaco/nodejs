@@ -1,4 +1,4 @@
-import std/jsffi
+from std/jsffi import JsObject
 
 type InspectorSession* = ref object of JsRoot ## https://nodejs.org/api/inspector.html#inspector_class_inspector_session
 
