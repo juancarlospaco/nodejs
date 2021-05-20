@@ -1,7 +1,6 @@
 ## * Core, primitives, basic proc, string basics, for JavaScript.
 from std/jsre import RegExp
-import std/jsffi
-export RegExp
+from std/jsffi import JsObject
 
 type
   Uint8Array* = ref object of JsRoot
