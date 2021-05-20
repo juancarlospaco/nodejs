@@ -8,8 +8,8 @@ var NTI33555113 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555111 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555103 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555105 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI553648889 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
-var NTI553648897 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
+var NTI570426105 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
+var NTI570426113 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI33554456 = {size: 0,kind: 31,base: null,node: null,finalizer: null};
 var NTI33555879 = {size: 0, kind: 18, base: null, node: null, finalizer: null};
 var NTI33555066 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
@@ -41,9 +41,9 @@ var NNI33555879 = {kind: 2, len: 3, offset: 0, typ: null, name: null, sons: [{ki
 {kind: 1, offset: "Field1", len: 0, typ: NTI33554456, name: "Field1", sons: null}, 
 {kind: 1, offset: "Field2", len: 0, typ: NTI33554440, name: "Field2", sons: null}]};
 NTI33555879.node = NNI33555879;
-var NNI553648897 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI553648889, name: "a", sons: null}, 
+var NNI570426113 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "a", len: 0, typ: NTI570426105, name: "a", sons: null}, 
 {kind: 1, offset: "b", len: 0, typ: NTI33554456, name: "b", sons: null}]};
-NTI553648897.node = NNI553648897;
+NTI570426113.node = NNI570426113;
 var NNI33555105 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI33555105.node = NNI33555105;
 var NNI33555103 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
@@ -379,6 +379,60 @@ if (!Math.trunc) {
   };
 }
 
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
+var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
+framePtr = F;
+framePtr = F.prev;
 var F={procname:"module jsutils",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsutils.nim",line:0};
 framePtr = F;
 framePtr = F.prev;
@@ -1195,7 +1249,7 @@ framePtr = F.prev;
 var F={procname:"module hashes",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/pure/hashes.nim",line:0};
 framePtr = F;
 F.line = 210;
-var objectID_587202719 = [0];
+var objectID_603979935 = [0];
 framePtr = F.prev;
 var F={procname:"module hashes",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/pure/hashes.nim",line:0};
 framePtr = F;
@@ -2522,60 +2576,6 @@ framePtr = F.prev;
 var F={procname:"module jsutils",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsutils.nim",line:0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
-var F={procname:"module jsre",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/js/jsre.nim",line:0};
-framePtr = F;
-framePtr = F.prev;
 var F={procname:"module jsutils",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsutils.nim",line:0};
 framePtr = F;
 framePtr = F.prev;
@@ -3040,16 +3040,16 @@ function failedAssertImpl_218103865(msg_218103866) {
 
   
 }
-function HEX2EHEX2E_553649613(a_553649616, b_553649617) {
-  var result_553649620 = ({a: 0, b: 0});
+function HEX2EHEX2E_570426829(a_570426832, b_570426833) {
+  var result_570426836 = ({a: 0, b: 0});
 
   var F={procname:".....",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim",line:0};
   framePtr = F;
     F.line = 507;
-    result_553649620 = nimCopy(result_553649620, {a: a_553649616, b: b_553649617}, NTI553648897);
+    result_570426836 = nimCopy(result_570426836, {a: a_570426832, b: b_570426833}, NTI570426113);
   framePtr = F.prev;
 
-  return result_553649620;
+  return result_570426836;
 
 }
 function raiseOverflow() {
@@ -3105,7 +3105,7 @@ function HEX3DHEX3D_503316498(x_503316500, y_503316501) {
       F.line = 126;
       var colontmp__503316818 = ({a: 0, b: 0});
       F.line = 308;
-      colontmp__503316818 = nimCopy(colontmp__503316818, HEX2EHEX2E_553649613(0, subInt((x_503316500).length, 1)), NTI553648897);
+      colontmp__503316818 = nimCopy(colontmp__503316818, HEX2EHEX2E_570426829(0, subInt((x_503316500).length, 1)), NTI570426113);
       L2: do {
         F.line = 129;
         var x_503316824 = 0;
@@ -3320,7 +3320,7 @@ F.line = 28;
 failedAssertImpl_218103865(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsutils_examples1.nim(28, 10) `exampl[0] == \'h\'` "));
 }
 
-if (!((toJSStr(HEX5BHEX5D_503316657(exampl_503316634, HEX2EHEX2E_553649613(0, 3))) == "hell"))) {
+if (!((toJSStr(HEX5BHEX5D_503316657(exampl_503316634, HEX2EHEX2E_570426829(0, 3))) == "hell"))) {
 F.line = 29;
 failedAssertImpl_218103865(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsutils_examples1.nim(29, 10) `exampl[0 .. 3] == \"hell\".cstring` "));
 }
@@ -3380,7 +3380,7 @@ function HEX3DHEX3D_838860844(x_838860846, y_838860847) {
       F.line = 126;
       var colontmp__838861360 = ({a: 0, b: 0});
       F.line = 308;
-      colontmp__838861360 = nimCopy(colontmp__838861360, HEX2EHEX2E_553649613(0, subInt((x_838860846).length, 1)), NTI553648897);
+      colontmp__838861360 = nimCopy(colontmp__838861360, HEX2EHEX2E_570426829(0, subInt((x_838860846).length, 1)), NTI570426113);
       L2: do {
         F.line = 129;
         var x_838861362 = 0;
