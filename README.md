@@ -52,6 +52,16 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :trollface: More supported modules soon...
 
 
+# Mobile
+
+- https://android-js.github.io
+
+
+# Client Side
+
+- Backend in Frontend https://blog.stackblitz.com/posts/introducing-webcontainers
+
+
 # Install
 
 - `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
@@ -65,11 +75,6 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - Stuff deprecated/demoved before year 2020 will not be supported.
 - Experimental or Unstable API on NodeJS are automatically implicitly considered Experimental here.
 - Package version == NodeJS version.
-
-
-# Client Side
-
-- Backend in Frontend https://blog.stackblitz.com/posts/introducing-webcontainers
 
 
 # Efficiency
