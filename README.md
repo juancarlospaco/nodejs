@@ -54,7 +54,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 # Mobile
 
-[![](nodeandroid.png)](https://android-js.github.io "Mobile Apps using Nim, Nim running in Android")
+[![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodeandroid.png)](https://android-js.github.io "Mobile Apps using Nim, Nim running in Android")
 
 
 # Client Side
