@@ -1,6 +1,6 @@
 # NodeJS Standard Library for Nim
 
-![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)
+[![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)](https://juancarlospaco.github.io/nodejs)
 
 ![](https://img.shields.io/github/languages/top/juancarlospaco/nodejs?style=for-the-badge)
 ![](https://img.shields.io/github/stars/juancarlospaco/nodejs?style=for-the-badge)
