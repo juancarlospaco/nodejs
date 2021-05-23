@@ -2,18 +2,19 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
+
 function toJSStr(s_33556793) {
-                    var Tmp5;
-            var Tmp7;
+                    var Temporary5;
+            var Temporary7;
 
   var result_33556794 = null;
 
     var res_33556828 = newSeq_33556811((s_33556793).length);
     var i_33556829 = 0;
     var j_33556830 = 0;
-    L1: do {
-        L2: while (true) {
-        if (!(i_33556829 < (s_33556793).length)) break L2;
+    Label1: do {
+        Label2: while (true) {
+        if (!(i_33556829 < (s_33556793).length)) break Label2;
           var c_33556831 = s_33556793[i_33556829];
           if ((c_33556831 < 128)) {
           res_33556828[j_33556830] = String.fromCharCode(c_33556831);
@@ -21,9 +22,9 @@ function toJSStr(s_33556793) {
           }
           else {
             var helper_33556843 = newSeq_33556811(0);
-            L3: do {
-                L4: while (true) {
-                if (!true) break L4;
+            Label3: do {
+                Label4: while (true) {
+                if (!true) break Label4;
                   var code_33556844 = c_33556831.toString(16);
                   if ((((code_33556844) == null ? 0 : (code_33556844).length) == 1)) {
                   helper_33556843.push("%0");;
@@ -34,40 +35,41 @@ function toJSStr(s_33556793) {
                   
                   helper_33556843.push(code_33556844);;
                   i_33556829 += 1;
-                    if (((s_33556793).length <= i_33556829)) Tmp5 = true; else {                      Tmp5 = (s_33556793[i_33556829] < 128);                    }                  if (Tmp5) {
-                  break L3;
+                    if (((s_33556793).length <= i_33556829)) Temporary5 = true; else {                      Temporary5 = (s_33556793[i_33556829] < 128);                    }                  if (Temporary5) {
+                  break Label3;
                   }
                   
                   c_33556831 = s_33556793[i_33556829];
                 }
-            } while(false);
+            } while (false);
 ++excHandler;
-            Tmp7 = framePtr;
+            Temporary7 = framePtr;
             try {
             res_33556828[j_33556830] = decodeURIComponent(helper_33556843.join(""));
 --excHandler;
-} catch (EXC) {
+} catch (EXCEPTION) {
  var prevJSError = lastJSError;
- lastJSError = EXC;
+ lastJSError = EXCEPTION;
  --excHandler;
-            framePtr = Tmp7;
+            framePtr = Temporary7;
             res_33556828[j_33556830] = helper_33556843.join("");
             lastJSError = prevJSError;
             } finally {
-            framePtr = Tmp7;
+            framePtr = Temporary7;
             }
           }
           
           j_33556830 += 1;
         }
-    } while(false);
-    if (res_33556828.length < j_33556830) { for (var i=res_33556828.length;i<j_33556830;++i) res_33556828.push(null); }
+    } while (false);
+    if (res_33556828.length < j_33556830) { for (var i = res_33556828.length ; i < j_33556830 ; ++i) res_33556828.push(null); }
                else { res_33556828.length = j_33556830; };
     result_33556794 = res_33556828.join("");
 
   return result_33556794;
 
 }
+
 function rawEcho() {
           var buf = "";
       for (var i = 0; i < arguments.length; ++i) {
@@ -78,6 +80,7 @@ function rawEcho() {
 
   
 }
+
 function cstrToNimstr(c_33556790) {
       var ln = c_33556790.length;
   var result = new Array(ln);
@@ -124,339 +127,340 @@ if (!Math.trunc) {
   };
 }
 
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim",line:0};
+var F = {procname: "module jsfs", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsfs.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs_examples1",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim",line:0};
+var F = {procname: "module jsfs_examples1", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
+
 function newSeq_33556811(len_33556813) {
   var result_33556814 = [];
 
-  var F={procname:"newSeq.newSeq",prev:framePtr,filename:"/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim",line:0};
+  var F = {procname: "newSeq.newSeq", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 676;
-    result_33556814 = new Array(len_33556813); for (var i=0;i<len_33556813;++i) {result_33556814[i]=null;}  framePtr = F.prev;
+    result_33556814 = new Array(len_33556813); for (var i = 0 ; i < len_33556813 ; ++i) { result_33556814[i] = null; }  framePtr = F.prev;
 
   return result_33556814;
 
 }
-var F={procname:"module jsfs_examples1",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim",line:0};
+var F = {procname: "module jsfs_examples1", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim", line: 0};
 framePtr = F;
 F.line = 7;
 const fs = require('fs');
@@ -489,15 +493,15 @@ fs.rmSync("copied.txt");
 F.line = 17;
 rawEcho(cstrToNimstr(fs.mkdtempSync("test")));
 framePtr = F.prev;
-var F={procname:"module jsfs_examples1",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim",line:0};
+var F = {procname: "module jsfs_examples1", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs_examples1",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim",line:0};
+var F = {procname: "module jsfs_examples1", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_examples1.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs_group0_examples",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_group0_examples.nim",line:0};
+var F = {procname: "module jsfs_group0_examples", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_group0_examples.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F={procname:"module jsfs_group0_examples",prev:framePtr,filename:"/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_group0_examples.nim",line:0};
+var F = {procname: "module jsfs_group0_examples", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsfs_group0_examples.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
