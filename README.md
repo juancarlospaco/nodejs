@@ -47,6 +47,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: [cluster](https://nodejs.org/api/cluster.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscluster.html
 - :heavy_check_mark: [http](https://nodejs.org/api/http.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp.html
 - :heavy_check_mark: [http2](https://nodejs.org/api/http2.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp2.html
+- :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads.html
 - :heavy_check_mark: strformat :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsstrformat.html
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
