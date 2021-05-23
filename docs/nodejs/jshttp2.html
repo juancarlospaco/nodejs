@@ -267,19 +267,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="write(self: Http2ServerResponse; data: Buffer): bool">write(self: Http2ServerResponse; data: Buffer): bool</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">validateHeaderValue
-      <li><a class="reference" href="#validateHeaderValue%2Ccstring%2Cauto"
-    title="validateHeaderValue(name: cstring; value: auto)">validateHeaderValue(name: cstring; value: auto)</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">getUnpackedSettings
       <li><a class="reference" href="#getUnpackedSettings%2CBuffer"
     title="getUnpackedSettings(settings: Buffer): Http2Settings">getUnpackedSettings(settings: Buffer): Http2Settings</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">importHttp2
-      <li><a class="reference" href="#importHttp2"
-    title="importHttp2()">importHttp2()</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">listeners
@@ -287,9 +277,9 @@ window.addEventListener('DOMContentLoaded', main);
     title="listeners(self: Http2Server or Http2SecureServer; eventName: cstring): seq[auto]">listeners(self: Http2Server or Http2SecureServer; eventName: cstring): seq[auto]</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">validateHeaderName
-      <li><a class="reference" href="#validateHeaderName%2Ccstring"
-    title="validateHeaderName(name: cstring)">validateHeaderName(name: cstring)</a></li>
+  <ul class="simple nested-toc-section">importHttp2
+      <li><a class="reference" href="#importHttp2"
+    title="importHttp2()">importHttp2()</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">writeContinue
@@ -298,8 +288,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">updateSettings
-      <li><a class="reference" href="#updateSettings%2CHttp2SecureServer%2CHttp2Settings"
-    title="updateSettings(self: Http2SecureServer; settings: Http2Settings)">updateSettings(self: Http2SecureServer; settings: Http2Settings)</a></li>
+      <li><a class="reference" href="#updateSettings%2C%2CHttp2Settings"
+    title="updateSettings(self: Http2SecureServer or Http2Server; settings: Http2Settings)">updateSettings(self: Http2SecureServer or Http2Server; settings: Http2Settings)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">off
@@ -326,9 +316,9 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">connect
       <li><a class="reference" href="#connect%2Ccstring%2CJsObject"
-    title="connect(authority: cstring; options: JsObject)">connect(authority: cstring; options: JsObject)</a></li>
+    title="connect(authority: cstring; options: JsObject): ClientHttp2Session">connect(authority: cstring; options: JsObject): ClientHttp2Session</a></li>
   <li><a class="reference" href="#connect%2Ccstring%2CJsObject%2CT"
-    title="connect[T](authority: cstring; options: JsObject; callback: T)">connect[T](authority: cstring; options: JsObject; callback: T)</a></li>
+    title="connect[T](authority: cstring; options: JsObject; callback: T): ClientHttp2Session">connect[T](authority: cstring; options: JsObject; callback: T): ClientHttp2Session</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">listen
@@ -410,8 +400,8 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">destroy
-      <li><a class="reference" href="#destroy%2CHttp2ServerRequest"
-    title="destroy(self: Http2ServerRequest): auto">destroy(self: Http2ServerRequest): auto</a></li>
+      <li><a class="reference" href="#destroy"
+    title="destroy(self: Http2Session or Http2ServerRequest or Http2Stream): auto">destroy(self: Http2Session or Http2ServerRequest or Http2Stream): auto</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">close
@@ -423,11 +413,6 @@ window.addEventListener('DOMContentLoaded', main);
     title="close[T](self: Http2Stream; code: cint; callback: T)">close[T](self: Http2Stream; code: cint; callback: T)</a></li>
   <li><a class="reference" href="#close%2CHttp2Stream%2Ccint"
     title="close(self: Http2Stream; code: cint)">close(self: Http2Stream; code: cint)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">uncork
-      <li><a class="reference" href="#uncork%2CHttp2ServerResponse"
-    title="uncork(self: Http2ServerResponse)">uncork(self: Http2ServerResponse)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">createServer
@@ -471,8 +456,10 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">setTimeout
       <li><a class="reference" href="#setTimeout%2C%2Ccint%2CT"
-    title="setTimeout[T](self: Http2SecureServer or Http2Stream or Http2ServerRequest or
-    Http2ServerResponse; timeout: cint; callback: T): Http2SecureServer">setTimeout[T](self: Http2SecureServer or Http2Stream or Http2ServerRequest or
+    title="setTimeout[T](self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2ServerRequest or
+    Http2ServerResponse; timeout: cint; callback: T): Http2SecureServer">setTimeout[T](self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2ServerRequest or
     Http2ServerResponse; timeout: cint; callback: T): Http2SecureServer</a></li>
 
   </ul>
@@ -514,11 +501,6 @@ window.addEventListener('DOMContentLoaded', main);
     title="address(self: Http2Server or Http2SecureServer): cstring">address(self: Http2Server or Http2SecureServer): cstring</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">cork
-      <li><a class="reference" href="#cork%2CHttp2ServerResponse"
-    title="cork(self: Http2ServerResponse)">cork(self: Http2ServerResponse)</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">emit
       <li><a class="reference" href="#emit%2C%2Ccstring%2Cauto"
     title="emit(self: Http2Server or Http2SecureServer; eventName: cstring; args: auto)">emit(self: Http2Server or Http2SecureServer; eventName: cstring; args: auto)</a></li>
@@ -537,14 +519,14 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">respondWithFD
-      <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Ccint%2CJsObject%2CJsObject"
-    title="respondWithFD(self: ServerHttp2Stream; fd: cint; headers: JsObject;
-              options: JsObject)">respondWithFD(self: ServerHttp2Stream; fd: cint; headers: JsObject;
+      <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Cauto%2CJsObject%2CJsObject"
+    title="respondWithFD(self: ServerHttp2Stream; fd: auto; headers: JsObject;
+              options: JsObject)">respondWithFD(self: ServerHttp2Stream; fd: auto; headers: JsObject;
               options: JsObject)</a></li>
-  <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Ccint%2CJsObject"
-    title="respondWithFD(self: ServerHttp2Stream; fd: cint; headers: JsObject)">respondWithFD(self: ServerHttp2Stream; fd: cint; headers: JsObject)</a></li>
-  <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Ccint"
-    title="respondWithFD(self: ServerHttp2Stream; fd: cint)">respondWithFD(self: ServerHttp2Stream; fd: cint)</a></li>
+  <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Cauto%2CJsObject"
+    title="respondWithFD(self: ServerHttp2Stream; fd: auto; headers: JsObject)">respondWithFD(self: ServerHttp2Stream; fd: auto; headers: JsObject)</a></li>
+  <li><a class="reference" href="#respondWithFD%2CServerHttp2Stream%2Cauto"
+    title="respondWithFD(self: ServerHttp2Stream; fd: auto)">respondWithFD(self: ServerHttp2Stream; fd: auto)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getHeaders
@@ -563,12 +545,7 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#18" id="68">Templates</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">onListening
-      <li><a class="reference" href="#onListening.t%2C%2C"
-    title="onListening(self: Http2Server or Http2SecureServer; callback)">onListening(self: Http2Server or Http2SecureServer; callback)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">onAltsvc
+      <ul class="simple nested-toc-section">onAltsvc
       <li><a class="reference" href="#onAltsvc.t%2CClientHttp2Session%2C"
     title="onAltsvc(self: ClientHttp2Session; callback)">onAltsvc(self: ClientHttp2Session; callback)</a></li>
 
@@ -580,7 +557,7 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">onStream
       <li><a class="reference" href="#onStream.t%2C%2C"
-    title="onStream(self: Http2Server or Http2SecureServer; callback)">onStream(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onStream(self: Http2Server or Http2SecureServer or Http2Session; callback)">onStream(self: Http2Server or Http2SecureServer or Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onSessionError
@@ -594,8 +571,14 @@ window.addEventListener('DOMContentLoaded', main);
 
   </ul>
   <ul class="simple nested-toc-section">onTimeout
-      <li><a class="reference" href="#onTimeout.t%2CHttp2Stream%2C"
-    title="onTimeout(self: Http2Stream; callback)">onTimeout(self: Http2Stream; callback)</a></li>
+      <li><a class="reference" href="#onTimeout.t%2C%2C"
+    title="onTimeout(self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2ServerRequest or
+    Http2ServerResponse or
+    Http2Session; callback)">onTimeout(self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2ServerRequest or
+    Http2ServerResponse or
+    Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onClientError
@@ -605,17 +588,19 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">onFrameError
       <li><a class="reference" href="#onFrameError.t%2C%2C"
-    title="onFrameError(self: Http2Server or Http2SecureServer or Http2Stream; callback)">onFrameError(self: Http2Server or Http2SecureServer or Http2Stream; callback)</a></li>
+    title="onFrameError(self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2Session; callback)">onFrameError(self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onLocalSettings
       <li><a class="reference" href="#onLocalSettings.t%2C%2C"
-    title="onLocalSettings(self: Http2Server or Http2SecureServer; callback)">onLocalSettings(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onLocalSettings(self: Http2Server or Http2SecureServer or Http2Session; callback)">onLocalSettings(self: Http2Server or Http2SecureServer or Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onPing
       <li><a class="reference" href="#onPing.t%2C%2C"
-    title="onPing(self: Http2Server or Http2SecureServer; callback)">onPing(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onPing(self: Http2Server or Http2SecureServer or Http2Session; callback)">onPing(self: Http2Server or Http2SecureServer or Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onUnknownProtocol
@@ -645,17 +630,14 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">onError
       <li><a class="reference" href="#onError.t%2C%2C"
-    title="onError(self: Http2Server or Http2SecureServer; callback)">onError(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onError(self: Http2Server or Http2SecureServer or Http2Session or Http2Stream;
+        callback)">onError(self: Http2Server or Http2SecureServer or Http2Session or Http2Stream;
+        callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onOrigin
       <li><a class="reference" href="#onOrigin.t%2CClientHttp2Session%2C"
     title="onOrigin(self: ClientHttp2Session; callback)">onOrigin(self: ClientHttp2Session; callback)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">onUpgrade
-      <li><a class="reference" href="#onUpgrade.t%2C%2C"
-    title="onUpgrade(self: Http2Server or Http2SecureServer; callback)">onUpgrade(self: Http2Server or Http2SecureServer; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onReady
@@ -682,24 +664,16 @@ window.addEventListener('DOMContentLoaded', main);
       <li><a class="reference" href="#onClose.t%2C%2C"
     title="onClose(self: Http2Server or Http2SecureServer or Http2Stream or
     Http2ServerRequest or
-    Http2ServerResponse; callback)">onClose(self: Http2Server or Http2SecureServer or Http2Stream or
+    Http2ServerResponse or
+    Http2Session; callback)">onClose(self: Http2Server or Http2SecureServer or Http2Stream or
     Http2ServerRequest or
-    Http2ServerResponse; callback)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">onRemoveListener
-      <li><a class="reference" href="#onRemoveListener.t%2C%2C"
-    title="onRemoveListener(self: Http2Server or Http2SecureServer; callback)">onRemoveListener(self: Http2Server or Http2SecureServer; callback)</a></li>
+    Http2ServerResponse or
+    Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onConnect
       <li><a class="reference" href="#onConnect.t%2C%2C"
-    title="onConnect(self: Http2Server or Http2SecureServer; callback)">onConnect(self: Http2Server or Http2SecureServer; callback)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">onNewListener
-      <li><a class="reference" href="#onNewListener.t%2C%2C"
-    title="onNewListener(self: Http2Server or Http2SecureServer; callback)">onNewListener(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onConnect(self: Http2Server or Http2SecureServer or Http2Session; callback)">onConnect(self: Http2Server or Http2SecureServer or Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onConnection
@@ -719,7 +693,7 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">onGoaway
       <li><a class="reference" href="#onGoaway.t%2C%2C"
-    title="onGoaway(self: Http2Server or Http2SecureServer; callback)">onGoaway(self: Http2Server or Http2SecureServer; callback)</a></li>
+    title="onGoaway(self: Http2Server or Http2SecureServer or Http2Session; callback)">onGoaway(self: Http2Server or Http2SecureServer or Http2Session; callback)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">onWantTrailers
@@ -740,8 +714,6 @@ window.addEventListener('DOMContentLoaded', main);
   
   <p class="module-desc"><ul class="simple"><li>Async HTTPS 2.0 Web Server.</li>
 </ul>
-<div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-Module currently not working, Pull Requests welcome.</div>
 </p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
@@ -1023,11 +995,36 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
-<a id="destroy,Http2ServerRequest"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#destroy%2CHttp2ServerRequest"><span class="Identifier">destroy</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<a id="createSecureServer,JsObject,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CJsObject%2CT"><span class="Identifier">createSecureServer</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">requestListener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_agent_destroy">https://nodejs.org/api/http.html#http_agent_destroy</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler</a>
+
+</dd>
+<a id="createSecureServer,JsObject"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CJsObject"><span class="Identifier">createSecureServer</span></a><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler</a>
+
+</dd>
+<a id="createSecureServer,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CT"><span class="Identifier">createSecureServer</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">requestListener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createsecureserver_options_onrequesthandler</a>
+
+</dd>
+<a id="destroy"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#destroy"><span class="Identifier">destroy</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2session_destroy_error_code">https://nodejs.org/api/http2.html#http2_http2session_destroy_error_code</a>
 
 </dd>
 <a id="ends,Http2ServerResponse,"></a>
@@ -1059,7 +1056,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_getheader_name">https://nodejs.org/api/http.html#http_request_getheader_name</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_getheader_name">https://nodejs.org/api/http2.html#http2_response_getheader_name</a>
 
 </dd>
 <a id="removeHeader,Http2ServerResponse,cstring"></a>
@@ -1067,7 +1064,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_removeheader_name">https://nodejs.org/api/http.html#http_request_removeheader_name</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_removeheader_name">https://nodejs.org/api/http2.html#http2_response_removeheader_name</a>
 
 </dd>
 <a id="setHeader,Http2ServerResponse,cstring,auto"></a>
@@ -1075,16 +1072,17 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_setheader_name_value">https://nodejs.org/api/http.html#http_request_setheader_name_value</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_setheader_name_value">https://nodejs.org/api/http2.html#http2_response_setheader_name_value</a>
 
 </dd>
 <a id="setTimeout,,cint,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setTimeout%2C%2Ccint%2CT"><span class="Identifier">setTimeout</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a> <span class="Keyword">or</span>
+<dt><pre><span class="Keyword">func</span> <a href="#setTimeout%2C%2Ccint%2CT"><span class="Identifier">setTimeout</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a> <span class="Keyword">or</span>
     <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">;</span> <span class="Identifier">timeout</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_settimeout_timeout_callback">https://nodejs.org/api/http.html#http_request_settimeout_timeout_callback</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2session_settimeout_msecs_callback">https://nodejs.org/api/http2.html#http2_http2session_settimeout_msecs_callback</a>
 
 </dd>
 <a id="write,Http2ServerResponse,T"></a>
@@ -1092,7 +1090,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback">https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback</a>
 
 </dd>
 <a id="write,Http2ServerResponse,cstring"></a>
@@ -1100,7 +1098,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(# + \'\\n\', #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="CharLit">'\n'</span></span></tt> is automatically inserted at the end of <tt class="docutils literal"><span class="pre"><span class="Identifier">data</span></span></tt> string.</li>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback">https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback</a><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="CharLit">'\n'</span></span></tt> is automatically inserted at the end of <tt class="docutils literal"><span class="pre"><span class="Identifier">data</span></span></tt> string.</li>
 </ul>
 
 
@@ -1110,14 +1108,14 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback">https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback">https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback</a>
 
 </dd>
 <a id="close"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#close"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_server_close_callback">https://nodejs.org/api/http.html#http_server_close_callback</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2session_close_callback">https://nodejs.org/api/http2.html#http2_http2session_close_callback</a>
 
 </dd>
 <a id="close,,T"></a>
@@ -1125,7 +1123,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_server_close_callback">https://nodejs.org/api/http.html#http_server_close_callback</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2session_close_callback">https://nodejs.org/api/http2.html#http2_http2session_close_callback</a>
 
 </dd>
 <a id="close,Http2Stream,cint,T"></a>
@@ -1211,21 +1209,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_addtrailers_headers">https://nodejs.org/api/http.html#http_response_addtrailers_headers</a>
-
-</dd>
-<a id="cork,Http2ServerResponse"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#cork%2CHttp2ServerResponse"><span class="Identifier">cork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_cork">https://nodejs.org/api/http.html#http_response_cork</a>
-
-</dd>
-<a id="uncork,Http2ServerResponse"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#uncork%2CHttp2ServerResponse"><span class="Identifier">uncork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_uncork">https://nodejs.org/api/http.html#http_response_uncork</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_addtrailers_headers">https://nodejs.org/api/http2.html#http2_response_addtrailers_headers</a>
 
 </dd>
 <a id="getHeaderNames,Http2ServerResponse"></a>
@@ -1255,7 +1239,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <dt><pre><span class="Keyword">func</span> <a href="#writeContinue%2CHttp2ServerResponse"><span class="Identifier">writeContinue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_hasheader_name">https://nodejs.org/api/http.html#http_response_hasheader_name</a>
+hhttps://nodejs.org/api/http2.html#http2_response_writecontinue
 
 </dd>
 <a id="writeHead,Http2ServerResponse,int,cstring"></a>
@@ -1264,7 +1248,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers</a>
 
 </dd>
 <a id="writeHead,Http2ServerResponse,"></a>
@@ -1272,7 +1256,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers</a>
 
 </dd>
 <a id="writeHead,Http2ServerResponse,int,cstring,openArray[]"></a>
@@ -1281,45 +1265,14 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers</a>
-
-</dd>
-<a id="writeProcessing,Http2ServerResponse"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#writeProcessing%2CHttp2ServerResponse"><span class="Identifier">writeProcessing</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_response_writeprocessing">https://nodejs.org/api/http.html#http_response_writeprocessing</a>
-
-</dd>
-<a id="createSecureServer,JsObject,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CJsObject%2CT"><span class="Identifier">createSecureServer</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">requestListener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
-
-</dd>
-<a id="createSecureServer,JsObject"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CJsObject"><span class="Identifier">createSecureServer</span></a><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
-
-</dd>
-<a id="createSecureServer,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#createSecureServer%2CT"><span class="Identifier">createSecureServer</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">requestListener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers">https://nodejs.org/api/http2.html#http2_response_writehead_statuscode_statusmessage_headers</a>
 
 </dd>
 <a id="createServer"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#createServer"><span class="Identifier">createServer</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler</a>
 
 </dd>
 <a id="createServer,JsObject,T"></a>
@@ -1327,48 +1280,29 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler</a>
 
 </dd>
 <a id="createServer,JsObject"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#createServer%2CJsObject"><span class="Identifier">createServer</span></a><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener">https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler">https://nodejs.org/api/http2.html#http2_http2_createserver_options_onrequesthandler</a>
 
 </dd>
-<a id="validateHeaderName,cstring"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#validateHeaderName%2Ccstring"><span class="Identifier">validateHeaderName</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
+<a id="updateSettings,,Http2Settings"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#updateSettings%2C%2CHttp2Settings"><span class="Identifier">updateSettings</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a><span class="Other">;</span>
+                    <span class="Identifier">settings</span><span class="Other">:</span> <a href="jshttp2.html#Http2Settings"><span class="Identifier">Http2Settings</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadername_name">https://nodejs.org/api/http.html#http_http_validateheadername_name</a><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-May or may not raise a foreign Error, use <tt class="docutils literal"><span class="pre"><span class="Keyword">try</span></span></tt> ... <tt class="docutils literal"><span class="pre"><span class="Keyword">except</span></span></tt></div>
-
-
-</dd>
-<a id="validateHeaderValue,cstring,auto"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#validateHeaderValue%2Ccstring%2Cauto"><span class="Identifier">validateHeaderValue</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value">https://nodejs.org/api/http.html#http_http_validateheadervalue_name_value</a><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-May or may not raise a foreign Error, use <tt class="docutils literal"><span class="pre"><span class="Keyword">try</span></span></tt> ... <tt class="docutils literal"><span class="pre"><span class="Keyword">except</span></span></tt></div>
-
-
-</dd>
-<a id="updateSettings,Http2SecureServer,Http2Settings"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#updateSettings%2CHttp2SecureServer%2CHttp2Settings"><span class="Identifier">updateSettings</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">settings</span><span class="Other">:</span> <a href="jshttp2.html#Http2Settings"><span class="Identifier">Http2Settings</span></a><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/http2.html#http2_server_updatesettings_settings">https://nodejs.org/api/http2.html#http2_server_updatesettings_settings</a>
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_server_updatesettings_settings_1">https://nodejs.org/api/http2.html#http2_server_updatesettings_settings_1</a>
 
 </dd>
 <a id="getDefaultSettings"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#getDefaultSettings"><span class="Identifier">getDefaultSettings</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2Settings"><span class="Identifier">Http2Settings</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#getDefaultSettings"><span class="Identifier">getDefaultSettings</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#Http2Settings"><span class="Identifier">Http2Settings</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_getdefaultsettings">https://nodejs.org/api/http2.html#http2_http2_getdefaultsettings</a>
 
 </dd>
 <a id="getPackedSettings,Http2Settings"></a>
@@ -1376,7 +1310,7 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_getpackedsettings_settings">https://nodejs.org/api/http2.html#http2_http2_getpackedsettings_settings</a>
 
 </dd>
 <a id="getUnpackedSettings,Buffer"></a>
@@ -1384,7 +1318,7 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-
+<a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2_getunpackedsettings_buf">https://nodejs.org/api/http2.html#http2_http2_getunpackedsettings_buf</a>
 
 </dd>
 <a id="createPushResponse,Http2ServerResponse,JsObject,T"></a>
@@ -1396,14 +1330,15 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
 
 </dd>
 <a id="connect,cstring,JsObject"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#connect%2Ccstring%2CJsObject"><span class="Identifier">connect</span></a><span class="Other">(</span><span class="Identifier">authority</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#connect%2Ccstring%2CJsObject"><span class="Identifier">connect</span></a><span class="Other">(</span><span class="Identifier">authority</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Session"><span class="Identifier">ClientHttp2Session</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_server_updatesettings_settings">https://nodejs.org/api/http2.html#http2_server_updatesettings_settings</a>
 
 </dd>
 <a id="connect,cstring,JsObject,T"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#connect%2Ccstring%2CJsObject%2CT"><span class="Identifier">connect</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">authority</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+<dt><pre><span class="Keyword">proc</span> <a href="#connect%2Ccstring%2CJsObject%2CT"><span class="Identifier">connect</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">authority</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Session"><span class="Identifier">ClientHttp2Session</span></a> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;http2.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
@@ -1479,24 +1414,24 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2stream_respond_headers_options">https://nodejs.org/api/http2.html#http2_http2stream_respond_headers_options</a>
 
 </dd>
-<a id="respondWithFD,ServerHttp2Stream,cint,JsObject,JsObject"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Ccint%2CJsObject%2CJsObject"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span>
+<a id="respondWithFD,ServerHttp2Stream,auto,JsObject,JsObject"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Cauto%2CJsObject%2CJsObject"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span>
                    <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options">https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options</a>
 
 </dd>
-<a id="respondWithFD,ServerHttp2Stream,cint,JsObject"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Ccint%2CJsObject"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> {.
+<a id="respondWithFD,ServerHttp2Stream,auto,JsObject"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Cauto%2CJsObject"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options">https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options</a>
 
 </dd>
-<a id="respondWithFD,ServerHttp2Stream,cint"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Ccint"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<a id="respondWithFD,ServerHttp2Stream,auto"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#respondWithFD%2CServerHttp2Stream%2Cauto"><span class="Identifier">respondWithFD</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ServerHttp2Stream"><span class="Identifier">ServerHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options">https://nodejs.org/api/http2.html#http2_http2stream_respondwithfd_fd_headers_options</a>
@@ -1525,6 +1460,21 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/http2.html#http2_http2stream_respondwithfile_path_headers_options">https://nodejs.org/api/http2.html#http2_http2stream_respondwithfile_path_headers_options</a>
+
+</dd>
+<a id="on,,cstring,T"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#on%2C%2Ccstring%2CT"><span class="Identifier">on</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.on(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="writeProcessing,Http2ServerResponse"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#writeProcessing%2CHttp2ServerResponse"><span class="Identifier">writeProcessing</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dd>
+
+
 
 </dd>
 <a id="address"></a>
@@ -1616,14 +1566,6 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
 
 
 </dd>
-<a id="on,,cstring,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#on%2C%2Ccstring%2CT"><span class="Identifier">on</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.on(#, #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
-<dd>
-
-
-
-</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -1633,227 +1575,208 @@ May or may not raise a foreign Error, use <tt class="docutils literal"><span cla
 <dt><pre><span class="Keyword">template</span> <a href="#onCheckContinue.t%2C%2C"><span class="Identifier">onCheckContinue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkContinue&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkContinue&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onCheckExpectation.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onCheckExpectation.t%2C%2C"><span class="Identifier">onCheckExpectation</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkExpectation&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;checkExpectation&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onClientError.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onClientError.t%2C%2C"><span class="Identifier">onClientError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;clientError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;clientError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onClose.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onClose.t%2C%2C"><span class="Identifier">onClose</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span>
     <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a> <span class="Keyword">or</span>
-    <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+    <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;close&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;close&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onConnect.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onConnect.t%2C%2C"><span class="Identifier">onConnect</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onConnect.t%2C%2C"><span class="Identifier">onConnect</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span>
+                   <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connect&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connect&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onConnection.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onConnection.t%2C%2C"><span class="Identifier">onConnection</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connection&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;connection&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onRequest.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onRequest.t%2C%2C"><span class="Identifier">onRequest</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;request&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
-
-</dd>
-<a id="onUpgrade.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onUpgrade.t%2C%2C"><span class="Identifier">onUpgrade</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;upgrade&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;request&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onError.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onError.t%2C%2C"><span class="Identifier">onError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onError.t%2C%2C"><span class="Identifier">onError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;error&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
-
-</dd>
-<a id="onListening.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onListening.t%2C%2C"><span class="Identifier">onListening</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;listening&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
-
-</dd>
-<a id="onNewListener.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onNewListener.t%2C%2C"><span class="Identifier">onNewListener</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;newListener&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
-
-</dd>
-<a id="onRemoveListener.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onRemoveListener.t%2C%2C"><span class="Identifier">onRemoveListener</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;removeListener&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;error&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onFrameError.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onFrameError.t%2C%2C"><span class="Identifier">onFrameError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span>
-                      <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onFrameError.t%2C%2C"><span class="Identifier">onFrameError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;frameError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;frameError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onGoaway.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onGoaway.t%2C%2C"><span class="Identifier">onGoaway</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onGoaway.t%2C%2C"><span class="Identifier">onGoaway</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span>
+                  <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;goaway&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;goaway&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onLocalSettings.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onLocalSettings.t%2C%2C"><span class="Identifier">onLocalSettings</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onLocalSettings.t%2C%2C"><span class="Identifier">onLocalSettings</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span>
+                         <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;localSettings&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;localSettings&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onPing.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onPing.t%2C%2C"><span class="Identifier">onPing</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onPing.t%2C%2C"><span class="Identifier">onPing</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;ping&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;ping&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onStream.t,,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onStream.t%2C%2C"><span class="Identifier">onStream</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<dt><pre><span class="Keyword">template</span> <a href="#onStream.t%2C%2C"><span class="Identifier">onStream</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span>
+                  <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;stream&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;stream&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onSessionError.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onSessionError.t%2C%2C"><span class="Identifier">onSessionError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;sessionError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;sessionError&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onSession.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onSession.t%2C%2C"><span class="Identifier">onSession</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;session&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;session&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onUnknownProtocol.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onUnknownProtocol.t%2C%2C"><span class="Identifier">onUnknownProtocol</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2SecureServer</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;unknownProtocol&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;unknownProtocol&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onAltsvc.t,ClientHttp2Session,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onAltsvc.t%2CClientHttp2Session%2C"><span class="Identifier">onAltsvc</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Session"><span class="Identifier">ClientHttp2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">ClientHttp2Session</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;altsvc&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;altsvc&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onOrigin.t,ClientHttp2Session,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onOrigin.t%2CClientHttp2Session%2C"><span class="Identifier">onOrigin</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Session"><span class="Identifier">ClientHttp2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">ClientHttp2Session</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;origin&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;origin&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onAborted.t,,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onAborted.t%2C%2C"><span class="Identifier">onAborted</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;aborted&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;aborted&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onReady.t,Http2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onReady.t%2CHttp2Stream%2C"><span class="Identifier">onReady</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;ready&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;ready&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
-<a id="onTimeout.t,Http2Stream,"></a>
-<dt><pre><span class="Keyword">template</span> <a href="#onTimeout.t%2CHttp2Stream%2C"><span class="Identifier">onTimeout</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
+<a id="onTimeout.t,,"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#onTimeout.t%2C%2C"><span class="Identifier">onTimeout</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Server"><span class="Identifier">Http2Server</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2SecureServer"><span class="Identifier">Http2SecureServer</span></a> <span class="Keyword">or</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2ServerRequest"><span class="Identifier">Http2ServerRequest</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a> <span class="Keyword">or</span>
+    <a href="jshttp2.html#Http2Session"><span class="Identifier">Http2Session</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;timeout&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;timeout&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onTrailers.t,Http2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onTrailers.t%2CHttp2Stream%2C"><span class="Identifier">onTrailers</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;trailers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;trailers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onWantTrailers.t,Http2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onWantTrailers.t%2CHttp2Stream%2C"><span class="Identifier">onWantTrailers</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2Stream"><span class="Identifier">Http2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;wantTrailers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;wantTrailers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onHeaders.t,ClientHttp2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onHeaders.t%2CClientHttp2Stream%2C"><span class="Identifier">onHeaders</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Stream"><span class="Identifier">ClientHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;headers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;headers&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onContinue.t,ClientHttp2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onContinue.t%2CClientHttp2Stream%2C"><span class="Identifier">onContinue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Stream"><span class="Identifier">ClientHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;continue&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;continue&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onPush.t,ClientHttp2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onPush.t%2CClientHttp2Stream%2C"><span class="Identifier">onPush</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Stream"><span class="Identifier">ClientHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;push&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;push&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onResponse.t,ClientHttp2Stream,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onResponse.t%2CClientHttp2Stream%2C"><span class="Identifier">onResponse</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#ClientHttp2Stream"><span class="Identifier">ClientHttp2Stream</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;response&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;response&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 <a id="onFinish.t,Http2ServerResponse,"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#onFinish.t%2CHttp2ServerResponse%2C"><span class="Identifier">onFinish</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttp2.html#Http2ServerResponse"><span class="Identifier">Http2ServerResponse</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">Http2Stream</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;finish&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
+Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;finish&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
 
@@ -1866,7 +1789,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-22 02:13:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-23 04:40:15 UTC</small>
       </div>
     </div>
   </div>
