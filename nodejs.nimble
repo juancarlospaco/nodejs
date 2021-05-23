@@ -1,5 +1,5 @@
 version     = "16.2.0"
-author      = "Juan Carlos"
+author      = "Juan_Carlos.nim"
 description = "NodeJS Standard Library for Nim"
 license     = "MIT"
 srcDir      = "src"
