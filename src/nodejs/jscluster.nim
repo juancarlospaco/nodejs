@@ -1,3 +1,5 @@
+## * Multiprocessing, Process Pool with IPC.
+##
 ## .. warning:: Module currently not working, Pull Requests welcome.
 from std/jsffi import JsObject
 
