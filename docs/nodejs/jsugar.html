@@ -148,6 +148,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="jsexport(symbols: auto)">jsexport(symbols: auto)</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">anyToCstring
+      <li><a class="reference" href="#anyToCstring%2Cauto"
+    title="anyToCstring(thing: auto): cstring">anyToCstring(thing: auto): cstring</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">shuffle
       <li><a class="reference" href="#shuffle%2CopenArray%5Bauto%5D"
     title="shuffle(arrai: openArray[auto])">shuffle(arrai: openArray[auto])</a></li>
@@ -493,6 +498,14 @@ Get the number of days between <tt class="docutils literal"><span class="pre"><s
 
 
 </dd>
+<a id="anyToCstring,auto"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#anyToCstring%2Cauto"><span class="Identifier">anyToCstring</span></a><span class="Other">(</span><span class="Identifier">thing</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new TextDecoder(\'utf-8\').decode(#))&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://github.com/juancarlospaco/nodejs/issues/1#issuecomment-851956152">https://github.com/juancarlospaco/nodejs/issues/1#issuecomment-851956152</a>
+
+</dd>
 
 </dl></div>
 <div class="section" id="18">
@@ -522,7 +535,7 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-23 09:50:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-06-01 09:03:34 UTC</small>
       </div>
     </div>
   </div>
