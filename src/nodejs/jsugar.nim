@@ -159,7 +159,7 @@ func shuffle*(arrai: openArray[auto]) {.importjs: """#.sort(() => .5 - Math.rand
 
 func currentTimestamp*(): int {.importjs: """Math.floor(new Date().getTime() / 1000)""".}
 
-func anyToCstring*(bufer: auto): cstring {.importjs: "(new TextDecoder('utf-8').decode(#))".}
+func anyToCstring*(thing: auto): cstring {.importjs: "(new TextDecoder('utf-8').decode(#))".}
   ## https://github.com/juancarlospaco/nodejs/issues/1#issuecomment-851956152
 
 # func `|>`(leftSide: auto, rightSide: auto) {.importjs: "(# |> #)".}
