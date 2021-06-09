@@ -37,7 +37,7 @@ template jsFmt*(code: untyped) =
       doAssert fmt"${  -1.234560e+02  } ${-0.0} {42} ${0.0} $0 $$ {{{}}}" == "-123.456 0 {42} 0 $0 $$ {{{}}}".cstring
       doAssert fmt"{123.456=}" == "{123.456=}".cstring ## Debug with `=` NOT supported.
       str = fmt"${         1_000_000         }"
-    doAssert str == "1000000"
+    doAssert str == "1000000"  ## Get result back outside of jsFmt block.
 
     jsFmt:
       let x {.exportc.} = 3.14
