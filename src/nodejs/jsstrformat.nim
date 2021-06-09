@@ -20,23 +20,30 @@ template jsFmt*(code: untyped) =
   ## * `strformat <strformat.html>`_
   runnableExamples:
     jsFmt:
-      assert fmt"" == "" ## Empty string is Ok.
+      doAssert fmt"" == "" ## Empty string is Ok.
       let foo {.exportc.} = "platypus".cstring
       var bar {.exportc.} = "capybara".cstring
-      assert fmt"${foo}" == "platypus".cstring
-      assert fmt("foo ${foo} bar ${bar} baz ${8 + 1} !?".cstring) == "foo platypus bar capybara baz 9 !?".cstring
+      doAssert fmt"${foo}" == "platypus".cstring
+      doAssert fmt("foo ${foo} bar ${bar} baz ${8 + 1} !?".cstring) == "foo platypus bar capybara baz 9 !?".cstring
 
     jsFmt:
       let a {.exportc.} = 1
-      let b {.exportc.} = 2  ## Triple-quoted and multi-line string is Ok.
-      assert &"""\ ${(a + b * a + b)} \t ${3.14} \n /""".cstring == """\ 5 \t 3.14 \n /""".cstring
+      let b {.exportc.} = 2
+      ## Triple-quoted and multi-line string is Ok.
+      doAssert &"""\ ${(a + b * a + b)} \t ${3.14} \n /""".cstring == """\ 5 \t 3.14 \n /""".cstring
 
     var str: cstring
     jsFmt:
-      assert fmt"${  -1.234560e+02  } ${-0.0} {42} ${0.0} $0 $$ {{{}}}" == "-123.456 0 {42} 0 $0 $$ {{{}}}".cstring
-      assert fmt"{123.456=}" == "{123.456=}".cstring  ## Debug with `=` NOT supported.
+      doAssert fmt"${  -1.234560e+02  } ${-0.0} {42} ${0.0} $0 $$ {{{}}}" == "-123.456 0 {42} 0 $0 $$ {{{}}}".cstring
+      doAssert fmt"{123.456=}" == "{123.456=}".cstring ## Debug with `=` NOT supported.
       str = fmt"${         1_000_000         }"
-    assert str == "1000000"
+    doAssert str == "1000000"
+
+    jsFmt:
+      let x {.exportc.} = 3.14
+      let y {.exportc.} = 0.99
+      const s {.exportc.} = "${ x + y }".cstring ## The string can be a constant.
+      doAssert fmt(s) == "4.13".cstring
 
   block:
     func fmt(s: cstring): cstring {.importjs: "fmt`#`", used.}
