@@ -112,7 +112,9 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"></p>
+  <p class="module-desc"><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="Identifier">strformat</span></span></tt> for JavaScript targets, uses string template literal interpolation, x100 faster than <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">strformat</span></span></tt>.</li>
+</ul>
+</p>
   <div class="section" id="18">
 <h1><a class="toc-backref" href="#18">Templates</a></h1>
 <dl class="item">
@@ -135,23 +137,30 @@ This is unsafe, but has zero cost in performance. Debugging with <tt class="docu
 
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Identifier">jsFmt</span><span class="Punctuation">:</span>
-  <span class="Identifier">assert</span> <span class="RawData">fmt&quot;&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;&quot;</span> <span class="Comment">## Empty string is Ok.</span>
+  <span class="Identifier">doAssert</span> <span class="RawData">fmt&quot;&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;&quot;</span> <span class="Comment">## Empty string is Ok.</span>
   <span class="Keyword">let</span> <span class="Identifier">foo</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="StringLit">&quot;platypus&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
   <span class="Keyword">var</span> <span class="Identifier">bar</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="StringLit">&quot;capybara&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
-  <span class="Identifier">assert</span> <span class="RawData">fmt&quot;${foo}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;platypus&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
-  <span class="Identifier">assert</span> <span class="Identifier">fmt</span><span class="Punctuation">(</span><span class="StringLit">&quot;foo ${foo} bar ${bar} baz ${8 + 1} !?&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;foo platypus bar capybara baz 9 !?&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
+  <span class="Identifier">doAssert</span> <span class="RawData">fmt&quot;${foo}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;platypus&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">fmt</span><span class="Punctuation">(</span><span class="StringLit">&quot;foo ${foo} bar ${bar} baz ${8 + 1} !?&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;foo platypus bar capybara baz 9 !?&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
 
 <span class="Identifier">jsFmt</span><span class="Punctuation">:</span>
   <span class="Keyword">let</span> <span class="Identifier">a</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="DecNumber">1</span>
-  <span class="Keyword">let</span> <span class="Identifier">b</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="DecNumber">2</span>  <span class="Comment">## Triple-quoted and multi-line string is Ok.</span>
-  <span class="Identifier">assert</span> <span class="Operator">&amp;</span><span class="LongStringLit">&quot;&quot;&quot;\ ${(a + b * a + b)} \t ${3.14} \n /&quot;&quot;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span> <span class="Operator">==</span> <span class="LongStringLit">&quot;&quot;&quot;\ 5 \t 3.14 \n /&quot;&quot;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
+  <span class="Keyword">let</span> <span class="Identifier">b</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="DecNumber">2</span>
+  <span class="Comment">## Triple-quoted and multi-line string is Ok.</span>
+  <span class="Identifier">doAssert</span> <span class="Operator">&amp;</span><span class="LongStringLit">&quot;&quot;&quot;\ ${(a + b * a + b)} \t ${3.14} \n /&quot;&quot;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span> <span class="Operator">==</span> <span class="LongStringLit">&quot;&quot;&quot;\ 5 \t 3.14 \n /&quot;&quot;&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
 
 <span class="Keyword">var</span> <span class="Identifier">str</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span>
 <span class="Identifier">jsFmt</span><span class="Punctuation">:</span>
-  <span class="Identifier">assert</span> <span class="RawData">fmt&quot;${  -1.234560e+02  } ${-0.0} {42} ${0.0} $0 $$ {{{}}}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;-123.456 0 {42} 0 $0 $$ {{{}}}&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
-  <span class="Identifier">assert</span> <span class="RawData">fmt&quot;{123.456=}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;{123.456=}&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>  <span class="Comment">## Debug with `=` NOT supported.</span>
+  <span class="Identifier">doAssert</span> <span class="RawData">fmt&quot;${  -1.234560e+02  } ${-0.0} {42} ${0.0} $0 $$ {{{}}}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;-123.456 0 {42} 0 $0 $$ {{{}}}&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span>
+  <span class="Identifier">doAssert</span> <span class="RawData">fmt&quot;{123.456=}&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;{123.456=}&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span> <span class="Comment">## Debug with `=` NOT supported.</span>
   <span class="Identifier">str</span> <span class="Operator">=</span> <span class="RawData">fmt&quot;${         1_000_000         }&quot;</span>
-<span class="Identifier">assert</span> <span class="Identifier">str</span> <span class="Operator">==</span> <span class="StringLit">&quot;1000000&quot;</span></pre>
+<span class="Identifier">doAssert</span> <span class="Identifier">str</span> <span class="Operator">==</span> <span class="StringLit">&quot;1000000&quot;</span>  <span class="Comment">## Get result back outside of jsFmt block.</span>
+
+<span class="Identifier">jsFmt</span><span class="Punctuation">:</span>
+  <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="FloatNumber">3.14</span>
+  <span class="Keyword">let</span> <span class="Identifier">y</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="FloatNumber">0.99</span>
+  <span class="Keyword">const</span> <span class="Identifier">s</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="StringLit">&quot;${ x + y }&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span> <span class="Comment">## The string can be a constant.</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">fmt</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;4.13&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span></pre>
 
 </dd>
 
@@ -164,7 +173,7 @@ This is unsafe, but has zero cost in performance. Debugging with <tt class="docu
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-05-19 16:46:54 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-06-10 23:20:23 UTC</small>
       </div>
     </div>
   </div>
