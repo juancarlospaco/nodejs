@@ -2790,54 +2790,54 @@ function raiseIndexError(i_33556752, a_33556753, b_33556754) {
   
 }
 
-function addEscapedChar_33557868(s_33557869, s_33557869_Idx, c_33557870) {
+function addEscapedChar_33557856(s_33557857, s_33557857_Idx, c_33557858) {
   var F = {procname: "system.addEscapedChar", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 2849;
-    switch (c_33557870) {
+    switch (c_33557858) {
     case 7:
       F.line = 2850;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\a"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\a"));;
       break;
     case 8:
       F.line = 2851;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\b"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\b"));;
       break;
     case 9:
       F.line = 2852;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\t"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\t"));;
       break;
     case 10:
       F.line = 2853;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\n"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\n"));;
       break;
     case 11:
       F.line = 2854;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\v"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\v"));;
       break;
     case 12:
       F.line = 2855;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\f"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\f"));;
       break;
     case 13:
       F.line = 2856;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\r"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\r"));;
       break;
     case 27:
       F.line = 2857;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\e"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\e"));;
       break;
     case 92:
       F.line = 2858;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\\\"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\\\"));;
       break;
     case 39:
       F.line = 2859;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\\'"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\\'"));;
       break;
     case 34:
       F.line = 2860;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\\""));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\\""));;
       break;
     case 32:
     case 33:
@@ -2932,17 +2932,17 @@ function addEscapedChar_33557868(s_33557869, s_33557869_Idx, c_33557870) {
     case 125:
     case 126:
       F.line = 2861;
-      addChar(s_33557869[s_33557869_Idx], c_33557870);;
+      addChar(s_33557857[s_33557857_Idx], c_33557858);;
       break;
     default: 
       F.line = 2863;
-      s_33557869[s_33557869_Idx].push.apply(s_33557869[s_33557869_Idx], makeNimstrLit("\\x"));;
+      s_33557857[s_33557857_Idx].push.apply(s_33557857[s_33557857_Idx], makeNimstrLit("\\x"));;
       F.line = 2865;
-      var n_33557880 = c_33557870;
+      var n_33557868 = c_33557858;
       F.line = 2866;
-      addChar(s_33557869[s_33557869_Idx], makeNimstrLit("0123456789ABCDEF")[chckIndx(((n_33557880 & 240) >> 4), 0, (makeNimstrLit("0123456789ABCDEF")).length - 1)]);;
+      addChar(s_33557857[s_33557857_Idx], makeNimstrLit("0123456789ABCDEF")[chckIndx(((n_33557868 & 240) >> 4), 0, (makeNimstrLit("0123456789ABCDEF")).length - 1)]);;
       F.line = 2867;
-      addChar(s_33557869[s_33557869_Idx], makeNimstrLit("0123456789ABCDEF")[chckIndx((n_33557880 & 15), 0, (makeNimstrLit("0123456789ABCDEF")).length - 1)]);;
+      addChar(s_33557857[s_33557857_Idx], makeNimstrLit("0123456789ABCDEF")[chckIndx((n_33557868 & 15), 0, (makeNimstrLit("0123456789ABCDEF")).length - 1)]);;
       break;
     }
   framePtr = F.prev;
@@ -2983,7 +2983,7 @@ function addQuoted_503316569(s_503316571, s_503316571_Idx, x_503316572) {
             c_503316573 = x_503316572.charCodeAt(chckIndx(iHEX60gensym6_503316583, 0, (x_503316572).length - 1));
             if ((c_503316573 <= 127)) {
             F.line = 2899;
-            addEscapedChar_33557868(s_503316571, s_503316571_Idx, c_503316573);
+            addEscapedChar_33557856(s_503316571, s_503316571_Idx, c_503316573);
             }
             else {
               F.line = 2901;
