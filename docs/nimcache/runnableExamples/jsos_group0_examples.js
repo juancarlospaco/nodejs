@@ -407,11 +407,11 @@ function nimCopyAux(dest_33557144, src_33557145, n_33557146) {
   
 }
 
-function addInt_33557582(result_33557583, result_33557583_Idx, x_33557584) {
+function addInt_33557570(result_33557571, result_33557571_Idx, x_33557572) {
   var F = {procname: "system.addInt", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 2456;
-    result_33557583[result_33557583_Idx].push.apply(result_33557583[result_33557583_Idx], cstrToNimstr((x_33557584) + ""));;
+    result_33557571[result_33557571_Idx].push.apply(result_33557571[result_33557571_Idx], cstrToNimstr((x_33557572) + ""));;
   framePtr = F.prev;
 
   
@@ -421,7 +421,7 @@ function addQuoted_503316518(s_503316520, s_503316520_Idx, x_503316521) {
   var F = {procname: "addQuoted.addQuoted", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 2909;
-    addInt_33557582(s_503316520, s_503316520_Idx, x_503316521);
+    addInt_33557570(s_503316520, s_503316520_Idx, x_503316521);
   framePtr = F.prev;
 
   

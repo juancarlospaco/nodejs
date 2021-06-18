@@ -2758,11 +2758,11 @@ function failedAssertImpl_218103865(msg_218103866) {
   
 }
 
-function addInt_33557582(result_33557583, result_33557583_Idx, x_33557584) {
+function addInt_33557570(result_33557571, result_33557571_Idx, x_33557572) {
   var F = {procname: "system.addInt", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 2456;
-    result_33557583[result_33557583_Idx].push.apply(result_33557583[result_33557583_Idx], cstrToNimstr((x_33557584) + ""));;
+    result_33557571[result_33557571_Idx].push.apply(result_33557571[result_33557571_Idx], cstrToNimstr((x_33557572) + ""));;
   framePtr = F.prev;
 
   
@@ -2772,7 +2772,7 @@ function addQuoted_503316583(s_503316585, s_503316585_Idx, x_503316586) {
   var F = {procname: "addQuoted.addQuoted", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 2909;
-    addInt_33557582(s_503316585, s_503316585_Idx, x_503316586);
+    addInt_33557570(s_503316585, s_503316585_Idx, x_503316586);
   framePtr = F.prev;
 
   
