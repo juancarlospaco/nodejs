@@ -4,7 +4,7 @@ macro unrollIt*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead `for` loops.
   ##
   ## .. code-block:: nim
-  ##   for i in unrollIt([0, 1, 2, 3]): echo it
+  ##   for _ in unrollIt([0, 1, 2, 3]): echo it
   ##
   ## Expands to:
   ##
@@ -22,7 +22,7 @@ macro unrollIt*(x: ForLoopStmt) =
   ## Another example:
   ##
   ## .. code-block:: nim
-  ##   for i in unrollIt([('a', true), ('b', false)]): echo it
+  ##   for _ in unrollIt([('a', true), ('b', false)]): echo it
   ##
   ## Expands to:
   ##
@@ -33,12 +33,18 @@ macro unrollIt*(x: ForLoopStmt) =
   ##     it = ('b', false)
   ##     echo it
   ##
+  ## You must use `_` as argument, because it must be ignored, this is invalid:
+  ##
+  ## .. code-block:: nim
+  ##   for i in unrollIt([0, 1]): echo it  # Uses "for i in" instead of "for _ in"
+  ##
   ## Inside the unrolled body you can use the variable `it`,
   ## only the `it` variable is allocated by the macro for minimal overhead,
   ## this does not mutate nor copy the iterable,
   ## the items inside the iterable must be assignable to a `var`.
   ## Inspired by `sequtils.mapIt`.
   expectKind x, nnkForStmt
+  doAssert x[0].strVal == "_", "Wrong argument, use '_' instead of '" & x[0].strVal & "'"
   var body = newStmtList()
   var itDeclared = false
   for i in 0 ..< x[^2][^1].len:
