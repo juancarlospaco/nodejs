@@ -86,4 +86,5 @@ macro unrollStringOps*(x: ForLoopStmt) =
   for chara in x[^2][^2].strVal:
     body.add nnkAsgn.newTree(x[^2][^1], chara.newLit)
     body.add x[^1]
+  # body.add nnkAsgn.newTree(x[^2][^1], newLit('\0'))
   result = body
