@@ -56,3 +56,34 @@ macro unrollIt*(x: ForLoopStmt) =
       itDeclared = true
     body.add x[^1]
   result = newBlockStmt(body)
+
+macro unrollStringOps*(x: ForLoopStmt) =
+  ## Compile-time macro-unrolled zero-overhead String operations.
+  ## Unroll any `string` ops into `char` ops, works better with `newStringOfCap`.
+  ##
+  ## .. code-block:: nim
+  ##   var it: char  # Required, must be type char, must be mutable.
+  ##   var output: string
+  ##   for _ in unrollStringOps("abcd", it): output.add it
+  ##
+  ## Expands to:
+  ##
+  ## .. code-block:: nim
+  ##   var it: char
+  ##   var output: string
+  ##   it = 'a'
+  ##   add(output, it)
+  ##   it = 'b'
+  ##   add(output, it)
+  ##   it = 'c'
+  ##   add(output, it)
+  ##   it = 'd'
+  expectKind x, nnkForStmt
+  expectKind x[^2][^1], {nnkIdent}
+  expectKind x[^2][^2], {nnkStrLit, nnkRStrLit, nnkTripleStrLit}
+  doAssert x[0].strVal == "_", "Wrong argument, use '_' instead of '" & x[0].strVal & "'"
+  var body = newStmtList()
+  for chara in x[^2][^2].strVal:
+    body.add nnkAsgn.newTree(x[^2][^1], chara.newLit)
+    body.add x[^1]
+  result = body
