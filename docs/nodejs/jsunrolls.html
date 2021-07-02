@@ -154,9 +154,9 @@ Compile-time macro-unrolled zero-overhead <tt class="docutils literal"><span cla
 <dt><pre><span class="Keyword">macro</span> <a href="#unrollStringOps.m%2CForLoopStmt"><span class="Identifier">unrollStringOps</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">ForLoopStmt</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Compile-time macro-unrolled zero-overhead String operations. Unroll any <tt class="docutils literal"><span class="pre"><span class="Identifier">string</span></span></tt> ops into <tt class="docutils literal"><span class="pre"><span class="Identifier">char</span></span></tt> ops, works better with <tt class="docutils literal"><span class="pre"><span class="Identifier">newStringOfCap</span></span></tt>.<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">it</span><span class="Punctuation">:</span> <span class="Identifier">char</span>  <span class="Comment"># Required, must be type char, must be mutable.</span>
-<span class="Keyword">var</span> <span class="Identifier">output</span><span class="Punctuation">:</span> <span class="Identifier">string</span>
-<span class="Keyword">for</span> <span class="Identifier">_</span> <span class="Keyword">in</span> <span class="Identifier">unrollStringOps</span><span class="Punctuation">(</span><span class="StringLit">&quot;abcd&quot;</span><span class="Punctuation">,</span> <span class="Identifier">it</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">output</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">it</span></pre><p>Expands to:</p>
+Compile-time macro-unrolled zero-overhead String operations. Unroll any <tt class="docutils literal"><span class="pre"><span class="Identifier">string</span></span></tt> ops into <tt class="docutils literal"><span class="pre"><span class="Identifier">char</span></span></tt> ops, works better with <tt class="docutils literal"><span class="pre"><span class="Identifier">newStringOfCap</span></span></tt>.<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">it</span><span class="Punctuation">:</span> <span class="Identifier">char</span>        <span class="Comment"># Required, must be type char, must be mutable.</span>
+<span class="Keyword">var</span> <span class="Identifier">output</span><span class="Punctuation">:</span> <span class="Identifier">string</span>  <span class="Comment"># Use newStringOfCap() for even more performance.</span>
+<span class="Keyword">for</span> <span class="Identifier">_</span> <span class="Keyword">in</span> <span class="Identifier">unrollStringOps</span><span class="Punctuation">(</span><span class="StringLit">&quot;abcd&quot;</span><span class="Punctuation">,</span> <span class="Identifier">it</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">output</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">it</span>  <span class="Comment"># Ops to unroll here.</span></pre><p>Expands to:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">it</span><span class="Punctuation">:</span> <span class="Identifier">char</span>
 <span class="Keyword">var</span> <span class="Identifier">output</span><span class="Punctuation">:</span> <span class="Identifier">string</span>
 <span class="Identifier">it</span> <span class="Operator">=</span> <span class="CharLit">'a'</span>
@@ -178,7 +178,7 @@ Compile-time macro-unrolled zero-overhead String operations. Unroll any <tt clas
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-02 16:00:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-02 16:08:45 UTC</small>
       </div>
     </div>
   </div>
