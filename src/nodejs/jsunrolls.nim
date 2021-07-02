@@ -62,9 +62,9 @@ macro unrollStringOps*(x: ForLoopStmt) =
   ## Unroll any `string` ops into `char` ops, works better with `newStringOfCap`.
   ##
   ## .. code-block:: nim
-  ##   var it: char  # Required, must be type char, must be mutable.
-  ##   var output: string
-  ##   for _ in unrollStringOps("abcd", it): output.add it
+  ##   var it: char        # Required, must be type char, must be mutable.
+  ##   var output: string  # Use newStringOfCap() for even more performance.
+  ##   for _ in unrollStringOps("abcd", it): output.add it  # Ops to unroll here.
   ##
   ## Expands to:
   ##
