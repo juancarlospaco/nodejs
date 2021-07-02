@@ -3,70 +3,70 @@ var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
 
-function toJSStr(s_33556804) {
+function toJSStr(s_33556810) {
                     var Temporary5;
             var Temporary7;
 
-  var result_33556805 = null;
+  var result_33556811 = null;
 
-    var res_33556839 = newSeq_33556822((s_33556804).length);
-    var i_33556840 = 0;
-    var j_33556841 = 0;
+    var res_33556845 = newSeq_33556828((s_33556810).length);
+    var i_33556846 = 0;
+    var j_33556847 = 0;
     Label1: do {
         Label2: while (true) {
-        if (!(i_33556840 < (s_33556804).length)) break Label2;
-          var c_33556842 = s_33556804[i_33556840];
-          if ((c_33556842 < 128)) {
-          res_33556839[j_33556841] = String.fromCharCode(c_33556842);
-          i_33556840 += 1;
+        if (!(i_33556846 < (s_33556810).length)) break Label2;
+          var c_33556848 = s_33556810[i_33556846];
+          if ((c_33556848 < 128)) {
+          res_33556845[j_33556847] = String.fromCharCode(c_33556848);
+          i_33556846 += 1;
           }
           else {
-            var helper_33556854 = newSeq_33556822(0);
+            var helper_33556860 = newSeq_33556828(0);
             Label3: do {
                 Label4: while (true) {
                 if (!true) break Label4;
-                  var code_33556855 = c_33556842.toString(16);
-                  if ((((code_33556855) == null ? 0 : (code_33556855).length) == 1)) {
-                  helper_33556854.push("%0");;
+                  var code_33556861 = c_33556848.toString(16);
+                  if ((((code_33556861) == null ? 0 : (code_33556861).length) == 1)) {
+                  helper_33556860.push("%0");;
                   }
                   else {
-                  helper_33556854.push("%");;
+                  helper_33556860.push("%");;
                   }
                   
-                  helper_33556854.push(code_33556855);;
-                  i_33556840 += 1;
-                    if (((s_33556804).length <= i_33556840)) Temporary5 = true; else {                      Temporary5 = (s_33556804[i_33556840] < 128);                    }                  if (Temporary5) {
+                  helper_33556860.push(code_33556861);;
+                  i_33556846 += 1;
+                    if (((s_33556810).length <= i_33556846)) Temporary5 = true; else {                      Temporary5 = (s_33556810[i_33556846] < 128);                    }                  if (Temporary5) {
                   break Label3;
                   }
                   
-                  c_33556842 = s_33556804[i_33556840];
+                  c_33556848 = s_33556810[i_33556846];
                 }
             } while (false);
 ++excHandler;
             Temporary7 = framePtr;
             try {
-            res_33556839[j_33556841] = decodeURIComponent(helper_33556854.join(""));
+            res_33556845[j_33556847] = decodeURIComponent(helper_33556860.join(""));
 --excHandler;
 } catch (EXCEPTION) {
  var prevJSError = lastJSError;
  lastJSError = EXCEPTION;
  --excHandler;
             framePtr = Temporary7;
-            res_33556839[j_33556841] = helper_33556854.join("");
+            res_33556845[j_33556847] = helper_33556860.join("");
             lastJSError = prevJSError;
             } finally {
             framePtr = Temporary7;
             }
           }
           
-          j_33556841 += 1;
+          j_33556847 += 1;
         }
     } while (false);
-    if (res_33556839.length < j_33556841) { for (var i = res_33556839.length ; i < j_33556841 ; ++i) res_33556839.push(null); }
-               else { res_33556839.length = j_33556841; };
-    result_33556805 = res_33556839.join("");
+    if (res_33556845.length < j_33556847) { for (var i = res_33556845.length ; i < j_33556847 ; ++i) res_33556845.push(null); }
+               else { res_33556845.length = j_33556847; };
+    result_33556811 = res_33556845.join("");
 
-  return result_33556805;
+  return result_33556811;
 
 }
 
@@ -81,12 +81,12 @@ function rawEcho() {
   
 }
 
-function cstrToNimstr(c_33556801) {
-      var ln = c_33556801.length;
+function cstrToNimstr(c_33556807) {
+      var ln = c_33556807.length;
   var result = new Array(ln);
   var r = 0;
   for (var i = 0; i < ln; ++i) {
-    var ch = c_33556801.charCodeAt(i);
+    var ch = c_33556807.charCodeAt(i);
 
     if (ch < 128) {
       result[r] = ch;
@@ -101,7 +101,7 @@ function cstrToNimstr(c_33556801) {
         }
         else {
             ++i;
-            ch = 65536 + (((ch & 1023) << 10) | (c_33556801.charCodeAt(i) & 1023));
+            ch = 65536 + (((ch & 1023) << 10) | (c_33556807.charCodeAt(i) & 1023));
             result[r] = (ch >> 18) | 240;
             ++r;
             result[r] = ((ch >> 12) & 63) | 128;
@@ -946,7 +946,7 @@ framePtr = F.prev;
 var F = {procname: "module hashes", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/pure/hashes.nim", line: 0};
 framePtr = F;
 F.line = 210;
-var objectID_587202719 = [0];
+var objectID_603979938 = [0];
 framePtr = F.prev;
 var F = {procname: "module hashes", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/pure/hashes.nim", line: 0};
 framePtr = F;
@@ -2475,15 +2475,15 @@ var F = {procname: "module jsreadline_examples2", prev: framePtr, filename: "/ho
 framePtr = F;
 framePtr = F.prev;
 
-function newSeq_33556822(len_33556824) {
-  var result_33556825 = [];
+function newSeq_33556828(len_33556830) {
+  var result_33556831 = [];
 
   var F = {procname: "newSeq.newSeq", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
   framePtr = F;
     F.line = 676;
-    result_33556825 = new Array(len_33556824); for (var i = 0 ; i < len_33556824 ; ++i) { result_33556825[i] = null; }  framePtr = F.prev;
+    result_33556831 = new Array(len_33556830); for (var i = 0 ; i < len_33556830 ; ++i) { result_33556831[i] = null; }  framePtr = F.prev;
 
-  return result_33556825;
+  return result_33556831;
 
 }
 var F = {procname: "module jsreadline_examples2", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsreadline_examples2.nim", line: 0};
@@ -2493,9 +2493,9 @@ const process = require('process');
 F.line = 9;
 const readline = require('readline');
 F.line = 10;
-var rl_503316481 = readline.createInterface({input: process.stdin, output: process.stdout});
+var rl_520093699 = readline.createInterface({input: process.stdin, output: process.stdout});
 F.line = 11;
-rawEcho(cstrToNimstr((() => { return rl_503316481.line })()));
+rawEcho(cstrToNimstr((() => { return rl_520093699.line })()));
 framePtr = F.prev;
 var F = {procname: "module jsreadline_examples2", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsreadline_examples2.nim", line: 0};
 framePtr = F;
