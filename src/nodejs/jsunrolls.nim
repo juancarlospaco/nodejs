@@ -67,12 +67,12 @@ macro unrollIt*(x: ForLoopStmt) =
 macro unrollStringOps*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead String operations.
   ## Unroll any `string` ops into `char` ops, does NOT create a `block:`,
-  ## works better with `newStringOfCap`, string to unroll must not be empty.
+  ## works better with `newStringOfCap`.
   ##
   ## .. code-block:: nim
   ##   var it: char        # Required, must be type char, must be mutable.
   ##   var output: string  # Use newStringOfCap() for even more performance.
-  ##   for _ in unrollStringOps("abcd", it): output.add it  # Ops to unroll here.
+  ##   for _ in unrollStringOps("abc", it): output.add it  # Ops to unroll here.
   ##
   ## Expands to:
   ##
@@ -84,8 +84,14 @@ macro unrollStringOps*(x: ForLoopStmt) =
   ##   it = 'b'
   ##   add(output, it)
   ##   it = 'c'
-  ##   add(output, it)
-  ##   it = 'd'
+  ##
+  ## String to unroll must not be empty, these are invalid:
+  ##
+  ## .. code-block:: nim
+  ##   var it: char
+  ##   var output: string
+  ##   for _ in unrollStringOps("", it): output.add it
+  ##   for _ in unrollStringOps("a", it): output.add it
   expectKind x, nnkForStmt
   expectKind x[^2][^1], {nnkIdent}
   expectKind x[^2][^2], {nnkStrLit, nnkRStrLit, nnkTripleStrLit}
