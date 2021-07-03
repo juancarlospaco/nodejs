@@ -38,6 +38,12 @@ macro unrollIt*(x: ForLoopStmt) =
   ## .. code-block:: nim
   ##   for i in unrollIt([0, 1]): echo it  # Uses "for i in" instead of "for _ in"
   ##
+  ## Iterable must not be empty, because theres nothing to unroll, these are Invalid:
+  ##
+  ## .. code-block:: nim
+  ##   for _ in unrollIt([]):   echo it  # Can not unroll emptyness into nothing.
+  ##   for _ in unrollIt([42]): echo it  # Pointless to unroll just 1 item.
+  ##
   ## Inside the unrolled body you can use the variable `it`,
   ## only the `it` variable is allocated by the macro for minimal overhead,
   ## this does not mutate nor copy the iterable,
@@ -60,7 +66,8 @@ macro unrollIt*(x: ForLoopStmt) =
 
 macro unrollStringOps*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead String operations.
-  ## Unroll any `string` ops into `char` ops, works better with `newStringOfCap`, string must not be empty.
+  ## Unroll any `string` ops into `char` ops, does NOT create a `block:`,
+  ## works better with `newStringOfCap`, string to unroll must not be empty.
   ##
   ## .. code-block:: nim
   ##   var it: char        # Required, must be type char, must be mutable.
