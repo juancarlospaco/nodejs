@@ -42,9 +42,10 @@ macro unrollIt*(x: ForLoopStmt) =
   ## only the `it` variable is allocated by the macro for minimal overhead,
   ## this does not mutate nor copy the iterable,
   ## the items inside the iterable must be assignable to a `var`.
-  ## Inspired by `sequtils.mapIt`.
+  ## Inspired by `sequtils.mapIt`. Iterable must not be empty.
   expectKind x, nnkForStmt
   doAssert x[0].strVal == "_", "Wrong argument, use '_' instead of '" & x[0].strVal & "'"
+  doAssert x[^2][^1].len > 1, "Iterable must not be empty, because theres nothing to unroll"
   var body = newStmtList()
   var itDeclared = false
   for i in 0 ..< x[^2][^1].len:
@@ -59,7 +60,7 @@ macro unrollIt*(x: ForLoopStmt) =
 
 macro unrollStringOps*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead String operations.
-  ## Unroll any `string` ops into `char` ops, works better with `newStringOfCap`.
+  ## Unroll any `string` ops into `char` ops, works better with `newStringOfCap`, string must not be empty.
   ##
   ## .. code-block:: nim
   ##   var it: char        # Required, must be type char, must be mutable.
@@ -82,6 +83,7 @@ macro unrollStringOps*(x: ForLoopStmt) =
   expectKind x[^2][^1], {nnkIdent}
   expectKind x[^2][^2], {nnkStrLit, nnkRStrLit, nnkTripleStrLit}
   doAssert x[0].strVal == "_", "Wrong argument, use '_' instead of '" & x[0].strVal & "'"
+  doAssert x[^2][^2].strVal.len > 1, "Iterable must not be empty, because theres nothing to unroll"
   var body = newStmtList()
   for chara in x[^2][^2].strVal:
     body.add nnkAsgn.newTree(x[^2][^1], chara.newLit)
