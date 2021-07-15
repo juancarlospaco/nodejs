@@ -1,4 +1,4 @@
-# NodeJS Standard Library for Nim
+# Alternative stdlib for Nim for NodeJS/JavaScript targets
 
 [![](https://raw.githubusercontent.com/juancarlospaco/nodejs/main/nodenim.jpg)](https://juancarlospaco.github.io/nodejs)
 
