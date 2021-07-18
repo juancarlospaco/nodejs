@@ -1,7 +1,8 @@
-version     = "16.3.0"
+version     = "16.5.0"
 author      = "Juan_Carlos.nim"
-description = "NodeJS Standard Library for Nim"
+description = "Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim"
 license     = "MIT"
 srcDir      = "src"
+skipDirs    = @["docs"]
 
-requires "nim >= 1.4.4"
+requires "nim >= 1.0.0"
