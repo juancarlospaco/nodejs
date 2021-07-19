@@ -81,6 +81,11 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - Package version == NodeJS version.
 
 
+# Doing Python ?
+
+- [Alternative StdLib for Nim for Python targets, hijacks Python StdLib for Nim.]https://github.com/juancarlospaco/cpython#alternative-stdlib-for-nim-for-python-targets)
+
+
 # Efficiency
 
 - is it any good ?, improves something ?.
