@@ -83,7 +83,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 
 # Doing Python ?
 
-- [Alternative StdLib for Nim for Python targets, hijacks Python StdLib for Nim.]https://github.com/juancarlospaco/cpython#alternative-stdlib-for-nim-for-python-targets)
+- [Alternative StdLib for Nim for Python targets, hijacks Python StdLib for Nim.](https://github.com/juancarlospaco/cpython#alternative-stdlib-for-nim-for-python-targets)
 
 
 # Efficiency
