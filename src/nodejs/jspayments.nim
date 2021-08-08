@@ -1,7 +1,7 @@
 ## Payments API.
 ## * https://github.com/w3c/payment-request-info/wiki/FAQ
 ##
-## .. warning:: Experimental browser API, we hope browsers support it someday, untested because it wont work at the time of writing it, and is not widely used yet.
+## .. warning:: Experimental JavaScript API, we hope browsers support it someday, untested because it wont work at the time of writing it, and is not widely used yet.
 when not defined(js):
   {.fatal: "Module jspayments is designed to be used with the JavaScript backend.".}
 
