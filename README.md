@@ -48,7 +48,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: [http](https://nodejs.org/api/http.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp.html
 - :heavy_check_mark: [http2](https://nodejs.org/api/http2.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp2.html
 - :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads.html
-- :heavy_check_mark: jsintl :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl.html
+- :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl.html
 - :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments.html
 - :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes.html
 - :heavy_check_mark: [Google ZX](https://juancarlospaco.github.io/nodejs/nodejs/jszx.html)
