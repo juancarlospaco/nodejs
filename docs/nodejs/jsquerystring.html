@@ -101,24 +101,9 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">unescape
-      <li><a class="reference" href="#unescape%2Ccstring"
-    title="unescape(stringy: cstring): cstring">unescape(stringy: cstring): cstring</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">escape
+      <ul class="simple nested-toc-section">escape
       <li><a class="reference" href="#escape%2Ccstring"
     title="escape(stringy: cstring): cstring">escape(stringy: cstring): cstring</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">stringify
-      <li><a class="reference" href="#stringify%2CJsObject"
-    title="stringify(obj: JsObject; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring): cstring">stringify(obj: JsObject; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring): cstring</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">requireQuerystring
-      <li><a class="reference" href="#requireQuerystring"
-    title="requireQuerystring()">requireQuerystring()</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">importQuerystring
@@ -129,6 +114,21 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">parse
       <li><a class="reference" href="#parse%2Ccstring"
     title="parse(str: cstring; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring; maxKeys = 1000.cint): JsObject">parse(str: cstring; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring; maxKeys = 1000.cint): JsObject</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">requireQuerystring
+      <li><a class="reference" href="#requireQuerystring"
+    title="requireQuerystring()">requireQuerystring()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">stringify
+      <li><a class="reference" href="#stringify%2CJsObject"
+    title="stringify(obj: JsObject; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring): cstring">stringify(obj: JsObject; sep = &quot;&amp;&quot;.cstring; eq = &quot;=&quot;.cstring): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">unescape
+      <li><a class="reference" href="#unescape%2Ccstring"
+    title="unescape(stringy: cstring): cstring">unescape(stringy: cstring): cstring</a></li>
 
   </ul>
 
@@ -152,35 +152,23 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<a id="importQuerystring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importQuerystring"><span class="Identifier">importQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as querystring from \'querystring\'@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="requireQuerystring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireQuerystring"><span class="Identifier">requireQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const querystring = require(\'querystring\')@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="escape,cstring"></a>
+<div id="escape,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#escape%2Ccstring"><span class="Identifier">escape</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_escape_str">https://nodejs.org/api/querystring.html#querystring_querystring_escape_str</a>
 
 </dd>
-<a id="unescape,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#unescape%2Ccstring"><span class="Identifier">unescape</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#)&quot;</span>.}</pre></dt>
+</div>
+<div id="importQuerystring">
+<dt><pre><span class="Keyword">func</span> <a href="#importQuerystring"><span class="Identifier">importQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as querystring from \'querystring\'@&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str">https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str</a>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
-<a id="parse,cstring"></a>
+</div>
+<div id="parse,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#parse%2Ccstring"><span class="Identifier">parse</span></a><span class="Other">(</span><span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sep</span> <span class="Other">=</span> <span class="StringLit">&quot;&amp;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">eq</span> <span class="Other">=</span> <span class="StringLit">&quot;=&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span>
            <span class="Identifier">maxKeys</span> <span class="Other">=</span> <span class="DecNumber">1000</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#, #, #, {maxKeys: #})&quot;</span>.}</pre></dt>
@@ -189,7 +177,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_parse_str_sep_eq_options">https://nodejs.org/api/querystring.html#querystring_querystring_parse_str_sep_eq_options</a>
 
 </dd>
-<a id="stringify,JsObject"></a>
+</div>
+<div id="requireQuerystring">
+<dt><pre><span class="Keyword">func</span> <a href="#requireQuerystring"><span class="Identifier">requireQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const querystring = require(\'querystring\')@&quot;</span>.}</pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+</div>
+<div id="stringify,JsObject">
 <dt><pre><span class="Keyword">func</span> <a href="#stringify%2CJsObject"><span class="Identifier">stringify</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">sep</span> <span class="Other">=</span> <span class="StringLit">&quot;&amp;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">eq</span> <span class="Other">=</span> <span class="StringLit">&quot;=&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -197,6 +194,15 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_stringify_obj_sep_eq_options">https://nodejs.org/api/querystring.html#querystring_querystring_stringify_obj_sep_eq_options</a>
 
 </dd>
+</div>
+<div id="unescape,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#unescape%2Ccstring"><span class="Identifier">unescape</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str">https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str</a>
+
+</dd>
+</div>
 
 </dl></div>
 
@@ -207,7 +213,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-03 15:11:47 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-08 18:59:58 UTC</small>
       </div>
     </div>
   </div>

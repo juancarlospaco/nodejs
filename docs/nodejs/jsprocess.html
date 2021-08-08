@@ -107,12 +107,24 @@ window.addEventListener('DOMContentLoaded', main);
     title="argv: seq[cstring]">argv</a></li>
   <li><a class="reference" href="#argv0"
     title="argv0: cstring">argv0</a></li>
+  <li><a class="reference" href="#config"
+    title="config: JsObject">config</a></li>
   <li><a class="reference" href="#debugPort"
     title="debugPort: cint">debugPort</a></li>
   <li><a class="reference" href="#execArgv"
     title="execArgv: seq[cstring]">execArgv</a></li>
   <li><a class="reference" href="#execPath"
     title="execPath: cstring">execPath</a></li>
+  <li><a class="reference" href="#platform"
+    title="platform: cstring">platform</a></li>
+  <li><a class="reference" href="#ppid"
+    title="ppid: cint">ppid</a></li>
+  <li><a class="reference" href="#processVersion"
+    title="processVersion: cstring">processVersion</a></li>
+  <li><a class="reference" href="#processVersions"
+    title="processVersions: JsObject">processVersions</a></li>
+  <li><a class="reference" href="#release"
+    title="release: JsObject">release</a></li>
   <li><a class="reference" href="#reportCompact"
     title="reportCompact: bool">reportCompact</a></li>
   <li><a class="reference" href="#reportDirectory"
@@ -125,34 +137,93 @@ window.addEventListener('DOMContentLoaded', main);
     title="reportOnSignal: bool">reportOnSignal</a></li>
   <li><a class="reference" href="#reportOnUncaughtException"
     title="reportOnUncaughtException: bool">reportOnUncaughtException</a></li>
-  <li><a class="reference" href="#platform"
-    title="platform: cstring">platform</a></li>
-  <li><a class="reference" href="#ppid"
-    title="ppid: cint">ppid</a></li>
-  <li><a class="reference" href="#processVersion"
-    title="processVersion: cstring">processVersion</a></li>
-  <li><a class="reference" href="#processVersions"
-    title="processVersions: JsObject">processVersions</a></li>
-  <li><a class="reference" href="#config"
-    title="config: JsObject">config</a></li>
-  <li><a class="reference" href="#release"
-    title="release: JsObject">release</a></li>
 
   </ul>
 </li>
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">umask
-      <li><a class="reference" href="#umask%2Ccstring"
-    title="umask(mask: cstring): any">umask(mask: cstring): any</a></li>
-  <li><a class="reference" href="#umask%2Ccint"
-    title="umask(mask: cint): any">umask(mask: cint): any</a></li>
+      <ul class="simple nested-toc-section">abort
+      <li><a class="reference" href="#abort"
+    title="abort()">abort()</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">requireProcess
-      <li><a class="reference" href="#requireProcess"
-    title="requireProcess()">requireProcess()</a></li>
+  <ul class="simple nested-toc-section">chdir
+      <li><a class="reference" href="#chdir%2Ccstring"
+    title="chdir(directory: cstring)">chdir(directory: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">cwd
+      <li><a class="reference" href="#cwd"
+    title="cwd(): cstring">cwd(): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">disconnect
+      <li><a class="reference" href="#disconnect"
+    title="disconnect()">disconnect()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">emitWarning
+      <li><a class="reference" href="#emitWarning%2Ccstring"
+    title="emitWarning(warning: cstring)">emitWarning(warning: cstring)</a></li>
+  <li><a class="reference" href="#emitWarning%2Ccstring%2Ccstring"
+    title="emitWarning(warning: cstring; tipe: cstring)">emitWarning(warning: cstring; tipe: cstring)</a></li>
+  <li><a class="reference" href="#emitWarning%2Ccstring%2Ccstring%2Ccstring"
+    title="emitWarning(warning: cstring; tipe: cstring; code: cstring)">emitWarning(warning: cstring; tipe: cstring; code: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">exit
+      <li><a class="reference" href="#exit"
+    title="exit(code = 0.cint)">exit(code = 0.cint)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getegid
+      <li><a class="reference" href="#getegid"
+    title="getegid(): cint">getegid(): cint</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getgroups
+      <li><a class="reference" href="#getgroups"
+    title="getgroups(): seq[cint]">getgroups(): seq[cint]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getPid
+      <li><a class="reference" href="#getPid"
+    title="getPid(): cint">getPid(): cint</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">getuid
+      <li><a class="reference" href="#getuid"
+    title="getuid(): cint">getuid(): cint</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">hasUncaughtExceptionCaptureCallback
+      <li><a class="reference" href="#hasUncaughtExceptionCaptureCallback"
+    title="hasUncaughtExceptionCaptureCallback(): bool">hasUncaughtExceptionCaptureCallback(): bool</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">hrtime
+      <li><a class="reference" href="#hrtime"
+    title="hrtime(): seq[cint]">hrtime(): seq[cint]</a></li>
+  <li><a class="reference" href="#hrtime%2CopenArray%5Bcint%5D"
+    title="hrtime(time: openArray[cint]): seq[cint]">hrtime(time: openArray[cint]): seq[cint]</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">hrtimeBigint
+      <li><a class="reference" href="#hrtimeBigint"
+    title="hrtimeBigint(): cint">hrtimeBigint(): cint</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">importProcess
+      <li><a class="reference" href="#importProcess"
+    title="importProcess()">importProcess()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">initgroups
+      <li><a class="reference" href="#initgroups%2Ccint%2Ccint"
+    title="initgroups(user: cint; extraGroup: cint)">initgroups(user: cint; extraGroup: cint)</a></li>
+  <li><a class="reference" href="#initgroups%2Ccstring%2Ccstring"
+    title="initgroups(user: cstring; extraGroup: cstring)">initgroups(user: cstring; extraGroup: cstring)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">kill
@@ -162,58 +233,42 @@ window.addEventListener('DOMContentLoaded', main);
     title="kill(pid: cint; signal: cstring)">kill(pid: cint; signal: cstring)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">getuid
-      <li><a class="reference" href="#getuid"
-    title="getuid(): cint">getuid(): cint</a></li>
+  <ul class="simple nested-toc-section">reportWriteReport
+      <li><a class="reference" href="#reportWriteReport"
+    title="reportWriteReport(): cstring">reportWriteReport(): cstring</a></li>
+  <li><a class="reference" href="#reportWriteReport%2Ccstring"
+    title="reportWriteReport(filename: cstring): cstring">reportWriteReport(filename: cstring): cstring</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">importProcess
-      <li><a class="reference" href="#importProcess"
-    title="importProcess()">importProcess()</a></li>
+  <ul class="simple nested-toc-section">requireProcess
+      <li><a class="reference" href="#requireProcess"
+    title="requireProcess()">requireProcess()</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">getegid
-      <li><a class="reference" href="#getegid"
-    title="getegid(): cint">getegid(): cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">chdir
-      <li><a class="reference" href="#chdir%2Ccstring"
-    title="chdir(directory: cstring)">chdir(directory: cstring)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">abort
-      <li><a class="reference" href="#abort"
-    title="abort()">abort()</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">cwd
-      <li><a class="reference" href="#cwd"
-    title="cwd(): cstring">cwd(): cstring</a></li>
+  <ul class="simple nested-toc-section">resourceUsage
+      <li><a class="reference" href="#resourceUsage"
+    title="resourceUsage(): JsObject">resourceUsage(): JsObject</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">setegid
-      <li><a class="reference" href="#setegid%2Ccstring"
-    title="setegid(id: cstring)">setegid(id: cstring)</a></li>
-  <li><a class="reference" href="#setegid%2Ccint"
+      <li><a class="reference" href="#setegid%2Ccint"
     title="setegid(id: cint)">setegid(id: cint)</a></li>
+  <li><a class="reference" href="#setegid%2Ccstring"
+    title="setegid(id: cstring)">setegid(id: cstring)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">disconnect
-      <li><a class="reference" href="#disconnect"
-    title="disconnect()">disconnect()</a></li>
+  <ul class="simple nested-toc-section">seteuid
+      <li><a class="reference" href="#seteuid%2Ccint"
+    title="seteuid(id: cint)">seteuid(id: cint)</a></li>
+  <li><a class="reference" href="#seteuid%2Ccstring"
+    title="seteuid(id: cstring)">seteuid(id: cstring)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">exit
-      <li><a class="reference" href="#exit"
-    title="exit(code = 0.cint)">exit(code = 0.cint)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">initgroups
-      <li><a class="reference" href="#initgroups%2Ccstring%2Ccstring"
-    title="initgroups(user: cstring; extraGroup: cstring)">initgroups(user: cstring; extraGroup: cstring)</a></li>
-  <li><a class="reference" href="#initgroups%2Ccint%2Ccint"
-    title="initgroups(user: cint; extraGroup: cint)">initgroups(user: cint; extraGroup: cint)</a></li>
+  <ul class="simple nested-toc-section">setgid
+      <li><a class="reference" href="#setgid%2Ccint"
+    title="setgid(id: cint)">setgid(id: cint)</a></li>
+  <li><a class="reference" href="#setgid%2Ccstring"
+    title="setgid(id: cstring)">setgid(id: cstring)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">setgroups
@@ -228,71 +283,16 @@ window.addEventListener('DOMContentLoaded', main);
     title="setuid(id: cstring)">setuid(id: cstring)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">hrtime
-      <li><a class="reference" href="#hrtime%2CopenArray%5Bcint%5D"
-    title="hrtime(time: openArray[cint]): seq[cint]">hrtime(time: openArray[cint]): seq[cint]</a></li>
-  <li><a class="reference" href="#hrtime"
-    title="hrtime(): seq[cint]">hrtime(): seq[cint]</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">hrtimeBigint
-      <li><a class="reference" href="#hrtimeBigint"
-    title="hrtimeBigint(): cint">hrtimeBigint(): cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">resourceUsage
-      <li><a class="reference" href="#resourceUsage"
-    title="resourceUsage(): JsObject">resourceUsage(): JsObject</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">seteuid
-      <li><a class="reference" href="#seteuid%2Ccstring"
-    title="seteuid(id: cstring)">seteuid(id: cstring)</a></li>
-  <li><a class="reference" href="#seteuid%2Ccint"
-    title="seteuid(id: cint)">seteuid(id: cint)</a></li>
+  <ul class="simple nested-toc-section">umask
+      <li><a class="reference" href="#umask%2Ccint"
+    title="umask(mask: cint): any">umask(mask: cint): any</a></li>
+  <li><a class="reference" href="#umask%2Ccstring"
+    title="umask(mask: cstring): any">umask(mask: cstring): any</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">uptimeProcess
       <li><a class="reference" href="#uptimeProcess"
     title="uptimeProcess(): cint">uptimeProcess(): cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">hasUncaughtExceptionCaptureCallback
-      <li><a class="reference" href="#hasUncaughtExceptionCaptureCallback"
-    title="hasUncaughtExceptionCaptureCallback(): bool">hasUncaughtExceptionCaptureCallback(): bool</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">setgid
-      <li><a class="reference" href="#setgid%2Ccint"
-    title="setgid(id: cint)">setgid(id: cint)</a></li>
-  <li><a class="reference" href="#setgid%2Ccstring"
-    title="setgid(id: cstring)">setgid(id: cstring)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">reportWriteReport
-      <li><a class="reference" href="#reportWriteReport%2Ccstring"
-    title="reportWriteReport(filename: cstring): cstring">reportWriteReport(filename: cstring): cstring</a></li>
-  <li><a class="reference" href="#reportWriteReport"
-    title="reportWriteReport(): cstring">reportWriteReport(): cstring</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">getPid
-      <li><a class="reference" href="#getPid"
-    title="getPid(): cint">getPid(): cint</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">getgroups
-      <li><a class="reference" href="#getgroups"
-    title="getgroups(): seq[cint]">getgroups(): seq[cint]</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">emitWarning
-      <li><a class="reference" href="#emitWarning%2Ccstring"
-    title="emitWarning(warning: cstring)">emitWarning(warning: cstring)</a></li>
-  <li><a class="reference" href="#emitWarning%2Ccstring%2Ccstring%2Ccstring"
-    title="emitWarning(warning: cstring; tipe: cstring; code: cstring)">emitWarning(warning: cstring; tipe: cstring; code: cstring)</a></li>
-  <li><a class="reference" href="#emitWarning%2Ccstring%2Ccstring"
-    title="emitWarning(warning: cstring; tipe: cstring)">emitWarning(warning: cstring; tipe: cstring)</a></li>
 
   </ul>
 
@@ -332,187 +332,204 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="section" id="9">
 <h1><a class="toc-backref" href="#9">Lets</a></h1>
 <dl class="item">
-<a id="allowedNodeEnvironmentFlags"></a>
+<div id="allowedNodeEnvironmentFlags">
 <dt><pre><a href="jsprocess.html#allowedNodeEnvironmentFlags"><span class="Identifier">allowedNodeEnvironmentFlags</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="argv"></a>
+</div>
+<div id="argv">
 <dt><pre><a href="jsprocess.html#argv"><span class="Identifier">argv</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="argv0"></a>
+</div>
+<div id="argv0">
 <dt><pre><a href="jsprocess.html#argv0"><span class="Identifier">argv0</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="debugPort"></a>
-<dt><pre><a href="jsprocess.html#debugPort"><span class="Identifier">debugPort</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="execArgv"></a>
-<dt><pre><a href="jsprocess.html#execArgv"><span class="Identifier">execArgv</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="execPath"></a>
-<dt><pre><a href="jsprocess.html#execPath"><span class="Identifier">execPath</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportCompact"></a>
-<dt><pre><a href="jsprocess.html#reportCompact"><span class="Identifier">reportCompact</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportDirectory"></a>
-<dt><pre><a href="jsprocess.html#reportDirectory"><span class="Identifier">reportDirectory</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportFilename"></a>
-<dt><pre><a href="jsprocess.html#reportFilename"><span class="Identifier">reportFilename</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportOnFatalError"></a>
-<dt><pre><a href="jsprocess.html#reportOnFatalError"><span class="Identifier">reportOnFatalError</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportOnSignal"></a>
-<dt><pre><a href="jsprocess.html#reportOnSignal"><span class="Identifier">reportOnSignal</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="reportOnUncaughtException"></a>
-<dt><pre><a href="jsprocess.html#reportOnUncaughtException"><span class="Identifier">reportOnUncaughtException</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="platform"></a>
-<dt><pre><a href="jsprocess.html#platform"><span class="Identifier">platform</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="ppid"></a>
-<dt><pre><a href="jsprocess.html#ppid"><span class="Identifier">ppid</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="processVersion"></a>
-<dt><pre><a href="jsprocess.html#processVersion"><span class="Identifier">processVersion</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="processVersions"></a>
-<dt><pre><a href="jsprocess.html#processVersions"><span class="Identifier">processVersions</span></a><span class="Other">:</span> <span class="Identifier">JsObject</span></pre></dt>
-<dd>
-
-
-
-</dd>
-<a id="config"></a>
+</div>
+<div id="config">
 <dt><pre><a href="jsprocess.html#config"><span class="Identifier">config</span></a><span class="Other">:</span> <span class="Identifier">JsObject</span></pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="release"></a>
+</div>
+<div id="debugPort">
+<dt><pre><a href="jsprocess.html#debugPort"><span class="Identifier">debugPort</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="execArgv">
+<dt><pre><a href="jsprocess.html#execArgv"><span class="Identifier">execArgv</span></a><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="execPath">
+<dt><pre><a href="jsprocess.html#execPath"><span class="Identifier">execPath</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="platform">
+<dt><pre><a href="jsprocess.html#platform"><span class="Identifier">platform</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="ppid">
+<dt><pre><a href="jsprocess.html#ppid"><span class="Identifier">ppid</span></a><span class="Other">:</span> <span class="Identifier">cint</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="processVersion">
+<dt><pre><a href="jsprocess.html#processVersion"><span class="Identifier">processVersion</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="processVersions">
+<dt><pre><a href="jsprocess.html#processVersions"><span class="Identifier">processVersions</span></a><span class="Other">:</span> <span class="Identifier">JsObject</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="release">
 <dt><pre><a href="jsprocess.html#release"><span class="Identifier">release</span></a><span class="Other">:</span> <span class="Identifier">JsObject</span></pre></dt>
 <dd>
 
 
 
 </dd>
+</div>
+<div id="reportCompact">
+<dt><pre><a href="jsprocess.html#reportCompact"><span class="Identifier">reportCompact</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="reportDirectory">
+<dt><pre><a href="jsprocess.html#reportDirectory"><span class="Identifier">reportDirectory</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="reportFilename">
+<dt><pre><a href="jsprocess.html#reportFilename"><span class="Identifier">reportFilename</span></a><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="reportOnFatalError">
+<dt><pre><a href="jsprocess.html#reportOnFatalError"><span class="Identifier">reportOnFatalError</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="reportOnSignal">
+<dt><pre><a href="jsprocess.html#reportOnSignal"><span class="Identifier">reportOnSignal</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="reportOnUncaughtException">
+<dt><pre><a href="jsprocess.html#reportOnUncaughtException"><span class="Identifier">reportOnUncaughtException</span></a><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 
 </dl></div>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<a id="importProcess"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importProcess"><span class="Identifier">importProcess</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as process from \'process\'@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="requireProcess"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireProcess"><span class="Identifier">requireProcess</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const process = require(\'process\')@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="abort"></a>
+<div id="abort">
 <dt><pre><span class="Keyword">func</span> <a href="#abort"><span class="Identifier">abort</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_abort">https://nodejs.org/api/process.html#process_process_abort</a>
 
 </dd>
-<a id="chdir,cstring"></a>
+</div>
+<div id="chdir,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#chdir%2Ccstring"><span class="Identifier">chdir</span></a><span class="Other">(</span><span class="Identifier">directory</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_chdir_directory">https://nodejs.org/api/process.html#process_process_chdir_directory</a>
 
 </dd>
-<a id="cwd"></a>
+</div>
+<div id="cwd">
 <dt><pre><span class="Keyword">func</span> <a href="#cwd"><span class="Identifier">cwd</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_cwd">https://nodejs.org/api/process.html#process_process_cwd</a>
 
 </dd>
-<a id="disconnect"></a>
+</div>
+<div id="disconnect">
 <dt><pre><span class="Keyword">func</span> <a href="#disconnect"><span class="Identifier">disconnect</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_disconnect">https://nodejs.org/api/process.html#process_process_disconnect</a>
 
 </dd>
-<a id="emitWarning,cstring"></a>
+</div>
+<div id="emitWarning,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#emitWarning%2Ccstring"><span class="Identifier">emitWarning</span></a><span class="Other">(</span><span class="Identifier">warning</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_emitwarning_warning_options">https://nodejs.org/api/process.html#process_process_emitwarning_warning_options</a>
 
 </dd>
-<a id="emitWarning,cstring,cstring,cstring"></a>
+</div>
+<div id="emitWarning,cstring,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#emitWarning%2Ccstring%2Ccstring"><span class="Identifier">emitWarning</span></a><span class="Other">(</span><span class="Identifier">warning</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor">https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor</a>
+
+</dd>
+</div>
+<div id="emitWarning,cstring,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#emitWarning%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">emitWarning</span></a><span class="Other">(</span><span class="Identifier">warning</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -520,70 +537,96 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor">https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor</a>
 
 </dd>
-<a id="emitWarning,cstring,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#emitWarning%2Ccstring%2Ccstring"><span class="Identifier">emitWarning</span></a><span class="Other">(</span><span class="Identifier">warning</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor">https://nodejs.org/api/process.html#process_process_emitwarning_warning_type_code_ctor</a>
-
-</dd>
-<a id="exit"></a>
+</div>
+<div id="exit">
 <dt><pre><span class="Keyword">func</span> <a href="#exit"><span class="Identifier">exit</span></a><span class="Other">(</span><span class="Identifier">code</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_exit_code">https://nodejs.org/api/process.html#process_process_exit_code</a>
 
 </dd>
-<a id="getegid"></a>
+</div>
+<div id="getegid">
 <dt><pre><span class="Keyword">func</span> <a href="#getegid"><span class="Identifier">getegid</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_getegid">https://nodejs.org/api/process.html#process_process_getegid</a>
 
 </dd>
-<a id="getgroups"></a>
+</div>
+<div id="getgroups">
 <dt><pre><span class="Keyword">func</span> <a href="#getgroups"><span class="Identifier">getgroups</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_getgroups">https://nodejs.org/api/process.html#process_process_getgroups</a>
 
 </dd>
-<a id="getuid"></a>
+</div>
+<div id="getPid">
+<dt><pre><span class="Keyword">func</span> <a href="#getPid"><span class="Identifier">getPid</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.pid@&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="getuid">
 <dt><pre><span class="Keyword">func</span> <a href="#getuid"><span class="Identifier">getuid</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_getuid">https://nodejs.org/api/process.html#process_process_getuid</a>
 
 </dd>
-<a id="hasUncaughtExceptionCaptureCallback"></a>
+</div>
+<div id="hasUncaughtExceptionCaptureCallback">
 <dt><pre><span class="Keyword">func</span> <a href="#hasUncaughtExceptionCaptureCallback"><span class="Identifier">hasUncaughtExceptionCaptureCallback</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_hasuncaughtexceptioncapturecallback">https://nodejs.org/api/process.html#process_process_hasuncaughtexceptioncapturecallback</a>
 
 </dd>
-<a id="hrtime,openArray[cint]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#hrtime%2CopenArray%5Bcint%5D"><span class="Identifier">hrtime</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_hrtime_time">https://nodejs.org/api/process.html#process_process_hrtime_time</a>
-
-</dd>
-<a id="hrtime"></a>
+</div>
+<div id="hrtime">
 <dt><pre><span class="Keyword">func</span> <a href="#hrtime"><span class="Identifier">hrtime</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_hrtime_time">https://nodejs.org/api/process.html#process_process_hrtime_time</a>
 
 </dd>
-<a id="hrtimeBigint"></a>
+</div>
+<div id="hrtime,openArray[cint]">
+<dt><pre><span class="Keyword">func</span> <a href="#hrtime%2CopenArray%5Bcint%5D"><span class="Identifier">hrtime</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_hrtime_time">https://nodejs.org/api/process.html#process_process_hrtime_time</a>
+
+</dd>
+</div>
+<div id="hrtimeBigint">
 <dt><pre><span class="Keyword">func</span> <a href="#hrtimeBigint"><span class="Identifier">hrtimeBigint</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(process.hrtime.bigint())&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_hrtime_bigint">https://nodejs.org/api/process.html#process_process_hrtime_bigint</a>
 
 </dd>
-<a id="initgroups,cstring,cstring"></a>
+</div>
+<div id="importProcess">
+<dt><pre><span class="Keyword">func</span> <a href="#importProcess"><span class="Identifier">importProcess</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as process from \'process\'@&quot;</span>.}</pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+</div>
+<div id="initgroups,cint,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#initgroups%2Ccint%2Ccint"><span class="Identifier">initgroups</span></a><span class="Other">(</span><span class="Identifier">user</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">extraGroup</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup">https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup</a>
+
+</dd>
+</div>
+<div id="initgroups,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#initgroups%2Ccstring%2Ccstring"><span class="Identifier">initgroups</span></a><span class="Other">(</span><span class="Identifier">user</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">extraGroup</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -591,28 +634,32 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup">https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup</a>
 
 </dd>
-<a id="initgroups,cint,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#initgroups%2Ccint%2Ccint"><span class="Identifier">initgroups</span></a><span class="Other">(</span><span class="Identifier">user</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">extraGroup</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup">https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup</a>
-
-</dd>
-<a id="kill,cint,cint"></a>
+</div>
+<div id="kill,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#kill%2Ccint%2Ccint"><span class="Identifier">kill</span></a><span class="Other">(</span><span class="Identifier">pid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">signal</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_kill_pid_signal">https://nodejs.org/api/process.html#process_process_kill_pid_signal</a>
 
 </dd>
-<a id="kill,cint,cstring"></a>
+</div>
+<div id="kill,cint,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#kill%2Ccint%2Ccstring"><span class="Identifier">kill</span></a><span class="Other">(</span><span class="Identifier">pid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">signal</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_kill_pid_signal">https://nodejs.org/api/process.html#process_process_kill_pid_signal</a>
 
 </dd>
-<a id="reportWriteReport,cstring"></a>
+</div>
+<div id="reportWriteReport">
+<dt><pre><span class="Keyword">func</span> <a href="#reportWriteReport"><span class="Identifier">reportWriteReport</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.report.writeReport()&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_report_writereport_filename_err">https://nodejs.org/api/process.html#process_process_report_writereport_filename_err</a>
+
+</dd>
+</div>
+<div id="reportWriteReport,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#reportWriteReport%2Ccstring"><span class="Identifier">reportWriteReport</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.report.writeReport(#)&quot;</span>.}</pre></dt>
 <dd>
@@ -620,111 +667,119 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/process.html#process_process_report_writereport_filename_err">https://nodejs.org/api/process.html#process_process_report_writereport_filename_err</a>
 
 </dd>
-<a id="reportWriteReport"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#reportWriteReport"><span class="Identifier">reportWriteReport</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.report.writeReport()&quot;</span>.}</pre></dt>
+</div>
+<div id="requireProcess">
+<dt><pre><span class="Keyword">func</span> <a href="#requireProcess"><span class="Identifier">requireProcess</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const process = require(\'process\')@&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_report_writereport_filename_err">https://nodejs.org/api/process.html#process_process_report_writereport_filename_err</a>
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
 
 </dd>
-<a id="setegid,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setegid%2Ccstring"><span class="Identifier">setegid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setegid_id">https://nodejs.org/api/process.html#process_process_setegid_id</a>
-
-</dd>
-<a id="setegid,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setegid%2Ccint"><span class="Identifier">setegid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setegid_id">https://nodejs.org/api/process.html#process_process_setegid_id</a>
-
-</dd>
-<a id="seteuid,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#seteuid%2Ccstring"><span class="Identifier">seteuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_seteuid_id">https://nodejs.org/api/process.html#process_process_seteuid_id</a>
-
-</dd>
-<a id="seteuid,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#seteuid%2Ccint"><span class="Identifier">seteuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_seteuid_id">https://nodejs.org/api/process.html#process_process_seteuid_id</a>
-
-</dd>
-<a id="setgid,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setgid%2Ccint"><span class="Identifier">setgid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgid_id">https://nodejs.org/api/process.html#process_process_setgid_id</a>
-
-</dd>
-<a id="setgid,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setgid%2Ccstring"><span class="Identifier">setgid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgid_id">https://nodejs.org/api/process.html#process_process_setgid_id</a>
-
-</dd>
-<a id="setgroups,openArray[cint]"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setgroups%2CopenArray%5Bcint%5D"><span class="Identifier">setgroups</span></a><span class="Other">(</span><span class="Identifier">groups</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgroups_groups">https://nodejs.org/api/process.html#process_process_setgroups_groups</a>
-
-</dd>
-<a id="setuid,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setuid%2Ccint"><span class="Identifier">setuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setuid_id">https://nodejs.org/api/process.html#process_process_setuid_id</a>
-
-</dd>
-<a id="setuid,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#setuid%2Ccstring"><span class="Identifier">setuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setuid_id">https://nodejs.org/api/process.html#process_process_setuid_id</a>
-
-</dd>
-<a id="umask,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#umask%2Ccstring"><span class="Identifier">umask</span></a><span class="Other">(</span><span class="Identifier">mask</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_umask_mask">https://nodejs.org/api/process.html#process_process_umask_mask</a>
-
-</dd>
-<a id="umask,cint"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#umask%2Ccint"><span class="Identifier">umask</span></a><span class="Other">(</span><span class="Identifier">mask</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_umask_mask">https://nodejs.org/api/process.html#process_process_umask_mask</a>
-
-</dd>
-<a id="uptimeProcess"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#uptimeProcess"><span class="Identifier">uptimeProcess</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.uptime()&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/process.html#process_process_uptime">https://nodejs.org/api/process.html#process_process_uptime</a>
-
-</dd>
-<a id="resourceUsage"></a>
+</div>
+<div id="resourceUsage">
 <dt><pre><span class="Keyword">func</span> <a href="#resourceUsage"><span class="Identifier">resourceUsage</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1()&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="getPid"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#getPid"><span class="Identifier">getPid</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.pid@&quot;</span>.}</pre></dt>
+</div>
+<div id="setegid,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#setegid%2Ccint"><span class="Identifier">setegid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
-
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setegid_id">https://nodejs.org/api/process.html#process_process_setegid_id</a>
 
 </dd>
+</div>
+<div id="setegid,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#setegid%2Ccstring"><span class="Identifier">setegid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setegid_id">https://nodejs.org/api/process.html#process_process_setegid_id</a>
+
+</dd>
+</div>
+<div id="seteuid,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#seteuid%2Ccint"><span class="Identifier">seteuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_seteuid_id">https://nodejs.org/api/process.html#process_process_seteuid_id</a>
+
+</dd>
+</div>
+<div id="seteuid,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#seteuid%2Ccstring"><span class="Identifier">seteuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_seteuid_id">https://nodejs.org/api/process.html#process_process_seteuid_id</a>
+
+</dd>
+</div>
+<div id="setgid,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#setgid%2Ccint"><span class="Identifier">setgid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgid_id">https://nodejs.org/api/process.html#process_process_setgid_id</a>
+
+</dd>
+</div>
+<div id="setgid,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#setgid%2Ccstring"><span class="Identifier">setgid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgid_id">https://nodejs.org/api/process.html#process_process_setgid_id</a>
+
+</dd>
+</div>
+<div id="setgroups,openArray[cint]">
+<dt><pre><span class="Keyword">func</span> <a href="#setgroups%2CopenArray%5Bcint%5D"><span class="Identifier">setgroups</span></a><span class="Other">(</span><span class="Identifier">groups</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setgroups_groups">https://nodejs.org/api/process.html#process_process_setgroups_groups</a>
+
+</dd>
+</div>
+<div id="setuid,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#setuid%2Ccint"><span class="Identifier">setuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setuid_id">https://nodejs.org/api/process.html#process_process_setuid_id</a>
+
+</dd>
+</div>
+<div id="setuid,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#setuid%2Ccstring"><span class="Identifier">setuid</span></a><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_setuid_id">https://nodejs.org/api/process.html#process_process_setuid_id</a>
+
+</dd>
+</div>
+<div id="umask,cint">
+<dt><pre><span class="Keyword">func</span> <a href="#umask%2Ccint"><span class="Identifier">umask</span></a><span class="Other">(</span><span class="Identifier">mask</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_umask_mask">https://nodejs.org/api/process.html#process_process_umask_mask</a>
+
+</dd>
+</div>
+<div id="umask,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#umask%2Ccstring"><span class="Identifier">umask</span></a><span class="Other">(</span><span class="Identifier">mask</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.$1(#)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_umask_mask">https://nodejs.org/api/process.html#process_process_umask_mask</a>
+
+</dd>
+</div>
+<div id="uptimeProcess">
+<dt><pre><span class="Keyword">func</span> <a href="#uptimeProcess"><span class="Identifier">uptimeProcess</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;process.uptime()&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/process.html#process_process_uptime">https://nodejs.org/api/process.html#process_process_uptime</a>
+
+</dd>
+</div>
 
 </dl></div>
 
@@ -735,7 +790,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-03 15:11:47 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-08 18:59:58 UTC</small>
       </div>
     </div>
   </div>
