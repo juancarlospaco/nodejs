@@ -1,3 +1,4 @@
+## - Utils for https://nim-lang.github.io/Nim/jsre.html
 from std/jsre import RegExp
 
 template groups*(self: RegExp; input: cstring; groups: varargs[var cstring]) =
