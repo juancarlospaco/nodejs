@@ -109,40 +109,9 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">strictEqual
-      <li><a class="reference" href="#strictEqual%2Cauto%2Cauto%2Ccstring"
-    title="strictEqual(actual, expected: auto; message: cstring)">strictEqual(actual, expected: auto; message: cstring)</a></li>
-  <li><a class="reference" href="#strictEqual%2Cauto%2Cauto"
-    title="strictEqual(actual, expected: auto)">strictEqual(actual, expected: auto)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">$
+      <ul class="simple nested-toc-section">$
       <li><a class="reference" href="#%24%2CCallTracker"
     title="`$`(self: CallTracker): string">`$`(self: CallTracker): string</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">report
-      <li><a class="reference" href="#report%2CCallTracker"
-    title="report(self: CallTracker): JsObject">report(self: CallTracker): JsObject</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">deepStrictEqual
-      <li><a class="reference" href="#deepStrictEqual%2Cauto%2Cauto%2Ccstring"
-    title="deepStrictEqual(actual: auto; expected: auto; message: cstring)">deepStrictEqual(actual: auto; expected: auto; message: cstring)</a></li>
-  <li><a class="reference" href="#deepStrictEqual%2Cauto%2Cauto"
-    title="deepStrictEqual(actual: auto; expected: auto)">deepStrictEqual(actual: auto; expected: auto)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">requireAssert
-      <li><a class="reference" href="#requireAssert"
-    title="requireAssert()">requireAssert()</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">notStrictEqual
-      <li><a class="reference" href="#notStrictEqual%2Cauto%2Cauto%2Ccstring"
-    title="notStrictEqual(actual, expected: auto; message: cstring)">notStrictEqual(actual, expected: auto; message: cstring)</a></li>
-  <li><a class="reference" href="#notStrictEqual%2Cauto%2Cauto"
-    title="notStrictEqual(actual, expected: auto)">notStrictEqual(actual, expected: auto)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">calls
@@ -150,9 +119,45 @@ window.addEventListener('DOMContentLoaded', main);
     title="calls[T](self: CallTracker; fn: T; exact = 1.cint): T">calls[T](self: CallTracker; fn: T; exact = 1.cint): T</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">newCallTracker
-      <li><a class="reference" href="#newCallTracker"
-    title="newCallTracker(): CallTracker">newCallTracker(): CallTracker</a></li>
+  <ul class="simple nested-toc-section">deepStrictEqual
+      <li><a class="reference" href="#deepStrictEqual%2Cauto%2Cauto"
+    title="deepStrictEqual(actual: auto; expected: auto)">deepStrictEqual(actual: auto; expected: auto)</a></li>
+  <li><a class="reference" href="#deepStrictEqual%2Cauto%2Cauto%2Ccstring"
+    title="deepStrictEqual(actual: auto; expected: auto; message: cstring)">deepStrictEqual(actual: auto; expected: auto; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">doesNotMatch
+      <li><a class="reference" href="#doesNotMatch%2Ccstring%2CRegExp"
+    title="doesNotMatch(stryng: cstring; regexp: RegExp)">doesNotMatch(stryng: cstring; regexp: RegExp)</a></li>
+  <li><a class="reference" href="#doesNotMatch%2Ccstring%2CRegExp%2Ccstring"
+    title="doesNotMatch(stryng: cstring; regexp: RegExp; message: cstring)">doesNotMatch(stryng: cstring; regexp: RegExp; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">doesNotReject
+      <li><a class="reference" href="#doesNotReject%2CT%2CRegExp"
+    title="doesNotReject[T](asyncFunction: T; error: RegExp)">doesNotReject[T](asyncFunction: T; error: RegExp)</a></li>
+  <li><a class="reference" href="#doesNotReject%2CT%2CRegExp%2Ccstring"
+    title="doesNotReject[T](asyncFunction: T; error: RegExp; message: cstring)">doesNotReject[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
+  <li><a class="reference" href="#doesNotReject%2CT%2CT"
+    title="doesNotReject[T](asyncFunction: T; error: T)">doesNotReject[T](asyncFunction: T; error: T)</a></li>
+  <li><a class="reference" href="#doesNotReject%2CT%2CT%2Ccstring"
+    title="doesNotReject[T](asyncFunction: T; error: T; message: cstring)">doesNotReject[T](asyncFunction: T; error: T; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">doesNotThrow
+      <li><a class="reference" href="#doesNotThrow%2CT%2CRegExp"
+    title="doesNotThrow[T](function: T; error: RegExp)">doesNotThrow[T](function: T; error: RegExp)</a></li>
+  <li><a class="reference" href="#doesNotThrow%2CT%2CRegExp%2Ccstring"
+    title="doesNotThrow[T](function: T; error: RegExp; message: cstring)">doesNotThrow[T](function: T; error: RegExp; message: cstring)</a></li>
+  <li><a class="reference" href="#doesNotThrow%2CT%2CT"
+    title="doesNotThrow[T](function: T; error: T)">doesNotThrow[T](function: T; error: T)</a></li>
+  <li><a class="reference" href="#doesNotThrow%2CT%2CT%2Ccstring"
+    title="doesNotThrow[T](function: T; error: T; message: cstring)">doesNotThrow[T](function: T; error: T; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">ifError
+      <li><a class="reference" href="#ifError%2Cauto"
+    title="ifError(value: auto)">ifError(value: auto)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">importAssert
@@ -160,49 +165,11 @@ window.addEventListener('DOMContentLoaded', main);
     title="importAssert()">importAssert()</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">throws
-      <li><a class="reference" href="#throws%2CT%2CRegExp%2Ccstring"
-    title="throws[T](asyncFunction: T; error: RegExp; message: cstring)">throws[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#throws%2CT%2CRegExp"
-    title="throws[T](asyncFunction: T; error: RegExp)">throws[T](asyncFunction: T; error: RegExp)</a></li>
-  <li><a class="reference" href="#throws%2CT%2CT%2Ccstring"
-    title="throws[T](asyncFunction: T; error: T; message: cstring)">throws[T](asyncFunction: T; error: T; message: cstring)</a></li>
-  <li><a class="reference" href="#throws%2CT%2CT"
-    title="throws[T](asyncFunction: T; error: T)">throws[T](asyncFunction: T; error: T)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">toCstring
-      <li><a class="reference" href="#toCstring%2CCallTracker"
-    title="toCstring(self: CallTracker): cstring">toCstring(self: CallTracker): cstring</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">doesNotReject
-      <li><a class="reference" href="#doesNotReject%2CT%2CRegExp%2Ccstring"
-    title="doesNotReject[T](asyncFunction: T; error: RegExp; message: cstring)">doesNotReject[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#doesNotReject%2CT%2CRegExp"
-    title="doesNotReject[T](asyncFunction: T; error: RegExp)">doesNotReject[T](asyncFunction: T; error: RegExp)</a></li>
-  <li><a class="reference" href="#doesNotReject%2CT%2CT%2Ccstring"
-    title="doesNotReject[T](asyncFunction: T; error: T; message: cstring)">doesNotReject[T](asyncFunction: T; error: T; message: cstring)</a></li>
-  <li><a class="reference" href="#doesNotReject%2CT%2CT"
-    title="doesNotReject[T](asyncFunction: T; error: T)">doesNotReject[T](asyncFunction: T; error: T)</a></li>
-
-  </ul>
   <ul class="simple nested-toc-section">match
-      <li><a class="reference" href="#match%2Ccstring%2CRegExp%2Ccstring"
-    title="match(stryng: cstring; regexp: RegExp; message: cstring)">match(stryng: cstring; regexp: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#match%2Ccstring%2CRegExp"
+      <li><a class="reference" href="#match%2Ccstring%2CRegExp"
     title="match(stryng: cstring; regexp: RegExp)">match(stryng: cstring; regexp: RegExp)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">rejects
-      <li><a class="reference" href="#rejects%2CT%2CRegExp%2Ccstring"
-    title="rejects[T](asyncFunction: T; error: RegExp; message: cstring)">rejects[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#rejects%2CT%2CRegExp"
-    title="rejects[T](asyncFunction: T; error: RegExp)">rejects[T](asyncFunction: T; error: RegExp)</a></li>
-  <li><a class="reference" href="#rejects%2CT%2CT%2Ccstring"
-    title="rejects[T](asyncFunction: T; error: T; message: cstring)">rejects[T](asyncFunction: T; error: T; message: cstring)</a></li>
-  <li><a class="reference" href="#rejects%2CT%2CT"
-    title="rejects[T](asyncFunction: T; error: T)">rejects[T](asyncFunction: T; error: T)</a></li>
+  <li><a class="reference" href="#match%2Ccstring%2CRegExp%2Ccstring"
+    title="match(stryng: cstring; regexp: RegExp; message: cstring)">match(stryng: cstring; regexp: RegExp; message: cstring)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newAssertionError
@@ -214,46 +181,79 @@ window.addEventListener('DOMContentLoaded', main);
                   operator: cstring): cstring</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">ok
-      <li><a class="reference" href="#ok%2Cauto%2Ccstring"
-    title="ok(value: auto; message: cstring)">ok(value: auto; message: cstring)</a></li>
-  <li><a class="reference" href="#ok%2Cauto"
-    title="ok(value: auto)">ok(value: auto)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">ifError
-      <li><a class="reference" href="#ifError%2Cauto"
-    title="ifError(value: auto)">ifError(value: auto)</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">doesNotMatch
-      <li><a class="reference" href="#doesNotMatch%2Ccstring%2CRegExp%2Ccstring"
-    title="doesNotMatch(stryng: cstring; regexp: RegExp; message: cstring)">doesNotMatch(stryng: cstring; regexp: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#doesNotMatch%2Ccstring%2CRegExp"
-    title="doesNotMatch(stryng: cstring; regexp: RegExp)">doesNotMatch(stryng: cstring; regexp: RegExp)</a></li>
+  <ul class="simple nested-toc-section">newCallTracker
+      <li><a class="reference" href="#newCallTracker"
+    title="newCallTracker(): CallTracker">newCallTracker(): CallTracker</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">notDeepStrictEqual
-      <li><a class="reference" href="#notDeepStrictEqual%2Cauto%2Cauto%2Ccstring"
-    title="notDeepStrictEqual(actual, expected: auto; message: cstring)">notDeepStrictEqual(actual, expected: auto; message: cstring)</a></li>
-  <li><a class="reference" href="#notDeepStrictEqual%2Cauto%2Cauto"
+      <li><a class="reference" href="#notDeepStrictEqual%2Cauto%2Cauto"
     title="notDeepStrictEqual(actual, expected: auto)">notDeepStrictEqual(actual, expected: auto)</a></li>
+  <li><a class="reference" href="#notDeepStrictEqual%2Cauto%2Cauto%2Ccstring"
+    title="notDeepStrictEqual(actual, expected: auto; message: cstring)">notDeepStrictEqual(actual, expected: auto; message: cstring)</a></li>
 
   </ul>
-  <ul class="simple nested-toc-section">doesNotThrow
-      <li><a class="reference" href="#doesNotThrow%2CT%2CRegExp%2Ccstring"
-    title="doesNotThrow[T](function: T; error: RegExp; message: cstring)">doesNotThrow[T](function: T; error: RegExp; message: cstring)</a></li>
-  <li><a class="reference" href="#doesNotThrow%2CT%2CT%2Ccstring"
-    title="doesNotThrow[T](function: T; error: T; message: cstring)">doesNotThrow[T](function: T; error: T; message: cstring)</a></li>
-  <li><a class="reference" href="#doesNotThrow%2CT%2CRegExp"
-    title="doesNotThrow[T](function: T; error: RegExp)">doesNotThrow[T](function: T; error: RegExp)</a></li>
-  <li><a class="reference" href="#doesNotThrow%2CT%2CT"
-    title="doesNotThrow[T](function: T; error: T)">doesNotThrow[T](function: T; error: T)</a></li>
+  <ul class="simple nested-toc-section">notStrictEqual
+      <li><a class="reference" href="#notStrictEqual%2Cauto%2Cauto"
+    title="notStrictEqual(actual, expected: auto)">notStrictEqual(actual, expected: auto)</a></li>
+  <li><a class="reference" href="#notStrictEqual%2Cauto%2Cauto%2Ccstring"
+    title="notStrictEqual(actual, expected: auto; message: cstring)">notStrictEqual(actual, expected: auto; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">ok
+      <li><a class="reference" href="#ok%2Cauto"
+    title="ok(value: auto)">ok(value: auto)</a></li>
+  <li><a class="reference" href="#ok%2Cauto%2Ccstring"
+    title="ok(value: auto; message: cstring)">ok(value: auto; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">rejects
+      <li><a class="reference" href="#rejects%2CT%2CRegExp"
+    title="rejects[T](asyncFunction: T; error: RegExp)">rejects[T](asyncFunction: T; error: RegExp)</a></li>
+  <li><a class="reference" href="#rejects%2CT%2CRegExp%2Ccstring"
+    title="rejects[T](asyncFunction: T; error: RegExp; message: cstring)">rejects[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
+  <li><a class="reference" href="#rejects%2CT%2CT"
+    title="rejects[T](asyncFunction: T; error: T)">rejects[T](asyncFunction: T; error: T)</a></li>
+  <li><a class="reference" href="#rejects%2CT%2CT%2Ccstring"
+    title="rejects[T](asyncFunction: T; error: T; message: cstring)">rejects[T](asyncFunction: T; error: T; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">report
+      <li><a class="reference" href="#report%2CCallTracker"
+    title="report(self: CallTracker): JsObject">report(self: CallTracker): JsObject</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">requireAssert
+      <li><a class="reference" href="#requireAssert"
+    title="requireAssert()">requireAssert()</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">requireAssertStrict
       <li><a class="reference" href="#requireAssertStrict"
     title="requireAssertStrict()">requireAssertStrict()</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">strictEqual
+      <li><a class="reference" href="#strictEqual%2Cauto%2Cauto"
+    title="strictEqual(actual, expected: auto)">strictEqual(actual, expected: auto)</a></li>
+  <li><a class="reference" href="#strictEqual%2Cauto%2Cauto%2Ccstring"
+    title="strictEqual(actual, expected: auto; message: cstring)">strictEqual(actual, expected: auto; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">throws
+      <li><a class="reference" href="#throws%2CT%2CRegExp"
+    title="throws[T](asyncFunction: T; error: RegExp)">throws[T](asyncFunction: T; error: RegExp)</a></li>
+  <li><a class="reference" href="#throws%2CT%2CRegExp%2Ccstring"
+    title="throws[T](asyncFunction: T; error: RegExp; message: cstring)">throws[T](asyncFunction: T; error: RegExp; message: cstring)</a></li>
+  <li><a class="reference" href="#throws%2CT%2CT"
+    title="throws[T](asyncFunction: T; error: T)">throws[T](asyncFunction: T; error: T)</a></li>
+  <li><a class="reference" href="#throws%2CT%2CT%2Ccstring"
+    title="throws[T](asyncFunction: T; error: T; message: cstring)">throws[T](asyncFunction: T; error: T; message: cstring)</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">toCstring
+      <li><a class="reference" href="#toCstring%2CCallTracker"
+    title="toCstring(self: CallTracker): cstring">toCstring(self: CallTracker): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">verify
@@ -293,26 +293,28 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
-<a id="CallTracker"></a>
+<div id="CallTracker">
 <dt><pre><a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span></pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_class_assert_calltracker">https://nodejs.org/api/assert.html#assert_class_assert_calltracker</a>
 
 </dd>
+</div>
 
 </dl></div>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<a id="newCallTracker"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newCallTracker"><span class="Identifier">newCallTracker</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new assert.CallTracker())&quot;</span>.}</pre></dt>
+<div id="$,CallTracker">
+<dt><pre><span class="Keyword">func</span> <a href="#%24%2CCallTracker"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_calltracker">https://nodejs.org/api/assert.html#assert_new_assert_calltracker</a>
+
 
 </dd>
-<a id="calls,CallTracker,T"></a>
+</div>
+<div id="calls,CallTracker,T">
 <dt><pre><span class="Keyword">func</span> <a href="#calls%2CCallTracker%2CT"><span class="Identifier">calls</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">;</span> <span class="Identifier">fn</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">exact</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -320,57 +322,16 @@ window.addEventListener('DOMContentLoaded', main);
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact">https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact</a>
 
 </dd>
-<a id="report,CallTracker"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#report%2CCallTracker"><span class="Identifier">report</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+</div>
+<div id="deepStrictEqual,auto,auto">
+<dt><pre><span class="Keyword">func</span> <a href="#deepStrictEqual%2Cauto%2Cauto"><span class="Identifier">deepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_report">https://nodejs.org/api/assert.html#assert_tracker_report</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message</a>
 
 </dd>
-<a id="verify,CallTracker"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#verify%2CCallTracker"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_verify">https://nodejs.org/api/assert.html#assert_tracker_verify</a>
-
-</dd>
-<a id="importAssert"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#importAssert"><span class="Identifier">importAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as assert from \'assert\'@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="requireAssert"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireAssert"><span class="Identifier">requireAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\')@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="requireAssertStrict"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#requireAssertStrict"><span class="Identifier">requireAssertStrict</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\').strict@&quot;</span>.}</pre></dt>
-<dd>
-
-Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
-
-</dd>
-<a id="newAssertionError"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({}))&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
-
-</dd>
-<a id="newAssertionError,cstring,auto,auto,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError%2Ccstring%2Cauto%2Cauto%2Ccstring"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span>
-                       <span class="Identifier">operator</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
-
-</dd>
-<a id="deepStrictEqual,auto,auto,cstring"></a>
+</div>
+<div id="deepStrictEqual,auto,auto,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#deepStrictEqual%2Cauto%2Cauto%2Ccstring"><span class="Identifier">deepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -378,14 +339,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message</a>
 
 </dd>
-<a id="deepStrictEqual,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#deepStrictEqual%2Cauto%2Cauto"><span class="Identifier">deepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="doesNotMatch,cstring,RegExp">
+<dt><pre><span class="Keyword">func</span> <a href="#doesNotMatch%2Ccstring%2CRegExp"><span class="Identifier">doesNotMatch</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_deepstrictequal_actual_expected_message</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message</a>
 
 </dd>
-<a id="doesNotMatch,cstring,RegExp,cstring"></a>
+</div>
+<div id="doesNotMatch,cstring,RegExp,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotMatch%2Ccstring%2CRegExp%2Ccstring"><span class="Identifier">doesNotMatch</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -393,22 +356,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message</a>
 
 </dd>
-<a id="doesNotMatch,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#doesNotMatch%2Ccstring%2CRegExp"><span class="Identifier">doesNotMatch</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_doesnotmatch_string_regexp_message</a>
-
-</dd>
-<a id="doesNotReject,T,RegExp,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CRegExp%2Ccstring"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
-
-</dd>
-<a id="doesNotReject,T,RegExp"></a>
+</div>
+<div id="doesNotReject,T,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CRegExp"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -416,7 +365,25 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
 
 </dd>
-<a id="doesNotReject,T,T,cstring"></a>
+</div>
+<div id="doesNotReject,T,RegExp,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CRegExp%2Ccstring"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
+
+</dd>
+</div>
+<div id="doesNotReject,T,T">
+<dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CT"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
+
+</dd>
+</div>
+<div id="doesNotReject,T,T,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CT%2Ccstring"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -424,14 +391,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
 
 </dd>
-<a id="doesNotReject,T,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CT"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="doesNotThrow,T,RegExp">
+<dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CRegExp"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotreject_asyncfn_error_message</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
 
 </dd>
-<a id="doesNotThrow,T,RegExp,cstring"></a>
+</div>
+<div id="doesNotThrow,T,RegExp,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CRegExp%2Ccstring"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -439,7 +408,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
 
 </dd>
-<a id="doesNotThrow,T,T,cstring"></a>
+</div>
+<div id="doesNotThrow,T,T">
+<dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CT"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
+
+</dd>
+</div>
+<div id="doesNotThrow,T,T,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CT%2Ccstring"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -447,43 +425,32 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
 
 </dd>
-<a id="doesNotThrow,T,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CRegExp"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
-
-</dd>
-<a id="doesNotThrow,T,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CT"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_doesnotthrow_fn_error_message</a>
-
-</dd>
-<a id="strictEqual,auto,auto,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#strictEqual%2Cauto%2Cauto%2Ccstring"><span class="Identifier">strictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message</a>
-
-</dd>
-<a id="strictEqual,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#strictEqual%2Cauto%2Cauto"><span class="Identifier">strictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message</a>
-
-</dd>
-<a id="ifError,auto"></a>
+</div>
+<div id="ifError,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#ifError%2Cauto"><span class="Identifier">ifError</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_iferror_value">https://nodejs.org/api/assert.html#assert_assert_iferror_value</a>
 
 </dd>
-<a id="match,cstring,RegExp,cstring"></a>
+</div>
+<div id="importAssert">
+<dt><pre><span class="Keyword">func</span> <a href="#importAssert"><span class="Identifier">importAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as assert from \'assert\'@&quot;</span>.}</pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+</div>
+<div id="match,cstring,RegExp">
+<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message</a>
+
+</dd>
+</div>
+<div id="match,cstring,RegExp,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp%2Ccstring"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -491,14 +458,41 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message</a>
 
 </dd>
-<a id="match,cstring,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="newAssertionError">
+<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({}))&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message">https://nodejs.org/api/assert.html#assert_assert_match_string_regexp_message</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
 
 </dd>
-<a id="notDeepStrictEqual,auto,auto,cstring"></a>
+</div>
+<div id="newAssertionError,cstring,auto,auto,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#newAssertionError%2Ccstring%2Cauto%2Cauto%2Ccstring"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span>
+                       <span class="Identifier">operator</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options">https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options</a>
+
+</dd>
+</div>
+<div id="newCallTracker">
+<dt><pre><span class="Keyword">func</span> <a href="#newCallTracker"><span class="Identifier">newCallTracker</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new assert.CallTracker())&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_new_assert_calltracker">https://nodejs.org/api/assert.html#assert_new_assert_calltracker</a>
+
+</dd>
+</div>
+<div id="notDeepStrictEqual,auto,auto">
+<dt><pre><span class="Keyword">func</span> <a href="#notDeepStrictEqual%2Cauto%2Cauto"><span class="Identifier">notDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message</a>
+
+</dd>
+</div>
+<div id="notDeepStrictEqual,auto,auto,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#notDeepStrictEqual%2Cauto%2Cauto%2Ccstring"><span class="Identifier">notDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -506,14 +500,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message</a>
 
 </dd>
-<a id="notDeepStrictEqual,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#notDeepStrictEqual%2Cauto%2Cauto"><span class="Identifier">notDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="notStrictEqual,auto,auto">
+<dt><pre><span class="Keyword">func</span> <a href="#notStrictEqual%2Cauto%2Cauto"><span class="Identifier">notStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notdeepstrictequal_actual_expected_message</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message</a>
 
 </dd>
-<a id="notStrictEqual,auto,auto,cstring"></a>
+</div>
+<div id="notStrictEqual,auto,auto,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#notStrictEqual%2Cauto%2Cauto%2Ccstring"><span class="Identifier">notStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -521,28 +517,32 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message</a>
 
 </dd>
-<a id="notStrictEqual,auto,auto"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#notStrictEqual%2Cauto%2Cauto"><span class="Identifier">notStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_notstrictequal_actual_expected_message</a>
-
-</dd>
-<a id="ok,auto,cstring"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#ok%2Cauto%2Ccstring"><span class="Identifier">ok</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_ok_value_message">https://nodejs.org/api/assert.html#assert_assert_ok_value_message</a>
-
-</dd>
-<a id="ok,auto"></a>
+</div>
+<div id="ok,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#ok%2Cauto"><span class="Identifier">ok</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_ok_value_message">https://nodejs.org/api/assert.html#assert_assert_ok_value_message</a>
 
 </dd>
-<a id="rejects,T,RegExp,cstring"></a>
+</div>
+<div id="ok,auto,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#ok%2Cauto%2Ccstring"><span class="Identifier">ok</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_ok_value_message">https://nodejs.org/api/assert.html#assert_assert_ok_value_message</a>
+
+</dd>
+</div>
+<div id="rejects,T,RegExp">
+<dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CRegExp"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message</a>
+
+</dd>
+</div>
+<div id="rejects,T,RegExp,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CRegExp%2Ccstring"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -550,14 +550,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message</a>
 
 </dd>
-<a id="rejects,T,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CRegExp"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="rejects,T,T">
+<dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CT"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message</a>
 
 </dd>
-<a id="rejects,T,T,cstring"></a>
+</div>
+<div id="rejects,T,T,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CT%2Ccstring"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -565,14 +567,57 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message</a>
 
 </dd>
-<a id="rejects,T,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CT"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="report,CallTracker">
+<dt><pre><span class="Keyword">func</span> <a href="#report%2CCallTracker"><span class="Identifier">report</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message">https://nodejs.org/api/assert.html#assert_assert_rejects_asyncfn_error_message</a>
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_report">https://nodejs.org/api/assert.html#assert_tracker_report</a>
 
 </dd>
-<a id="throws,T,RegExp,cstring"></a>
+</div>
+<div id="requireAssert">
+<dt><pre><span class="Keyword">func</span> <a href="#requireAssert"><span class="Identifier">requireAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\')@&quot;</span>.}</pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+</div>
+<div id="requireAssertStrict">
+<dt><pre><span class="Keyword">func</span> <a href="#requireAssertStrict"><span class="Identifier">requireAssertStrict</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\').strict@&quot;</span>.}</pre></dt>
+<dd>
+
+Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
+
+</dd>
+</div>
+<div id="strictEqual,auto,auto">
+<dt><pre><span class="Keyword">func</span> <a href="#strictEqual%2Cauto%2Cauto"><span class="Identifier">strictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message</a>
+
+</dd>
+</div>
+<div id="strictEqual,auto,auto,cstring">
+<dt><pre><span class="Keyword">func</span> <a href="#strictEqual%2Cauto%2Cauto%2Ccstring"><span class="Identifier">strictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message">https://nodejs.org/api/assert.html#assert_assert_equal_actual_expected_message</a>
+
+</dd>
+</div>
+<div id="throws,T,RegExp">
+<dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CRegExp"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+<dd>
+
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message</a>
+
+</dd>
+</div>
+<div id="throws,T,RegExp,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CRegExp%2Ccstring"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -580,14 +625,16 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message</a>
 
 </dd>
-<a id="throws,T,RegExp"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CRegExp"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
+</div>
+<div id="throws,T,T">
+<dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CT"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message</a>
 
 </dd>
-<a id="throws,T,T,cstring"></a>
+</div>
+<div id="throws,T,T,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CT%2Ccstring"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #, #)&quot;</span>.}</pre></dt>
 <dd>
@@ -595,27 +642,23 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message</a>
 
 </dd>
-<a id="throws,T,T"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CT"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span>.}</pre></dt>
-<dd>
-
-<a class="reference external" href="https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message">https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message</a>
-
-</dd>
-<a id="toCstring,CallTracker"></a>
+</div>
+<div id="toCstring,CallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring%2CCallTracker"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
-<a id="$,CallTracker"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#%24%2CCallTracker"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+</div>
+<div id="verify,CallTracker">
+<dt><pre><span class="Keyword">func</span> <a href="#verify%2CCallTracker"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
 <dd>
 
-
+<a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_verify">https://nodejs.org/api/assert.html#assert_tracker_verify</a>
 
 </dd>
+</div>
 
 </dl></div>
 
@@ -626,7 +669,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-07-03 15:11:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-08 18:59:54 UTC</small>
       </div>
     </div>
   </div>
