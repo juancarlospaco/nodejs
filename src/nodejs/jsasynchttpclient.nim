@@ -1,4 +1,4 @@
-## * Async HttpClient for JavaScript targets implemented as sugar on top of std/jsfetch.
+## * Async HttpClient for JavaScript targets implemented as sugar on top of `std/jsfetch <https://nim-lang.github.io/Nim/jsfetch>`_
 when not defined(js):
   {.fatal: "Module jsasynchttpclient is designed to be used with the JavaScript backend.".}
 
