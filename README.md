@@ -19,39 +19,39 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 # Documentation
 
 - :heavy_check_mark: Index, all in 1 page :arrow_right: https://juancarlospaco.github.io/nodejs
-- :heavy_check_mark: [assert](https://nodejs.org/api/assert.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsassert.html
-- :heavy_check_mark: [async_hooks](https://nodejs.org/api/async_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchooks.html
-- :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsprocess.html
-- :heavy_check_mark: [dns](https://nodejs.org/api/dns.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdns.html
-- :heavy_check_mark: [fs](https://nodejs.org/api/fs.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfs.html
-- :heavy_check_mark: [inspector](https://nodejs.org/api/inspector.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsinspector.html
-- :heavy_check_mark: [os](https://nodejs.org/api/os.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsos.html
-- :heavy_check_mark: [path](https://nodejs.org/api/path.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspath.html
-- :heavy_check_mark: [perf_hooks](https://nodejs.org/api/perf_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsperfhooks.html
-- :heavy_check_mark: [punycode](https://nodejs.org/api/punycode.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspunycode.html
-- :heavy_check_mark: [querystring](https://nodejs.org/api/querystring.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsquerystring.html
-- :heavy_check_mark: [util](https://nodejs.org/api/util.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsutils.html
-- :heavy_check_mark: [v8](https://nodejs.org/api/v8.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsv8.html
-- :heavy_check_mark: [zlib](https://nodejs.org/api/zlib.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jszlib.html
-- :heavy_check_mark: [readline](https://nodejs.org/api/readline.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreadline.html
-- :heavy_check_mark: [timers](https://nodejs.org/api/timers.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstimers.html
-- :heavy_check_mark: [repl](https://nodejs.org/api/repl.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsrepl.html
-- :heavy_check_mark: [url](https://nodejs.org/api/url.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsurl.html
-- :heavy_check_mark: [tracing](https://nodejs.org/api/tracing.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstracing.html
-- :heavy_check_mark: [module](https://nodejs.org/api/module.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsmodule.html
-- :heavy_check_mark: [domain](https://nodejs.org/api/domain.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdomain.html
-- :heavy_check_mark: [diagnostics_channel](https://nodejs.org/api/diagnostics_channel.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdiagnostics_channel.html
-- :heavy_check_mark: [wasi](https://nodejs.org/api/wasi.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswasi.html
-- :heavy_check_mark: [buffer](https://nodejs.org/api/buffer.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbuffer.html
-- :heavy_check_mark: [stream](https://nodejs.org/api/stream.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstream.html
-- :heavy_check_mark: [cluster](https://nodejs.org/api/cluster.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscluster.html
-- :heavy_check_mark: [http](https://nodejs.org/api/http.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp.html
-- :heavy_check_mark: [http2](https://nodejs.org/api/http2.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp2.html
-- :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads.html
-- :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl.html
-- :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments.html
-- :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes.html
-- :heavy_check_mark: Regex utils :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreutils.html
+- :heavy_check_mark: [assert](https://nodejs.org/api/assert.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsassert
+- :heavy_check_mark: [async_hooks](https://nodejs.org/api/async_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchooks
+- :heavy_check_mark: [process](https://nodejs.org/api/process.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsprocess
+- :heavy_check_mark: [dns](https://nodejs.org/api/dns.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdns
+- :heavy_check_mark: [fs](https://nodejs.org/api/fs.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfs
+- :heavy_check_mark: [inspector](https://nodejs.org/api/inspector.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsinspector
+- :heavy_check_mark: [os](https://nodejs.org/api/os.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsos
+- :heavy_check_mark: [path](https://nodejs.org/api/path.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspath
+- :heavy_check_mark: [perf_hooks](https://nodejs.org/api/perf_hooks.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsperfhooks
+- :heavy_check_mark: [punycode](https://nodejs.org/api/punycode.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspunycode
+- :heavy_check_mark: [querystring](https://nodejs.org/api/querystring.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsquerystring
+- :heavy_check_mark: [util](https://nodejs.org/api/util.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsutils
+- :heavy_check_mark: [v8](https://nodejs.org/api/v8.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsv8
+- :heavy_check_mark: [zlib](https://nodejs.org/api/zlib.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jszlib
+- :heavy_check_mark: [readline](https://nodejs.org/api/readline.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreadline
+- :heavy_check_mark: [timers](https://nodejs.org/api/timers.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstimers
+- :heavy_check_mark: [repl](https://nodejs.org/api/repl.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsrepl
+- :heavy_check_mark: [url](https://nodejs.org/api/url.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsurl
+- :heavy_check_mark: [tracing](https://nodejs.org/api/tracing.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstracing
+- :heavy_check_mark: [module](https://nodejs.org/api/module.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsmodule
+- :heavy_check_mark: [domain](https://nodejs.org/api/domain.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdomain
+- :heavy_check_mark: [diagnostics_channel](https://nodejs.org/api/diagnostics_channel.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdiagnostics_channel
+- :heavy_check_mark: [wasi](https://nodejs.org/api/wasi.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswasi
+- :heavy_check_mark: [buffer](https://nodejs.org/api/buffer.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbuffer
+- :heavy_check_mark: [stream](https://nodejs.org/api/stream.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstream
+- :heavy_check_mark: [cluster](https://nodejs.org/api/cluster.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscluster
+- :heavy_check_mark: [http](https://nodejs.org/api/http.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp
+- :heavy_check_mark: [http2](https://nodejs.org/api/http2.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp2
+- :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads
+- :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl
+- :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments
+- :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes
+- :heavy_check_mark: Regex utils :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreutils
 - :heavy_check_mark: HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttpclient
 - :heavy_check_mark: Async HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchttpclient
 - :heavy_check_mark: [Google ZX](https://juancarlospaco.github.io/nodejs/nodejs/jszx.html)
