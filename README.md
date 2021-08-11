@@ -53,7 +53,7 @@ use [NodeJS](https://nodejs.org) libraries with [Nim](http://nim-lang.org), etc.
 - :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes.html
 - :heavy_check_mark: Regex utils :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreutils.html
 - :heavy_check_mark: HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttpclient
-- :heavy_check_mark: Async HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/src/nodejs/jsasynchttpclient
+- :heavy_check_mark: Async HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchttpclient
 - :heavy_check_mark: [Google ZX](https://juancarlospaco.github.io/nodejs/nodejs/jszx.html)
 - :heavy_check_mark: [Compile-time macro-unrolled zero-overhead for loops.](https://juancarlospaco.github.io/nodejs/nodejs/jsunrolls.html)
 - :heavy_check_mark: [Compile-time zero-overhead strformat](https://juancarlospaco.github.io/nodejs/nodejs/jsstrformat.html)
