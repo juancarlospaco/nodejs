@@ -18,9 +18,9 @@
 
 <!-- CSS -->
 <title>src/nodejs/jsugar</title>
-<link rel="stylesheet" type="text/css" href="../nimdoc.out.css">
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
-<script type="text/javascript" src="../dochack.js"></script>
+<script type="text/javascript" src="dochack.js"></script>
 
 <script type="text/javascript">
 function main() {
@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', main);
   <div id="global-links">
     <ul class="simple">
     <li>
-      <a href="../theindex.html">Index</a>
+      <a href="theindex.html">Index</a>
     </li>
     </ul>
   </div>
@@ -201,6 +201,17 @@ window.addEventListener('DOMContentLoaded', main);
   <ul class="simple nested-toc-section">uuid5validate
       <li><a class="reference" href="#uuid5validate%2Ccstring"
     title="uuid5validate(uuidv5: cstring): bool">uuid5validate(uuidv5: cstring): bool</a></li>
+
+  </ul>
+
+  </ul>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#15" id="65">Iterators</a>
+  <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">backoff
+      <li><a class="reference" href="#backoff.i%2CT%2CT%2CT"
+    title="backoff[T: SomeNumber](a, b: T; factor: T = 2): T">backoff[T: SomeNumber](a, b: T; factor: T = 2): T</a></li>
 
   </ul>
 
@@ -534,6 +545,28 @@ Convenience func to validate 1 UUID v5 string.
 </div>
 
 </dl></div>
+<div class="section" id="15">
+<h1><a class="toc-backref" href="#15">Iterators</a></h1>
+<dl class="item">
+<div id="backoff.i,T,T,T">
+<dt><pre><span class="Keyword">iterator</span> <a href="#backoff.i%2CT%2CT%2CT"><span class="Identifier">backoff</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">factor</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential backoff</a>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">block</span><span class="Punctuation">:</span>
+  <span class="Keyword">var</span> <span class="Identifier">example</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span>
+  <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="Identifier">backoff</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">9</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">example</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">i</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">example</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">8</span><span class="Punctuation">]</span>
+<span class="Keyword">block</span><span class="Punctuation">:</span>
+  <span class="Keyword">var</span> <span class="Identifier">example</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">float</span><span class="Punctuation">]</span>
+  <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="Identifier">backoff</span><span class="Punctuation">(</span><span class="FloatNumber">1.0</span><span class="Punctuation">,</span> <span class="FloatNumber">9.9</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">example</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">i</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">example</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="FloatNumber">1.0</span><span class="Punctuation">,</span> <span class="FloatNumber">2.0</span><span class="Punctuation">,</span> <span class="FloatNumber">4.0</span><span class="Punctuation">,</span> <span class="FloatNumber">8.0</span><span class="Punctuation">]</span></pre>
+
+</dd>
+</div>
+
+</dl></div>
 <div class="section" id="18">
 <h1><a class="toc-backref" href="#18">Templates</a></h1>
 <dl class="item">
@@ -563,7 +596,7 @@ Convenience template for Anonymous Immediately Invoked Function Expressions.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-11 11:47:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-18 23:45:58 UTC</small>
       </div>
     </div>
   </div>
