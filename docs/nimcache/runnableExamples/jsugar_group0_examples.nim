@@ -5,3 +5,4 @@ import "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_ex
 import "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_2.nim"
 import "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_3.nim"
 import "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim"
+import "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim"

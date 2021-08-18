@@ -2571,6 +2571,9 @@ framePtr = F.prev;
 var F = {procname: "module jsugar", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
+var F = {procname: "module jsugar", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim", line: 0};
+framePtr = F;
+framePtr = F.prev;
 var F = {procname: "module jsugar_examples_1", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_1.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
@@ -2973,6 +2976,251 @@ framePtr = F.prev;
 var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
+
+function HEX2AHEX3D_872415264(x_872415266, x_872415266_Idx, y_872415267) {
+  var F = {procname: "*=.*=", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system/arithmetics.nim", line: 0};
+  framePtr = F;
+    F.line = 468;
+    x_872415266[x_872415266_Idx] = mulInt(x_872415266[x_872415266_Idx], y_872415267);
+  framePtr = F.prev;
+
+  
+}
+
+function HEX3DHEX3D_872415277(x_872415279, y_872415280) {
+  var result_872415281 = false;
+
+  var F = {procname: "==.==", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system/comparisons.nim", line: 0};
+  framePtr = F;
+  BeforeRet: do {
+    F.line = 301;
+    var sameObject_872415289 = false;
+    F.line = 302;
+    sameObject_872415289 = x_872415279 === y_872415280
+    if (sameObject_872415289) {
+    F.line = 303;
+    result_872415281 = true;
+    break BeforeRet;
+    }
+    
+    if (!(((x_872415279).length == (y_872415280).length))) {
+    F.line = 306;
+    result_872415281 = false;
+    break BeforeRet;
+    }
+    
+    Label1: do {
+      F.line = 308;
+      var i_872415303 = 0;
+      F.line = 75;
+      var colontmp__872415441 = 0;
+      F.line = 308;
+      colontmp__872415441 = subInt((x_872415279).length, 1);
+      F.line = 90;
+      var res_872415443 = 0;
+      Label2: do {
+        F.line = 91;
+          Label3: while (true) {
+          if (!(res_872415443 <= colontmp__872415441)) break Label3;
+            F.line = 308;
+            i_872415303 = res_872415443;
+            if (!((x_872415279[chckIndx(i_872415303, 0, (x_872415279).length - 1)] == y_872415280[chckIndx(i_872415303, 0, (y_872415280).length - 1)]))) {
+            F.line = 310;
+            result_872415281 = false;
+            break BeforeRet;
+            }
+            
+            F.line = 93;
+            res_872415443 = addInt(res_872415443, 1);
+          }
+      } while (false);
+    } while (false);
+    F.line = 312;
+    result_872415281 = true;
+    break BeforeRet;
+  } while (false);
+  framePtr = F.prev;
+
+  return result_872415281;
+
+}
+
+function HEX2AHEX3D_872415349(x_872415351, x_872415351_Idx, y_872415352) {
+  var F = {procname: "*=.*=", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system.nim", line: 0};
+  framePtr = F;
+    F.line = 2722;
+    x_872415351[x_872415351_Idx] = (x_872415351[x_872415351_Idx] * y_872415352);
+  framePtr = F.prev;
+
+  
+}
+
+function HEX3DHEX3D_872415362(x_872415364, y_872415365) {
+  var result_872415366 = false;
+
+  var F = {procname: "==.==", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system/comparisons.nim", line: 0};
+  framePtr = F;
+  BeforeRet: do {
+    F.line = 301;
+    var sameObject_872415374 = false;
+    F.line = 302;
+    sameObject_872415374 = x_872415364 === y_872415365
+    if (sameObject_872415374) {
+    F.line = 303;
+    result_872415366 = true;
+    break BeforeRet;
+    }
+    
+    if (!(((x_872415364).length == (y_872415365).length))) {
+    F.line = 306;
+    result_872415366 = false;
+    break BeforeRet;
+    }
+    
+    Label1: do {
+      F.line = 308;
+      var i_872415388 = 0;
+      F.line = 75;
+      var colontmp__872415446 = 0;
+      F.line = 308;
+      colontmp__872415446 = subInt((x_872415364).length, 1);
+      F.line = 90;
+      var res_872415447 = 0;
+      Label2: do {
+        F.line = 91;
+          Label3: while (true) {
+          if (!(res_872415447 <= colontmp__872415446)) break Label3;
+            F.line = 308;
+            i_872415388 = res_872415447;
+            if (!((x_872415364[chckIndx(i_872415388, 0, (x_872415364).length - 1)] == y_872415365[chckIndx(i_872415388, 0, (y_872415365).length - 1)]))) {
+            F.line = 310;
+            result_872415366 = false;
+            break BeforeRet;
+            }
+            
+            F.line = 93;
+            res_872415447 = addInt(res_872415447, 1);
+          }
+      } while (false);
+    } while (false);
+    F.line = 312;
+    result_872415366 = true;
+    break BeforeRet;
+  } while (false);
+  framePtr = F.prev;
+
+  return result_872415366;
+
+}
+var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+framePtr = F;
+Label2: do {
+  F.line = 173;
+  var example_872415234 = [[]];
+  Label3: do {
+    F.line = 173;
+    var i_872415268 = [0];
+    if (false) {
+    F.line = 183;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(183, 10) `\x0Aa < b` "));
+    }
+    
+    if (false) {
+    F.line = 185;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(185, 12) `\x0A  0 <= a and\x0A  0 <= b` a and b must be a non-zero positive integer"));
+    }
+    
+    if (false) {
+    F.line = 186;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(186, 12) `\x0A2 <= factor` factor must be >= 2"));
+    }
+    
+    F.line = 190;
+    var res_872415433 = [1];
+    Label4: do {
+      F.line = 191;
+        Label5: while (true) {
+        if (!(res_872415433[0] <= 9)) break Label5;
+          F.line = 173;
+          i_872415268[0] = res_872415433[0];
+          F.line = 173;
+          example_872415234[0].push(i_872415268[0]);;
+          F.line = 193;
+          HEX2AHEX3D_872415264(res_872415433, 0, 2);
+        }
+    } while (false);
+  } while (false);
+  if (!(HEX3DHEX3D_872415277(example_872415234[0], [1, 2, 4, 8]))) {
+  F.line = 173;
+  failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(11, 14) `example == @[1, 2, 4, 8]` "));
+  }
+  
+} while (false);
+Label6: do {
+  F.line = 173;
+  var example_872415309 = [[]];
+  Label7: do {
+    F.line = 173;
+    var i_872415353 = [0.0];
+    if (false) {
+    F.line = 183;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(183, 10) `\x0Aa < b` "));
+    }
+    
+    if (false) {
+    F.line = 185;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(185, 12) `\x0A  0 <= a and\x0A  0 <= b` a and b must be a non-zero positive integer"));
+    }
+    
+    if (false) {
+    F.line = 186;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(186, 12) `\x0A2 <= factor` factor must be >= 2"));
+    }
+    
+    if (false) {
+    F.line = 188;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(188, 12) `\x0A  0.0 <= a and\x0A  0.0 <= b` a and b must be a non-zero positive float"));
+    }
+    
+    if (false) {
+    F.line = 189;
+    failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/src/nodejs/jsugar.nim(189, 12) `\x0A2.0 <= factor` factor must be >= 2.0"));
+    }
+    
+    F.line = 190;
+    var res_872415438 = [1.0];
+    Label8: do {
+      F.line = 191;
+        Label9: while (true) {
+        if (!(res_872415438[0] <= 9.9)) break Label9;
+          F.line = 173;
+          i_872415353[0] = res_872415438[0];
+          F.line = 173;
+          example_872415309[0].push(i_872415353[0]);;
+          F.line = 193;
+          HEX2AHEX3D_872415349(res_872415438, 0, 2.0);
+        }
+    } while (false);
+  } while (false);
+  if (!(HEX3DHEX3D_872415362(example_872415309[0], [1.0, 2.0, 4.0, 8.0]))) {
+  F.line = 173;
+  failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(15, 14) `example == @[1.0, 2.0, 4.0, 8.0]` "));
+  }
+  
+} while (false);
+framePtr = F.prev;
+var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+framePtr = F;
+framePtr = F.prev;
+var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+framePtr = F;
+framePtr = F.prev;
+var F = {procname: "module jsugar_group0_examples", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_group0_examples.nim", line: 0};
+framePtr = F;
+framePtr = F.prev;
+var F = {procname: "module jsugar_examples_5", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim", line: 0};
+framePtr = F;
+framePtr = F.prev;
 var F = {procname: "module sugar", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/pure/sugar.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
@@ -3062,43 +3310,43 @@ function sparkline_587202576(numbers_587202577, minimum_587202578, maximum_58720
   
 }
 
-function HEX3DHEX3D_872415343(x_872415346, y_872415347) {
-  var result_872415348 = false;
+function HEX3DHEX3D_889192558(x_889192561, y_889192562) {
+  var result_889192563 = false;
 
   var F = {procname: "==.==", prev: framePtr, filename: "/home/runner/.choosenim/toolchains/nim-#devel/lib/system/comparisons.nim", line: 0};
   framePtr = F;
   BeforeRet: do {
     Label1: do {
       F.line = 270;
-      var f_872415367 = 0;
+      var f_889192582 = 0;
       F.line = 90;
-      var res_872415431 = 0;
+      var res_889192646 = 0;
       Label2: do {
         F.line = 91;
           Label3: while (true) {
-          if (!(res_872415431 <= 2)) break Label3;
+          if (!(res_889192646 <= 2)) break Label3;
             F.line = 270;
-            f_872415367 = chckRange(res_872415431, 0, 2);
-            if (!((x_872415346[chckIndx(f_872415367, 0, (x_872415346).length - 1)] == y_872415347[chckIndx(f_872415367, 0, (y_872415347).length - 1)]))) {
+            f_889192582 = chckRange(res_889192646, 0, 2);
+            if (!((x_889192561[chckIndx(f_889192582, 0, (x_889192561).length - 1)] == y_889192562[chckIndx(f_889192582, 0, (y_889192562).length - 1)]))) {
             F.line = 272;
             break BeforeRet;
             }
             
             F.line = 93;
-            res_872415431 = addInt(res_872415431, 1);
+            res_889192646 = addInt(res_889192646, 1);
           }
       } while (false);
     } while (false);
     F.line = 273;
-    result_872415348 = true;
+    result_889192563 = true;
   } while (false);
   framePtr = F.prev;
 
-  return result_872415348;
+  return result_889192563;
 
 }
-const HEX3Aanonymous_872415303 = (arg0_872415304, arg1_872415305) => {
-  var F = {procname: "jsugar_examples_4.:anonymous", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+const HEX3Aanonymous_889192518 = (arg0_889192519, arg1_889192520) => {
+  var F = {procname: "jsugar_examples_5.:anonymous", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim", line: 0};
   framePtr = F;
     F.line = 35;
     rawEcho(makeNimstrLit("JavaScript Arrow Function for Nim Arrow Functions"));
@@ -3106,75 +3354,75 @@ const HEX3Aanonymous_872415303 = (arg0_872415304, arg1_872415305) => {
 
   
 }
-var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+var F = {procname: "module jsugar_examples_5", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim", line: 0};
 framePtr = F;
 if (false) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(11, 12) `generate2FAcode() is cint` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(11, 12) `generate2FAcode() is cint` "));
 }
 
 if (!(!(  (() => {
     const UUID_RE1 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$", "i");
     return UUID_RE1.test("");
   })()))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(12, 3) `not uuid1validate(\"\".cstring)` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(12, 3) `not uuid1validate(\"\".cstring)` "));
 }
 
 if (!(!(  (() => {
     const UUID_RE4 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$", "i");
     return UUID_RE4.test("");
   })()))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(13, 3) `not uuid4validate(\"\".cstring)` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(13, 3) `not uuid4validate(\"\".cstring)` "));
 }
 
 if (!(!(  (() => {
     const UUID_RE5 = /^[0-9a-f]{8}-[0-9a-f]{4}-[5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     return UUID_RE5.test("");
   })()))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(14, 3) `not uuid5validate(\"\".cstring)` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(14, 3) `not uuid5validate(\"\".cstring)` "));
 }
 
 if (!(  (() => {
     const UUID_RE1 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$", "i");
     return UUID_RE1.test("e64cb2a6-3ff6-11eb-b378-0242ac130002");
   })())) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(15, 12) `uuid1validate(\"e64cb2a6-3ff6-11eb-b378-0242ac130002\".cstring)` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(15, 12) `uuid1validate(\"e64cb2a6-3ff6-11eb-b378-0242ac130002\".cstring)` "));
 }
 
 if (!(  (() => {
     const UUID_RE4 = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$", "i");
     return UUID_RE4.test("854fc25b-02f3-45cc-b521-516991b9bb99");
   })())) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(16, 12) `uuid4validate(\"854fc25b-02f3-45cc-b521-516991b9bb99\".cstring)` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(16, 12) `uuid4validate(\"854fc25b-02f3-45cc-b521-516991b9bb99\".cstring)` "));
 }
 
 if (false) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(17, 12) `nextDays() is seq[JsObject]` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(17, 12) `nextDays() is seq[JsObject]` "));
 }
 
 if (false) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(18, 12) `pastDays() is seq[JsObject]` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(18, 12) `pastDays() is seq[JsObject]` "));
 }
 
-F.line = 172;
+F.line = 196;
 var _ = sparkline_587202576(new Int32Array([1, 2, 3, 4, 5]), 0, 10);
-F.line = 172;
+F.line = 196;
 (() => {
-F.line = 172;
+F.line = 196;
 rawEcho(makeNimstrLit("Hello Immediately Invoked Function Expressions"));
-F.line = 172;
+F.line = 196;
 })();
-F.line = 172;
+F.line = 196;
 const constant = "This is a JavaScript 'const'!.";
-F.line = 172;
-var example2_872415307 = HEX3Aanonymous_872415303;
+F.line = 196;
+var example2_889192522 = HEX3Aanonymous_889192518;
 if (!((  (() => {
     const n = -9;
     if (/^(string|number)$/.test(typeof n) === false) { return n; }
@@ -3184,8 +3432,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "-9th"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(38, 12) `nth(-9.cint) == \"-9th\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(38, 12) `nth(-9.cint) == \"-9th\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3197,8 +3445,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "0th"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(39, 12) `nth(0.cint) == \"0th\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(39, 12) `nth(0.cint) == \"0th\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3210,8 +3458,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "9th"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(40, 12) `nth(9.cint) == \"9th\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(40, 12) `nth(9.cint) == \"9th\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3223,8 +3471,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "1st"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(41, 12) `nth(1.cint) == \"1st\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(41, 12) `nth(1.cint) == \"1st\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3236,8 +3484,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "42nd"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(42, 12) `nth(42.cint) == \"42nd\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(42, 12) `nth(42.cint) == \"42nd\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3249,8 +3497,8 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "420th"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(43, 12) `nth(420.cint) == \"420th\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(43, 12) `nth(420.cint) == \"420th\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3262,18 +3510,18 @@ if (!((  (() => {
     if (/1[123]$/.test(n)) { suffix = 'th'; }
     return n + suffix;
   })() == "666th"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(44, 12) `nth(666.cint) == \"666th\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(44, 12) `nth(666.cint) == \"666th\".cstring` "));
 }
 
-if (!(HEX3DHEX3D_872415343(  (() => { const n = parseInt("c0ffee", 16); return [n >> 16, n >> 8 & 255, n & 255] })(), new Int32Array([192, 255, 238])))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(46, 12) `toRGB(\"c0ffee\".cstring) == [192.cint, 255, 238]` "));
+if (!(HEX3DHEX3D_889192558(  (() => { const n = parseInt("c0ffee", 16); return [n >> 16, n >> 8 & 255, n & 255] })(), new Int32Array([192, 255, 238])))) {
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(46, 12) `toRGB(\"c0ffee\".cstring) == [192.cint, 255, 238]` "));
 }
 
 if (!((  (() => { const n = new Int32Array([192, 255, 238]); return ((n[2] | n[1] << 8 | n[0] << 16) | 1 << 24).toString(16).slice(1); })() == "c0ffee"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(47, 12) `toHex([192.cint, 255, 238]) == \"c0ffee\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(47, 12) `toHex([192.cint, 255, 238]) == \"c0ffee\".cstring` "));
 }
 
 if (!((("ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔ"
@@ -3284,8 +3532,8 @@ if (!((("ÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏ�
   .replace(/[\xE6]/g, "ae").replace(/[\xE7]/g, "c").replace(/[\xE8-\xEB]/g, "e")
   .replace(/[\xEC-\xEF]/g, "i").replace(/[\xF1]/g, "n").replace(/[\xF2-\xF6\xF8]/g, "o")
   .replace(/[\xF9-\xFC]/g, "u").replace(/[\xFE]/g, "p").replace(/[\xFD\xFF]/g, "y")) == "CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(49, 12) `removeAccents(\"\xC3\x87\xC3\xA1\xC3\xA9\xC3\xAD\xC3\xB3\xC3\xBA\xC3\xBD\xC3\x81\xC3\x89\xC3\x8D\xC3\x93\xC3\x9A\xC3\x9D\xC3\xA0\xC3\xA8\xC3\xAC\xC3\xB2\xC3\xB9\xC3\x80\xC3\x88\xC3\x8C\xC3\x92\xC3\x99\xC3\xA3\xC3\xB5\xC3\xB1\xC3\xA4\xC3\xAB\xC3\xAF\xC3\xB6\xC3\xBC\xC3\xBF\xC3\x84\xC3\x8B\xC3\x8F\xC3\x96\xC3\x9C\xC3\x83\xC3\x95\xC3\x91\xC3\xA2\xC3\xAA\xC3\xAE\xC3\xB4\xC3\xBB\xC3\x82\xC3\x8A\xC3\x8E\xC3\x94\".cstring) ==\x0A    \"CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(49, 12) `removeAccents(\"\xC3\x87\xC3\xA1\xC3\xA9\xC3\xAD\xC3\xB3\xC3\xBA\xC3\xBD\xC3\x81\xC3\x89\xC3\x8D\xC3\x93\xC3\x9A\xC3\x9D\xC3\xA0\xC3\xA8\xC3\xAC\xC3\xB2\xC3\xB9\xC3\x80\xC3\x88\xC3\x8C\xC3\x92\xC3\x99\xC3\xA3\xC3\xB5\xC3\xB1\xC3\xA4\xC3\xAB\xC3\xAF\xC3\xB6\xC3\xBC\xC3\xBF\xC3\x84\xC3\x8B\xC3\x8F\xC3\x96\xC3\x9C\xC3\x83\xC3\x95\xC3\x91\xC3\xA2\xC3\xAA\xC3\xAE\xC3\xB4\xC3\xBB\xC3\x82\xC3\x8A\xC3\x8E\xC3\x94\".cstring) ==\x0A    \"CaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIO\".cstring` "));
 }
 
 if (!((("È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç,Ã,ã,Õ,õ"
@@ -3296,8 +3544,8 @@ if (!((("È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,Ç,ç
   .replace(/[\xE6]/g, "ae").replace(/[\xE7]/g, "c").replace(/[\xE8-\xEB]/g, "e")
   .replace(/[\xEC-\xEF]/g, "i").replace(/[\xF1]/g, "n").replace(/[\xF2-\xF6\xF8]/g, "o")
   .replace(/[\xF9-\xFC]/g, "u").replace(/[\xFE]/g, "p").replace(/[\xFD\xFF]/g, "y")) == "E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o"))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(50, 12) `removeAccents(\"\xC3\x88,\xC3\x89,\xC3\x8A,\xC3\x8B,\xC3\x9B,\xC3\x99,\xC3\x8F,\xC3\x8E,\xC3\x80,\xC3\x82,\xC3\x94,\xC3\xA8,\xC3\xA9,\xC3\xAA,\xC3\xAB,\xC3\xBB,\xC3\xB9,\xC3\xAF,\xC3\xAE,\xC3\xA0,\xC3\xA2,\xC3\xB4,\xC3\x87,\xC3\xA7,\xC3\x83,\xC3\xA3,\xC3\x95,\xC3\xB5\".cstring) ==\x0A    \"E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o\".cstring` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(50, 12) `removeAccents(\"\xC3\x88,\xC3\x89,\xC3\x8A,\xC3\x8B,\xC3\x9B,\xC3\x99,\xC3\x8F,\xC3\x8E,\xC3\x80,\xC3\x82,\xC3\x94,\xC3\xA8,\xC3\xA9,\xC3\xAA,\xC3\xAB,\xC3\xBB,\xC3\xB9,\xC3\xAF,\xC3\xAE,\xC3\xA0,\xC3\xA2,\xC3\xB4,\xC3\x87,\xC3\xA7,\xC3\x83,\xC3\xA3,\xC3\x95,\xC3\xB5\".cstring) ==\x0A    \"E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,C,c,A,a,O,o\".cstring` "));
 }
 
 if (!((  (() => {
@@ -3330,15 +3578,15 @@ if (!((  (() => {
     }
     return result;
   })() == 1))) {
-F.line = 172;
-failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim(52, 12) `editDistanceAscii(\"Kitten\".cstring, \"Bitten\".cstring) == 1.cint` "));
+F.line = 196;
+failedAssertImpl_218103866(makeNimstrLit("/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim(52, 12) `editDistanceAscii(\"Kitten\".cstring, \"Bitten\".cstring) == 1.cint` "));
 }
 
 framePtr = F.prev;
-var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+var F = {procname: "module jsugar_examples_5", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
-var F = {procname: "module jsugar_examples_4", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_4.nim", line: 0};
+var F = {procname: "module jsugar_examples_5", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_examples_5.nim", line: 0};
 framePtr = F;
 framePtr = F.prev;
 var F = {procname: "module jsugar_group0_examples", prev: framePtr, filename: "/home/runner/work/nodejs/nodejs/docs/nimcache/runnableExamples/jsugar_group0_examples.nim", line: 0};
