@@ -1,6 +1,6 @@
 ## - Barcode and QR Code detection and parsing for JavaScript targets.
 ##
-## .. warning:: Experimental JavaScript API, we hope browsers support it someday, untested because it wont work at the time of writing it, and is not widely used yet.
+## .. warning:: Experimental JavaScript API, we hope browsers support it soon, untested because is not widely used at the time of writing it.
 when not defined(js):
   {.fatal: "Module jsbarcodes is designed to be used with the JavaScript backend.".}
 import std/[asyncjs, dom, jsffi]
