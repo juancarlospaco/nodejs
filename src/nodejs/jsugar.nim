@@ -168,6 +168,30 @@ func anyToCstring*(thing: auto): cstring {.importjs: "(new TextDecoder('utf-8').
 # func `?.`(leftSide: auto, rightSide: auto) {.importjs: "#?.#".}
 #   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
+iterator backoff*[T: SomeNumber](a, b: T; factor: T = 2): T =
+  ## `Exponential backoff <https://en.wikipedia.org/wiki/Exponential_backoff>`_
+  runnableExamples:
+    block:
+      var example: seq[int]
+      for i in backoff(1, 9): example.add i
+      doAssert example == @[1, 2, 4, 8]
+    block:
+      var example: seq[float]
+      for i in backoff(1.0, 9.9): example.add i
+      doAssert example == @[1.0, 2.0, 4.0, 8.0]
+
+  assert b > a
+  when a is SomeNumber and b is SomeNumber:
+    assert a >= 0 and b >= 0, "a and b must be a non-zero positive integer"
+    assert factor >= 2, "factor must be >= 2"
+  when a is SomeFloat and b is SomeFloat:
+    assert a >= 0.0 and b >= 0.0, "a and b must be a non-zero positive float"
+    assert factor >= 2.0, "factor must be >= 2.0"
+  var res = a
+  while res <= b:
+    yield res
+    res *= factor
+
 
 runnableExamples:
   from std/jsffi import JsObject
