@@ -37,6 +37,7 @@ jobs:
         nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
         rm --verbose docs/nodejs/*.idx
         rm --verbose --force --recursive docs/nimcache/*.*
+        rm --verbose --force --recursive docs/nimcache/runnableExamples/*.*
         mv --verbose docs/nodejs.html docs/index.html
 
     - name: Commit Docs
