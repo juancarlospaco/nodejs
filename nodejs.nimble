@@ -1,4 +1,4 @@
-version     = "16.5.0"
+version     = "16.7.0"
 author      = "Juan_Carlos.nim"
 description = "Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim"
 license     = "MIT"
