@@ -267,7 +267,7 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <div id="cork,StreamWritable">
-<dt><pre><span class="Keyword">func</span> <a href="#cork%2CStreamWritable"><span class="Identifier">cork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#cork%2CStreamWritable"><span class="Identifier">cork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_cork">https://nodejs.org/api/stream.html#stream_writable_cork</a>
@@ -276,7 +276,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="destroy">
 <dt><pre><span class="Keyword">func</span> <a href="#destroy"><span class="Identifier">destroy</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> <span class="Keyword">or</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_destroy_error">https://nodejs.org/api/stream.html#stream_writable_destroy_error</a>
@@ -285,7 +285,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="ends,StreamWritable,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#ends%2CStreamWritable%2Cauto"><span class="Identifier">ends</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">chunk</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.end(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.end(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_end_chunk_encoding_callback">https://nodejs.org/api/stream.html#stream_writable_end_chunk_encoding_callback</a>
@@ -294,7 +294,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="ends,StreamWritable,T">
 <dt><pre><span class="Keyword">func</span> <a href="#ends%2CStreamWritable%2CT"><span class="Identifier">ends</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.end(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.end(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_end_chunk_encoding_callback">https://nodejs.org/api/stream.html#stream_writable_end_chunk_encoding_callback</a>
@@ -303,7 +303,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="finished">
 <dt><pre><span class="Keyword">func</span> <a href="#finished"><span class="Identifier">finished</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> <span class="Keyword">or</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.finished(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.finished(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding">https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding</a>
@@ -312,7 +312,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="finished,,T">
 <dt><pre><span class="Keyword">func</span> <a href="#finished%2C%2CT"><span class="Identifier">finished</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> <span class="Keyword">or</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.finished(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.finished(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding">https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding</a>
@@ -320,7 +320,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="importStream">
-<dt><pre><span class="Keyword">func</span> <a href="#importStream"><span class="Identifier">importStream</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as stream from \'stream\'@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importStream"><span class="Identifier">importStream</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as stream from \'stream\'@&quot;</span><span class="Other">,</span>
+                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -328,7 +329,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="isPaused,StreamReadable">
-<dt><pre><span class="Keyword">func</span> <a href="#isPaused%2CStreamReadable"><span class="Identifier">isPaused</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isPaused%2CStreamReadable"><span class="Identifier">isPaused</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_ispaused">https://nodejs.org/api/stream.html#stream_readable_ispaused</a>
@@ -336,7 +338,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="pause,StreamReadable">
-<dt><pre><span class="Keyword">func</span> <a href="#pause%2CStreamReadable"><span class="Identifier">pause</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#pause%2CStreamReadable"><span class="Identifier">pause</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_pause">https://nodejs.org/api/stream.html#stream_readable_pause</a>
@@ -345,7 +348,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="pipe,StreamReadable,StreamWritable">
 <dt><pre><span class="Keyword">func</span> <a href="#pipe%2CStreamReadable%2CStreamWritable"><span class="Identifier">pipe</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">destination</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">ends</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {end: #})&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, {end: #})&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options">https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options</a>
@@ -354,7 +357,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="pipeline,StreamReadable,StreamWritable">
 <dt><pre><span class="Keyword">func</span> <a href="#pipeline%2CStreamReadable%2CStreamWritable"><span class="Identifier">pipeline</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">destination</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.pipeline(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.pipeline(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding">https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding</a>
@@ -363,7 +366,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="pipeline,StreamReadable,StreamWritable,T">
 <dt><pre><span class="Keyword">func</span> <a href="#pipeline%2CStreamReadable%2CStreamWritable%2CT"><span class="Identifier">pipeline</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">destination</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.pipeline(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;stream.pipeline(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding">https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding</a>
@@ -371,7 +374,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="read,StreamReadable">
-<dt><pre><span class="Keyword">func</span> <a href="#read%2CStreamReadable"><span class="Identifier">read</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#read%2CStreamReadable"><span class="Identifier">read</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_read_size">https://nodejs.org/api/stream.html#stream_readable_read_size</a>
@@ -379,7 +382,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="read,StreamReadable,int">
-<dt><pre><span class="Keyword">func</span> <a href="#read%2CStreamReadable%2Cint"><span class="Identifier">read</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#read%2CStreamReadable%2Cint"><span class="Identifier">read</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_read_size">https://nodejs.org/api/stream.html#stream_readable_read_size</a>
@@ -387,7 +391,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="refresh,StreamReadable">
-<dt><pre><span class="Keyword">func</span> <a href="#refresh%2CStreamReadable"><span class="Identifier">refresh</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.read(0)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#refresh%2CStreamReadable"><span class="Identifier">refresh</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.read(0)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+                                     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_read_0">https://nodejs.org/api/stream.html#stream_readable_read_0</a>
@@ -395,7 +400,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="requireStream">
-<dt><pre><span class="Keyword">func</span> <a href="#requireStream"><span class="Identifier">requireStream</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const stream = require(\'stream\')@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireStream"><span class="Identifier">requireStream</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const stream = require(\'stream\')@&quot;</span><span class="Other">,</span>
+                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -403,7 +409,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="resume,StreamReadable">
-<dt><pre><span class="Keyword">func</span> <a href="#resume%2CStreamReadable"><span class="Identifier">resume</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#resume%2CStreamReadable"><span class="Identifier">resume</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_resume">https://nodejs.org/api/stream.html#stream_readable_resume</a>
@@ -412,7 +419,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="setDefaultEncoding,StreamWritable,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#setDefaultEncoding%2CStreamWritable%2Ccstring"><span class="Identifier">setDefaultEncoding</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">encoding</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_setdefaultencoding_encoding">https://nodejs.org/api/stream.html#stream_writable_setdefaultencoding_encoding</a>
@@ -421,7 +428,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="setEncoding,StreamReadable,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#setEncoding%2CStreamReadable%2Ccstring"><span class="Identifier">setEncoding</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">encoding</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_setencoding_encoding">https://nodejs.org/api/stream.html#stream_readable_setencoding_encoding</a>
@@ -429,7 +436,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="uncork,StreamWritable">
-<dt><pre><span class="Keyword">func</span> <a href="#uncork%2CStreamWritable"><span class="Identifier">uncork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#uncork%2CStreamWritable"><span class="Identifier">uncork</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_uncork">https://nodejs.org/api/stream.html#stream_writable_uncork</a>
@@ -438,7 +445,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="unpipe,StreamReadable,StreamWritable">
 <dt><pre><span class="Keyword">func</span> <a href="#unpipe%2CStreamReadable%2CStreamWritable"><span class="Identifier">unpipe</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">destination</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unpipe_destination">https://nodejs.org/api/stream.html#stream_readable_unpipe_destination</a>
@@ -447,7 +454,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="unshift,StreamReadable,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#unshift%2CStreamReadable%2Cauto"><span class="Identifier">unshift</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamReadable"><span class="Identifier">StreamReadable</span></a><span class="Other">;</span> <span class="Identifier">chunk</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding">https://nodejs.org/api/stream.html#stream_readable_unshift_chunk_encoding</a>
@@ -456,7 +463,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="write,StreamWritable,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#write%2CStreamWritable%2Cauto"><span class="Identifier">write</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">chunk</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback">https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback</a>
@@ -464,7 +471,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="write,StreamWritable,T">
-<dt><pre><span class="Keyword">func</span> <a href="#write%2CStreamWritable%2CT"><span class="Identifier">write</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#write%2CStreamWritable%2CT"><span class="Identifier">write</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jstream.html#StreamWritable"><span class="Identifier">StreamWritable</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback">https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback</a>
@@ -481,7 +489,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-18 23:57:12 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-09-04 20:27:12 UTC</small>
       </div>
     </div>
   </div>

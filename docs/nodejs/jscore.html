@@ -436,7 +436,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="&&=,auto,auto">
-<dt><pre><span class="Keyword">func</span> <a href="#%26%26%3D%2Cauto%2Cauto"><span class="Identifier">`&amp;&amp;=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# &amp;&amp;= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%26%3D%2Cauto%2Cauto"><span class="Identifier">`&amp;&amp;=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# &amp;&amp;= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+                                  <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment</a>
@@ -444,7 +445,7 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="&,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -453,7 +454,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="&,char,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#%26%2Cchar%2Ccstring"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(String.fromCharCode(#) + #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(String.fromCharCode(#) + #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -462,7 +463,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="&,cstring,char">
 <dt><pre><span class="Keyword">func</span> <a href="#%26%2Ccstring%2Cchar"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + String.fromCharCode(#))&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# + String.fromCharCode(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -470,7 +471,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="??=,auto,auto">
-<dt><pre><span class="Keyword">func</span> <a href="#%3F%3F%3D%2Cauto%2Cauto"><span class="Identifier">`??=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ??= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%3F%3F%3D%2Cauto%2Cauto"><span class="Identifier">`??=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ??= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+                                  <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment</a>
@@ -479,7 +481,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="[]=,,Natural,uint8">
 <dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%3D%2C%2CNatural%2Cuint8"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#] = #&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#] = #&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -506,7 +508,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="[],,Natural">
 <dt><pre><span class="Keyword">func</span> <a href="#%5B%5D%2C%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint8</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#[#]&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -514,7 +516,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="||=,auto,auto">
-<dt><pre><span class="Keyword">func</span> <a href="#%7C%7C%3D%2Cauto%2Cauto"><span class="Identifier">`||=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ||= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#%7C%7C%3D%2Cauto%2Cauto"><span class="Identifier">`||=`</span></a><span class="Other">(</span><span class="Identifier">lhs</span><span class="Other">,</span> <span class="Identifier">rhs</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">any</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(# ||= #)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
+                                  <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment</a>
@@ -523,7 +526,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="base64decode,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#base64decode%2Ccstring"><span class="Identifier">base64decode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, \'base64\').toString(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, \'base64\').toString(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Convenience func to Base64 decode a string.
@@ -532,7 +535,7 @@ Convenience func to Base64 decode a string.
 </div>
 <div id="base64encode,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#base64encode%2Ccstring"><span class="Identifier">base64encode</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">encoding</span> <span class="Other">=</span> <span class="StringLit">&quot;utf-8&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, #).toString(\'base64\')&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Buffer.from(#, #).toString(\'base64\')&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Convenience func to Base64 encode a string.
@@ -540,7 +543,8 @@ Convenience func to Base64 encode a string.
 </dd>
 </div>
 <div id="capitalizeAscii,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#capitalizeAscii%2Ccstring"><span class="Identifier">capitalizeAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()&quot;&quot;&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#capitalizeAscii%2Ccstring"><span class="Identifier">capitalizeAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const s = #; return s.charAt(0).toUpperCase() + s.slice(1) })()&quot;&quot;&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -548,7 +552,8 @@ Convenience func to Base64 encode a string.
 </dd>
 </div>
 <div id="contains,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Ccstring"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(#) &gt;= 0)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Ccstring"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(#) &gt;= 0)&quot;</span><span class="Other">,</span>
+                                     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -557,7 +562,7 @@ Convenience func to Base64 encode a string.
 </div>
 <div id="contains,cstring,char">
 <dt><pre><span class="Keyword">func</span> <a href="#contains%2Ccstring%2Cchar"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(String.fromCharCode(#)) &gt;= 0)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.indexOf(String.fromCharCode(#)) &gt;= 0)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -565,7 +570,8 @@ Convenience func to Base64 encode a string.
 </dd>
 </div>
 <div id="deduplicate,openArray[T]">
-<dt><pre><span class="Keyword">func</span> <a href="#deduplicate%2CopenArray%5BT%5D"><span class="Identifier">deduplicate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...new Set(#)]&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#deduplicate%2CopenArray%5BT%5D"><span class="Identifier">deduplicate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...new Set(#)]&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Convenience func to Deduplicate an array.
@@ -573,7 +579,8 @@ Convenience func to Deduplicate an array.
 </dd>
 </div>
 <div id="find,cstring,char">
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Cchar"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(String.fromCharCode(#))&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Cchar"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(String.fromCharCode(#))&quot;</span><span class="Other">,</span>
+                                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -581,7 +588,8 @@ Convenience func to Deduplicate an array.
 </dd>
 </div>
 <div id="find,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Ccstring"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2Ccstring"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">ss</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.indexOf(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -589,7 +597,8 @@ Convenience func to Deduplicate an array.
 </dd>
 </div>
 <div id="find,cstring,RegExp">
-<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2CRegExp"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.search(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#find%2Ccstring%2CRegExp"><span class="Identifier">find</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.search(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -602,7 +611,8 @@ Convenience func to Deduplicate an array.
     let result = m[0].length;
     for (var i = 1; i &lt; m.length; i++) { result = Math.min(m[i].length, result) }
     return result;
-  })()&quot;&quot;&quot;</span>.}</pre></dt>
+  })()&quot;&quot;&quot;</span><span class="Other">,</span>
+                                     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Returns the amount of indentation all lines of <tt class="docutils literal"><span class="pre"><span class="Identifier">s</span></span></tt> have in common, ignoring lines that consist only of whitespace.
@@ -610,7 +620,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="isDigit,char">
-<dt><pre><span class="Keyword">func</span> <a href="#isDigit%2Cchar"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { const c = #; return (c &gt;= \'0\' &amp;&amp; c &lt;= \'9\') })()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isDigit%2Cchar"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(() =&gt; { const c = #; return (c &gt;= \'0\' &amp;&amp; c &lt;= \'9\') })()&quot;</span><span class="Other">,</span>
+                              <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -618,7 +629,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="isFinite,SomeNumber">
-<dt><pre><span class="Keyword">func</span> <a href="#isFinite%2CSomeNumber"><span class="Identifier">isFinite</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isFinite%2CSomeNumber"><span class="Identifier">isFinite</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -626,7 +638,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="isInteger,SomeNumber">
-<dt><pre><span class="Keyword">func</span> <a href="#isInteger%2CSomeNumber"><span class="Identifier">isInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isInteger%2CSomeNumber"><span class="Identifier">isInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -634,7 +647,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="isSafeInteger,SomeNumber">
-<dt><pre><span class="Keyword">func</span> <a href="#isSafeInteger%2CSomeNumber"><span class="Identifier">isSafeInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#isSafeInteger%2CSomeNumber"><span class="Identifier">isSafeInteger</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Number.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -642,7 +656,7 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="len,Uint8Array">
-<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#len%2CUint8Array"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(#.length)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -650,7 +664,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="match,cstring,RegExp">
-<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.match(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.match(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -659,7 +674,7 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </div>
 <div id="matchAll,cstring,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#matchAll%2Ccstring%2CRegExp"><span class="Identifier">matchAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.matchAll(#))&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.matchAll(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -668,7 +683,7 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </div>
 <div id="newArrayBuffer,Natural">
 <dt><pre><span class="Keyword">func</span> <a href="#newArrayBuffer%2CNatural"><span class="Identifier">newArrayBuffer</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new ArrayBuffer(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new ArrayBuffer(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -676,7 +691,8 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </dd>
 </div>
 <div id="newUint8Array,Natural">
-<dt><pre><span class="Keyword">func</span> <a href="#newUint8Array%2CNatural"><span class="Identifier">newUint8Array</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new Uint8Array(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newUint8Array%2CNatural"><span class="Identifier">newUint8Array</span></a><span class="Other">(</span><span class="Identifier">number</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new Uint8Array(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -685,7 +701,7 @@ Returns the amount of indentation all lines of <tt class="docutils literal"><spa
 </div>
 <div id="normalize,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">form</span> <span class="Other">=</span> <span class="StringLit">&quot;NFC&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.normalize(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.normalize(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -701,7 +717,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="parseFloat,cstring">
-<dt><pre><span class="Keyword">proc</span> <a href="#parseFloat%2Ccstring"><span class="Identifier">parseFloat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">BiggestFloat</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseFloat(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseFloat%2Ccstring"><span class="Identifier">parseFloat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">BiggestFloat</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseFloat(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -709,7 +726,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="parseInt,char">
-<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Cchar"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Cchar"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span><span class="Other">,</span>
+                               <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -717,7 +735,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="parseInt,cstring">
-<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Ccstring"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseInt%2Ccstring"><span class="Identifier">parseInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                  <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -725,7 +744,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="parseUInt,char">
-<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Cchar"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Cchar"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(String.fromCharCode(#), 10)&quot;</span><span class="Other">,</span>
+                                <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -733,7 +753,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="parseUInt,cstring">
-<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Ccstring"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#parseUInt%2Ccstring"><span class="Identifier">parseUInt</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">uint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(#, 10)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                   <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -741,7 +762,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </dd>
 </div>
 <div id="repeat,cstring,Natural">
-<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.repeat(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#repeat%2Ccstring%2CNatural"><span class="Identifier">repeat</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.repeat(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -750,7 +772,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="replace,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Ccstring"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">,</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -759,7 +781,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="replace,cstring,char">
 <dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -768,7 +790,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="replace,cstring,char,char">
 <dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2Cchar%2Cchar"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sub</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">by</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), String.fromCharCode(#))&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(String.fromCharCode(#), String.fromCharCode(#))&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -777,7 +800,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="replace,cstring,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#replace%2Ccstring%2CRegExp"><span class="Identifier">replace</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replace(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -786,7 +809,7 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="replaceAll,cstring,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#replaceAll%2Ccstring%2CRegExp"><span class="Identifier">replaceAll</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">;</span> <span class="Identifier">by</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replaceAll(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.replaceAll(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -795,7 +818,8 @@ Convenience func mimics Nim <tt class="docutils literal"><span class="pre"><span
 </div>
 <div id="shuffle,openArray[auto]">
 <dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bauto%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.sort(() =&gt; { return Math.random() - 0.5})&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.sort(() =&gt; { return Math.random() - 0.5})&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Convenience func to Random shuffle an array.
@@ -804,7 +828,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="slice,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#slice%2Ccstring%2Ccint%2Ccint"><span class="Identifier">slice</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">start</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">ends</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.slice(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.slice(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -813,7 +837,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="split,cstring,char">
 <dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Cchar"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(String.fromCharCode(#))&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(String.fromCharCode(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -821,7 +845,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="split,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Ccstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2Ccstring"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -829,7 +854,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="split,cstring,RegExp">
-<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2CRegExp"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#split%2Ccstring%2CRegExp"><span class="Identifier">split</span></a><span class="Other">(</span><span class="Identifier">strng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regex</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.split(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -837,7 +863,7 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="strip,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.trim()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#strip%2Ccstring"><span class="Identifier">strip</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.trim()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -850,7 +876,8 @@ Convenience func to Random shuffle an array.
     if (#) { result = result.trimStart() }
     if (#) { result = result.trimEnd()   }
     return result;
-  })()&quot;&quot;&quot;</span>.}</pre></dt>
+  })()&quot;&quot;&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -859,7 +886,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="toArray,ArrayBuffer">
 <dt><pre><span class="Keyword">func</span> <a href="#toArray%2CArrayBuffer"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(new Uint8Array(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -867,7 +894,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toArray,Uint8Array">
-<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CUint8Array"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toArray%2CUint8Array"><span class="Identifier">toArray</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">uint8</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -876,7 +904,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="toCstring">
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jscore.html#Uint8Array"><span class="Identifier">Uint8Array</span></a> <span class="Keyword">or</span> <a href="jscore.html#ArrayBuffer"><span class="Identifier">ArrayBuffer</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -885,7 +913,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="toExponential,SomeFloat,Positive">
 <dt><pre><span class="Keyword">func</span> <a href="#toExponential%2CSomeFloat%2CPositive"><span class="Identifier">toExponential</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -893,7 +921,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toFixed,SomeFloat,">
-<dt><pre><span class="Keyword">func</span> <a href="#toFixed%2CSomeFloat%2C"><span class="Identifier">toFixed</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">digits</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">20</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toFixed%2CSomeFloat%2C"><span class="Identifier">toFixed</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">digits</span><span class="Other">:</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="DecNumber">20</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -901,7 +930,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toLowerAscii,char">
-<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Cchar"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toLowerCase()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Cchar"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toLowerCase()&quot;</span><span class="Other">,</span>
+                                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -909,7 +939,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toLowerAscii,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Ccstring"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toLowerCase()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toLowerAscii%2Ccstring"><span class="Identifier">toLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toLowerCase()&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -918,7 +949,7 @@ Convenience func to Random shuffle an array.
 </div>
 <div id="toPrecision,SomeFloat,Positive">
 <dt><pre><span class="Keyword">func</span> <a href="#toPrecision%2CSomeFloat%2CPositive"><span class="Identifier">toPrecision</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">SomeFloat</span><span class="Other">;</span> <span class="Identifier">fractionDigits</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -926,7 +957,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toUpperAscii,char">
-<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Cchar"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toUpperCase()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Cchar"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;String.fromCharCode(#).toUpperCase()&quot;</span><span class="Other">,</span>
+                                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -934,7 +966,8 @@ Convenience func to Random shuffle an array.
 </dd>
 </div>
 <div id="toUpperAscii,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Ccstring"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toUpperCase()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#toUpperAscii%2Ccstring"><span class="Identifier">toUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toUpperCase()&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -951,7 +984,7 @@ Convenience func to Random shuffle an array.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-18 23:57:12 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-09-04 20:27:12 UTC</small>
       </div>
     </div>
   </div>

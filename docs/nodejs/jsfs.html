@@ -1149,7 +1149,7 @@ window.addEventListener('DOMContentLoaded', main);
 <dl class="item">
 <div id="access,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#access%2Ccstring%2Ccint%2CT"><span class="Identifier">access</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback">https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback</a>
@@ -1157,7 +1157,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="accessSync,cstring,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#accessSync%2Ccstring%2Ccint"><span class="Identifier">accessSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#accessSync%2Ccstring%2Ccint"><span class="Identifier">accessSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_accesssync_path_mode">https://nodejs.org/api/fs.html#fs_fs_accesssync_path_mode</a>
@@ -1166,7 +1167,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="appendFile,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#appendFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">appendFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback">https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback</a>
@@ -1174,7 +1175,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="appendFileSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#appendFileSync%2Ccstring%2Ccstring"><span class="Identifier">appendFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#appendFileSync%2Ccstring%2Ccstring"><span class="Identifier">appendFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_appendfilesync_path_data_options">https://nodejs.org/api/fs.html#fs_fs_appendfilesync_path_data_options</a>
@@ -1183,7 +1185,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="chmod,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#chmod%2Ccstring%2Ccint%2CT"><span class="Identifier">chmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback">https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback</a>
@@ -1192,7 +1194,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="chmod,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#chmod%2Ccstring%2Ccstring%2CT"><span class="Identifier">chmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback">https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback</a>
@@ -1200,7 +1202,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="chmodSync,cstring,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#chmodSync%2Ccstring%2Ccint"><span class="Identifier">chmodSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#chmodSync%2Ccstring%2Ccint"><span class="Identifier">chmodSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chmodsync_path_mode">https://nodejs.org/api/fs.html#fs_fs_chmodsync_path_mode</a>
@@ -1208,7 +1211,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="chmodSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#chmodSync%2Ccstring%2Ccstring"><span class="Identifier">chmodSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#chmodSync%2Ccstring%2Ccstring"><span class="Identifier">chmodSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chmodsync_path_mode">https://nodejs.org/api/fs.html#fs_fs_chmodsync_path_mode</a>
@@ -1217,7 +1221,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="chown,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#chown%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">chown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback">https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback</a>
@@ -1225,7 +1229,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="chownSync,cstring,cint,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#chownSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">chownSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#chownSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">chownSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_chownsync_path_uid_gid">https://nodejs.org/api/fs.html#fs_fs_chownsync_path_uid_gid</a>
@@ -1233,7 +1238,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="close,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#close%2Ccint%2CT"><span class="Identifier">close</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#close%2Ccint%2CT"><span class="Identifier">close</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_close_fd_callback">https://nodejs.org/api/fs.html#fs_fs_close_fd_callback</a>
@@ -1241,7 +1247,7 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="closeSync,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#closeSync%2Ccint"><span class="Identifier">closeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#closeSync%2Ccint"><span class="Identifier">closeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_closesync_fd">https://nodejs.org/api/fs.html#fs_fs_closesync_fd</a>
@@ -1249,7 +1255,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="copyFile,cstring,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#copyFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">copyFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#copyFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">copyFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_copyfile_src_dest_mode_callback">https://nodejs.org/api/fs.html#fs_fs_copyfile_src_dest_mode_callback</a>
@@ -1258,7 +1265,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="copyFile,cstring,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#copyFile%2Ccstring%2Ccstring%2Ccint%2CT"><span class="Identifier">copyFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_copyfile_src_dest_mode_callback">https://nodejs.org/api/fs.html#fs_fs_copyfile_src_dest_mode_callback</a>
@@ -1266,7 +1273,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="copyFileSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#copyFileSync%2Ccstring%2Ccstring"><span class="Identifier">copyFileSync</span></a><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#copyFileSync%2Ccstring%2Ccstring"><span class="Identifier">copyFileSync</span></a><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_mode">https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_mode</a>
@@ -1274,7 +1282,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="copyFileSync,cstring,cstring,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#copyFileSync%2Ccstring%2Ccstring%2Ccint"><span class="Identifier">copyFileSync</span></a><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#copyFileSync%2Ccstring%2Ccstring%2Ccint"><span class="Identifier">copyFileSync</span></a><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_mode">https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_mode</a>
@@ -1282,7 +1291,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="dirRead,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#dirRead%2Ccstring%2CT"><span class="Identifier">dirRead</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const d = fs.opendirSync(#); d.read(#); d.closeSync() })()&quot;&quot;&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#dirRead%2Ccstring%2CT"><span class="Identifier">dirRead</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const d = fs.opendirSync(#); d.read(#); d.closeSync() })()&quot;&quot;&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_dir_read_callback">https://nodejs.org/api/fs.html#fs_dir_read_callback</a>
@@ -1290,7 +1300,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="existsSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#existsSync%2Ccstring"><span class="Identifier">existsSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#existsSync%2Ccstring"><span class="Identifier">existsSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_existssync_path">https://nodejs.org/api/fs.html#fs_fs_existssync_path</a>
@@ -1298,7 +1309,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fchmod,cint,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#fchmod%2Ccint%2Ccint%2CT"><span class="Identifier">fchmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fchmod%2Ccint%2Ccint%2CT"><span class="Identifier">fchmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchmod_fd_mode_callback">https://nodejs.org/api/fs.html#fs_fs_fchmod_fd_mode_callback</a>
@@ -1307,7 +1319,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="fchmod,cint,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fchmod%2Ccint%2Ccstring%2CT"><span class="Identifier">fchmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchmod_fd_mode_callback">https://nodejs.org/api/fs.html#fs_fs_fchmod_fd_mode_callback</a>
@@ -1315,7 +1327,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fchmodSync,cint,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#fchmodSync%2Ccint%2Ccint"><span class="Identifier">fchmodSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fchmodSync%2Ccint%2Ccint"><span class="Identifier">fchmodSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchmodsync_fd_mode">https://nodejs.org/api/fs.html#fs_fs_fchmodsync_fd_mode</a>
@@ -1323,7 +1336,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fchmodSync,cint,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#fchmodSync%2Ccint%2Ccstring"><span class="Identifier">fchmodSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fchmodSync%2Ccint%2Ccstring"><span class="Identifier">fchmodSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchmodsync_fd_mode">https://nodejs.org/api/fs.html#fs_fs_fchmodsync_fd_mode</a>
@@ -1331,7 +1345,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fchown,cint,cint,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#fchown%2Ccint%2Ccint%2Ccint%2CT"><span class="Identifier">fchown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fchown%2Ccint%2Ccint%2Ccint%2CT"><span class="Identifier">fchown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchown_fd_uid_gid_callback">https://nodejs.org/api/fs.html#fs_fs_fchown_fd_uid_gid_callback</a>
@@ -1339,7 +1354,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fchownSync,cint,cint,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#fchownSync%2Ccint%2Ccint%2Ccint"><span class="Identifier">fchownSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fchownSync%2Ccint%2Ccint%2Ccint"><span class="Identifier">fchownSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fchownsync_fd_uid_gid">https://nodejs.org/api/fs.html#fs_fs_fchownsync_fd_uid_gid</a>
@@ -1347,7 +1363,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fdatasync,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#fdatasync%2Ccint%2CT"><span class="Identifier">fdatasync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fdatasync%2Ccint%2CT"><span class="Identifier">fdatasync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fdatasync_fd_callback">https://nodejs.org/api/fs.html#fs_fs_fdatasync_fd_callback</a>
@@ -1355,7 +1372,7 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fdatasyncSync,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#fdatasyncSync%2Ccint"><span class="Identifier">fdatasyncSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fdatasyncSync%2Ccint"><span class="Identifier">fdatasyncSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fdatasyncsync_fd">https://nodejs.org/api/fs.html#fs_fs_fdatasyncsync_fd</a>
@@ -1363,7 +1380,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fstat,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#fstat%2Ccint%2CT"><span class="Identifier">fstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fstat%2Ccint%2CT"><span class="Identifier">fstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fstat_fd_options_callback">https://nodejs.org/api/fs.html#fs_fs_fstat_fd_options_callback</a>
@@ -1371,7 +1389,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="fsync,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#fsync%2Ccint%2CT"><span class="Identifier">fsync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#fsync%2Ccint%2CT"><span class="Identifier">fsync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_fsync_fd_callback">https://nodejs.org/api/fs.html#fs_fs_fsync_fd_callback</a>
@@ -1379,7 +1398,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="ftruncate,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#ftruncate%2Ccint%2CT"><span class="Identifier">ftruncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#ftruncate%2Ccint%2CT"><span class="Identifier">ftruncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_ftruncate_fd_len_callback">https://nodejs.org/api/fs.html#fs_fs_ftruncate_fd_len_callback</a>
@@ -1387,7 +1407,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="ftruncate,cint,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#ftruncate%2Ccint%2Ccint%2CT"><span class="Identifier">ftruncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#ftruncate%2Ccint%2Ccint%2CT"><span class="Identifier">ftruncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_ftruncate_fd_len_callback">https://nodejs.org/api/fs.html#fs_fs_ftruncate_fd_len_callback</a>
@@ -1395,7 +1416,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="ftruncateSync,cint,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#ftruncateSync%2Ccint%2Ccint"><span class="Identifier">ftruncateSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#ftruncateSync%2Ccint%2Ccint"><span class="Identifier">ftruncateSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_ftruncatesync_fd_len">https://nodejs.org/api/fs.html#fs_fs_ftruncatesync_fd_len</a>
@@ -1404,7 +1426,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="futimes,cint,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#futimes%2Ccint%2Ccint%2Ccint%2CT"><span class="Identifier">futimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_futimes_fd_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_futimes_fd_atime_mtime_callback</a>
@@ -1413,7 +1435,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="futimes,cint,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#futimes%2Ccint%2Ccstring%2Ccstring%2CT"><span class="Identifier">futimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_futimes_fd_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_futimes_fd_atime_mtime_callback</a>
@@ -1422,7 +1444,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="futimesSync,cint,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#futimesSync%2Ccint%2Ccint%2Ccint"><span class="Identifier">futimesSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_futimessync_fd_atime_mtime">https://nodejs.org/api/fs.html#fs_fs_futimessync_fd_atime_mtime</a>
@@ -1431,7 +1453,7 @@ window.addEventListener('DOMContentLoaded', main);
 </div>
 <div id="futimesSync,cint,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#futimesSync%2Ccint%2Ccstring%2Ccstring"><span class="Identifier">futimesSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_futimessync_fd_atime_mtime">https://nodejs.org/api/fs.html#fs_fs_futimessync_fd_atime_mtime</a>
@@ -1439,7 +1461,7 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="importFs">
-<dt><pre><span class="Keyword">func</span> <a href="#importFs"><span class="Identifier">importFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as fs from \'fs\'@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importFs"><span class="Identifier">importFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as fs from \'fs\'@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -1448,7 +1470,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lchown,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lchown%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">lchown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lchown_path_uid_gid_callback">https://nodejs.org/api/fs.html#fs_fs_lchown_path_uid_gid_callback</a>
@@ -1457,7 +1479,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lchownSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#lchownSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">lchownSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lchownsync_path_uid_gid">https://nodejs.org/api/fs.html#fs_fs_lchownsync_path_uid_gid</a>
@@ -1466,7 +1488,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="link,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#link%2Ccstring%2Ccstring%2CT"><span class="Identifier">link</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">existingPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_link_existingpath_newpath_callback">https://nodejs.org/api/fs.html#fs_fs_link_existingpath_newpath_callback</a>
@@ -1474,7 +1496,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="linkSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#linkSync%2Ccstring%2Ccstring"><span class="Identifier">linkSync</span></a><span class="Other">(</span><span class="Identifier">existingPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#linkSync%2Ccstring%2Ccstring"><span class="Identifier">linkSync</span></a><span class="Other">(</span><span class="Identifier">existingPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_linksync_existingpath_newpath">https://nodejs.org/api/fs.html#fs_fs_linksync_existingpath_newpath</a>
@@ -1482,7 +1505,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="lstat,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#lstat%2Ccstring%2CT"><span class="Identifier">lstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#lstat%2Ccstring%2CT"><span class="Identifier">lstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lstat_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_lstat_path_options_callback</a>
@@ -1491,7 +1515,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lutimes,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimes%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">lutimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lutimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_lutimes_path_atime_mtime_callback</a>
@@ -1500,7 +1524,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lutimes,cstring,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimes%2Ccstring%2Ccstring%2Ccstring%2CT"><span class="Identifier">lutimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lutimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_lutimes_path_atime_mtime_callback</a>
@@ -1509,7 +1533,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lutimesSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimesSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">lutimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lutimessync_path_atime_mtime">https://nodejs.org/api/fs.html#fs_fs_lutimessync_path_atime_mtime</a>
@@ -1518,7 +1542,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="lutimesSync,cstring,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimesSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">lutimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_lutimessync_path_atime_mtime">https://nodejs.org/api/fs.html#fs_fs_lutimessync_path_atime_mtime</a>
@@ -1526,7 +1550,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="mkdir,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#mkdir%2Ccstring%2CT"><span class="Identifier">mkdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#mkdir%2Ccstring%2CT"><span class="Identifier">mkdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback</a>
@@ -1535,7 +1560,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="mkdirSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#mkdirSync%2Ccstring"><span class="Identifier">mkdirSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">recursive</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, {recursive: #})&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, {recursive: #})&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_mkdirsync_path_options">https://nodejs.org/api/fs.html#fs_fs_mkdirsync_path_options</a>
@@ -1543,7 +1568,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="mkdtemp,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#mkdtemp%2Ccstring%2CT"><span class="Identifier">mkdtemp</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#mkdtemp%2Ccstring%2CT"><span class="Identifier">mkdtemp</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_mkdtemp_prefix_options_callback">https://nodejs.org/api/fs.html#fs_fs_mkdtemp_prefix_options_callback</a>
@@ -1551,7 +1577,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="mkdtempSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#mkdtempSync%2Ccstring"><span class="Identifier">mkdtempSync</span></a><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#mkdtempSync%2Ccstring"><span class="Identifier">mkdtempSync</span></a><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_mkdtempsync_prefix_options">https://nodejs.org/api/fs.html#fs_fs_mkdtempsync_prefix_options</a>
@@ -1559,7 +1586,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="open,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#open%2Ccstring%2CT"><span class="Identifier">open</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#open%2Ccstring%2CT"><span class="Identifier">open</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback">https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback</a>
@@ -1568,7 +1596,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="open,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#open%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">open</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback">https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback</a>
@@ -1577,7 +1605,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="open,cstring,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#open%2Ccstring%2Ccstring%2Ccstring%2CT"><span class="Identifier">open</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback">https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback</a>
@@ -1585,7 +1613,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="opendir,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#opendir%2Ccstring%2CT"><span class="Identifier">opendir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#opendir%2Ccstring%2CT"><span class="Identifier">opendir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_opendir_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_opendir_path_options_callback</a>
@@ -1594,7 +1623,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="openSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#openSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">openSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode">https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode</a>
@@ -1603,7 +1632,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="openSync,cstring,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#openSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">openSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode">https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode</a>
@@ -1611,7 +1640,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="read,cint,T">
-<dt><pre><span class="Keyword">func</span> <a href="#read%2Ccint%2CT"><span class="Identifier">read</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#read%2Ccint%2CT"><span class="Identifier">read</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_read_fd_options_callback">https://nodejs.org/api/fs.html#fs_fs_read_fd_options_callback</a>
@@ -1619,7 +1649,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readdir,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#readdir%2Ccstring%2CT"><span class="Identifier">readdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readdir%2Ccstring%2CT"><span class="Identifier">readdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback</a>
@@ -1627,7 +1658,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readFile,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#readFile%2Ccstring%2CT"><span class="Identifier">readFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readFile%2Ccstring%2CT"><span class="Identifier">readFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback</a>
@@ -1635,7 +1667,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readFileSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#readFileSync%2Ccstring"><span class="Identifier">readFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#).toString()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readFileSync%2Ccstring"><span class="Identifier">readFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#).toString()&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options">https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options</a>
@@ -1643,7 +1676,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readlink,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#readlink%2Ccstring"><span class="Identifier">readlink</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readlink%2Ccstring"><span class="Identifier">readlink</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options">https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options</a>
@@ -1651,7 +1685,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readlink,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#readlink%2Ccstring%2CT"><span class="Identifier">readlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readlink%2Ccstring%2CT"><span class="Identifier">readlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readlink_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_readlink_path_options_callback</a>
@@ -1659,7 +1694,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="readlinkSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#readlinkSync%2Ccstring"><span class="Identifier">readlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#readlinkSync%2Ccstring"><span class="Identifier">readlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options">https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options</a>
@@ -1667,7 +1703,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="realpath,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#realpath%2Ccstring%2CT"><span class="Identifier">realpath</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#realpath%2Ccstring%2CT"><span class="Identifier">realpath</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_realpath_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_realpath_path_options_callback</a>
@@ -1675,7 +1712,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="realpathNative,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#realpathNative%2Ccstring%2CT"><span class="Identifier">realpathNative</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#realpathNative%2Ccstring%2CT"><span class="Identifier">realpathNative</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_realpath_native_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_realpath_native_path_options_callback</a>
@@ -1683,7 +1721,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="realpathSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#realpathSync%2Ccstring"><span class="Identifier">realpathSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#realpathSync%2Ccstring"><span class="Identifier">realpathSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options</a>
@@ -1691,7 +1730,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="realpathSyncNative,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#realpathSyncNative%2Ccstring"><span class="Identifier">realpathSyncNative</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#realpathSyncNative%2Ccstring"><span class="Identifier">realpathSyncNative</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_native_path_options">https://nodejs.org/api/fs.html#fs_fs_realpathsync_native_path_options</a>
@@ -1700,7 +1740,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </div>
 <div id="rename,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#rename%2Ccstring%2Ccstring%2CT"><span class="Identifier">rename</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">oldPath</span><span class="Other">,</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_rename_oldpath_newpath_callback">https://nodejs.org/api/fs.html#fs_fs_rename_oldpath_newpath_callback</a>
@@ -1708,7 +1748,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="renameSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#renameSync%2Ccstring%2Ccstring"><span class="Identifier">renameSync</span></a><span class="Other">(</span><span class="Identifier">oldPath</span><span class="Other">,</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#renameSync%2Ccstring%2Ccstring"><span class="Identifier">renameSync</span></a><span class="Other">(</span><span class="Identifier">oldPath</span><span class="Other">,</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_renamesync_oldpath_newpath">https://nodejs.org/api/fs.html#fs_fs_renamesync_oldpath_newpath</a>
@@ -1716,7 +1757,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="requireFs">
-<dt><pre><span class="Keyword">func</span> <a href="#requireFs"><span class="Identifier">requireFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const fs = require(\'fs\')@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireFs"><span class="Identifier">requireFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const fs = require(\'fs\')@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -1724,7 +1765,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="rm,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#rm%2Ccstring%2CT"><span class="Identifier">rm</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#rm%2Ccstring%2CT"><span class="Identifier">rm</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_rm_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_rm_path_options_callback</a>
@@ -1732,7 +1774,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="rmdir,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#rmdir%2Ccstring"><span class="Identifier">rmdir</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#rmdir%2Ccstring"><span class="Identifier">rmdir</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_rmdirsync_path_options">https://nodejs.org/api/fs.html#fs_fs_rmdirsync_path_options</a>
@@ -1740,7 +1782,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="rmdir,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#rmdir%2Ccstring%2CT"><span class="Identifier">rmdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#rmdir%2Ccstring%2CT"><span class="Identifier">rmdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_rmdir_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_rmdir_path_options_callback</a>
@@ -1748,7 +1791,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="rmSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#rmSync%2Ccstring"><span class="Identifier">rmSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#rmSync%2Ccstring"><span class="Identifier">rmSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_rmsync_path_options">https://nodejs.org/api/fs.html#fs_fs_rmsync_path_options</a>
@@ -1756,7 +1799,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="stat,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#stat%2Ccstring%2CT"><span class="Identifier">stat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#stat%2Ccstring%2CT"><span class="Identifier">stat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback">https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback</a>
@@ -1765,7 +1809,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </div>
 <div id="symlink,cstring,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#symlink%2Ccstring%2Ccstring%2Ccstring%2CT"><span class="Identifier">symlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback">https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback</a>
@@ -1773,7 +1817,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="symlink,cstring,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#symlink%2Ccstring%2Ccstring%2CT"><span class="Identifier">symlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#symlink%2Ccstring%2Ccstring%2CT"><span class="Identifier">symlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback">https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback</a>
@@ -1781,7 +1826,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="symlinkSync,cstring,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#symlinkSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">symlinkSync</span></a><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#symlinkSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">symlinkSync</span></a><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_symlinksync_target_path_type">https://nodejs.org/api/fs.html#fs_fs_symlinksync_target_path_type</a>
@@ -1789,7 +1835,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="symlinkSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#symlinkSync%2Ccstring%2Ccstring"><span class="Identifier">symlinkSync</span></a><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#symlinkSync%2Ccstring%2Ccstring"><span class="Identifier">symlinkSync</span></a><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_symlinksync_target_path_type">https://nodejs.org/api/fs.html#fs_fs_symlinksync_target_path_type</a>
@@ -1805,7 +1852,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
     } catch(err) {
       fs.closeSync(fs.openSync(path, 'w'));
     }
-  })()&quot;&quot;&quot;</span>.}</pre></dt>
+  })()&quot;&quot;&quot;</span><span class="Other">,</span>
+                                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Convenience func to touch a file.
@@ -1813,7 +1861,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="truncate,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#truncate%2Ccstring%2CT"><span class="Identifier">truncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#truncate%2Ccstring%2CT"><span class="Identifier">truncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_truncate_path_len_callback">https://nodejs.org/api/fs.html#fs_fs_truncate_path_len_callback</a>
@@ -1822,7 +1871,7 @@ Convenience func to touch a file.
 </div>
 <div id="truncate,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#truncate%2Ccstring%2Ccint%2CT"><span class="Identifier">truncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_truncate_path_len_callback">https://nodejs.org/api/fs.html#fs_fs_truncate_path_len_callback</a>
@@ -1830,7 +1879,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="truncateSync,cstring,cint">
-<dt><pre><span class="Keyword">func</span> <a href="#truncateSync%2Ccstring%2Ccint"><span class="Identifier">truncateSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#truncateSync%2Ccstring%2Ccint"><span class="Identifier">truncateSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_truncatesync_path_len">https://nodejs.org/api/fs.html#fs_fs_truncatesync_path_len</a>
@@ -1838,7 +1888,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="unlink,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#unlink%2Ccstring%2CT"><span class="Identifier">unlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#unlink%2Ccstring%2CT"><span class="Identifier">unlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback">https://nodejs.org/api/fs.html#fs_fs_unlink_path_callback</a>
@@ -1846,7 +1897,7 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="unlinkSync,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#unlinkSync%2Ccstring"><span class="Identifier">unlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#unlinkSync%2Ccstring"><span class="Identifier">unlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_unlinksync_path">https://nodejs.org/api/fs.html#fs_fs_unlinksync_path</a>
@@ -1854,7 +1905,7 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="unwatchFile,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccstring"><span class="Identifier">unwatchFile</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccstring"><span class="Identifier">unwatchFile</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_unwatchfile_filename_listener">https://nodejs.org/api/fs.html#fs_fs_unwatchfile_filename_listener</a>
@@ -1863,7 +1914,7 @@ Convenience func to touch a file.
 </div>
 <div id="unwatchFile,cint,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccint%2Ccstring%2CT"><span class="Identifier">unwatchFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_write_fd_string_position_encoding_callback">https://nodejs.org/api/fs.html#fs_fs_write_fd_string_position_encoding_callback</a>
@@ -1872,7 +1923,7 @@ Convenience func to touch a file.
 </div>
 <div id="unwatchFile,cint,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccint%2Ccstring%2Ccint%2CT"><span class="Identifier">unwatchFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">position</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_write_fd_string_position_encoding_callback">https://nodejs.org/api/fs.html#fs_fs_write_fd_string_position_encoding_callback</a>
@@ -1880,7 +1931,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="unwatchFile,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccstring%2CT"><span class="Identifier">unwatchFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">listener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccstring%2CT"><span class="Identifier">unwatchFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">listener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_unwatchfile_filename_listener">https://nodejs.org/api/fs.html#fs_fs_unwatchfile_filename_listener</a>
@@ -1889,7 +1941,7 @@ Convenience func to touch a file.
 </div>
 <div id="utimes,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#utimes%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">utimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback</a>
@@ -1898,7 +1950,7 @@ Convenience func to touch a file.
 </div>
 <div id="utimes,cstring,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#utimes%2Ccstring%2Ccstring%2Ccstring%2CT"><span class="Identifier">utimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback</a>
@@ -1907,7 +1959,7 @@ Convenience func to touch a file.
 </div>
 <div id="utimesSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#utimesSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">utimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback</a>
@@ -1916,7 +1968,7 @@ Convenience func to touch a file.
 </div>
 <div id="utimesSync,cstring,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#utimesSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">utimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback">https://nodejs.org/api/fs.html#fs_fs_utimes_path_atime_mtime_callback</a>
@@ -1924,7 +1976,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="watch,cstring,T">
-<dt><pre><span class="Keyword">func</span> <a href="#watch%2Ccstring%2CT"><span class="Identifier">watch</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">listener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#watch%2Ccstring%2CT"><span class="Identifier">watch</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">listener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_watch_filename_options_listener">https://nodejs.org/api/fs.html#fs_fs_watch_filename_options_listener</a>
@@ -1933,7 +1986,7 @@ Convenience func to touch a file.
 </div>
 <div id="writeFile,cint,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#writeFile%2Ccint%2Ccstring%2CT"><span class="Identifier">writeFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback">https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback</a>
@@ -1942,7 +1995,7 @@ Convenience func to touch a file.
 </div>
 <div id="writeFile,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#writeFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">writeFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
@@ -1950,7 +2003,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="writeFileSync,cint,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#writeFileSync%2Ccint%2Ccstring"><span class="Identifier">writeFileSync</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#writeFileSync%2Ccint%2Ccstring"><span class="Identifier">writeFileSync</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options">https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options</a>
@@ -1958,7 +2012,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="writeFileSync,cstring,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#writeFileSync%2Ccstring%2Ccstring"><span class="Identifier">writeFileSync</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#writeFileSync%2Ccstring%2Ccstring"><span class="Identifier">writeFileSync</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options">https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options</a>
@@ -1966,7 +2021,8 @@ Convenience func to touch a file.
 </dd>
 </div>
 <div id="writeSync,cint,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position">https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position</a>
@@ -1975,7 +2031,7 @@ Convenience func to touch a file.
 </div>
 <div id="writeSync,cint,cstring,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring%2Ccint"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position">https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position</a>
@@ -1984,7 +2040,7 @@ Convenience func to touch a file.
 </div>
 <div id="writeSync,cint,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring%2Ccint%2Ccint"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position">https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position</a>
@@ -1993,7 +2049,8 @@ Convenience func to touch a file.
 </div>
 <div id="writeSync,cint,cstring,cint,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring%2Ccint%2Ccint%2Ccint"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span>
-               <span class="Identifier">position</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #, #)&quot;</span>.}</pre></dt>
+               <span class="Identifier">position</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #, #)&quot;</span><span class="Other">,</span>
+                                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position">https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position</a>
@@ -2023,7 +2080,7 @@ Same as Fusion <tt class="docutils literal"><span class="pre"><span class="Ident
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-18 23:57:13 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-09-04 20:27:14 UTC</small>
       </div>
     </div>
   </div>

@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', main);
 <dl class="item">
 <div id="findEntry,SourceMap,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#findEntry%2CSourceMap%2Ccint%2Ccint"><span class="Identifier">findEntry</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsmodule.html#SourceMap"><span class="Identifier">SourceMap</span></a><span class="Other">;</span> <span class="Identifier">lineNumber</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">columnNumber</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.
-    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span>.}</pre></dt>
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/module.html#module_module_findsourcemap_path">https://nodejs.org/api/module.html#module_module_findsourcemap_path</a>
@@ -193,7 +193,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="findSourceMap,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#findSourceMap%2Ccstring"><span class="Identifier">findSourceMap</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsmodule.html#SourceMap"><span class="Identifier">SourceMap</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;module.$1(#)&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#findSourceMap%2Ccstring"><span class="Identifier">findSourceMap</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsmodule.html#SourceMap"><span class="Identifier">SourceMap</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;module.$1(#)&quot;</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/module.html#module_module_findsourcemap_path">https://nodejs.org/api/module.html#module_module_findsourcemap_path</a>
@@ -201,7 +202,8 @@ window.addEventListener('DOMContentLoaded', main);
 </dd>
 </div>
 <div id="importModule">
-<dt><pre><span class="Keyword">func</span> <a href="#importModule"><span class="Identifier">importModule</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as module from \'module\'@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#importModule"><span class="Identifier">importModule</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as module from \'module\'@&quot;</span><span class="Other">,</span>
+                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">import</span> <span class="Operator">*</span> <span class="Keyword">as</span> <span class="Identifier">module_name</span> <span class="Keyword">from</span> <span class="CharLit">'module_name'</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -209,7 +211,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="newSourceMap,JsObject">
-<dt><pre><span class="Keyword">func</span> <a href="#newSourceMap%2CJsObject"><span class="Identifier">newSourceMap</span></a><span class="Other">(</span><span class="Identifier">payload</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jsmodule.html#SourceMap"><span class="Identifier">SourceMap</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new SourceMap(#))&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#newSourceMap%2CJsObject"><span class="Identifier">newSourceMap</span></a><span class="Other">(</span><span class="Identifier">payload</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jsmodule.html#SourceMap"><span class="Identifier">SourceMap</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new SourceMap(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/module.html#module_new_sourcemap_payload">https://nodejs.org/api/module.html#module_new_sourcemap_payload</a>
@@ -217,7 +220,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 </dd>
 </div>
 <div id="requireModule">
-<dt><pre><span class="Keyword">func</span> <a href="#requireModule"><span class="Identifier">requireModule</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const module = require(\'module\')@&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#requireModule"><span class="Identifier">requireModule</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const module = require(\'module\')@&quot;</span><span class="Other">,</span>
+                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">const</span> <span class="Identifier">module_name</span> <span class="Operator">=</span> <span class="Identifier">require</span><span class="Punctuation">(</span><span class="CharLit">'module_name'</span><span class="Punctuation">)</span><span class="Punctuation">;</span></span></tt>. <strong>Must be called once before using the module</strong>
@@ -225,7 +229,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 <div id="syncBuiltinESMExports">
-<dt><pre><span class="Keyword">func</span> <a href="#syncBuiltinESMExports"><span class="Identifier">syncBuiltinESMExports</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;module.$1()&quot;</span>.}</pre></dt>
+<dt><pre><span class="Keyword">func</span> <a href="#syncBuiltinESMExports"><span class="Identifier">syncBuiltinESMExports</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;module.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 <a class="reference external" href="https://nodejs.org/api/module.html#module_module_syncbuiltinesmexports">https://nodejs.org/api/module.html#module_module_syncbuiltinesmexports</a>
@@ -242,7 +246,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-08-18 23:57:19 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-09-04 20:27:19 UTC</small>
       </div>
     </div>
   </div>
