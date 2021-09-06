@@ -69,6 +69,11 @@
 - Backend in Frontend https://blog.stackblitz.com/posts/introducing-webcontainers
 
 
+# Single file executable
+
+- https://github.com/nexe/nexe
+
+
 # Install
 
 - `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
