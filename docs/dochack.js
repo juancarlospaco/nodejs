@@ -875,11 +875,8 @@ function nimCopy(dest_33557141, src_33557142, ti_33557143) {
         result_33557152 = null;
       }
       else {
-        if (dest_33557141 === null || dest_33557141 === undefined) {
+        if (dest_33557141 === null || dest_33557141 === undefined || dest_33557141.length != src_33557142.length) {
           dest_33557141 = new Array(src_33557142.length);
-        }
-        else {
-          dest_33557141.length = src_33557142.length;
         }
         result_33557152 = dest_33557141;
         for (var i = 0; i < src_33557142.length; ++i) {
