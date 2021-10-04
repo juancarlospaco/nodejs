@@ -12,6 +12,7 @@ import
   nodejs/jsasynchooks,
   nodejs/jsdns,
   nodejs/jsfs,
+  nodejs/jsindexeddb,
   nodejs/jsinspector,
   nodejs/jsv8,
   nodejs/jsos,
@@ -31,6 +32,7 @@ import
   nodejs/jsdomain,
   nodejs/jsdiagnostics_channel,
   nodejs/jswasi,
+  nodejs/jswebsockets,
   nodejs/jscluster,
   nodejs/jsugar
 
@@ -42,6 +44,7 @@ export
   jsasynchooks,
   jsdns,
   jsfs,
+  jsindexeddb,
   jsinspector,
   jsv8,
   jsos,
@@ -61,5 +64,6 @@ export
   jsdomain,
   jsdiagnostics_channel,
   jswasi,
+  jswebsockets,
   jscluster,
   jsugar
