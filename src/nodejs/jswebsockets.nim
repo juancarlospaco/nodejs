@@ -80,7 +80,7 @@ when defined test:
     let parent = document.getElementById(toID)
     parent.appendChild(p)
 
-when isMainModule:
+runnableExamples:
   var socket = newWebSocket("ws://echo.websocket.org/")
 
   socket.onopen = proc (e:Event) =
