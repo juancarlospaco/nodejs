@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="document" id="documentId">
   <div class="container">
     <h1 class="title">Index</h1>
-    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsbuffer.html">nodejs/jsbuffer</a>, <a href="nodejs/jscluster.html">nodejs/jscluster</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jstream.html">nodejs/jstream</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jswasi.html">nodejs/jswasi</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
+    Modules: <a href="nodejs/jsassert.html">nodejs/jsassert</a>, <a href="nodejs/jsasynchooks.html">nodejs/jsasynchooks</a>, <a href="nodejs/jsbuffer.html">nodejs/jsbuffer</a>, <a href="nodejs/jscluster.html">nodejs/jscluster</a>, <a href="nodejs/jscore.html">nodejs/jscore</a>, <a href="nodejs/jsdiagnostics_channel.html">nodejs/jsdiagnostics_channel</a>, <a href="nodejs/jsdns.html">nodejs/jsdns</a>, <a href="nodejs/jsdomain.html">nodejs/jsdomain</a>, <a href="nodejs/jsfs.html">nodejs/jsfs</a>, <a href="nodejs/jsindexeddb.html">nodejs/jsindexeddb</a>, <a href="nodejs/jsinspector.html">nodejs/jsinspector</a>, <a href="nodejs/jsmodule.html">nodejs/jsmodule</a>, <a href="nodejs/jsos.html">nodejs/jsos</a>, <a href="nodejs/jspath.html">nodejs/jspath</a>, <a href="nodejs/jsperfhooks.html">nodejs/jsperfhooks</a>, <a href="nodejs/jsprocess.html">nodejs/jsprocess</a>, <a href="nodejs/jspunycode.html">nodejs/jspunycode</a>, <a href="nodejs/jsquerystring.html">nodejs/jsquerystring</a>, <a href="nodejs/jsreadline.html">nodejs/jsreadline</a>, <a href="nodejs/jsrepl.html">nodejs/jsrepl</a>, <a href="nodejs/jstimers.html">nodejs/jstimers</a>, <a href="nodejs/jstracing.html">nodejs/jstracing</a>, <a href="nodejs/jstream.html">nodejs/jstream</a>, <a href="nodejs/jsugar.html">nodejs/jsugar</a>, <a href="nodejs/jsurl.html">nodejs/jsurl</a>, <a href="nodejs/jsutils.html">nodejs/jsutils</a>, <a href="nodejs/jsv8.html">nodejs/jsv8</a>, <a href="nodejs/jswasi.html">nodejs/jswasi</a>, <a href="nodejs/jswebsockets.html">nodejs/jswebsockets</a>, <a href="nodejs/jszlib.html">nodejs/jszlib</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: `$`(self: CallTracker): string" href="nodejs/jsassert.html#%24%2CCallTracker">jsassert: `$`(self: CallTracker): string</a></li>
@@ -168,6 +168,12 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsdomain: add(self: Domain; emitter: auto)" href="nodejs/jsdomain.html#add%2CDomain%2Cauto">jsdomain: add(self: Domain; emitter: auto)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsurl: add(self: URLSearchParams; name: cstring; value: cstring)" href="nodejs/jsurl.html#add%2CURLSearchParams%2Ccstring%2Ccstring">jsurl: add(self: URLSearchParams; name: cstring; value: cstring)</a></li>
+          </ul></dd>
+<dt><a name="addEventListener" href="#addEventListener"><span>addEventListener:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: addEventListener(et: EventTarget; ev: cstring;
+                 cb: proc (ev: MessageEvent | CloseEvent))" href="nodejs/jswebsockets.html#addEventListener%2CEventTarget%2Ccstring%2Cproc%28%29">jswebsockets: addEventListener(et: EventTarget; ev: cstring;
+                 cb: proc (ev: MessageEvent | CloseEvent))</a></li>
           </ul></dd>
 <dt><a name="ADDRGETNETWORKPARAMS" href="#ADDRGETNETWORKPARAMS"><span>ADDRGETNETWORKPARAMS:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -632,6 +638,16 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsinspector: close(): cstring" href="nodejs/jsinspector.html#close">jsinspector: close(): cstring</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsreadline: close(self: Readline)" href="nodejs/jsreadline.html#close%2CReadline">jsreadline: close(self: Readline)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: close(socket: WebSocket)" href="nodejs/jswebsockets.html#close%2CWebSocket">jswebsockets: close(socket: WebSocket)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: close(socket: WebSocket; code: StatusCode | Natural)" href="nodejs/jswebsockets.html#close%2CWebSocket%2C">jswebsockets: close(socket: WebSocket; code: StatusCode | Natural)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: close(socket: WebSocket; code: StatusCode | Natural; reason: cstring)" href="nodejs/jswebsockets.html#close%2CWebSocket%2C%2Ccstring">jswebsockets: close(socket: WebSocket; code: StatusCode | Natural; reason: cstring)</a></li>
+          </ul></dd>
+<dt><a name="CloseEvent" href="#CloseEvent"><span>CloseEvent:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: CloseEvent" href="nodejs/jswebsockets.html#CloseEvent">jswebsockets: CloseEvent</a></li>
           </ul></dd>
 <dt><a name="closeSync" href="#closeSync"><span>closeSync:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -781,6 +797,8 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="delete" href="#delete"><span>delete:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: delete(indexedDB: IndexedDB; storeName: cstring; id: cstring): Future[bool]" href="nodejs/jsindexeddb.html#delete%2CIndexedDB%2Ccstring%2Ccstring">jsindexeddb: delete(indexedDB: IndexedDB; storeName: cstring; id: cstring): Future[bool]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jsurl: delete(self: URLSearchParams; name: cstring)" href="nodejs/jsurl.html#delete%2CURLSearchParams%2Ccstring">jsurl: delete(self: URLSearchParams; name: cstring)</a></li>
           </ul></dd>
 <dt><a name="delimiter" href="#delimiter"><span>delimiter:</span></a></dt><dd><ul class="simple">
@@ -1399,6 +1417,8 @@ window.addEventListener('DOMContentLoaded', main);
           </ul></dd>
 <dt><a name="getAll" href="#getAll"><span>getAll:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring): Future[JsObject]" href="nodejs/jsindexeddb.html#getAll%2CIndexedDB%2Ccstring">jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring): Future[JsObject]</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]" href="nodejs/jsurl.html#getAll%2CURLSearchParams%2Ccstring">jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]</a></li>
           </ul></dd>
 <dt><a name="getCursorPos" href="#getCursorPos"><span>getCursorPos:</span></a></dt><dd><ul class="simple">
@@ -1624,6 +1644,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jscore: indentation(s: cstring): cint" href="nodejs/jscore.html#indentation%2Ccstring">jscore: indentation(s: cstring): cint</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: indentation(s: cstring): cint" href="nodejs/jsutils.html#indentation%2Ccstring">jsutils: indentation(s: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="indexedDB" href="#indexedDB"><span>indexedDB:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: indexedDB(): IndexedDB" href="nodejs/jsindexeddb.html#indexedDB">jsindexeddb: indexedDB(): IndexedDB</a></li>
           </ul></dd>
 <dt><a name="INFLATE" href="#INFLATE"><span>INFLATE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2097,6 +2121,10 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsperfhooks: measure(name, startMark, endMark: cstring)" href="nodejs/jsperfhooks.html#measure%2Ccstring%2Ccstring%2Ccstring">jsperfhooks: measure(name, startMark, endMark: cstring)</a></li>
           </ul></dd>
+<dt><a name="MessageEvent" href="#MessageEvent"><span>MessageEvent:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: MessageEvent" href="nodejs/jswebsockets.html#MessageEvent">jswebsockets: MessageEvent</a></li>
+          </ul></dd>
 <dt><a name="minValidDate" href="#minValidDate"><span>minValidDate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsugar: minValidDate" href="nodejs/jsugar.html#minValidDate">jsugar: minValidDate</a></li>
@@ -2224,6 +2252,14 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="newWasi" href="#newWasi"><span>newWasi:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jswasi: newWasi(options: JsObject): WASI" href="nodejs/jswasi.html#newWasi%2CJsObject">jswasi: newWasi(options: JsObject): WASI</a></li>
+          </ul></dd>
+<dt><a name="newWebSocket" href="#newWebSocket"><span>newWebSocket:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: newWebSocket(url: cstring): WebSocket" href="nodejs/jswebsockets.html#newWebSocket%2Ccstring">jswebsockets: newWebSocket(url: cstring): WebSocket</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: newWebSocket(url: cstring; protocol: cstring): WebSocket" href="nodejs/jswebsockets.html#newWebSocket%2Ccstring%2Ccstring">jswebsockets: newWebSocket(url: cstring; protocol: cstring): WebSocket</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: newWebSocket(url: cstring; protocols: seq[cstring]): WebSocket" href="nodejs/jswebsockets.html#newWebSocket%2Ccstring%2Cseq%5Bcstring%5D">jswebsockets: newWebSocket(url: cstring; protocols: seq[cstring]): WebSocket</a></li>
           </ul></dd>
 <dt><a name="nextDays" href="#nextDays"><span>nextDays:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2433,6 +2469,12 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jsfs: openSync(path: cstring; flags: cstring; mode: cstring): cint" href="nodejs/jsfs.html#openSync%2Ccstring%2Ccstring%2Ccstring">jsfs: openSync(path: cstring; flags: cstring; mode: cstring): cint</a></li>
           </ul></dd>
+<dt><a name="openws" href="#openws"><span>openws:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: openws(url: cstring): WebSocket" href="nodejs/jswebsockets.html#openws%2Ccstring">jswebsockets: openws(url: cstring): WebSocket</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: openws(url: string; protocols: seq[string]): WebSocket" href="nodejs/jswebsockets.html#openws%2Cstring%2Cseq%5Bstring%5D">jswebsockets: openws(url: string; protocols: seq[string]): WebSocket</a></li>
+          </ul></dd>
 <dt><a name="O_RDONLY" href="#O_RDONLY"><span>O_RDONLY:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: O_RDONLY" href="nodejs/jsfs.html#O_RDONLY">jsfs: O_RDONLY</a></li>
@@ -2577,6 +2619,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsdiagnostics_channel: publish(self: Channel; message: auto): bool" href="nodejs/jsdiagnostics_channel.html#publish%2CChannel%2Cauto">jsdiagnostics_channel: publish(self: Channel; message: auto): bool</a></li>
           </ul></dd>
+<dt><a name="put" href="#put"><span>put:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]" href="nodejs/jsindexeddb.html#put%2CIndexedDB%2Ccstring%2CJsObject">jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]</a></li>
+          </ul></dd>
 <dt><a name="question" href="#question"><span>question:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsreadline: question[T](self: Readline; query: cstring; callback: T)" href="nodejs/jsreadline.html#question%2CReadline%2Ccstring%2CT">jsreadline: question[T](self: Readline; query: cstring; callback: T)</a></li>
@@ -2702,6 +2748,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="readUIntLE" href="#readUIntLE"><span>readUIntLE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsbuffer: readUIntLE(self: Buffer; offset: int; byteLength: int): cstring" href="nodejs/jsbuffer.html#readUIntLE%2CBuffer%2Cint%2Cint">jsbuffer: readUIntLE(self: Buffer; offset: int; byteLength: int): cstring</a></li>
+          </ul></dd>
+<dt><a name="ReadyState" href="#ReadyState"><span>ReadyState:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: ReadyState" href="nodejs/jswebsockets.html#ReadyState">jswebsockets: ReadyState</a></li>
           </ul></dd>
 <dt><a name="realpath" href="#realpath"><span>realpath:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3101,11 +3151,77 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsdomain: run[T](self: Domain; fn: T; args: auto)" href="nodejs/jsdomain.html#run%2CDomain%2CT%2Cauto">jsdomain: run[T](self: Domain; fn: T; args: auto)</a></li>
           </ul></dd>
+<dt><a name="scAbnormal" href="#scAbnormal"><span>scAbnormal:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scAbnormal" href="nodejs/jswebsockets.html#scAbnormal">StatusCode.scAbnormal</a></li>
+          </ul></dd>
+<dt><a name="scGoingAway" href="#scGoingAway"><span>scGoingAway:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scGoingAway" href="nodejs/jswebsockets.html#scGoingAway">StatusCode.scGoingAway</a></li>
+          </ul></dd>
+<dt><a name="scInternalError" href="#scInternalError"><span>scInternalError:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scInternalError" href="nodejs/jswebsockets.html#scInternalError">StatusCode.scInternalError</a></li>
+          </ul></dd>
+<dt><a name="scMissingExt" href="#scMissingExt"><span>scMissingExt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scMissingExt" href="nodejs/jswebsockets.html#scMissingExt">StatusCode.scMissingExt</a></li>
+          </ul></dd>
+<dt><a name="scNormal" href="#scNormal"><span>scNormal:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scNormal" href="nodejs/jswebsockets.html#scNormal">StatusCode.scNormal</a></li>
+          </ul></dd>
+<dt><a name="scNoStatus" href="#scNoStatus"><span>scNoStatus:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scNoStatus" href="nodejs/jswebsockets.html#scNoStatus">StatusCode.scNoStatus</a></li>
+          </ul></dd>
+<dt><a name="scPolicyViolation" href="#scPolicyViolation"><span>scPolicyViolation:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scPolicyViolation" href="nodejs/jswebsockets.html#scPolicyViolation">StatusCode.scPolicyViolation</a></li>
+          </ul></dd>
+<dt><a name="scProtocolError" href="#scProtocolError"><span>scProtocolError:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scProtocolError" href="nodejs/jswebsockets.html#scProtocolError">StatusCode.scProtocolError</a></li>
+          </ul></dd>
+<dt><a name="scReserved" href="#scReserved"><span>scReserved:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scReserved" href="nodejs/jswebsockets.html#scReserved">StatusCode.scReserved</a></li>
+          </ul></dd>
+<dt><a name="scReserved2" href="#scReserved2"><span>scReserved2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scReserved2" href="nodejs/jswebsockets.html#scReserved2">StatusCode.scReserved2</a></li>
+          </ul></dd>
+<dt><a name="scRestart" href="#scRestart"><span>scRestart:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scRestart" href="nodejs/jswebsockets.html#scRestart">StatusCode.scRestart</a></li>
+          </ul></dd>
+<dt><a name="scTLSHandshake" href="#scTLSHandshake"><span>scTLSHandshake:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scTLSHandshake" href="nodejs/jswebsockets.html#scTLSHandshake">StatusCode.scTLSHandshake</a></li>
+          </ul></dd>
+<dt><a name="scTooLarge" href="#scTooLarge"><span>scTooLarge:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scTooLarge" href="nodejs/jswebsockets.html#scTooLarge">StatusCode.scTooLarge</a></li>
+          </ul></dd>
+<dt><a name="scTryAgainLater" href="#scTryAgainLater"><span>scTryAgainLater:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scTryAgainLater" href="nodejs/jswebsockets.html#scTryAgainLater">StatusCode.scTryAgainLater</a></li>
+          </ul></dd>
+<dt><a name="scUnsupported" href="#scUnsupported"><span>scUnsupported:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scUnsupported" href="nodejs/jswebsockets.html#scUnsupported">StatusCode.scUnsupported</a></li>
+          </ul></dd>
+<dt><a name="scUnsupportedData" href="#scUnsupportedData"><span>scUnsupportedData:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="StatusCode.scUnsupportedData" href="nodejs/jswebsockets.html#scUnsupportedData">StatusCode.scUnsupportedData</a></li>
+          </ul></dd>
 <dt><a name="send" href="#send"><span>send:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jscluster: send(self: Worker; message: JsObject): bool" href="nodejs/jscluster.html#send%2CWorker%2CJsObject">jscluster: send(self: Worker; message: JsObject): bool</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jscluster: send[T](self: Worker; message: JsObject; callback: T): bool" href="nodejs/jscluster.html#send%2CWorker%2CJsObject%2CT">jscluster: send[T](self: Worker; message: JsObject; callback: T): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jswebsockets: send(socket: WebSocket; data: cstring)" href="nodejs/jswebsockets.html#send%2CWebSocket%2Ccstring">jswebsockets: send(socket: WebSocket; data: cstring)</a></li>
           </ul></dd>
 <dt><a name="SERVFAIL" href="#SERVFAIL"><span>SERVFAIL:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3466,6 +3582,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="stat" href="#stat"><span>stat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: stat[T](path: cstring; callback: T)" href="nodejs/jsfs.html#stat%2Ccstring%2CT">jsfs: stat[T](path: cstring; callback: T)</a></li>
+          </ul></dd>
+<dt><a name="StatusCode" href="#StatusCode"><span>StatusCode:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: StatusCode" href="nodejs/jswebsockets.html#StatusCode">jswebsockets: StatusCode</a></li>
           </ul></dd>
 <dt><a name="stopCoverage" href="#stopCoverage"><span>stopCoverage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3911,6 +4031,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: watch[T](filename: cstring; listener: T)" href="nodejs/jsfs.html#watch%2Ccstring%2CT">jsfs: watch[T](filename: cstring; listener: T)</a></li>
           </ul></dd>
+<dt><a name="WebSocket" href="#WebSocket"><span>WebSocket:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jswebsockets: WebSocket" href="nodejs/jswebsockets.html#WebSocket">jswebsockets: WebSocket</a></li>
+          </ul></dd>
 <dt><a name="withDir" href="#withDir"><span>withDir:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: withDir(dir: cstring; body: untyped): untyped" href="nodejs/jsfs.html#withDir.t%2Ccstring%2Cuntyped">jsfs: withDir(dir: cstring; body: untyped): untyped</a></li>
@@ -4208,7 +4332,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-10-04 19:09:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-10-04 20:15:53 UTC</small>
       </div>
     </div>
   </div>
