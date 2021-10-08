@@ -34,7 +34,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         export NODE_OPTIONS=--unhandled-rejections=warn
-        nim doc -b:js -d:nodejs --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
+        nim doc -b:js -d:nodejs -d:nimExperimentalAsyncjsThen --git.url:'https://github.com/juancarlospaco/nodejs' --index:on --project --experimental:strictFuncs --styleCheck:hint --outdir:docs src/nodejs.nim
         rm --verbose docs/nodejs/*.idx
         rm --verbose --force --recursive docs/nimcache/*.*
         rm --verbose --force --recursive docs/nimcache/runnableExamples/*.*
