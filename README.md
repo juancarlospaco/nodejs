@@ -46,6 +46,7 @@
 - :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads
 - :heavy_check_mark: WebSockets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebsockets
 - :heavy_check_mark: JS Classes :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsclasses
+- :heavy_check_mark: Type-Safe DotEnv :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdotenv
 - :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl
 - :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments
 - :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes
