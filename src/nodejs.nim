@@ -33,8 +33,7 @@ import
   nodejs/jsdiagnostics_channel,
   nodejs/jswasi,
   nodejs/jswebsockets,
-  nodejs/jscluster,
-  nodejs/jsugar
+  nodejs/jscluster
 
 export
   jscore,
@@ -66,4 +65,3 @@ export
   jswasi,
   jswebsockets,
   jscluster,
-  jsugar
