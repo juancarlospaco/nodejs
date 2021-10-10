@@ -1,6 +1,6 @@
 ## * `Temporal` date and time API for JavaScript targets.
 ##
-## ..warning:: See https://caniuse.com/temporal
+## .. Warning:: See https://caniuse.com/temporal
 import std/[jsffi, jsbigints]
 
 type
