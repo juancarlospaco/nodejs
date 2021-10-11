@@ -64,4 +64,4 @@ export
   jsdiagnostics_channel,
   jswasi,
   jswebsockets,
-  jscluster,
+  jscluster
