@@ -52,6 +52,7 @@
 - :heavy_check_mark: CRC :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscrc
 - :heavy_check_mark: Temporal :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jstemporal
 - :heavy_check_mark: Chained Comparisons :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jschainedcomparisons
+- :heavy_check_mark: Debug Utils :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdebugutils
 - :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl
 - :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments
 - :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes
