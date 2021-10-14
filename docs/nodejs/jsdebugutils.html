@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', main);
   <p class="module-desc">
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsdebugutils</span>
-<span class="Identifier">debugs</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN&quot;</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
+<span class="Identifier">debugs</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN &quot;</span><span class="Punctuation">,</span> <span class="Identifier">i</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Keyword">var</span> <span class="Identifier">i</span> <span class="Operator">=</span> <span class="DecNumber">1</span>
   <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">9</span>
   <span class="Keyword">var</span> <span class="Identifier">s</span> <span class="Operator">=</span> <span class="StringLit">&quot;a&quot;</span>
@@ -130,16 +130,16 @@ window.addEventListener('DOMContentLoaded', main);
   <span class="Identifier">s</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'x'</span>
   <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">x</span></pre>Expands to:<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">i</span> <span class="Operator">=</span> <span class="DecNumber">1</span>
 <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">9</span>
-<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN&quot;</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN &quot;</span><span class="Punctuation">,</span> <span class="Identifier">i</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span><span class="Punctuation">)</span>
 <span class="Keyword">var</span> <span class="Identifier">s</span> <span class="Operator">=</span> <span class="StringLit">&quot;a&quot;</span>
 <span class="Identifier">i</span> <span class="Operator">=</span> <span class="DecNumber">42</span>
-<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN&quot;</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN &quot;</span><span class="Punctuation">,</span> <span class="Identifier">i</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span><span class="Punctuation">)</span>
 <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">i</span> <span class="Operator">+</span> <span class="Identifier">x</span>
 <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span>
-<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN&quot;</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN &quot;</span><span class="Punctuation">,</span> <span class="Identifier">i</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span><span class="Punctuation">)</span>
 <span class="Identifier">s</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'x'</span>
 <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">x</span>
-<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN&quot;</span><span class="Punctuation">)</span></pre><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> can be any &quot;debugging code&quot;, like <tt class="docutils literal"><span class="pre"><span class="Identifier">echo</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">assert</span></span></tt>, checks, dumps, etc.</li>
+<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">&quot;INBETWEEN &quot;</span><span class="Punctuation">,</span> <span class="Identifier">i</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span><span class="Punctuation">)</span></pre><ul class="simple"><li><tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> can be any &quot;debugging code&quot;, like <tt class="docutils literal"><span class="pre"><span class="Identifier">echo</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">assert</span></span></tt>, checks, dumps, etc.</li>
 <li><tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> is meant to be like <tt class="docutils literal"><span class="pre"><span class="Identifier">echo</span> <span class="Identifier">foo</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">assert</span> <span class="Identifier">foo</span> <span class="Operator">!=</span> <span class="Keyword">nil</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">echo</span> <span class="Identifier">foo</span><span class="Operator">.</span><span class="Identifier">repr</span></span></tt>, etc.</li>
 <li>Change <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="DecNumber">0</span></span></tt> then <tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> is NOT injected.</li>
 <li>Change <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="DecNumber">1</span></span></tt> then every <tt class="docutils literal"><span class="pre"><span class="DecNumber">1</span></span></tt> line <tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> is injected.</li>
@@ -155,7 +155,9 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><pre><span class="Keyword">macro</span> <a href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped"><span class="Identifier">debugs</span></a><span class="Other">(</span><span class="Identifier">frequency</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">debugInBetween</span><span class="Other">,</span> <span class="Identifier">codeToDebug</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Debug helper, injects <tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> in-between <tt class="docutils literal"><span class="pre"><span class="Identifier">codeToDebug</span></span></tt> with given <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt>, set <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="DecNumber">0</span></span></tt> to disable debug.
+Debug helper, injects <tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> in-between <tt class="docutils literal"><span class="pre"><span class="Identifier">codeToDebug</span></span></tt> with given <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt>, set <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="DecNumber">0</span></span></tt> to disable debug.<div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
+Designed for debugging purposes only, remove after debugging.</div>
+
 
 </dd>
 </div>
@@ -169,7 +171,7 @@ Debug helper, injects <tt class="docutils literal"><span class="pre"><span class
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-10-12 14:44:37 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-10-14 13:19:23 UTC</small>
       </div>
     </div>
   </div>
