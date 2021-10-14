@@ -12,7 +12,7 @@ macro debugs*(frequency: static[int]; debugInBetween, codeToDebug: untyped) =
     result.add line
     inc freqCounter
     if freqCounter mod frequency == 0:
-      let s = $debugCounter & '\t' & lineInfo(line)
+      var s = "DEBUG\t" & $debugCounter & '\t' & lineInfo(line)
       result.add nnkStmtList.newTree(nnkCall.newTree(newIdentNode"echo", newLit(s)))
       inc debugCounter
       result.add debugInBetween
