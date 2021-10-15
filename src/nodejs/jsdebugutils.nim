@@ -14,8 +14,8 @@ macro debugs*(frequency: static[int]; debugInBetween, codeToDebug: untyped) =
     if freqCounter mod frequency == 0:
       var s = "DEBUG\t" & $debugCounter & '\t' & lineInfo(line)
       result.add nnkStmtList.newTree(nnkCall.newTree(newIdentNode"echo", newLit(s)))
-      inc debugCounter
       result.add debugInBetween
+      inc debugCounter
 
 runnableExamples:
   debugs 2, echo("INBETWEEN ", i > 0):
