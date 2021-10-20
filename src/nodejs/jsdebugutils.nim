@@ -59,7 +59,7 @@ runnableExamples:
     echo getOccupiedMem()
     # echo now()
 
-  debugs 2, debuggingProc():
+  debugs 1, debuggingProc():
     var i = 1
     let x = 9
     var s = "a"
