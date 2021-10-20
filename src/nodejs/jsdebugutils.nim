@@ -1,3 +1,4 @@
+## * Debugging helpers.
 import std/macros
 
 macro debugs*(frequency: static[int]; debugInBetween, codeToDebug: untyped) =
