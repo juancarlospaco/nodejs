@@ -46,8 +46,25 @@ runnableExamples:
 ##
 ## - `debugInBetween` can be any "debugging code", like `echo`, `assert`, checks, dumps, etc.
 ## - `debugInBetween` is meant to be like `echo foo`, `assert foo != nil`, `echo foo.repr`, etc.
+## - `debugInBetween` can be any custom procedure call too.
 ## - Change `frequency` to `0` then `debugInBetween` is NOT injected.
 ## - Change `frequency` to `1` then every `1` line `debugInBetween` is injected.
 ## - Change `frequency` to `2` then every `2` lines `debugInBetween` is injected.
 ## - Change `frequency` to `3` then every `3` lines `debugInBetween` is injected, etc.
 ## - Designed to debug a huge amount of lines by editing just 1 line.
+
+runnableExamples:
+  proc debuggingProc() =
+    echo "This is an Example"
+    echo getOccupiedMem()
+    # echo now()
+
+  debugs 2, debuggingProc():
+    var i = 1
+    let x = 9
+    var s = "a"
+    i = 42
+    i = i + x
+    i = x
+    s.add 'x'
+    i = x + x
