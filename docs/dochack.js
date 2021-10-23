@@ -2044,3 +2044,59 @@ function wrapper_486540086() {
 
   
 }
+
+function copyToClipboard() {
+    
+    function updatePreTags() {
+
+      const allPreTags = document.querySelectorAll("pre")
+    
+      allPreTags.forEach((e) => {
+      
+          const div = document.createElement("div")
+          div.classList.add("copyToClipBoard")
+    
+          const preTag = document.createElement("pre")
+          preTag.innerHTML = e.innerHTML
+    
+          const button = document.createElement("button")
+          button.value = e.textContent.replace('...', '') 
+          button.classList.add("copyToClipBoardBtn")
+    
+          div.appendChild(preTag)
+          div.appendChild(button)
+    
+          e.outerHTML = div.outerHTML
+      
+      })
+    }
+
+
+    function copyTextToClipboard(e) {
+        const clipBoardContent = e.target.value
+        navigator.clipboard.writeText(clipBoardContent).then(function() {
+            e.target.style.setProperty("--clipboard-image", "var(--clipboard-image-selected)")
+        }, function(err) {
+            console.error("Could not copy text: ", err);
+        });
+    }
+
+    window.addEventListener("click", (e) => {
+        if (e.target.classList.contains("copyToClipBoardBtn")) {
+            copyTextToClipboard(e)
+          }
+    })
+
+    window.addEventListener("mouseover", (e) => {
+        if (e.target.nodeName === "PRE") {
+            e.target.nextElementSibling.style.setProperty("--clipboard-image", "var(--clipboard-image-normal)")
+        }
+    })
+    
+    window.addEventListener("DOMContentLoaded", updatePreTags)
+
+    
+
+  
+}
+copyToClipboard();
