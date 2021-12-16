@@ -160,6 +160,12 @@ func deduplicate*[T](arrai: openArray[T]): seq[T] {.importjs: "[...new Set(#)]".
 func shuffle*(arrai: openArray[auto]): seq[auto] {.importjs: "#.sort(() => { return Math.random() - 0.5})".}
   ## Convenience func to Random shuffle an array.
 
+func structuredClone*(value, transfer: auto) {.importjs: "$1(#, #)".}
+  ## https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+
+func structuredClone*(value: auto) {.importjs: "$1(#)".}
+  ## https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+
 func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
   const value = String(`s`).trim();
   if (/^(?:y|1|on|yes|true)$/i.test(value)) {
