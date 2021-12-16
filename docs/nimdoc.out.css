@@ -263,6 +263,10 @@ a.reference-toplevel {
   font-weight: bold;
 }
 
+a.nimdoc {
+  word-spacing: 0.3em;
+}
+
 a.toc-backref {
   text-decoration: none;
   color: var(--text); }
@@ -561,6 +565,11 @@ blockquote {
   padding-left: 0.5em;
   margin-left: 0;
   border-left: 5px solid #bbc;
+}
+
+blockquote.markdown-quote {
+  font-size: 0.9rem;  /* use rem to avoid recursion */
+  font-style: normal;
 }
 
 .pre, span.tok {

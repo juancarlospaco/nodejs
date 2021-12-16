@@ -993,14 +993,6 @@ function addChar(x_33557256, c_33557257) {
 
   
 }
-if (!Math.trunc) {
-  Math.trunc = function(v) {
-    v = +v;
-    if (!isFinite(v)) return v;
-    return (v - v % 1) || (v < 0 ? -0 : v === 0 ? v : 0);
-  };
-}
-
 var alternative_486539840 = [null];
 
 function add_33556420(x_33556421, x_33556421_Idx, y_33556422) {
@@ -2062,6 +2054,7 @@ function copyToClipboard() {
           const button = document.createElement("button")
           button.value = e.textContent.replace('...', '') 
           button.classList.add("copyToClipBoardBtn")
+          button.style = "cursor: pointer"
     
           div.appendChild(preTag)
           div.appendChild(button)
