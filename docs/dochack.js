@@ -867,10 +867,33 @@ function nimCopy(dest_33557141, src_33557142, ti_33557143) {
       }
       nimCopyAux(result_33557152, src_33557142, ti_33557143.node);
       break;
-    case 24:
     case 4:
-    case 27:
     case 16:
+            if(ArrayBuffer.isView(src_33557142)) { 
+        if(dest_33557141 === null || dest_33557141 === undefined || dest_33557141.length != src_33557142.length) {
+          dest_33557141 = new src_33557142.constructor(src_33557142);
+        } else {
+          dest_33557141.set(src_33557142, 0);
+        }
+        result_33557152 = dest_33557141;
+      } else {
+        if (src_33557142 === null) {
+          result_33557152 = null;
+        }
+        else {
+          if (dest_33557141 === null || dest_33557141 === undefined || dest_33557141.length != src_33557142.length) {
+            dest_33557141 = new Array(src_33557142.length);
+          }
+          result_33557152 = dest_33557141;
+          for (var i = 0; i < src_33557142.length; ++i) {
+            result_33557152[i] = nimCopy(result_33557152[i], src_33557142[i], ti_33557143.base);
+          }
+        }
+      }
+    
+      break;
+    case 24:
+    case 27:
             if (src_33557142 === null) {
         result_33557152 = null;
       }
