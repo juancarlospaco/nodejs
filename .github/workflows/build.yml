@@ -25,9 +25,9 @@ jobs:
         nim-version: 'devel'
         no-color: true  # --noColor
 
-    # - uses: juancarlospaco/nimpretty-action@main
-    #   with:
-    #     folders: "src"
+    - uses: juancarlospaco/nimpretty-action@main
+      with:
+        folders: "src"
 
     # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
     - name: Generate Documentation (Linux)
