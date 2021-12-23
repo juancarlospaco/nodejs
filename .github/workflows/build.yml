@@ -17,7 +17,7 @@ jobs:
       matrix:
         platform:     [ubuntu-latest, windows-latest]
         architecture: ["x64", "x86"]
-        node:         [14, 16]
+        node:         [14, 15, 16, 17]
     name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}
     runs-on: ${{ matrix.platform }}
     steps:
