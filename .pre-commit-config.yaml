@@ -24,6 +24,6 @@ repos:
     -   id: check-json               # Check JSON files are valid (if any).
     -   id: check-yaml               # Check YAML files are valid (if any).
     -   id: end-of-file-fixer        # Check that Text files ends with new line.
-        filenames: *.nim
+        filenames: "*.nim"
     -   id: trailing-whitespace      # Check for empty trailing white spaces.
-        filenames: *.nim
+        filenames: "*.nim"
