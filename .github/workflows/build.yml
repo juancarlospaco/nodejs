@@ -18,7 +18,7 @@ jobs:
         platform:     [ubuntu-latest, windows-latest]
         architecture: ["x64", "x86"]
         node:         [12, 14, 16]
-    name: ${{ matrix.platform }}-${{ matrix.architecture }}
+    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
@@ -27,6 +27,11 @@ jobs:
       with:
         nim-version: 'devel'
         no-color: true  # --noColor
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
 
     - uses: pre-commit/action@v2.0.3
       if: runner.os == 'Linux'
