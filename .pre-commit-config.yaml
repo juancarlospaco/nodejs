@@ -13,8 +13,6 @@ repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1  # v4.0.1  Or SemVer of latest release. Or SHA1.
     hooks:
-    -   id: end-of-file-fixer        # Check that Text files ends with new line.
-    -   id: trailing-whitespace      # Check for empty trailing white spaces.
     -   id: check-byte-order-marker  # Check for BOM byte-order marker on files.
     -   id: check-case-conflict      # Check conflicts for case-insensitive FS.
     -   id: check-merge-conflict     # Check for committing Unmerged files.
@@ -25,3 +23,7 @@ repos:
     -   id: check-executables-have-shebangs  # Check if executable have SheBang.
     -   id: check-json               # Check JSON files are valid (if any).
     -   id: check-yaml               # Check YAML files are valid (if any).
+    -   id: end-of-file-fixer        # Check that Text files ends with new line.
+        filenames: *.nim
+    -   id: trailing-whitespace      # Check for empty trailing white spaces.
+        filenames: *.nim
