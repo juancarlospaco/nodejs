@@ -1,0 +1,24 @@
+# Multi-Language Static Analysis.
+# Install on local:          pip install pre-commit pre-commit-hooks
+# Force Run:                 pre-commit run --all-files
+# Auto-Update all hooks:     pre-commit autoupdate
+# Run all hooks on Push:     pre-commit install --hook-type pre-push
+# Run all hooks on Commit:   pre-commit install
+# Uninstall hooks on Push:   pre-commit uninstall --hook-type pre-push
+# Uninstall hooks on Commit: pre-commit uninstall
+# http://pre-commit.com      https://github.com/pre-commit
+
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1  # v4.0.1  Or SemVer of latest release. Or SHA1.
+    hooks:
+    -   id: fix-byte-order-marker    # Check for BOM byte-order marker on files.
+    -   id: check-case-conflict      # Check conflicts for case-insensitive FS.
+    -   id: check-merge-conflict     # Check for committing Unmerged files.
+    -   id: check-symlinks           # Check for SymLinks pointing nowhere.
+    -   id: destroyed-symlinks       # Check for broken Symlinks (if any).
+    -   id: detect-private-key       # Check for committing Private Keys.
+    -   id: forbid-new-submodules    # Prevent addition of new Git SubModules.
+    -   id: check-json               # Check JSON files are valid (if any).
+    -   id: check-executables-have-shebangs  # Check if executable have SheBang.

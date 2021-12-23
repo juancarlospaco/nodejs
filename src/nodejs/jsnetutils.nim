@@ -18,6 +18,7 @@ func toUint*(ip: array[4, uint8]): uint64 =
     cast[uint64](ip[3])
   )
 
+
 runnableExamples:
   template example() =
     doAssert 0.uint64.toIpAddress.toUint == 0.uint64                         # 0.0.0.0
@@ -25,5 +26,6 @@ runnableExamples:
     doAssert 4_294_967_295.uint64.toIpAddress.toUint == 4_294_967_295.uint64 # 255.255.255.255
     doAssert 2_130_706_433.uint64.toIpAddress.toUint == 2_130_706_433.uint64 # 127.0.0.1
     doAssert 3_232_235_521.uint64.toIpAddress.toUint == 3_232_235_521.uint64 # 192.168.0.1
+
   example()
   static: example()

@@ -1,5 +1,5 @@
-## This module contains wrappers for the HTML 5 IndexedDB.
-## Code is from https://github.com/enimatek-nl/tangu/
+## * IndexedDB API for JAvaScript targets.
+# Code is from https://github.com/enimatek-nl/tangu
 
 import std/[jsffi, asyncjs, dom]
 
@@ -39,29 +39,27 @@ type
     onupgradeneeded*: proc (event: Event) {.closure.}
     result: IDBDatabase
 
-proc indexedDB*(): IndexedDB {.importcpp: "function() { return window.indexedDB; }()".}
+func newIndexedDB*(): IndexedDB {.importcpp: "(window.indexedDB)".}
 
-proc open(self: IndexedDB, dbName: cstring): IDBOpenDBRequest {.importcpp.}
-proc open(self: IndexedDB, dbName: cstring, s: cint): IDBOpenDBRequest {.importcpp.}
+func open(self: IndexedDB; dbName: cstring): IDBOpenDBRequest {.importcpp.}
+func open(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest {.importcpp.}
 
-proc transaction(self: IDBDatabase, names: cstring): IDBTransaction {.importcpp.}
-proc transaction(self: IDBDatabase, names: seq[cstring]): IDBTransaction {.importcpp.}
-proc transaction(self: IDBDatabase, names: cstring, mode: cstring): IDBTransaction {.importcpp.}
-proc transaction(self: IDBDatabase, names: seq[cstring], mode: cstring): IDBTransaction {.importcpp.}
+func transaction(self: IDBDatabase; names: cstring or seq[cstring]): IDBTransaction {.importcpp.}
+func transaction(self: IDBDatabase; names: cstring or seq[cstring]; mode: cstring): IDBTransaction {.importcpp.}
 
-proc deleteObjectStore(self: IDBDatabase, name: cstring) {.importcpp.}
-proc createObjectStore(self: IDBDatabase, name: cstring, options: IDBOptions): IDBObjectStore {.importcpp.}
-proc close(self: IDBDatabase) {.importcpp.}
+func deleteObjectStore(self: IDBDatabase; name: cstring) {.importcpp.}
+func createObjectStore(self: IDBDatabase; name: cstring; options: IDBOptions): IDBObjectStore {.importcpp.}
+func close(self: IDBDatabase) {.importcpp.}
 
-proc objectStore(self: IDBTransaction, name: cstring): IDBObjectStore {.importcpp.}
+func objectStore(self: IDBTransaction; name: cstring): IDBObjectStore {.importcpp.}
 
-proc add(self: IDBObjectStore, value: JsObject): IDBRequest {.importcpp.}
-proc get(self: IDBObjectStore, id: cint): IDBRequest {.importcpp.}
-proc getAll(self: IDBObjectStore): IDBRequest {.importcpp.}
-proc put(self: IDBObjectStore, value: JsObject): IDBRequest {.importcpp.}
-proc delete(self: IDBObjectStore, key: cstring): IDBRequest {.importcpp.}
+func add(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
+func get(self: IDBObjectStore; id: cint): IDBRequest {.importcpp.}
+func getAll(self: IDBObjectStore): IDBRequest {.importcpp.}
+func put(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
+func delete(self: IDBObjectStore; key: cstring): IDBRequest {.importcpp.}
 
-proc getAll*(indexedDB: IndexedDB, storeName: cstring): Future[JsObject] =
+proc getAll*(indexedDB: IndexedDB; storeName: cstring): Future[JsObject] =
   var promise = newPromise() do (resolve: proc(response: JsObject)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
@@ -69,7 +67,7 @@ proc getAll*(indexedDB: IndexedDB, storeName: cstring): Future[JsObject] =
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
-      echo "upgraded getAll"
+      when not defined(release): echo "upgraded getAll"
     request.onsuccess = proc (event: Event) =
       let database = request.result
       let transaction = database.transaction(storeName, "readonly")
@@ -81,7 +79,7 @@ proc getAll*(indexedDB: IndexedDB, storeName: cstring): Future[JsObject] =
         resolve(obj_req.result)
   return promise
 
-proc put*(indexedDB: IndexedDB, storeName: cstring, obj: JsObject): Future[bool] =
+proc put*(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool] =
   var promise = newPromise() do (resolve: proc(response: bool)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
@@ -89,7 +87,7 @@ proc put*(indexedDB: IndexedDB, storeName: cstring, obj: JsObject): Future[bool]
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
-      echo "upgraded put"
+      when not defined(release): echo "upgraded put"
     request.onsuccess = proc (event: Event) =
       let database = request.result
       let transaction = database.transaction(storeName, "readwrite")
@@ -101,7 +99,7 @@ proc put*(indexedDB: IndexedDB, storeName: cstring, obj: JsObject): Future[bool]
         resolve(true)
   return promise
 
-proc delete*(indexedDB: IndexedDB, storeName: cstring, id: cstring): Future[bool] =
+proc delete*(indexedDB: IndexedDB; storeName, id: cstring): Future[bool] =
   var promise = newPromise() do (resolve: proc(response: bool)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
@@ -109,7 +107,7 @@ proc delete*(indexedDB: IndexedDB, storeName: cstring, id: cstring): Future[bool
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
-      echo "upgraded delete"
+      when not defined(release): echo "upgraded delete"
     request.onsuccess = proc (event: Event) =
       let database = request.result
       let transaction = database.transaction(storeName, "readwrite")

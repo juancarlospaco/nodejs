@@ -5,6 +5,7 @@ on:
       - 'src/**.nim'
       - '.github/workflows/*.yml'
       - '.github/workflows/*.yaml'
+      - '.pre-commit-config.yaml'
       - '.gitignore'
 
 jobs:
@@ -12,10 +13,12 @@ jobs:
     if: |
       !contains(github.event.head_commit.message, '[skip ci]')
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
-        platform: [ubuntu-latest, windows-latest]
-    name: ${{ matrix.platform }}
+        platform:     [ubuntu-latest, windows-latest]
+        architecture: ["x64", "x86"]
+        node:         [14, 15, 16, 17]
+    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +27,14 @@ jobs:
       with:
         nim-version: 'devel'
         no-color: true  # --noColor
+
+    - name: Setup NodeJS ${{ matrix.node }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
+
+    - uses: pre-commit/action@v2.0.3
+      if: runner.os == 'Linux'
 
     # - uses: juancarlospaco/nimpretty-action@main
     #   with:
