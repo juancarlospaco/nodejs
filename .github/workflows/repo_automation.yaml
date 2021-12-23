@@ -1,7 +1,8 @@
 name: Pull Request AntiSpamm
 on: [pull_request]
 jobs:
-  antispamm:
+  automation:
+    name: Repo Automation
     if: ${{ !github.event.pull_request.draft && !contains(github.event.head_commit.message, '[skip ci]') }}
     steps:
 
