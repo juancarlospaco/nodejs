@@ -52,6 +52,7 @@ jobs:
         mv --verbose docs/nodejs.html docs/index.html
 
     - name: Commit Docs
+      if: github.ref == 'refs/heads/main'
       uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
       with:
         add: 'docs'
