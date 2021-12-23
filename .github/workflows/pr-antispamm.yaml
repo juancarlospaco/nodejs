@@ -3,7 +3,7 @@ name: Pull Request AntiSpamm
 on: [pull_request]
 jobs:
   antiSpamm:
-    if: "!github.event.pull_request.draft" && "!contains(github.event.head_commit.message, '[skip ci]')" && github.event.pull_request.commits > 2
+    if: ${{ !github.event.pull_request.draft && !contains(github.event.head_commit.message, '[skip ci]') && github.event.pull_request.commits > 2 }}
     name: Must be >= 3 commits
     runs-on: ubuntu-latest
     uses: actions/github-script@v5
