@@ -1,0 +1,33 @@
+name: Pull Request AntiSpamm
+on: [pull_request]
+jobs:
+  automation:
+    name: Repo Automation
+    if: ${{ !github.event.pull_request.draft && !contains(github.event.head_commit.message, '[skip ci]') }}
+    steps:
+
+      # AntiSpamm for Pull Requests: Stops single-commit PR automatically, like Hacktoberfests, Bots, Trolls, etc.
+      - name: Must be >= 3 commits
+        if: ${{ github.event.pull_request.commits > 2 }}
+        uses: actions/github-script@v5
+        with:
+          script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
+
+      # Welcome a new contributor.
+      - name: Welcome
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const message = "Welcome new contributor!, we will review your contributions soon, and likely merge it!."
+            const creator = context.payload.sender.login
+            const opts = github.rest.issues.listForRepo.endpoint.merge({
+              ...context.issue, creator, state: 'all'
+            })
+            const issues = await github.paginate(opts)
+            for (const issue of issues) {
+              if (issue.number === context.issue.number) { continue }
+              if (issue.pull_request) { return }
+            }
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number, owner: context.repo.owner, repo: context.repo.repo, body: message
+            })
