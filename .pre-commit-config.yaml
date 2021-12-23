@@ -22,8 +22,3 @@ repos:
     -   id: forbid-new-submodules    # Prevent addition of new Git SubModules.
     -   id: check-executables-have-shebangs  # Check if executable have SheBang.
     -   id: check-json               # Check JSON files are valid (if any).
-    -   id: check-yaml               # Check YAML files are valid (if any).
-    # -   id: end-of-file-fixer        # Check that Text files ends with new line.
-    #     filenames: "*.nim"
-    # -   id: trailing-whitespace      # Check for empty trailing white spaces.
-    #     filenames: "*.nim"
