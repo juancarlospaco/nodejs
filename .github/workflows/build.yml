@@ -25,6 +25,8 @@ jobs:
         nim-version: 'devel'
         no-color: true  # --noColor
 
+    - uses: pre-commit/action@v2.0.3
+
     # - uses: juancarlospaco/nimpretty-action@main
     #   with:
     #     folders: "src"
@@ -49,5 +51,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
-    - uses: pre-commit/action@v2.0.3
