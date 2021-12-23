@@ -6,6 +6,6 @@ jobs:
     if: ${{ !github.event.pull_request.draft && !contains(github.event.head_commit.message, '[skip ci]') && github.event.pull_request.commits > 2 }}
     name: Must be >= 3 commits
     runs-on: ubuntu-latest
-    uses: actions/github-script@v5
-    with:
-      script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
+    - uses: actions/github-script@v5
+      with:
+        script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
