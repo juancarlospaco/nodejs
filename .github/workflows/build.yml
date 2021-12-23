@@ -15,8 +15,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
+        platform:     [ubuntu-latest, windows-latest]
         architecture: ["x64", "x86"]
+        node:         [12, 14, 16]
     name: ${{ matrix.platform }}-${{ matrix.architecture }}
     runs-on: ${{ matrix.platform }}
     steps:
