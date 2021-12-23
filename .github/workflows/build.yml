@@ -5,6 +5,7 @@ on:
       - 'src/**.nim'
       - '.github/workflows/*.yml'
       - '.github/workflows/*.yaml'
+      - '.pre-commit-config.yaml'
       - '.gitignore'
 
 jobs:
