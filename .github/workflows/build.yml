@@ -50,4 +50,3 @@ jobs:
         message: 'Fully Automated Luxury Nim'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
