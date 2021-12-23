@@ -27,6 +27,7 @@ jobs:
         no-color: true  # --noColor
 
     - uses: pre-commit/action@v2.0.3
+      if: runner.os == 'Linux'
 
     # - uses: juancarlospaco/nimpretty-action@main
     #   with:
