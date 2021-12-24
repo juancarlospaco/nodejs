@@ -3,35 +3,34 @@ when not defined(js):
   {.fatal: "Module jssynchttpclient is designed to be used with the JavaScript backend.".}
 
 import fusion/js/jsxmlhttprequest
-import std/uri
 from std/uri import Uri
 
 type JsHttpClient* = ref object of XMLHttpRequest
 
 func newJsHttpClient*(): JsHttpClient = discard
 
-proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; body: string; `method`: static[cstring]): cstring =
+proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; `method`: static[cstring]; body: cstring = ""): cstring =
   self.open(`method` = `method`, url = cstring($url), false)
-  self.send(body = body.cstring)
+  self.send(body = body)
   self.responseText
 
 proc getContent*(self: JsHttpClient; url: Uri | string): cstring =
-  xmlHttpRequestImpl(self, url, "", "GET".cstring)
+  xmlHttpRequestImpl(self, url, "GET".cstring)
 
 proc deleteContent*(self: JsHttpClient; url: Uri | string): cstring =
-  xmlHttpRequestImpl(self, url, "", "DELETE".cstring)
+  xmlHttpRequestImpl(self, url, "DELETE".cstring)
 
-proc postContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
-  xmlHttpRequestImpl(self, url, body, "POST".cstring)
+proc postContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+  xmlHttpRequestImpl(self, url, "POST".cstring, body)
 
-proc putContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
-  xmlHttpRequestImpl(self, url, body, "PUT".cstring)
+proc putContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+  xmlHttpRequestImpl(self, url, "PUT".cstring, body)
 
-proc patchContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
-  xmlHttpRequestImpl(self, url, body, "PATCH".cstring)
+proc patchContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+  xmlHttpRequestImpl(self, url, "PATCH".cstring, body)
 
 proc head*(self: JsHttpClient; url: Uri | string): cstring =
-  xmlHttpRequestImpl(self, url, "", "HEAD".cstring)
+  xmlHttpRequestImpl(self, url, "HEAD".cstring)
 
 
 runnableExamples("-r:off"):
