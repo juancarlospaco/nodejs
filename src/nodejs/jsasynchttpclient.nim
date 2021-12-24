@@ -9,42 +9,42 @@ type JsAsyncHttpClient* = ref object of JsRoot
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func fetchOptionsImpl(body: cstring; `method`: static[cstring]): FetchOptions =
+func fetchOptionsImpl(`method`: static[cstring]; body: cstring = ""): FetchOptions =
   unsafeNewFetchOptions(metod = `method`, body = body, mode = "cors".cstring, credentials = "include".cstring,
     cache = "default".cstring, referrerPolicy = "unsafe-url".cstring, keepalive = false)
 
-proc getContent*(self: JsAsyncHttpClient; url: Uri | string): Future[cstring] {.async.} =
-  text(await fetch(cstring($url)))
+proc getContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("GET".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc deleteContent*(self: JsAsyncHttpClient; url: Uri | string): Future[cstring] {.async.} =
-  text(await fetch(cstring($url), fetchOptionsImpl("".cstring, "DELETE".cstring)))
+proc deleteContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("DELETE".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc postContent*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring($url), fetchOptionsImpl(body.cstring, "POST".cstring)))
+proc postContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("POST".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc putContent*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring($url), fetchOptionsImpl(body.cstring, "PUT".cstring)))
+proc putContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PUT".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc patchContent*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring($url), fetchOptionsImpl(body.cstring, "PATCH".cstring)))
+proc patchContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PATCH".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc get*(self: JsAsyncHttpClient; url: Uri | string): Future[Response] {.async.} =
-  fetch(cstring($url))
+proc get*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("GET".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc delete*(self: JsAsyncHttpClient; url: Uri | string): Future[Response] {.async.} =
-  fetch(cstring($url), fetchOptionsImpl("".cstring, "DELETE".cstring))
+proc delete*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("DELETE".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc post*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[Response] {.async.} =
-  fetch(cstring($url), fetchOptionsImpl(body.cstring, "POST".cstring))
+proc post*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("POST".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc put*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[Response] {.async.} =
-  fetch(cstring($url), fetchOptionsImpl(body.cstring, "PUT".cstring))
+proc put*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PUT".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc patch*(self: JsAsyncHttpClient; url: Uri | string; body = ""): Future[Response] {.async.} =
-  fetch(cstring($url), fetchOptionsImpl(body.cstring, "PATCH".cstring))
+proc patch*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PATCH".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc head*(self: JsAsyncHttpClient; url: Uri | string): Future[Response] {.async.} =
-  fetch(cstring($url), fetchOptionsImpl("".cstring, "HEAD".cstring))
+proc head*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("HEAD".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
 
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
