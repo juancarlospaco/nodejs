@@ -2,11 +2,11 @@
 when not defined(js):
   {.fatal: "Module jsttpclient is designed to be used with the JavaScript backend.".}
 
-import fusion/js/jsxmlhttprequest
+import jsxmlhttprequest
 
-type JsHttpClient* = ref object of XMLHttpRequest
+type JsHttpClient* = XMLHttpRequest
 
-func newJsHttpClient*(): JsHttpClient = discard
+func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 proc xmlHttpRequestImpl(self: JsHttpClient; url: string or cstring; body: string or cstring; metod: static[cstring]): cstring =
   self.open(metod = metod, url = cstring(url), false)
@@ -33,7 +33,7 @@ proc head*(self: JsHttpClient; url: string or cstring): cstring =
 
 
 runnableExamples("-r:off"):
-  import fusion/js/jsxmlhttprequest
+  import jsxmlhttprequest
   let client = newJsHttpClient()
   const data = """{"key": "value"}"""
   echo client.getContent("http://nim-lang.org")
@@ -41,3 +41,11 @@ runnableExamples("-r:off"):
   echo client.postContent("http://httpbin.org/post", data)
   echo client.putContent("http://httpbin.org/put", data)
   echo client.patchContent("http://httpbin.org/patch", data)
+
+
+when isMainModule:
+  # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
+  import std/jsconsole
+  let client: JsHttpClient = newJsHttpClient()
+  let content: cstring = client.getContent("http://localhost:1337")
+  console.log content
