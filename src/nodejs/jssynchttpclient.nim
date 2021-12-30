@@ -2,15 +2,15 @@
 when not defined(js):
   {.fatal: "Module jssynchttpclient is designed to be used with the JavaScript backend.".}
 
-import fusion/js/jsxmlhttprequest
+import jsxmlhttprequest
 from std/uri import Uri
 
-type JsHttpClient* = ref object of XMLHttpRequest
+type JsHttpClient* = XMLHttpRequest
 
-func newJsHttpClient*(): JsHttpClient = discard
+func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; `method`: static[cstring]; body: cstring = ""): cstring =
-  self.open(`method` = `method`, url = cstring($url), false)
+  self.open(metod = `method`, url = cstring($url), false)
   self.send(body = body)
   self.responseText
 
@@ -40,21 +40,29 @@ runnableExamples("-r:off"):
   const data = """{"key": "value"}"""
 
   block:
-    let url = parseUri("http://nim-lang.org")
+    let url = parseUri("https://google.com")
     let content = client.getContent(url)
 
   block:
-    let url = parseUri("http://httpbin.org/delete")
+    let url = parseUri("https://httpbin.org/delete")
     let content = client.deleteContent(url)
 
   block:
-    let url = parseUri("http://httpbin.org/post")
+    let url = parseUri("https://httpbin.org/post")
     let content = client.postContent(url, data)
 
   block:
-    let url = parseUri("http://httpbin.org/put")
+    let url = parseUri("https://httpbin.org/put")
     let content = client.putContent(url, data)
 
   block:
-    let url = parseUri("http://httpbin.org/patch")
+    let url = parseUri("https://httpbin.org/patch")
     let content = client.patchContent(url, data)
+
+
+when isMainModule:
+  # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
+  import std/jsconsole
+  let client: JsHttpClient = newJsHttpClient()
+  let content: cstring = client.getContent("http://localhost:1337")
+  console.log content
