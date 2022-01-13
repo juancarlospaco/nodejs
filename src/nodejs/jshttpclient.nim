@@ -3,7 +3,7 @@ when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
 import std/[asyncjs, jsheaders, jsfetch]
-import fusion/js/jsxmlhttprequest
+import jsxmlhttprequest
 from std/uri import Uri
 
 type
