@@ -11,7 +11,8 @@ type
   JsAsyncHttpClient* = ref object of JsRoot
 
   JsRequest* = ref object of JsRoot
-    url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*, referrerPolicy*: cstring
+    url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*,
+    referrerPolicy*: cstring
     headers*: Headers
     keepAlive*: bool
 
@@ -24,31 +25,14 @@ func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func newJsRequest*(
-  url, `method`: cstring;
-  body, integrity: cstring = "";
-  referrer: cstring = "client";
-  mode: cstring = "cors";
-  credentials: cstring = "include";
-  cache: cstring = "default";
-  redirect: cstring = "follow";
-  referrerPolicy: cstring = "unsafe-url";
-  headers: Headers = newHeaders();
-  keepAlive: bool = false
-): JsRequest =
+func newJsRequest*(url, `method`: cstring; body, integrity: cstring = "";
+  referrer: cstring = "client"; mode: cstring = "cors"; credentials: cstring = "include";
+  cache: cstring = "default"; redirect: cstring = "follow"; referrerPolicy: cstring = "unsafe-url";
+  headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
   result = JsRequest(
-    url: url,
-    `method`: `method`,
-    body: body,
-    integrity: integrity,
-    referrer: referrer,
-    mode: mode,
-    credentials: credentials,
-    cache: cache,
-    redirect: redirect,
-    referrerPolicy: referrerPolicy,
-    headers: headers,
-    keepAlive: keepAlive
+    url: url, `method`: `method`, body: body, integrity: integrity, referrer: referrer, mode: mode,
+    credentials: credentials, cache: cache, redirect: redirect, referrerPolicy: referrerPolicy,
+    headers: headers, keepAlive: keepAlive
   )
 
 func fetchOptionsImpl(request: JsRequest): FetchOptions =
