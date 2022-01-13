@@ -13,7 +13,7 @@ type
   JsRequest* = ref object of JsRoot
     url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*, referrerPolicy*: cstring
     headers*: Headers
-    keepalive*: bool
+    keepAlive*: bool
 
   JsResponse* = ref object of JsRoot
     status*: cint
@@ -34,7 +34,7 @@ func newJsRequest*(
   redirect: cstring = "follow";
   referrerPolicy: cstring = "unsafe-url";
   headers: Headers = newHeaders();
-  keepalive: bool = false
+  keepAlive: bool = false
 ): JsRequest =
   result = JsRequest(
     url: url,
@@ -48,7 +48,7 @@ func newJsRequest*(
     redirect: redirect,
     referrerPolicy: referrerPolicy,
     headers: headers,
-    keepalive: keepalive
+    keepAlive: keepAlive
   )
 
 func fetchOptionsImpl(request: JsRequest): FetchOptions =
@@ -59,7 +59,7 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
     credentials = request.credentials,
     cache = request.cache,
     referrerPolicy = request.referrerPolicy,
-    keepalive = request.keepalive
+    keepAlive = request.keepAlive
   )
 
 func response(response: XMLHttpRequest): JsResponse =
