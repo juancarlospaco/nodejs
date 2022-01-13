@@ -128,33 +128,33 @@ when isMainModule:
 runnableExamples("-r:off"):
   from std/uri import parseUri
 
-  let client = newJsHttpClient()
-  const data = """{"key": "value"}"""
+  let client: JsHttpClient = newJsHttpClient()
+  const data: cstring = """{"key": "value"}"""
 
   block:
     let
-      url = parseUri("https://google.com")
-      content = client.getContent(url)
+      url: Uri = parseUri("https://google.com")
+      content: JsResponse = client.getContent(url)
 
   block:
     let
-      url = parseUri("https://httpbin.org/delete")
-      content = client.deleteContent(url)
+      url: Uri = parseUri("https://httpbin.org/delete")
+      content: JsResponse = client.deleteContent(url)
 
   block:
     let
-      url = parseUri("https://httpbin.org/post")
-      content = client.postContent(url, data)
+      url: Uri = parseUri("https://httpbin.org/post")
+      content: JsResponse = client.postContent(url, data)
 
   block:
     let
-      url = parseUri("https://httpbin.org/put")
-      content = client.putContent(url, data)
+      url: Uri = parseUri("https://httpbin.org/put")
+      content: JsResponse = client.putContent(url, data)
 
   block:
     let
-      url = parseUri("https://httpbin.org/patch")
-      content = client.patchContent(url, data)
+      url: Uri = parseUri("https://httpbin.org/patch")
+      content: JsResponse = client.patchContent(url, data)
 
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
   import std/asyncjs
@@ -165,32 +165,32 @@ runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off
 
     block:
       let
-        url = parseUri("http://nim-lang.org")
-        content = await client.getContent(url)
-        response = await client.get(url)
+        url: Uri = parseUri("http://nim-lang.org")
+        content: JsResponse = await client.getContent(url)
+        response: JsResponse = await client.get(url)
 
     block:
       let
-        url = parseUri("http://httpbin.org/delete")
-        content = await client.deleteContent(url)
-        response = await client.delete(url)
+        url: Uri = parseUri("http://httpbin.org/delete")
+        content: JsResponse = await client.deleteContent(url)
+        response: JsResponse = await client.delete(url)
 
     block:
       let
-        url = parseUri("http://httpbin.org/post")
-        content = await client.postContent(url, data)
-        response = await client.post(url, data)
+        url: Uri = parseUri("http://httpbin.org/post")
+        content: JsResponse = await client.postContent(url, data)
+        response: JsResponse = await client.post(url, data)
 
     block:
       let
-        url = parseUri("http://httpbin.org/put")
-        content = await client.putContent(url, data)
-        response = await client.put(url, data)
+        url: Uri = parseUri("http://httpbin.org/put")
+        content: JsResponse = await client.putContent(url, data)
+        response: JsResponse = await client.put(url, data)
 
     block:
       let
-        url = parseUri("http://httpbin.org/patch")
-        content = await client.patchContent(url, data)
-        response = await client.patch(url, data)
+        url: Uri = parseUri("http://httpbin.org/patch")
+        content: JsResponse = await client.patchContent(url, data)
+        response: JsResponse = await client.patch(url, data)
 
   discard example()
