@@ -1,4 +1,4 @@
-## * HttpClient for JavaScript targets implemented as sugar on top of `fusion/js/jsxmlhttprequest <https://nim-lang.github.io/fusion/src/fusion/js/jsxmlhttprequest>` and `std/jsfetch <https://nim-lang.github.io/Nim/jsfetch>`_
+## * HttpClient for JavaScript targets implemented as sugar on top of `jsxmlhttprequest` and `std/jsfetch`.
 when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
