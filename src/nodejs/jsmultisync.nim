@@ -1,15 +1,15 @@
 import std/[macros, strutils]
 
-proc replaceReturn(node: var NimNode) =
+proc replaceReturn(node: NimNode) =
   var z = 0
   for s in node:
     var son = node[z]
     let jsResolve = ident("jsResolve")
     if son.kind == nnkReturnStmt:
-      let value = if son[0].kind != nnkEmpty: nnkCall.newTree(jsResolve, son[0]) else: jsResolve
+      let value = if son[0].kind != nnkEmpty: newCall("jsResolve", son[0]) else: jsResolve
       node[z] = nnkReturnStmt.newTree(value)
     elif son.kind == nnkAsgn and son[0].kind == nnkIdent and $son[0] == "result":
-      node[z] = nnkAsgn.newTree(son[0], nnkCall.newTree(jsResolve, son[1]))
+      node[z] = nnkAsgn.newTree(son[0], newCall("jsResolve", son[1]))
     else:
       replaceReturn(son)
     inc z
@@ -22,7 +22,7 @@ proc isFutureVoid(node: NimNode): bool =
 proc generateJsasync(arg: NimNode): NimNode =
   if arg.kind notin {nnkProcDef, nnkLambda, nnkMethodDef, nnkDo}:
       error("Cannot transform this node kind into an async proc." &
-            " proc/method definition or lambda node expected.")
+            " proc/method definition or lambda node expected.", arg)
 
   result = arg
   var isVoid = false
