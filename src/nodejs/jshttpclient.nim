@@ -11,7 +11,7 @@ type
   JsAsyncHttpClient* = ref object of JsRoot
 
   JsRequest* = ref object of JsRoot
-    url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*, referrerPolicy*: cstring
+    url*, `method`*, body*, integrity*, referer*, mode*, credentials*, cache*, redirect*, refererPolicy*: cstring
     headers*: Headers
     keepAlive*: bool
 
@@ -25,12 +25,12 @@ func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
 func newJsRequest*(url, `method`: cstring; body, integrity: cstring = "";
-  referrer: cstring = "client"; mode: cstring = "cors"; credentials: cstring = "include";
-  cache: cstring = "default"; redirect: cstring = "follow"; referrerPolicy: cstring = "unsafe-url";
+  referer: cstring = "client"; mode: cstring = "cors"; credentials: cstring = "include";
+  cache: cstring = "default"; redirect: cstring = "follow"; refererPolicy: cstring = "unsafe-url";
   headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
   result = JsRequest(
-    url: url, `method`: `method`, body: body, integrity: integrity, referrer: referrer, mode: mode,
-    credentials: credentials, cache: cache, redirect: redirect, referrerPolicy: referrerPolicy,
+    url: url, `method`: `method`, body: body, integrity: integrity, referer: referer, mode: mode,
+    credentials: credentials, cache: cache, redirect: redirect, refererPolicy: refererPolicy,
     headers: headers, keepAlive: keepAlive
   )
 
@@ -41,9 +41,17 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
     mode = request.mode,
     credentials = request.credentials,
     cache = request.cache,
-    referrerPolicy = request.referrerPolicy,
+    referrerPolicy = request.refererPolicy,
     keepAlive = request.keepAlive
   )
+
+func setHeaders(client: JsHttpClient, request: JsRequest) =
+  client.setRequestHeader([("Integrity".cstring, request.integrity),
+    ("Referer".cstring, request.referer), ("Mode".cstring, request.mode),
+    ("Credentials".cstring, request.credentials), ("Cache".cstring, request.cache),
+    ("Redirect".cstring, request.redirect), ("Referer-Policy".cstring, request.refererPolicy)])
+  for pair in request.headers.entries():
+    client.setRequestHeader([(pair[0], pair[1])])
 
 func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
@@ -63,6 +71,7 @@ proc response(response: Response): JsResponse {.async.} =
 proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
   ## Request proc for sync `XMLHttpRequest` client
   client.open(metod = request.`method`, url = request.url, async = true)
+  client.setHeaders(request)
   client.send(body = request.body)
   return client.response()
 
