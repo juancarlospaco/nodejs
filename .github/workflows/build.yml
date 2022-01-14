@@ -18,14 +18,15 @@ jobs:
         platform:     [ubuntu-latest, windows-latest]
         architecture: ["x64", "x86"]
         node:         [14, 15, 16, 17]
-    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}
+        nim-channel:  [stable, devel]
+    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}-${{ matrix.nim-channel }}
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
 
     - uses: jiro4989/setup-nim-action@v1
       with:
-        nim-version: 'devel'
+        nim-version: ${{ matrix.nim-channel }}
         no-color: true  # --noColor
 
     - name: Setup NodeJS ${{ matrix.node }}
