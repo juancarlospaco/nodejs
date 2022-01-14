@@ -55,7 +55,6 @@ jobs:
 
     # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
     - name: Generate Documentation (Linux)
-      if: runner.os == 'Linux'
       shell: bash
       run: |
         cd src/nodejs/
@@ -71,7 +70,9 @@ jobs:
 
 
     - name: Commit Docs
-      if: github.ref == 'refs/heads/main'
+      if: |
+        github.event_name == 'push' && github.ref == 'refs/heads/main' && runner.os == 'Linux' &&
+        matrix.platform == 'ubuntu-latest' && matrix.architecture == 'x64' && matrix.node == '17'
       uses: EndBug/add-and-commit@v4  # Commit everything to Git repo
       with:
         add: 'docs'
