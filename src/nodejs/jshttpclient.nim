@@ -3,7 +3,7 @@ when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
 import std/[asyncjs, jsheaders, jsfetch]
-import jsxmlhttprequest
+import jsxmlhttprequest, jsmultisync
 from std/uri import Uri
 
 type
@@ -11,8 +11,7 @@ type
   JsAsyncHttpClient* = ref object of JsRoot
 
   JsRequest* = ref object of JsRoot
-    url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*,
-    referrerPolicy*: cstring
+    url*, `method`*, body*, integrity*, referrer*, mode*, credentials*, cache*, redirect*, referrerPolicy*: cstring
     headers*: Headers
     keepAlive*: bool
 
@@ -63,7 +62,7 @@ proc response(response: Response): JsResponse {.async.} =
 
 proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
   ## Request proc for sync `XMLHttpRequest` client
-  client.open(metod = request.`method`, url = request.url, async = false)
+  client.open(metod = request.`method`, url = request.url, async = true)
   client.send(body = request.body)
   return client.response()
 
@@ -79,41 +78,51 @@ proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[J
   let request = newJsRequest(url = cstring($url), `method` = "GET")
   return await client.request(request)
 
-proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "GET")
-  return await client.request(request)
+proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
+  let
+    request = newJsRequest(url = cstring($url), `method` = "GET")
+    resp = await client.request(request)
+  return resp.responseText
 
 proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = "DELETE")
   return await client.request(request)
 
-proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "DELETE", body = body)
-  return await client.request(request)
+proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+  let
+    request = newJsRequest(url = cstring($url), `method` = "DELETE", body = body)
+    resp = await client.request(request)
+  return resp.responseText
 
 proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = "POST")
   return await client.request(request)
 
-proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "POST", body = body)
-  return await client.request(request)
+proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+  let
+    request = newJsRequest(url = cstring($url), `method` = "POST", body = body)
+    resp = await client.request(request)
+  return resp.responseText
 
 proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = "PUT")
   return await client.request(request)
 
-proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "PUT", body = body)
-  return await client.request(request)
+proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+  let
+    request = newJsRequest(url = cstring($url), `method` = "PUT", body = body)
+    resp = await client.request(request)
+  return resp.responseText
 
 proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = "PATCH")
   return await client.request(request)
 
-proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "PATCH", body = body)
-  return await client.request(request)
+proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+  let
+    request = newJsRequest(url = cstring($url), `method` = "PATCH", body = body)
+    resp = await client.request(request)
+  return resp.responseText
 
 when isMainModule:
   # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
