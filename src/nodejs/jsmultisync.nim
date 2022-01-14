@@ -115,6 +115,10 @@ proc generateJssync(prc: NimNode): NimNode =
   result[^1] = nnkStmtList.newTree(multisyncAwait, result[^1])
 
 macro multisync*(prc: untyped): untyped =
+  ## Takes a procedure definition which takes a generic union of arguments,
+  ## for example: proc (socket: Socket | AsyncSocket).
+  ## It transforms them so that `proc (socket: Socket)` and
+  ## `proc (socket: AsyncSocket)` are returned.
   result = newStmtList()
   result.add generateJssync(prc)
   result.add generateJsasync(prc)
