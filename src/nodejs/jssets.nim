@@ -30,7 +30,7 @@ func toCstring*(this: JsSet): seq[cstring] {.importjs: """
 
 func len*(this: JsSet): int = this.size.int
 
-func `$`*(this: JsSet): string = $this.toString()
+template `$`*(this: JsSet): string = $this.toString()
 
 
 runnableExamples"-r:off":
