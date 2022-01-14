@@ -54,11 +54,13 @@ jobs:
 
 
     # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
-    - name: Generate Documentation (Linux)
+    - name: Generate Documentation
       shell: bash
       run: |
         cd src/nodejs/
-        $CMD jsassert
+        for i in *.nim; do
+          $CMD $i
+        done
 
 
     - name: Clean out
