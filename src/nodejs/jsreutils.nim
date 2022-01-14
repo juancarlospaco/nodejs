@@ -1,7 +1,8 @@
 ## - Utils for https://nim-lang.github.io/Nim/jsre.html
 from std/jsre import RegExp
 
-template groups*(self: RegExp; input: cstring; groups: varargs[var cstring]) =
+
+template groups*(self: RegExp; input: cstring; groups: varargs[cstring]) =
   ## Named capture groups.
   ## Similar to `var [a, b, c] = regex.exec(input).slice(1);` in JavaScript.
   runnableExamples:
