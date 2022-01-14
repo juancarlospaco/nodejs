@@ -399,7 +399,7 @@ runnableExamples:
 
 
 runnableExamples("-r:off"):
-  import nodejs/jsbuffer
+  import jsbuffer
   requireFs()
   requireBuffer()
   proc example(error: int; data: Buffer) = echo data
