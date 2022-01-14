@@ -33,7 +33,7 @@ func len*(this: JsSet): int = this.size.int
 func `$`*(this: JsSet): string = $this.toString()
 
 
-runnableExamples:
+runnableExamples"-r:off":
   import std/jsffi
   let a: JsSet = newJsSet([1.toJs, 2.toJs, 3.toJs, 4.toJs])
   let b: JsSet = newJsSet([1.0.toJs, 2.0.toJs, 3.0.toJs])
