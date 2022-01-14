@@ -46,10 +46,10 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
   )
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
-  client.setRequestHeader([("Integrity".cstring, request.integrity),
-    ("Referer".cstring, request.referer), ("Mode".cstring, request.mode),
-    ("Credentials".cstring, request.credentials), ("Cache".cstring, request.cache),
-    ("Redirect".cstring, request.redirect), ("Referer-Policy".cstring, request.refererPolicy)])
+  client.setRequestHeader([("Integrity".cstring, request.integrity), ("Referer".cstring, request.referer),
+    ("Mode".cstring, request.mode), ("RequestCredentials".cstring, request.credentials),
+    ("Cache".cstring, request.cache), ("Redirect".cstring, request.redirect),
+    ("Referer-Policy".cstring, request.refererPolicy)])
   for pair in request.headers.entries():
     client.setRequestHeader([(pair[0], pair[1])])
 
