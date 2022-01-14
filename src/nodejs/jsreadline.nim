@@ -83,7 +83,7 @@ runnableExamples:
     # echo rl.cursor()
 
 runnableExamples("-r:off"):
-  import nodejs/jsprocess
+  import jsprocess
   requireProcess()
   requireReadline()
   let rl = newReadline()
