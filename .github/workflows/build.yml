@@ -17,7 +17,7 @@ jobs:
       matrix:
         platform:     [ubuntu-latest, windows-latest]
         architecture: ["x64", "x86"]
-        node:         [11, 12, 13, 14, 15, 16, 17]
+        node:         [12, 13, 14, 15, 16, 17]
         nim-channel:  [stable, devel]
     name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}-${{ matrix.nim-channel }}
     runs-on: ${{ matrix.platform }}
