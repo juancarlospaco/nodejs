@@ -129,7 +129,8 @@ func toCstring*(self: CallTracker): cstring {.importjs: "JSON.stringify(#)".}
 func `$`*(self: CallTracker): string = $toCstring(self)
 
 
-runnableExamples:
+# Needs -r:off to work with Node 13 and older.
+runnableExamples"-r:off":
   import std/[jsffi, jsre]
   requireAssert()
   block:
