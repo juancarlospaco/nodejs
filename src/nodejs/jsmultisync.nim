@@ -95,10 +95,6 @@ proc stripReturnType(returnType: NimNode): NimNode =
     result = returnType[1]
 
 proc generateJssync(prc: NimNode): NimNode =
-  ## Takes a procedure definition which takes a generic union of arguments,
-  ## for example: proc (socket: Socket | AsyncSocket).
-  ## It transforms them so that `proc (socket: Socket)` and
-  ## `proc (socket: AsyncSocket)` are returned.
 
   result = prc.copyNimTree()
   # Retrieve the `T` inside `Future[T]`.
