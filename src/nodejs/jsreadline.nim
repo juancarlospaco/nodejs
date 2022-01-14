@@ -62,7 +62,8 @@ func moveCursor*(dx, dy: cint): bool {.importjs: "readline.$1(process.stout, #, 
 
 
 runnableExamples:
-  import std/jsffi, nodejs/jsprocess
+  import std/jsffi
+  import jsprocess
   requireProcess()
   requireReadline()
   block:
