@@ -30,24 +30,24 @@ func toCstring*(this: JsSet): seq[cstring] {.importjs: """
 
 func len*(this: JsSet): int = this.size.int
 
-func `$`*(this: JsSet): string = $this.toString()
+template `$`*(this: JsSet): string = $this.toString()
 
 
-runnableExamples:
-  import std/jsffi
-  let a: JsSet = newJsSet([1.toJs, 2.toJs, 3.toJs, 4.toJs])
-  let b: JsSet = newJsSet([1.0.toJs, 2.0.toJs, 3.0.toJs])
-  doAssert a.len == 4
-  doAssert b.len == 3
-  doAssert a.toCstring() == @["1".cstring, "2", "3", "4"]
-  doAssert b.toCstring() == @["1".cstring, "2", "3"]
-  a.clear()
-  b.clear()
-  let d: JsSet = newJsSet([1.toJs, 2.toJs, 3.toJs])
-  doAssert d.len == 3
-  d.add(4.toJs)
-  d.delete(2.toJs)
-  doAssert 3.toJs in d
-  doAssert "3".cstring.toJs notin d
-  doAssert d.contains 1.toJs
-  doAssert $d == """@["1", "3", "4"]"""
+# runnableExamples"-r:off":
+#   import std/jsffi
+#   let a: JsSet = newJsSet([1.toJs, 2.toJs, 3.toJs, 4.toJs])
+#   let b: JsSet = newJsSet([1.0.toJs, 2.0.toJs, 3.0.toJs])
+#   doAssert a.len == 4
+#   doAssert b.len == 3
+#   doAssert a.toCstring() == @["1".cstring, "2", "3", "4"]
+#   doAssert b.toCstring() == @["1".cstring, "2", "3"]
+#   a.clear()
+#   b.clear()
+#   let d: JsSet = newJsSet([1.toJs, 2.toJs, 3.toJs])
+#   doAssert d.len == 3
+#   d.add(4.toJs)
+#   d.delete(2.toJs)
+#   doAssert 3.toJs in d
+#   doAssert "3".cstring.toJs notin d
+#   doAssert d.contains 1.toJs
+#   doAssert $d == """@["1", "3", "4"]"""

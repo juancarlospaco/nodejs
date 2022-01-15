@@ -260,7 +260,7 @@ class $1 {
 
 
 # when isMainModule:
-runnableExamples"-b:js -d:nodejs --experimental:strictFuncs":
+runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
 
 
   class Kitten* of JsRoot:
