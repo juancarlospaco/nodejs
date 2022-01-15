@@ -196,7 +196,7 @@ func isSymbol*(value: auto): bool {.importjs: "(typeof # === 'symbol')".}
   ## https://nodejs.org/api/util.html#util_util_issymbol_object
 
 
-runnableExamples:
+runnableExamples"-r:off":
   requireUtil()
   block:
     doAssert cstring"%s:%s".format("example".cstring) == "example:%s".cstring
