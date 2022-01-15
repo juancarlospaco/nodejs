@@ -50,7 +50,7 @@ jobs:
       with:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         NODE_OPTIONS: "--unhandled-rejections=warn"
-        CMD: "nim doc -b:js -d:nodejs -d:nimExperimentalAsyncjsThen -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --experimental:strictFuncs --experimental:strictEffects --index:on --project --styleCheck:usages --styleCheck:error --outdir:../../docs"
+        CMD: "nim doc -b:js -d:nodejs -d:nimExperimentalAsyncjsThen -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --experimental:strictFuncs --experimental:strictEffects --index:on --project --styleCheck:usages --styleCheck:hint --outdir:../../docs"
 
 
     # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
