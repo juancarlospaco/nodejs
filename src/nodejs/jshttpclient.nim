@@ -46,6 +46,7 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
   )
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
+  ## Sets Headers for `JsHttpClient`
   client.setRequestHeader([("Integrity".cstring, request.integrity), ("Referer".cstring, request.referer),
     ("Mode".cstring, request.mode), ("RequestCredentials".cstring, request.credentials),
     ("Cache".cstring, request.cache), ("Redirect".cstring, request.redirect),
@@ -77,7 +78,9 @@ proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
 
 proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse] {.async.} =
   ## Request proc for async `jsfetch` client
-  return response(await fetch(request.url, fetchOptionsImpl(request)))
+  var req: Request = newRequest(request.url)
+  req.headers = request.headers
+  return response(await fetch(req, fetchOptionsImpl(request)))
 
 proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = "HEAD")
