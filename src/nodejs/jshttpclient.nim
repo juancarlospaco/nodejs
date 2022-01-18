@@ -2,7 +2,7 @@
 when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
-import std/[asyncjs, jsheaders, jsfetch]
+import std/[asyncjs, jsheaders, jsfetch, httpcore]
 import jsxmlhttprequest, jsmultisync
 from std/uri import Uri
 
@@ -11,7 +11,13 @@ type
   JsAsyncHttpClient* = ref object of JsRoot
 
   JsRequest* = ref object of JsRoot
-    url*, `method`*, body*, integrity*, referer*, mode*, credentials*, cache*, redirect*, refererPolicy*: cstring
+    `method`*: HttpMethod
+    url*, body*, integrity*, referer*: cstring
+    refererPolicy*: FetchReferrerPolicies
+    mode*: FetchModes
+    credentials*: FetchCredentials
+    cache*: FetchCaches
+    redirect*: FetchRedirects
     headers*: Headers
     keepAlive*: bool
 
@@ -24,10 +30,10 @@ func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func newJsRequest*(url, `method`: cstring; body, integrity: cstring = "";
-  referer: cstring = "client"; mode: cstring = "cors"; credentials: cstring = "include";
-  cache: cstring = "default"; redirect: cstring = "follow"; refererPolicy: cstring = "unsafe-url";
-  headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
+func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity: cstring = "";
+  referer: cstring = "client"; refererPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
+  credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
+  redirect: FetchRedirects = frFollow; headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
   result = JsRequest(
     url: url, `method`: `method`, body: body, integrity: integrity, referer: referer, mode: mode,
     credentials: credentials, cache: cache, redirect: redirect, refererPolicy: refererPolicy,
@@ -35,22 +41,18 @@ func newJsRequest*(url, `method`: cstring; body, integrity: cstring = "";
   )
 
 func fetchOptionsImpl(request: JsRequest): FetchOptions =
-  unsafeNewFetchOptions(
-    metod = request.`method`,
-    body = request.body,
-    mode = request.mode,
-    credentials = request.credentials,
-    cache = request.cache,
-    referrerPolicy = request.refererPolicy,
-    keepAlive = request.keepAlive
+  newfetchOptions(
+    metod = request.`method`, body = request.body, mode = request.mode, credentials = request.credentials,
+    cache = request.cache, referrerPolicy = request.refererPolicy, keepalive = request.keepAlive,
+    redirect = request.redirect, referrer = request.referer, integrity = request.integrity
   )
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
   client.setRequestHeader([("Integrity".cstring, request.integrity), ("Referer".cstring, request.referer),
-    ("Mode".cstring, request.mode), ("RequestCredentials".cstring, request.credentials),
-    ("Cache".cstring, request.cache), ("Redirect".cstring, request.redirect),
-    ("Referer-Policy".cstring, request.refererPolicy)])
+    ("Mode".cstring, cstring($request.mode)), ("RequestCredentials".cstring, cstring($request.credentials)),
+    ("Cache".cstring, cstring($request.cache)), ("Redirect".cstring, cstring($request.redirect)),
+    ("Referer-Policy".cstring, cstring($request.refererPolicy))])
   for pair in request.headers.entries():
     client.setRequestHeader([(pair[0], pair[1])])
 
@@ -71,7 +73,7 @@ proc response(response: Response): JsResponse {.async.} =
 
 proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
   ## Request proc for sync `XMLHttpRequest` client
-  client.open(metod = request.`method`, url = request.url, async = true)
+  client.open(metod = cstring($request.`method`), url = request.url, async = true)
   client.setHeaders(request)
   client.send(body = request.body)
   return client.response()
@@ -83,56 +85,56 @@ proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]
   return response(await fetch(req, fetchOptionsImpl(request)))
 
 proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "HEAD")
+  let request = newJsRequest(url = cstring($url), `method` = HttpHead)
   return await client.request(request)
 
 proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "GET")
+  let request = newJsRequest(url = cstring($url), `method` = HttpGet)
   return await client.request(request)
 
 proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = "GET")
+    request = newJsRequest(url = cstring($url), `method` = HttpGet)
     resp = await client.request(request)
   return resp.responseText
 
 proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "DELETE")
+  let request = newJsRequest(url = cstring($url), `method` = HttpDelete)
   return await client.request(request)
 
 proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = "DELETE", body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body)
     resp = await client.request(request)
   return resp.responseText
 
 proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "POST")
+  let request = newJsRequest(url = cstring($url), `method` = HttpPost)
   return await client.request(request)
 
 proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = "POST", body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body)
     resp = await client.request(request)
   return resp.responseText
 
 proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "PUT")
+  let request = newJsRequest(url = cstring($url), `method` = HttpPut)
   return await client.request(request)
 
 proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = "PUT", body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body)
     resp = await client.request(request)
   return resp.responseText
 
 proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = "PATCH")
+  let request = newJsRequest(url = cstring($url), `method` = HttpPatch)
   return await client.request(request)
 
 proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = "PATCH", body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body)
     resp = await client.request(request)
   return resp.responseText
 
@@ -142,9 +144,15 @@ when isMainModule:
 
   let
     client: JsHttpClient = newJsHttpClient()
-    content: cstring = client.getContent("http://localhost:1337")
+    syncContent: cstring = client.getContent("http://localhost:1337")
 
-  console.log content
+  console.log syncContent
+
+  let
+    asyncClient: JsAsyncHttpClient = newJsAsyncHttpClient()
+    asyncContent: Future[cstring] = asyncClient.getContent("http://localhost:1337")
+
+  console.log asyncContent
 
 runnableExamples("-r:off"):
   from std/uri import parseUri
