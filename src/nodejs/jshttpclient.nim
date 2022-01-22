@@ -1,232 +1,61 @@
-## * HttpClient for JavaScript targets implemented as sugar on top of `jsxmlhttprequest` and `std/jsfetch`.
+## * HttpClient for JavaScript targets implemented as sugar on top of `fusion/js/jsxmlhttprequest <https://nim-lang.github.io/fusion/src/fusion/js/jsxmlhttprequest>`_
 when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
-import std/[asyncjs, jsheaders, jsfetch, httpcore]
-import jsxmlhttprequest, jsmultisync
+import fusion/js/jsxmlhttprequest
+import std/uri
 from std/uri import Uri
 
-type
-  JsHttpClient* = XMLHttpRequest
-  JsAsyncHttpClient* = ref object of JsRoot
+type JsHttpClient* = ref object of XMLHttpRequest
 
-  JsRequest* = ref object of JsRoot
-    `method`*: HttpMethod
-    url*, body*, integrity*, referrer*: cstring
-    referrerPolicy*: FetchReferrerPolicies
-    mode*: FetchModes
-    credentials*: FetchCredentials
-    cache*: FetchCaches
-    redirect*: FetchRedirects
-    headers*: Headers
-    keepAlive*: bool
+func newJsHttpClient*(): JsHttpClient = discard
 
-  JsResponse* = ref object of JsRoot
-    status*: cint
-    statusText*, url*, responseText*: cstring
-    headers*: Headers
+proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; body: string; `method`: static[cstring]): cstring =
+  self.open(`method` = `method`, url = cstring($url), false)
+  self.send(body = body.cstring)
+  self.responseText
 
-func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
+proc getContent*(self: JsHttpClient; url: Uri | string): cstring =
+  xmlHttpRequestImpl(self, url, "", "GET".cstring)
 
-func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
+proc deleteContent*(self: JsHttpClient; url: Uri | string): cstring =
+  xmlHttpRequestImpl(self, url, "", "DELETE".cstring)
 
-func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity: cstring = "";
-  referrer: cstring = "client"; referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
-  credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
-  redirect: FetchRedirects = frFollow; headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
-  result = JsRequest(
-    url: url, `method`: `method`, body: body, integrity: integrity, referrer: referrer, mode: mode,
-    credentials: credentials, cache: cache, redirect: redirect, referrerPolicy: referrerPolicy,
-    headers: headers, keepAlive: keepAlive
-  )
+proc postContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
+  xmlHttpRequestImpl(self, url, body, "POST".cstring)
 
-func fetchOptionsImpl(request: JsRequest): FetchOptions =
-  newfetchOptions(
-    metod = request.`method`, body = request.body, mode = request.mode, credentials = request.credentials,
-    cache = request.cache, referrerPolicy = request.referrerPolicy, keepalive = request.keepAlive,
-    redirect = request.redirect, referrer = request.referrer, integrity = request.integrity
-  )
+proc putContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
+  xmlHttpRequestImpl(self, url, body, "PUT".cstring)
 
-func setHeaders(client: JsHttpClient, request: JsRequest) =
-  ## Sets Headers for `JsHttpClient`
-  client.setRequestHeader([("Integrity".cstring, request.integrity), ("Referrer".cstring, request.referrer),
-    ("Mode".cstring, cstring($request.mode)), ("RequestCredentials".cstring, cstring($request.credentials)),
-    ("Cache".cstring, cstring($request.cache)), ("Redirect".cstring, cstring($request.redirect)),
-    ("Referrer-Policy".cstring, cstring($request.referrerPolicy))])
-  for pair in request.headers.entries():
-    client.setRequestHeader([(pair[0], pair[1])])
+proc patchContent*(self: JsHttpClient; url: Uri | string; body = ""): cstring =
+  xmlHttpRequestImpl(self, url, body, "PATCH".cstring)
 
-func response(response: XMLHttpRequest): JsResponse =
-  ## Converts `XMLHttpRequest` to `JsResponse`
-  new(result)
-  result.status = response.status
-  result.responseText = response.responseText
+proc head*(self: JsHttpClient; url: Uri | string): cstring =
+  xmlHttpRequestImpl(self, url, "", "HEAD".cstring)
 
-proc response(response: Response): JsResponse {.async.} =
-  ## Converts `jsfetch` `Response` to `JsResponse`
-  new(result)
-  result.status = response.status
-  result.statusText = response.statusText
-  result.responseText = await text(response)
-  result.url = response.url
-  result.headers = response.headers
-
-proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
-  ## Request proc for sync `XMLHttpRequest` client
-  client.open(metod = cstring($request.`method`), url = request.url, async = true)
-  client.setHeaders(request)
-  if request.body == "".cstring:
-    client.send()
-  else:
-    client.send(body = request.body)
-  return client.response()
-
-proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse] {.async.} =
-  ## Request proc for async `jsfetch` client
-  var req: Request = newRequest(request.url)
-  req.headers = request.headers
-  if request.body == "".cstring:
-    echo "no body!"
-    req.bodyUsed = false
-    req.body = Body(bodyUsed: false)
-  return response(await fetch(req, fetchOptionsImpl(request)))
-
-proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpHead)
-  return await client.request(request)
-
-proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpGet)
-  return await client.request(request)
-
-proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
-  let
-    request = newJsRequest(url = cstring($url), `method` = HttpGet)
-    resp = await client.request(request)
-  return resp.responseText
-
-proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpDelete)
-  return await client.request(request)
-
-proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
-  let
-    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body)
-    resp = await client.request(request)
-  return resp.responseText
-
-proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPost)
-  return await client.request(request)
-
-proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
-  let
-    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body)
-    resp = await client.request(request)
-  return resp.responseText
-
-proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPut)
-  return await client.request(request)
-
-proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
-  let
-    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body)
-    resp = await client.request(request)
-  return resp.responseText
-
-proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPatch)
-  return await client.request(request)
-
-proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
-  let
-    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body)
-    resp = await client.request(request)
-  return resp.responseText
-
-when isMainModule:
-  # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
-  import std/jsconsole
-
-  let
-    client: JsHttpClient = newJsHttpClient()
-    syncContent: cstring = client.getContent("http://localhost:1337")
-
-  console.log syncContent
-
-  let
-    asyncClient: JsAsyncHttpClient = newJsAsyncHttpClient()
-    asyncContent: Future[cstring] = asyncClient.getContent("http://localhost:1337")
-
-  console.log asyncContent
 
 runnableExamples("-r:off"):
-  from std/uri import parseUri
+  from std/uri import parseUri, Uri
 
-  let client: JsHttpClient = newJsHttpClient()
-  const data: cstring = """{"key": "value"}"""
-
-  block:
-    let
-      url: Uri = parseUri("https://google.com")
-      content: JsResponse = client.getContent(url)
+  let client = newJsHttpClient()
+  const data = """{"key": "value"}"""
 
   block:
-    let
-      url: Uri = parseUri("https://httpbin.org/delete")
-      content: JsResponse = client.deleteContent(url)
+    let url = parseUri("http://nim-lang.org")
+    let content = client.getContent(url)
 
   block:
-    let
-      url: Uri = parseUri("https://httpbin.org/post")
-      content: JsResponse = client.postContent(url, data)
+    let url = parseUri("http://httpbin.org/delete")
+    let content = client.deleteContent(url)
 
   block:
-    let
-      url: Uri = parseUri("https://httpbin.org/put")
-      content: JsResponse = client.putContent(url, data)
+    let url = parseUri("http://httpbin.org/post")
+    let content = client.postContent(url, data)
 
   block:
-    let
-      url: Uri = parseUri("https://httpbin.org/patch")
-      content: JsResponse = client.patchContent(url, data)
+    let url = parseUri("http://httpbin.org/put")
+    let content = client.putContent(url, data)
 
-runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
-  import std/asyncjs
-
-  proc example(): Future[void] {.async.} =
-    let client = newJsAsyncHttpClient()
-    const data = """{"key": "value"}"""
-
-    block:
-      let
-        url: Uri = parseUri("http://nim-lang.org")
-        content: JsResponse = await client.getContent(url)
-        response: JsResponse = await client.get(url)
-
-    block:
-      let
-        url: Uri = parseUri("http://httpbin.org/delete")
-        content: JsResponse = await client.deleteContent(url)
-        response: JsResponse = await client.delete(url)
-
-    block:
-      let
-        url: Uri = parseUri("http://httpbin.org/post")
-        content: JsResponse = await client.postContent(url, data)
-        response: JsResponse = await client.post(url, data)
-
-    block:
-      let
-        url: Uri = parseUri("http://httpbin.org/put")
-        content: JsResponse = await client.putContent(url, data)
-        response: JsResponse = await client.put(url, data)
-
-    block:
-      let
-        url: Uri = parseUri("http://httpbin.org/patch")
-        content: JsResponse = await client.patchContent(url, data)
-        response: JsResponse = await client.patch(url, data)
-
-  discard example()
+  block:
+    let url = parseUri("http://httpbin.org/patch")
+    let content = client.patchContent(url, data)
