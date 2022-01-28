@@ -50,32 +50,32 @@ runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off
   import std/[asyncjs, jsfetch, uri]
 
   proc example(): Future[void] {.async.} =
-    let client = newJsAsyncHttpClient()
+    let client: JsAsyncHttpClient = newJsAsyncHttpClient()
     const data = """{"key": "value"}"""
 
     block:
       let url: Uri = parseUri("http://nim-lang.org")
       let content: cstring = await client.getContent(url)
-      let response = await client.get(url)
+      let response: Response = await client.get(url)
 
     block:
       let url: Uri = parseUri("http://httpbin.org/delete")
       let content: cstring = await client.deleteContent(url)
-      let response = await client.delete(url)
+      let response: Response = await client.delete(url)
 
     block:
       let url: Uri = parseUri("http://httpbin.org/post")
       let content: cstring = await client.postContent(url, data)
-      let response = await client.post(url, data)
+      let response: Response = await client.post(url, data)
 
     block:
       let url: Uri = parseUri("http://httpbin.org/put")
       let content: cstring = await client.putContent(url, data)
-      let response = await client.put(url, data)
+      let response: Response = await client.put(url, data)
 
     block:
       let url: Uri = parseUri("http://httpbin.org/patch")
       let content: cstring = await client.patchContent(url, data)
-      let response = await client.patch(url, data)
+      let response: Response = await client.patch(url, data)
 
   discard example()
