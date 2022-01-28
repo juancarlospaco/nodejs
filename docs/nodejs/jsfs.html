@@ -676,8 +676,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">chmodSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;renamed.txt&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span> <span class="OctNumber">0o777</span><span class="Punctuation">)</span>
 <span class="Identifier">copyFileSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;renamed.txt&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">,</span> <span class="StringLit">&quot;copied.txt&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
 <span class="Keyword">let</span> <span class="Identifier">data</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">readFileSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;renamed.txt&quot;</span><span class="Punctuation">)</span>
-<span class="Identifier">rmSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;renamed.txt&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
-<span class="Identifier">rmSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;copied.txt&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
+<span class="Comment"># Need to be commented out for Node 13 and older.</span>
+<span class="Comment"># rmSync(&quot;renamed.txt&quot;.cstring)</span>
+<span class="Comment"># rmSync(&quot;copied.txt&quot;.cstring)</span>
 <span class="Identifier">echo</span> <span class="Identifier">mkdtempSync</span><span class="Punctuation">(</span><span class="StringLit">&quot;test&quot;</span><span class="Operator">.</span><span class="Identifier">cstring</span><span class="Punctuation">)</span>
 <span class="Comment"># mkdirSync(&quot;/tmp/somerandomame&quot;.cstring, recursive = true)</span></pre>
 <p><strong class="examples_text">Example: cmd: -r:off</strong></p>
@@ -3015,6 +3016,7 @@ class="link-seesrc" target="_blank">Source</a>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-21 19:43:22 UTC</small>
 =======
         <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-23 02:59:02 UTC</small>
@@ -3025,6 +3027,9 @@ class="link-seesrc" target="_blank">Source</a>
 =======
         <small style="color: var(--hint);">Made with Nim. Generated: 2021-12-23 13:52:16 UTC</small>
 >>>>>>> 0ce023711a03f4dfc549d380a9c14e410150122d
+=======
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-14 21:00:30 UTC</small>
+>>>>>>> main
       </div>
     </div>
   </div>

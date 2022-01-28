@@ -56,9 +56,10 @@ when defined(windows):
     WSASYSCALLFAILURE* {.importjs: "os.constants.errno.WSASYSCALLFAILURE".}: cint
     WSASERVICE_NOT_FOUND* {.importjs: "os.constants.errno.WSASERVICE_NOT_FOUND".}: cint
     WSATYPE_NOT_FOUND* {.importjs: "os.constants.errno.WSATYPE_NOT_FOUND".}: cint
-    WSA_E_NO_MORE* {.importjs: "os.constants.errno.WSA_E_NO_MORE".}: cint
-    WSA_E_CANCELLED* {.importjs: "os.constants.errno.WSA_E_CANCELLED".}: cint
     WSAEREFUSED* {.importjs: "os.constants.errno.WSAEREFUSED".}: cint
+    # Duplicated ???.
+    # WSA_E_NO_MORE* {.importjs: "os.constants.errno.WSA_E_NO_MORE".}: cint
+    # WSA_E_CANCELLED* {.importjs: "os.constants.errno.WSA_E_CANCELLED".}: cint
 
 let
   EOL* {.importjs: "os.EOL".}: cstring

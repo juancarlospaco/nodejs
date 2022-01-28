@@ -89,6 +89,21 @@
 - `nimble install nodejs` OR `nimble install https://github.com/juancarlospaco/nodejs.git`
 
 
+# Testing CI
+
+All commits are run in CI using this matrix:
+
+```yaml
+matrix:
+  platform:     [ubuntu-latest, windows-latest]
+  architecture: ["x64", "x86"]
+  node:         [12, 13, 14, 15, 16, 17]
+  nim-channel:  [stable, devel]
+```
+
+Everything works from Node 12 and newer.
+
+
 # Design
 
 - It does not use anything from Nim standard library, very future-proof,

@@ -138,7 +138,7 @@ func getPid*(): cint {.importjs: "process.pid@".}
 #   ## https://nodejs.org/api/process.html#process_process_send_message_sendhandle_options_callback
 
 
-runnableExamples: # These are computer specific can not assert them much.
+runnableExamples"-r:off": # These are computer specific can not assert them much.
   requireProcess()
   doAssert not hasUncaughtExceptionCaptureCallback()
   echo cwd()
@@ -156,6 +156,6 @@ runnableExamples: # These are computer specific can not assert them much.
     disconnect()
     exit(code = 0.cint)
 
-runnableExamples("-r:off"):
+runnableExamples"-r:off":
   requireProcess()
   echo argv ## Read Command Line Arguments as seq[cstring]

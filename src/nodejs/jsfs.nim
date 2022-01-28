@@ -391,13 +391,15 @@ runnableExamples:
   chmodSync("renamed.txt".cstring, 0o777)
   copyFileSync("renamed.txt".cstring, "copied.txt".cstring)
   let data: cstring = readFileSync("renamed.txt")
-  rmSync("renamed.txt".cstring)
-  rmSync("copied.txt".cstring)
+  # Need to be commented out for Node 13 and older.
+  # rmSync("renamed.txt".cstring)
+  # rmSync("copied.txt".cstring)
   echo mkdtempSync("test".cstring)
   # mkdirSync("/tmp/somerandomame".cstring, recursive = true)
 
+
 runnableExamples("-r:off"):
-  import nodejs/jsbuffer
+  import jsbuffer
   requireFs()
   requireBuffer()
   proc example(error: int; data: Buffer) = echo data

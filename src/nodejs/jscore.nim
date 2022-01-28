@@ -119,14 +119,14 @@ func indentation*(s: cstring): cint {.importjs: """
   })()""".}
   ## Returns the amount of indentation all lines of `s` have in common, ignoring lines that consist only of whitespace.
 
-proc `[]`*(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring {.asmnostackframe.} =
+proc `[]`*(s: cstring; slice: HSlice[SomeInteger, SomeInteger]): cstring {.asmNoStackFrame.} =
   let start {.codegenDecl: "const $2".} = slice.a.int
   let ends {.codegenDecl: "const $2".} = slice.b.int + 1
   assert start >= 0, "Index out of bounds: " & $start
   assert ends > s.len, "Index out of bounds: " & $ends
   asm "return `s`.slice(`start`, `ends`);"
 
-proc `[]`*(s: cstring; slice: HSlice[SomeInteger, BackwardsIndex]): cstring {.asmnostackframe.} =
+proc `[]`*(s: cstring; slice: HSlice[SomeInteger, BackwardsIndex]): cstring {.asmNoStackFrame.} =
   let start {.codegenDecl: "const $2".} = slice.a.int
   let ends {.codegenDecl: "const $2".} = s.len - slice.b.int + 1
   assert start >= 0, "Index out of bounds: " & $start
@@ -166,7 +166,7 @@ func structuredClone*(value, transfer: auto) {.importjs: "$1(#, #)".}
 func structuredClone*(value: auto) {.importjs: "$1(#)".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
 
-func parseBool*(s: cstring): bool {.asmnostackframe.} = {.emit: """
+func parseBool*(s: cstring): bool {.asmNoStackFrame.} = {.emit: """
   const value = String(`s`).trim();
   if (/^(?:y|1|on|yes|true)$/i.test(value)) {
     return true;

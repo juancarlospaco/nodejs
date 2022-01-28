@@ -53,7 +53,7 @@ when defined(linux) or defined(posix):
     ## https://nodejs.org/api/path.html#path_windows_vs_posix
 
 
-runnableExamples:
+runnableExamples"-r:off":
   requirePath()
   echo delimiter
   doAssert basename("/foo/bar/baz".cstring) == "baz".cstring
