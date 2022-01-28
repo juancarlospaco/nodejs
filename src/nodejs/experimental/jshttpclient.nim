@@ -3,9 +3,8 @@ when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
 import
-  std/[asyncjs, jsheaders, jsfetch, httpcore],
+  std/[asyncjs, jsheaders, jsfetch, httpcore, uri],
   nodejs/[jsxmlhttprequest, jsmultisync]
-from std/uri import Uri
 
 type
   JsHttpClient* = XMLHttpRequest
@@ -43,7 +42,7 @@ func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer
   if body != "":
     result.body = body
 
-func fetchOptionsImpl(request: JsRequest): FetchOptions =
+template fetchOptionsImpl(request: JsRequest): FetchOptions =
   newfetchOptions(
     metod = request.`method`, body = request.body, mode = request.mode, credentials = request.credentials,
     cache = request.cache, referrerPolicy = request.referrerPolicy, keepalive = request.keepAlive,
@@ -52,9 +51,11 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
-  client.setRequestHeader([("Cache-Control".cstring, cstring($request.cache)),
-    ("Referrer-Policy".cstring, cstring($request.referrerPolicy))])
-  for pair in request.headers.entries():
+  client.setRequestHeader([
+    ("Cache-Control".cstring, cstring($request.cache)),
+    ("Referrer-Policy".cstring, cstring($request.referrerPolicy)),
+  ])
+  for pair in request.headers.entries:
     client.setRequestHeader(pair[0], pair[1])
 
 func response(response: XMLHttpRequest): JsResponse =
@@ -142,6 +143,7 @@ proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; 
     resp = await client.request(request)
   return resp.responseText
 
+
 when isMainModule:
   # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
 
@@ -150,6 +152,7 @@ when isMainModule:
     syncContent: cstring = client.getContent("http://0.0.0.0:1337/")
     asyncClient: JsAsyncHttpClient = newJsAsyncHttpClient()
     asyncContent: Future[cstring] = asyncClient.getContent("http://0.0.0.0:1337/")
+
 
 runnableExamples("-r:off"):
   from std/uri import parseUri
@@ -182,11 +185,12 @@ runnableExamples("-r:off"):
       url: Uri = parseUri("https://httpbin.org/patch")
       content: JsResponse = client.patchContent(url, data)
 
+
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
   import std/asyncjs
 
   proc example(): Future[void] {.async.} =
-    let client = newJsAsyncHttpClient()
+    let client: JsAsyncHttpClient = newJsAsyncHttpClient()
     const data = """{"key": "value"}"""
 
     block:
