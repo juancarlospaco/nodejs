@@ -51,8 +51,8 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
-  client.setRequestHeader("Cache-Control".cstring, cstring($request.cache))
-  client.setRequestHeader("Referrer-Policy".cstring, cstring($request.referrerPolicy))
+  client.setRequestHeader([("Cache-Control".cstring, cstring($request.cache)),
+    ("Referrer-Policy".cstring, cstring($request.referrerPolicy))])
   for pair in request.headers.entries():
     client.setRequestHeader(pair[0], pair[1])
 
