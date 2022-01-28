@@ -85,10 +85,6 @@ proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]
   ## Request proc for async `jsfetch` client
   var req: Request = newRequest(request.url)
   req.headers = request.headers
-  if request.body == "".cstring:
-    echo "no body!"
-    req.bodyUsed = false
-    req.body = Body(bodyUsed: false)
   return response(await fetch(req, fetchOptionsImpl(request)))
 
 proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
