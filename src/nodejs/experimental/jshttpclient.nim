@@ -2,8 +2,9 @@
 when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
-import std/[asyncjs, jsheaders, jsfetch, httpcore]
-import jsxmlhttprequest, jsmultisync
+import
+  std/[asyncjs, jsheaders, jsfetch, httpcore],
+  nodejs/[jsxmlhttprequest, jsmultisync]
 from std/uri import Uri
 
 type
@@ -30,15 +31,16 @@ func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity: cstring = "";
-  referrer: cstring = "client"; referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
+func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = ""; referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
   credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
   redirect: FetchRedirects = frFollow; headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
   result = JsRequest(
-    url: url, `method`: `method`, body: body, integrity: integrity, referrer: referrer, mode: mode,
+    url: url, `method`: `method`, integrity: integrity, referrer: referrer, mode: mode,
     credentials: credentials, cache: cache, redirect: redirect, referrerPolicy: referrerPolicy,
     headers: headers, keepAlive: keepAlive
   )
+  if body != "":
+    result.body = body
 
 func fetchOptionsImpl(request: JsRequest): FetchOptions =
   newfetchOptions(
@@ -49,10 +51,8 @@ func fetchOptionsImpl(request: JsRequest): FetchOptions =
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
-  client.setRequestHeader([("Integrity".cstring, request.integrity), ("Referrer".cstring, request.referrer),
-    ("Mode".cstring, cstring($request.mode)), ("RequestCredentials".cstring, cstring($request.credentials)),
-    ("Cache".cstring, cstring($request.cache)), ("Redirect".cstring, cstring($request.redirect)),
-    ("Referrer-Policy".cstring, cstring($request.referrerPolicy))])
+  client.setRequestHeader("Cache-Control".cstring, cstring($request.cache))
+  client.setRequestHeader("Referrer-Policy".cstring, cstring($request.referrerPolicy))
   for pair in request.headers.entries():
     client.setRequestHeader([(pair[0], pair[1])])
 
@@ -147,19 +147,12 @@ proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; 
 
 when isMainModule:
   # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
-  import std/jsconsole
 
   let
     client: JsHttpClient = newJsHttpClient()
-    syncContent: cstring = client.getContent("http://localhost:1337")
-
-  console.log syncContent
-
-  let
+    syncContent: cstring = client.getContent("http://0.0.0.0:1338/")
     asyncClient: JsAsyncHttpClient = newJsAsyncHttpClient()
-    asyncContent: Future[cstring] = asyncClient.getContent("http://localhost:1337")
-
-  console.log asyncContent
+    asyncContent: Future[cstring] = asyncClient.getContent("http://0.0.0.0:1338/")
 
 runnableExamples("-r:off"):
   from std/uri import parseUri
