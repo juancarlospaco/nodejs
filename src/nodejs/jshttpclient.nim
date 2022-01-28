@@ -9,55 +9,55 @@ type JsHttpClient* = XMLHttpRequest
 
 func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
-proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; `method`: static[cstring]; body: cstring = ""): cstring =
-  self.open(metod = `method`, url = cstring($url), false)
+proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; metod: static[cstring]; body: cstring = ""): cstring =
+  self.open(metod = metod, url = cstring($url), false)
   self.send(body = body)
   self.responseText
 
-proc getContent*(self: JsHttpClient; url: Uri | string): cstring =
+func getContent*(self: JsHttpClient; url: Uri | string): cstring =
   xmlHttpRequestImpl(self, url, "GET".cstring)
 
-proc deleteContent*(self: JsHttpClient; url: Uri | string): cstring =
+func deleteContent*(self: JsHttpClient; url: Uri | string): cstring =
   xmlHttpRequestImpl(self, url, "DELETE".cstring)
 
-proc postContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+func postContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
   xmlHttpRequestImpl(self, url, "POST".cstring, body)
 
-proc putContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+func putContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
   xmlHttpRequestImpl(self, url, "PUT".cstring, body)
 
-proc patchContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
+func patchContent*(self: JsHttpClient; url: Uri | string; body: cstring = ""): cstring =
   xmlHttpRequestImpl(self, url, "PATCH".cstring, body)
 
-proc head*(self: JsHttpClient; url: Uri | string): cstring =
+func head*(self: JsHttpClient; url: Uri | string): cstring =
   xmlHttpRequestImpl(self, url, "HEAD".cstring)
 
 
 runnableExamples("-r:off"):
   from std/uri import parseUri, Uri
 
-  let client = newJsHttpClient()
+  let client: JsHttpClient = newJsHttpClient()
   const data = """{"key": "value"}"""
 
   block:
-    let url = parseUri("https://google.com")
-    let content = client.getContent(url)
+    let url: Uri = parseUri("https://google.com")
+    let content: cstring = client.getContent(url)
 
   block:
-    let url = parseUri("https://httpbin.org/delete")
-    let content = client.deleteContent(url)
+    let url: Uri = parseUri("https://httpbin.org/delete")
+    let content: cstring = client.deleteContent(url)
 
   block:
-    let url = parseUri("https://httpbin.org/post")
-    let content = client.postContent(url, data)
+    let url: Uri = parseUri("https://httpbin.org/post")
+    let content: cstring = client.postContent(url, data)
 
   block:
-    let url = parseUri("https://httpbin.org/put")
-    let content = client.putContent(url, data)
+    let url: Uri = parseUri("https://httpbin.org/put")
+    let content: cstring = client.putContent(url, data)
 
   block:
-    let url = parseUri("https://httpbin.org/patch")
-    let content = client.patchContent(url, data)
+    let url: Uri = parseUri("https://httpbin.org/patch")
+    let content: cstring = client.patchContent(url, data)
 
 
 when isMainModule:
