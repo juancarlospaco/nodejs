@@ -3,47 +3,48 @@ when not defined(js):
   {.fatal: "Module jsasynchttpclient is designed to be used with the JavaScript backend.".}
 
 import std/[jsfetch, asyncjs]
+from std/uri import Uri
 
 type JsAsyncHttpClient* = ref object of JsRoot
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func fetchOptionsImpl(body: cstring; metod: static[cstring]): FetchOptions =
-  unsafeNewFetchOptions(metod = metod, body = body, mode = "cors".cstring, credentials = "include".cstring,
+func fetchOptionsImpl(`method`: static[cstring]; body: cstring = ""): FetchOptions =
+  unsafeNewFetchOptions(metod = `method`, body = body, mode = "cors".cstring, credentials = "include".cstring,
     cache = "default".cstring, referrerPolicy = "unsafe-url".cstring, keepalive = false)
 
-proc getContent*(self: JsAsyncHttpClient; url: string or cstring): Future[cstring] {.async.} =
-  text(await fetch(cstring(url)))
+proc getContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("GET".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc deleteContent*(self: JsAsyncHttpClient; url: string or cstring): Future[cstring] {.async.} =
-  text(await fetch(cstring(url), fetchOptionsImpl("".cstring, "DELETE".cstring)))
+proc deleteContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("DELETE".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc postContent*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring(url), fetchOptionsImpl(body.cstring, "POST".cstring)))
+proc postContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("POST".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc putContent*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring(url), fetchOptionsImpl(body.cstring, "PUT".cstring)))
+proc putContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PUT".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc patchContent*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[cstring] {.async.} =
-  text(await fetch(cstring(url), fetchOptionsImpl(body.cstring, "PATCH".cstring)))
+proc patchContent*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PATCH".cstring)): Future[cstring] {.async.} =
+  text(await fetch(cstring($url), fetchOptions))
 
-proc get*(self: JsAsyncHttpClient; url: string or cstring): Future[Response] {.async.} =
-  fetch(cstring(url))
+proc get*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("GET".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc delete*(self: JsAsyncHttpClient; url: string or cstring): Future[Response] {.async.} =
-  fetch(cstring(url), fetchOptionsImpl("".cstring, "DELETE".cstring))
+proc delete*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("DELETE".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc post*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[Response] {.async.} =
-  fetch(cstring(url), fetchOptionsImpl(body.cstring, "POST".cstring))
+proc post*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("POST".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc put*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[Response] {.async.} =
-  fetch(cstring(url), fetchOptionsImpl(body.cstring, "PUT".cstring))
+proc put*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PUT".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc patch*(self: JsAsyncHttpClient; url: string or cstring; body = ""): Future[Response] {.async.} =
-  fetch(cstring(url), fetchOptionsImpl(body.cstring, "PATCH".cstring))
+proc patch*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("PATCH".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
-proc head*(self: JsAsyncHttpClient; url: string or cstring): Future[Response] {.async.} =
-  fetch(cstring(url), fetchOptionsImpl("".cstring, "HEAD".cstring))
+proc head*(self: JsAsyncHttpClient; url: Uri | string; fetchOptions = fetchOptionsImpl("HEAD".cstring)): Future[Response] {.async.} =
+  fetch(cstring($url), fetchOptions)
 
 
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
@@ -54,23 +55,28 @@ runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off
     const data = """{"key": "value"}"""
 
     block:
-      let content = await client.getContent("http://nim-lang.org")
-      let response = await client.get("http://nim-lang.org")
+      let url = parseUri("http://nim-lang.org")
+      let content = await client.getContent(url)
+      let response = await client.get(url)
 
     block:
-      let content = await client.deleteContent("http://httpbin.org/delete")
-      let response = await client.delete("http://httpbin.org/delete")
+      let url = parseUri("http://httpbin.org/delete")
+      let content = await client.deleteContent(url)
+      let response = await client.delete(url)
 
     block:
-      let content = await client.postContent("http://httpbin.org/post", data)
-      let response = await client.post("http://httpbin.org/post", data)
+      let url = parseUri("http://httpbin.org/post")
+      let content = await client.postContent(url, data)
+      let response = await client.post(url, data)
 
     block:
-      let content = await client.putContent("http://httpbin.org/put", data)
-      let response = await client.put("http://httpbin.org/put", data)
+      let url = parseUri("http://httpbin.org/put")
+      let content = await client.putContent(url, data)
+      let response = await client.put(url, data)
 
     block:
-      let content = await client.patchContent("http://httpbin.org/patch", data)
-      let response = await client.patch("http://httpbin.org/patch", data)
+      let url = parseUri("http://httpbin.org/patch")
+      let content = await client.patchContent(url, data)
+      let response = await client.patch(url, data)
 
   discard example()
