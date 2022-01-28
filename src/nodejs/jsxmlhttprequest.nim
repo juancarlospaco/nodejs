@@ -31,9 +31,9 @@ func overrideMimeType*(this: XMLHttpRequest; mimeType: cstring) {.importjs: "#.$
 func setRequestHeader*(this: XMLHttpRequest; key, value: cstring) {.importjs: "#.$1(#, #)".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader
 
-func setRequestHeader*(this: XMLHttpRequest; keyValuePairs: openArray[tuple[key, val: cstring]])
+func setRequestHeader*(this: XMLHttpRequest; keyValuePairs: openArray[tuple[key, val: cstring]]) =
   ## Same as `setRequestHeader` but takes `openArray[tuple[key, val: cstring]]`.
-  for key, val in keyValuePairs:
+  for (key, val) in keyValuePairs:
     this.setRequestHeader(key, val)
 
 runnableExamples:
