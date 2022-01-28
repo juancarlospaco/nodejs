@@ -2,13 +2,8 @@
 when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
-<<<<<<< HEAD
 import fusion/js/jsxmlhttprequest
-import std/uri
 from std/uri import Uri
-=======
-import jsxmlhttprequest
->>>>>>> main
 
 type JsHttpClient* = XMLHttpRequest
 
@@ -39,7 +34,6 @@ proc head*(self: JsHttpClient; url: Uri | string): cstring =
 
 
 runnableExamples("-r:off"):
-<<<<<<< HEAD
   from std/uri import parseUri, Uri
 
   let client = newJsHttpClient()
@@ -64,21 +58,3 @@ runnableExamples("-r:off"):
   block:
     let url = parseUri("http://httpbin.org/patch")
     let content = client.patchContent(url, data)
-=======
-  import jsxmlhttprequest
-  let client = newJsHttpClient()
-  const data = """{"key": "value"}"""
-  echo client.getContent("http://nim-lang.org")
-  echo client.deleteContent("http://httpbin.org/delete")
-  echo client.postContent("http://httpbin.org/post", data)
-  echo client.putContent("http://httpbin.org/put", data)
-  echo client.patchContent("http://httpbin.org/patch", data)
-
-
-when isMainModule:
-  # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
-  import std/jsconsole
-  let client: JsHttpClient = newJsHttpClient()
-  let content: cstring = client.getContent("http://localhost:1337")
-  console.log content
->>>>>>> main
