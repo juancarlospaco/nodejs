@@ -8,8 +8,8 @@ type JsAsyncHttpClient* = ref object of JsRoot
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-template fetchOptionsImpl(body: cstring; `method`: static[cstring]): FetchOptions =
-  unsafeNewFetchOptions(metod = `method`, body = body, mode = "cors".cstring, credentials = "include".cstring,
+template fetchOptionsImpl(body; metod: static[cstring]): FetchOptions =
+  unsafeNewFetchOptions(metod = metod, body = body, mode = "cors".cstring, credentials = "include".cstring,
     cache = "default".cstring, referrerPolicy = "unsafe-url".cstring, keepalive = false)
 
 proc getContent*(self: JsAsyncHttpClient; url: Uri | string): Future[cstring] {.async.} =
