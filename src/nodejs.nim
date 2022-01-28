@@ -33,7 +33,9 @@ import
   nodejs/jsdiagnostics_channel,
   nodejs/jswasi,
   nodejs/jswebsockets,
-  nodejs/jscluster
+  nodejs/jscluster,
+  nodejs/jsmultisync,
+  nodejs/jsxmlhttprequest
 
 export
   jscore,
@@ -64,4 +66,6 @@ export
   jsdiagnostics_channel,
   jswasi,
   jswebsockets,
-  jscluster
+  jscluster,
+  jsmultisync,
+  jsxmlhttprequest
