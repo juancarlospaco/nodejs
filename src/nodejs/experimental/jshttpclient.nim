@@ -54,7 +54,7 @@ func setHeaders(client: JsHttpClient, request: JsRequest) =
   client.setRequestHeader("Cache-Control".cstring, cstring($request.cache))
   client.setRequestHeader("Referrer-Policy".cstring, cstring($request.referrerPolicy))
   for pair in request.headers.entries():
-    client.setRequestHeader([(pair[0], pair[1])])
+    client.setRequestHeader(pair[0], pair[1])
 
 func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
@@ -87,57 +87,57 @@ proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]
   req.headers = request.headers
   return response(await fetch(req, fetchOptionsImpl(request)))
 
-proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpHead)
+proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpHead, headers = headers)
   return await client.request(request)
 
-proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpGet)
+proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpGet, headers = headers)
   return await client.request(request)
 
-proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
+proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpGet)
+    request = newJsRequest(url = cstring($url), `method` = HttpGet, headers = headers)
     resp = await client.request(request)
   return resp.responseText
 
-proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpDelete)
+proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpDelete, headers = headers)
   return await client.request(request)
 
-proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body, headers = headers)
     resp = await client.request(request)
   return resp.responseText
 
-proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPost)
+proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPost, headers = headers)
   return await client.request(request)
 
-proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body, headers = headers)
     resp = await client.request(request)
   return resp.responseText
 
-proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPut)
+proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPut, headers = headers)
   return await client.request(request)
 
-proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body, headers = headers)
     resp = await client.request(request)
   return resp.responseText
 
-proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPatch)
+proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPatch, headers = headers)
   return await client.request(request)
 
-proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body, headers = headers)
     resp = await client.request(request)
   return resp.responseText
 
