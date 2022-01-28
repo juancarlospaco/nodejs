@@ -31,7 +31,8 @@ func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
 
 func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
 
-func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = ""; referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
+func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
+  referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
   credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
   redirect: FetchRedirects = frFollow; headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
   result = JsRequest(
@@ -146,9 +147,9 @@ when isMainModule:
 
   let
     client: JsHttpClient = newJsHttpClient()
-    syncContent: cstring = client.getContent("http://0.0.0.0:1338/")
+    syncContent: cstring = client.getContent("http://0.0.0.0:1337/")
     asyncClient: JsAsyncHttpClient = newJsAsyncHttpClient()
-    asyncContent: Future[cstring] = asyncClient.getContent("http://0.0.0.0:1338/")
+    asyncContent: Future[cstring] = asyncClient.getContent("http://0.0.0.0:1337/")
 
 runnableExamples("-r:off"):
   from std/uri import parseUri
