@@ -152,6 +152,8 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="escape-procs-all">
 <div id="escape,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#escape%2Ccstring"><span class="Identifier">escape</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -161,6 +163,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="importQuerystring-procs-all">
 <div id="importQuerystring">
 <dt><pre><span class="Keyword">func</span> <a href="#importQuerystring"><span class="Identifier">importQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as querystring from \'querystring\'@&quot;</span><span class="Other">,</span>
                            <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -170,6 +176,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="parse-procs-all">
 <div id="parse,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#parse%2Ccstring"><span class="Identifier">parse</span></a><span class="Other">(</span><span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">sep</span> <span class="Other">=</span> <span class="StringLit">&quot;&amp;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">eq</span> <span class="Other">=</span> <span class="StringLit">&quot;=&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span>
            <span class="Identifier">maxKeys</span> <span class="Other">=</span> <span class="DecNumber">1000</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.
@@ -180,6 +190,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireQuerystring-procs-all">
 <div id="requireQuerystring">
 <dt><pre><span class="Keyword">func</span> <a href="#requireQuerystring"><span class="Identifier">requireQuerystring</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const querystring = require(\'querystring\')@&quot;</span><span class="Other">,</span>
                             <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -189,6 +203,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="stringify-procs-all">
 <div id="stringify,JsObject">
 <dt><pre><span class="Keyword">func</span> <a href="#stringify%2CJsObject"><span class="Identifier">stringify</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">;</span> <span class="Identifier">sep</span> <span class="Other">=</span> <span class="StringLit">&quot;&amp;&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">eq</span> <span class="Other">=</span> <span class="StringLit">&quot;=&quot;</span><span class="Other">.</span><span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -198,6 +216,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="unescape-procs-all">
 <div id="unescape,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#unescape%2Ccstring"><span class="Identifier">unescape</span></a><span class="Other">(</span><span class="Identifier">stringy</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;querystring.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -206,6 +228,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str">https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str</a>
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -217,7 +241,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-28 23:25:37 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-28 23:48:26 UTC</small>
       </div>
     </div>
   </div>
