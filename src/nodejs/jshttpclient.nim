@@ -26,6 +26,7 @@ type
     keepAlive*: bool
 
   JsResponse* = ref object of JsRoot
+    ok*: bool
     status*: cint
     statusText*, url*, responseText*: cstring
     headers*: Headers
@@ -68,11 +69,16 @@ func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
   new(result)
   result.status = response.status
+  if resp.status >= 200 and resp.status <= 299:
+    resp.ok = true
+  else:
+    resp.ok = false
   result.responseText = response.responseText
 
 proc response(response: Response): JsResponse {.async.} =
   ## Converts `jsfetch` `Response` to `JsResponse`
   new(result)
+  result.ok = result.ok
   result.status = response.status
   result.statusText = response.statusText
   result.responseText = await text(response)
