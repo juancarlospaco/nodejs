@@ -4,7 +4,8 @@ when not defined(js):
 
 import
   std/[asyncjs, jsheaders, jsfetch, httpcore, uri],
-  nodejs/[jsxmlhttprequest, jsmultisync]
+  jsxmlhttprequest,
+  jsmultisync
 
 type
   JsHttpClient* = ref object of JsRoot
