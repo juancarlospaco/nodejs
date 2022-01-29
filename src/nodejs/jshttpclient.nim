@@ -113,14 +113,14 @@ proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Futur
   let request = newJsRequest(url = cstring($url), `method` = HttpDelete)
   return await client.request(request)
 
-proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
+proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body)
+    request = newJsRequest(url = cstring($url), `method` = HttpDelete)
     resp = await client.request(request)
   return resp.responseText
 
-proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPost)
+proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body)
   return await client.request(request)
 
 proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
@@ -129,8 +129,8 @@ proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; b
     resp = await client.request(request)
   return resp.responseText
 
-proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPut)
+proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body)
   return await client.request(request)
 
 proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
@@ -139,8 +139,8 @@ proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; bo
     resp = await client.request(request)
   return resp.responseText
 
-proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPatch)
+proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body)
   return await client.request(request)
 
 proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
