@@ -238,6 +238,8 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="$$-procs-all">
 <div id="$$,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#%24%24%2Ccstring"><span class="Identifier">`$$`</span></a><span class="Other">(</span><span class="Identifier">commands</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jszx.html#ProcessOutput"><span class="Identifier">ProcessOutput</span></a><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$$`#`&quot;</span><span class="Other">,</span>
     <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -247,6 +249,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="cd-procs-all">
 <div id="cd,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#cd%2Ccstring"><span class="Identifier">cd</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -255,6 +261,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fetch-procs-all">
 <div id="fetch,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#fetch%2Ccstring"><span class="Identifier">fetch</span></a><span class="Other">(</span><span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">Response</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -273,6 +283,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="nothrow-procs-all">
 <div id="nothrow,T">
 <dt><pre><span class="Keyword">func</span> <a href="#nothrow%2CT"><span class="Identifier">nothrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">promise</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                  <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -282,6 +296,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="question-procs-all">
 <div id="question,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#question%2Ccstring"><span class="Identifier">question</span></a><span class="Other">(</span><span class="Identifier">query</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -291,6 +309,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="sleep-procs-all">
 <div id="sleep,SomeInteger">
 <dt><pre><span class="Keyword">func</span> <a href="#sleep%2CSomeInteger"><span class="Identifier">sleep</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <span class="Identifier">SomeInteger</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -299,6 +321,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="toCstring-procs-all">
 <div id="toCstring,ProcessOutput">
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring%2CProcessOutput"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jszx.html#ProcessOutput"><span class="Identifier">ProcessOutput</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toString()&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -307,6 +333,8 @@ window.addEventListener('DOMContentLoaded', main);
 
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -318,7 +346,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-28 23:58:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 00:26:11 UTC</small>
       </div>
     </div>
   </div>
