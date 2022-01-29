@@ -6,6 +6,7 @@ from std/dom import Node
 
 type XMLHttpRequest* = ref object of JsRoot  ## https://xhr.spec.whatwg.org
   responseXML*: Node
+  responseType*: cstring
   withCredentials*: bool
   status*, timeout*, readyState*: cint
   responseText*, responseURL*, statusText*: cstring
