@@ -55,12 +55,12 @@ template fetchOptionsImpl(request: JsRequest): FetchOptions =
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
-  client.setRequestHeader([
+  client.http.setRequestHeader([
     ("Cache-Control".cstring,   cstring($request.cache)),
     ("Referrer-Policy".cstring, cstring($request.referrerPolicy)),
   ])
   for (key, val) in client.headers.entries:
-    client.setRequestHeader(key, val)
+    client.http.setRequestHeader(key, val)
 
 func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
@@ -80,7 +80,7 @@ proc response(response: Response): JsResponse {.async.} =
 proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
   ## Request proc for sync `XMLHttpRequest` client
   client.http.open(metod = cstring($request.`method`), url = request.url, async = true)
-  client.http.setHeaders(request)
+  client.setHeaders(request)
   if request.body == "".cstring:
     client.http.send()
   else:
