@@ -160,7 +160,7 @@ when isMainModule:
 
 
 runnableExamples("-r:off"):
-  from std/uri import parseUri
+  import std/uri
 
   let client: JsHttpClient = newJsHttpClient()
   const data: cstring = """{"key": "value"}"""
@@ -192,7 +192,7 @@ runnableExamples("-r:off"):
 
 
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
-  import std/asyncjs
+  import std/[asyncjs, uri]
 
   proc example(): Future[void] {.async.} =
     let client: JsAsyncHttpClient = newJsAsyncHttpClient()
