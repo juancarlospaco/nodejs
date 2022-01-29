@@ -52,7 +52,7 @@ template fetchOptionsImpl(request: JsRequest): FetchOptions =
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
   client.setRequestHeader([
-    ("Cache-Control".cstring, cstring($request.cache)),
+    ("Cache-Control".cstring,   cstring($request.cache)),
     ("Referrer-Policy".cstring, cstring($request.referrerPolicy)),
   ])
   for pair in request.headers.entries:
@@ -146,7 +146,6 @@ proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; 
 
 when isMainModule:
   # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
-
   let
     client: JsHttpClient = newJsHttpClient()
     syncContent: cstring = client.getContent("http://0.0.0.0:1337/")
