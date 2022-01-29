@@ -4,7 +4,6 @@
 
 ![](https://img.shields.io/github/languages/top/juancarlospaco/nodejs?style=for-the-badge)
 ![](https://img.shields.io/github/stars/juancarlospaco/nodejs?style=for-the-badge)
-![](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
 ![](https://img.shields.io/github/languages/code-size/juancarlospaco/nodejs?style=for-the-badge)
 ![](https://img.shields.io/github/issues-raw/juancarlospaco/nodejs?style=for-the-badge "Bugs")
 ![](https://img.shields.io/github/issues-pr-raw/juancarlospaco/nodejs?style=for-the-badge "PRs")
