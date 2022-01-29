@@ -126,6 +126,7 @@ window.addEventListener('DOMContentLoaded', main);
   keepAlive*: bool">JsRequest</a></li>
   <li><a class="reference" href="#JsResponse"
     title="JsResponse = ref object of JsRoot
+  ok*: bool
   status*: cint
   statusText*, url*, responseText*: cstring
   headers*: Headers">JsResponse</a></li>
@@ -402,6 +403,7 @@ Experimental JavaScript API.</div>
 </div>
 <div id="JsResponse">
 <dt><pre><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">ok</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
   <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
   <span class="Identifier">statusText</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">url</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">responseText</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
   <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Headers</span>
@@ -671,7 +673,7 @@ Request proc for sync <tt class="docutils literal"><span class="pre"><span class
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 14:45:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 15:34:26 UTC</small>
       </div>
     </div>
   </div>
