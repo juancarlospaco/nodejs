@@ -289,6 +289,8 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="$-procs-all">
 <div id="$">
 <dt><pre><span class="Keyword">func</span> <a href="#%24"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span class="Keyword">or</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
@@ -297,6 +299,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="add-procs-all">
 <div id="add,URLSearchParams,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#add%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.append(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -306,6 +312,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="delete-procs-all">
 <div id="delete,URLSearchParams,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#delete%2CURLSearchParams%2Ccstring"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -315,6 +325,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="domainToASCII-procs-all">
 <div id="domainToASCII,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#domainToASCII%2Ccstring"><span class="Identifier">domainToASCII</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -324,6 +338,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="domainToUnicode-procs-all">
 <div id="domainToUnicode,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#domainToUnicode%2Ccstring"><span class="Identifier">domainToUnicode</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -333,6 +351,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fileURLToPath-procs-all">
 <div id="fileURLToPath">
 <dt><pre><span class="Keyword">func</span> <a href="#fileURLToPath"><span class="Identifier">fileURLToPath</span></a><span class="Other">(</span><span class="Identifier">domain</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -342,6 +364,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="format-procs-all">
 <div id="format,URL,JsObject">
 <dt><pre><span class="Keyword">func</span> <a href="#format%2CURL%2CJsObject"><span class="Identifier">format</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -351,6 +377,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="get-procs-all">
 <div id="get,URLSearchParams,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#get%2CURLSearchParams%2Ccstring"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -360,6 +390,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="getAll-procs-all">
 <div id="getAll,URLSearchParams,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#getAll%2CURLSearchParams%2Ccstring"><span class="Identifier">getAll</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -369,6 +403,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="hasKey-procs-all">
 <div id="hasKey,URLSearchParams,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#hasKey%2CURLSearchParams%2Ccstring"><span class="Identifier">hasKey</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.has(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -378,6 +416,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="importUrl-procs-all">
 <div id="importUrl">
 <dt><pre><span class="Keyword">func</span> <a href="#importUrl"><span class="Identifier">importUrl</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as url from \'url\'@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -387,6 +429,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="keys-procs-all">
 <div id="keys,URLSearchParams">
 <dt><pre><span class="Keyword">func</span> <a href="#keys%2CURLSearchParams"><span class="Identifier">keys</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -396,6 +442,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="len-procs-all">
 <div id="len,URL">
 <dt><pre><span class="Keyword">func</span> <a href="#len%2CURL"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -404,6 +454,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newURL-procs-all">
 <div id="newURL,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#newURL%2Ccstring"><span class="Identifier">newURL</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URL(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -422,6 +476,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newURLSearchParams-procs-all">
 <div id="newURLSearchParams">
 <dt><pre><span class="Keyword">func</span> <a href="#newURLSearchParams"><span class="Identifier">newURLSearchParams</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Keyword">or</span> <span class="Identifier">JsObject</span> <span class="Keyword">or</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new URLSearchParams(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -431,6 +489,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireUrl-procs-all">
 <div id="requireUrl">
 <dt><pre><span class="Keyword">func</span> <a href="#requireUrl"><span class="Identifier">requireUrl</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const url = require(\'url\')@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -440,6 +502,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="sets-procs-all">
 <div id="sets,URLSearchParams,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#sets%2CURLSearchParams%2Ccstring%2Ccstring"><span class="Identifier">sets</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.set(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -449,6 +515,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="sort-procs-all">
 <div id="sort,URLSearchParams">
 <dt><pre><span class="Keyword">func</span> <a href="#sort%2CURLSearchParams"><span class="Identifier">sort</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -457,6 +527,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="toCstring-procs-all">
 <div id="toCstring">
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a> <span class="Keyword">or</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toString()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -466,6 +540,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="toJSON-procs-all">
 <div id="toJSON,URL">
 <dt><pre><span class="Keyword">func</span> <a href="#toJSON%2CURL"><span class="Identifier">toJSON</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.toJSON()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -474,6 +552,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="urlToHttpOptions-procs-all">
 <div id="urlToHttpOptions,URL">
 <dt><pre><span class="Keyword">func</span> <a href="#urlToHttpOptions%2CURL"><span class="Identifier">urlToHttpOptions</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URL"><span class="Identifier">URL</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;url.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -483,6 +565,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="values-procs-all">
 <div id="values,URLSearchParams">
 <dt><pre><span class="Keyword">func</span> <a href="#values%2CURLSearchParams"><span class="Identifier">values</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsurl.html#URLSearchParams"><span class="Identifier">URLSearchParams</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;Array.from(#.$1())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -491,6 +577,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/url.html#url_urlsearchparams_values">https://nodejs.org/api/url.html#url_urlsearchparams_values</a>
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -502,7 +590,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 15:34:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 18:36:16 UTC</small>
       </div>
     </div>
   </div>

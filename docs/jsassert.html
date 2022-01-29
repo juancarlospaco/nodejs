@@ -306,6 +306,8 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="$-procs-all">
 <div id="$,CallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#%24%2CCallTracker"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -314,6 +316,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="calls-procs-all">
 <div id="calls,CallTracker,T">
 <dt><pre><span class="Keyword">func</span> <a href="#calls%2CCallTracker%2CT"><span class="Identifier">calls</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">;</span> <span class="Identifier">fn</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">exact</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -323,6 +329,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="deepStrictEqual-procs-all">
 <div id="deepStrictEqual,auto,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#deepStrictEqual%2Cauto%2Cauto"><span class="Identifier">deepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -341,6 +351,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="doesNotMatch-procs-all">
 <div id="doesNotMatch,cstring,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotMatch%2Ccstring%2CRegExp"><span class="Identifier">doesNotMatch</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -359,6 +373,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="doesNotReject-procs-all">
 <div id="doesNotReject,T,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotReject%2CT%2CRegExp"><span class="Identifier">doesNotReject</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -395,6 +413,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="doesNotThrow-procs-all">
 <div id="doesNotThrow,T,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#doesNotThrow%2CT%2CRegExp"><span class="Identifier">doesNotThrow</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">function</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -431,6 +453,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="ifError-procs-all">
 <div id="ifError,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#ifError%2Cauto"><span class="Identifier">ifError</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -439,6 +465,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="importAssert-procs-all">
 <div id="importAssert">
 <dt><pre><span class="Keyword">func</span> <a href="#importAssert"><span class="Identifier">importAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as assert from \'assert\'@&quot;</span><span class="Other">,</span>
                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -448,6 +478,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="match-procs-all">
 <div id="match,cstring,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#match%2Ccstring%2CRegExp"><span class="Identifier">match</span></a><span class="Other">(</span><span class="Identifier">stryng</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">regexp</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -466,6 +500,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newAssertionError-procs-all">
 <div id="newAssertionError">
 <dt><pre><span class="Keyword">func</span> <a href="#newAssertionError"><span class="Identifier">newAssertionError</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(new assert.AssertionError({}))&quot;</span><span class="Other">,</span>
                                     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -485,6 +523,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newCallTracker-procs-all">
 <div id="newCallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#newCallTracker"><span class="Identifier">newCallTracker</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new assert.CallTracker())&quot;</span><span class="Other">,</span>
                                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -494,6 +536,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="notDeepStrictEqual-procs-all">
 <div id="notDeepStrictEqual,auto,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#notDeepStrictEqual%2Cauto%2Cauto"><span class="Identifier">notDeepStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -512,6 +558,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="notStrictEqual-procs-all">
 <div id="notStrictEqual,auto,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#notStrictEqual%2Cauto%2Cauto"><span class="Identifier">notStrictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -530,6 +580,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="ok-procs-all">
 <div id="ok,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#ok%2Cauto"><span class="Identifier">ok</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -547,6 +601,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="rejects-procs-all">
 <div id="rejects,T,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#rejects%2CT%2CRegExp"><span class="Identifier">rejects</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -583,6 +641,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="report-procs-all">
 <div id="report,CallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#report%2CCallTracker"><span class="Identifier">report</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -592,6 +654,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireAssert-procs-all">
 <div id="requireAssert">
 <dt><pre><span class="Keyword">func</span> <a href="#requireAssert"><span class="Identifier">requireAssert</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\')@&quot;</span><span class="Other">,</span>
                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -601,6 +667,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireAssertStrict-procs-all">
 <div id="requireAssertStrict">
 <dt><pre><span class="Keyword">func</span> <a href="#requireAssertStrict"><span class="Identifier">requireAssertStrict</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const assert = require(\'assert\').strict@&quot;</span><span class="Other">,</span>
                              <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -610,6 +680,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="strictEqual-procs-all">
 <div id="strictEqual,auto,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#strictEqual%2Cauto%2Cauto"><span class="Identifier">strictEqual</span></a><span class="Other">(</span><span class="Identifier">actual</span><span class="Other">,</span> <span class="Identifier">expected</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -628,6 +702,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="throws-procs-all">
 <div id="throws,T,RegExp">
 <dt><pre><span class="Keyword">func</span> <a href="#throws%2CT%2CRegExp"><span class="Identifier">throws</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">asyncFunction</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">error</span><span class="Other">:</span> <span class="Identifier">RegExp</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;assert.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -664,6 +742,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="toCstring-procs-all">
 <div id="toCstring,CallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#toCstring%2CCallTracker"><span class="Identifier">toCstring</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;JSON.stringify(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -673,6 +755,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="verify-procs-all">
 <div id="verify,CallTracker">
 <dt><pre><span class="Keyword">func</span> <a href="#verify%2CCallTracker"><span class="Identifier">verify</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsassert.html#CallTracker"><span class="Identifier">CallTracker</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -680,6 +766,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/assert.html#assert_tracker_verify">https://nodejs.org/api/assert.html#assert_tracker_verify</a>
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -691,7 +779,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 15:34:10 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 18:35:38 UTC</small>
       </div>
     </div>
   </div>
