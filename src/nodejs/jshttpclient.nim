@@ -35,7 +35,7 @@ func newJsHttpClient*(headers: Headers = newHeaders()): JsHttpClient =
 func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncHttpClient =
   return JsAsyncHttpClient(headers: headers)
 
-func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
+proc newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
   referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
   credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
   redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest =
