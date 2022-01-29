@@ -7,8 +7,11 @@ import
   nodejs/[jsxmlhttprequest, jsmultisync]
 
 type
-  JsHttpClient* = XMLHttpRequest
+  JsHttpClient* = ref object of JsRoot
+    http*: XMLHttpRequest
+    headers*: Headers
   JsAsyncHttpClient* = ref object of JsRoot
+    headers*: Headers
 
   JsRequest* = ref object of JsRoot
     `method`*: HttpMethod
@@ -18,7 +21,6 @@ type
     credentials*: FetchCredentials
     cache*: FetchCaches
     redirect*: FetchRedirects
-    headers*: Headers
     keepAlive*: bool
 
   JsResponse* = ref object of JsRoot
@@ -26,18 +28,20 @@ type
     statusText*, url*, responseText*: cstring
     headers*: Headers
 
-func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
+func newJsHttpClient*(headers: Headers = newHeaders()): JsHttpClient =
+  return JsHttpClient(http: newXMLHttpRequest(), headers: headers)
 
-func newJsAsyncHttpClient*(): JsAsyncHttpClient = discard
+func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncHttpClient =
+  return JsAsyncHttpClient(headers: headers)
 
 func newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
   referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
   credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
-  redirect: FetchRedirects = frFollow; headers: Headers = newHeaders(); keepAlive: bool = false): JsRequest =
+  redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest =
   result = JsRequest(
     url: url, `method`: `method`, integrity: integrity, referrer: referrer, mode: mode,
     credentials: credentials, cache: cache, redirect: redirect, referrerPolicy: referrerPolicy,
-    headers: headers, keepAlive: keepAlive
+    keepAlive: keepAlive
   )
   if body != "":
     result.body = body
@@ -55,8 +59,8 @@ func setHeaders(client: JsHttpClient, request: JsRequest) =
     ("Cache-Control".cstring,   cstring($request.cache)),
     ("Referrer-Policy".cstring, cstring($request.referrerPolicy)),
   ])
-  for pair in request.headers.entries:
-    client.setRequestHeader(pair[0], pair[1])
+  for (key, val) in client.headers.entries:
+    client.setRequestHeader(key, val)
 
 func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
@@ -75,71 +79,71 @@ proc response(response: Response): JsResponse {.async.} =
 
 proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
   ## Request proc for sync `XMLHttpRequest` client
-  client.open(metod = cstring($request.`method`), url = request.url, async = true)
-  client.setHeaders(request)
+  client.http.open(metod = cstring($request.`method`), url = request.url, async = true)
+  client.http.setHeaders(request)
   if request.body == "".cstring:
-    client.send()
+    client.http.send()
   else:
-    client.send(body = request.body)
-  return client.response()
+    client.http.send(body = request.body)
+  return client.http.response()
 
 proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse] {.async.} =
   ## Request proc for async `jsfetch` client
   var req: Request = newRequest(request.url)
-  req.headers = request.headers
+  req.headers = client.headers
   return response(await fetch(req, fetchOptionsImpl(request)))
 
-proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpHead, headers = headers)
+proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpHead)
   return await client.request(request)
 
-proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpGet, headers = headers)
+proc get*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpGet)
   return await client.request(request)
 
-proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
+proc getContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpGet, headers = headers)
+    request = newJsRequest(url = cstring($url), `method` = HttpGet)
     resp = await client.request(request)
   return resp.responseText
 
-proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpDelete, headers = headers)
+proc delete*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpDelete)
   return await client.request(request)
 
-proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
+proc deleteContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body, headers = headers)
+    request = newJsRequest(url = cstring($url), `method` = HttpDelete, body = body)
     resp = await client.request(request)
   return resp.responseText
 
-proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPost, headers = headers)
+proc post*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPost)
   return await client.request(request)
 
-proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
+proc postContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body, headers = headers)
+    request = newJsRequest(url = cstring($url), `method` = HttpPost, body = body)
     resp = await client.request(request)
   return resp.responseText
 
-proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPut, headers = headers)
+proc put*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPut)
   return await client.request(request)
 
-proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
+proc putContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body, headers = headers)
+    request = newJsRequest(url = cstring($url), `method` = HttpPut, body = body)
     resp = await client.request(request)
   return resp.responseText
 
-proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; headers: Headers = newHeaders()): Future[JsResponse] {.multisync.} =
-  let request = newJsRequest(url = cstring($url), `method` = HttpPatch, headers = headers)
+proc patch*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
+  let request = newJsRequest(url = cstring($url), `method` = HttpPatch)
   return await client.request(request)
 
-proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""; headers: Headers = newHeaders()): Future[cstring] {.multisync.} =
+proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; body: cstring = ""): Future[cstring] {.multisync.} =
   let
-    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body, headers = headers)
+    request = newJsRequest(url = cstring($url), `method` = HttpPatch, body = body)
     resp = await client.request(request)
   return resp.responseText
 
