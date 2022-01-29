@@ -224,8 +224,6 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-
-<div id="/-procs-all">
 <div id="/,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#%2F%2Ccstring%2Ccstring"><span class="Identifier">`/`</span></a><span class="Other">(</span><span class="Identifier">path0</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">path1</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.join(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -235,10 +233,6 @@ Syntax sugar for <tt class="docutils literal"><span class="pre"><span class="Ide
 
 </dd>
 </div>
-
-</div>
-
-<div id="basename-procs-all">
 <div id="basename,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#basename%2Ccstring%2Ccstring"><span class="Identifier">basename</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">ext</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -257,10 +251,6 @@ Syntax sugar for <tt class="docutils literal"><span class="pre"><span class="Ide
 
 </dd>
 </div>
-
-</div>
-
-<div id="dirname-procs-all">
 <div id="dirname,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#dirname%2Ccstring"><span class="Identifier">dirname</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -270,10 +260,6 @@ Syntax sugar for <tt class="docutils literal"><span class="pre"><span class="Ide
 
 </dd>
 </div>
-
-</div>
-
-<div id="extname-procs-all">
 <div id="extname,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#extname%2Ccstring"><span class="Identifier">extname</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -283,10 +269,6 @@ Syntax sugar for <tt class="docutils literal"><span class="pre"><span class="Ide
 
 </dd>
 </div>
-
-</div>
-
-<div id="importPath-procs-all">
 <div id="importPath">
 <dt><pre><span class="Keyword">func</span> <a href="#importPath"><span class="Identifier">importPath</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as path from \'path\'@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -296,10 +278,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="isAbsolute-procs-all">
 <div id="isAbsolute,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#isAbsolute%2Ccstring"><span class="Identifier">isAbsolute</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -309,10 +287,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="join-procs-all">
 <div id="join,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#join%2Ccstring"><span class="Identifier">join</span></a><span class="Other">(</span><span class="Identifier">paths</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(@)&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span><span class="Other">,</span>
                                      <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -322,10 +296,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="normalize-procs-all">
 <div id="normalize,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#normalize%2Ccstring"><span class="Identifier">normalize</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -335,10 +305,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="parse-procs-all">
 <div id="parse,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#parse%2Ccstring"><span class="Identifier">parse</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -348,10 +314,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="relative-procs-all">
 <div id="relative,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#relative%2Ccstring%2Ccstring"><span class="Identifier">relative</span></a><span class="Other">(</span><span class="Identifier">to</span><span class="Other">,</span> <span class="Identifier">froom</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -361,10 +323,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
-
-</div>
-
-<div id="requirePath-procs-all">
 <div id="requirePath">
 <dt><pre><span class="Keyword">func</span> <a href="#requirePath"><span class="Identifier">requirePath</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const path = require(\'path\')@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -374,10 +332,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
-
-</div>
-
-<div id="requirePathPosix-procs-all">
 <div id="requirePathPosix">
 <dt><pre><span class="Keyword">func</span> <a href="#requirePathPosix"><span class="Identifier">requirePathPosix</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const path = require(\'path\').posix@&quot;</span><span class="Other">,</span>
                           <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -387,10 +341,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
-
-</div>
-
-<div id="resolve-procs-all">
 <div id="resolve,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#resolve%2Ccstring"><span class="Identifier">resolve</span></a><span class="Other">(</span><span class="Identifier">paths</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(@)&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span><span class="Other">,</span>
                                         <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -400,10 +350,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
-
-</div>
-
-<div id="toNamespacedPath-procs-all">
 <div id="toNamespacedPath,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#toNamespacedPath%2Ccstring"><span class="Identifier">toNamespacedPath</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;path.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -412,8 +358,6 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 <a class="reference external" href="https://nodejs.org/api/path.html#path_path_tonamespacedpath_path">https://nodejs.org/api/path.html#path_path_tonamespacedpath_path</a>
 
 </dd>
-</div>
-
 </div>
 
 </dl></div>
@@ -425,7 +369,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 13:37:11 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 14:45:44 UTC</small>
       </div>
     </div>
   </div>

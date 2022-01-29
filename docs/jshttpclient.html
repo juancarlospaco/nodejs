@@ -107,47 +107,165 @@ window.addEventListener('DOMContentLoaded', main);
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#JsHttpClient"
-    title="JsHttpClient = XMLHttpRequest">JsHttpClient</a></li>
+      <li><a class="reference" href="#JsAsyncHttpClient"
+    title="JsAsyncHttpClient = ref object of JsRoot
+  headers*: Headers">JsAsyncHttpClient</a></li>
+  <li><a class="reference" href="#JsHttpClient"
+    title="JsHttpClient = ref object of JsRoot
+  http*: XMLHttpRequest
+  headers*: Headers">JsHttpClient</a></li>
+  <li><a class="reference" href="#JsRequest"
+    title="JsRequest = ref object of JsRoot
+  `method`*: HttpMethod
+  url*, body*, integrity*, referrer*: cstring
+  referrerPolicy*: FetchReferrerPolicies
+  mode*: FetchModes
+  credentials*: FetchCredentials
+  cache*: FetchCaches
+  redirect*: FetchRedirects
+  keepAlive*: bool">JsRequest</a></li>
+  <li><a class="reference" href="#JsResponse"
+    title="JsResponse = ref object of JsRoot
+  status*: cint
+  statusText*, url*, responseText*: cstring
+  headers*: Headers">JsResponse</a></li>
 
   </ul>
 </li>
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">deleteContent
-      <li><a class="reference" href="#deleteContent%2CJsHttpClient%2C"
-    title="deleteContent(self: JsHttpClient; url: Uri | string): cstring">deleteContent(self: JsHttpClient; url: Uri | string): cstring</a></li>
+      <ul class="simple nested-toc-section">delete
+      <li><a class="reference" href="#delete%2C%2C"
+    title="delete(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]">delete(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]</a></li>
+  <li><a class="reference" href="#delete%2CJsHttpClient%2C"
+    title="delete(client: JsHttpClient; url: Uri | string): JsResponse">delete(client: JsHttpClient; url: Uri | string): JsResponse</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">deleteContent
+      <li><a class="reference" href="#deleteContent%2C%2C"
+    title="deleteContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    cstring]">deleteContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    cstring]</a></li>
+  <li><a class="reference" href="#deleteContent%2CJsHttpClient%2C"
+    title="deleteContent(client: JsHttpClient; url: Uri | string): cstring">deleteContent(client: JsHttpClient; url: Uri | string): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">get
+      <li><a class="reference" href="#get%2C%2C"
+    title="get(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]">get(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]</a></li>
+  <li><a class="reference" href="#get%2CJsHttpClient%2C"
+    title="get(client: JsHttpClient; url: Uri | string): JsResponse">get(client: JsHttpClient; url: Uri | string): JsResponse</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">getContent
-      <li><a class="reference" href="#getContent%2CJsHttpClient%2C"
-    title="getContent(self: JsHttpClient; url: Uri | string): cstring">getContent(self: JsHttpClient; url: Uri | string): cstring</a></li>
+      <li><a class="reference" href="#getContent%2C%2C"
+    title="getContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    cstring]">getContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    cstring]</a></li>
+  <li><a class="reference" href="#getContent%2CJsHttpClient%2C"
+    title="getContent(client: JsHttpClient; url: Uri | string): cstring">getContent(client: JsHttpClient; url: Uri | string): cstring</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">head
-      <li><a class="reference" href="#head%2CJsHttpClient%2C"
-    title="head(self: JsHttpClient; url: Uri | string): cstring">head(self: JsHttpClient; url: Uri | string): cstring</a></li>
+      <li><a class="reference" href="#head%2C%2C"
+    title="head(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]">head(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[
+    JsResponse]</a></li>
+  <li><a class="reference" href="#head%2CJsHttpClient%2C"
+    title="head(client: JsHttpClient; url: Uri | string): JsResponse">head(client: JsHttpClient; url: Uri | string): JsResponse</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">newJsAsyncHttpClient
+      <li><a class="reference" href="#newJsAsyncHttpClient%2CHeaders"
+    title="newJsAsyncHttpClient(headers: Headers = newHeaders()): JsAsyncHttpClient">newJsAsyncHttpClient(headers: Headers = newHeaders()): JsAsyncHttpClient</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">newJsHttpClient
-      <li><a class="reference" href="#newJsHttpClient"
-    title="newJsHttpClient(): JsHttpClient">newJsHttpClient(): JsHttpClient</a></li>
+      <li><a class="reference" href="#newJsHttpClient%2CHeaders"
+    title="newJsHttpClient(headers: Headers = newHeaders()): JsHttpClient">newJsHttpClient(headers: Headers = newHeaders()): JsHttpClient</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">newJsRequest
+      <li><a class="reference" href="#newJsRequest%2Ccstring%2CHttpMethod%2Ccstring%2Ccstring%2Ccstring%2CFetchReferrerPolicies%2CFetchModes%2CFetchCredentials%2CFetchCaches%2CFetchRedirects%2Cbool"
+    title="newJsRequest(url: cstring; method: HttpMethod;
+             body, integrity, referrer: cstring = &quot;&quot;;
+             referrerPolicy: FetchReferrerPolicies = frpOrigin;
+             mode: FetchModes = fmCors;
+             credentials: FetchCredentials = fcInclude;
+             cache: FetchCaches = fchDefault;
+             redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest">newJsRequest(url: cstring; method: HttpMethod;
+             body, integrity, referrer: cstring = &quot;&quot;;
+             referrerPolicy: FetchReferrerPolicies = frpOrigin;
+             mode: FetchModes = fmCors;
+             credentials: FetchCredentials = fcInclude;
+             cache: FetchCaches = fchDefault;
+             redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">patch
+      <li><a class="reference" href="#patch%2C%2C%2Ccstring"
+    title="patch(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+      body: cstring = &quot;&quot;): Future[JsResponse]">patch(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+      body: cstring = &quot;&quot;): Future[JsResponse]</a></li>
+  <li><a class="reference" href="#patch%2CJsHttpClient%2C%2Ccstring"
+    title="patch(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse">patch(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">patchContent
-      <li><a class="reference" href="#patchContent%2CJsHttpClient%2C%2Ccstring"
-    title="patchContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">patchContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+      <li><a class="reference" href="#patchContent%2C%2C%2Ccstring"
+    title="patchContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+             body: cstring = &quot;&quot;): Future[cstring]">patchContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+             body: cstring = &quot;&quot;): Future[cstring]</a></li>
+  <li><a class="reference" href="#patchContent%2CJsHttpClient%2C%2Ccstring"
+    title="patchContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">patchContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">post
+      <li><a class="reference" href="#post%2C%2C%2Ccstring"
+    title="post(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+     body: cstring = &quot;&quot;): Future[JsResponse]">post(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+     body: cstring = &quot;&quot;): Future[JsResponse]</a></li>
+  <li><a class="reference" href="#post%2CJsHttpClient%2C%2Ccstring"
+    title="post(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse">post(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">postContent
-      <li><a class="reference" href="#postContent%2CJsHttpClient%2C%2Ccstring"
-    title="postContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">postContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+      <li><a class="reference" href="#postContent%2C%2C%2Ccstring"
+    title="postContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+            body: cstring = &quot;&quot;): Future[cstring]">postContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+            body: cstring = &quot;&quot;): Future[cstring]</a></li>
+  <li><a class="reference" href="#postContent%2CJsHttpClient%2C%2Ccstring"
+    title="postContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">postContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">put
+      <li><a class="reference" href="#put%2C%2C%2Ccstring"
+    title="put(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+    body: cstring = &quot;&quot;): Future[JsResponse]">put(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+    body: cstring = &quot;&quot;): Future[JsResponse]</a></li>
+  <li><a class="reference" href="#put%2CJsHttpClient%2C%2Ccstring"
+    title="put(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse">put(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">putContent
-      <li><a class="reference" href="#putContent%2CJsHttpClient%2C%2Ccstring"
-    title="putContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">putContent(self: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+      <li><a class="reference" href="#putContent%2C%2C%2Ccstring"
+    title="putContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+           body: cstring = &quot;&quot;): Future[cstring]">putContent(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string;
+           body: cstring = &quot;&quot;): Future[cstring]</a></li>
+  <li><a class="reference" href="#putContent%2CJsHttpClient%2C%2Ccstring"
+    title="putContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring">putContent(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): cstring</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">request
+      <li><a class="reference" href="#request%2CJsAsyncHttpClient%2CJsRequest"
+    title="request(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]">request(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]</a></li>
+  <li><a class="reference" href="#request%2CJsHttpClient%2CJsRequest"
+    title="request(client: JsHttpClient; request: JsRequest): JsResponse">request(client: JsHttpClient; request: JsRequest): JsResponse</a></li>
 
   </ul>
 
@@ -161,45 +279,133 @@ window.addEventListener('DOMContentLoaded', main);
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><ul class="simple"><li>HttpClient for JavaScript targets implemented as sugar on top of <a class="reference external" href="https://nim-lang.github.io/fusion/src/fusion/js/jsxmlhttprequest">fusion/js/jsxmlhttprequest</a></li>
+  <p class="module-desc"><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
+Experimental JavaScript API.</div>
+<ul class="simple"><li>An HttpClient for JavaScript targets implemented as sugar on top of <tt class="docutils literal"><span class="pre"><span class="Identifier">jsxmlhttprequest</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">jsfetch</span></span></tt>.</li>
 </ul>
 
 <p><strong class="examples_text">Example: cmd: -r:off</strong></p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jshttpclient</span>
-<span class="Keyword">from</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">uri</span> <span class="Keyword">import</span> <span class="Identifier">parseUri</span><span class="Punctuation">,</span> <span class="Identifier">Uri</span>
+<span class="Keyword">import</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">uri</span>
 
 <span class="Keyword">let</span> <span class="Identifier">client</span><span class="Punctuation">:</span> <span class="Identifier">JsHttpClient</span> <span class="Operator">=</span> <span class="Identifier">newJsHttpClient</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
-<span class="Keyword">const</span> <span class="Identifier">data</span> <span class="Operator">=</span> <span class="LongStringLit">&quot;&quot;&quot;{&quot;key&quot;: &quot;value&quot;}&quot;&quot;&quot;</span>
+<span class="Keyword">const</span> <span class="Identifier">data</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="LongStringLit">&quot;&quot;&quot;{&quot;key&quot;: &quot;value&quot;}&quot;&quot;&quot;</span>
 
 <span class="Keyword">block</span><span class="Punctuation">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://google.com&quot;</span><span class="Punctuation">)</span>
-  <span class="Keyword">let</span> <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">getContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+  <span class="Keyword">let</span>
+    <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://google.com&quot;</span><span class="Punctuation">)</span>
+    <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">getContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
 
 <span class="Keyword">block</span><span class="Punctuation">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/delete&quot;</span><span class="Punctuation">)</span>
-  <span class="Keyword">let</span> <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">deleteContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+  <span class="Keyword">let</span>
+    <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/delete&quot;</span><span class="Punctuation">)</span>
+    <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">deleteContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
 
 <span class="Keyword">block</span><span class="Punctuation">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/post&quot;</span><span class="Punctuation">)</span>
-  <span class="Keyword">let</span> <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">postContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+  <span class="Keyword">let</span>
+    <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/post&quot;</span><span class="Punctuation">)</span>
+    <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">postContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
 
 <span class="Keyword">block</span><span class="Punctuation">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/put&quot;</span><span class="Punctuation">)</span>
-  <span class="Keyword">let</span> <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">putContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+  <span class="Keyword">let</span>
+    <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/put&quot;</span><span class="Punctuation">)</span>
+    <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">putContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
 
 <span class="Keyword">block</span><span class="Punctuation">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/patch&quot;</span><span class="Punctuation">)</span>
-  <span class="Keyword">let</span> <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">patchContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span></pre></p>
+  <span class="Keyword">let</span>
+    <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;https://httpbin.org/patch&quot;</span><span class="Punctuation">)</span>
+    <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">patchContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span></pre>
+<p><strong class="examples_text">Example: cmd: -d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off</strong></p>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jshttpclient</span>
+<span class="Keyword">import</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Punctuation">[</span><span class="Identifier">asyncjs</span><span class="Punctuation">,</span> <span class="Identifier">uri</span><span class="Punctuation">]</span>
+
+<span class="Keyword">proc</span> <span class="Identifier">example</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">Future</span><span class="Punctuation">[</span><span class="Identifier">void</span><span class="Punctuation">]</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">async</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span>
+  <span class="Keyword">let</span> <span class="Identifier">client</span><span class="Punctuation">:</span> <span class="Identifier">JsAsyncHttpClient</span> <span class="Operator">=</span> <span class="Identifier">newJsAsyncHttpClient</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
+  <span class="Keyword">const</span> <span class="Identifier">data</span> <span class="Operator">=</span> <span class="LongStringLit">&quot;&quot;&quot;{&quot;key&quot;: &quot;value&quot;}&quot;&quot;&quot;</span>
+
+  <span class="Keyword">block</span><span class="Punctuation">:</span>
+    <span class="Keyword">let</span>
+      <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;http://nim-lang.org&quot;</span><span class="Punctuation">)</span>
+      <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">getContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+      <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">JsResponse</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">get</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+
+  <span class="Keyword">block</span><span class="Punctuation">:</span>
+    <span class="Keyword">let</span>
+      <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;http://httpbin.org/delete&quot;</span><span class="Punctuation">)</span>
+      <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">deleteContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+      <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">JsResponse</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">delete</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">)</span>
+
+  <span class="Keyword">block</span><span class="Punctuation">:</span>
+    <span class="Keyword">let</span>
+      <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;http://httpbin.org/post&quot;</span><span class="Punctuation">)</span>
+      <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">postContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+      <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">JsResponse</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">post</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+
+  <span class="Keyword">block</span><span class="Punctuation">:</span>
+    <span class="Keyword">let</span>
+      <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;http://httpbin.org/put&quot;</span><span class="Punctuation">)</span>
+      <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">putContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+      <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">JsResponse</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">put</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+
+  <span class="Keyword">block</span><span class="Punctuation">:</span>
+    <span class="Keyword">let</span>
+      <span class="Identifier">url</span><span class="Punctuation">:</span> <span class="Identifier">Uri</span> <span class="Operator">=</span> <span class="Identifier">parseUri</span><span class="Punctuation">(</span><span class="StringLit">&quot;http://httpbin.org/patch&quot;</span><span class="Punctuation">)</span>
+      <span class="Identifier">content</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">patchContent</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+      <span class="Identifier">response</span><span class="Punctuation">:</span> <span class="Identifier">JsResponse</span> <span class="Operator">=</span> <span class="Identifier">await</span> <span class="Identifier">client</span><span class="Operator">.</span><span class="Identifier">patch</span><span class="Punctuation">(</span><span class="Identifier">url</span><span class="Punctuation">,</span> <span class="Identifier">data</span><span class="Punctuation">)</span>
+
+<span class="Keyword">discard</span> <span class="Identifier">example</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre></p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="jsxmlhttprequest.html">jsxmlhttprequest</a>
+<a class="reference external" href="jsxmlhttprequest.html">jsxmlhttprequest</a>, <a class="reference external" href="jsmultisync.html">jsmultisync</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
+<div id="JsAsyncHttpClient">
+<dt><pre><a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Headers</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="JsHttpClient">
-<dt><pre><a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Other">=</span> <a href="jsxmlhttprequest.html#XMLHttpRequest"><span class="Identifier">XMLHttpRequest</span></a></pre></dt>
+<dt><pre><a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">http</span><span class="Operator">*</span><span class="Other">:</span> <a href="jsxmlhttprequest.html#XMLHttpRequest"><span class="Identifier">XMLHttpRequest</span></a>
+  <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Headers</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="JsRequest">
+<dt><pre><a href="jshttpclient.html#JsRequest"><span class="Identifier">JsRequest</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Other">`</span><span class="Keyword">method</span><span class="Other">`</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">HttpMethod</span>
+  <span class="Identifier">url</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">body</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">integrity</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">referrer</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
+  <span class="Identifier">referrerPolicy</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">FetchReferrerPolicies</span>
+  <span class="Identifier">mode</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">FetchModes</span>
+  <span class="Identifier">credentials</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">FetchCredentials</span>
+  <span class="Identifier">cache</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">FetchCaches</span>
+  <span class="Identifier">redirect</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">FetchRedirects</span>
+  <span class="Identifier">keepAlive</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
+</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="JsResponse">
+<dt><pre><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
+  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+  <span class="Identifier">statusText</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">url</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">responseText</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
+  <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Headers</span>
+</pre></dt>
 <dd>
 
 
@@ -211,90 +417,249 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+<div id="delete,,">
+<dt><pre><span class="Keyword">proc</span> <a href="#delete%2C%2C"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.<span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
 
-<div id="deleteContent-procs-all">
+
+
+</dd>
+</div>
+<div id="delete,JsHttpClient,">
+<dt><pre><span class="Keyword">proc</span> <a href="#delete%2CJsHttpClient%2C"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="deleteContent,,">
+<dt><pre><span class="Keyword">proc</span> <a href="#deleteContent%2C%2C"><span class="Identifier">deleteContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="deleteContent,JsHttpClient,">
-<dt><pre><span class="Keyword">func</span> <a href="#deleteContent%2CJsHttpClient%2C"><span class="Identifier">deleteContent</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#deleteContent%2CJsHttpClient%2C"><span class="Identifier">deleteContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="get,,">
+<dt><pre><span class="Keyword">proc</span> <a href="#get%2C%2C"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.<span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
 </div>
+<div id="get,JsHttpClient,">
+<dt><pre><span class="Keyword">proc</span> <a href="#get%2CJsHttpClient%2C"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
+<dd>
 
-<div id="getContent-procs-all">
+
+
+</dd>
+</div>
+<div id="getContent,,">
+<dt><pre><span class="Keyword">proc</span> <a href="#getContent%2C%2C"><span class="Identifier">getContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="getContent,JsHttpClient,">
-<dt><pre><span class="Keyword">func</span> <a href="#getContent%2CJsHttpClient%2C"><span class="Identifier">getContent</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#getContent%2CJsHttpClient%2C"><span class="Identifier">getContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="head,,">
+<dt><pre><span class="Keyword">proc</span> <a href="#head%2C%2C"><span class="Identifier">head</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span>
+    <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.<span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
 </div>
-
-<div id="head-procs-all">
 <div id="head,JsHttpClient,">
-<dt><pre><span class="Keyword">func</span> <a href="#head%2CJsHttpClient%2C"><span class="Identifier">head</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#head%2CJsHttpClient%2C"><span class="Identifier">head</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
-
-</div>
-
-<div id="newJsHttpClient-procs-all">
-<div id="newJsHttpClient">
-<dt><pre><span class="Keyword">func</span> <a href="#newJsHttpClient"><span class="Identifier">newJsHttpClient</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;new XMLHttpRequest()&quot;</span><span class="Other">,</span>
-                                       <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<div id="newJsAsyncHttpClient,Headers">
+<dt><pre><span class="Keyword">func</span> <a href="#newJsAsyncHttpClient%2CHeaders"><span class="Identifier">newJsAsyncHttpClient</span></a><span class="Other">(</span><span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">Headers</span> <span class="Other">=</span> <span class="Identifier">newHeaders</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="newJsHttpClient,Headers">
+<dt><pre><span class="Keyword">func</span> <a href="#newJsHttpClient%2CHeaders"><span class="Identifier">newJsHttpClient</span></a><span class="Other">(</span><span class="Identifier">headers</span><span class="Other">:</span> <span class="Identifier">Headers</span> <span class="Other">=</span> <span class="Identifier">newHeaders</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
 </div>
+<div id="newJsRequest,cstring,HttpMethod,cstring,cstring,cstring,FetchReferrerPolicies,FetchModes,FetchCredentials,FetchCaches,FetchRedirects,bool">
+<dt><pre><span class="Keyword">proc</span> <a href="#newJsRequest%2Ccstring%2CHttpMethod%2Ccstring%2Ccstring%2Ccstring%2CFetchReferrerPolicies%2CFetchModes%2CFetchCredentials%2CFetchCaches%2CFetchRedirects%2Cbool"><span class="Identifier">newJsRequest</span></a><span class="Other">(</span><span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">method</span><span class="Other">:</span> <span class="Identifier">HttpMethod</span><span class="Other">;</span>
+                  <span class="Identifier">body</span><span class="Other">,</span> <span class="Identifier">integrity</span><span class="Other">,</span> <span class="Identifier">referrer</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">;</span>
+                  <span class="Identifier">referrerPolicy</span><span class="Other">:</span> <span class="Identifier">FetchReferrerPolicies</span> <span class="Other">=</span> <span class="Identifier">frpOrigin</span><span class="Other">;</span>
+                  <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">FetchModes</span> <span class="Other">=</span> <span class="Identifier">fmCors</span><span class="Other">;</span>
+                  <span class="Identifier">credentials</span><span class="Other">:</span> <span class="Identifier">FetchCredentials</span> <span class="Other">=</span> <span class="Identifier">fcInclude</span><span class="Other">;</span>
+                  <span class="Identifier">cache</span><span class="Other">:</span> <span class="Identifier">FetchCaches</span> <span class="Other">=</span> <span class="Identifier">fchDefault</span><span class="Other">;</span>
+                  <span class="Identifier">redirect</span><span class="Other">:</span> <span class="Identifier">FetchRedirects</span> <span class="Other">=</span> <span class="Identifier">frFollow</span><span class="Other">;</span> <span class="Identifier">keepAlive</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsRequest"><span class="Identifier">JsRequest</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
 
-<div id="patchContent-procs-all">
+
+
+</dd>
+</div>
+<div id="patch,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#patch%2C%2C%2Ccstring"><span class="Identifier">patch</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+           <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="patch,JsHttpClient,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#patch%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">patch</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="patchContent,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#patchContent%2C%2C%2Ccstring"><span class="Identifier">patchContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+                  <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="patchContent,JsHttpClient,,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#patchContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">patchContent</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#patchContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">patchContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="post,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#post%2C%2C%2Ccstring"><span class="Identifier">post</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+          <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
 </div>
+<div id="post,JsHttpClient,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#post%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">post</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
+<dd>
 
-<div id="postContent-procs-all">
+
+
+</dd>
+</div>
+<div id="postContent,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#postContent%2C%2C%2Ccstring"><span class="Identifier">postContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+                 <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="postContent,JsHttpClient,,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#postContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">postContent</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#postContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">postContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="put,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#put%2C%2C%2Ccstring"><span class="Identifier">put</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+         <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
 </div>
+<div id="put,JsHttpClient,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#put%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">put</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a></pre></dt>
+<dd>
 
-<div id="putContent-procs-all">
+
+
+</dd>
+</div>
+<div id="putContent,,,cstring">
+<dt><pre><span class="Keyword">proc</span> <a href="#putContent%2C%2C%2Ccstring"><span class="Identifier">putContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a> <span class="Operator">|</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span>
+                <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span>.}</pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
 <div id="putContent,JsHttpClient,,cstring">
-<dt><pre><span class="Keyword">func</span> <a href="#putContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">putContent</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#putContent%2CJsHttpClient%2C%2Ccstring"><span class="Identifier">putContent</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">url</span><span class="Other">:</span> <span class="Identifier">Uri</span> <span class="Operator">|</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span></pre></dt>
 <dd>
 
 
 
 </dd>
 </div>
+<div id="request,JsAsyncHttpClient,JsRequest">
+<dt><pre><span class="Keyword">proc</span> <a href="#request%2CJsAsyncHttpClient%2CJsRequest"><span class="Identifier">request</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsAsyncHttpClient"><span class="Identifier">JsAsyncHttpClient</span></a><span class="Other">;</span> <span class="Identifier">request</span><span class="Other">:</span> <a href="jshttpclient.html#JsRequest"><span class="Identifier">JsRequest</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a><span class="Other">]</span> {.
+    <span class="Identifier">codegenDecl</span><span class="Other">:</span> <span class="StringLit">&quot;async function $2($3)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
 
+
+
+</dd>
+</div>
+<div id="request,JsHttpClient,JsRequest">
+<dt><pre><span class="Keyword">proc</span> <a href="#request%2CJsHttpClient%2CJsRequest"><span class="Identifier">request</span></a><span class="Other">(</span><span class="Identifier">client</span><span class="Other">:</span> <a href="jshttpclient.html#JsHttpClient"><span class="Identifier">JsHttpClient</span></a><span class="Other">;</span> <span class="Identifier">request</span><span class="Other">:</span> <a href="jshttpclient.html#JsRequest"><span class="Identifier">JsRequest</span></a><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dd>
+
+Request proc for sync <tt class="docutils literal"><span class="pre"><span class="Identifier">XMLHttpRequest</span></span></tt> client
+
+</dd>
 </div>
 
 </dl></div>
@@ -306,7 +671,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 13:37:07 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 14:45:39 UTC</small>
       </div>
     </div>
   </div>
