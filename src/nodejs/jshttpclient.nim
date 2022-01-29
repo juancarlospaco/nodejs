@@ -69,10 +69,10 @@ func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
   new(result)
   result.status = response.status
-  if resp.status >= 200 and resp.status <= 299:
-    resp.ok = true
+  if result.status in 200..299:
+    result.ok = true
   else:
-    resp.ok = false
+    result.ok = false
   result.responseText = response.responseText
 
 proc response(response: Response): JsResponse {.async.} =
