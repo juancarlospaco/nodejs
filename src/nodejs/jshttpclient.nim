@@ -168,27 +168,27 @@ runnableExamples("-r:off"):
   block:
     let
       url: Uri = parseUri("https://google.com")
-      content: JsResponse = client.getContent(url)
+      content: cstring = client.getContent(url)
 
   block:
     let
       url: Uri = parseUri("https://httpbin.org/delete")
-      content: JsResponse = client.deleteContent(url)
+      content: cstring = client.deleteContent(url)
 
   block:
     let
       url: Uri = parseUri("https://httpbin.org/post")
-      content: JsResponse = client.postContent(url, data)
+      content: cstring = client.postContent(url, data)
 
   block:
     let
       url: Uri = parseUri("https://httpbin.org/put")
-      content: JsResponse = client.putContent(url, data)
+      content: cstring = client.putContent(url, data)
 
   block:
     let
       url: Uri = parseUri("https://httpbin.org/patch")
-      content: JsResponse = client.patchContent(url, data)
+      content: cstring = client.patchContent(url, data)
 
 
 runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off"):
@@ -201,31 +201,31 @@ runnableExamples("-d:nimExperimentalJsfetch -d:nimExperimentalAsyncjsThen -r:off
     block:
       let
         url: Uri = parseUri("http://nim-lang.org")
-        content: JsResponse = await client.getContent(url)
+        content: cstring = await client.getContent(url)
         response: JsResponse = await client.get(url)
 
     block:
       let
         url: Uri = parseUri("http://httpbin.org/delete")
-        content: JsResponse = await client.deleteContent(url)
+        content: cstring = await client.deleteContent(url)
         response: JsResponse = await client.delete(url)
 
     block:
       let
         url: Uri = parseUri("http://httpbin.org/post")
-        content: JsResponse = await client.postContent(url, data)
+        content: cstring = await client.postContent(url, data)
         response: JsResponse = await client.post(url, data)
 
     block:
       let
         url: Uri = parseUri("http://httpbin.org/put")
-        content: JsResponse = await client.putContent(url, data)
+        content: cstring = await client.putContent(url, data)
         response: JsResponse = await client.put(url, data)
 
     block:
       let
         url: Uri = parseUri("http://httpbin.org/patch")
-        content: JsResponse = await client.patchContent(url, data)
+        content: cstring = await client.patchContent(url, data)
         response: JsResponse = await client.patch(url, data)
 
   discard example()
