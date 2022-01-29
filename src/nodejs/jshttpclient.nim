@@ -58,10 +58,6 @@ template fetchOptionsImpl(request: JsRequest): FetchOptions =
 
 func setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
-  client.http.setRequestHeader([
-    ("Cache-Control".cstring,   cstring($request.cache)),
-    ("Referrer-Policy".cstring, cstring($request.referrerPolicy)),
-  ])
   for (key, val) in client.headers.entries:
     client.http.setRequestHeader(key, val)
 
