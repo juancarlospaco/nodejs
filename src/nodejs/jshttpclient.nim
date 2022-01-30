@@ -26,8 +26,7 @@ type
     keepAlive*: bool
 
   JsResponse* = ref object of JsRoot
-    ok*: bool
-    status*: cint
+    status*: HttpCode
     statusText*, url*, responseText*: cstring
     headers*: Headers
 
@@ -39,7 +38,7 @@ func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncHttpClient =
 
 proc newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
   referrerPolicy: FetchReferrerPolicies = frpOrigin; mode: FetchModes = fmCors;
-  credentials: FetchCredentials = fcInclude; cache: FetchCaches = fchDefault;
+  credentials: FetchCredentials = fcOmit; cache: FetchCaches = fchDefault;
   redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest =
   result = JsRequest(
     url: url, `method`: `method`, integrity: integrity, referrer: referrer, mode: mode,
@@ -64,20 +63,15 @@ func setHeaders(client: JsHttpClient, request: JsRequest) =
 func response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
   new(result)
-  result.status = response.status
-  if result.status in 200..299:
-    result.ok = true
-  else:
-    result.ok = false
+  result.status = cast[HttpCode](response.status)
   result.responseText = response.responseText
 
-proc response(response: Response): JsResponse {.async.} =
+proc response(response: Response, text: cstring): JsResponse {.async.} =
   ## Converts `jsfetch` `Response` to `JsResponse`
   new(result)
-  result.ok = result.ok
-  result.status = response.status
+  result.status = cast[HttpCode](response.status)
   result.statusText = response.statusText
-  result.responseText = await text(response)
+  result.responseText = text
   result.url = response.url
   result.headers = response.headers
 
@@ -95,7 +89,10 @@ proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse]
   ## Request proc for async `jsfetch` client
   var req: Request = newRequest(request.url)
   req.headers = client.headers
-  return response(await fetch(req, fetchOptionsImpl(request)))
+  let
+    resp = await fetch(req, fetchOptionsImpl(request))
+    text = await text(resp)
+  return response(resp, text)
 
 proc head*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string): Future[JsResponse] {.multisync.} =
   let request = newJsRequest(url = cstring($url), `method` = HttpHead)
