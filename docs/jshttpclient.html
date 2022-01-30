@@ -126,8 +126,7 @@ window.addEventListener('DOMContentLoaded', main);
   keepAlive*: bool">JsRequest</a></li>
   <li><a class="reference" href="#JsResponse"
     title="JsResponse = ref object of JsRoot
-  ok*: bool
-  status*: cint
+  status*: HttpCode
   statusText*, url*, responseText*: cstring
   headers*: Headers">JsResponse</a></li>
 
@@ -196,14 +195,12 @@ window.addEventListener('DOMContentLoaded', main);
     title="newJsRequest(url: cstring; method: HttpMethod;
              body, integrity, referrer: cstring = &quot;&quot;;
              referrerPolicy: FetchReferrerPolicies = frpOrigin;
-             mode: FetchModes = fmCors;
-             credentials: FetchCredentials = fcInclude;
+             mode: FetchModes = fmCors; credentials: FetchCredentials = fcOmit;
              cache: FetchCaches = fchDefault;
              redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest">newJsRequest(url: cstring; method: HttpMethod;
              body, integrity, referrer: cstring = &quot;&quot;;
              referrerPolicy: FetchReferrerPolicies = frpOrigin;
-             mode: FetchModes = fmCors;
-             credentials: FetchCredentials = fcInclude;
+             mode: FetchModes = fmCors; credentials: FetchCredentials = fcOmit;
              cache: FetchCaches = fchDefault;
              redirect: FetchRedirects = frFollow; keepAlive: bool = false): JsRequest</a></li>
 
@@ -403,8 +400,7 @@ Experimental JavaScript API.</div>
 </div>
 <div id="JsResponse">
 <dt><pre><a href="jshttpclient.html#JsResponse"><span class="Identifier">JsResponse</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">JsRoot</span>
-  <span class="Identifier">ok</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+  <span class="Identifier">status</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">HttpCode</span>
   <span class="Identifier">statusText</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">url</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">responseText</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
   <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Headers</span>
 </pre></dt>
@@ -527,7 +523,7 @@ Experimental JavaScript API.</div>
                   <span class="Identifier">body</span><span class="Other">,</span> <span class="Identifier">integrity</span><span class="Other">,</span> <span class="Identifier">referrer</span><span class="Other">:</span> <span class="Identifier">cstring</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">;</span>
                   <span class="Identifier">referrerPolicy</span><span class="Other">:</span> <span class="Identifier">FetchReferrerPolicies</span> <span class="Other">=</span> <span class="Identifier">frpOrigin</span><span class="Other">;</span>
                   <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">FetchModes</span> <span class="Other">=</span> <span class="Identifier">fmCors</span><span class="Other">;</span>
-                  <span class="Identifier">credentials</span><span class="Other">:</span> <span class="Identifier">FetchCredentials</span> <span class="Other">=</span> <span class="Identifier">fcInclude</span><span class="Other">;</span>
+                  <span class="Identifier">credentials</span><span class="Other">:</span> <span class="Identifier">FetchCredentials</span> <span class="Other">=</span> <span class="Identifier">fcOmit</span><span class="Other">;</span>
                   <span class="Identifier">cache</span><span class="Other">:</span> <span class="Identifier">FetchCaches</span> <span class="Other">=</span> <span class="Identifier">fchDefault</span><span class="Other">;</span>
                   <span class="Identifier">redirect</span><span class="Other">:</span> <span class="Identifier">FetchRedirects</span> <span class="Other">=</span> <span class="Identifier">frFollow</span><span class="Other">;</span> <span class="Identifier">keepAlive</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="jshttpclient.html#JsRequest"><span class="Identifier">JsRequest</span></a> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -673,7 +669,7 @@ Request proc for sync <tt class="docutils literal"><span class="pre"><span class
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-29 19:26:20 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-30 09:17:14 UTC</small>
       </div>
     </div>
   </div>
