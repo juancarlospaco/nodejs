@@ -1148,6 +1148,8 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="access-procs-all">
 <div id="access,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#access%2Ccstring%2Ccint%2CT"><span class="Identifier">access</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1157,6 +1159,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="accessSync-procs-all">
 <div id="accessSync,cstring,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#accessSync%2Ccstring%2Ccint"><span class="Identifier">accessSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1166,6 +1172,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="appendFile-procs-all">
 <div id="appendFile,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#appendFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">appendFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1175,6 +1185,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="appendFileSync-procs-all">
 <div id="appendFileSync,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#appendFileSync%2Ccstring%2Ccstring"><span class="Identifier">appendFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1184,6 +1198,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="chmod-procs-all">
 <div id="chmod,cstring,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#chmod%2Ccstring%2Ccint%2CT"><span class="Identifier">chmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1202,6 +1220,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="chmodSync-procs-all">
 <div id="chmodSync,cstring,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#chmodSync%2Ccstring%2Ccint"><span class="Identifier">chmodSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1220,6 +1242,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="chown-procs-all">
 <div id="chown,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#chown%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">chown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1229,6 +1255,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="chownSync-procs-all">
 <div id="chownSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#chownSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">chownSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1238,6 +1268,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="close-procs-all">
 <div id="close,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#close%2Ccint%2CT"><span class="Identifier">close</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1247,6 +1281,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="closeSync-procs-all">
 <div id="closeSync,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#closeSync%2Ccint"><span class="Identifier">closeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1255,6 +1293,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="copyFile-procs-all">
 <div id="copyFile,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#copyFile%2Ccstring%2Ccstring%2CT"><span class="Identifier">copyFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1273,6 +1315,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="copyFileSync-procs-all">
 <div id="copyFileSync,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#copyFileSync%2Ccstring%2Ccstring"><span class="Identifier">copyFileSync</span></a><span class="Other">(</span><span class="Identifier">src</span><span class="Other">,</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1291,6 +1337,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="dirRead-procs-all">
 <div id="dirRead,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#dirRead%2Ccstring%2CT"><span class="Identifier">dirRead</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const d = fs.opendirSync(#); d.read(#); d.closeSync() })()&quot;&quot;&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1300,6 +1350,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="existsSync-procs-all">
 <div id="existsSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#existsSync%2Ccstring"><span class="Identifier">existsSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1309,6 +1363,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fchmod-procs-all">
 <div id="fchmod,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fchmod%2Ccint%2Ccint%2CT"><span class="Identifier">fchmod</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1327,6 +1385,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fchmodSync-procs-all">
 <div id="fchmodSync,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#fchmodSync%2Ccint%2Ccint"><span class="Identifier">fchmodSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1345,6 +1407,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fchown-procs-all">
 <div id="fchown,cint,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fchown%2Ccint%2Ccint%2Ccint%2CT"><span class="Identifier">fchown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1354,6 +1420,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fchownSync-procs-all">
 <div id="fchownSync,cint,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#fchownSync%2Ccint%2Ccint%2Ccint"><span class="Identifier">fchownSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">,</span> <span class="Identifier">uid</span><span class="Other">,</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1363,6 +1433,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fdatasync-procs-all">
 <div id="fdatasync,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fdatasync%2Ccint%2CT"><span class="Identifier">fdatasync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1372,6 +1446,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fdatasyncSync-procs-all">
 <div id="fdatasyncSync,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#fdatasyncSync%2Ccint"><span class="Identifier">fdatasyncSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1380,6 +1458,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fstat-procs-all">
 <div id="fstat,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fstat%2Ccint%2CT"><span class="Identifier">fstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1389,6 +1471,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="fsync-procs-all">
 <div id="fsync,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#fsync%2Ccint%2CT"><span class="Identifier">fsync</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1398,6 +1484,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="ftruncate-procs-all">
 <div id="ftruncate,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#ftruncate%2Ccint%2CT"><span class="Identifier">ftruncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1416,6 +1506,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="ftruncateSync-procs-all">
 <div id="ftruncateSync,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#ftruncateSync%2Ccint%2Ccint"><span class="Identifier">ftruncateSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1425,6 +1519,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="futimes-procs-all">
 <div id="futimes,cint,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#futimes%2Ccint%2Ccint%2Ccint%2CT"><span class="Identifier">futimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1443,6 +1541,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="futimesSync-procs-all">
 <div id="futimesSync,cint,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#futimesSync%2Ccint%2Ccint%2Ccint"><span class="Identifier">futimesSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1461,6 +1563,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="importFs-procs-all">
 <div id="importFs">
 <dt><pre><span class="Keyword">func</span> <a href="#importFs"><span class="Identifier">importFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as fs from \'fs\'@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1469,6 +1575,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="lchown-procs-all">
 <div id="lchown,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lchown%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">lchown</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1478,6 +1588,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="lchownSync-procs-all">
 <div id="lchownSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#lchownSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">lchownSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">uid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">gid</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1487,6 +1601,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="link-procs-all">
 <div id="link,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#link%2Ccstring%2Ccstring%2CT"><span class="Identifier">link</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">existingPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1496,6 +1614,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="linkSync-procs-all">
 <div id="linkSync,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#linkSync%2Ccstring%2Ccstring"><span class="Identifier">linkSync</span></a><span class="Other">(</span><span class="Identifier">existingPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1505,6 +1627,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="lstat-procs-all">
 <div id="lstat,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lstat%2Ccstring%2CT"><span class="Identifier">lstat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1514,6 +1640,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="lutimes-procs-all">
 <div id="lutimes,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimes%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">lutimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1532,6 +1662,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="lutimesSync-procs-all">
 <div id="lutimesSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#lutimesSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">lutimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1550,6 +1684,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="mkdir-procs-all">
 <div id="mkdir,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#mkdir%2Ccstring%2CT"><span class="Identifier">mkdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1559,6 +1697,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="mkdirSync-procs-all">
 <div id="mkdirSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#mkdirSync%2Ccstring"><span class="Identifier">mkdirSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">recursive</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, {recursive: #})&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1568,6 +1710,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="mkdtemp-procs-all">
 <div id="mkdtemp,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#mkdtemp%2Ccstring%2CT"><span class="Identifier">mkdtemp</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1577,6 +1723,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="mkdtempSync-procs-all">
 <div id="mkdtempSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#mkdtempSync%2Ccstring"><span class="Identifier">mkdtempSync</span></a><span class="Other">(</span><span class="Identifier">prefix</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1586,6 +1736,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="open-procs-all">
 <div id="open,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#open%2Ccstring%2CT"><span class="Identifier">open</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1613,6 +1767,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="opendir-procs-all">
 <div id="opendir,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#opendir%2Ccstring%2CT"><span class="Identifier">opendir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1622,6 +1780,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="openSync-procs-all">
 <div id="openSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#openSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">openSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1640,6 +1802,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="read-procs-all">
 <div id="read,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#read%2Ccint%2CT"><span class="Identifier">read</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1649,6 +1815,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="readdir-procs-all">
 <div id="readdir,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#readdir%2Ccstring%2CT"><span class="Identifier">readdir</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1658,6 +1828,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="readFile-procs-all">
 <div id="readFile,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#readFile%2Ccstring%2CT"><span class="Identifier">readFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1667,6 +1841,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="readFileSync-procs-all">
 <div id="readFileSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#readFileSync%2Ccstring"><span class="Identifier">readFileSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#).toString()&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1676,6 +1854,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="readlink-procs-all">
 <div id="readlink,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#readlink%2Ccstring"><span class="Identifier">readlink</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1694,6 +1876,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="readlinkSync-procs-all">
 <div id="readlinkSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#readlinkSync%2Ccstring"><span class="Identifier">readlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1703,6 +1889,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="realpath-procs-all">
 <div id="realpath,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#realpath%2Ccstring%2CT"><span class="Identifier">realpath</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1712,6 +1902,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="realpathNative-procs-all">
 <div id="realpathNative,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#realpathNative%2Ccstring%2CT"><span class="Identifier">realpathNative</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1721,6 +1915,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="realpathSync-procs-all">
 <div id="realpathSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#realpathSync%2Ccstring"><span class="Identifier">realpathSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1730,6 +1928,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="realpathSyncNative-procs-all">
 <div id="realpathSyncNative,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#realpathSyncNative%2Ccstring"><span class="Identifier">realpathSyncNative</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1739,6 +1941,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="rename-procs-all">
 <div id="rename,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#rename%2Ccstring%2Ccstring%2CT"><span class="Identifier">rename</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">oldPath</span><span class="Other">,</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1748,6 +1954,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="renameSync-procs-all">
 <div id="renameSync,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#renameSync%2Ccstring%2Ccstring"><span class="Identifier">renameSync</span></a><span class="Other">(</span><span class="Identifier">oldPath</span><span class="Other">,</span> <span class="Identifier">newPath</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1757,6 +1967,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireFs-procs-all">
 <div id="requireFs">
 <dt><pre><span class="Keyword">func</span> <a href="#requireFs"><span class="Identifier">requireFs</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const fs = require(\'fs\')@&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1765,6 +1979,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="rm-procs-all">
 <div id="rm,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#rm%2Ccstring%2CT"><span class="Identifier">rm</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1774,6 +1992,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="rmdir-procs-all">
 <div id="rmdir,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#rmdir%2Ccstring"><span class="Identifier">rmdir</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1791,6 +2013,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="rmSync-procs-all">
 <div id="rmSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#rmSync%2Ccstring"><span class="Identifier">rmSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1799,6 +2025,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="stat-procs-all">
 <div id="stat,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#stat%2Ccstring%2CT"><span class="Identifier">stat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1808,6 +2038,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="symlink-procs-all">
 <div id="symlink,cstring,cstring,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#symlink%2Ccstring%2Ccstring%2Ccstring%2CT"><span class="Identifier">symlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1826,6 +2060,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="symlinkSync-procs-all">
 <div id="symlinkSync,cstring,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#symlinkSync%2Ccstring%2Ccstring%2Ccstring"><span class="Identifier">symlinkSync</span></a><span class="Other">(</span><span class="Identifier">target</span><span class="Other">,</span> <span class="Identifier">path</span><span class="Other">,</span> <span class="Identifier">tipe</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1844,6 +2082,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="touchFileSync-procs-all">
 <div id="touchFileSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#touchFileSync%2Ccstring"><span class="Identifier">touchFileSync</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const path = #;
@@ -1861,6 +2103,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="truncate-procs-all">
 <div id="truncate,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#truncate%2Ccstring%2CT"><span class="Identifier">truncate</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1879,6 +2125,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="truncateSync-procs-all">
 <div id="truncateSync,cstring,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#truncateSync%2Ccstring%2Ccint"><span class="Identifier">truncateSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1888,6 +2138,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="unlink-procs-all">
 <div id="unlink,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#unlink%2Ccstring%2CT"><span class="Identifier">unlink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1897,6 +2151,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="unlinkSync-procs-all">
 <div id="unlinkSync,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#unlinkSync%2Ccstring"><span class="Identifier">unlinkSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1905,6 +2163,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="unwatchFile-procs-all">
 <div id="unwatchFile,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#unwatchFile%2Ccstring"><span class="Identifier">unwatchFile</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -1940,6 +2202,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="utimes-procs-all">
 <div id="utimes,cstring,cint,cint,T">
 <dt><pre><span class="Keyword">func</span> <a href="#utimes%2Ccstring%2Ccint%2Ccint%2CT"><span class="Identifier">utimes</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1958,6 +2224,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="utimesSync-procs-all">
 <div id="utimesSync,cstring,cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#utimesSync%2Ccstring%2Ccint%2Ccint"><span class="Identifier">utimesSync</span></a><span class="Other">(</span><span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">atime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">mtime</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1976,6 +2246,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="watch-procs-all">
 <div id="watch,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#watch%2Ccstring%2CT"><span class="Identifier">watch</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">listener</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -1985,6 +2259,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="writeFile-procs-all">
 <div id="writeFile,cint,cstring,T">
 <dt><pre><span class="Keyword">func</span> <a href="#writeFile%2Ccint%2Ccstring%2CT"><span class="Identifier">writeFile</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #, #)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -2003,6 +2281,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="writeFileSync-procs-all">
 <div id="writeFileSync,cint,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#writeFileSync%2Ccint%2Ccstring"><span class="Identifier">writeFileSync</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -2021,6 +2303,10 @@ Convenience func to touch a file.
 
 </dd>
 </div>
+
+</div>
+
+<div id="writeSync-procs-all">
 <div id="writeSync,cint,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#writeSync%2Ccint%2Ccstring"><span class="Identifier">writeSync</span></a><span class="Other">(</span><span class="Identifier">fd</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;fs.$1(#, #)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -2059,10 +2345,14 @@ Convenience func to touch a file.
 </dd>
 </div>
 
+</div>
+
 </dl></div>
 <div class="section" id="18">
 <h1><a class="toc-backref" href="#18">Templates</a></h1>
 <dl class="item">
+
+<div id="withDir-templates-all">
 <div id="withDir.t,cstring,untyped">
 <dt><pre><span class="Keyword">template</span> <a href="#withDir.t%2Ccstring%2Cuntyped"><span class="Identifier">withDir</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
@@ -2070,6 +2360,8 @@ Convenience func to touch a file.
 Same as Fusion <tt class="docutils literal"><span class="pre"><span class="Identifier">withDir</span></span></tt> but for NodeJS, uses <tt class="docutils literal"><span class="pre"><span class="Identifier">__dirname</span></span></tt>.
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -2081,7 +2373,7 @@ Same as Fusion <tt class="docutils literal"><span class="pre"><span class="Ident
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-30 09:17:09 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-30 21:32:14 UTC</small>
       </div>
     </div>
   </div>
