@@ -1,4 +1,4 @@
-## * IndexedDB API for JAvaScript targets.
+## * IndexedDB API for JavaScript targets.
 # Code is from https://github.com/enimatek-nl/tangu
 
 import std/[jsffi, asyncjs, dom]
@@ -69,10 +69,11 @@ proc getAll*(indexedDB: IndexedDB; storeName: cstring): Future[JsObject] =
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
       when not defined(release): echo "upgraded getAll"
     request.onsuccess = proc (event: Event) =
-      let database = request.result
-      let transaction = database.transaction(storeName, "readonly")
-      let obj_store = transaction.objectStore(storeName)
-      let obj_req = obj_store.getAll()
+      let
+        database = request.result
+        transaction = database.transaction(storeName, "readonly")
+        obj_store = transaction.objectStore(storeName)
+        obj_req = obj_store.getAll()
       obj_req.onerror = proc (event: Event) =
         resolve(nil)
       obj_req.onsuccess = proc (event: Event) =
@@ -89,10 +90,11 @@ proc put*(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
       when not defined(release): echo "upgraded put"
     request.onsuccess = proc (event: Event) =
-      let database = request.result
-      let transaction = database.transaction(storeName, "readwrite")
-      let obj_store = transaction.objectStore(storeName)
-      let obj_req = obj_store.put(obj)
+      let
+        database = request.result
+        transaction = database.transaction(storeName, "readwrite")
+        obj_store = transaction.objectStore(storeName)
+        obj_req = obj_store.put(obj)
       obj_req.onerror = proc (event: Event) =
         resolve(false)
       obj_req.onsuccess = proc (event: Event) =
@@ -109,10 +111,11 @@ proc delete*(indexedDB: IndexedDB; storeName, id: cstring): Future[bool] =
       discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
       when not defined(release): echo "upgraded delete"
     request.onsuccess = proc (event: Event) =
-      let database = request.result
-      let transaction = database.transaction(storeName, "readwrite")
-      let obj_store = transaction.objectStore(storeName)
-      let obj_req = obj_store.delete(id)
+      let
+        database = request.result
+        transaction = database.transaction(storeName, "readwrite")
+        obj_store = transaction.objectStore(storeName)
+        obj_req = obj_store.delete(id)
       obj_req.onerror = proc (event: Event) =
         resolve(false)
       obj_req.onsuccess = proc (event: Event) =
