@@ -87,10 +87,12 @@ proc request*(client: JsHttpClient; request: JsRequest): JsResponse =
 
 proc request*(client: JsAsyncHttpClient; request: JsRequest): Future[JsResponse] {.async.} =
   ## Request proc for async `jsfetch` client
-  var req: Request = newRequest(request.url)
-  req.headers = client.headers
+  var
+    req: Request = newRequest(request.url)
+    fetchOptions: FetchOptions = fetchOptionsImpl(request)
+  fetchOptions.headers = client.headers
   let
-    resp = await fetch(req, fetchOptionsImpl(request))
+    resp = await fetch(req, fetchOptions)
     text = await text(resp)
   return response(resp, text)
 
