@@ -41,23 +41,23 @@ type
 
 func newIndexedDB*(): IndexedDB {.importcpp: "(window.indexedDB)".}
 
-func open(self: IndexedDB; dbName: cstring): IDBOpenDBRequest {.importcpp.}
-func open(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest {.importcpp.}
+func open*(self: IndexedDB; dbName: cstring): IDBOpenDBRequest {.importcpp.}
+func open*(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest {.importcpp.}
 
-func transaction(self: IDBDatabase; names: cstring or seq[cstring]): IDBTransaction {.importcpp.}
-func transaction(self: IDBDatabase; names: cstring or seq[cstring]; mode: cstring): IDBTransaction {.importcpp.}
+func transaction*(self: IDBDatabase; names: cstring or seq[cstring]): IDBTransaction {.importcpp.}
+func transaction*(self: IDBDatabase; names: cstring or seq[cstring]; mode: cstring): IDBTransaction {.importcpp.}
 
-func deleteObjectStore(self: IDBDatabase; name: cstring) {.importcpp.}
-func createObjectStore(self: IDBDatabase; name: cstring; options: IDBOptions): IDBObjectStore {.importcpp.}
-func close(self: IDBDatabase) {.importcpp.}
+func deleteObjectStore*(self: IDBDatabase; name: cstring) {.importcpp.}
+func createObjectStore*(self: IDBDatabase; name: cstring; options: IDBOptions): IDBObjectStore {.importcpp.}
+func close*(self: IDBDatabase) {.importcpp.}
 
-func objectStore(self: IDBTransaction; name: cstring): IDBObjectStore {.importcpp.}
+func objectStore*(self: IDBTransaction; name: cstring): IDBObjectStore {.importcpp.}
 
-func add(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
-func get(self: IDBObjectStore; id: cint): IDBRequest {.importcpp.}
-func getAll(self: IDBObjectStore): IDBRequest {.importcpp.}
-func put(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
-func delete(self: IDBObjectStore; key: cstring): IDBRequest {.importcpp.}
+func add*(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
+func get*(self: IDBObjectStore; id: cint): IDBRequest {.importcpp.}
+func getAll*(self: IDBObjectStore): IDBRequest {.importcpp.}
+func put*(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
+func delete*(self: IDBObjectStore; key: cstring): IDBRequest {.importcpp.}
 
 proc getAll*(indexedDB: IndexedDB; storeName: cstring): Future[JsObject] =
   var promise = newPromise() do (resolve: proc(response: JsObject)):
