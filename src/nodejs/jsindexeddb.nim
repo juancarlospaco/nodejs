@@ -4,40 +4,40 @@
 import std/[jsffi, asyncjs, dom]
 
 type
-  IndexedDB {.importc.} = ref object of RootObj
+  IndexedDB* {.importc.} = ref object of RootObj
 
   #IDBTransactionMode = enum
   #  readOnly = "readonly", readWrite = "readwrite", versionChange = "versionchange"
 
-  IDBOptions = ref object of RootObj
-    autoIncrement: bool
-    keyPath: cstring
+  IDBOptions* = ref object of RootObj
+    autoIncrement*: bool
+    keyPath*: cstring
 
-  IDBTransaction {.importc.} = ref object of RootObj
+  IDBTransaction* {.importc.} = ref object of RootObj
     onerror*: proc (event: Event) {.closure.}
     oncomplete*: proc (event: Event) {.closure.}
 
-  IDBDatabase {.importc.} = ref object of RootObj
-    name: cstring
-    version: cint
-    objectStoreNames: seq[cstring]
+  IDBDatabase* {.importc.} = ref object of RootObj
+    name*: cstring
+    version*: cint
+    objectStoreNames*: seq[cstring]
 
-  IDBObjectStore {.importc.} = ref object of RootObj
-    indexNames: seq[cstring]
-    name: cstring
-    transaction: IDBTransaction
-    autoIncrement: bool
+  IDBObjectStore* {.importc.} = ref object of RootObj
+    indexNames*: seq[cstring]
+    name*: cstring
+    transaction*: IDBTransaction
+    autoIncrement*: bool
 
-  IDBRequest {.importc.} = ref object of RootObj
+  IDBRequest* {.importc.} = ref object of RootObj
     onerror*: proc (event: Event) {.closure.}
     onsuccess*: proc (event: Event) {.closure.}
-    result: JsObject
+    result*: JsObject
 
-  IDBOpenDBRequest {.importc.} = ref object of RootObj
+  IDBOpenDBRequest* {.importc.} = ref object of RootObj
     onerror*: proc (event: Event) {.closure.}
     onsuccess*: proc (event: Event) {.closure.}
     onupgradeneeded*: proc (event: Event) {.closure.}
-    result: IDBDatabase
+    result*: IDBDatabase
 
 func newIndexedDB*(): IndexedDB {.importcpp: "(window.indexedDB)".}
 
