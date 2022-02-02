@@ -4,7 +4,8 @@ when not defined(js):
   {.fatal: "Module jshttpclient is designed to be used with the JavaScript backend.".}
 
 import
-  std/[asyncjs, jsheaders, jsfetch, httpcore, uri],
+  std/[asyncjs, jsheaders, httpcore, uri],
+  jsfetch,
   jsxmlhttprequest,
   jsmultisync
 
