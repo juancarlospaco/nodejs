@@ -209,6 +209,8 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsdomain: add(self: Domain; emitter: auto)" href="jsdomain.html#add%2CDomain%2Cauto">jsdomain: add(self: Domain; emitter: auto)</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: add(self: IDBObjectStore; value: JsObject): IDBRequest" href="jsindexeddb.html#add%2CIDBObjectStore%2CJsObject">jsindexeddb: add(self: IDBObjectStore; value: JsObject): IDBRequest</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jssets: add(this: JsSet; value: JsObject)" href="jssets.html#add%2CJsSet%2CJsObject">jssets: add(this: JsSet; value: JsObject)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jstemporal: add(self: TemporalInstant; duration: cstring or JsObject or TemporalDuration): TemporalInstant" href="jstemporal.html#add%2CTemporalInstant%2C">jstemporal: add(self: TemporalInstant; duration: cstring or JsObject or TemporalDuration): TemporalInstant</a></li>
@@ -821,6 +823,8 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jshttp2: close[T](self: Http2Stream; code: cint; callback: T)" href="jshttp2.html#close%2CHttp2Stream%2Ccint%2CT">jshttp2: close[T](self: Http2Stream; code: cint; callback: T)</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: close(self: IDBDatabase)" href="jsindexeddb.html#close%2CIDBDatabase">jsindexeddb: close(self: IDBDatabase)</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jsinspector: close(): cstring" href="jsinspector.html#close">jsinspector: close(): cstring</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsreadline: close(self: Readline)" href="jsreadline.html#close%2CReadline">jsreadline: close(self: Readline)</a></li>
@@ -956,6 +960,10 @@ window.addEventListener('DOMContentLoaded', main);
 <dt><a name="crc32" href="#crc32"><span>crc32:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jscrc: crc32(input: var string)" href="jscrc.html#crc32%2Cstring">jscrc: crc32(input: var string)</a></li>
+          </ul></dd>
+<dt><a name="createObjectStore" href="#createObjectStore"><span>createObjectStore:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: createObjectStore(self: IDBDatabase; name: cstring; options: IDBOptions): IDBObjectStore" href="jsindexeddb.html#createObjectStore%2CIDBDatabase%2Ccstring%2CIDBOptions">jsindexeddb: createObjectStore(self: IDBDatabase; name: cstring; options: IDBOptions): IDBObjectStore</a></li>
           </ul></dd>
 <dt><a name="createPushResponse" href="#createPushResponse"><span>createPushResponse:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1129,7 +1137,11 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jshttpclient: delete(client: JsHttpClient; url: Uri | string): JsResponse" href="jshttpclient.html#delete%2CJsHttpClient%2C">jshttpclient: delete(client: JsHttpClient; url: Uri | string): JsResponse</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsindexeddb: delete(indexedDB: IndexedDB; storeName, id: cstring): Future[bool]" href="jsindexeddb.html#delete%2CIndexedDB%2Ccstring%2Ccstring">jsindexeddb: delete(indexedDB: IndexedDB; storeName, id: cstring): Future[bool]</a></li>
+          data-doc-search-tag="jsindexeddb: delete(self: IDBObjectStore; key: cstring): IDBRequest" href="jsindexeddb.html#delete%2CIDBObjectStore%2Ccstring">jsindexeddb: delete(self: IDBObjectStore; key: cstring): IDBRequest</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: delete(indexedDB: IndexedDB; storeName, id: cstring;
+       options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[bool]" href="jsindexeddb.html#delete%2CIndexedDB%2Ccstring%2Ccstring">jsindexeddb: delete(indexedDB: IndexedDB; storeName, id: cstring;
+       options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[bool]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jssets: delete(this: JsSet; value: JsObject)" href="jssets.html#delete%2CJsSet%2CJsObject">jssets: delete(this: JsSet; value: JsObject)</a></li>
           <li><a class="reference external"
@@ -1146,6 +1158,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jshttpclient: deleteContent(client: JsHttpClient; url: Uri | string): cstring" href="jshttpclient.html#deleteContent%2CJsHttpClient%2C">jshttpclient: deleteContent(client: JsHttpClient; url: Uri | string): cstring</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jssynchttpclient: deleteContent(self: JsHttpClient; url: Uri | string): cstring" href="jssynchttpclient.html#deleteContent%2CJsHttpClient%2C">jssynchttpclient: deleteContent(self: JsHttpClient; url: Uri | string): cstring</a></li>
+          </ul></dd>
+<dt><a name="deleteObjectStore" href="#deleteObjectStore"><span>deleteObjectStore:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: deleteObjectStore(self: IDBDatabase; name: cstring)" href="jsindexeddb.html#deleteObjectStore%2CIDBDatabase%2Ccstring">jsindexeddb: deleteObjectStore(self: IDBDatabase; name: cstring)</a></li>
           </ul></dd>
 <dt><a name="delimiter" href="#delimiter"><span>delimiter:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1859,13 +1875,21 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jshttpclient: get(client: JsHttpClient; url: Uri | string): JsResponse" href="jshttpclient.html#get%2CJsHttpClient%2C">jshttpclient: get(client: JsHttpClient; url: Uri | string): JsResponse</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: get(self: IDBObjectStore; id: cint): IDBRequest" href="jsindexeddb.html#get%2CIDBObjectStore%2Ccint">jsindexeddb: get(self: IDBObjectStore; id: cint): IDBRequest</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="jstableutils: get[A, B](self: var Table[A, B] | var OrderedTable[A, B]; key, body: untyped)" href="jstableutils.html#get.m%2C%2Cuntyped%2Cuntyped">jstableutils: get[A, B](self: var Table[A, B] | var OrderedTable[A, B]; key, body: untyped)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsurl: get(self: URLSearchParams; name: cstring): cstring" href="jsurl.html#get%2CURLSearchParams%2Ccstring">jsurl: get(self: URLSearchParams; name: cstring): cstring</a></li>
           </ul></dd>
 <dt><a name="getAll" href="#getAll"><span>getAll:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring): Future[JsObject]" href="jsindexeddb.html#getAll%2CIndexedDB%2Ccstring">jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring): Future[JsObject]</a></li>
+          data-doc-search-tag="jsindexeddb: getAll(self: IDBObjectStore): IDBRequest" href="jsindexeddb.html#getAll%2CIDBObjectStore">jsindexeddb: getAll(self: IDBObjectStore): IDBRequest</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring;
+       options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[
+    JsObject]" href="jsindexeddb.html#getAll%2CIndexedDB%2Ccstring">jsindexeddb: getAll(indexedDB: IndexedDB; storeName: cstring;
+       options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[
+    JsObject]</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]" href="jsurl.html#getAll%2CURLSearchParams%2Ccstring">jsurl: getAll(self: URLSearchParams; name: cstring): seq[cstring]</a></li>
           </ul></dd>
@@ -2201,6 +2225,30 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jshttp: httpSTATUS_CODES" href="jshttp.html#httpSTATUS_CODES">jshttp: httpSTATUS_CODES</a></li>
           </ul></dd>
+<dt><a name="IDBDatabase" href="#IDBDatabase"><span>IDBDatabase:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBDatabase" href="jsindexeddb.html#IDBDatabase">jsindexeddb: IDBDatabase</a></li>
+          </ul></dd>
+<dt><a name="IDBObjectStore" href="#IDBObjectStore"><span>IDBObjectStore:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBObjectStore" href="jsindexeddb.html#IDBObjectStore">jsindexeddb: IDBObjectStore</a></li>
+          </ul></dd>
+<dt><a name="IDBOpenDBRequest" href="#IDBOpenDBRequest"><span>IDBOpenDBRequest:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBOpenDBRequest" href="jsindexeddb.html#IDBOpenDBRequest">jsindexeddb: IDBOpenDBRequest</a></li>
+          </ul></dd>
+<dt><a name="IDBOptions" href="#IDBOptions"><span>IDBOptions:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBOptions" href="jsindexeddb.html#IDBOptions">jsindexeddb: IDBOptions</a></li>
+          </ul></dd>
+<dt><a name="IDBRequest" href="#IDBRequest"><span>IDBRequest:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBRequest" href="jsindexeddb.html#IDBRequest">jsindexeddb: IDBRequest</a></li>
+          </ul></dd>
+<dt><a name="IDBTransaction" href="#IDBTransaction"><span>IDBTransaction:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IDBTransaction" href="jsindexeddb.html#IDBTransaction">jsindexeddb: IDBTransaction</a></li>
+          </ul></dd>
 <dt><a name="ifError" href="#ifError"><span>ifError:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsassert: ifError(value: auto)" href="jsassert.html#ifError%2Cauto">jsassert: ifError(value: auto)</a></li>
@@ -2340,6 +2388,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jscore: indentation(s: cstring): cint" href="jscore.html#indentation%2Ccstring">jscore: indentation(s: cstring): cint</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsutils: indentation(s: cstring): cint" href="jsutils.html#indentation%2Ccstring">jsutils: indentation(s: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="IndexedDB" href="#IndexedDB"><span>IndexedDB:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: IndexedDB" href="jsindexeddb.html#IndexedDB">jsindexeddb: IndexedDB</a></li>
           </ul></dd>
 <dt><a name="INFLATE" href="#INFLATE"><span>INFLATE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3461,6 +3513,10 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jsfs: O_APPEND" href="jsfs.html#O_APPEND">jsfs: O_APPEND</a></li>
           </ul></dd>
+<dt><a name="objectStore" href="#objectStore"><span>objectStore:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: objectStore(self: IDBTransaction; name: cstring): IDBObjectStore" href="jsindexeddb.html#objectStore%2CIDBTransaction%2Ccstring">jsindexeddb: objectStore(self: IDBTransaction; name: cstring): IDBObjectStore</a></li>
+          </ul></dd>
 <dt><a name="O_CREAT" href="#O_CREAT"><span>O_CREAT:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsfs: O_CREAT" href="jsfs.html#O_CREAT">jsfs: O_CREAT</a></li>
@@ -3746,6 +3802,10 @@ window.addEventListener('DOMContentLoaded', main);
           data-doc-search-tag="jsfs: open[T](path: cstring; flags: cstring; mode: cstring; callback: T)" href="jsfs.html#open%2Ccstring%2Ccstring%2Ccstring%2CT">jsfs: open[T](path: cstring; flags: cstring; mode: cstring; callback: T)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsfs: open[T](path: cstring; callback: T)" href="jsfs.html#open%2Ccstring%2CT">jsfs: open[T](path: cstring; callback: T)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: open(self: IndexedDB; dbName: cstring): IDBOpenDBRequest" href="jsindexeddb.html#open%2CIndexedDB%2Ccstring">jsindexeddb: open(self: IndexedDB; dbName: cstring): IDBOpenDBRequest</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: open(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest" href="jsindexeddb.html#open%2CIndexedDB%2Ccstring%2Ccint">jsindexeddb: open(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest</a></li>
           <li><a class="reference external"
           data-doc-search-tag="jsinspector: open(): cstring" href="jsinspector.html#open">jsinspector: open(): cstring</a></li>
           <li><a class="reference external"
@@ -4087,7 +4147,11 @@ window.addEventListener('DOMContentLoaded', main);
           <li><a class="reference external"
           data-doc-search-tag="jshttpclient: put(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse" href="jshttpclient.html#put%2CJsHttpClient%2C%2Ccstring">jshttpclient: put(client: JsHttpClient; url: Uri | string; body: cstring = &quot;&quot;): JsResponse</a></li>
           <li><a class="reference external"
-          data-doc-search-tag="jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]" href="jsindexeddb.html#put%2CIndexedDB%2Ccstring%2CJsObject">jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]</a></li>
+          data-doc-search-tag="jsindexeddb: put(self: IDBObjectStore; value: JsObject): IDBRequest" href="jsindexeddb.html#put%2CIDBObjectStore%2CJsObject">jsindexeddb: put(self: IDBObjectStore; value: JsObject): IDBRequest</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject;
+    options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[bool]" href="jsindexeddb.html#put%2CIndexedDB%2Ccstring%2CJsObject">jsindexeddb: put(indexedDB: IndexedDB; storeName: cstring; obj: JsObject;
+    options = IDBOptions(autoIncrement: true, keyPath: &quot;id&quot;)): Future[bool]</a></li>
           </ul></dd>
 <dt><a name="putContent" href="#putContent"><span>putContent:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5671,6 +5735,12 @@ window.addEventListener('DOMContentLoaded', main);
 <li><a class="reference external"
           data-doc-search-tag="jstracing: Tracing" href="jstracing.html#Tracing">jstracing: Tracing</a></li>
           </ul></dd>
+<dt><a name="transaction" href="#transaction"><span>transaction:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: transaction(self: IDBDatabase; names: cstring or seq[cstring]): IDBTransaction" href="jsindexeddb.html#transaction%2CIDBDatabase%2C">jsindexeddb: transaction(self: IDBDatabase; names: cstring or seq[cstring]): IDBTransaction</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="jsindexeddb: transaction(self: IDBDatabase; names: cstring or seq[cstring]; mode: cstring): IDBTransaction" href="jsindexeddb.html#transaction%2CIDBDatabase%2C%2Ccstring">jsindexeddb: transaction(self: IDBDatabase; names: cstring or seq[cstring]; mode: cstring): IDBTransaction</a></li>
+          </ul></dd>
 <dt><a name="transcode" href="#transcode"><span>transcode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="jsbuffer: transcode(self: Buffer; fromEnc: cstring; toEnc: cstring): Buffer" href="jsbuffer.html#transcode%2CBuffer%2Ccstring%2Ccstring">jsbuffer: transcode(self: Buffer; fromEnc: cstring; toEnc: cstring): Buffer</a></li>
@@ -6406,7 +6476,7 @@ window.addEventListener('DOMContentLoaded', main);
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-30 21:32:47 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-02 09:36:08 UTC</small>
       </div>
     </div>
   </div>
