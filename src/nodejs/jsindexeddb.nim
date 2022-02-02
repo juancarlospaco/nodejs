@@ -59,14 +59,14 @@ func getAll*(self: IDBObjectStore): IDBRequest {.importcpp.}
 func put*(self: IDBObjectStore; value: JsObject): IDBRequest {.importcpp.}
 func delete*(self: IDBObjectStore; key: cstring): IDBRequest {.importcpp.}
 
-proc getAll*(indexedDB: IndexedDB; storeName: cstring): Future[JsObject] =
+proc getAll*(indexedDB: IndexedDB; storeName: cstring, options = IDBOptions(autoIncrement: true, keyPath: "id")): Future[JsObject] =
   var promise = newPromise() do (resolve: proc(response: JsObject)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
       resolve(nil)
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
-      discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
+      discard database.createObjectStore(storeName, options)
       when not defined(release): echo "upgraded getAll"
     request.onsuccess = proc (event: Event) =
       let
@@ -80,14 +80,14 @@ proc getAll*(indexedDB: IndexedDB; storeName: cstring): Future[JsObject] =
         resolve(obj_req.result)
   return promise
 
-proc put*(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool] =
+proc put*(indexedDB: IndexedDB; storeName: cstring; obj: JsObject, options = IDBOptions(autoIncrement: true, keyPath: "id")): Future[bool] =
   var promise = newPromise() do (resolve: proc(response: bool)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
       resolve(false)
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
-      discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
+      discard database.createObjectStore(storeName, options)
       when not defined(release): echo "upgraded put"
     request.onsuccess = proc (event: Event) =
       let
@@ -101,14 +101,14 @@ proc put*(indexedDB: IndexedDB; storeName: cstring; obj: JsObject): Future[bool]
         resolve(true)
   return promise
 
-proc delete*(indexedDB: IndexedDB; storeName, id: cstring): Future[bool] =
+proc delete*(indexedDB: IndexedDB; storeName, id: cstring, options = IDBOptions(autoIncrement: true, keyPath: "id")): Future[bool] =
   var promise = newPromise() do (resolve: proc(response: bool)):
     let request = indexedDB.open(storeName)
     request.onerror = proc (event: Event) =
       resolve(false)
     request.onupgradeneeded = proc (event: Event) =
       let database = request.result
-      discard database.createObjectStore(storeName, IDBOptions(autoIncrement: true, keyPath: "id"))
+      discard database.createObjectStore(storeName, options)
       when not defined(release): echo "upgraded delete"
     request.onsuccess = proc (event: Event) =
       let
