@@ -360,6 +360,8 @@ window.addEventListener('DOMContentLoaded', main);
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="close-procs-all">
 <div id="close">
 <dt><pre><span class="Keyword">func</span> <a href="#close"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#BroadcastChannel"><span class="Identifier">BroadcastChannel</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span>
     <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -369,6 +371,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="getEnvironmentData-procs-all">
 <div id="getEnvironmentData,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#getEnvironmentData%2Cauto"><span class="Identifier">getEnvironmentData</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">auto</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -378,6 +384,10 @@ window.addEventListener('DOMContentLoaded', main);
 
 </dd>
 </div>
+
+</div>
+
+<div id="importCluster-procs-all">
 <div id="importCluster">
 <dt><pre><span class="Keyword">func</span> <a href="#importCluster"><span class="Identifier">importCluster</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;import * as worker_threads from \'worker_threads\'@&quot;</span><span class="Other">,</span>
                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -387,6 +397,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="isMainThread-procs-all">
 <div id="isMainThread">
 <dt><pre><span class="Keyword">func</span> <a href="#isMainThread"><span class="Identifier">isMainThread</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                             <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -396,6 +410,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="markAsUntransferable-procs-all">
 <div id="markAsUntransferable,JsObject">
 <dt><pre><span class="Keyword">func</span> <a href="#markAsUntransferable%2CJsObject"><span class="Identifier">markAsUntransferable</span></a><span class="Other">(</span><span class="Identifier">objct</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1(#)&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -405,6 +423,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="moveMessagePortToContext-procs-all">
 <div id="moveMessagePortToContext,MessagePort,JsObject">
 <dt><pre><span class="Keyword">func</span> <a href="#moveMessagePortToContext%2CMessagePort%2CJsObject"><span class="Identifier">moveMessagePortToContext</span></a><span class="Other">(</span><span class="Identifier">port</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">;</span> <span class="Identifier">contextifiedSandbox</span><span class="Other">:</span> <span class="Identifier">JsObject</span><span class="Other">)</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -414,6 +436,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newBroadcastChannel-procs-all">
 <div id="newBroadcastChannel,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#newBroadcastChannel%2Cauto"><span class="Identifier">newBroadcastChannel</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <a href="jsworker_threads.html#BroadcastChannel"><span class="Identifier">BroadcastChannel</span></a> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new BroadcastChannel(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -423,6 +449,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="newWorker-procs-all">
 <div id="newWorker,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#newWorker%2Ccstring"><span class="Identifier">newWorker</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new Worker(#))&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -441,6 +471,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="on-procs-all">
 <div id="on,MessagePort,T">
 <dt><pre><span class="Keyword">func</span> <a href="#on%2CMessagePort%2CT"><span class="Identifier">on</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.on(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -450,6 +484,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="postMessage-procs-all">
 <div id="postMessage,,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#postMessage%2C%2Cauto"><span class="Identifier">postMessage</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#BroadcastChannel"><span class="Identifier">BroadcastChannel</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">message</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -469,6 +507,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="receiveMessageOnPort-procs-all">
 <div id="receiveMessageOnPort,MessagePort">
 <dt><pre><span class="Keyword">func</span> <a href="#receiveMessageOnPort%2CMessagePort"><span class="Identifier">receiveMessageOnPort</span></a><span class="Other">(</span><span class="Identifier">port</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsObject</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1(#)&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -478,6 +520,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="refs-procs-all">
 <div id="refs">
 <dt><pre><span class="Keyword">func</span> <a href="#refs"><span class="Identifier">refs</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#BroadcastChannel"><span class="Identifier">BroadcastChannel</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.ref()&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -487,6 +533,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">i
 
 </dd>
 </div>
+
+</div>
+
+<div id="requireCluster-procs-all">
 <div id="requireCluster">
 <dt><pre><span class="Keyword">func</span> <a href="#requireCluster"><span class="Identifier">requireCluster</span></a><span class="Other">(</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;const worker_threads = require(\'worker_threads\')@&quot;</span><span class="Other">,</span>
                         <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -496,6 +546,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="setEnvironmentData-procs-all">
 <div id="setEnvironmentData,auto,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#setEnvironmentData%2Cauto%2Cauto"><span class="Identifier">setEnvironmentData</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;worker_threads.$1(#)&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -505,6 +559,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="start-procs-all">
 <div id="start,MessagePort">
 <dt><pre><span class="Keyword">func</span> <a href="#start%2CMessagePort"><span class="Identifier">start</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                 <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -514,6 +572,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="terminate-procs-all">
 <div id="terminate,Worker">
 <dt><pre><span class="Keyword">func</span> <a href="#terminate%2CWorker"><span class="Identifier">terminate</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Future</span><span class="Other">[</span><span class="Identifier">cstring</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.$1()&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -523,6 +585,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 
 </dd>
 </div>
+
+</div>
+
+<div id="unrefs-procs-all">
 <div id="unrefs">
 <dt><pre><span class="Keyword">func</span> <a href="#unrefs"><span class="Identifier">unrefs</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#BroadcastChannel"><span class="Identifier">BroadcastChannel</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">)</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;#.unref()&quot;</span><span class="Other">,</span> <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -533,10 +599,14 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Keyword">c
 </dd>
 </div>
 
+</div>
+
 </dl></div>
 <div class="section" id="18">
 <h1><a class="toc-backref" href="#18">Templates</a></h1>
 <dl class="item">
+
+<div id="onClose-templates-all">
 <div id="onClose.t,MessagePort,">
 <dt><pre><span class="Keyword">template</span> <a href="#onClose.t%2CMessagePort%2C"><span class="Identifier">onClose</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -545,6 +615,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 
 </dd>
 </div>
+
+</div>
+
+<div id="onError-templates-all">
 <div id="onError.t,,">
 <dt><pre><span class="Keyword">template</span> <a href="#onError.t%2C%2C"><span class="Identifier">onError</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -553,6 +627,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 
 </dd>
 </div>
+
+</div>
+
+<div id="onExit-templates-all">
 <div id="onExit.t,,">
 <dt><pre><span class="Keyword">template</span> <a href="#onExit.t%2C%2C"><span class="Identifier">onExit</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -561,6 +639,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 
 </dd>
 </div>
+
+</div>
+
+<div id="onMessage-templates-all">
 <div id="onMessage.t,,">
 <dt><pre><span class="Keyword">template</span> <a href="#onMessage.t%2C%2C"><span class="Identifier">onMessage</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -577,6 +659,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 
 </dd>
 </div>
+
+</div>
+
+<div id="onMessageerror-templates-all">
 <div id="onMessageerror.t,,">
 <dt><pre><span class="Keyword">template</span> <a href="#onMessageerror.t%2C%2C"><span class="Identifier">onMessageerror</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#MessagePort"><span class="Identifier">MessagePort</span></a> <span class="Keyword">or</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -601,6 +687,10 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 
 </dd>
 </div>
+
+</div>
+
+<div id="onOnline-templates-all">
 <div id="onOnline.t,Worker,">
 <dt><pre><span class="Keyword">template</span> <a href="#onOnline.t%2CWorker%2C"><span class="Identifier">onOnline</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="jsworker_threads.html#Worker"><span class="Identifier">Worker</span></a><span class="Other">;</span> <span class="Identifier">callback</span><span class="Other">)</span></pre></dt>
 <dd>
@@ -608,6 +698,8 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
 Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier">self</span><span class="Operator">.</span><span class="Identifier">on</span><span class="Punctuation">(</span><span class="Identifier">event</span> <span class="Operator">=</span> <span class="Identifier">cstring</span><span class="Punctuation">(</span><span class="StringLit">&quot;online&quot;</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">callback</span><span class="Punctuation">)</span></span></tt>.
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -619,7 +711,7 @@ Alias for <tt class="docutils literal"><span class="pre"><span class="Identifier
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-28 23:58:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-11 12:49:01 UTC</small>
       </div>
     </div>
   </div>
