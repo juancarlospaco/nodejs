@@ -102,7 +102,11 @@ window.addEventListener('DOMContentLoaded', main);
   <a class="reference reference-toplevel" href="#17" id="67">Macros</a>
   <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">debugs
-      <li><a class="reference" href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped"
+      <li><a class="reference" href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped%2Cuntyped%2Cuntyped"
+    title="debugs(frequency: static[int];
+       debugBefore, debugInBetween, debugAfter, codeToDebug: untyped)">debugs(frequency: static[int];
+       debugBefore, debugInBetween, debugAfter, codeToDebug: untyped)</a></li>
+  <li><a class="reference" href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped"
     title="debugs(frequency: static[int]; debugInBetween, codeToDebug: untyped)">debugs(frequency: static[int]; debugInBetween, codeToDebug: untyped)</a></li>
 
   </ul>
@@ -166,23 +170,39 @@ window.addEventListener('DOMContentLoaded', main);
   <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">i</span> <span class="Operator">+</span> <span class="Identifier">x</span>
   <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span>
   <span class="Identifier">s</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'x'</span>
-  <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">x</span></pre></p>
+  <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">x</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">src</span><span class="Operator">/</span><span class="Identifier">nodejs</span><span class="Operator">/</span><span class="Identifier">jsdebugutils</span>
+<span class="Identifier">debugs</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="RawData">echo&quot;BEFORE&quot;</span><span class="Punctuation">,</span> <span class="RawData">echo&quot;INBETWEEN&quot;</span><span class="Punctuation">,</span> <span class="RawData">echo&quot;AFTER&quot;</span><span class="Punctuation">:</span>
+    <span class="Keyword">var</span> <span class="Identifier">i</span> <span class="Operator">=</span> <span class="DecNumber">1</span>
+    <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">9</span>
+    <span class="Keyword">var</span> <span class="Identifier">s</span> <span class="Operator">=</span> <span class="StringLit">&quot;a&quot;</span>
+    <span class="Identifier">i</span> <span class="Operator">=</span> <span class="DecNumber">42</span>
+    <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">i</span> <span class="Operator">+</span> <span class="Identifier">x</span>
+    <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span>
+    <span class="Identifier">s</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'x'</span>
+    <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">x</span></pre></p>
   <div class="section" id="17">
 <h1><a class="toc-backref" href="#17">Macros</a></h1>
 <dl class="item">
+<div id="debugs.m,static[int],untyped,untyped,untyped,untyped">
+<dt><pre><span class="Keyword">macro</span> <a href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped%2Cuntyped%2Cuntyped"><span class="Identifier">debugs</span></a><span class="Other">(</span><span class="Identifier">frequency</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span>
+             <span class="Identifier">debugBefore</span><span class="Other">,</span> <span class="Identifier">debugInBetween</span><span class="Other">,</span> <span class="Identifier">debugAfter</span><span class="Other">,</span> <span class="Identifier">codeToDebug</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span></pre></dt>
+<dd>
 
-<div id="debugs-macros-all">
+Same as <tt class="docutils literal"><span class="pre"><span class="Identifier">debugs</span></span></tt> but injects <tt class="docutils literal"><span class="pre"><span class="Identifier">debugBefore</span></span></tt> before <tt class="docutils literal"><span class="pre"><span class="Identifier">codeToDebug</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">debugAfter</span></span></tt> after <tt class="docutils literal"><span class="pre"><span class="Identifier">codeToDebug</span></span></tt>.
+
+</dd>
+</div>
 <div id="debugs.m,static[int],untyped,untyped">
 <dt><pre><span class="Keyword">macro</span> <a href="#debugs.m%2Cstatic%5Bint%5D%2Cuntyped%2Cuntyped"><span class="Identifier">debugs</span></a><span class="Other">(</span><span class="Identifier">frequency</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">debugInBetween</span><span class="Other">,</span> <span class="Identifier">codeToDebug</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span></pre></dt>
 <dd>
 
 Debug helper, injects <tt class="docutils literal"><span class="pre"><span class="Identifier">debugInBetween</span></span></tt> in-between <tt class="docutils literal"><span class="pre"><span class="Identifier">codeToDebug</span></span></tt> with given <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt>, set <tt class="docutils literal"><span class="pre"><span class="Identifier">frequency</span></span></tt> to <tt class="docutils literal"><span class="pre"><span class="DecNumber">0</span></span></tt> to disable debug.<div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-Designed for debugging purposes only, remove after debugging.</div>
+Designed for debugging purposes only.</div>
 
 
 </dd>
-</div>
-
 </div>
 
 </dl></div>
@@ -194,7 +214,7 @@ Designed for debugging purposes only, remove after debugging.</div>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-11 12:48:26 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-13 00:24:51 UTC</small>
       </div>
     </div>
   </div>
