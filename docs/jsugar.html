@@ -327,6 +327,8 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
+
+<div id="anyToCstring-procs-all">
 <div id="anyToCstring,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#anyToCstring%2Cauto"><span class="Identifier">anyToCstring</span></a><span class="Other">(</span><span class="Identifier">thing</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new TextDecoder(\'utf-8\').decode(#))&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -336,6 +338,10 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 </dd>
 </div>
+
+</div>
+
+<div id="currentTimestamp-procs-all">
 <div id="currentTimestamp">
 <dt><pre><span class="Keyword">func</span> <a href="#currentTimestamp"><span class="Identifier">currentTimestamp</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;Math.floor(new Date().getTime() / 1000)&quot;&quot;&quot;</span><span class="Other">,</span>
                                <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -345,6 +351,10 @@ Arrow Function for Nim functions, use <tt class="docutils literal"><span class="
 
 </dd>
 </div>
+
+</div>
+
+<div id="daysBetweenYears-procs-all">
 <div id="daysBetweenYears,Positive,Positive">
 <dt><pre><span class="Keyword">func</span> <a href="#daysBetweenYears%2CPositive%2CPositive"><span class="Identifier">daysBetweenYears</span></a><span class="Other">(</span><span class="Identifier">fromYear</span><span class="Other">,</span> <span class="Identifier">toYear</span><span class="Other">:</span> <span class="Identifier">Positive</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
@@ -359,6 +369,10 @@ Get the number of days between <tt class="docutils literal"><span class="pre"><s
 
 </dd>
 </div>
+
+</div>
+
+<div id="editDistanceAscii-procs-all">
 <div id="editDistanceAscii,cstring,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#editDistanceAscii%2Ccstring%2Ccstring"><span class="Identifier">editDistanceAscii</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const s0 = #;
@@ -397,6 +411,10 @@ Get the number of days between <tt class="docutils literal"><span class="pre"><s
 
 </dd>
 </div>
+
+</div>
+
+<div id="generate2FAcode-procs-all">
 <div id="generate2FAcode">
 <dt><pre><span class="Keyword">func</span> <a href="#generate2FAcode"><span class="Identifier">generate2FAcode</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;parseInt(Math.floor(Math.random() * 1000000).toString().padStart(6, \'0\'))&quot;</span><span class="Other">,</span>
                                <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -406,6 +424,10 @@ Convenience func to generate a valid 2 Factor Authentication code integer.
 
 </dd>
 </div>
+
+</div>
+
+<div id="jsexport-procs-all">
 <div id="jsexport,auto">
 <dt><pre><span class="Keyword">func</span> <a href="#jsexport%2Cauto"><span class="Identifier">jsexport</span></a><span class="Other">(</span><span class="Identifier">symbols</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;export { @ }&quot;</span><span class="Other">,</span> <span class="Identifier">varargs</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -415,6 +437,10 @@ Convenience alias for <tt class="docutils literal"><span class="pre"><span class
 
 </dd>
 </div>
+
+</div>
+
+<div id="nextDays-procs-all">
 <div id="nextDays">
 <dt><pre><span class="Keyword">func</span> <a href="#nextDays"><span class="Identifier">nextDays</span></a><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">JsObject</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...Array(#).keys()].map(days =&gt; new Date(Date.now() + 86400000 * days))&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -424,6 +450,10 @@ Convenience func to create an seq of the next days, inclusive.
 
 </dd>
 </div>
+
+</div>
+
+<div id="nth-procs-all">
 <div id="nth,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#nth%2Ccint"><span class="Identifier">nth</span></a><span class="Other">(</span><span class="Identifier">someOrdinalInteger</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const n = #;
@@ -441,6 +471,10 @@ Convenience func to get string ordinal suffixes from integers (<tt class="docuti
 
 </dd>
 </div>
+
+</div>
+
+<div id="pastDays-procs-all">
 <div id="pastDays">
 <dt><pre><span class="Keyword">func</span> <a href="#pastDays"><span class="Identifier">pastDays</span></a><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">.</span><span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">JsObject</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;[...Array(#).keys()].map(days =&gt; new Date(Date.now() - 86400000 * days))&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -450,6 +484,10 @@ Convenience func to create an seq of the past days, inclusive.
 
 </dd>
 </div>
+
+</div>
+
+<div id="removeAccents-procs-all">
 <div id="removeAccents,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#removeAccents%2Ccstring"><span class="Identifier">removeAccents</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;(#
   .replace(/[\xC0-\xC5]/g, &quot;A&quot;).replace(/[\xC6]/g, &quot;AE&quot;).replace(/[\xC7]/g, &quot;C&quot;)
@@ -466,6 +504,10 @@ Convenience func to replace accented chars (Diacritics) with normal chars (ASCII
 
 </dd>
 </div>
+
+</div>
+
+<div id="shuffle-procs-all">
 <div id="shuffle,openArray[auto]">
 <dt><pre><span class="Keyword">func</span> <a href="#shuffle%2CopenArray%5Bauto%5D"><span class="Identifier">shuffle</span></a><span class="Other">(</span><span class="Identifier">arrai</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">auto</span><span class="Other">]</span><span class="Other">)</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;#.sort(() =&gt; .5 - Math.random())&quot;&quot;&quot;</span><span class="Other">,</span>
                                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -479,6 +521,10 @@ Convenience func to replace accented chars (Diacritics) with normal chars (ASCII
 
 </dd>
 </div>
+
+</div>
+
+<div id="sparkline-procs-all">
 <div id="sparkline,openArray[cint],cint,cint">
 <dt><pre><span class="Keyword">func</span> <a href="#sparkline%2CopenArray%5Bcint%5D%2Ccint%2Ccint"><span class="Identifier">sparkline</span></a><span class="Other">(</span><span class="Identifier">numbers</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">cint</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">minimum</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">maximum</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">asmNoStackFrame</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -488,6 +534,10 @@ Convenience func to generate &quot;Sparklines&quot; loading spinners from number
 
 </dd>
 </div>
+
+</div>
+
+<div id="suffixAmPm-procs-all">
 <div id="suffixAmPm,SomeInteger">
 <dt><pre><span class="Keyword">func</span> <a href="#suffixAmPm%2CSomeInteger"><span class="Identifier">suffixAmPm</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">SomeInteger</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  ((h = Math.abs(#)) =&gt; `$${h % 12 === 0 ? 12 : h % 12}$${h &lt; 12 ? 'am' : 'pm'}`)()&quot;&quot;&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -504,6 +554,10 @@ Convenience func to generate &quot;Sparklines&quot; loading spinners from number
 
 </dd>
 </div>
+
+</div>
+
+<div id="toHex-procs-all">
 <div id="toHex,array[,cint]">
 <dt><pre><span class="Keyword">func</span> <a href="#toHex%2Carray%5B%2Ccint%5D"><span class="Identifier">toHex</span></a><span class="Other">(</span><span class="Identifier">color</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">cint</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const n = #; return ((n[2] | n[1] &lt;&lt; 8 | n[0] &lt;&lt; 16) | 1 &lt;&lt; 24).toString(16).slice(1); })()&quot;&quot;&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -513,6 +567,10 @@ Convenience func to convert a RGB integer array to 6 digit Hexadecimal string.
 
 </dd>
 </div>
+
+</div>
+
+<div id="toRGB-procs-all">
 <div id="toRGB,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#toRGB%2Ccstring"><span class="Identifier">toRGB</span></a><span class="Other">(</span><span class="Identifier">color</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">cint</span><span class="Other">]</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; { const n = parseInt(#, 16); return [n &gt;&gt; 16, n &gt;&gt; 8 &amp; 255, n &amp; 255] })()&quot;&quot;&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -522,6 +580,10 @@ Convenience func to convert a 6 digit Hexadecimal string value to an RGB integer
 
 </dd>
 </div>
+
+</div>
+
+<div id="uuid1validate-procs-all">
 <div id="uuid1validate,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#uuid1validate%2Ccstring"><span class="Identifier">uuid1validate</span></a><span class="Other">(</span><span class="Identifier">uuidv1</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const UUID_RE1 = new RegExp(&quot;^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$&quot;, &quot;i&quot;);
@@ -534,6 +596,10 @@ Convenience func to validate 1 UUID v1 string.
 
 </dd>
 </div>
+
+</div>
+
+<div id="uuid4validate-procs-all">
 <div id="uuid4validate,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#uuid4validate%2Ccstring"><span class="Identifier">uuid4validate</span></a><span class="Other">(</span><span class="Identifier">uuidv4</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const UUID_RE4 = new RegExp(&quot;^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$&quot;, &quot;i&quot;);
@@ -546,6 +612,10 @@ Convenience func to validate 1 UUID v4 string.
 
 </dd>
 </div>
+
+</div>
+
+<div id="uuid5validate-procs-all">
 <div id="uuid5validate,cstring">
 <dt><pre><span class="Keyword">func</span> <a href="#uuid5validate%2Ccstring"><span class="Identifier">uuid5validate</span></a><span class="Other">(</span><span class="Identifier">uuidv5</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;&quot;&quot;  (() =&gt; {
     const UUID_RE5 = /^[0-9a-f]{8}-[0-9a-f]{4}-[5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$$/i;
@@ -559,10 +629,14 @@ Convenience func to validate 1 UUID v5 string.
 </dd>
 </div>
 
+</div>
+
 </dl></div>
 <div class="section" id="15">
 <h1><a class="toc-backref" href="#15">Iterators</a></h1>
 <dl class="item">
+
+<div id="backoff-iterators-all">
 <div id="backoff.i,T,T,T">
 <dt><pre><span class="Keyword">iterator</span> <a href="#backoff.i%2CT%2CT%2CT"><span class="Identifier">backoff</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <span class="Identifier">SomeNumber</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">factor</span><span class="Other">:</span> <span class="Identifier">T</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
@@ -581,10 +655,14 @@ Convenience func to validate 1 UUID v5 string.
 </dd>
 </div>
 
+</div>
+
 </dl></div>
 <div class="section" id="18">
 <h1><a class="toc-backref" href="#18">Templates</a></h1>
 <dl class="item">
+
+<div id="::=-templates-all">
 <div id="::=.t,untyped,auto">
 <dt><pre><span class="Keyword">template</span> <a href="#%3A%3A%3D.t%2Cuntyped%2Cauto"><span class="Identifier">`::=`</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">auto</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
@@ -593,6 +671,10 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
 
 </dd>
 </div>
+
+</div>
+
+<div id="iife-templates-all">
 <div id="iife.t,untyped">
 <dt><pre><span class="Keyword">template</span> <a href="#iife.t%2Cuntyped"><span class="Identifier">iife</span></a><span class="Other">(</span><span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span></pre></dt>
 <dd>
@@ -600,6 +682,8 @@ Convenience template for a JavaScript <tt class="docutils literal"><span class="
 Convenience template for Anonymous Immediately Invoked Function Expressions.
 
 </dd>
+</div>
+
 </div>
 
 </dl></div>
@@ -611,7 +695,7 @@ Convenience template for Anonymous Immediately Invoked Function Expressions.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-13 00:25:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-14 21:37:51 UTC</small>
       </div>
     </div>
   </div>
