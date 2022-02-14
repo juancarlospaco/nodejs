@@ -578,6 +578,4 @@ See also:
 
 ![](https://starchart.cc/juancarlospaco/nodejs.svg)
 
-
-[ :arrow_up: Go to the top](#nodejs-standard-library-for-nim)
 :star: [@juancarlospaco](https://github.com/juancarlospaco)
