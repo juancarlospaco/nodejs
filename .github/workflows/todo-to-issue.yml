@@ -8,3 +8,5 @@ jobs:
       - name: "TODO to Issue"
         uses: "alstr/todo-to-issue-action@v4.6"
         id: "todo"
+        with:
+          AUTO_ASSIGN: true
