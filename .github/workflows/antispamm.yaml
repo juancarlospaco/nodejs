@@ -13,9 +13,3 @@ jobs:
         uses: actions/github-script@v5
         with:
           script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
-
-
-      - uses: actions/first-interaction@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-message: "Welcome new contributor!, we will review your contributions soon, and likely merge it!."
