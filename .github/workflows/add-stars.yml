@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Add Stars to Readme
       run: |
-        echo -e ":star: [@${{github.actor}}](https://github.com/${{github.actor}})" >> README.md
+        echo -e ":star: [@${{github.actor}}](https://github.com/${{github.actor}} '`date --iso-8601`')\t" >> README.md
 
     - name: Commit changes
       uses: elstudio/actions-js-build/commit@v2
