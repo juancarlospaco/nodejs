@@ -578,5 +578,4 @@ See also:
 
 ![](https://starchart.cc/juancarlospaco/nodejs.svg)
 
-:star: [@juancarlospaco](https://github.com/juancarlospaco)
 :star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')	
