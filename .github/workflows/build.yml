@@ -16,10 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         platform:     [ubuntu-latest, windows-latest]
-        architecture: ["x64", "x86"]
         node:         [12, 13, 14, 15, 16, 17]
         nim-channel:  [stable, devel]
-    name: ${{ matrix.platform }}-${{ matrix.architecture }}-${{ matrix.node }}-${{ matrix.nim-channel }}
+    name: ${{ matrix.platform }}-${{ matrix.node }}-${{ matrix.nim-channel }}
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
