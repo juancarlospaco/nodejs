@@ -10,16 +10,6 @@ body:
     value: |
       Thanks for taking the time to fill out this bug report!
 
-- type: textarea
-  id: what-happened
-  attributes:
-    label: What happened?
-    description: Also tell us, what did you expect to happen?
-    placeholder: Tell us what you see!
-    value: "A bug happened!"
-  validations:
-    required: true
-
 - type: dropdown
   id: architecture
   attributes:
@@ -354,8 +344,18 @@ body:
     required: true
 
 - type: textarea
+  id: what-happened
+  attributes:
+    label: What happened?
+    description: Use DETAILED DESCRIPTIVE information about the problem
+    placeholder: Bug reports with full repro code and detailed information will be fixed faster.
+  validations:
+    required: true
+
+- type: textarea
   id: logs
   attributes:
     label: Standard Output Logs
     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+    placeholder: Bug reports with full repro code and detailed information will be fixed faster.
     render: shell
