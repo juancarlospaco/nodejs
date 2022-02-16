@@ -39,7 +39,7 @@ body:
 - type: dropdown
   id: os
   attributes:
-    label: Architecture
+    label: Operating System
     description: What is your Operating System?.
     options:
       - Linux
@@ -126,7 +126,7 @@ body:
 - type: dropdown
   id: browser
   attributes:
-    label: What is your main web browser?
+    label: What is your web browser?
     options:
       - Chrome/Chromium
       - Firefox/Firefox Fork
