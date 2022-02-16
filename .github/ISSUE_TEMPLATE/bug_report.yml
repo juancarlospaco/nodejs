@@ -102,7 +102,7 @@ body:
     label: Internet Connection
     description: What is your Internet connection?.
     options:
-      - Optic Fiber (Fast)
+      - Optical Fiber (very fast)
       - DSL (aDSL, DSL, etc)
       - Wifi (WLAN, Wireless)
       - LAN (RJ45, Local, etc)
