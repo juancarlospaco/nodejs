@@ -367,7 +367,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      **Before you open a new bug...***
+      **Before you open a new bug...**
       - 32-Bit is NOT supported.
       - Windows older than Windows 10 is NOT supported.
       - Mac OSX support is Experimental.
