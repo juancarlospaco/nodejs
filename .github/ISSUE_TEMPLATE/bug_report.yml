@@ -4,6 +4,7 @@ title:       "[bug] "
 labels:      ["bug", "unconfirmed"]
 assignees:   ["juancarlospaco"]
 body:
+
 - type: markdown
   attributes:
     value: |
@@ -31,6 +32,107 @@ body:
       - ARM_32 (32Bit)
       - AVR (Arduino, ESP32)
       - RISC (RISC-V)
+      - Others (Unkown)
+  validations:
+    required: true
+
+- type: dropdown
+    id: os
+    attributes:
+      label: Architecture
+      description: What is your Operating System?.
+      options:
+        - Linux
+        - Windows
+        - Mac OSX
+        - Android
+        - BSD
+        - FreeDOS
+        - ReactOS
+        - Others (Unkown)
+    validations:
+      required: true
+
+- type: dropdown
+  id: disk
+  attributes:
+    label: Disk
+    description: What is your main Disk Storage?.
+    options:
+      - SSD (Solid)
+      - HDD (SATA, IDE, Mechanical)
+      - NVME (M2, MSATA)
+      - Others (USB)
+  validations:
+    required: true
+
+- type: dropdown
+  id: ram
+  attributes:
+    label: Memory
+    description: What is your total RAM Memory capacity?.
+    options:
+      - 1 Gigabytes
+      - 2 Gigabytes
+      - 4 Gigabytes
+      - 8 Gigabytes
+      - 16 Gigabytes
+      - 32 Gigabytes
+      - 64 Gigabytes
+      - 128 Gigabytes
+      - 256 Gigabytes
+      - 512 Gigabytes
+      - Others (Unkown)
+  validations:
+    required: true
+
+- type: dropdown
+  id: cores
+  attributes:
+    label: CPU Cores
+    description: What is your total CPU Cores count?.
+    options:
+      - 1 CPU Cores
+      - 2 CPU Cores
+      - 4 CPU Cores
+      - 8 CPU Cores
+      - 16 CPU Cores
+      - 32 CPU Cores
+      - 64 CPU Cores
+      - 128 CPU Cores
+      - 256 CPU Cores
+      - 512 CPU Cores
+      - Others (Unkown)
+  validations:
+    required: true
+
+- type: dropdown
+  id: internet
+  attributes:
+    label: Internet Connection
+    description: What is your Internet connection?.
+    options:
+      - Optic Fiber (Fast)
+      - DSL (aDSL, DSL, etc)
+      - Wifi (WLAN, Wireless)
+      - LAN (RJ45, Local, etc)
+      - Satellite (StarLink, etc)
+      - Mobile (4G, 3G, Edge, etc)
+      - Offline (No Internet)
+      - Others (Unkown)
+  validations:
+    required: true
+
+- type: dropdown
+  id: browser
+  attributes:
+    label: What is your main web browser?
+    options:
+      - Chrome/Chromium
+      - Firefox/Firefox Fork
+      - Apple Safari
+      - Microsoft Edge
+      - KDE (Konqueror, Falkon, etc)
       - Others (Unkown)
   validations:
     required: true
