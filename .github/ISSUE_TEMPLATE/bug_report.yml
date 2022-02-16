@@ -1,5 +1,5 @@
-name:        BUG Report
-description: Fill the Bug report :bug:
+name:        "BUG Report"
+description: "Fill the Bug report :bug:"
 title:       "[bug] "
 labels:      ["bug", "unconfirmed"]
 assignees:   ["juancarlospaco"]
