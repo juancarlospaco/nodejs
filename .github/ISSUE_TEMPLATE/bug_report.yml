@@ -1,5 +1,5 @@
 name:        "BUG Report"
-description: "Fill the Bug report :bug:"
+description: "Create a new Bug report."
 title:       "[bug] "
 labels:      ["unconfirmed"]
 assignees:   ["juancarlospaco"]
@@ -145,10 +145,11 @@ body:
       - Arduino/ESP32 Kit
       - SmartTV/SmartDisplay
       - Drone/Robot
-      - Car/Self-Driving/On-Board Computer
       - ASIC/FPGA/Crypto-mining hardware
       - PLC/Industrial/heavy machine
       - Point Of Sale/Kiosk/ATM
+      - Car/Self-Driving/On-Board Computer
+      - Electric scooter/Electric bike
       - Satellite/MicroSatellite
       - Military machine
       - Others (Unkown)
