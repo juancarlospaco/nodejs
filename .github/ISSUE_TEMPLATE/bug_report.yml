@@ -37,21 +37,21 @@ body:
     required: true
 
 - type: dropdown
-    id: os
-    attributes:
-      label: Architecture
-      description: What is your Operating System?.
-      options:
-        - Linux
-        - Windows
-        - Mac OSX
-        - Android
-        - BSD
-        - FreeDOS
-        - ReactOS
-        - Others (Unkown)
-    validations:
-      required: true
+  id: os
+  attributes:
+    label: Architecture
+    description: What is your Operating System?.
+    options:
+      - Linux
+      - Windows
+      - Mac OSX
+      - Android
+      - BSD
+      - FreeDOS
+      - ReactOS
+      - Others (Unkown)
+  validations:
+    required: true
 
 - type: dropdown
   id: disk
