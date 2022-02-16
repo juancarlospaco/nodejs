@@ -4,365 +4,355 @@ title:       "[bug] "
 labels:      ["bug", "unconfirmed"]
 assignees:   ["juancarlospaco"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+- type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to fill out this bug report!
+- type: textarea
+  id: what-happened
+  attributes:
+    label: What happened?
+    description: Also tell us, what did you expect to happen?
+    placeholder: Tell us what you see!
+    value: "A bug happened!"
+  validations:
+    required: true
+- type: dropdown
+  id: architecture
+  attributes:
+    label: Architecture
+    description: What is your Hardware Architecture?.
+    options:
+      - x86_64 (Default)
+      - x86_32 (32Bit)
+      - ARM_64 (64Bit)
+      - ARM_32 (32Bit)
+      - AVR (Arduino, ESP32)
+      - RISC (RISC-V)
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: os
+  attributes:
+    label: Architecture
+    description: What is your Operating System?.
+    options:
+      - Linux
+      - Windows
+      - Mac OSX
+      - Android
+      - BSD
+      - FreeDOS
+      - ReactOS
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: disk
+  attributes:
+    label: Disk
+    description: What is your main Disk Storage?.
+    options:
+      - SSD (Solid)
+      - HDD (SATA, IDE, Mechanical)
+      - NVME (M2, MSATA)
+      - Others (USB)
+  validations:
+    required: true
+- type: dropdown
+  id: ram
+  attributes:
+    label: Memory
+    description: What is your total RAM Memory capacity?.
+    options:
+      - 1 Gigabytes
+      - 2 Gigabytes
+      - 4 Gigabytes
+      - 8 Gigabytes
+      - 16 Gigabytes
+      - 32 Gigabytes
+      - 64 Gigabytes
+      - 128 Gigabytes
+      - 256 Gigabytes
+      - 512 Gigabytes
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: cores
+  attributes:
+    label: CPU Cores
+    description: What is your total CPU Cores count?.
+    options:
+      - 1 CPU Cores
+      - 2 CPU Cores
+      - 4 CPU Cores
+      - 8 CPU Cores
+      - 16 CPU Cores
+      - 32 CPU Cores
+      - 64 CPU Cores
+      - 128 CPU Cores
+      - 256 CPU Cores
+      - 512 CPU Cores
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: internet
+  attributes:
+    label: Internet Connection
+    description: What is your Internet connection?.
+    options:
+      - Optic Fiber (Fast)
+      - DSL (aDSL, DSL, etc)
+      - Wifi (WLAN, Wireless)
+      - LAN (RJ45, Local, etc)
+      - Satellite (StarLink, etc)
+      - Mobile (4G, 3G, Edge, etc)
+      - Offline (No Internet)
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: browser
+  attributes:
+    label: What is your main web browser?
+    options:
+      - Chrome/Chromium
+      - Firefox/Firefox Fork
+      - Apple Safari
+      - Microsoft Edge
+      - KDE (Konqueror, Falkon, etc)
+      - Others (Unkown)
+  validations:
+    required: true
+- type: dropdown
+  id: country
+  attributes:
+    label: What is your Country?
+    options:
+      - Afghanistan
+      - Albania
+      - Algeria
+      - Andorra
+      - Angola
+      - Antigua
+      - Argentina
+      - Armenia
+      - Australia
+      - Austria
+      - Azerbaijan
+      - Bahamas
+      - Bahrain
+      - Bangladesh
+      - Barbados
+      - Belarus
+      - Belgium
+      - Belize
+      - Benin
+      - Bhutan
+      - Bolivia
+      - Bosnia Herzegovina
+      - Botswana
+      - Brazil
+      - Brunei
+      - Bulgaria
+      - Burkina
+      - Burundi
+      - Cambodia
+      - Cameroon
+      - Canada
+      - Cape Verde
+      - Central African Republic
+      - Chad
+      - Chile
+      - China
+      - Colombia
+      - Comoros
+      - Congo
+      - Congo Democratic Republic
+      - Costa Rica
+      - Croatia
+      - Cuba
+      - Curacao
+      - Cyprus
+      - Czech Republic
+      - Denmark
+      - Djibouti
+      - Dominica
+      - Dominican Republic
+      - East Timor
+      - Ecuador
+      - Egypt
+      - El Salvador
+      - Equatorial Guinea
+      - Eritrea
+      - Estonia
+      - Ethiopia
+      - Fiji
+      - Finland
+      - France
+      - Gabon
+      - Gambia
+      - Georgia
+      - Germany
+      - Ghana
+      - Greece
+      - Grenada
+      - Guatemala
+      - Guinea
+      - Guinea-Bissau
+      - Guyana
+      - Haiti
+      - Honduras
+      - Hungary
+      - Iceland
+      - India
+      - Indonesia
+      - Iran
+      - Iraq
+      - Ireland
+      - Israel
+      - Italy
+      - Ivory Coast
+      - Jamaica
+      - Japan
+      - Jordan
+      - Kazakhstan
+      - Kenya
+      - Kiribati
+      - Korea North
+      - Korea South
+      - Kosovo
+      - Kuwait
+      - Kyrgyzstan
+      - Laos
+      - Latvia
+      - Lebanon
+      - Lesotho
+      - Liberia
+      - Libya
+      - Liechtenstein
+      - Lithuania
+      - Luxembourg
+      - Macedonia
+      - Madagascar
+      - Malawi
+      - Malaysia
+      - Maldives
+      - Mali
+      - Malta
+      - Marshall Islands
+      - Mauritania
+      - Mauritius
+      - Mexico
+      - Micronesia
+      - Moldova
+      - Monaco
+      - Mongolia
+      - Montenegro
+      - Morocco
+      - Mozambique
+      - Myanmar
+      - Namibia
+      - Nauru
+      - Nepal
+      - Netherlands
+      - New Zealand
+      - Nicaragua
+      - Niger
+      - Nigeria
+      - Norway
+      - Oman
+      - Pakistan
+      - Palau
+      - Palestine
+      - Panama
+      - Papua New Guinea
+      - Paraguay
+      - Peru
+      - Philippines
+      - Poland
+      - Portugal
+      - Qatar
+      - Romania
+      - Russia
+      - Rwanda
+      - St Kitts
+      - St Lucia
+      - Saint Vincent
+      - Samoa
+      - San Marino
+      - Sao Tome Principe
+      - Saudi Arabia
+      - Senegal
+      - Scotland
+      - Serbia
+      - Seychelles
+      - Sierra Leone
+      - Singapore
+      - Slovakia
+      - Slovenia
+      - Solomon Islands
+      - Somalia
+      - South Africa
+      - South Sudan
+      - Spain
+      - Sri Lanka
+      - Sudan
+      - Suriname
+      - Swaziland
+      - Sweden
+      - Switzerland
+      - Syria
+      - Taiwan
+      - Tajikistan
+      - Tanzania
+      - Thailand
+      - Togo
+      - Tonga
+      - Trinidad Tobago
+      - Tunisia
+      - Turkey
+      - Turkmenistan
+      - Tuvalu
+      - Uganda
+      - Ukraine
+      - United Arab Emirates
+      - United Kingdom
+      - United States
+      - Uruguay
+      - Uzbekistan
+      - Vanuatu
+      - Vatican City
+      - Venezuela
+      - Vietnam
+      - Yemen
+      - Zambia
+      - Zimbabwe
 
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
+- type: textarea
+  id: logs
+  attributes:
+    label: Log output
+    description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+    render: shell
 
-  - type: dropdown
-    id: architecture
-    attributes:
-      label: Architecture
-      description: What is your Hardware Architecture?.
-      options:
-        - x86_64 (Default)
-        - x86_32 (32Bit)
-        - ARM_64 (64Bit)
-        - ARM_32 (32Bit)
-        - AVR (Arduino, ESP32)
-        - RISC (RISC-V)
-        - Others (Unkown)
-    validations:
-      required: true
+ - type: checkboxes
+  id: virtualmachine
+  attributes:
+    label: Virtual Machine
+    description: It is a Virtual Machine or Container (Docker, VirtualBox, Qemu, VMware, Vagrant, etc) ?.
+    options:
+      - label: Virtual Machine or Container
+        required: false
 
-  - type: dropdown
-    id: os
-    attributes:
-      label: Architecture
-      description: What is your Operating System?.
-      options:
-        - Linux
-        - Windows
-        - Mac OSX
-        - Android
-        - BSD
-        - FreeDOS
-        - ReactOS
-        - Others (Unkown)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: disk
-    attributes:
-      label: Disk
-      description: What is your main Disk Storage?.
-      options:
-        - SSD (Solid)
-        - HDD (SATA, IDE, Mechanical)
-        - NVME (M2, MSATA)
-        - Others (USB)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: ram
-    attributes:
-      label: Memory
-      description: What is your total RAM Memory capacity?.
-      options:
-        - 1 Gigabytes
-        - 2 Gigabytes
-        - 4 Gigabytes
-        - 8 Gigabytes
-        - 16 Gigabytes
-        - 32 Gigabytes
-        - 64 Gigabytes
-        - 128 Gigabytes
-        - 256 Gigabytes
-        - 512 Gigabytes
-        - Others (Unkown)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: cores
-    attributes:
-      label: CPU Cores
-      description: What is your total CPU Cores count?.
-      options:
-        - 1 CPU Cores
-        - 2 CPU Cores
-        - 4 CPU Cores
-        - 8 CPU Cores
-        - 16 CPU Cores
-        - 32 CPU Cores
-        - 64 CPU Cores
-        - 128 CPU Cores
-        - 256 CPU Cores
-        - 512 CPU Cores
-        - Others (Unkown)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: internet
-    attributes:
-      label: Internet Connection
-      description: What is your Internet connection?.
-      options:
-        - Optic Fiber (Fast)
-        - DSL (aDSL, DSL, etc)
-        - Wifi (WLAN, Wireless)
-        - LAN (RJ45, Local, etc)
-        - Satellite (StarLink, etc)
-        - Mobile (4G, 3G, Edge, etc)
-        - Offline (No Internet)
-        - Others (Unkown)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: browser
-    attributes:
-      label: What is your main web browser?
-      options:
-        - Chrome/Chromium
-        - Firefox/Firefox Fork
-        - Apple Safari
-        - Microsoft Edge
-        - KDE (Konqueror, Falkon, etc)
-        - Others (Unkown)
-    validations:
-      required: true
-
-  - type: dropdown
-    id: country
-    attributes:
-      label: What is your Country?
-      options:
-        - Afghanistan
-        - Albania
-        - Algeria
-        - Andorra
-        - Angola
-        - Antigua
-        - Argentina
-        - Armenia
-        - Australia
-        - Austria
-        - Azerbaijan
-        - Bahamas
-        - Bahrain
-        - Bangladesh
-        - Barbados
-        - Belarus
-        - Belgium
-        - Belize
-        - Benin
-        - Bhutan
-        - Bolivia
-        - Bosnia Herzegovina
-        - Botswana
-        - Brazil
-        - Brunei
-        - Bulgaria
-        - Burkina
-        - Burundi
-        - Cambodia
-        - Cameroon
-        - Canada
-        - Cape Verde
-        - Central African Republic
-        - Chad
-        - Chile
-        - China
-        - Colombia
-        - Comoros
-        - Congo
-        - Congo Democratic Republic
-        - Costa Rica
-        - Croatia
-        - Cuba
-        - Curacao
-        - Cyprus
-        - Czech Republic
-        - Denmark
-        - Djibouti
-        - Dominica
-        - Dominican Republic
-        - East Timor
-        - Ecuador
-        - Egypt
-        - El Salvador
-        - Equatorial Guinea
-        - Eritrea
-        - Estonia
-        - Ethiopia
-        - Fiji
-        - Finland
-        - France
-        - Gabon
-        - Gambia
-        - Georgia
-        - Germany
-        - Ghana
-        - Greece
-        - Grenada
-        - Guatemala
-        - Guinea
-        - Guinea-Bissau
-        - Guyana
-        - Haiti
-        - Honduras
-        - Hungary
-        - Iceland
-        - India
-        - Indonesia
-        - Iran
-        - Iraq
-        - Ireland
-        - Israel
-        - Italy
-        - Ivory Coast
-        - Jamaica
-        - Japan
-        - Jordan
-        - Kazakhstan
-        - Kenya
-        - Kiribati
-        - Korea North
-        - Korea South
-        - Kosovo
-        - Kuwait
-        - Kyrgyzstan
-        - Laos
-        - Latvia
-        - Lebanon
-        - Lesotho
-        - Liberia
-        - Libya
-        - Liechtenstein
-        - Lithuania
-        - Luxembourg
-        - Macedonia
-        - Madagascar
-        - Malawi
-        - Malaysia
-        - Maldives
-        - Mali
-        - Malta
-        - Marshall Islands
-        - Mauritania
-        - Mauritius
-        - Mexico
-        - Micronesia
-        - Moldova
-        - Monaco
-        - Mongolia
-        - Montenegro
-        - Morocco
-        - Mozambique
-        - Myanmar
-        - Namibia
-        - Nauru
-        - Nepal
-        - Netherlands
-        - New Zealand
-        - Nicaragua
-        - Niger
-        - Nigeria
-        - Norway
-        - Oman
-        - Pakistan
-        - Palau
-        - Palestine
-        - Panama
-        - Papua New Guinea
-        - Paraguay
-        - Peru
-        - Philippines
-        - Poland
-        - Portugal
-        - Qatar
-        - Romania
-        - Russia
-        - Rwanda
-        - St Kitts
-        - St Lucia
-        - Saint Vincent
-        - Samoa
-        - San Marino
-        - Sao Tome Principe
-        - Saudi Arabia
-        - Senegal
-        - Scotland
-        - Serbia
-        - Seychelles
-        - Sierra Leone
-        - Singapore
-        - Slovakia
-        - Slovenia
-        - Solomon Islands
-        - Somalia
-        - South Africa
-        - South Sudan
-        - Spain
-        - Sri Lanka
-        - Sudan
-        - Suriname
-        - Swaziland
-        - Sweden
-        - Switzerland
-        - Syria
-        - Taiwan
-        - Tajikistan
-        - Tanzania
-        - Thailand
-        - Togo
-        - Tonga
-        - Trinidad Tobago
-        - Tunisia
-        - Turkey
-        - Turkmenistan
-        - Tuvalu
-        - Uganda
-        - Ukraine
-        - United Arab Emirates
-        - United Kingdom
-        - United States
-        - Uruguay
-        - Uzbekistan
-        - Vanuatu
-        - Vatican City
-        - Venezuela
-        - Vietnam
-        - Yemen
-        - Zambia
-        - Zimbabwe
-
-  - type: textarea
-    id: logs
-    attributes:
-      label: Log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-
-   - type: checkboxes
-    id: virtualmachine
-    attributes:
-      label: Virtual Machine
-      description: It is a Virtual Machine or Container (Docker, VirtualBox, Qemu, VMware, Vagrant, etc) ?.
-      options:
-        - label: Virtual Machine or Container
-          required: false
-
-   - type: checkboxes
-    id: termux
-    attributes:
-      label: Termux
-      description: It is running inside a Termux on Android?.
-      options:
-        - label: Termux
-          required: false
-          
+ - type: checkboxes
+  id: termux
+  attributes:
+    label: Termux
+    description: It is running inside a Termux on Android?.
+    options:
+      - label: Termux
+        required: false
