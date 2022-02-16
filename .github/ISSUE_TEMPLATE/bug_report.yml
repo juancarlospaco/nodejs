@@ -9,7 +9,7 @@ body:
   attributes:
     value: |
       - **Remember to :star: Star the project on GitHub!.**
-      - **Congrats for your first issue!, please provide a minimal code example that reproduces the :bug: Bug!.**
+      - **Please provide a minimal code example that reproduces the :bug: Bug!.**
         Reports with full repro code and descriptive detailed information will be fixed faster.
       - [Please, keep in mind there is ZERO FUNDING for the project!, we have no sponsors, no company behind, no dev team,
         :heart: Send crypto today to speed up development!](https://gist.github.com/juancarlospaco/37da34ed13a609663f55f4466c4dbc3e)
