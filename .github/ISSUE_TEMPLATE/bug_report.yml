@@ -137,10 +137,18 @@ body:
   validations:
     required: true
 
+- type: checkboxes
+  id: virtualmachine
+  attributes:
+    label: Virtual Machine
+    description: It is a Virtual Machine or Container (Docker, VirtualBox, Qemu, VMware, Vagrant, etc) ?.
+    options:
+      - label: Virtual Machine or Container
+
 - type: dropdown
   id: country
   attributes:
-    label: What is your Country?
+    label: Where are you from?
     options:
       - Afghanistan
       - Albania
@@ -252,6 +260,7 @@ body:
       - Malaysia
       - Maldives
       - Mali
+      - Malvinas Argentinas Islands
       - Malta
       - Marshall Islands
       - Mauritania
@@ -350,12 +359,3 @@ body:
     label: Log output
     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
     render: shell
-
-- type: checkboxes
-  id: virtualmachine
-  attributes:
-    label: Virtual Machine
-    description: It is a Virtual Machine or Container (Docker, VirtualBox, Qemu, VMware, Vagrant, etc) ?.
-    options:
-      - label: Virtual Machine or Container
-        required: true
