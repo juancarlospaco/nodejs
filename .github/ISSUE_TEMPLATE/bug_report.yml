@@ -131,14 +131,6 @@ body:
   validations:
     required: true
 
-- type: checkboxes
-  id: virtualmachine
-  attributes:
-    label: Virtual Machine
-    description: It is a Virtual Machine or Container (Docker, VirtualBox, Qemu, VMware, Vagrant, etc) ?.
-    options:
-      - label: Virtual Machine or Container
-
 - type: dropdown
   id: country
   attributes:
