@@ -147,8 +147,10 @@ body:
       - Drone/Robot
       - Car/Self-Driving/On-Board Computer
       - ASIC/FPGA/Crypto-mining hardware
-      - PLC/Industrial/heavy machinery
+      - PLC/Industrial/heavy machine
       - Point Of Sale/Kiosk/ATM
+      - Satellite/MicroSatellite
+      - Military machine
       - Others (Unkown)
   validations:
     required: true
