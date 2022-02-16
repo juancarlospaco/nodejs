@@ -349,7 +349,7 @@ body:
     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
     render: shell
 
- - type: checkboxes
+- type: checkboxes
   id: virtualmachine
   attributes:
     label: Virtual Machine
@@ -358,7 +358,7 @@ body:
       - label: Virtual Machine or Container
         required: false
 
- - type: checkboxes
+- type: checkboxes
   id: termux
   attributes:
     label: Termux
