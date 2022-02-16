@@ -1,15 +1,10 @@
-name: Bug Report
+name: BUG Report
 description: Fill the Bug report
 title:  "[bug] "
 labels: ["bug", "unconfirmed"]
 assignees:
   - juancarlospaco
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  
   - type: textarea
     id: what-happened
     attributes:
