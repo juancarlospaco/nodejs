@@ -132,6 +132,28 @@ body:
     required: true
 
 - type: dropdown
+  id: device
+  attributes:
+    label: Device
+    description: What kind of computer is it?.
+    options:
+      - Desktop PC
+      - Server PC
+      - Docker/Qemu (Container)
+      - VirtualBox/Vagrant (Virtual Machine)
+      - Embedded/IOT
+      - Arduino/ESP32 Kit
+      - Drone/Robot
+      - Car/Self-Driving/On-Board Computer
+      - ASIC/FPGA/Crypto-mining hardware
+      - SmartTV
+      - PLC/Industrial/heavy machinery
+      - Point Of Sale/Kiosk/ATM
+      - Others (Unkown)
+  validations:
+    required: true
+
+- type: dropdown
   id: country
   attributes:
     label: Where are you from?
