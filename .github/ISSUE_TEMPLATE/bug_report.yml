@@ -13,7 +13,6 @@ body:
       value: "A bug happened!"
     validations:
       required: true
-
   - type: dropdown
     id: architecture
     attributes:
@@ -29,7 +28,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: os
     attributes:
@@ -46,7 +44,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: disk
     attributes:
@@ -59,7 +56,6 @@ body:
         - Others (USB)
     validations:
       required: true
-
   - type: dropdown
     id: ram
     attributes:
@@ -79,7 +75,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: cores
     attributes:
@@ -99,7 +94,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: internet
     attributes:
@@ -116,7 +110,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: browser
     attributes:
@@ -130,7 +123,6 @@ body:
         - Others (Unkown)
     validations:
       required: true
-
   - type: dropdown
     id: country
     attributes:
@@ -335,14 +327,12 @@ body:
         - Yemen
         - Zambia
         - Zimbabwe
-
   - type: textarea
     id: logs
     attributes:
       label: Log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-
    - type: checkboxes
     id: virtualmachine
     attributes:
@@ -351,7 +341,6 @@ body:
       options:
         - label: Virtual Machine or Container
           required: false
-
    - type: checkboxes
     id: termux
     attributes:
