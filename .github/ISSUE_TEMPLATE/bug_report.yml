@@ -363,3 +363,15 @@ body:
     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
     placeholder: Bug reports with full repro code and detailed information will be fixed faster.
     render: shell
+
+- type: markdown
+  attributes:
+    value: |
+      **Before you open a new bug...***
+      - 32-Bit is NOT supported.
+      - Windows older than Windows 10 is NOT supported.
+      - Mac OSX support is Experimental.
+      - ARM support is Experimental.
+      - Alpine Linux support is Experimental.
+      - Termux support is Experimental.
+      - Check if Git main branch already have a fix for your problem.
