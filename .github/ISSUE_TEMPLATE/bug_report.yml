@@ -143,10 +143,10 @@ body:
       - VirtualBox/Vagrant (Virtual Machine)
       - Embedded/IOT
       - Arduino/ESP32 Kit
+      - SmartTV/SmartDisplay
       - Drone/Robot
       - Car/Self-Driving/On-Board Computer
       - ASIC/FPGA/Crypto-mining hardware
-      - SmartTV
       - PLC/Industrial/heavy machinery
       - Point Of Sale/Kiosk/ATM
       - Others (Unkown)
