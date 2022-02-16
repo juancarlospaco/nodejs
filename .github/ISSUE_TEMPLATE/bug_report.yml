@@ -1,9 +1,8 @@
-name: BUG Report
-description: Fill the Bug report
-title:  "[bug] "
-labels: ["bug", "unconfirmed"]
-assignees:
-  - juancarlospaco
+name:        BUG Report
+description: Fill the Bug report :bug:
+title:       "[bug] "
+labels:      ["bug", "unconfirmed"]
+assignees:   ["juancarlospaco"]
 body:
   - type: textarea
     id: what-happened
