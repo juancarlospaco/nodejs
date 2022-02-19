@@ -107,8 +107,9 @@ macro unrollStringOps*(x: ForLoopStmt) =
   result = body
 
 
-macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]) =
+macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; forceQuote: static[bool] = false) =
   ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`. Works better with `newStringOfCap`.
+  ## If `forceQuote` is `true` then the query string Values will be quoted, even if it is not required.
   ##
   ## .. warning:: Values must be Non-empty URL-encoded strings, this does NOT call `uri.encodeUrl`.
   runnableExamples:
@@ -123,12 +124,12 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]) 
   ## .. code-block:: nim
   ##   var queryParams = ""
   ##   queryParams.add '?'
-  ##   queryParams.add, 'k'
-  ##   queryParams.add, 'e'
-  ##   queryParams.add, 'y'
-  ##   queryParams.add, '0'
-  ##   queryParams.add, '='
-  ##   queryParams.add, x
+  ##   queryParams.add 'k'
+  ##   queryParams.add 'e'
+  ##   queryParams.add 'y'
+  ##   queryParams.add '0'
+  ##   queryParams.add '='
+  ##   queryParams.add x
   ##   queryParams.add '&'
   ##   queryParams.add 'k'
   ##   queryParams.add 'e'
@@ -143,6 +144,15 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]) 
   ##   queryParams.add '2'
   ##   queryParams.add '='
   ##   queryParams.add z
+  ##
+  runnableExamples:
+    const foo = 3.14
+    const bar = -9.9
+    const baz = NaN
+    var queryParams = "https://Nim-lang.org"
+    unrollEncodeQuery(queryParams, {"a": $foo, "b": $bar, "c": $baz}, forceQuote = true)
+    doAssert queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="nan""""
+
   doAssert args.len > 1, "Iterable must not be empty, because theres nothing to unroll"
   result = newStmtList()
   for i, item in args:
@@ -151,4 +161,6 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]) 
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit(if i == 0: '?' else: '&'))
     for c in key: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), c.newLit)
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
+    if forceQuote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), item[1][1])
+    if forceQuote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
