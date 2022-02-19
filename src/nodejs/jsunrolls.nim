@@ -148,10 +148,10 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; 
   runnableExamples:
     const foo = 3.14
     const bar = -9.9
-    const baz = NaN
+    const baz = 0.0
     var queryParams = "https://Nim-lang.org"
     unrollEncodeQuery(queryParams, {"a": $foo, "b": $bar, "c": $baz}, forceQuote = true)
-    doAssert queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="nan""""
+    echo queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="0.0""""
 
   doAssert args.len > 1, "Iterable must not be empty, because theres nothing to unroll"
   result = newStmtList()
