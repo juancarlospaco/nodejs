@@ -1,4 +1,5 @@
-import macros
+import std/macros
+
 
 macro unrollIt*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead `for` loops.
@@ -64,6 +65,7 @@ macro unrollIt*(x: ForLoopStmt) =
     body.add x[^1]
   result = newBlockStmt(body)
 
+
 macro unrollStringOps*(x: ForLoopStmt) =
   ## Compile-time macro-unrolled zero-overhead String operations.
   ## Unroll any `string` ops into `char` ops, does NOT create a `block:`,
@@ -103,3 +105,50 @@ macro unrollStringOps*(x: ForLoopStmt) =
     body.add x[^1]
   # body.add nnkAsgn.newTree(x[^2][^1], newLit('\0'))
   result = body
+
+
+macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]) =
+  ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`. Works better with `newStringOfCap`.
+  ##
+  ## .. warning:: Values must be Non-empty URL-encoded strings, this does NOT call `uri.encodeUrl`.
+  runnableExamples:
+    const x = "cat"
+    const y = "dog"
+    const z = "42"
+    var queryParams = ""
+    unrollEncodeQuery(queryParams, {"key0": x, "key1": y, "key2": z})
+    doAssert queryParams == "?key0=cat&key1=dog&key2=42"
+  ## Expands to:
+  ##
+  ## .. code-block:: nim
+  ##   var queryParams = ""
+  ##   queryParams.add '?'
+  ##   queryParams.add, 'k'
+  ##   queryParams.add, 'e'
+  ##   queryParams.add, 'y'
+  ##   queryParams.add, '0'
+  ##   queryParams.add, '='
+  ##   queryParams.add, x
+  ##   queryParams.add '&'
+  ##   queryParams.add 'k'
+  ##   queryParams.add 'e'
+  ##   queryParams.add 'y'
+  ##   queryParams.add '1'
+  ##   queryParams.add '='
+  ##   queryParams.add y
+  ##   queryParams.add '&'
+  ##   queryParams.add 'k'
+  ##   queryParams.add 'e'
+  ##   queryParams.add 'y'
+  ##   queryParams.add '2'
+  ##   queryParams.add '='
+  ##   queryParams.add z
+  doAssert args.len > 1, "Iterable must not be empty, because theres nothing to unroll"
+  result = newStmtList()
+  for i, item in args:
+    let key: string = item[1][0].strVal
+    doAssert key.len > 0, "Key must not be empty string."
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit(if i == 0: '?' else: '&'))
+    for c in key: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), c.newLit)
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), item[1][1])
