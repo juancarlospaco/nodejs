@@ -172,10 +172,10 @@ Values must be Non-empty URL-encoded strings, this does NOT call <tt class="docu
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">const</span> <span class="Identifier">foo</span> <span class="Operator">=</span> <span class="FloatNumber">3.14</span>
 <span class="Keyword">const</span> <span class="Identifier">bar</span> <span class="Operator">=</span> <span class="Operator">-</span><span class="FloatNumber">9.9</span>
-<span class="Keyword">const</span> <span class="Identifier">baz</span> <span class="Operator">=</span> <span class="Identifier">NaN</span>
+<span class="Keyword">const</span> <span class="Identifier">baz</span> <span class="Operator">=</span> <span class="FloatNumber">0.0</span>
 <span class="Keyword">var</span> <span class="Identifier">queryParams</span> <span class="Operator">=</span> <span class="StringLit">&quot;https://Nim-lang.org&quot;</span>
 <span class="Identifier">unrollEncodeQuery</span><span class="Punctuation">(</span><span class="Identifier">queryParams</span><span class="Punctuation">,</span> <span class="Punctuation">{</span><span class="StringLit">&quot;a&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">foo</span><span class="Punctuation">,</span> <span class="StringLit">&quot;b&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">bar</span><span class="Punctuation">,</span> <span class="StringLit">&quot;c&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">baz</span><span class="Punctuation">}</span><span class="Punctuation">,</span> <span class="Identifier">forceQuote</span> <span class="Operator">=</span> <span class="Identifier">true</span><span class="Punctuation">)</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">queryParams</span> <span class="Operator">==</span> <span class="LongStringLit">&quot;&quot;&quot;https://Nim-lang.org?a=&quot;3.14&quot;&amp;b=&quot;-9.9&quot;&amp;c=&quot;nan&quot;&quot;&quot;&quot;</span></pre>
+<span class="Identifier">echo</span> <span class="Identifier">queryParams</span> <span class="Operator">==</span> <span class="LongStringLit">&quot;&quot;&quot;https://Nim-lang.org?a=&quot;3.14&quot;&amp;b=&quot;-9.9&quot;&amp;c=&quot;0.0&quot;&quot;&quot;&quot;</span></pre>
 
 </dd>
 </div>
@@ -237,7 +237,7 @@ Compile-time macro-unrolled zero-overhead String operations. Unroll any <tt clas
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-19 17:55:58 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-19 18:06:44 UTC</small>
       </div>
     </div>
   </div>
