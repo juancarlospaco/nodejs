@@ -81,7 +81,3 @@ jobs:
         message: 'Fully Automated Luxury Nim'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-    - name: Pull request stats
-      uses: flowwer-dev/pull-request-stats@master
