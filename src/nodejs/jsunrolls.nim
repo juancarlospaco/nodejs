@@ -110,8 +110,6 @@ macro unrollStringOps*(x: ForLoopStmt) =
 macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; forceQuote: static[bool] = false) =
   ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`. Works better with `newStringOfCap`.
   ## If `forceQuote` is `true` then the query string Values will be quoted, even if it is not required.
-  ##
-  ## .. warning:: Values must be Non-empty URL-encoded strings, this does NOT call `uri.encodeUrl`.
   runnableExamples:
     const x = "cat"
     const y = "dog"
@@ -145,11 +143,23 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; 
   ##   queryParams.add '='
   ##   queryParams.add z
   ##
+  ## .. warning:: Values must be URL-encoded strings, this does NOT call `uri.encodeUrl` implicitly for you, for performance reasons.
+  ##
+  runnableExamples:
+    from std/uri import encodeUrl
+    var a = "\0"    # This value is NOT URL Encoded.
+    let b = "a b c" # This value is NOT URL Encoded.
+    const c = ""    # This value is NOT URL Encoded.
+    var queryParams = ""
+    unrollEncodeQuery(queryParams, {"a": encodeUrl(a), "b": encodeUrl(b), "c": encodeUrl(c)})
+    doAssert queryParams == "?a=%00&b=a+b+c&c="  # This URL query param is URL Encoded Ok.
+  ## Another Example:
   runnableExamples:
     const foo = 3.14
     const bar = -9.9
     const baz = 0.0
     var queryParams = "https://Nim-lang.org"
+    # Here we use forceQuote=true and $
     unrollEncodeQuery(queryParams, {"a": $foo, "b": $bar, "c": $baz}, forceQuote = true)
     doAssert queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="0.0""""
 
