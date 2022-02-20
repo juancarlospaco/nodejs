@@ -110,7 +110,7 @@ macro unrollStringOps*(x: ForLoopStmt) =
 macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; escape: typed = nil; quote: static[bool] = false) =
   ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`.
   ## * If `quote` is `true`, then the query string Values will be quoted, even if it is not required.
-  ## * If values are integers then `addInt` is used for performance, otherwise `add`.
+  ## * If values are integers `nnkIntLit..nnkUInt64Lit` then `addInt` is used for performance, otherwise `add`.
   ## * `target` can be empty string, `args` must not be empty, `escape` can be `nil`.
   ## * If `escape` is not `nil`, then the query string values will be URL-encoded using `escape()` function.
   ## * Some examples of `escape` can be `encodeUrl`, `strip`, `toLowerAscii`, `toUpperAscii`, etc.
@@ -194,6 +194,6 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; es
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
     if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
     result.add nnkCall.newTree(nnkDotExpr.newTree(target,
-      if item[1][1].kind in {nnkIntLit, nnkInt64Lit, nnkUintLit, nnkUint64Lit}: newIdentNode"addInt" else:  newIdentNode"add"),
+      if item[1][1].kind in nnkIntLit .. nnkUInt64Lit: newIdentNode"addInt" else:  newIdentNode"add"),
       if escape != nil: nnkCall.newTree(escape, item[1][1]) else: item[1][1])
     if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
