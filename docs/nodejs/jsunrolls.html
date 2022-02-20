@@ -138,9 +138,7 @@ window.addEventListener('DOMContentLoaded', main);
                         <span class="Identifier">forceQuote</span><span class="Other">:</span> <span class="Identifier">static</span><span class="Other">[</span><span class="Identifier">bool</span><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Compile-time macro-unrolled zero-overhead <tt class="docutils literal"><span class="pre"><span class="Identifier">uri</span><span class="Operator">.</span><span class="Identifier">encodeQuery</span></span></tt>. Works better with <tt class="docutils literal"><span class="pre"><span class="Identifier">newStringOfCap</span></span></tt>. If <tt class="docutils literal"><span class="pre"><span class="Identifier">forceQuote</span></span></tt> is <tt class="docutils literal"><span class="pre"><span class="Identifier">true</span></span></tt> then the query string Values will be quoted, even if it is not required.<div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
-Values must be Non-empty URL-encoded strings, this does NOT call <tt class="docutils literal"><span class="pre"><span class="Identifier">uri</span><span class="Operator">.</span><span class="Identifier">encodeUrl</span></span></tt>.</div>
-
+Compile-time macro-unrolled zero-overhead <tt class="docutils literal"><span class="pre"><span class="Identifier">uri</span><span class="Operator">.</span><span class="Identifier">encodeQuery</span></span></tt>. Works better with <tt class="docutils literal"><span class="pre"><span class="Identifier">newStringOfCap</span></span></tt>. If <tt class="docutils literal"><span class="pre"><span class="Identifier">forceQuote</span></span></tt> is <tt class="docutils literal"><span class="pre"><span class="Identifier">true</span></span></tt> then the query string Values will be quoted, even if it is not required.
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">const</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="StringLit">&quot;cat&quot;</span>
 <span class="Keyword">const</span> <span class="Identifier">y</span> <span class="Operator">=</span> <span class="StringLit">&quot;dog&quot;</span>
@@ -168,12 +166,23 @@ Values must be Non-empty URL-encoded strings, this does NOT call <tt class="docu
 <span class="Identifier">queryParams</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'y'</span>
 <span class="Identifier">queryParams</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'2'</span>
 <span class="Identifier">queryParams</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="CharLit">'='</span>
-<span class="Identifier">queryParams</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">z</span></pre>
+<span class="Identifier">queryParams</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">z</span></pre><div class="admonition admonition-warning"><span class="admonition-warning-text"><b>Warning:</b></span>
+Values must be URL-encoded strings, this does NOT call <tt class="docutils literal"><span class="pre"><span class="Identifier">uri</span><span class="Operator">.</span><span class="Identifier">encodeUrl</span></span></tt> implicitly for you, for performance reasons.</div>
+
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">from</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">uri</span> <span class="Keyword">import</span> <span class="Identifier">encodeUrl</span>
+<span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="StringLit">&quot;</span><span class="EscapeSequence">\0</span><span class="StringLit">&quot;</span>    <span class="Comment"># This value is NOT URL Encoded.</span>
+<span class="Keyword">let</span> <span class="Identifier">b</span> <span class="Operator">=</span> <span class="StringLit">&quot;a b c&quot;</span> <span class="Comment"># This value is NOT URL Encoded.</span>
+<span class="Keyword">const</span> <span class="Identifier">c</span> <span class="Operator">=</span> <span class="StringLit">&quot;&quot;</span>    <span class="Comment"># This value is NOT URL Encoded.</span>
+<span class="Keyword">var</span> <span class="Identifier">queryParams</span> <span class="Operator">=</span> <span class="StringLit">&quot;&quot;</span>
+<span class="Identifier">unrollEncodeQuery</span><span class="Punctuation">(</span><span class="Identifier">queryParams</span><span class="Punctuation">,</span> <span class="Punctuation">{</span><span class="StringLit">&quot;a&quot;</span><span class="Punctuation">:</span> <span class="Identifier">encodeUrl</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="StringLit">&quot;b&quot;</span><span class="Punctuation">:</span> <span class="Identifier">encodeUrl</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="StringLit">&quot;c&quot;</span><span class="Punctuation">:</span> <span class="Identifier">encodeUrl</span><span class="Punctuation">(</span><span class="Identifier">c</span><span class="Punctuation">)</span><span class="Punctuation">}</span><span class="Punctuation">)</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">queryParams</span> <span class="Operator">==</span> <span class="StringLit">&quot;?a=%00&amp;b=a+b+c&amp;c=&quot;</span>  <span class="Comment"># This URL query param is URL Encoded Ok.</span></pre>Another Example:
 <p><strong class="examples_text">Example:</strong></p>
 <pre class="listing"><span class="Keyword">const</span> <span class="Identifier">foo</span> <span class="Operator">=</span> <span class="FloatNumber">3.14</span>
 <span class="Keyword">const</span> <span class="Identifier">bar</span> <span class="Operator">=</span> <span class="Operator">-</span><span class="FloatNumber">9.9</span>
 <span class="Keyword">const</span> <span class="Identifier">baz</span> <span class="Operator">=</span> <span class="FloatNumber">0.0</span>
 <span class="Keyword">var</span> <span class="Identifier">queryParams</span> <span class="Operator">=</span> <span class="StringLit">&quot;https://Nim-lang.org&quot;</span>
+<span class="Comment"># Here we use forceQuote=true and $</span>
 <span class="Identifier">unrollEncodeQuery</span><span class="Punctuation">(</span><span class="Identifier">queryParams</span><span class="Punctuation">,</span> <span class="Punctuation">{</span><span class="StringLit">&quot;a&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">foo</span><span class="Punctuation">,</span> <span class="StringLit">&quot;b&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">bar</span><span class="Punctuation">,</span> <span class="StringLit">&quot;c&quot;</span><span class="Punctuation">:</span> <span class="Operator">$</span><span class="Identifier">baz</span><span class="Punctuation">}</span><span class="Punctuation">,</span> <span class="Identifier">forceQuote</span> <span class="Operator">=</span> <span class="Identifier">true</span><span class="Punctuation">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">queryParams</span> <span class="Operator">==</span> <span class="LongStringLit">&quot;&quot;&quot;https://Nim-lang.org?a=&quot;3.14&quot;&amp;b=&quot;-9.9&quot;&amp;c=&quot;0.0&quot;&quot;&quot;&quot;</span></pre>
 
@@ -237,7 +246,7 @@ Compile-time macro-unrolled zero-overhead String operations. Unroll any <tt clas
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-19 18:14:58 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-02-20 14:01:55 UTC</small>
       </div>
     </div>
   </div>
