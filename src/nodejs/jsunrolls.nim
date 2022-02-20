@@ -107,9 +107,14 @@ macro unrollStringOps*(x: ForLoopStmt) =
   result = body
 
 
-macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; forceQuote: static[bool] = false) =
-  ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`. Works better with `newStringOfCap`.
-  ## If `forceQuote` is `true` then the query string Values will be quoted, even if it is not required.
+macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; escape: typed = nil; quote: static[bool] = false) =
+  ## Compile-time macro-unrolled zero-overhead `uri.encodeQuery`.
+  ## * If `quote` is `true`, then the query string Values will be quoted, even if it is not required.
+  ## * If values are integers then `addInt` is used for performance, otherwise `add`.
+  ## * `target` can be empty string, `args` must not be empty, `escape` can be `nil`.
+  ## * If `escape` is not `nil`, then the query string values will be URL-encoded using `escape()` function.
+  ## * Some examples of `escape` can be `encodeUrl`, `strip`, `toLowerAscii`, `toUpperAscii`, etc.
+  ## * Works better with `newStringOfCap(cap = yourBestGuess)`.
   runnableExamples:
     const x = "cat"
     const y = "dog"
@@ -143,27 +148,43 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; 
   ##   queryParams.add '='
   ##   queryParams.add z
   ##
-  ## .. warning:: Values must be URL-encoded strings, this does NOT call `uri.encodeUrl` implicitly for you, for performance reasons.
-  ##
+  ## To work with NON URL-encoded strings, use `escape=encodeUrl`:
   runnableExamples:
-    from std/uri import encodeUrl
-    var a = "\0"    # This value is NOT URL Encoded.
-    let b = "a b c" # This value is NOT URL Encoded.
-    const c = ""    # This value is NOT URL Encoded.
+    from std/uri import encodeUrl # You must import your escaping function.
+    var a = "\0"                  # This value is NOT URL Encoded.
+    let b = "a b c"               # This value is NOT URL Encoded.
+    const c = ""                  # This value is NOT URL Encoded.
     var queryParams = ""
-    unrollEncodeQuery(queryParams, {"a": encodeUrl(a), "b": encodeUrl(b), "c": encodeUrl(c)})
-    doAssert queryParams == "?a=%00&b=a+b+c&c="  # This URL query param is URL Encoded Ok.
-  ## Another Example:
+    # Expands to `encodeUrl(a)`, `encodeUrl(b)`, `encodeUrl(c)`
+    unrollEncodeQuery(queryParams, {"a": a, "b": b, "c": c}, escape = encodeUrl)
+    doAssert queryParams == "?a=%00&b=a+b+c&c="  # This URL query param is URL Encoded.
+  ## Working with float values, force quoting using `quote=true` and a `custom` func:
   runnableExamples:
     const foo = 3.14
     const bar = -9.9
     const baz = 0.0
     var queryParams = "https://Nim-lang.org"
-    # Here we use forceQuote=true and $
-    unrollEncodeQuery(queryParams, {"a": $foo, "b": $bar, "c": $baz}, forceQuote = true)
+    func custom(floaty: float): string = $floaty
+    unrollEncodeQuery(queryParams, {"a": foo, "b": bar, "c": baz}, quote = true, escape = custom)
     doAssert queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="0.0""""
-
-  doAssert args.len > 1, "Iterable must not be empty, because theres nothing to unroll"
+  ## Working with integer values:
+  runnableExamples:
+    const integer = 42
+    var queryParams = ""
+    unrollEncodeQuery(queryParams, {"a": integer})
+    doAssert queryParams == "?a=42"
+  ## Expands to:
+  ##
+  ## .. code-block:: nim
+  ##   var queryParams = ""
+  ##   queryParams.add '?'
+  ##   queryParams.add 'a'
+  ##   queryParams.add '='
+  ##   queryParams.addInt 42
+  ##
+  ## Automatically changes from `add` to `addInt` for performance.
+  ## * If you still do not understand what you are doing, use `escape=encodeUrl` and `import std/uri`.
+  doAssert args.len > 0, "Iterable must not be empty, because theres nothing to unroll"
   result = newStmtList()
   for i, item in args:
     let key: string = item[1][0].strVal
@@ -171,6 +192,8 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, string)]; 
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit(if i == 0: '?' else: '&'))
     for c in key: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), c.newLit)
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
-    if forceQuote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
-    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), item[1][1])
-    if forceQuote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
+    if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target,
+      if item[1][1].kind in {nnkIntLit, nnkInt64Lit, nnkUintLit, nnkUint64Lit}: newIdentNode"addInt" else:  newIdentNode"add"),
+      if escape != nil: nnkCall.newTree(escape, item[1][1]) else: item[1][1])
+    if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
