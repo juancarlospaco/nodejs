@@ -167,9 +167,24 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; es
     func custom(floaty: float): string = $floaty
     unrollEncodeQuery(queryParams, {"a": foo, "b": bar, "c": baz}, quote = true, escape = custom)
     doAssert queryParams == """https://Nim-lang.org?a="3.14"&b="-9.9"&c="0.0""""
-  ## Working with integer values:
+  ## * If you still do not understand what you are doing, use `escape=encodeUrl` and `import std/uri`.
+  doAssert args.len > 0, "Iterable must not be empty, because theres nothing to unroll"
+  result = newStmtList()
+  for i, item in args:
+    let key: string = item[1][0].strVal
+    doAssert key.len > 0, "Key must not be empty string."
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit(if i == 0: '?' else: '&'))
+    for c in key: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), c.newLit)
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
+    if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), if escape != nil: nnkCall.newTree(escape, item[1][1]) else: item[1][1])
+    if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
+
+
+macro unrollEncodeQuery*(target: var string; args: openArray[(string, SomeInteger)]; escape: typed = nil; quote: static[bool] = false) =
+  ## Same as `unrollEncodeQuery` but optimized for integers, uses `addInt` instead of `add`.
   runnableExamples:
-    const integer = 42
+    var integer = 42  # Run-time value.
     var queryParams = ""
     unrollEncodeQuery(queryParams, {"a": integer})
     doAssert queryParams == "?a=42"
@@ -182,8 +197,7 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; es
   ##   queryParams.add '='
   ##   queryParams.addInt 42
   ##
-  ## Automatically changes from `add` to `addInt` for performance.
-  ## * If you still do not understand what you are doing, use `escape=encodeUrl` and `import std/uri`.
+  ## Automatically uses `addInt` for performance.
   doAssert args.len > 0, "Iterable must not be empty, because theres nothing to unroll"
   result = newStmtList()
   for i, item in args:
@@ -193,7 +207,5 @@ macro unrollEncodeQuery*(target: var string; args: openArray[(string, auto)]; es
     for c in key: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), c.newLit)
     result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('='))
     if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
-    result.add nnkCall.newTree(nnkDotExpr.newTree(target,
-      if item[1][1].kind in nnkIntLit .. nnkUInt64Lit: newIdentNode"addInt" else:  newIdentNode"add"),
-      if escape != nil: nnkCall.newTree(escape, item[1][1]) else: item[1][1])
+    result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"addInt"), if escape != nil: nnkCall.newTree(escape, item[1][1]) else: item[1][1])
     if quote: result.add nnkCall.newTree(nnkDotExpr.newTree(target, newIdentNode"add"), newLit('"'))
