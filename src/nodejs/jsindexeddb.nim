@@ -39,7 +39,7 @@ type
     onupgradeneeded*: proc (event: Event) {.closure.}
     result*: IDBDatabase
 
-func newIndexedDB*(): IndexedDB {.importcpp: "(window.indexedDB)".}
+func newIndexedDB*(): IndexedDB {.importcpp: "(window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB)".}
 
 func open*(self: IndexedDB; dbName: cstring): IDBOpenDBRequest {.importcpp.}
 func open*(self: IndexedDB; dbName: cstring; s: cint): IDBOpenDBRequest {.importcpp.}
