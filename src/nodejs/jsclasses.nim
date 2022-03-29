@@ -259,10 +259,7 @@ class $1 {
   result.add(nimNodes)
 
 
-# when isMainModule:
-runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
-
-
+when isMainModule:
   class Kitten* of JsRoot:
 
     proc constructor*(name: cstring; age: cint; food: float; sleeping: bool) =
