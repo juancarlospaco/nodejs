@@ -65,7 +65,6 @@
 - :heavy_check_mark: [Compile-time zero-overhead strformat](https://juancarlospaco.github.io/nodejs/nodejs/jsstrformat.html)
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
-- :heavy_check_mark: Structured JSON compile-time-unrolled Logging https://juancarlospaco.github.io/nodejs/nodejs/loging
 - :trollface: More supported modules soon...
 
 
