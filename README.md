@@ -65,6 +65,7 @@
 - :heavy_check_mark: [Compile-time zero-overhead strformat](https://juancarlospaco.github.io/nodejs/nodejs/jsstrformat.html)
 - :heavy_check_mark: Common module :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jscore.html
 - :heavy_check_mark: Custom syntax sugar :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsugar.html
+- :heavy_check_mark: Structured JSON compile-time-unrolled Logging https://juancarlospaco.github.io/nodejs/nodejs/loging
 - :trollface: More supported modules soon...
 
 
@@ -578,17 +579,17 @@ See also:
 
 ![](https://starchart.cc/juancarlospaco/nodejs.svg)
 
-:star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')	
-:star: [@tandy-1000](https://github.com/tandy-1000 '2022-02-15')	
-:star: [@alexgustafson](https://github.com/alexgustafson '2022-02-16')	
-:star: [@bradjasper](https://github.com/bradjasper '2022-02-21')	
-:star: [@AndrielFR](https://github.com/AndrielFR '2022-02-27')	
-:star: [@whee](https://github.com/whee '2022-03-10')	
-:star: [@jonlroy2020](https://github.com/jonlroy2020 '2022-03-14')	
-:star: [@S0Sbrigade8](https://github.com/S0Sbrigade8 '2022-03-15')	
-:star: [@stisa](https://github.com/stisa '2022-03-22')	
-:star: [@heinthanth](https://github.com/heinthanth '2022-03-24')	
-:star: [@jhgalino](https://github.com/jhgalino '2022-04-02')	
-:star: [@YanMu2020](https://github.com/YanMu2020 '2022-04-04')	
-:star: [@haikyuu](https://github.com/haikyuu '2022-04-09')	
-:star: [@matkuki](https://github.com/matkuki '2022-04-14')	
+:star: [@juancarlospaco](https://github.com/juancarlospaco '2022-02-15')
+:star: [@tandy-1000](https://github.com/tandy-1000 '2022-02-15')
+:star: [@alexgustafson](https://github.com/alexgustafson '2022-02-16')
+:star: [@bradjasper](https://github.com/bradjasper '2022-02-21')
+:star: [@AndrielFR](https://github.com/AndrielFR '2022-02-27')
+:star: [@whee](https://github.com/whee '2022-03-10')
+:star: [@jonlroy2020](https://github.com/jonlroy2020 '2022-03-14')
+:star: [@S0Sbrigade8](https://github.com/S0Sbrigade8 '2022-03-15')
+:star: [@stisa](https://github.com/stisa '2022-03-22')
+:star: [@heinthanth](https://github.com/heinthanth '2022-03-24')
+:star: [@jhgalino](https://github.com/jhgalino '2022-04-02')
+:star: [@YanMu2020](https://github.com/YanMu2020 '2022-04-04')
+:star: [@haikyuu](https://github.com/haikyuu '2022-04-09')
+:star: [@matkuki](https://github.com/matkuki '2022-04-14')
