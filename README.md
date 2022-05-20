@@ -176,28 +176,6 @@ TWGft53WgWvH2mnqR8ZUXq1GD8M4gZ4Yfu
 ```
 </details>
 <details>
-<summary title="Send Terra"><kbd> Terra UST </kbd></summary>
-
-**BEP20 Binance Smart Chain Network BSC**
-```
-0xb78c4cf63274bb22f83481986157d234105ac17e
-```
-**Terra Network**
-```
-terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5
-```
-- Memo ` 108340023 `
-</details>
-<details>
-<summary title="Send Luna"><kbd> LUNA </kbd></summary>
-
-**Terra Network**
-```
-terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5
-```
-- Memo ` 108340023 `
-</details>
-<details>
 <summary title="Send Solana"><kbd> Solana SOL </kbd></summary>
 
 **BEP20 Binance Smart Chain Network BSC**
