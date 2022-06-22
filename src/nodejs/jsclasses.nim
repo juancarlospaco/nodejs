@@ -51,11 +51,12 @@ proc genJsBody(n: NimNode): string =
     if i > 0:
       result.add ';'
       result.add '\n'
-    result.add alignLeft($toStrLit(bn), maxlen)  # $toStrLit(bn) & spaces(80 - n.body.len)
+    case bn.kind
+    of nnkCommentStmt:
+      result.add alignLeft("/* " & $toStrLit(bn) & " */", maxlen)
+    else:
+      result.add alignLeft($toStrLit(bn), maxlen)  # $toStrLit(bn) & spaces(80 - n.body.len)
     if (i + 1) == n.body.len: result.add ';'
-    # case bn.kind
-    # of nnkAsgn, nnkReturnStmt: result.add $toStrLit(bn) & ';'
-    # else: discard
 
 proc genNimType(typeName, baseName: string; isExported: bool; fields: NimNode): NimNode =
   ## Generate a Nim type.
@@ -226,6 +227,8 @@ macro class*(head, body: untyped) =
     jsCodes = ""
   for n in body.children:
     case n.kind
+    of nnkTemplateDef:
+      error "Template inside Class is not supported, use proc or func."
     of nnkProcDef, nnkFuncDef:
       if $n[0] == "constructor" or $n[0] == "constructor*":
         nimNodes.add([
@@ -246,8 +249,8 @@ class $1 {
         nimNodes.add(genNimProc(n, typeName))
         genJsFunction(n, typeName, jsCodes)
     else:
-      assert false
-  jsCodes.add(if isExported: "};\nexport { $1 };\n\n" % [typeName] else: "};\n\n")
+      doAssert false
+  jsCodes.add(if isExported: "};\n/* $1 Class export (line $2, column $3). */\nexport { $1 };\n\n" % [typeName, $lineInfoObj(nimNodes[^1]).line, $lineInfoObj(nimNodes[^1]).column] else: "};\n\n")
   nimNodes.add(
     nnkPragma.newTree(
       nnkExprColonExpr.newTree(
@@ -259,7 +262,7 @@ class $1 {
   result.add(nimNodes)
 
 
-# when isMainModule:
+#when isMainModule:
 runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
 
 
@@ -278,6 +281,7 @@ runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
       return this.age
 
     proc calcAge*(): cint =
+      ## Nim documentation comments are translated to JavaScript comments.
       return this.age + 1
 
     func goToSleep*() =
@@ -285,7 +289,6 @@ runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
 
     proc feed() =
       this.food = this.food + 1.0
-
 
   let cat = newKitten(name="Zoe", age=2, food=1.0, sleeping=false)
   discard cat.get_name()
@@ -320,6 +323,7 @@ runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
 ##
 ##     /** Kitten.calcAge Method (line 282, column 4). */
 ##     calcAge() {
+##       /* Nim documentation comments are translated to JavaScript comments. */;
 ##       return this.age + 1;
 ##     };
 ##
@@ -334,4 +338,5 @@ runnableExamples"-b:js -d:nodejs --experimental:strictFuncs -r:off":
 ##     };
 ##
 ##   };
+##   /* Kitten Class export (line 295, column 9). */
 ##   export { Kitten };
