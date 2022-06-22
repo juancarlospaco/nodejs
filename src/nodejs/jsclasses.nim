@@ -3,7 +3,7 @@
 when not defined(js):
   {.fatal: "JavaScript Classes is designed to be used with JavaScript targets.".}
 
-import std/[macros, strutils, sequtils, sugar]
+import std/[macros, strutils, sequtils]
 
 template isType(typeName: string; i: int; params: seq[string]): bool =
   ## Check if next is a Type.
@@ -28,7 +28,7 @@ proc genParams(n: NimNode; typeName: string): string =
   ## Function params.
   for param in n.params:
     if param.len > 0:
-      var iterableParams = toSeq(param.items).filter((p: NimNode) => p.kind != nnkEmpty).map((p: NimNode) => $p)
+      var iterableParams = toSeq(param.items).filter(proc (p: NimNode): bool = p.kind != nnkEmpty).map(proc (p: NimNode): string = $p)
       for i, p in iterableParams.mpairs:
         removePrefix(p, "c")
         if p.len == 0 or isType(typeName, i, iterableParams): break
@@ -62,7 +62,7 @@ proc genNimType(typeName, baseName: string; isExported: bool; fields: NimNode): 
   ## Generate a Nim type.
   result = newTree(nnkStmtList)
   var fieldsNode = newTree(nnkRecList)
-  for field in toSeq(fields.items).filter((p: NimNode) => p.kind != nnkEmpty):
+  for field in toSeq(fields.items).filter(proc (p: NimNode): bool = p.kind != nnkEmpty):
     fieldsNode.add(field)
   result.add(
     nnkTypeSection.newTree(
