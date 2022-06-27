@@ -50,7 +50,7 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         NODE_OPTIONS: "--unhandled-rejections=warn"
         CMD: "nim doc -b:js -d:nodejs -d:nimExperimentalAsyncjsThen -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --experimental:strictFuncs --experimental:strictEffects --index:on --project --styleCheck:usages --styleCheck:hint --outdir:../../docs"
-
+        CMD2: "nim js -d:nodejs -d:nimExperimentalAsyncjsThen -d:nimStrictDelete -d:nimPreviewFloatRoundtrip -d:nimPreviewDotLikeOps --experimental:strictFuncs --experimental:strictEffects --styleCheck:usages --styleCheck:hint --outdir:../../docs"
 
     # https://developer.ibm.com/languages/node-js/blogs/nodejs-15-release-blog
     - name: Generate Documentation
@@ -88,4 +88,7 @@ jobs:
         cd tests/
         for i in *.nim; do
           $CMD $i
+        done
+        for i in *.nim; do
+          $CMD2 $i
         done
