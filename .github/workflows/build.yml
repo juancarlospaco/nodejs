@@ -81,3 +81,11 @@ jobs:
         message: 'Fully Automated Luxury Nim'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Test GUI
+      shell: bash
+      run: |
+        cd tests/
+        for i in *.nim; do
+          $CMD $i
+        done
