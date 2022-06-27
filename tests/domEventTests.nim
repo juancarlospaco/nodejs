@@ -1,5 +1,5 @@
-import times, strutils, tables
-import karax/karax
+import std/[times, strutils, tables]
+import nodejs/karax
 
 var
   results: seq[cstring]
