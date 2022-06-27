@@ -151,6 +151,8 @@ proc patchContent*(client: JsHttpClient | JsAsyncHttpClient; url: Uri | string; 
     resp = await client.request(request)
   return resp.responseText
 
+proc close*(self: JsHttpClient or JsAsyncHttpClient) = discard
+
 
 when isMainModule:
   # Use with nimhttpd, see https://github.com/juancarlospaco/nodejs/issues/5
