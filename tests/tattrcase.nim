@@ -1,6 +1,6 @@
 # https://github.com/karaxnim/karax/issues/100
-import karax / karax
-import strformat
+import nodejs/karax
+import std/strformat
 
 proc mkCircle*(radius: int, width: int, fill: string, msg: string = "success"): VNode =
   let center = width / 2
