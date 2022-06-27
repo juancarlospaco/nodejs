@@ -1,5 +1,5 @@
-import times, parseutils, sequtils, jsconsole
-import karax/karax
+import std/[times, parseutils, sequtils, jsconsole]
+import nodejs/karax
 
 var
   entries: seq[cstring]
