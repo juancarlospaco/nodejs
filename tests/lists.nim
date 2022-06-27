@@ -1,5 +1,5 @@
-import strutils
-import karax/karax
+import std/strutils
+import nodejs/karax
 
 var contents: seq[cstring] = @[]
 
