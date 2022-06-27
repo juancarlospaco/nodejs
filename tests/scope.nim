@@ -1,4 +1,4 @@
-import karax/karax
+import nodejs/karax
 
 proc render():VNode =
   build_html tdiv:
