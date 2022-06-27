@@ -1,4 +1,4 @@
-include karax/karax
+import nodejs/karax
 
 proc hasDom(n: Vnode) =
   if n.kind in {VNodeKind.component, VNodeKind.vthunk, VNodeKind.dthunk}:
