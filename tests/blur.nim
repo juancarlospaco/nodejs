@@ -1,4 +1,5 @@
-import vdom, karax, strutils
+import std/strutils
+import nodejs/[vdom, karax]
 
 type TextInput* = ref object of VComponent
   value, guid: cstring
