@@ -615,7 +615,7 @@ proc tcall2(n, tmpContext: NimNode): NimNode =
     let op = getName(n[0])
     let ck = isComponent(op)
     if ck != ComponentKind.None:
-      let tmp = genSym(nskLet, "tmp")
+      let tmp = ident("line" & $lineInfoObj(n).line & "col" & $lineInfoObj(n).column)
       let call = if ck == ComponentKind.Tag:     newCall(bindSym"tree", newDotExpr(bindSym"VNodeKind", n[0]))
                  elif ck == ComponentKind.VNode: newCall(bindSym"vthunk", newLit(op))
                  else:                           newCall(bindSym"dthunk", newLit(op))
@@ -647,7 +647,7 @@ proc tcall2(n, tmpContext: NimNode): NimNode =
           break
       if not hasEventHandlers: result = newCall(bindSym"add", tmpContext, n)
       else:
-        let tmp = genSym(nskLet, "tmp")
+        let tmp = ident("line" & $lineInfoObj(n).line & "col" & $lineInfoObj(n).column)
         var slicedCall = newCall(n[0])
         let ex = newTree(nnkStmtListExpr)
         ex.add newEmptyNode() # will become the let statement
