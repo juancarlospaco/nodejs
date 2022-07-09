@@ -1,5 +1,4 @@
-## Karax fork with custom bugfixes, cleanouts, SVG fixes, simplifications, Bulma CSS classes, etc built as dev work of NodeJS project.
-## If you link the CSS file of Bulma then it will be already styled with all proper classes in the HTML. You can also use your own classes too.
+## * Karax fork with custom bugfixes, cleanouts, SVG fixes, simplifications, etc built as dev work of NodeJS project.
 import std/[dom, macros]
 from std/strutils import startsWith, toLowerAscii
 import vdom
