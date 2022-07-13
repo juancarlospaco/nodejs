@@ -7,4 +7,4 @@ $ nim c koch.nim
 $ ./koch boot
 ```
 
-- See `bin/nim` for your newly improved Nim compiler binary.
+- See `./bin/nim` for your newly improved Nim compiler binary.
