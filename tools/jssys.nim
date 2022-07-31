@@ -56,8 +56,7 @@ proc getCurrentExceptionMsg*(): string =
       {.emit: """
 if (`lastJSError`.message !== undefined) {
   `msg` = `lastJSError`.message;
-}
-""".}
+}""".}
       if not msg.isNil:
         return $msg
   return ""
@@ -130,8 +129,7 @@ if (typeof(Error) !== "undefined") {
   throw new Error(`cbuf`);
 } else {
   throw `cbuf`;
-}
-""".}
+}""".}
 
 proc raiseException(e: ref Exception, ename: cstring) {.
     compilerproc, asmNoStackFrame.} =
@@ -169,61 +167,60 @@ proc raiseFieldError2(f: string, discVal: string) {.compilerproc, noreturn.} =
 
 proc setConstr() {.varargs, asmNoStackFrame, compilerproc.} =
   asm """
-var result = {};
-for (var i = 0; i < arguments.length; ++i) {
-  var x = arguments[i];
-  if (typeof(x) == "object") {
-    for (var j = x[0]; j <= x[1]; ++j) {
-      result[j] = true;
+  var result = {};
+  for (var i = 0; i < arguments.length; ++i) {
+    var x = arguments[i];
+    if (typeof(x) == "object") {
+      for (var j = x[0]; j <= x[1]; ++j) {
+        result[j] = true;
+      }
+    } else {
+      result[x] = true;
     }
-  } else {
-    result[x] = true;
   }
-}
-return result;
-"""
+  return result;"""
 
 proc makeNimstrLit(c: cstring): string {.asmNoStackFrame, compilerproc.} =
   {.emit: """
-var result = [];
-for (var i = 0; i < `c`.length; ++i) {
-  result[i] = `c`.charCodeAt(i);
-}
-return result;
-""".}
+
+  var result = [];
+  for (var i = 0; i < `c`.length; ++i) {
+    result[i] = `c`.charCodeAt(i);
+  }
+  return result;""".}
 
 proc cstrToNimstr(c: cstring): string {.asmNoStackFrame, compilerproc.} =
   {.emit: """
-var lengt  = `c`.length;
-var result = new Array(lengt);
-var r = 0;
-for (var i = 0; i < lengt; ++i) {
-  var ch = `c`.charCodeAt(i);
-  if (ch < 128) {
-    result[r] = ch;
-  } else {
-    if (ch < 2048) {
-      result[r] = (ch >> 6) | 192;
+
+  var lengt  = `c`.length;
+  var result = new Array(lengt);
+  var r = 0;
+  for (var i = 0; i < lengt; ++i) {
+    var ch = `c`.charCodeAt(i);
+    if (ch < 128) {
+      result[r] = ch;
     } else {
-      if (ch < 55296 || ch >= 57344) {
-        result[r] = (ch >> 12) | 224;
+      if (ch < 2048) {
+        result[r] = (ch >> 6) | 192;
       } else {
-        ++i;
-        ch = 65536 + (((ch & 1023) << 10) | (`c`.charCodeAt(i) & 1023));
-        result[r] = (ch >> 18) | 240;
+        if (ch < 55296 || ch >= 57344) {
+          result[r] = (ch >> 12) | 224;
+        } else {
+          ++i;
+          ch = 65536 + (((ch & 1023) << 10) | (`c`.charCodeAt(i) & 1023));
+          result[r] = (ch >> 18) | 240;
+          ++r;
+          result[r] = ((ch >> 12) & 63) | 128;
+        }
         ++r;
-        result[r] = ((ch >> 12) & 63) | 128;
+        result[r] = ((ch >> 6) & 63) | 128;
       }
       ++r;
-      result[r] = ((ch >> 6) & 63) | 128;
+      result[r] = (ch & 63) | 128;
     }
     ++r;
-    result[r] = (ch & 63) | 128;
   }
-  ++r;
-}
-return result;
-""".}
+  return result;""".}
 
 proc toJSStr(s: string): cstring {.compilerproc.} =
   proc fromCharCode(c: char): cstring {.importc: "String.fromCharCode".}
@@ -270,94 +267,94 @@ proc mnewString(len: int): string {.asmNoStackFrame, compilerproc.} =
 proc SetCard(a: int): int {.compilerproc, asmNoStackFrame.} =
   # argument type is a fake
   asm """
-var result = 0;
-for (var elem in `a`) {
-  ++result;
-}
-return result;
-"""
+
+  var result = 0;
+  for (var elem in `a`) {
+    ++result;
+  }
+  return result;"""
 
 proc SetEq(a, b: int): bool {.compilerproc, asmNoStackFrame.} =
   asm """
-for (var elem in `a`) {
-  if (!`b`[elem]) {
-    return false;
+
+  for (var elem in `a`) {
+    if (!`b`[elem]) {
+      return false;
+    }
   }
-}
-for (var elem in `b`) {
-  if (!`a`[elem]) {
-    return false;
+  for (var elem in `b`) {
+    if (!`a`[elem]) {
+      return false;
+    }
   }
-}
-return true;
-"""
+  return true;"""
 
 proc SetLe(a, b: int): bool {.compilerproc, asmNoStackFrame.} =
   asm """
-for (var elem in `a`) {
-  if (!`b`[elem]) {
-    return false;
+
+  for (var elem in `a`) {
+    if (!`b`[elem]) {
+      return false;
+    }
   }
-}
-return true;
-"""
+  return true;"""
 
 proc SetLt(a, b: int): bool {.compilerproc.} =
   result = SetLe(a, b) and not SetEq(a, b)
 
 proc SetMul(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
-var result = {};
-for (var elem in `a`) {
-  if (`b`[elem]) {
-    result[elem] = true;
+
+  var result = {};
+  for (var elem in `a`) {
+    if (`b`[elem]) {
+      result[elem] = true;
+    }
   }
-}
-return result;
-"""
+  return result;"""
 
 proc SetPlus(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
-var result = {};
-for (var elem in `a`) {
-  result[elem] = true;
-}
-for (var elem in `b`) {
-  result[elem] = true;
-}
-return result;
-"""
+
+  var result = {};
+  for (var elem in `a`) {
+    result[elem] = true;
+  }
+  for (var elem in `b`) {
+    result[elem] = true;
+  }
+  return result;"""
 
 proc SetMinus(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
-var result = {};
-for (var elem in `a`) {
-  if (!`b`[elem]) {
-    result[elem] = true;
+
+  var result = {};
+  for (var elem in `a`) {
+    if (!`b`[elem]) {
+      result[elem] = true;
+    }
   }
-}
-return result;
-"""
+  return result;"""
 
 proc cmpStrings(a, b: string): int {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`a` == `b`) {
-  return 0;
-}
-if (!`a`) {
-  return -1;
-}
-if (!`b`) {
-  return 1;
-}
-for (var i = 0; i < `a`.length && i < `b`.length; i++) {
-  var result = `a`[i] - `b`[i];
-  if (result != 0) {
-    return result;
+
+  if (`a` == `b`) {
+    return 0;
   }
-}
-return `a`.length - `b`.length;
-"""
+  if (!`a`) {
+    return -1;
+  }
+  if (!`b`) {
+    return 1;
+  }
+  for (var i = 0; i < `a`.length && i < `b`.length; i++) {
+    var result = `a`[i] - `b`[i];
+    if (result != 0) {
+      return result;
+    }
+  }
+  return `a`.length - `b`.length;"""
 
 proc cmp(x, y: string): int =
   when nimvm:
@@ -369,51 +366,51 @@ proc cmp(x, y: string): int =
 
 proc eqStrings(a, b: string): bool {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`a` == `b`) {
-  return true;
-}
-if (`a` === null && `b`.length == 0) {
-  return true;
-}
-if (`b` === null && `a`.length == 0) {
-  return true;
-}
-if ((!`a`) || (!`b`)) {
-  return false;
-}
-var alen = `a`.length;
-if (alen != `b`.length) {
-  return false;
-}
-for (var i = 0; i < alen; ++i) {
-  if (`a`[i] != `b`[i]) {
+
+  if (`a` == `b`) {
+    return true;
+  }
+  if (`a` === null && `b`.length == 0) {
+    return true;
+  }
+  if (`b` === null && `a`.length == 0) {
+    return true;
+  }
+  if ((!`a`) || (!`b`)) {
     return false;
   }
-}
-return true;
-"""
+  var alen = `a`.length;
+  if (alen != `b`.length) {
+    return false;
+  }
+  for (var i = 0; i < alen; ++i) {
+    if (`a`[i] != `b`[i]) {
+      return false;
+    }
+  }
+  return true;"""
 
 when defined(kwin):
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
+
   var buffer = "";
   for (var i = 0; i < arguments.length; ++i) {
     buffer += `toJSStr`(arguments[i]);
   }
-  print(buffer);
-"""
+  print(buffer);"""
 
 elif not defined(nimOldEcho):
   proc ewriteln(x: cstring) = log(x)
 
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
+
   var buffer = "";
   for (var i = 0; i < arguments.length; ++i) {
     buffer += `toJSStr`(arguments[i]);
   }
-  console.log(buffer);
-"""
+  console.log(buffer);"""
 
 else:
   proc ewriteln(x: cstring) =
@@ -422,9 +419,8 @@ else:
     if node.isNil:
       raise newException(ValueError, "<body> element does not exist yet!")
     {.emit: """
-`node`.appendChild(document.createTextNode(`x`));
-`node`.appendChild(document.createElement("br"));
-""".}
+  `node`.appendChild(document.createTextNode(`x`));
+  `node`.appendChild(document.createElement("br"));""".}
 
   proc rawEcho {.compilerproc.} =
     var node : JSRef
@@ -432,113 +428,113 @@ else:
     if node.isNil:
       raise newException(IOError, "<body> element does not exist yet!")
     {.emit: """
-for (var i = 0; i < arguments.length; ++i) {
-  var x = `toJSStr`(arguments[i]);
-  `node`.appendChild(document.createTextNode(x));
-}
-`node`.appendChild(document.createElement("br"));
-""".}
+
+  for (var i = 0; i < arguments.length; ++i) {
+    var x = `toJSStr`(arguments[i]);
+    `node`.appendChild(document.createTextNode(x));
+  }
+  `node`.appendChild(document.createElement("br"));""".}
 
 # Arithmetic:
 proc checkOverflowInt(a: int) {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`a` > 2147483647 || `a` < -2147483648) {
-  `raiseOverflow`();
-}
-"""
+
+  if (`a` > 2147483647 || `a` < -2147483648) {
+    `raiseOverflow`();
+  }"""
 
 proc addInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` + `b`;
-`checkOverflowInt`(result);
-return result;
-"""
+
+  var result = `a` + `b`;
+  `checkOverflowInt`(result);
+  return result;"""
 
 proc subInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` - `b`;
-`checkOverflowInt`(result);
-return result;
-"""
+
+  var result = `a` - `b`;
+  `checkOverflowInt`(result);
+  return result;"""
 
 proc mulInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` * `b`;
-`checkOverflowInt`(result);
-return result;
-"""
+
+  var result = `a` * `b`;
+  `checkOverflowInt`(result);
+  return result;"""
 
 proc divInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`b` == 0) {
-  `raiseDivByZero`();
-}
-if (`b` == -1 && `a` == 2147483647) {
-  `raiseOverflow`();
-}
-return Math.trunc(`a` / `b`);
-"""
+
+  if (`b` == 0) {
+    `raiseDivByZero`();
+  }
+  if (`b` == -1 && `a` == 2147483647) {
+    `raiseOverflow`();
+  }
+  return Math.trunc(`a` / `b`);"""
 
 proc modInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`b` == 0) {
-  `raiseDivByZero`();
-}
-if (`b` == -1 && `a` == 2147483647) {
-  `raiseOverflow`();
-}
-return Math.trunc(`a` % `b`);
-"""
+
+  if (`b` == 0) {
+    `raiseDivByZero`();
+  }
+  if (`b` == -1 && `a` == 2147483647) {
+    `raiseOverflow`();
+  }
+  return Math.trunc(`a` % `b`);"""
 
 proc checkOverflowInt64(a: int) {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`a` > 9223372036854775807 || `a` < -9223372036854775808) {
-  `raiseOverflow`();
-}
-"""
+
+  if (`a` > 9223372036854775807 || `a` < -9223372036854775808) {
+    `raiseOverflow`();
+  }"""
 
 proc addInt64(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` + `b`;
-`checkOverflowInt64`(result);
-return result;
-"""
+
+  var result = `a` + `b`;
+  `checkOverflowInt64`(result);
+  return result;"""
 
 proc subInt64(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` - `b`;
-`checkOverflowInt64`(result);
-return result;
-"""
+
+  var result = `a` - `b`;
+  `checkOverflowInt64`(result);
+  return result;"""
 
 proc mulInt64(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-var result = `a` * `b`;
-`checkOverflowInt64`(result);
-return result;
-"""
+
+  var result = `a` * `b`;
+  `checkOverflowInt64`(result);
+  return result;"""
 
 proc divInt64(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`b` == 0) {
-  `raiseDivByZero`();
-}
-if (`b` == -1 && `a` == 9223372036854775807) {
-  `raiseOverflow`();
-}
-return Math.trunc(`a` / `b`);
-"""
+
+  if (`b` == 0) {
+    `raiseDivByZero`();
+  }
+  if (`b` == -1 && `a` == 9223372036854775807) {
+    `raiseOverflow`();
+  }
+  return Math.trunc(`a` / `b`);"""
 
 proc modInt64(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
-if (`b` == 0) {
-  `raiseDivByZero`();
-}
-if (`b` == -1 && `a` == 9223372036854775807) {
-  `raiseOverflow`();
-}
-return Math.trunc(`a` % `b`);
-"""
+
+  if (`b` == 0) {
+    `raiseDivByZero`();
+  }
+  if (`b` == -1 && `a` == 9223372036854775807) {
+    `raiseOverflow`();
+  }
+  return Math.trunc(`a` % `b`);"""
 
 proc negInt(a: int): int {.compilerproc.} =
   result = a*(-1)
@@ -592,17 +588,17 @@ proc nimCopyAux(dest, src: JSRef, n: ptr TNimNode) {.compilerproc.} =
     asm """`dest`[`n`.offset] = nimCopy(`dest`[`n`.offset], `src`[`n`.offset], `n`.typ);"""
   of nkList:
     asm """
-for (var i = 0; i < `n`.sons.length; i++) {
-  nimCopyAux(`dest`, `src`, `n`.sons[i]);
-}
-"""
+
+  for (var i = 0; i < `n`.sons.length; i++) {
+    nimCopyAux(`dest`, `src`, `n`.sons[i]);
+  }"""
   of nkCase:
     asm """
-`dest`[`n`.offset] = nimCopy(`dest`[`n`.offset], `src`[`n`.offset], `n`.typ);
-for (var i = 0; i < `n`.sons.length; ++i) {
-  nimCopyAux(`dest`, `src`, `n`.sons[i][1]);
-}
-"""
+
+  `dest`[`n`.offset] = nimCopy(`dest`[`n`.offset], `src`[`n`.offset], `n`.typ);
+  for (var i = 0; i < `n`.sons.length; ++i) {
+    nimCopyAux(`dest`, `src`, `n`.sons[i][1]);
+  }"""
 
 proc nimCopy(dest, src: JSRef, ti: PNimType): JSRef =
   case ti.kind
@@ -613,18 +609,18 @@ proc nimCopy(dest, src: JSRef, ti: PNimType): JSRef =
       asm "`result` = [`src`[0], `src`[1]];"
   of tySet:
     asm """
-if (`dest` === null || `dest` === undefined) {
-  `dest` = {};
-} else {
-  for (var key in `dest`) {
-    delete `dest`[key];
+
+  if (`dest` === null || `dest` === undefined) {
+    `dest` = {};
+  } else {
+    for (var key in `dest`) {
+      delete `dest`[key];
+    }
   }
-}
-for (var key in `src`) {
-  `dest`[key] = `src`[key];
-}
-`result` = `dest`;
-"""
+  for (var key in `src`) {
+    `dest`[key] = `src`[key];
+  }
+  `result` = `dest`;"""
   of tyTuple, tyObject:
     if ti.base != nil: result = nimCopy(dest, src, ti.base)
     elif ti.kind == tyObject:
@@ -636,14 +632,30 @@ for (var key in `src`) {
     # In order to prevent a type change (TypedArray -> Array) and to have better copying performance,
     # arrays constructors are considered separately
     asm """
-if(ArrayBuffer.isView(`src`)) {
-  if(`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
-    `dest` = new `src`.constructor(`src`);
+
+  if(ArrayBuffer.isView(`src`)) {
+    if(`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
+      `dest` = new `src`.constructor(`src`);
+    } else {
+      `dest`.set(`src`, 0);
+    }
+    `result` = `dest`;
   } else {
-    `dest`.set(`src`, 0);
-  }
-  `result` = `dest`;
-} else {
+    if (`src` === null) {
+      `result` = null;
+    } else {
+      if (`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
+        `dest` = new Array(`src`.length);
+      }
+      `result` = `dest`;
+      for (var i = 0; i < `src`.length; ++i) {
+        `result`[i] = nimCopy(`result`[i], `src`[i], `ti`.base);
+      }
+    }
+  }"""
+  of tySequence, tyOpenArray:
+    asm """
+
   if (`src` === null) {
     `result` = null;
   } else {
@@ -654,29 +666,13 @@ if(ArrayBuffer.isView(`src`)) {
     for (var i = 0; i < `src`.length; ++i) {
       `result`[i] = nimCopy(`result`[i], `src`[i], `ti`.base);
     }
-  }
-}
-"""
-  of tySequence, tyOpenArray:
-    asm """
-if (`src` === null) {
-  `result` = null;
-} else {
-  if (`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
-    `dest` = new Array(`src`.length);
-  }
-  `result` = `dest`;
-  for (var i = 0; i < `src`.length; ++i) {
-    `result`[i] = nimCopy(`result`[i], `src`[i], `ti`.base);
-  }
-}
-"""
+  }"""
   of tyString:
     asm """
-if (`src` !== null) {
-  `result` = `src`.slice(0);
-}
-"""
+
+  if (`src` !== null) {
+    `result` = `src`.slice(0);
+  }"""
   else:
     result = src
 
@@ -697,11 +693,10 @@ proc genericReset(x: JSRef, ti: PNimType): JSRef {.compilerproc.} =
     asm """`result` = [];"""
   of tyArrayConstr, tyArray:
     asm """
-`result` = new Array(`x`.length);
-for (var i = 0; i < `x`.length; ++i) {
-  `result`[i] = genericReset(`x`[i], `ti`.base);
-}
-"""
+  `result` = new Array(`x`.length);
+  for (var i = 0; i < `x`.length; ++i) {
+    `result`[i] = genericReset(`x`[i], `ti`.base);
+  }"""
   else:
     discard
 
@@ -709,12 +704,12 @@ proc arrayConstr(len: int, value: JSRef, typ: PNimType): JSRef {.
                 asmNoStackFrame, compilerproc.} =
   # types are fake
   asm """
-var result = new Array(`len`);
-for (var i = 0; i < `len`; ++i) {
-  result[i] = nimCopy(null, `value`, `typ`);
-}
-return result;
-"""
+
+  var result = new Array(`len`);
+  for (var i = 0; i < `len`; ++i) {
+    result[i] = nimCopy(null, `value`, `typ`);
+  }
+  return result;"""
 
 proc chckIndx(i, a, b: int): int {.compilerproc.} =
   if i >= a and i <= b: return i
@@ -821,4 +816,4 @@ proc nimParseBiggestFloat(s: string, number: var BiggestFloat, start: int): int 
   result = i - start
 
 
-##
+###
