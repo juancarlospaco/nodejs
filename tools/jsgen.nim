@@ -1001,7 +1001,7 @@ proc generateHeader(p: PProc, typ: PType): Rope =
     if mapType(param.typ) == etyBaseIndex:
       result.add(", ")
       result.add(name)
-      result.add("_Idx")
+      result.add("_index")
 
 proc countJsParams(typ: PType): int =
   for i in 1..<typ.n.len:
@@ -1431,7 +1431,7 @@ proc genSym(p: PProc, n: PNode, r: var TCompRes) =
           r.res = "$1[1]" % [s.loc.r]
       else:
         r.address = s.loc.r
-        r.res = s.loc.r & "_Idx"
+        r.res = s.loc.r & "_index"
     elif isIndirect(s):
       r.res = "$1[0]" % [s.loc.r]
     else:
@@ -1462,7 +1462,7 @@ proc genSym(p: PProc, n: PNode, r: var TCompRes) =
       internalError(p.config, n.info, "symbol has no generated name: " & s.name.s)
     if mapType(p, s.typ) == etyBaseIndex:
       r.address = s.loc.r
-      r.res = s.loc.r & "_Idx"
+      r.res = s.loc.r & "_index"
     else:
       r.res = s.loc.r
   r.kind = resVal
@@ -1805,7 +1805,7 @@ proc genVarInit(p: PProc, v: PSym, n: PNode) =
     if not isIndirect(v) and
       v.typ.kind in {tyVar, tyPtr, tyLent, tyRef, tyOwned} and mapType(p, v.typ) == etyBaseIndex:
       lineF(p, "var $1 = null;$n", [varName])
-      lineF(p, "var $1_Idx = 0;$n", [varName])
+      lineF(p, "var $1_index = 0;$n", [varName])
     else:
       line(p, runtimeFormat(varCode & " = $3;$n", [returnType, varName, createVar(p, v.typ, isIndirect(v))]))
   else:
@@ -1821,7 +1821,7 @@ proc genVarInit(p: PProc, v: PSym, n: PNode) =
       let targetBaseIndex = {sfAddrTaken, sfGlobal} * v.flags == {}
       if a.typ == etyBaseIndex:
         if targetBaseIndex:
-          line(p, runtimeFormat(varCode & " = $3, $2_Idx = $4;$n",
+          line(p, runtimeFormat(varCode & " = $3, $2_index = $4;$n",
                    [returnType, v.loc.r, a.address, a.res]))
         else:
           if isIndirect(v):
@@ -1836,7 +1836,7 @@ proc genVarInit(p: PProc, v: PSym, n: PNode) =
           let arrai = [tmp, a.res, v.loc.r]
           lineF(p, "var $1 = $2;$n", arrai)
           lineF(p, "var $3 = $1[0];$n", arrai)
-          lineF(p, "var $3_Idx = $1[1];$n", arrai)
+          lineF(p, "var $3_index = $1[1];$n", arrai)
         else:
           line(p, runtimeFormat(varCode & " = $3;$n", [returnType, v.loc.r, a.res]))
       return
@@ -2371,7 +2371,7 @@ proc genReturnStmt(p: PProc, n: PNode) =
     genStmt(p, n[0])
   else:
     genLineDir(p, n)
-  lineF(p, "break BeforeRet;$n", [])
+  lineF(p, "break BeforeReturn;$n", [])
 
 proc frameCreate(p: PProc; procname, filename: Rope): Rope =
   const frameFmt =
@@ -2391,7 +2391,7 @@ proc genProcBody(p: PProc, prc: PSym): Rope =
   else:
     result = nil
   if p.beforeRetNeeded:
-    result.add p.indentLine(~"BeforeRet: do {$n")
+    result.add p.indentLine(~"BeforeReturn: do {$n")
     result.add p.body
     result.add p.indentLine(~"} while (false);$n")
   else:
@@ -2434,15 +2434,15 @@ proc genProc(oldProc: PProc, prc: PSym): Rope =
         mapType(p, resultSym.typ) == etyBaseIndex
     if returnAddress:
       resultAsgn = p.indentLine(("var $# = null;$n") % [mname])
-      resultAsgn.add p.indentLine("var $#_Idx = 0;$n" % [mname])
+      resultAsgn.add p.indentLine("var $#_index = 0;$n" % [mname])
     else:
       let resVar = createVar(p, resultSym.typ, isIndirect(resultSym))
       resultAsgn = p.indentLine(("var $# = $#;$n") % [mname, resVar])
     gen(p, prc.ast[resultPos], a)
     if returnAddress:
-      returnStmt = "return [$#, $#];$n" % [a.address, a.res]
+      returnStmt = "return [$#, $#];" % [a.address, a.res]
     else:
-      returnStmt = "return $#;$n" % [a.res]
+      returnStmt = "return $#;" % [a.res]
 
   var transformedBody = transformBody(p.module.graph, p.module.idgen, prc, cache = false)
   if sfInjectDestructors in prc.flags:
@@ -2476,10 +2476,9 @@ proc genProc(oldProc: PProc, prc: PSym): Rope =
       # references will end up calling the reloaded code.
       var thunkName = name
       name = name & "IMLP"
-      result.add("\Lfunction $#() { return $#.apply(this, arguments); }$n" %
-                 [thunkName, name])
+      result.add("$nfunction $#() { return $#.apply(this, arguments); }$n$n" % [thunkName, name])
 
-    def = "\Lfunction $#($#) {$n$#$#$#$#$#" %
+    def = "$nfunction $#($#) {$n$#$#$#$#$#" %
             [ name,
               header,
               optionalLine(p.globals),
@@ -2490,7 +2489,7 @@ proc genProc(oldProc: PProc, prc: PSym): Rope =
 
   dec p.extraIndent
   result.add p.indentLine(def)
-  result.add p.indentLine(~"}$n")
+  result.add p.indentLine(~"}$n$n")
 
   #if gVerbosity >= 3:
   #  echo "END   generated code for: " & prc.name.s
@@ -2848,3 +2847,6 @@ proc myOpen(graph: ModuleGraph; s: PSym; idgen: IdGenerator): PPassContext =
   result.idgen = idgen
 
 const JSgenPass* = makePass(myOpen, myProcess, myClose)
+
+
+#
