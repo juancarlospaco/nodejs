@@ -1,11 +1,4 @@
-#
-#
-#            Nim's Runtime Library
-#        (c) Copyright 2015 Andreas Rumpf
-#
-#    See the file "copying.txt", included in this
-#    distribution, for details about the copyright.
-#
+# https://github.com/nim-lang/Nim/pull/19958#issuecomment-1173733831
 
 include system/indexerrors
 import std/private/miscdollars
@@ -403,11 +396,11 @@ return true;
 when defined(kwin):
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
-var buffer = "";
-for (var i = 0; i < arguments.length; ++i) {
-  buffer += `toJSStr`(arguments[i]);
-}
-print(buffer);
+  var buffer = "";
+  for (var i = 0; i < arguments.length; ++i) {
+    buffer += `toJSStr`(arguments[i]);
+  }
+  print(buffer);
 """
 
 elif not defined(nimOldEcho):
@@ -415,11 +408,11 @@ elif not defined(nimOldEcho):
 
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
-var buffer = "";
-for (var i = 0; i < arguments.length; ++i) {
-  buffer += `toJSStr`(arguments[i]);
-}
-console.log(buffer);
+  var buffer = "";
+  for (var i = 0; i < arguments.length; ++i) {
+    buffer += `toJSStr`(arguments[i]);
+  }
+  console.log(buffer);
 """
 
 else:
