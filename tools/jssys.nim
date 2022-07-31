@@ -1,4 +1,11 @@
-# https://github.com/nim-lang/Nim/pull/19958#issuecomment-1173733831
+#
+#
+#            Nim's Runtime Library
+#        (c) Copyright 2015 Andreas Rumpf
+#
+#    See the file "copying.txt", included in this
+#    distribution, for details about the copyright.
+#
 
 include system/indexerrors
 import std/private/miscdollars
@@ -122,14 +129,14 @@ proc unhandledException(e: ref Exception) {.
   add(buf, "]\n")
   when NimStackTrace:
     add(buf, rawWriteStackTrace())
-  let bufer = cstring(buf)
+  let cbuf = cstring(buf)
   when NimStackTrace:
     framePtr = nil
   {.emit: """
 if (typeof(Error) !== "undefined") {
-  throw new Error(`bufer`);
+  throw new Error(`cbuf`);
 } else {
-  throw `bufer`;
+  throw `cbuf`;
 }
 """.}
 
@@ -190,37 +197,37 @@ for (var i = 0; i < `c`.length; ++i) {
   result[i] = `c`.charCodeAt(i);
 }
 return result;
-  """.}
+""".}
 
 proc cstrToNimstr(c: cstring): string {.asmNoStackFrame, compilerproc.} =
   {.emit: """
-var lengt = `c`.length;
+var lengt  = `c`.length;
 var result = new Array(lengt);
-var resultIndex = 0;
+var r = 0;
 for (var i = 0; i < lengt; ++i) {
-  var charCode = `c`.charCodeAt(i);
-  if (charCode < 128) {
-    result[resultIndex] = charCode;
+  var ch = `c`.charCodeAt(i);
+  if (ch < 128) {
+    result[r] = ch;
   } else {
-    if (charCode < 2048) {
-      result[resultIndex] = (charCode >> 6) | 192;
+    if (ch < 2048) {
+      result[r] = (ch >> 6) | 192;
     } else {
-      if (charCode < 55296 || charCode >= 57344) {
-        result[resultIndex] = (charCode >> 12) | 224;
+      if (ch < 55296 || ch >= 57344) {
+        result[r] = (ch >> 12) | 224;
       } else {
-          ++i;
-          charCode = 65536 + (((charCode & 1023) << 10) | (`c`.charCodeAt(i) & 1023));
-          result[resultIndex] = (charCode >> 18) | 240;
-          ++resultIndex;
-          result[resultIndex] = ((charCode >> 12) & 63) | 128;
+        ++i;
+        ch = 65536 + (((ch & 1023) << 10) | (`c`.charCodeAt(i) & 1023));
+        result[r] = (ch >> 18) | 240;
+        ++r;
+        result[r] = ((ch >> 12) & 63) | 128;
       }
-      ++resultIndex;
-      result[resultIndex] = ((charCode >> 6) & 63) | 128;
+      ++r;
+      result[r] = ((ch >> 6) & 63) | 128;
     }
-    ++resultIndex;
-    result[resultIndex] = (charCode & 63) | 128;
+    ++r;
+    result[r] = (ch & 63) | 128;
   }
-  ++resultIndex;
+  ++r;
 }
 return result;
 """.}
@@ -271,7 +278,7 @@ proc SetCard(a: int): int {.compilerproc, asmNoStackFrame.} =
   # argument type is a fake
   asm """
 var result = 0;
-for (var item in `a`) {
+for (var elem in `a`) {
   ++result;
 }
 return result;
@@ -279,13 +286,13 @@ return result;
 
 proc SetEq(a, b: int): bool {.compilerproc, asmNoStackFrame.} =
   asm """
-for (var item in `a`) {
-  if (!`b`[item]) {
+for (var elem in `a`) {
+  if (!`b`[elem]) {
     return false;
   }
 }
-for (var item in `b`) {
-  if (!`a`[item]) {
+for (var elem in `b`) {
+  if (!`a`[elem]) {
     return false;
   }
 }
@@ -294,8 +301,8 @@ return true;
 
 proc SetLe(a, b: int): bool {.compilerproc, asmNoStackFrame.} =
   asm """
-for (var item in `a`) {
-  if (!`b`[item]) {
+for (var elem in `a`) {
+  if (!`b`[elem]) {
     return false;
   }
 }
@@ -308,9 +315,9 @@ proc SetLt(a, b: int): bool {.compilerproc.} =
 proc SetMul(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
 var result = {};
-for (var item in `a`) {
-  if (`b`[item]) {
-    result[item] = true;
+for (var elem in `a`) {
+  if (`b`[elem]) {
+    result[elem] = true;
   }
 }
 return result;
@@ -319,11 +326,11 @@ return result;
 proc SetPlus(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
 var result = {};
-for (var item in `a`) {
-  result[item] = true;
+for (var elem in `a`) {
+  result[elem] = true;
 }
-for (var item in `b`) {
-  result[item] = true;
+for (var elem in `b`) {
+  result[elem] = true;
 }
 return result;
 """
@@ -331,9 +338,9 @@ return result;
 proc SetMinus(a, b: int): int {.compilerproc, asmNoStackFrame.} =
   asm """
 var result = {};
-for (var item in `a`) {
-  if (!`b`[item]) {
-    result[item] = true;
+for (var elem in `a`) {
+  if (!`b`[elem]) {
+    result[elem] = true;
   }
 }
 return result;
@@ -396,11 +403,11 @@ return true;
 when defined(kwin):
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
-var bufer = "";
+var buffer = "";
 for (var i = 0; i < arguments.length; ++i) {
-  bufer += `toJSStr`(arguments[i]);
+  buffer += `toJSStr`(arguments[i]);
 }
-print(bufer);
+print(buffer);
 """
 
 elif not defined(nimOldEcho):
@@ -408,11 +415,11 @@ elif not defined(nimOldEcho):
 
   proc rawEcho {.compilerproc, asmNoStackFrame.} =
     asm """
-var bufer = "";
+var buffer = "";
 for (var i = 0; i < arguments.length; ++i) {
-  bufer += `toJSStr`(arguments[i]);
+  buffer += `toJSStr`(arguments[i]);
 }
-console.log(bufer);
+console.log(buffer);
 """
 
 else:
@@ -433,8 +440,8 @@ else:
       raise newException(IOError, "<body> element does not exist yet!")
     {.emit: """
 for (var i = 0; i < arguments.length; ++i) {
-  var bufer = `toJSStr`(arguments[i]);
-  `node`.appendChild(document.createTextNode(bufer));
+  var x = `toJSStr`(arguments[i]);
+  `node`.appendChild(document.createTextNode(x));
 }
 `node`.appendChild(document.createElement("br"));
 """.}
@@ -444,7 +451,8 @@ proc checkOverflowInt(a: int) {.asmNoStackFrame, compilerproc.} =
   asm """
 if (`a` > 2147483647 || `a` < -2147483648) {
   `raiseOverflow`();
-}"""
+}
+"""
 
 proc addInt(a, b: int): int {.asmNoStackFrame, compilerproc.} =
   asm """
@@ -578,7 +586,9 @@ include "system/hti"
 
 proc isFatPointer(ti: PNimType): bool =
   # This has to be consistent with the code generator!
-  return ti.base.kind notin {tyObject, tyArray, tyArrayConstr, tyTuple, tyOpenArray, tySet, tyVar, tyRef, tyPtr}
+  return ti.base.kind notin {tyObject,
+    tyArray, tyArrayConstr, tyTuple,
+    tyOpenArray, tySet, tyVar, tyRef, tyPtr}
 
 proc nimCopy(dest, src: JSRef, ti: PNimType): JSRef {.compilerproc.}
 
@@ -625,28 +635,16 @@ for (var key in `src`) {
   of tyTuple, tyObject:
     if ti.base != nil: result = nimCopy(dest, src, ti.base)
     elif ti.kind == tyObject:
-      asm """
-if (`dest` === null || `dest` === undefined) {
-  `result` = {m_type: `ti`};
-} else {
-  `result` = `dest`;
-};
-"""
+      asm "`result` = (`dest` === null || `dest` === undefined) ? {m_type: `ti`} : `dest`;"
     else:
-      asm """
-if (`dest` === null || `dest` === undefined) {
-  `result` = {};
-} else {
-  `result` = `dest`;
-}
-"""
+      asm "`result` = (`dest` === null || `dest` === undefined) ? {} : `dest`;"
     nimCopyAux(result, src, ti.node)
   of tyArrayConstr, tyArray:
     # In order to prevent a type change (TypedArray -> Array) and to have better copying performance,
     # arrays constructors are considered separately
     asm """
-if (ArrayBuffer.isView(`src`)) {
-  if (`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
+if(ArrayBuffer.isView(`src`)) {
+  if(`dest` === null || `dest` === undefined || `dest`.length != `src`.length) {
     `dest` = new `src`.constructor(`src`);
   } else {
     `dest`.set(`src`, 0);
@@ -756,7 +754,20 @@ proc addChar(x: string, c: char) {.compilerproc, asmNoStackFrame.} =
 
 {.pop.}
 
-const IdentChars = {'a'..'z', 'A'..'Z', '0'..'9', '_'}
+proc tenToThePowerOf(b: int): BiggestFloat =
+  # xxx deadcode
+  var b = b
+  var a = 10.0
+  result = 1.0
+  while true:
+    if (b and 1) == 1:
+      result = result * a
+    b = b shr 1
+    if b == 0: break
+    a = a * a
+
+const
+  IdentChars = {'a'..'z', 'A'..'Z', '0'..'9', '_'}
 
 
 proc parseFloatNative(a: string): float =
@@ -815,3 +826,6 @@ proc nimParseBiggestFloat(s: string, number: var BiggestFloat, start: int): int 
       eatUnderscores()
   number = parseFloatNative(buf)
   result = i - start
+
+
+##
