@@ -11,3 +11,4 @@ $ ./bin/nim --version
 ```
 
 - See `./bin/nim` for your newly improved Nim compiler binary.
+- Implemented on year 2022, Nim commit `3fef2fd52c86ba922187ca03026b09ceb70b5d3d` and above.
