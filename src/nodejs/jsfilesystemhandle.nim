@@ -1,6 +1,8 @@
 ## - File system IO API for the browser. Works only over HTTPS.
 ## - https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API
 ## - Experimental, see https://caniuse.com/mdn-api_filesystem
+
+import std/asyncjs
 from std/jsffi import JsObject
 
 type
