@@ -44,6 +44,7 @@
 - :heavy_check_mark: [http2](https://nodejs.org/api/http2.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttp2
 - :heavy_check_mark: [worker_threads](https://nodejs.org/api/worker_threads.html) :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsworker_threads
 - :heavy_check_mark: WebSockets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebsockets
+- :heavy_check_mark: File IO API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfilesystemhandle
 - :heavy_check_mark: JS Classes :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsclasses
 - :heavy_check_mark: Type-Safe DotEnv :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdotenv
 - :heavy_check_mark: Sets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jssets
@@ -252,15 +253,15 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@YanMu2020](https://github.com/YanMu2020 '2022-04-04')
 :star: [@haikyuu](https://github.com/haikyuu '2022-04-09')
 :star: [@matkuki](https://github.com/matkuki '2022-04-14')
-:star: [@eqf0](https://github.com/eqf0 '2022-04-26')	
-:star: [@nkot56297](https://github.com/nkot56297 '2022-05-15')	
-:star: [@adam-acosta](https://github.com/adam-acosta '2022-05-20')	
-:star: [@uly-s](https://github.com/uly-s '2022-05-30')	
-:star: [@Comamoca](https://github.com/Comamoca '2022-06-04')	
-:star: [@bsouthern](https://github.com/bsouthern '2022-06-24')	
-:star: [@reubano](https://github.com/reubano '2022-06-26')	
-:star: [@darkmusic](https://github.com/darkmusic '2022-06-29')	
-:star: [@Geksan](https://github.com/Geksan '2022-07-01')	
-:star: [@lzehrung](https://github.com/lzehrung '2022-07-24')	
-:star: [@jmgomez](https://github.com/jmgomez '2022-08-17')	
-:star: [@ritmos](https://github.com/ritmos '2022-08-17')	
+:star: [@eqf0](https://github.com/eqf0 '2022-04-26')
+:star: [@nkot56297](https://github.com/nkot56297 '2022-05-15')
+:star: [@adam-acosta](https://github.com/adam-acosta '2022-05-20')
+:star: [@uly-s](https://github.com/uly-s '2022-05-30')
+:star: [@Comamoca](https://github.com/Comamoca '2022-06-04')
+:star: [@bsouthern](https://github.com/bsouthern '2022-06-24')
+:star: [@reubano](https://github.com/reubano '2022-06-26')
+:star: [@darkmusic](https://github.com/darkmusic '2022-06-29')
+:star: [@Geksan](https://github.com/Geksan '2022-07-01')
+:star: [@lzehrung](https://github.com/lzehrung '2022-07-24')
+:star: [@jmgomez](https://github.com/jmgomez '2022-08-17')
+:star: [@ritmos](https://github.com/ritmos '2022-08-17')
