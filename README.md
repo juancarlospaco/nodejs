@@ -63,6 +63,7 @@
 - :heavy_check_mark: Internationalization API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsintl
 - :heavy_check_mark: Payments API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jspayments
 - :heavy_check_mark: QR-Codes and Bar-Codes API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbarcodes
+- :heavy_check_mark: Sanitizer API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jssanitizer
 - :heavy_check_mark: Regex utils :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsreutils
 - :heavy_check_mark: HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jshttpclient
 - :heavy_check_mark: Async HttpClient for JavaScript :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsasynchttpclient
