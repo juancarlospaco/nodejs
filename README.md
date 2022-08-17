@@ -49,6 +49,7 @@
 - :heavy_check_mark: USB 3.0 API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebusb
 - :heavy_check_mark: Share API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsshare
 - :heavy_check_mark: Eyedropper API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jseyedropper
+- :heavy_check_mark: Speech Synthesis API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsspeechsynthesis
 - :heavy_check_mark: JS Classes :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsclasses
 - :heavy_check_mark: Type-Safe DotEnv :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdotenv
 - :heavy_check_mark: Sets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jssets
