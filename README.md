@@ -46,6 +46,7 @@
 - :heavy_check_mark: WebSockets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebsockets
 - :heavy_check_mark: File IO API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsfilesystemhandle
 - :heavy_check_mark: Battery API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbattery
+- :heavy_check_mark: USB 3.0 API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebusb
 - :heavy_check_mark: JS Classes :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsclasses
 - :heavy_check_mark: Type-Safe DotEnv :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdotenv
 - :heavy_check_mark: Sets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jssets
