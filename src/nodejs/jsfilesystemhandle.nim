@@ -1,4 +1,4 @@
-## - File system IO API for the browser. Works only over HTTPS.
+## - File system IO API for the browser. Works only over HTTPS (not localhost).
 ## - https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API
 ## - Experimental, see https://caniuse.com/mdn-api_filesystem
 
