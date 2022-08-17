@@ -1,6 +1,8 @@
 ## - Share API for the browser. Works only over HTTPS (not localhost).
 ## - https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API
 ## - Experimental, see https://caniuse.com/web-share
+##
+## .. image:: https://raw.githubusercontent.com/juancarlospaco/nodejs/main/docs/nodejs/jsshare.jpg
 
 func canShare*(): bool {.importjs: "Navigator.$1()".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare
