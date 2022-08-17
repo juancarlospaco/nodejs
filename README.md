@@ -262,3 +262,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@darkmusic](https://github.com/darkmusic '2022-06-29')	
 :star: [@Geksan](https://github.com/Geksan '2022-07-01')	
 :star: [@lzehrung](https://github.com/lzehrung '2022-07-24')	
+:star: [@jmgomez](https://github.com/jmgomez '2022-08-17')	
