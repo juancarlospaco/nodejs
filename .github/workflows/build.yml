@@ -82,13 +82,13 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Test GUI
-      shell: bash
-      run: |
-        cd tests/
-        for i in *.nim; do
-          $CMD $i
-        done
+    # - name: Test GUI
+    #   shell: bash
+    #   run: |
+    #     cd tests/
+    #     for i in *.nim; do
+    #       $CMD $i
+    #     done
     # TODO: check
     #     for i in *.nim; do
     #       $CMD2 $i
