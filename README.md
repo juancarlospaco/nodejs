@@ -52,6 +52,7 @@
 - :heavy_check_mark: Speech Synthesis API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsspeechsynthesis
 - :heavy_check_mark: Bluetooth API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsbluetooth
 - :heavy_check_mark: Gamepad API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsgamepad
+- :heavy_check_mark: Web Video Text Tracks Subtitles API :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jswebvtt
 - :heavy_check_mark: JS Classes :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsclasses
 - :heavy_check_mark: Type-Safe DotEnv :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jsdotenv
 - :heavy_check_mark: Sets :arrow_right: https://juancarlospaco.github.io/nodejs/nodejs/jssets
@@ -273,4 +274,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@lzehrung](https://github.com/lzehrung '2022-07-24')
 :star: [@jmgomez](https://github.com/jmgomez '2022-08-17')
 :star: [@ritmos](https://github.com/ritmos '2022-08-17')
-:star: [@colias-palaeno](https://github.com/colias-palaeno '2022-08-18')	
+:star: [@colias-palaeno](https://github.com/colias-palaeno '2022-08-18')
