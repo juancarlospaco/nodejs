@@ -19,13 +19,13 @@ func newURL*(input: cstring; base: cstring or URL): URL {.importjs: "(new URL(#,
 func newURLSearchParams*(input: cstring or JsObject or openArray[cstring]): URLSearchParams {.importjs: "(new URLSearchParams(#))".}
   ## https://nodejs.org/api/url.html#url_new_urlsearchparams
 
-func toJSON*(self: URL): cstring {.importjs: "#.toJSON()".}
+func toJSON*(self: URL): cstring {.importjs: "(#.toJSON() || '')".}
   ## https://nodejs.org/api/url.html#url_url_tojson
 
-func format*(self: URL; options: JsObject): cstring {.importjs: "url.$1(#)".}
+func format*(self: URL; options: JsObject): cstring {.importjs: "(url.$1(#) || '')".}
   ## https://nodejs.org/api/url.html#url_url_format_url_options
 
-func urlToHttpOptions*(self: URL): JsObject {.importjs: "url.$1(#)".}
+func urlToHttpOptions*(self: URL): JsObject {.importjs: "(url.$1(#) || {})".}
   ## https://nodejs.org/api/url.html#url_url_urltohttpoptions_url
 
 func add*(self: URLSearchParams; name: cstring, value: cstring) {.importjs: "#.append(#, #)".}
@@ -34,19 +34,19 @@ func add*(self: URLSearchParams; name: cstring, value: cstring) {.importjs: "#.a
 func delete*(self: URLSearchParams; name: cstring) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_delete_name
 
-func get*(self: URLSearchParams; name: cstring): cstring {.importjs: "#.$1(#)".}
+func get*(self: URLSearchParams; name: cstring): cstring {.importjs: "(#.$1(#) || '')".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_get_name
 
-func getAll*(self: URLSearchParams; name: cstring): seq[cstring] {.importjs: "#.$1(#)".}
+func getAll*(self: URLSearchParams; name: cstring): seq[cstring] {.importjs: "(#.$1(#) || [])".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_getall_name
 
-func hasKey*(self: URLSearchParams; name: cstring): bool {.importjs: "#.has(#)".}
+func hasKey*(self: URLSearchParams; name: cstring): bool {.importjs: "(#.has(#) || false)".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_has_name
 
-func keys*(self: URLSearchParams): seq[cstring] {.importjs: "Array.from(#.$1())".}
+func keys*(self: URLSearchParams): seq[cstring] {.importjs: "(Array.from(#.$1()) || [])".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_keys
 
-func values*(self: URLSearchParams): seq[cstring] {.importjs: "Array.from(#.$1())".}
+func values*(self: URLSearchParams): seq[cstring] {.importjs: "(Array.from(#.$1()) || [])".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_values
 
 func sets*(self: URLSearchParams; name: cstring, value: cstring) {.importjs: "#.set(#, #)".}
@@ -55,7 +55,7 @@ func sets*(self: URLSearchParams; name: cstring, value: cstring) {.importjs: "#.
 func sort*(self: URLSearchParams) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/url.html#url_urlsearchparams_sort
 
-func toCstring*(self: URL or URLSearchParams): cstring {.importjs: "#.toString()".}
+func toCstring*(self: URL or URLSearchParams): cstring {.importjs: "(#.toString() || '')".}
   ## https://nodejs.org/api/url.html#url_url_tostring
   ## https://nodejs.org/api/url.html#url_urlsearchparams_tostring
 
@@ -63,13 +63,13 @@ func `$`*(self: URL or URLSearchParams): string = $toCstring(self)
 
 func len*(self: URL): int = len($toCstring(self))
 
-func domainToASCII*(domain: cstring): cstring {.importjs: "url.$1(#)".}
+func domainToASCII*(domain: cstring): cstring {.importjs: "(url.$1(#) || '')".}
   ## https://nodejs.org/api/url.html#url_url_domaintoascii_domain
 
-func domainToUnicode*(domain: cstring): cstring {.importjs: "url.$1(#)".}
+func domainToUnicode*(domain: cstring): cstring {.importjs: "(url.$1(#) || '')".}
   ## https://nodejs.org/api/url.html#url_url_domaintounicode_domain
 
-func fileURLToPath*(domain: cstring or URL): cstring {.importjs: "url.$1(#)".}
+func fileURLToPath*(domain: cstring or URL): cstring {.importjs: "(url.$1(#) || '')".}
   ## https://nodejs.org/api/url.html#url_url_fileurltopath_url
 
 
