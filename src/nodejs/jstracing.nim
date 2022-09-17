@@ -18,5 +18,5 @@ func disable*(self: Tracing) {.importjs: "#.$1()".}
 func enable*(self: Tracing) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/tracing.html#tracing_tracing_enable
 
-func getEnabledCategories*(): cstring {.importjs: "trace_events.$1()".}
+func getEnabledCategories*(): cstring {.importjs: "(trace_events.$1() || '')".}
   ## https://nodejs.org/api/tracing.html#tracing_trace_events_getenabledcategories
