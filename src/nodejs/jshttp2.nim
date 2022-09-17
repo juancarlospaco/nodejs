@@ -135,7 +135,7 @@ func ends*(self: Http2ServerResponse): auto {.importjs: "#.end()", discardable.}
 func getHeader*(self: Http2ServerResponse; name: cstring): auto {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http2.html#http2_response_getheader_name
 
-func removeHeader*(self: Http2ServerResponse; name: cstring): bool {.importjs: "#.$1(#)".}
+func removeHeader*(self: Http2ServerResponse; name: cstring): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/http2.html#http2_response_removeheader_name
 
 func setHeader*(self: Http2ServerResponse; name: cstring; value: auto): auto {.importjs: "#.$1(#, #)".}
@@ -144,14 +144,14 @@ func setHeader*(self: Http2ServerResponse; name: cstring; value: auto): auto {.i
 func setTimeout*[T](self: Http2Server or Http2SecureServer or Http2Stream or Http2ServerRequest or Http2ServerResponse; timeout: cint; callback: T): Http2SecureServer {.importjs: "#.$1(#, #)", discardable.}
   ## https://nodejs.org/api/http2.html#http2_http2session_settimeout_msecs_callback
 
-func write*[T](self: Http2ServerResponse; callback: T): bool {.importjs: "#.$1(#)", discardable.}
+func write*[T](self: Http2ServerResponse; callback: T): bool {.importjs: "(#.$1(#) || false)", discardable.}
   ## https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback
 
-func write*(self: Http2ServerResponse; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "#.$1(# + '\\n', #)", discardable.}
+func write*(self: Http2ServerResponse; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "(#.$1(# + '\\n', #) || false)", discardable.}
   ## https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback
   ## * `'\n'` is automatically inserted at the end of `data` string.
 
-func write*(self: Http2ServerResponse; data: Buffer): bool {.importjs: "#.$1(#)", discardable.}
+func write*(self: Http2ServerResponse; data: Buffer): bool {.importjs: "(#.$1(#) || false)", discardable.}
   ## https://nodejs.org/api/http2.html#http2_response_write_chunk_encoding_callback
 
 func close*(self: Http2SecureServer or Http2Server) {.importjs: "#.$1()".}
@@ -193,13 +193,13 @@ func listen*(self: Http2Server or Http2SecureServer; port: int) {.importjs: "#.$
 func addTrailers*(self: Http2ServerResponse; headers: JsObject) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http2.html#http2_response_addtrailers_headers
 
-func getHeaderNames*(self: Http2ServerResponse): seq[cstring] {.importjs: "#.$1()".}
+func getHeaderNames*(self: Http2ServerResponse): seq[cstring] {.importjs: "(#.$1() || [])".}
   ## https://nodejs.org/api/http2.html#http2_response_getheadernames
 
 func getHeaders*(self: Http2ServerResponse): JsObject {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http2.html#http2_response_getheaders
 
-func hasHeader*(self: Http2ServerResponse; name: cstring): bool {.importjs: "#.$1(#)".}
+func hasHeader*(self: Http2ServerResponse; name: cstring): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/http2.html#http2_response_hasheader_name
 
 func writeContinue*(self: Http2ServerResponse) {.importjs: "#.$1()".}
@@ -407,17 +407,17 @@ template onFinish*(self: Http2ServerResponse; callback) =
 
 func writeProcessing*(self: Http2ServerResponse) {.importjs: "#.$1()".}
 
-func address*(self: Http2Server or Http2SecureServer): cstring {.importjs: "#.$1()".}
+func address*(self: Http2Server or Http2SecureServer): cstring {.importjs: "(#.$1() || '')".}
 
-func rawListeners*(self: Http2Server or Http2SecureServer; event: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func rawListeners*(self: Http2Server or Http2SecureServer; event: cstring): seq[auto] {.importjs: "(#.$1(#) || [])".}
 
 func removeAllListeners*(self: Http2Server or Http2SecureServer; event: cstring) {.importjs: "#.$1(#)", discardable.}
 
-func listeners*(self: Http2Server or Http2SecureServer; eventName: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func listeners*(self: Http2Server or Http2SecureServer; eventName: cstring): seq[auto] {.importjs: "(#.$1(#) || [])".}
 
-func listenerCount*(self: Http2Server or Http2SecureServer; eventName: cstring): cint {.importjs: "#.$1(#)".}
+func listenerCount*(self: Http2Server or Http2SecureServer; eventName: cstring): cint {.importjs: "(#.$1(#) || 0)".}
 
-func getMaxListeners*(self: Http2Server or Http2SecureServer): cint {.importjs: "#.$1()".}
+func getMaxListeners*(self: Http2Server or Http2SecureServer): cint {.importjs: "(#.$1() || 0)".}
 
 func prependListener*[T](self: Http2Server or Http2SecureServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
