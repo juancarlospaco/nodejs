@@ -28,19 +28,19 @@ func disconnect*(self: Cluster) {.importjs: "#.$1()".}
 func disconnect*[T](self: Cluster; callback: T) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/cluster.html#cluster_cluster_disconnect_callback
 
-func isConnected*(self: Worker): bool {.importjs: "#.$1()".}
+func isConnected*(self: Worker): bool {.importjs: "(#.$1() || false)".}
   ## https://nodejs.org/api/cluster.html#cluster_worker_isconnected
 
-func isDead*(self: Worker): bool {.importjs: "#.$1()".}
+func isDead*(self: Worker): bool {.importjs: "(#.$1() || false".}
   ## https://nodejs.org/api/cluster.html#cluster_worker_isdead
 
 func kill*(self: Worker; signal = "SIGTERM".cstring) {.importjs: "#.$1(#)", discardable.}
   ## https://nodejs.org/api/cluster.html#cluster_worker_kill_signal
 
-func send*(self: Worker; message: JsObject): bool {.importjs: "#.$1(#)".}
+func send*(self: Worker; message: JsObject): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/cluster.html#cluster_worker_send_message_sendhandle_options_callback
 
-func send*[T](self: Worker; message: JsObject; callback: T): bool {.importjs: "#.$1(#, #)".}
+func send*[T](self: Worker; message: JsObject; callback: T): bool {.importjs: "(#.$1(#, #) || false)".}
   ## https://nodejs.org/api/cluster.html#cluster_worker_send_message_sendhandle_options_callback
 
 func fork*(): Worker {.importjs: "cluster.$1()", discardable.}
@@ -97,8 +97,8 @@ iterator clusterWorkers*(): Worker =
   for workero in wrkrs:
     yield workero
 
-func isPrimary*(): bool {.importjs: "(cluster.isPrimary)@".}
+func isPrimary*(): bool {.importjs: "(cluster.isPrimary || false)@".}
 
-func isMaster*(): bool {.importjs: "(cluster.isPrimary)@".}
+func isMaster*(): bool {.importjs: "(cluster.isPrimary || false)@".}
 
-func isWorker*(): bool {.importjs: "(cluster.isWorker)@".}
+func isWorker*(): bool {.importjs: "(cluster.isWorker || false)@".}
