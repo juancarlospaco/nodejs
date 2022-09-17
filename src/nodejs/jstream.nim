@@ -38,13 +38,13 @@ func setDefaultEncoding*(self: StreamWritable; encoding: cstring): StreamWritabl
 func setEncoding*(self: StreamReadable; encoding: cstring): StreamReadable {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/stream.html#stream_readable_setencoding_encoding
 
-func write*(self: StreamWritable; chunk: auto; encoding = "utf-8".cstring): bool {.importjs: "#.$1(#, #)".}
+func write*(self: StreamWritable; chunk: auto; encoding = "utf-8".cstring): bool {.importjs: "(#.$1(#, #) || false)".}
   ## https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback
 
-func write*[T](self: StreamWritable; callback: T): bool {.importjs: "#.$1(#)".}
+func write*[T](self: StreamWritable; callback: T): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/stream.html#stream_writable_write_chunk_encoding_callback
 
-func isPaused*(self: StreamReadable): bool {.importjs: "#.$1()".}
+func isPaused*(self: StreamReadable): bool {.importjs: "(#.$1() || false)".}
   ## https://nodejs.org/api/stream.html#stream_readable_ispaused
 
 func pause*(self: StreamReadable): StreamReadable {.importjs: "#.$1()".}
