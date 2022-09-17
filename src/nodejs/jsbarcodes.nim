@@ -24,11 +24,11 @@ type
     bdfUpcE = "upc_e".cstring             ## ISO-15420
     bdfUnknown = "unknown".cstring
 
-func newBarcodeDetector*(): BarcodeDetector {.importjs: "new BarcodeDetector()".}
+func newBarcodeDetector*(): BarcodeDetector {.importjs: "(new BarcodeDetector())".}
 
-func newBarcodeDetector*(formats: openArray[BarcodeDetectorFormats]): BarcodeDetector {.importjs: "new BarcodeDetector({formats: #})".}
+func newBarcodeDetector*(formats: openArray[BarcodeDetectorFormats]): BarcodeDetector {.importjs: "(new BarcodeDetector({formats: #}) || new BarcodeDetector())".}
 
-func getSupportedFormats*(self: BarcodeDetector): seq[cstring] {.importjs: "#.$1()".}
+func getSupportedFormats*(self: BarcodeDetector): seq[cstring] {.importjs: "(#.$1() || [])".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/BarcodeDetector/getSupportedFormats
 
 func detect*(self: BarcodeDetector; imageBitmapSource: Node): Future[JsObject] {.importjs: "#.$1(#)".}
