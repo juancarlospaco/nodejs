@@ -6,16 +6,16 @@ func importV8*() {.importjs: "import * as v8 from 'v8'@".}
 func requireV8*() {.importjs: "const v8 = require('v8')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func cachedDataVersionTag*(): cint {.importjs: "v8.$1()".}
+func cachedDataVersionTag*(): cint {.importjs: "(v8.$1() || 0)".}
   ## https://nodejs.org/api/v8.html#v8_v8_cacheddataversiontag
 
-func getHeapCodeStatistics*(): JsObject {.importjs: "v8.$1()".}
+func getHeapCodeStatistics*(): JsObject {.importjs: "(v8.$1() || {})".}
   ## https://nodejs.org/api/v8.html#v8_v8_getheapcodestatistics
 
-func getHeapSpaceStatistics*(): JsObject {.importjs: "v8.$1()".}
+func getHeapSpaceStatistics*(): JsObject {.importjs: "(v8.$1() || {})".}
   ## https://nodejs.org/api/v8.html#v8_v8_getheapspacestatistics
 
-func getHeapStatistics*(): JsObject {.importjs: "v8.$1()".}
+func getHeapStatistics*(): JsObject {.importjs: "(v8.$1() || {})".}
   ## https://nodejs.org/api/v8.html#v8_v8_getheapstatistics
 
 func setFlagsFromString*(flags: cstring) {.importjs: "v8.$1()".}
@@ -27,7 +27,7 @@ func takeCoverage*() {.importjs: "v8.$1()".}
 func stopCoverage*() {.importjs: "v8.$1()".}
   ## https://nodejs.org/api/v8.html#v8_v8_stopcoverage
 
-func writeHeapSnapshot*(filename: cstring): cstring {.importjs: "v8.$1(#)".}
+func writeHeapSnapshot*(filename: cstring): cstring {.importjs: "(v8.$1(#) || '')".}
   ## https://nodejs.org/api/v8.html#v8_v8_writeheapsnapshot_filename
 
 
