@@ -22,5 +22,5 @@ func syncBuiltinESMExports*() {.importjs: "module.$1()".}
 func findSourceMap*(path: cstring): SourceMap {.importjs: "module.$1(#)".}
   ## https://nodejs.org/api/module.html#module_module_findsourcemap_path
 
-func findEntry*(self: SourceMap; lineNumber: cint; columnNumber: cint): JsObject {.importjs: "#.$1(#, #)".}
+func findEntry*(self: SourceMap; lineNumber: cint; columnNumber: cint): JsObject {.importjs: "(#.$1(#, #) || {})".}
   ## https://nodejs.org/api/module.html#module_module_findsourcemap_path
