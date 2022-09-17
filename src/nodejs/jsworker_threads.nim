@@ -35,7 +35,7 @@ func newWorker*(filename: cstring; options: JsObject): Worker {.importjs: "(new 
 func getEnvironmentData*(self: auto): auto {.importjs: "worker_threads.$1(#)".}
   ## https://nodejs.org/api/worker_threads.html#worker_threads_worker_getenvironmentdata_key
 
-func isMainThread*(): bool {.importjs: "worker_threads.$1()".}
+func isMainThread*(): bool {.importjs: "(worker_threads.$1() || false)".}
   ## https://nodejs.org/api/worker_threads.html#worker_threads_worker_ismainthread
 
 func markAsUntransferable*(objct: JsObject) {.importjs: "worker_threads.$1(#)".}
@@ -44,7 +44,7 @@ func markAsUntransferable*(objct: JsObject) {.importjs: "worker_threads.$1(#)".}
 func moveMessagePortToContext*(port: MessagePort; contextifiedSandbox: JsObject): MessagePort {.importjs: "worker_threads.$1(#)".}
   ## https://nodejs.org/api/worker_threads.html#worker_threads_worker_movemessageporttocontext_port_contextifiedsandbox
 
-func receiveMessageOnPort*(port: MessagePort): JsObject {.importjs: "worker_threads.$1(#)".}
+func receiveMessageOnPort*(port: MessagePort): JsObject {.importjs: "(worker_threads.$1(#) || {})".}
   ## https://nodejs.org/api/worker_threads.html#worker_threads_worker_receivemessageonport_port
 
 func setEnvironmentData*(key: auto; value: auto) {.importjs: "worker_threads.$1(#)", discardable.}
