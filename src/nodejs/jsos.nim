@@ -194,28 +194,28 @@ func importOs*() {.importjs: "import * as os from 'os'@".}
 func requireOs*() {.importjs: "const os = require('os')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func arch*(): cstring {.importjs: "os.$1()".}
+func arch*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_arch
 
-func endianness*(): cstring {.importjs: "os.$1()".}
+func endianness*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_endianness
 
-func freemem*(): cint {.importjs: "os.$1()".}
+func freemem*(): cint {.importjs: "(os.$1() || 0)".}
   ## https://nodejs.org/api/os.html#os_os_freemem
 
-func getPriority*(pid = 0.cint): cint {.importjs: "os.$1(#)".}
+func getPriority*(pid = 0.cint): cint {.importjs: "(os.$1(#) || 0)".}
   ## https://nodejs.org/api/os.html#os_os_getpriority_pid
 
-func homedir*(): cstring {.importjs: "os.$1()".}
+func homedir*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_homedir
 
-func loadavg*(): seq[cint] {.importjs: "os.$1()".}
+func loadavg*(): seq[cint] {.importjs: "(os.$1() || [])".}
   ## https://nodejs.org/api/os.html#os_os_loadavg
 
-func platform*(): cstring {.importjs: "os.$1()".}
+func platform*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_platform
 
-func release*(): cstring {.importjs: "os.$1()".}
+func release*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_release
 
 func setPriority*(priority: cint) {.importjs: "os.$1(#)".}
@@ -224,22 +224,22 @@ func setPriority*(priority: cint) {.importjs: "os.$1(#)".}
 func setPriority*(pid, priority: cint) {.importjs: "os.$1(#, #)".}
   ## https://nodejs.org/api/os.html#os_os_setpriority_pid_priority
 
-func tmpdir*(): cstring {.importjs: "os.$1()".}
+func tmpdir*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_tmpdir
 
-func totalmem*(): cint {.importjs: "os.$1()".}
+func totalmem*(): cint {.importjs: "(os.$1() || 0)".}
   ## https://nodejs.org/api/os.html#os_os_totalmem
 
-func ostype*(): cstring {.importjs: "os.type()".}
+func ostype*(): cstring {.importjs: "(os.type() || '')".}
   ## https://nodejs.org/api/os.html#os_os_type
 
-func uptimeOs*(): cint {.importjs: "os.uptime()".}
+func uptimeOs*(): cint {.importjs: "(os.uptime() || 0)".}
   ## https://nodejs.org/api/os.html#os_os_uptime
 
-func version*(): cstring {.importjs: "os.$1()".}
+func version*(): cstring {.importjs: "(os.$1() || '')".}
   ## https://nodejs.org/api/os.html#os_os_version
 
-func userInfo*(): cstring {.importjs: "JSON.stringify(os.$1())".}
+func userInfo*(): cstring {.importjs: "(JSON.stringify(os.$1()) || '')".}
   ## https://nodejs.org/api/os.html#os_os_userinfo_options
 
 
