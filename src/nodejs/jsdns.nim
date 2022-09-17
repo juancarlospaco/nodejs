@@ -42,7 +42,7 @@ func setLocalAddress*(self: Resolver; ipv4: cstring) {.importjs: "#.$1(#)".}
 func setLocalAddress*(self: Resolver; ipv4: cstring; ipv6: cstring) {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/dns.html#dns_resolver_setlocaladdress_ipv4_ipv6
 
-func getServers*(self: Resolver): seq[cstring] {.importjs: "#.$1()".}
+func getServers*(self: Resolver): seq[cstring] {.importjs: "(#.$1() || [])".}
 
 func resolve*[T](self: Resolver; hostname: cstring; callback: T) {.importjs: "#.$1(#, #)".}
 
