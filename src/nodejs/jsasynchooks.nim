@@ -5,10 +5,10 @@ func importAsynchooks*() {.importjs: "import * as async_hooks from 'async_hooks'
 func requireAsynchooks*() {.importjs: "const async_hooks = require('async_hooks')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func executionAsyncId*(): cint {.importjs: "async_hooks.$1()".}
+func executionAsyncId*(): cint {.importjs: "(async_hooks.$1() || 0)".}
   ## https://nodejs.org/api/async_hooks.html#async_hooks_async_hooks_executionasyncid
 
-func triggerAsyncId*(): cint {.importjs: "async_hooks.$1()".}
+func triggerAsyncId*(): cint {.importjs: "(async_hooks.$1() || 0)".}
   ## https://nodejs.org/api/async_hooks.html#async_hooks_async_hooks_triggerasyncid
 
 
