@@ -32,7 +32,7 @@ func abort*() {.importjs: "process.$1()".}
 func chdir*(directory: cstring) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_chdir_directory
 
-func cwd*(): cstring {.importjs: "process.$1()".}
+func cwd*(): cstring {.importjs: "(process.$1() || '')".}
   ## https://nodejs.org/api/process.html#process_process_cwd
 
 func disconnect*() {.importjs: "process.$1()".}
@@ -50,25 +50,25 @@ func emitWarning*(warning: cstring; tipe: cstring) {.importjs: "process.$1(#, #)
 func exit*(code = 0.cint) {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_exit_code
 
-func getegid*(): cint {.importjs: "process.$1()".}
+func getegid*(): cint {.importjs: "(process.$1() || 0)".}
   ## https://nodejs.org/api/process.html#process_process_getegid
 
-func getgroups*(): seq[cint] {.importjs: "process.$1()".}
+func getgroups*(): seq[cint] {.importjs: "(process.$1() || [])".}
   ## https://nodejs.org/api/process.html#process_process_getgroups
 
-func getuid*(): cint {.importjs: "process.$1()".}
+func getuid*(): cint {.importjs: "(process.$1() || 0)".}
   ## https://nodejs.org/api/process.html#process_process_getuid
 
-func hasUncaughtExceptionCaptureCallback*(): bool {.importjs: "process.$1()".}
+func hasUncaughtExceptionCaptureCallback*(): bool {.importjs: "(process.$1() || false)".}
   ## https://nodejs.org/api/process.html#process_process_hasuncaughtexceptioncapturecallback
 
-func hrtime*(time: openArray[cint]): seq[cint] {.importjs: "process.$1(#)".}
+func hrtime*(time: openArray[cint]): seq[cint] {.importjs: "(process.$1(#) || [])".}
   ## https://nodejs.org/api/process.html#process_process_hrtime_time
 
-func hrtime*(): seq[cint] {.importjs: "process.$1()".}
+func hrtime*(): seq[cint] {.importjs: "(process.$1() || [])".}
   ## https://nodejs.org/api/process.html#process_process_hrtime_time
 
-func hrtimeBigint*(): cint {.importjs: "parseInt(process.hrtime.bigint())".}
+func hrtimeBigint*(): cint {.importjs: "(parseInt(process.hrtime.bigint()) || 0)".}
   ## https://nodejs.org/api/process.html#process_process_hrtime_bigint
 
 func initgroups*(user: cstring; extraGroup: cstring) {.importjs: "process.$1(#, #)".}
@@ -83,10 +83,10 @@ func kill*(pid: cint; signal: cint) {.importjs: "process.$1(#, #)".}
 func kill*(pid: cint; signal: cstring) {.importjs: "process.$1(#, #)".}
   ## https://nodejs.org/api/process.html#process_process_kill_pid_signal
 
-func reportWriteReport*(filename: cstring): cstring {.importjs: "process.report.writeReport(#)".}
+func reportWriteReport*(filename: cstring): cstring {.importjs: "(process.report.writeReport(#) || '')".}
   ## https://nodejs.org/api/process.html#process_process_report_writereport_filename_err
 
-func reportWriteReport*(): cstring {.importjs: "process.report.writeReport()".}
+func reportWriteReport*(): cstring {.importjs: "(process.report.writeReport() || '')".}
   ## https://nodejs.org/api/process.html#process_process_report_writereport_filename_err
 
 func setegid*(id: cstring) {.importjs: "process.$1(#)".}
@@ -122,12 +122,12 @@ func umask*(mask: cstring): any {.importjs: "process.$1(#)".}
 func umask*(mask: cint): any {.importjs: "process.$1(#)".}
   ## https://nodejs.org/api/process.html#process_process_umask_mask
 
-func uptimeProcess*(): cint {.importjs: "process.uptime()".}
+func uptimeProcess*(): cint {.importjs: "(process.uptime() || 0)".}
   ## https://nodejs.org/api/process.html#process_process_uptime
 
-func resourceUsage*(): JsObject {.importjs: "process.$1()".}
+func resourceUsage*(): JsObject {.importjs: "(process.$1() || {})".}
 
-func getPid*(): cint {.importjs: "process.pid@".}
+func getPid*(): cint {.importjs: "(process.pid@ || 0)".}
 
 # TODO: "If Node was not spawned with an IPC channel, process.send will be undefined." ???
 #
