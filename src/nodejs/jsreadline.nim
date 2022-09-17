@@ -24,7 +24,7 @@ func resume*(self: Readline) {.importjs: "#.$1()".}
 func setPrompt*(self: Readline; prompt: cstring) {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/readline.html#readline_rl_setprompt_prompt
 
-func getPrompt*(self: Readline): cstring {.importjs: "#.$1()".}
+func getPrompt*(self: Readline): cstring {.importjs: "(#.$1() || '')".}
   ## https://nodejs.org/api/readline.html#readline_rl_getprompt
 
 func write*(self: Readline; data: cstring) {.importjs: "#.$1(#)".}
@@ -33,7 +33,7 @@ func write*(self: Readline; data: cstring) {.importjs: "#.$1(#)".}
 func write*(self: Readline; data: cstring; ctrl: bool; meta: bool; shift: bool; name: cstring) {.importjs: "#.$1(#, {ctrl: #, meta: #, shift: #, name: #})".}
   ## https://nodejs.org/api/readline.html#readline_rl_write_data_key
 
-func getCursorPos*(self: Readline): JsObject {.importjs: "#.$1()".}
+func getCursorPos*(self: Readline): JsObject {.importjs: "(#.$1() || {})".}
   ## https://nodejs.org/api/readline.html#readline_rl_getcursorpos
 
 func line*(self: Readline): cstring {.importjs: "(() => { return #.line })()".}
@@ -51,13 +51,13 @@ func requireReadline*() {.importjs: "const readline = require('readline')@".}
 func clearLine*(dir = 0.cint): bool {.importjs: "readline.$1(process.stout, #)".}
   ## https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearline_stream_dir_callback
 
-func clearScreenDown*(): bool {.importjs: "readline.$1(process.stout)".}
+func clearScreenDown*(): bool {.importjs: "(readline.$1(process.stout) || false)".}
   ## https://nodejs.org/docs/latest/api/readline.html#readline_readline_clearscreendown_stream_callback
 
-func cursorTo*(x, y: cint): bool {.importjs: "readline.$1(process.stout, #, #)".}
+func cursorTo*(x, y: cint): bool {.importjs: "(readline.$1(process.stout, #, #) || false)".}
   ## https://nodejs.org/docs/latest/api/readline.html#readline_readline_cursorto_stream_x_y_callback
 
-func moveCursor*(dx, dy: cint): bool {.importjs: "readline.$1(process.stout, #, #)".}
+func moveCursor*(dx, dy: cint): bool {.importjs: "(readline.$1(process.stout, #, #) || false)".}
   ## https://nodejs.org/docs/latest/api/readline.html#readline_readline_movecursor_stream_dx_dy_callback
 
 
