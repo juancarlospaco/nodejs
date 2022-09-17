@@ -9,7 +9,7 @@ func newCallTracker*(): CallTracker {.importjs: "(new assert.CallTracker())".}
 func calls*[T](self: CallTracker; fn: T; exact = 1.cint): T {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_tracker_calls_fn_exact
 
-func report*(self: CallTracker): JsObject {.importjs: "#.$1()".}
+func report*(self: CallTracker): JsObject {.importjs: "(#.$1() || {})".}
   ## https://nodejs.org/api/assert.html#assert_tracker_report
 
 func verify*(self: CallTracker) {.importjs: "#.$1()".}
@@ -24,11 +24,11 @@ func requireAssert*() {.importjs: "const assert = require('assert')@".}
 func requireAssertStrict*() {.importjs: "const assert = require('assert').strict@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func newAssertionError*(): cstring {.importjs: "JSON.stringify(new assert.AssertionError({}))".}
+func newAssertionError*(): cstring {.importjs: "(JSON.stringify(new assert.AssertionError({})) || '')".}
   ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
 
 func newAssertionError*(message: cstring; actual: auto; expected: auto; operator: cstring): cstring {.importjs:
-  "JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #}))".}
+  "(JSON.stringify(new assert.AssertionError({message: #, actual: #, expected: #, operator: #})) || '')".}
   ## https://nodejs.org/api/assert.html#assert_new_assert_assertionerror_options
 
 func deepStrictEqual*(actual: auto; expected: auto; message: cstring) {.importjs: "assert.$1(#, #, #)".}
@@ -124,7 +124,7 @@ func throws*[T](asyncFunction: T; error: T; message: cstring) {.importjs: "asser
 func throws*[T](asyncFunction: T; error: T) {.importjs: "assert.$1(#, #)".}
   ## https://nodejs.org/api/assert.html#assert_assert_throws_fn_error_message
 
-func toCstring*(self: CallTracker): cstring {.importjs: "JSON.stringify(#)".}
+func toCstring*(self: CallTracker): cstring {.importjs: "(JSON.stringify(#) || '')".}
 
 func `$`*(self: CallTracker): string = $toCstring(self)
 
