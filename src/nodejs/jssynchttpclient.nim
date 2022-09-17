@@ -7,7 +7,7 @@ from std/uri import Uri
 
 type JsHttpClient* = XMLHttpRequest
 
-func newJsHttpClient*(): JsHttpClient {.importjs: "new XMLHttpRequest()".}
+func newJsHttpClient*(): JsHttpClient {.importjs: "(new XMLHttpRequest())".}
 
 proc xmlHttpRequestImpl(self: JsHttpClient; url: Uri | string; metod: static[cstring]; body: cstring = ""): cstring =
   self.open(metod = metod, url = cstring($url), false)
