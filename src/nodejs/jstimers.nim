@@ -18,7 +18,7 @@ func newImmediate*(): Immediate {.importjs: "(new timers.Immediate())".}
 
 func newTimeout*(): Timeout {.importjs: "(new timers.Timeout())".}
 
-func hasRef*(self: Immediate): bool {.importjs: "#.$1()".}
+func hasRef*(self: Immediate): bool {.importjs: "(#.$1() || false)".}
   ## https://nodejs.org/api/timers.html#timers_immediate_hasref
 
 func refs*(self: Immediate): Immediate {.importjs: "#.ref()".}
