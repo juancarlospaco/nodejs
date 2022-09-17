@@ -11,7 +11,7 @@ type XMLHttpRequest* = ref object of JsRoot  ## https://xhr.spec.whatwg.org
   status*, timeout*, readyState*: cint
   responseText*, responseURL*, statusText*: cstring
 
-func newXMLHttpRequest*(): XMLHttpRequest {.importjs: "new XMLHttpRequest()".}
+func newXMLHttpRequest*(): XMLHttpRequest {.importjs: "(new XMLHttpRequest())".}
   ## Constructor for `XMLHttpRequest`.
 
 func open*(this: XMLHttpRequest; metod, url: cstring; async = true; user = cstring.default; password = cstring.default) {.importjs: "#.$1(#, #, #, #, #)".}
@@ -23,7 +23,7 @@ func send*(this: XMLHttpRequest; body: cstring | Node = cstring.default) {.impor
 func abort*(this: XMLHttpRequest) {.importjs: "#.$1()".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort
 
-func getAllResponseHeaders*(this: XMLHttpRequest): cstring {.importjs: "#.$1()".}
+func getAllResponseHeaders*(this: XMLHttpRequest): cstring {.importjs: "(#.$1() || '')".}
   ## https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
 
 func overrideMimeType*(this: XMLHttpRequest; mimeType: cstring) {.importjs: "#.$1(#)".}
