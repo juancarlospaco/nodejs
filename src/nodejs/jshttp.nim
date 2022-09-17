@@ -61,7 +61,7 @@ func newHttpAgent*(options: JsObject): HttpAgent {.importjs: "(new Agent(#))".}
 func destroy*(self: HttpAgent or HttpIncomingMessage or HttpOutgoingMessage or HttpClientRequest): auto {.importjs: "#.$1()", discardable.}
   ## https://nodejs.org/api/http.html#http_agent_destroy
 
-func getName*(self: HttpAgent; options: JsObject): cstring {.importjs: "#.$1(#)".}
+func getName*(self: HttpAgent; options: JsObject): cstring {.importjs: "(#.$1(#) || '')".}
   ## https://nodejs.org/api/http.html#http_agent_getname_options
 
 func abort*(self: HttpClientRequest) {.importjs: "#.$1()", discardable.}
@@ -82,10 +82,10 @@ func flushHeaders*(self: HttpClientRequest or HttpServerResponse or HttpOutgoing
 func getHeader*(self: HttpClientRequest or HttpServerResponse; name: cstring): auto {.importjs: "#.$1(#)".}
   ## https://nodejs.org/api/http.html#http_request_getheader_name
 
-func getRawHeaderNames*(self: HttpClientRequest): seq[cstring] {.importjs: "#.$1()".}
+func getRawHeaderNames*(self: HttpClientRequest): seq[cstring] {.importjs: "(#.$1() || [])".}
   ## https://nodejs.org/api/http.html#http_request_getrawheadernames
 
-func removeHeader*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; name: cstring): bool {.importjs: "#.$1(#)".}
+func removeHeader*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; name: cstring): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/http.html#http_request_removeheader_name
 
 func setHeader*(self: HttpClientRequest or HttpServerResponse; name: cstring; value: auto): auto {.importjs: "#.$1(#, #)".}
@@ -103,14 +103,14 @@ func setSocketKeepAlive*(self: HttpClientRequest) {.importjs: "#.$1()".}
 func setTimeout*[T](self: HttpClientRequest or HttpServer or HttpsServer or HttpIncomingMessage or HttpOutgoingMessage; timeout: cint; callback: T): auto {.importjs: "#.$1(#, #)".}
   ## https://nodejs.org/api/http.html#http_request_settimeout_timeout_callback
 
-func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; callback: T): bool {.importjs: "#.$1(#)", discardable.}
+func write*[T](self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; callback: T): bool {.importjs: "(#.$1(#) || false)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
 
-func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "#.$1(# + '\\n', #)", discardable.}
+func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: cstring; encoding = "utf-8".cstring): bool {.importjs: "(#.$1(# + '\\n', #) || false)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
   ## * `'\n'` is automatically inserted at the end of `data` string.
 
-func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: Buffer): bool {.importjs: "#.$1(#)", discardable.}
+func write*(self: HttpClientRequest or HttpServerResponse or HttpOutgoingMessage; data: Buffer): bool {.importjs: "(#.$1(#) || false)", discardable.}
   ## https://nodejs.org/api/http.html#http_request_write_chunk_encoding_callback
 
 func close*(self: HttpServer or HttpsServer) {.importjs: "#.$1()".}
@@ -152,13 +152,13 @@ func cork*(self: HttpServerResponse or HttpOutgoingMessage) {.importjs: "#.$1()"
 func uncork*(self: HttpServerResponse or HttpOutgoingMessage) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/http.html#http_response_uncork
 
-func getHeaderNames*(self: HttpServerResponse or HttpOutgoingMessage): seq[cstring] {.importjs: "#.$1()".}
+func getHeaderNames*(self: HttpServerResponse or HttpOutgoingMessage): seq[cstring] {.importjs: "(#.$1() || [])".}
   ## https://nodejs.org/api/http.html#http_response_getheadernames
 
-func getHeaders*(self: HttpServerResponse or HttpOutgoingMessage): JsObject {.importjs: "#.$1()".}
+func getHeaders*(self: HttpServerResponse or HttpOutgoingMessage): JsObject {.importjs: "(#.$1() || {})".}
   ## https://nodejs.org/api/http.html#http_response_getheaders
 
-func hasHeader*(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool {.importjs: "#.$1(#)".}
+func hasHeader*(self: HttpServerResponse or HttpOutgoingMessage; name: cstring): bool {.importjs: "(#.$1(#) || false)".}
   ## https://nodejs.org/api/http.html#http_response_hasheader_name
 
 func writeContinue*(self: HttpServerResponse) {.importjs: "#.$1()".}
@@ -219,17 +219,17 @@ proc validateHeaderValue*(name: cstring; value: auto) {.importjs: "http.$1(#, #)
   ##
   ## .. warning:: May or may not raise a foreign Error, use `try` ... `except`
 
-func address*(self: HttpServer or HttpsServer): cstring {.importjs: "#.$1()".}
+func address*(self: HttpServer or HttpsServer): cstring {.importjs: "(#.$1() || '')".}
 
-func rawListeners*(self: HttpServer or HttpsServer; event: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func rawListeners*(self: HttpServer or HttpsServer; event: cstring): seq[auto] {.importjs: "(#.$1(#) || [])".}
 
 func removeAllListeners*(self: HttpServer or HttpsServer; event: cstring) {.importjs: "#.$1(#)", discardable.}
 
-func listeners*(self: HttpServer or HttpsServer; eventName: cstring): seq[auto] {.importjs: "#.$1(#)".}
+func listeners*(self: HttpServer or HttpsServer; eventName: cstring): seq[auto] {.importjs: "(#.$1(#) || [])".}
 
-func listenerCount*(self: HttpServer or HttpsServer; eventName: cstring): cint {.importjs: "#.$1(#)".}
+func listenerCount*(self: HttpServer or HttpsServer; eventName: cstring): cint {.importjs: "(#.$1(#) || 0)".}
 
-func getMaxListeners*(self: HttpServer or HttpsServer): cint {.importjs: "#.$1()".}
+func getMaxListeners*(self: HttpServer or HttpsServer): cint {.importjs: "(#.$1() || 0)".}
 
 func prependListener*[T](self: HttpServer or HttpsServer; event: cstring; callback: T) {.importjs: "#.$1(#, #)", discardable.}
 
