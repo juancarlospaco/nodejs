@@ -8,9 +8,9 @@ import std/jsffi
 type JsSet* {.importjs: "Set".} = ref object of JsRoot ## Set API.
   size: cint
 
-func newJsSet*(): JsSet {.importjs: "new Set()".} ## Constructor for `JsSet`.
+func newJsSet*(): JsSet {.importjs: "(new Set())".} ## Constructor for `JsSet`.
 
-func newJsSet*(items: openArray[JsObject]): JsSet {.importjs: "new Set(#)".} ## Constructor for `JsSet`.
+func newJsSet*(items: openArray[JsObject]): JsSet {.importjs: "(new Set(#))".} ## Constructor for `JsSet`.
 
 func add*(this: JsSet; value: JsObject) {.importjs: "#.$1(#)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add
@@ -21,7 +21,7 @@ func delete*(this: JsSet; value: JsObject) {.importjs: "#.$1(#)".}
 func clear*(this: JsSet) {.importjs: "#.$1()".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear
 
-func contains*(this: JsSet; value: JsObject): bool {.importjs: "#.has(#)".}
+func contains*(this: JsSet; value: JsObject): bool {.importjs: "(#.has(#) || false)".}
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has
 
 func toCstring*(this: JsSet): seq[cstring] {.importjs: """
