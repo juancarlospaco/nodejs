@@ -13,7 +13,7 @@ var
 
 func cd*(path: cstring) {.importjs: "$1(#)".}
 func sleep*(time: SomeInteger) {.importjs: "$1(#)".}
-func toCstring*(self: ProcessOutput): cstring {.importjs: "#.toString()".}
+func toCstring*(self: ProcessOutput): cstring {.importjs: "(#.toString() || '')".}
 func question*(query: cstring): Future[cstring] {.importjs: "$1(#)", discardable.}
 func fetch*(url: cstring): Future[Response] {.importjs: "$1(#)".}
 func fetch*(url: cstring; options: FetchOptions): Future[Response] {.importjs: "$1(#)".}
