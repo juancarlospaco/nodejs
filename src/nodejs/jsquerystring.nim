@@ -6,16 +6,16 @@ func importQuerystring*() {.importjs: "import * as querystring from 'querystring
 func requireQuerystring*() {.importjs: "const querystring = require('querystring')@".}
   ## Alias for `const module_name = require('module_name');`. **Must be called once before using the module**
 
-func escape*(stringy: cstring): cstring {.importjs: "querystring.$1(#)".}
+func escape*(stringy: cstring): cstring {.importjs: "(querystring.$1(#) || '')".}
   ## https://nodejs.org/api/querystring.html#querystring_querystring_escape_str
 
-func unescape*(stringy: cstring): cstring {.importjs: "querystring.$1(#)".}
+func unescape*(stringy: cstring): cstring {.importjs: "(querystring.$1(#) || '')".}
   ## https://nodejs.org/api/querystring.html#querystring_querystring_unescape_str
 
-func parse*(str: cstring; sep = "&".cstring; eq = "=".cstring; maxKeys = 1000.cint): JsObject {.importjs: "querystring.$1(#, #, #, {maxKeys: #})".}
+func parse*(str: cstring; sep = "&".cstring; eq = "=".cstring; maxKeys = 1000.cint): JsObject {.importjs: "(querystring.$1(#, #, #, {maxKeys: #}) || {})".}
   ## https://nodejs.org/api/querystring.html#querystring_querystring_parse_str_sep_eq_options
 
-func stringify*(obj: JsObject; sep = "&".cstring; eq = "=".cstring): cstring {.importjs: "querystring.$1(#, #, #)".}
+func stringify*(obj: JsObject; sep = "&".cstring; eq = "=".cstring): cstring {.importjs: "(querystring.$1(#, #, #) || '')".}
   ## https://nodejs.org/api/querystring.html#querystring_querystring_stringify_obj_sep_eq_options
 
 
