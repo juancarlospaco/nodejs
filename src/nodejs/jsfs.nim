@@ -120,7 +120,7 @@ func copyFileSync*(src, dest: cstring) {.importjs: "fs.$1(#, #)".}
 func copyFileSync*(src, dest: cstring; mode: cint) {.importjs: "fs.$1(#, #, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_mode
 
-func existsSync*(path: cstring): bool {.importjs: "fs.$1(#)".}
+func existsSync*(path: cstring): bool {.importjs: "(fs.$1(#) || false)".}
   ## https://nodejs.org/api/fs.html#fs_fs_existssync_path
 
 func fchmod*[T](fd: cint; mode: cstring; callback: T) {.importjs: "fs.$1(#, #, #)".}
@@ -210,7 +210,7 @@ func mkdirSync*(path: cstring; recursive = false) {.importjs: "fs.$1(#, {recursi
 func mkdtemp*[T](prefix: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_mkdtemp_prefix_options_callback
 
-func mkdtempSync*(prefix: cstring): cstring {.importjs: "fs.$1(#)".}
+func mkdtempSync*(prefix: cstring): cstring {.importjs: "(fs.$1(#) || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_mkdtempsync_prefix_options
 
 func open*[T](path: cstring; flags: cstring; mode: cstring; callback: T) {.importjs: "fs.$1(#, #, #, #)".}
@@ -225,10 +225,10 @@ func open*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
 func opendir*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_opendir_path_options_callback
 
-func openSync*(path: cstring; flags: cint; mode: cint): cint {.importjs: "fs.$1(#, #, #)".}
+func openSync*(path: cstring; flags: cint; mode: cint): cint {.importjs: "(fs.$1(#, #, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode
 
-func openSync*(path: cstring; flags: cstring; mode: cstring): cint {.importjs: "fs.$1(#, #, #)".}
+func openSync*(path: cstring; flags: cstring; mode: cstring): cint {.importjs: "(fs.$1(#, #, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_opensync_path_flags_mode
 
 func read*[T](fd: cint; callback: T) {.importjs: "fs.$1(#, #)".}
@@ -240,16 +240,16 @@ func readdir*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
 func readFile*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
 
-func readFileSync*(path: cstring): cstring {.importjs: "fs.$1(#).toString()".}
+func readFileSync*(path: cstring): cstring {.importjs: "(fs.$1(#).toString() || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options
 
 func readlink*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_readlink_path_options_callback
 
-func readlink*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func readlink*(path: cstring): cstring {.importjs: "(fs.$1(#) || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options
 
-func readlinkSync*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func readlinkSync*(path: cstring): cstring {.importjs: "(fs.$1(#) || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_readlinksync_path_options
 
 func realpath*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
@@ -258,10 +258,10 @@ func realpath*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
 func realpathNative*[T](path: cstring; callback: T) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_realpath_native_path_options_callback
 
-func realpathSync*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func realpathSync*(path: cstring): cstring {.importjs: "(fs.$1(#) || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options
 
-func realpathSyncNative*(path: cstring): cstring {.importjs: "fs.$1(#)".}
+func realpathSyncNative*(path: cstring): cstring {.importjs: "(fs.$1(#) || '')".}
   ## https://nodejs.org/api/fs.html#fs_fs_realpathsync_native_path_options
 
 func rename*[T](oldPath, newPath: cstring; callback: T) {.importjs: "fs.$1(#, #, #)".}
@@ -351,16 +351,16 @@ func writeFileSync*(file: cstring; data: cstring) {.importjs: "fs.$1(#, #)".}
 func writeFileSync*(file: cint; data: cstring) {.importjs: "fs.$1(#, #)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options
 
-func writeSync*(fd: cint; buffer: cstring; offset: cint; length: cint; position: cint): cint {.importjs: "fs.$1(#, #, #, #, #)".}
+func writeSync*(fd: cint; buffer: cstring; offset: cint; length: cint; position: cint): cint {.importjs: "(fs.$1(#, #, #, #, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position
 
-func writeSync*(fd: cint; buffer: cstring; offset: cint; length: cint): cint {.importjs: "fs.$1(#, #, #, #)".}
+func writeSync*(fd: cint; buffer: cstring; offset: cint; length: cint): cint {.importjs: "(fs.$1(#, #, #, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position
 
-func writeSync*(fd: cint; buffer: cstring; offset: cint): cint {.importjs: "fs.$1(#, #, #)".}
+func writeSync*(fd: cint; buffer: cstring; offset: cint): cint {.importjs: "(fs.$1(#, #, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position
 
-func writeSync*(fd: cint; buffer: cstring): cint {.importjs: "fs.$1(#, #)".}
+func writeSync*(fd: cint; buffer: cstring): cint {.importjs: "(fs.$1(#, #) || 0)".}
   ## https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position
 
 func touchFileSync*(filename: cstring) {.importjs: """
