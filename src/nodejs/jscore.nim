@@ -17,16 +17,15 @@ func `[]`*(self: Uint8Array or ArrayBuffer; index: Natural): uint8 {.importjs: "
 
 func `[]=`*(self: Uint8Array or ArrayBuffer; index: Natural; value: uint8) {.importjs: "#[#] = #".}
 
-func toArray*(self: Uint8Array): seq[uint8] {.importjs: "Array.from(#)".}
+func toArray*(self: Uint8Array): seq[uint8] {.importjs: "(Array.from(#) || [])".}
 
-func toArray*(self: ArrayBuffer): seq[int] {.importjs: "Array.from(new Uint8Array(#))".}
+func toArray*(self: ArrayBuffer): seq[int] {.importjs: "(Array.from(new Uint8Array(#)) || [])".}
 
-func toCstring*(self: Uint8Array or ArrayBuffer): cstring {.importjs: "JSON.stringify(#)".}
+func toCstring*(self: Uint8Array or ArrayBuffer): cstring {.importjs: "(JSON.stringify(#) || '')".}
 
 func `$`*(self: Uint8Array or ArrayBuffer): string = $toCstring(self)
 
-func len*(self: Uint8Array): int {.importjs: "(#.length)".}
-
+func len*(self: Uint8Array): int {.importjs: "(#.length || 0)".}
 
 func `&`*(a, b: cstring): cstring {.importjs: "(# + #)".}
 
@@ -44,19 +43,19 @@ func strip*(s: cstring; leading: bool; trailing: bool): cstring {.importjs: """
     return result;
   })()""".}
 
-proc parseInt*(s: cstring): cint {.importjs: "parseInt(#, 10)".}
+proc parseInt*(s: cstring): cint {.importjs: "(parseInt(#, 10) || 0)".}
 
-proc parseInt*(s: char): cint {.importjs: "parseInt(String.fromCharCode(#), 10)".}
+proc parseInt*(s: char): cint {.importjs: "(parseInt(String.fromCharCode(#), 10) || 0)".}
 
-proc parseUInt*(s: cstring): uint {.importjs: "parseInt(#, 10)".}
+proc parseUInt*(s: cstring): uint {.importjs: "(parseInt(#, 10) || 0)".}
 
-proc parseUInt*(s: char): uint {.importjs: "parseInt(String.fromCharCode(#), 10)".}
+proc parseUInt*(s: char): uint {.importjs: "(parseInt(String.fromCharCode(#), 10) || 0)".}
 
-proc parseFloat*(s: cstring): BiggestFloat {.importjs: "parseFloat(#)".}
+proc parseFloat*(s: cstring): BiggestFloat {.importjs: "(parseFloat(#) || 0.0)".}
 
-func contains*(a, b: cstring): bool {.importjs: "(#.indexOf(#) >= 0)".}
+func contains*(a, b: cstring): bool {.importjs: "((#.indexOf(#) >= 0) || false)".}
 
-func contains*(a: cstring, b: char): bool {.importjs: "(#.indexOf(String.fromCharCode(#)) >= 0)".}
+func contains*(a: cstring, b: char): bool {.importjs: "((#.indexOf(String.fromCharCode(#)) >= 0) || false)".}
 
 func isDigit*(c: char): bool {.importjs: "(() => { const c = #; return (c >= '0' && c <= '9') })()".}
 
@@ -65,9 +64,9 @@ func capitalizeAscii*(s: cstring): cstring {.importjs: """
 
 func repeat*(s: cstring; n: Natural): cstring {.importjs: "#.repeat(#)".}
 
-func find*(s: cstring; ss: cstring): int {.importjs: "#.indexOf(#)".}
+func find*(s: cstring; ss: cstring): int {.importjs: "(#.indexOf(#) || 0)".}
 
-func find*(s: cstring; ss: char): int {.importjs: "#.indexOf(String.fromCharCode(#))".}
+func find*(s: cstring; ss: char): int {.importjs: "(#.indexOf(String.fromCharCode(#)) || 0)".}
 
 func split*(a: cstring, b: cstring): seq[cstring] {.importjs: "#.split(#)".}
 
@@ -89,11 +88,11 @@ func replace*(s: cstring, sub: char, by: char): cstring {.importjs: "#.replace(S
 
 func slice*(s: cstring; start: cint, ends: cint): cstring {.importjs: "#.slice(#, #)".}
 
-func isFinite*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+func isFinite*(n: SomeNumber): bool {.importjs: "(Number.$1(#) || false)".}
 
-func isInteger*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+func isInteger*(n: SomeNumber): bool {.importjs: "(Number.$1(#) || false)".}
 
-func isSafeInteger*(n: SomeNumber): bool {.importjs: "Number.$1(#)".}
+func isSafeInteger*(n: SomeNumber): bool {.importjs: "(Number.$1(#) || false)".}
 
 func toFixed*(n: SomeFloat; digits: 0..20): cstring {.importjs: "#.$1(#)".}
 
@@ -145,7 +144,7 @@ func match*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "#.match(#)
 
 func matchAll*(strng: cstring; regex: RegExp): seq[cstring] {.importjs: "Array.from(#.matchAll(#))".}
 
-func find*(strng: cstring; regex: RegExp): cint {.importjs: "#.search(#)".}
+func find*(strng: cstring; regex: RegExp): cint {.importjs: "(#.search(#) || 0)".}
 
 
 func base64encode*(strng: cstring; encoding = "utf-8".cstring): cstring {.importjs: "Buffer.from(#, #).toString('base64')".}
