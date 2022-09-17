@@ -23,7 +23,7 @@ func displayPrompt*(self: REPLServer; preserveCursor: bool) {.importjs: "#.$1(#)
 func clearBufferedCommand*(self: REPLServer) {.importjs: "#.$1()".}
   ## https://nodejs.org/api/repl.html#repl_replserver_displayprompt_preservecursor
 
-func parseREPLKeyword*(self: REPLServer; keyword: cstring; rest: auto): bool {.importjs: "#.$1(#, #)".}
+func parseREPLKeyword*(self: REPLServer; keyword: cstring; rest: auto): bool {.importjs: "(#.$1(#, #) || false)".}
   ## https://nodejs.org/api/repl.html#repl_replserver_parsereplkeyword_keyword_rest
 
 func setupHistory*[T](self: REPLServer; historyPath: cstring; callback: T) {.importjs: "#.$1(#, #)".}
