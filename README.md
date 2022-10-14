@@ -10,6 +10,8 @@
 ![](https://img.shields.io/github/last-commit/juancarlospaco/nodejs?style=for-the-badge "Commits")
 ![](https://github.com/juancarlospaco/nodejs/workflows/Build/badge.svg?branch=main)
 
+![](https://bestpractices.coreinfrastructure.org/projects/6585/badge)
+
 
 # Documentation
 
