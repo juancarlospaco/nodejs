@@ -294,3 +294,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@Himujjal](https://github.com/Himujjal '2022-10-21')	
 :star: [@drighty](https://github.com/drighty '2022-10-22')	
 :star: [@xilicode](https://github.com/xilicode '2022-10-23')	
+:star: [@soomtong](https://github.com/soomtong '2022-10-25')	
