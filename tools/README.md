@@ -14,4 +14,4 @@ $ ./bin/nim --version
 ```
 
 - See `./bin/nim` for your newly improved Nim compiler binary. Use like `nim js -d:danger file.nim`.
-- Implemented on year 2022, Nim commit >= `ff25103c9ab9d51821e9e8641955c8d24f7db6b8`.
+- Implemented on year 2022, Nim commit >= `3fef2fd52c86ba922187ca03026b09ceb70b5d3d`.
