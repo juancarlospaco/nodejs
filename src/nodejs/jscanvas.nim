@@ -11,6 +11,9 @@ type
     width*  {.importc: "canvas.width" .}:  int
     height* {.importc: "canvas.height".}: int
 
+  OffscreenCanvas* = ref object of JsRoot  ## https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+    width*, height*: int
+
   ImageData* = ref object of JsRoot
     data*: seq[byte]
     width*, height*: int
@@ -130,11 +133,13 @@ func setFillColor*(self: CanvasRenderingContext2D; c, m, y, k, a: SomeNumber or 
 func commit*(self: CanvasRenderingContext2D)  # https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D/commit#examples
 
 # This is to unattach and move the canvas offscreen.
-func transferControlToOffscreen*(self: Node)  # https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen
+func transferControlToOffscreen*(self: Node): OffscreenCanvas  # https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen
 
 {.pop.}
 
 func newImage*(): Image {.importjs: "(new Image())@".}
+
+func newOffscreenCanvas*(width, height: Natural): OffscreenCanvas {.importjs: "(new OffscreenCanvas(#, #))".}
 
 func getPixelRatio*(): float {.importjs: """(() => {
 const ctx = document.createElement("canvas").getContext("2d");
