@@ -129,6 +129,9 @@ func setFillColor*(self: CanvasRenderingContext2D; c, m, y, k, a: SomeNumber or 
 
 func commit*(self: CanvasRenderingContext2D)  # https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D/commit#examples
 
+# This is to unattach and move the canvas offscreen.
+func transferControlToOffscreen*(self: Node)  # https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen
+
 {.pop.}
 
 func newImage*(): Image {.importjs: "(new Image())@".}
