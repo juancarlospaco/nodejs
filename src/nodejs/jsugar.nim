@@ -193,6 +193,9 @@ iterator backoff*[T: SomeNumber](a, b: T; factor: T = 2): T =
     res *= factor
 
 
+proc isTouch*(): bool {.importjs: "('ontouchstart' in window)".}  # http://stackoverflow.com/a/4819886/492186
+
+
 runnableExamples:
   from std/jsffi import JsObject
   from std/sugar import `=>`
