@@ -127,6 +127,8 @@ func setFillColor*(self: CanvasRenderingContext2D; r, g, b, a: SomeNumber or cst
 
 func setFillColor*(self: CanvasRenderingContext2D; c, m, y, k, a: SomeNumber or cstring)
 
+func commit*(self: CanvasRenderingContext2D)  # https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D/commit#examples
+
 {.pop.}
 
 func newImage*(): Image {.importjs: "(new Image())@".}
