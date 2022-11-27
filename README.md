@@ -301,3 +301,5 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@termermc](https://github.com/termermc '2022-11-07')
 :star: [@KlausEverWalkingDev](https://github.com/KlausEverWalkingDev '2022-11-16')
 :star: [@nodrygo](https://github.com/nodrygo '2022-11-17')
+:star: [@scroot](https://github.com/scroot '2022-11-21')	
+:star: [@codehangen](https://github.com/codehangen '2022-11-22')	
