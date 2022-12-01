@@ -294,6 +294,26 @@ func newMediaStream*(stream: MediaStream): MediaStream {.importjs: "(new MediaSt
 
 func newMediaStream*(tracks: seq[MediaStreamTrack]): MediaStream {.importjs: "(new MediaStream(#))".}
 
+func newMediaTrackConstraints*(): MediaTrackConstraints {.importjs: "(new MediaTrackConstraints())".}
+
+func newMediaTrackSettings*(): MediaTrackSettings {.importjs: "(new MediaTrackSettings())".}
+
+func newRTCIceCandidatePair*(): RTCIceCandidatePair {.importjs: "(new RTCIceCandidatePair())".}
+
+func newRTCIceParameters*(): RTCIceParameters {.importjs: "(new RTCIceParameters())".}
+
+func newRTCRtcpParameters*(): RTCRtcpParameters {.importjs: "(new RTCRtcpParameters())".}
+
+func newRTCRtpCapabilities*(): RTCRtpCapabilities {.importjs: "(new RTCRtpCapabilities())".}
+
+func newRTCRtpContributingSource*(): RTCRtpContributingSource {.importjs: "(new RTCRtpContributingSource())".}
+
+func newRTCRtpEncodingParameters*(): RTCRtpEncodingParameters {.importjs: "(new RTCRtpEncodingParameters())".}
+
+func newRTCRtpReceiveParameters*(): RTCRtpReceiveParameters {.importjs: "(new RTCRtpReceiveParameters())".}
+
+func newRTCRtpSendParameters*(): RTCRtpSendParameters {.importjs: "(new RTCRtpSendParameters())".}
+
 {.push importcpp.}
 
 func toJSON*(self: RTCSessionDescription or RTCIceCandidate): JsObject
