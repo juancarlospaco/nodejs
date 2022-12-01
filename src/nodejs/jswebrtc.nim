@@ -1,8 +1,11 @@
 ## WebRTC for Nim https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+##
+## .. image:: https://raw.githubusercontent.com/chr15m/bugout/4e2cfcc01beca9f8dd0a592d55f13c8b3ffcbda9/docs/bugout-new-way.svg
+##
 ## * When reading documentation of this module "ICE" means "Interactive Connectivity Establishments".
-## * The API is very big and very complicated, for simple things maybe try WebSockets ?.
-## * The API has some parts that are still in Experimental state in the JavaScript side.
-## * The API is very poorly documented in general from the JavaScript side.
+## * The WebRTC API is very big and very complicated, for simple things maybe try WebSockets ?.
+## * The WebRTC API has some parts that are still in Experimental state in the JavaScript side.
+## * The WebRTC API is very poorly documented in general from the JavaScript side.
 
 import std/asyncjs
 from std/jsffi import JsObject
