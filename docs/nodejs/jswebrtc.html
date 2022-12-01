@@ -427,6 +427,14 @@
 <li><a class="reference" href="#newMediaStream%2Cseq%5BMediaStreamTrack%5D" title="newMediaStream(tracks: seq[MediaStreamTrack]): MediaStream">newMediaStream(tracks: seq[MediaStreamTrack]): MediaStream</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">newMediaTrackConstraints
+  <li><a class="reference" href="#newMediaTrackConstraints" title="newMediaTrackConstraints(): MediaTrackConstraints">newMediaTrackConstraints(): MediaTrackConstraints</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newMediaTrackSettings
+  <li><a class="reference" href="#newMediaTrackSettings" title="newMediaTrackSettings(): MediaTrackSettings">newMediaTrackSettings(): MediaTrackSettings</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">newRTCCertificate
   <li><a class="reference" href="#newRTCCertificate" title="newRTCCertificate(): RTCCertificate">newRTCCertificate(): RTCCertificate</a></li>
 
@@ -465,6 +473,14 @@
 <li><a class="reference" href="#newRTCIceCandidate%2CJsObject" title="newRTCIceCandidate(candidateInfo: JsObject): RTCIceCandidate">newRTCIceCandidate(candidateInfo: JsObject): RTCIceCandidate</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">newRTCIceCandidatePair
+  <li><a class="reference" href="#newRTCIceCandidatePair" title="newRTCIceCandidatePair(): RTCIceCandidatePair">newRTCIceCandidatePair(): RTCIceCandidatePair</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newRTCIceParameters
+  <li><a class="reference" href="#newRTCIceParameters" title="newRTCIceParameters(): RTCIceParameters">newRTCIceParameters(): RTCIceParameters</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">newRTCIceTransport
   <li><a class="reference" href="#newRTCIceTransport" title="newRTCIceTransport(): RTCIceTransport">newRTCIceTransport(): RTCIceTransport</a></li>
 
@@ -487,6 +503,14 @@
 <li><a class="reference" href="#newRTCPeerConnectionIceEvent%2Ccstring%2CJsObject" title="newRTCPeerConnectionIceEvent(tipe: cstring; options: JsObject): RTCPeerConnectionIceEvent">newRTCPeerConnectionIceEvent(tipe: cstring; options: JsObject): RTCPeerConnectionIceEvent</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">newRTCRtcpParameters
+  <li><a class="reference" href="#newRTCRtcpParameters" title="newRTCRtcpParameters(): RTCRtcpParameters">newRTCRtcpParameters(): RTCRtcpParameters</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newRTCRtpCapabilities
+  <li><a class="reference" href="#newRTCRtpCapabilities" title="newRTCRtpCapabilities(): RTCRtpCapabilities">newRTCRtpCapabilities(): RTCRtpCapabilities</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">newRTCRtpCodecCapabilities
   <li><a class="reference" href="#newRTCRtpCodecCapabilities" title="newRTCRtpCodecCapabilities(): RTCRtpCodecCapabilities">newRTCRtpCodecCapabilities(): RTCRtpCodecCapabilities</a></li>
 
@@ -495,12 +519,28 @@
   <li><a class="reference" href="#newRTCRtpCodecCapability" title="newRTCRtpCodecCapability(): RTCRtpCodecCapability">newRTCRtpCodecCapability(): RTCRtpCodecCapability</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">newRTCRtpContributingSource
+  <li><a class="reference" href="#newRTCRtpContributingSource" title="newRTCRtpContributingSource(): RTCRtpContributingSource">newRTCRtpContributingSource(): RTCRtpContributingSource</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newRTCRtpEncodingParameters
+  <li><a class="reference" href="#newRTCRtpEncodingParameters" title="newRTCRtpEncodingParameters(): RTCRtpEncodingParameters">newRTCRtpEncodingParameters(): RTCRtpEncodingParameters</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newRTCRtpReceiveParameters
+  <li><a class="reference" href="#newRTCRtpReceiveParameters" title="newRTCRtpReceiveParameters(): RTCRtpReceiveParameters">newRTCRtpReceiveParameters(): RTCRtpReceiveParameters</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">newRTCRtpReceiver
   <li><a class="reference" href="#newRTCRtpReceiver" title="newRTCRtpReceiver(): RTCRtpReceiver">newRTCRtpReceiver(): RTCRtpReceiver</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">newRTCRtpSender
   <li><a class="reference" href="#newRTCRtpSender" title="newRTCRtpSender(): RTCRtpSender">newRTCRtpSender(): RTCRtpSender</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newRTCRtpSendParameters
+  <li><a class="reference" href="#newRTCRtpSendParameters" title="newRTCRtpSendParameters(): RTCRtpSendParameters">newRTCRtpSendParameters(): RTCRtpSendParameters</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">newRTCRtpTransceiver
@@ -607,6 +647,8 @@
     
     <p class="module-desc">WebRTC for Nim <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API</a><ul class="simple"><li>When reading documentation of this module &quot;ICE&quot; means &quot;Interactive Connectivity Establishments&quot;.</li>
 <li>The API is very big and very complicated, for simple things maybe try WebSockets ?.</li>
+<li>The API has some parts that are still in Experimental state in the JavaScript side.</li>
+<li>The API is very poorly documented in general from the JavaScript side.</li>
 </ul>
 </p>
     <div class="section" id="7">
@@ -1699,6 +1741,30 @@
 </div>
 
 </div>
+<div id="newMediaTrackConstraints-procs-all">
+  <div id="newMediaTrackConstraints">
+  <dt><pre><span class="Keyword">func</span> <a href="#newMediaTrackConstraints"><span class="Identifier">newMediaTrackConstraints</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#MediaTrackConstraints"><span class="Identifier">MediaTrackConstraints</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new MediaTrackConstraints())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newMediaTrackSettings-procs-all">
+  <div id="newMediaTrackSettings">
+  <dt><pre><span class="Keyword">func</span> <a href="#newMediaTrackSettings"><span class="Identifier">newMediaTrackSettings</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#MediaTrackSettings"><span class="Identifier">MediaTrackSettings</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new MediaTrackSettings())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="newRTCCertificate-procs-all">
   <div id="newRTCCertificate">
   <dt><pre><span class="Keyword">func</span> <a href="#newRTCCertificate"><span class="Identifier">newRTCCertificate</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCCertificate"><span class="Identifier">RTCCertificate</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCCertificate())&quot;</span><span class="Other">,</span>
@@ -1828,6 +1894,30 @@
 </div>
 
 </div>
+<div id="newRTCIceCandidatePair-procs-all">
+  <div id="newRTCIceCandidatePair">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCIceCandidatePair"><span class="Identifier">newRTCIceCandidatePair</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCIceCandidatePair"><span class="Identifier">RTCIceCandidatePair</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCIceCandidatePair())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newRTCIceParameters-procs-all">
+  <div id="newRTCIceParameters">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCIceParameters"><span class="Identifier">newRTCIceParameters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCIceParameters"><span class="Identifier">RTCIceParameters</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCIceParameters())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="newRTCIceTransport-procs-all">
   <div id="newRTCIceTransport">
   <dt><pre><span class="Keyword">func</span> <a href="#newRTCIceTransport"><span class="Identifier">newRTCIceTransport</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCIceTransport"><span class="Identifier">RTCIceTransport</span></a> {.
@@ -1908,6 +1998,30 @@
 </div>
 
 </div>
+<div id="newRTCRtcpParameters-procs-all">
+  <div id="newRTCRtcpParameters">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtcpParameters"><span class="Identifier">newRTCRtcpParameters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtcpParameters"><span class="Identifier">RTCRtcpParameters</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtcpParameters())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newRTCRtpCapabilities-procs-all">
+  <div id="newRTCRtpCapabilities">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpCapabilities"><span class="Identifier">newRTCRtpCapabilities</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpCapabilities"><span class="Identifier">RTCRtpCapabilities</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpCapabilities())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="newRTCRtpCodecCapabilities-procs-all">
   <div id="newRTCRtpCodecCapabilities">
   <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpCodecCapabilities"><span class="Identifier">newRTCRtpCodecCapabilities</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpCodecCapabilities"><span class="Identifier">RTCRtpCodecCapabilities</span></a> {.
@@ -1933,6 +2047,45 @@
 </div>
 
 </div>
+<div id="newRTCRtpContributingSource-procs-all">
+  <div id="newRTCRtpContributingSource">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpContributingSource"><span class="Identifier">newRTCRtpContributingSource</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpContributingSource"><span class="Identifier">RTCRtpContributingSource</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpContributingSource())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newRTCRtpEncodingParameters-procs-all">
+  <div id="newRTCRtpEncodingParameters">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpEncodingParameters"><span class="Identifier">newRTCRtpEncodingParameters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpEncodingParameters"><span class="Identifier">RTCRtpEncodingParameters</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpEncodingParameters())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newRTCRtpReceiveParameters-procs-all">
+  <div id="newRTCRtpReceiveParameters">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpReceiveParameters"><span class="Identifier">newRTCRtpReceiveParameters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpReceiveParameters"><span class="Identifier">RTCRtpReceiveParameters</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpReceiveParameters())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="newRTCRtpReceiver-procs-all">
   <div id="newRTCRtpReceiver">
   <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpReceiver"><span class="Identifier">newRTCRtpReceiver</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpReceiver"><span class="Identifier">RTCRtpReceiver</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpReceiver())&quot;</span><span class="Other">,</span>
@@ -1949,6 +2102,18 @@
   <div id="newRTCRtpSender">
   <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpSender"><span class="Identifier">newRTCRtpSender</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpSender"><span class="Identifier">RTCRtpSender</span></a> {.<span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpSender())&quot;</span><span class="Other">,</span>
                                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="newRTCRtpSendParameters-procs-all">
+  <div id="newRTCRtpSendParameters">
+  <dt><pre><span class="Keyword">func</span> <a href="#newRTCRtpSendParameters"><span class="Identifier">newRTCRtpSendParameters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="jswebrtc.html#RTCRtpSendParameters"><span class="Identifier">RTCRtpSendParameters</span></a> {.
+    <span class="Identifier">importjs</span><span class="Other">:</span> <span class="StringLit">&quot;(new RTCRtpSendParameters())&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -2237,7 +2402,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-11-30 23:32:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-12-01 00:19:59 UTC</small>
       </div>
     </div>
   </div>
