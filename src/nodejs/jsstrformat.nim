@@ -7,6 +7,12 @@ template jsFmt*(code: untyped) =
   ## is just for when you need faster performance and string interpolation for JavaScript targets,
   ## otherwise use the normal `strformat` for better user experience.
   ##
+  ## **FAQ**
+  ## - Why not make it "safe"?.
+  ##
+  ## Any `cstring` can be `nil` at any given moment by design (as in JavaScript),
+  ## under that circumstances, adding more checks only adds overhead for no gain.
+  ##
   ## .. Note:: To use any Nim symbols inside the string interpolation block,
   ##           the symbol declaration must have the `{.exportc.}` pragma.
   ##
