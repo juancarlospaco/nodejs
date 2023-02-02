@@ -318,3 +318,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@YeonjiKim0316](https://github.com/YeonjiKim0316 '2023-01-24')	
 :star: [@mode80](https://github.com/mode80 '2023-01-29')	
 :star: [@SiraKen](https://github.com/SiraKen '2023-01-30')	
+:star: [@nicks515](https://github.com/nicks515 '2023-02-02')	
