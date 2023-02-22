@@ -34,7 +34,8 @@ type
 func newJsHttpClient*(headers: Headers = newHeaders()): JsHttpClient =
   return JsHttpClient(http: newXMLHttpRequest(), headers: headers)
 
-func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncHttpClient =
+func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncsrc/nodejs/jshttpclient.nim
+HttpClient =
   return JsAsyncHttpClient(headers: headers)
 
 proc newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
@@ -56,12 +57,12 @@ template fetchOptionsImpl(request: JsRequest): FetchOptions =
     redirect = request.redirect, referrer = request.referrer, integrity = request.integrity
   )
 
-func setHeaders(client: JsHttpClient, request: JsRequest) =
+proc setHeaders(client: JsHttpClient, request: JsRequest) =
   ## Sets Headers for `JsHttpClient`
   for (key, val) in client.headers.entries:
     client.http.setRequestHeader(key, val)
 
-func response(response: XMLHttpRequest): JsResponse =
+proc response(response: XMLHttpRequest): JsResponse =
   ## Converts `XMLHttpRequest` to `JsResponse`
   new(result)
   result.status = cast[HttpCode](response.status)
