@@ -34,8 +34,7 @@ type
 func newJsHttpClient*(headers: Headers = newHeaders()): JsHttpClient =
   return JsHttpClient(http: newXMLHttpRequest(), headers: headers)
 
-func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncsrc/nodejs/jshttpclient.nim
-HttpClient =
+func newJsAsyncHttpClient*(headers: Headers = newHeaders()): JsAsyncHttpClient =
   return JsAsyncHttpClient(headers: headers)
 
 proc newJsRequest*(url: cstring; `method`: HttpMethod; body, integrity, referrer: cstring = "";
