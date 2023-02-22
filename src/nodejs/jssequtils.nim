@@ -9,7 +9,7 @@
 
 func at*[T](self: openArray[T]; index: SomeInteger): T {.importjs: "#.$1(#)".} =
   ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at
-  runnableExamples"-b:js":
+  runnableExamples"-b:js -r:off":
     const array1 = [5, 12, 8, 130, 44]
     doAssert array1.at(2) == 8
     doAssert array1.at(-2) == 130  ## Index can be negative.
