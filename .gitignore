@@ -14,3 +14,4 @@ docs/nimcache
 *.hpp
 *.cpp
 temp*.nim
+.idea/
