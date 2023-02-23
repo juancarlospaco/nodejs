@@ -326,3 +326,4 @@ WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
 :star: [@W1M0R](https://github.com/W1M0R '2023-02-14')	
 :star: [@AlexW00](https://github.com/AlexW00 '2023-02-18')	
 :star: [@Kisvey](https://github.com/Kisvey '2023-02-22')	
+:star: [@piertoni](https://github.com/piertoni '2023-02-23')	
