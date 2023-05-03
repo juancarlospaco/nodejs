@@ -255,7 +255,7 @@ proc toJSStr(s: string): cstring {.compilerproc.} =
         c = s[i]
       try:
         res[j] = decodeURIComponent join(helper)
-      except:
+      except CatchableError:
         res[j] = join(helper)
     inc j
   setLen(res, j)
